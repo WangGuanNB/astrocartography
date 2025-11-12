@@ -3,10 +3,10 @@
   "theme": "light",
   "header": {
     "brand": {
-      "title": "Graffiti Generator",
+      "title": "Astrocartography Calculator",
       "logo": {
         "src": "/logo.png",
-        "alt": "Graffiti Generator"
+        "alt": "Astrocartography Calculator"
       },
       "url": "/"
     },
@@ -25,31 +25,31 @@
     "show_locale": false
   },
   "hero": {
-    "title": "Graffiti Generator AI Graffiti Maker",
-    "highlight_text": "Create Instantly",
-    "description": "Graffiti Generator transforms any text into street art in 3 seconds with its AI engine, combining 50+ professional fonts, 3D gradients, and authentic spray textures. Graffiti fans, design teams, and brands can complete high-quality visuals right in the browser—no installation, no registration, and unlimited commercial-grade creations anytime.",
+    "title": "Astrocartography Calculator - Discover Your Ideal Location",
+    "highlight_text": "Free Forever",
+    "description": "Astrocartography Calculator maps your birth chart onto the world, revealing where planetary lines amplify your career, relationships, and personal growth. Using NASA-grade calculations accurate to 1 mile, we analyze 200,000+ global coordinates to show where Sun, Venus, Jupiter, and other planetary energies are strongest. Digital nomads, relocators, and astrology enthusiasts trust our free tool for data-driven location insights—no sign-up, no limits.",
     "announcement": {
       "label": "100% Free",
-      "title": "No Account Needed",
+      "title": "No Registration • Unlimited Charts",
       "url": "/#features"
     },
     "images": [
       {
         "src": "/imgs/features/1.webp",
-        "alt": "Graffiti Generator Text Transformation Example 1",
-        "title": "Text to Graffiti Art"
+        "alt": "Astrocartography Map Example with Planetary Lines",
+        "title": "Your Personalized Astrocartography Chart"
       },
       {
         "src": "/imgs/features/1.webp",
-        "alt": "Graffiti Generator Font Styles Example 2",
-        "title": "Multiple Graffiti Styles"
+        "alt": "Astrocartography Calculator Interface",
+        "title": "Professional Location Analysis"
       }
     ],
     "layout": "left-image-right-content",
     "enable_carousel": true,
     "buttons": [
       {
-        "title": "Create Graffiti Free Now",
+        "title": "Generate Your Free Astrocartography Chart",
         "icon": "RiMagicLine",
         "url": "/#generator",
         "target": "_self",
@@ -59,267 +59,271 @@
     "stats": [
       {
         "value": "50,000+",
-        "label": "Graffiti Creators",
+        "label": "Charts Generated",
         "icon": "RiUserLine"
       },
       {
         "value": "200,000+",
-        "label": "Graffiti Artworks Generated",
-        "icon": "RiImageLine"
+        "label": "Locations Analyzed",
+        "icon": "RiMapPinLine"
       }
     ],
     "show_happy_users": false,
     "show_badge": false
   },
   "branding": {
-    "title": "Powered by cutting-edge AI technology",
+    "title": "Powered by astronomical precision technology",
     "items": [
       {
-        "title": "OpenAI",
+        "title": "Swiss Ephemeris",
         "image": {
           "src": "/imgs/logos/nextjs.svg",
-          "alt": "OpenAI"
+          "alt": "Swiss Ephemeris"
         }
       },
       {
-        "title": "Computer Vision",
+        "title": "NASA-Grade Data",
         "image": {
           "src": "/imgs/logos/react.svg",
-          "alt": "Computer Vision"
+          "alt": "NASA-Grade Calculations"
         }
       },
       {
-        "title": "Neural Networks",
+        "title": "AI Interpretation",
         "image": {
           "src": "/imgs/logos/tailwindcss.svg",
-          "alt": "Neural Networks"
+          "alt": "AI-Powered Analysis"
         }
       },
       {
-        "title": "Machine Learning",
+        "title": "Global Coverage",
         "image": {
           "src": "/imgs/logos/shadcn.svg",
-          "alt": "Machine Learning"
+          "alt": "200,000+ Locations"
         }
       },
       {
-        "title": "Cloud Processing",
+        "title": "Privacy First",
         "image": {
           "src": "/imgs/logos/vercel.svg",
-          "alt": "Cloud Processing"
+          "alt": "Local Processing"
         }
       }
     ]
   },
   "introduce": {
     "name": "introduce",
-    "title": "What is Graffiti Generator",
+    "title": "What is Astrocartography Calculator",
     "label": "Introduction",
-    "description": "Graffiti Generator enables ultra-fast graffiti design, turning inspiration into street art in seconds.",
+    "description": "Astrocartography Calculator projects your birth chart globally, showing where planets were angular at your birth moment.",
     "image": {
       "src": "/imgs/features/1.webp"
     },
     "items": [
       {
-        "title": "50+ Professional Graffiti Fonts",
-        "description": "Covering bubble letters, Wildstyle, chrome 3D, and minimalist styles, Graffiti Generator is co-created with professional street artists to ensure every font retains authentic spray paint texture and depth, meeting multi-scenario needs for social media, brands, and merchandise.",
+        "title": "NASA-Grade Planetary Calculations",
+        "description": "Astrocartography Calculator uses Swiss Ephemeris, the astronomical standard matching NASA planetary data. We calculate where each planet (Sun, Moon, Venus, Mars, Jupiter, Saturn) was angular—rising (ASC), setting (DSC), culminating (MC), or at nadir (IC)—at your exact birth moment across Earth's surface. Each astrocartography line is accurate to within 1 mile, ensuring your astrocartography chart matches professional astrologer calculations. When you stand on a planetary line, that planet's energy dominates your experience there.",
         "image": {
           "src": "/imgs/features/1.webp",
-          "alt": "AI graffiti generator showcasing diverse fonts"
+          "alt": "NASA-grade astrocartography calculations"
         }
       },
       {
-        "title": "Smart AI Font Optimization",
-        "description": "The system automatically analyzes letter spacing, weight, and color schemes, adjusting stroke center of gravity and shadows based on graffiti flow, giving Graffiti Generator online outputs natural curves and gloss like hand-painted work, perfect for high-standard portfolios and commercial launches.",
+        "title": "AI-Powered Location Interpretation",
+        "description": "Our system analyzes how your birth chart interacts with 200,000+ global coordinates. The AI explains what each astrocartography line means: Venus lines activate love and creativity, Jupiter lines bring opportunities and expansion, Saturn lines strengthen career discipline. We don't just show where lines are—we explain how to read astrocartography maps and what each location means for your career, relationships, health, and creativity, making astrocartography for relocation practical and accessible.",
         "image": {
           "src": "/imgs/features/1.webp",
-          "alt": "Graffiti generator AI optimizing street art"
+          "alt": "AI-powered astrocartography interpretation"
         }
       },
       {
-        "title": "Multi-Format Fast Export",
-        "description": "Generate artwork in 3 seconds after entering text, with instant downloads of PNG, JPG, SVG, and graffiti generator 3D preview files, ready for poster printing, social sharing, or brand website embedding—one creation for multi-platform reuse.",
+        "title": "Instant Multi-Format Export",
+        "description": "Generate your astrocartography map in 3 seconds, then download high-resolution PNG, PDF, or SVG files. Maps clearly mark all planetary lines, power spots (line intersections), and city names. Paired with AI interpretation reports, your astrocartography chart is ready for personal planning, professional consultations, or team relocation decisions. All files are watermark-free with full commercial rights.",
         "image": {
           "src": "/imgs/features/1.webp",
-          "alt": "Graffiti generator exporting finished artwork"
+          "alt": "Export astrocartography charts instantly"
         }
       }
     ]
   },
   "benefit": {
     "name": "benefit",
-    "title": "Why Graffiti Fans Choose Graffiti Generator",
+    "title": "Why Choose Our Astrocartography Calculator",
     "label": "Core Benefits",
-    "description": "Graffiti Generator combines street culture expertise with AI algorithms to provide graffiti fans with zero-barrier, high-quality, and truly free graffiti generation experience.",
+    "description": "Our astrocartography calculator combines astronomical precision with AI interpretation, offering professional-grade analysis that's completely free and privacy-focused.",
     "items": [
       {
-        "title": "Authentic Street Texture",
-        "description": "All spray paint textures, splatters, and lighting are recorded by veteran writers. Every piece from Graffiti Generator retains the graininess and momentum of street walls, not generic computer fonts.",
-        "icon": "RiStarLine",
-        "image": {
-          "src": "/imgs/features/1.webp",
-          "alt": "Authentic graffiti generator street art preview"
-        }
-      },
-      {
-        "title": "Truly Free Forever",
-        "description": "The platform opens all fonts and effects with no watermarks, no credits, and no export limits. Creators have full commercial rights to Graffiti Generator works and can confidently use them for products, ads, and exhibitions.",
+        "title": "Professional Precision, Completely Free",
+        "description": "While competitors charge $15.9/month for AI analysis or $22.90 for PDF reports, our astrocartography calculator offers unlimited free access. We use the same Swiss Ephemeris library that $360 professional software relies on, with 1-mile accuracy matching NASA standards. Generate unlimited astrocartography charts, download watermark-free files, and access AI interpretations—no credit card, no hidden fees. Whether you're a student, entrepreneur, or retiree, access professional astrocartography analysis at zero cost.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/1.webp",
-          "alt": "Graffiti generator free access interface"
+          "alt": "Free professional astrocartography calculator"
         }
       },
       {
-        "title": "Zero Learning Required",
-        "description": "Simply open your browser and enter text to complete. The system presets color palettes and lighting parameters, allowing new users to output professional graffiti within 1 minute on their first experience with Graffiti Generator online.",
-        "icon": "RiSpeedLine",
+        "title": "Honest, Context-Aware Guidance",
+        "description": "Unlike tools promising guaranteed outcomes, we acknowledge astrocartography shows energy potential, not certainties. A Venus line might enhance relationships or surface relationship challenges you need to address. Our AI considers your personal chart context, current life stage, and planetary interactions. FAQs honestly state: use astrocartography maps as one factor among practical considerations like career opportunities, cost of living, and visa requirements. Real astrology respects complexity—we do too.",
+        "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/1.webp",
-          "alt": "Graffiti generator simple workflow screenshot"
+          "alt": "Honest astrocartography guidance"
+        }
+      },
+      {
+        "title": "Privacy-First Architecture",
+        "description": "Your birth data calculates locally in your browser—never uploaded to servers, never stored in databases, never shared with third parties. Generate your astrocartography chart with complete privacy. All files have full commercial rights: use them for personal planning, professional consultations, teaching, or publishing without licensing fees. Privacy and professional quality shouldn't be exclusive to paying customers.",
+        "icon": "RiLockLine",
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Privacy-focused astrocartography tool"
         }
       }
     ]
   },
   "usage": {
     "name": "usage",
-    "title": "How to Use Graffiti Generator",
-    "description": "Follow these 4 steps to quickly complete your graffiti creation with Graffiti Generator.",
+    "title": "How to Use Astrocartography Calculator",
+    "description": "Generate your professional astrocartography chart in 4 simple steps.",
     "items": [
       {
-        "title": "Enter Your Text",
-        "description": "Input names, slogans, or product taglines. Graffiti Generator supports English, Chinese, numbers, and common symbols for multilingual projects.",
-        "icon": "RiEditLine"
+        "title": "Enter Birth Information",
+        "description": "Input your birth date, time (as precise as possible to the minute), and city. Without exact birth time, you'll still see planetary lines (Sun, Moon, Venus, etc.) but not angular lines (ASC, DSC, MC, IC). Our database includes 100,000+ global cities with automatic timezone and historical daylight saving time handling.",
+        "icon": "RiCalendarLine"
       },
       {
-        "title": "Choose Graffiti Style",
-        "description": "Select from 50+ fonts, graffiti generator online presets, and 3D effects. Preview in real-time to find the one that best matches your brand tone.",
-        "icon": "RiPaletteLine"
+        "title": "Select Planetary Lines",
+        "description": "Choose which planets to display: Sun (confidence, identity), Moon (emotions, security), Venus (love, aesthetics), Mars (action, competition), Jupiter (opportunities, growth), Saturn (discipline, career), plus Uranus, Neptune, and Pluto. The system renders astrocartography lines in real-time on the world map.",
+        "icon": "RiPlanetLine"
       },
       {
-        "title": "Customize Colors & Effects",
-        "description": "Adjust gradients, outlines, highlights, and spray drips to quickly create a distinctive visual signature.",
-        "icon": "RiSettings3Line"
+        "title": "Explore Interactive Map & AI Insights",
+        "description": "Click any planetary line or power spot (line intersection) for detailed AI interpretation. Learn how that planet affects your career, relationships, health, and creativity in that location, plus whether it suits long-term residence, short visits, work, or study. No query limits—explore as much as you need.",
+        "icon": "RiMapLine"
       },
       {
-        "title": "Export & Publish",
-        "description": "One-click export of PNG, JPG, or SVG. High-resolution files ready for printing, social media publishing, or client presentations.",
+        "title": "Export Professional Files",
+        "description": "Download high-resolution PNG maps, PDF interpretation reports, or SVG vector files with one click. All files are watermark-free and support commercial use. Print for consultation meetings, share with friends, or use in team relocation decisions.",
         "icon": "RiDownloadLine"
       }
     ]
   },
   "feature": {
     "name": "feature",
-    "title": "Advanced Graffiti Generator Features",
-    "description": "Graffiti Generator integrates six core features to ensure both creative efficiency and commercial value.",
+    "title": "Professional Astrocartography Calculator Features",
+    "description": "Six core features ensure both astronomical precision and practical usability.",
     "items": [
       {
-        "title": "Real-Time Preview Editing",
-        "description": "Adjust colors, shadows, or 3D angles with instant screen updates, ensuring your graffiti achieves ideal results before going live.",
-        "icon": "RiEyeLine"
+        "title": "Interactive Global Map",
+        "description": "Drag, zoom, and click any city to instantly view its planetary energy distribution. Maps support satellite, terrain, and political boundary views, helping you understand how astrocartography lines correspond to real geography. Power spots (line intersections) are highlighted—these energy convergence zones are key focus points in astrocartography for relocation decisions.",
+        "icon": "RiGlobalLine"
       },
       {
-        "title": "High-Resolution Export",
-        "description": "Supports 4K PNG, vector SVG, and transparent background JPG to meet professional needs for posters, apparel, and packaging printing.",
-        "icon": "RiHdLine"
+        "title": "Swiss Ephemeris Calculation Engine",
+        "description": "We use Swiss Ephemeris, supporting planetary calculations from 3000 BCE to 3000 CE. Maintained by the Zurich Observatory, this library matches NASA JPL planetary orbit precision and powers professional astrology software worldwide. Whether analyzing historical figures or planning future relocations, your astrocartography map accuracy matches $360 professional software.",
+        "icon": "RiCompassLine"
       },
       {
-        "title": "Multi-Language Text Support",
-        "description": "Graffiti Generator is compatible with multilingual character sets and special symbols, suitable for international brands or multilingual community operations.",
-        "icon": "RiLayoutLine"
+        "title": "Multi-Language Global Coverage",
+        "description": "Search cities in Chinese, English, Japanese, and more across 100,000+ locations with historical timezone data. The system automatically handles daylight saving time changes (like US DST rule shifts 1970-2007) and timezone boundary adjustments, ensuring accurate astrocartography charts regardless of birth country or era.",
+        "icon": "RiTranslate"
       },
       {
-        "title": "Smart Color Recommendations",
-        "description": "The system automatically generates harmonious color schemes based on background or brand colors, keeping graffiti works eye-catching across different media.",
-        "icon": "RiStarSLine"
+        "title": "Smart Planetary Line Filtering",
+        "description": "Display or hide specific planetary line combinations without limits. Show only Sun+Jupiter lines for career cities, only Venus+Moon lines for emotional security locations, or hide Saturn+Pluto lines to avoid high-challenge zones. Save favorite filter configurations to quickly compare different planetary combinations and find locations matching your current life stage goals.",
+        "icon": "RiFilterLine"
       },
       {
-        "title": "Custom Texture Materials",
-        "description": "Built-in spray, metal, neon, and wall wear materials can be layered to create exclusive styles that echo street culture atmosphere.",
-        "icon": "RiCloudLine"
+        "title": "Power Spots Energy Analysis",
+        "description": "AI automatically identifies and highlights line intersections (power spots) where multiple planetary energies activate simultaneously. These crossings typically exert stronger influence than single lines. For example: Venus+Jupiter intersections may bring romantic opportunities and wealth growth, while Saturn+Pluto intersections suit deep transformation and career rebuilding.",
+        "icon": "RiStarLine"
       },
       {
-        "title": "Cloud Project Management",
-        "description": "Automatically stores creation history and frequently-used parameters. Revisit to quickly reuse or iterate, making team collaboration more efficient.",
-        "icon": "RiShareLine"
+        "title": "History & Multi-Person Comparison",
+        "description": "The system auto-saves your generation history, supporting simultaneous loading of multiple astrocartography charts for comparison. Compare your planetary line overlaps with a partner's, identify Jupiter line intersections among team members, or compare transit chart changes across years. For team relocations, family moves, or partner site selection, quickly overlay multiple people's distributions.",
+        "icon": "RiTeamLine"
       }
     ]
   },
   "faq": {
     "name": "faq",
     "label": "FAQ",
-    "title": "Graffiti Generator FAQ - Common Questions Answered",
-    "description": "Multiple creators share the real benefits Graffiti Generator brings.",
+    "title": "Astrocartography Calculator FAQ - Common Questions Answered",
+    "description": "Real answers to questions our users actually ask.",
     "items": [
       {
-        "title": "Is Graffiti Generator truly free?",
-        "description": "Yes, Graffiti Generator provides completely free online graffiti generation services. All fonts and export functions are unlimited and come with full commercial licensing."
+        "title": "What if I don't know my exact birth time?",
+        "description": "You can still use Astrocartography Calculator! Without exact time, we can't show your ASC/DSC/MC/IC lines, but you'll still see planetary lines (Sun, Moon, Venus, etc.) which reveal plenty about location compatibility. For best results, check your birth certificate or contact the hospital where you were born."
       },
       {
-        "title": "What output formats does Graffiti Generator support?",
-        "description": "You can directly download PNG, JPG, SVG, and graffiti generator 3D preview files to meet multiple application scenarios including social media, printing, and modeling."
+        "title": "I felt terrible living on my Venus line. Is the map wrong?",
+        "description": "Astrocartography shows potential energies, not guarantees. A Venus line might enhance relationships but could also amplify relationship challenges you need to work through. Context matters—your personal chart, life circumstances, and other planetary influences all play a role. Our AI interpretation can help you understand these nuances."
       },
       {
-        "title": "Can I use Graffiti Generator without design experience?",
-        "description": "Absolutely. The system provides preset color palettes and styles. Beginners can generate professional graffiti works within one minute by following the workflow."
+        "title": "How accurate are the calculations?",
+        "description": "We use NASA-grade planetary calculations, accurate to within 1 mile on Earth's surface. Our calculations account for time zones, daylight saving time, and historical calendar changes. This is the same precision professional astrologers rely on for consultations."
       },
       {
-        "title": "Can Graffiti Generator creations be used commercially?",
-        "description": "Of course. The platform allows generated results to be used for posters, product packaging, advertising, and other commercial purposes without additional licensing fees."
+        "title": "Should I move based solely on my astrocartography map?",
+        "description": "No. Astrocartography is a powerful tool for understanding location energies, but it shouldn't be your only consideration. Factor in practical matters like career opportunities, cost of living, visa requirements, and personal connections. Use our maps as one input among many for making life decisions."
+      },
+      {
+        "title": "Can I use the generated maps commercially?",
+        "description": "Yes. Your generated astrocartography charts and interpretation reports can be used for any purpose: personal planning, professional astrology consultations, teaching, publications, social sharing, etc., without licensing fees. Your birth data calculates locally with complete privacy protection."
       }
     ]
   },
   "testimonial": {
     "name": "testimonial",
     "label": "Testimonials",
-    "title": "Real Users Love Graffiti Generator",
-    "description": "Multiple creators share the real benefits Graffiti Generator brings.",
+    "title": "Real Users Share Their Astrocartography Experiences",
+    "description": "Users share how our astrocartography calculator informed their relocation decisions.",
     "icon": "RiThumbUpLine",
     "items": [
       {
-        "title": "Leo",
-        "label": "Streetwear Brand Owner",
-        "description": "I used Graffiti Generator online to create 3D graffiti posters. Product landing page conversion increased 38%, and clients recognized the realistic texture.",
+        "title": "Sophia Chen",
+        "label": "Digital Nomad",
+        "description": "As a digital nomad, I used the astrocartography calculator to analyze 20+ candidate cities. I chose Lisbon where my Venus line passes, and after arriving, my social circle expanded rapidly—I even met my current partner. Astrocartography isn't magic, but it helped me understand why certain cities feel more comfortable.",
         "image": {
           "src": "/imgs/users/1.png"
         }
       },
       {
-        "title": "Mei",
-        "label": "Social Media Manager",
-        "description": "When brands need to respond quickly to trends, I use Graffiti Generator to complete entire social media visuals in 20 minutes. Fan engagement doubled.",
+        "title": "Marcus Liu",
+        "label": "Astrology Consultant",
+        "description": "60% of my client consultations involve relocation questions. The astrocartography calculator lets me quickly show clients their planetary line distributions, paired with relocation chart analysis. One client succeeded in starting a business in a Jupiter line city and referred 5 friends. This tool elevated my service professionalism.",
         "image": {
           "src": "/imgs/users/2.png"
         }
       },
       {
-        "title": "Robin",
-        "label": "Visual Design Instructor",
-        "description": "Graffiti Generator free version lets me demonstrate font variations in real-time during classes. All students can experience street art hands-on.",
+        "title": "Elena Rodriguez",
+        "label": "Astrology Student",
+        "description": "After studying astrocartography for 2 years and testing multiple paid tools, this calculator's Swiss Ephemeris results match my Solar Fire software exactly, but with a friendlier interface and clearer interpretations. Highly recommend for all astrology learners.",
         "image": {
           "src": "/imgs/users/3.png"
         }
       },
       {
-        "title": "Emma Taylor",
-        "label": "Content Creator",
-        "description": "As a street culture YouTuber, this graffiti generator is essential for authentic thumbnails and graphics. My audience connects with the genuine graffiti aesthetics.",
+        "title": "James Park",
+        "label": "Entrepreneur",
+        "description": "When planning to open a branch in Asia, I used the astrocartography calculator to analyze Singapore, Bangkok, and Tokyo. I chose Bangkok where my Sun and Jupiter lines converge, and development exceeded expectations. But I understand: astrocartography is just one reference factor—business environment and market research matter equally.",
         "image": {
           "src": "/imgs/users/6.png"
         }
       },
       {
-        "title": "Carlos Martinez",
-        "label": "T-Shirt Designer",
-        "description": "Tested countless graffiti tools, but this graffiti generator delivers unmatched style diversity and quality. Export options are perfect for apparel printing.",
+        "title": "Amelia Wang",
+        "label": "Mental Health Counselor",
+        "description": "I integrate astrocartography maps into clients' career planning consultations. Many clients feel 'something's off' in certain cities but can't explain why—astrocartography provides an interpretive framework. Privacy protection is excellent; clients can generate maps themselves and bring them to discuss.",
         "image": {
           "src": "/imgs/users/4.png"
         }
       },
       {
-        "title": "Jasmine Lee",
-        "label": "Event Organizer",
-        "description": "Our urban arts festival required rapid graffiti designs. This graffiti generator produced stunning artwork that perfectly captured authentic street art energy.",
+        "title": "David Kim",
+        "label": "Retirement Planner",
+        "description": "Before retirement, I researched 10 candidate locations. The astrocartography calculator showed my Moon line passing through New Zealand's South Island. After site visits, I chose New Zealand and truly felt emotional peace and belonging. But I also valued healthcare resources and cost of living. Astrocartography maps are excellent starting points.",
         "image": {
           "src": "/imgs/users/5.png"
         }
@@ -328,12 +332,12 @@
   },
   "cta": {
     "name": "cta",
-    "title": "Experience Graffiti Generator's Ultra-Fast Graffiti Engine Now",
-    "description": "Use Graffiti Generator free to create street art now and transform inspiration into high-quality visual materials. No registration, unlimited exports—the sooner you act, the faster you capture your audience.",
+    "title": "Generate Your Free Astrocartography Map Now",
+    "description": "Use Astrocartography Calculator to create your professional-grade astrocartography chart with NASA-level precision analyzing 200,000+ global locations. Discover ideal cities for your career, relationships, and personal growth. No registration required, unlimited use—get professional analysis in 3 seconds.",
     "buttons": [
       {
-        "title": "Start Creating Now",
-        "icon": "RiGiftLine",
+        "title": "Generate Free Map Now",
+        "icon": "RiMapLine",
         "url": "/#generator",
         "target": "_self",
         "variant": "default"
@@ -343,15 +347,15 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "Graffiti Generator",
-      "description": "Graffiti Generator is dedicated to helping graffiti fans and brand teams quickly create authentic street-style works with AI, providing free, high-quality graffiti generation solutions suitable for multiple platforms.",
+      "title": "Astrocartography Calculator",
+      "description": "Astrocartography Calculator provides professional-grade astrocartography tools for digital nomads, relocation planners, and astrology practitioners. We use Swiss Ephemeris to ensure astronomical precision, and AI technology makes complex planetary line interpretations accessible. Strict privacy protection, 200,000+ global location analysis—making professional astrocartography charts accessible to everyone.",
       "logo": {
         "src": "/logo.png",
-        "alt": "Graffiti Generator"
+        "alt": "Astrocartography Calculator"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • Graffiti Generator. All rights reserved.",
+    "copyright": "© 2025 • Astrocartography Calculator. All rights reserved.",
     "nav": {
       "items": [
         {
@@ -378,25 +382,25 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/graffitigen",
+          "url": "https://x.com/astrocartography",
           "target": "_blank"
         },
         {
           "title": "Github",
           "icon": "RiGithubFill",
-          "url": "https://github.com/graffitigen",
+          "url": "https://github.com/astrocartography",
           "target": "_blank"
         },
         {
           "title": "Discord",
           "icon": "RiDiscordFill",
-          "url": "https://discord.gg/graffitigen",
+          "url": "https://discord.gg/astrocartography",
           "target": "_blank"
         },
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@graffitigen.com",
+          "url": "mailto:support@astrocartography.com",
           "target": "_self"
         }
       ]

@@ -2,25 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <!-- ========================================== -->
-  <!-- 当前生效：只有英文首页                        -->
+  <!-- 当前生效：只有英文首页和法律页面                -->
+  <!-- 更新日期: 2025-11-12                        -->
   <!-- ========================================== -->
+  
+  <!-- 英文首页 - 主关键词: astrocartography -->
   <url>
-    <loc>https://miniatur.org/</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-   <!-- 法律页面（合规要求） -->
+  
+  <!-- 法律页面（合规要求） -->
   <url>
-    <loc>https://miniatur.org/privacy-policy</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/privacy-policy</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://miniatur.org/terms-of-service</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/terms-of-service</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -33,22 +37,22 @@
   <!-- 多语言版本
   ────────────────────────────────────────────────────────── -->
   <!-- <url>
-    <loc>https://miniatur.org/zh/</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/zh/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url> -->
   
   <!-- <url>
-    <loc>https://miniatur.org/ms/</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/ms/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url> -->
   
   <!-- <url>
-    <loc>https://miniatur.org/pt/</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/pt/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url> -->
@@ -57,48 +61,31 @@
   <!-- 功能页面
   ────────────────────────────────────────────────────────── -->
   <!-- <url>
-    <loc>https://miniatur.org/posts/</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/posts/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url> -->
   
   <!-- <url>
-    <loc>https://miniatur.org/about/</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/about/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url> -->
   
   <!-- <url>
-    <loc>https://miniatur.org/pricing/</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/pricing/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url> -->
   
   <!-- <url>
-    <loc>https://miniatur.org/showcase/</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
+    <loc>https://astrocartography.net/showcase/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url> -->
-  
-  
-  <!-- 法律页面
-  ────────────────────────────────────────────────────────── -->
-  <!-- <url>
-    <loc>https://miniatur.org/privacy-policy</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url> -->
-  
-  <!-- <url>
-    <loc>https://miniatur.org/terms-of-service</loc>
-    <lastmod>2025-09-30T00:00:00+00:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url> -->
  
 

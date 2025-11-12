@@ -42,4 +42,4 @@ Disallow: /*?utm_campaign=
 Disallow: /*?gclid=
 Disallow: /*?fbclid=
 
-Sitemap: https://miniatur.org/sitemap.xml
+Sitemap: https://astrocartography.net/sitemap.xml
