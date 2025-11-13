@@ -1,3 +1,24 @@
+import { NextResponse } from 'next/server';
+
+// 🔥 文档搜索功能已禁用
+// 原因：当前网站是工具站（Astrocartography Calculator），不需要文档搜索功能
+// 禁用此功能可避免 fumadocs 构建错误，并减少不必要的依赖
+
+export const dynamic = "force-dynamic";
+
+export async function GET() {
+  return NextResponse.json({ 
+    error: 'Documentation search is not available for this site',
+    message: 'This is a tool website, not a documentation site'
+  }, { status: 404 });
+}
+
+/* 
+// ====================================================================
+// 原文档搜索代码（已禁用）
+// 如果未来需要启用文档功能，取消下面的注释并删除上面的简单返回
+// ====================================================================
+
 import { source } from "@/lib/source";
 import { createFromSource } from "fumadocs-core/search/server";
 
@@ -28,3 +49,4 @@ export async function GET(request: Request) {
   url.searchParams.set("language", "english");
   return handler.GET(new Request(url));
 }
+*/
