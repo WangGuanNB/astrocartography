@@ -16,8 +16,6 @@ jobs:
           fetch-depth: 0
       
       - name: Push to backup repo
-        env:
-          TARGET_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
         run: |
-          git remote add backup https://${TARGET_TOKEN}@github.com/banner129/astrocartography.git
+          git remote add backup https://${{ secrets.TARGET_REPO_TOKEN }}@github.com/banner129/astrocartography.git
           git push backup main --force
