@@ -3,14 +3,8 @@ import { BlogItem, Blog as BlogType } from "@/types/blocks/blog";
 import { getPostsByLocaleWithFallback } from "@/models/post";
 import { getTranslations } from "next-intl/server";
 
-// 🔥 CPU 优化：Posts 列表 1 小时缓存（可能有新文章）
-export const revalidate = 3600;  // 1小时缓存
-export const dynamic = 'force-static';
-export const dynamicParams = true;
-
-export async function generateStaticParams() {
-  return [{ locale: 'en' }];
-}
+// Posts 列表从数据库查询，必须使用 SSR（无法静态生成）
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
