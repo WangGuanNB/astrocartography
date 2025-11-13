@@ -1,0 +1,23 @@
+name: Sync to 129 Backup Repo
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Push to backup repo
+        env:
+          TARGET_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
+        run: |
+          git remote add backup https://${TARGET_TOKEN}@github.com/banner129/astrocartography.git
+          git push backup main --force
