@@ -9,6 +9,10 @@ Allow: /logo.png
 Allow: /logo.ico
 Allow: /imgs/
 
+# 允许搜索引擎验证文件
+Allow: /BingSiteAuth.xml
+Allow: /sitemap.xml
+
 # 允许法律页面（合规要求）
 Allow: /privacy-policy
 Allow: /terms-of-service

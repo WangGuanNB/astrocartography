@@ -22,6 +22,6 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!api|_next/static|_next/image|_vercel|favicon.ico|robots.txt|sitemap.xml|ads.txt|.*\\..*|privacy-policy|terms-of-service).*)",
+    "/((?!api|_next/static|_next/image|_vercel|favicon.ico|robots.txt|sitemap.xml|BingSiteAuth.xml|ads.txt|.*\\..*|privacy-policy|terms-of-service).*)",
   ],
 };
