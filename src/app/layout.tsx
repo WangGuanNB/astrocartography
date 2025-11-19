@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import "leaflet/dist/leaflet.css";
 
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n/locale";

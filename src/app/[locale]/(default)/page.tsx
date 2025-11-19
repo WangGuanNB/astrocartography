@@ -22,6 +22,7 @@ import Feature2 from "@/components/blocks/feature2";
 import Feature3 from "@/components/blocks/feature3";
 import Hero from "@/components/blocks/hero";
 import MiniaturaAIHero from "@/components/blocks/miniatura-ai-hero";
+import MiniaturaAIGenerator from "@/components/blocks/miniatur-ai-generator";
 import FeatureWhatOne from "@/components/blocks/feature-what-one";
 import Feature2WhyOne from "@/components/blocks/feature2-why-one";
 import FeatureWhatTwo from "@/components/blocks/feature-what-two";
@@ -76,7 +77,7 @@ export default async function LandingPage({
       {/* 工具页 ------------------------------------------------*/}
       {/* <TestPaymentModal /> */}
       {/*I 图片生成器 */}
-      {/* <MiniaturaAIGenerator /> */}
+      <MiniaturaAIGenerator />
     
 
       {/* {page.branding && <Branding section={page.branding} />} */}
