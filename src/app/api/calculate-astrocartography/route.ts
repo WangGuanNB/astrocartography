@@ -267,7 +267,7 @@ function calculatePlanetaryLines(birthData: BirthData) {
     Astronomy.Body.Pluto,
   ];
   
-  const planetNameMap: Record<Astronomy.Body, string> = {
+  const planetNameMap: Partial<Record<Astronomy.Body, string>> = {
     [Astronomy.Body.Sun]: 'Sun',
     [Astronomy.Body.Moon]: 'Moon',
     [Astronomy.Body.Mercury]: 'Mercury',
@@ -282,6 +282,10 @@ function calculatePlanetaryLines(birthData: BirthData) {
   
   for (const body of planetNames) {
     const planetName = planetNameMap[body];
+    if (!planetName) {
+      console.warn(`No name mapping found for body: ${body}`);
+      continue;
+    }
     const color = PLANET_COLORS[planetName] || '#FFFFFF';
     
     try {
