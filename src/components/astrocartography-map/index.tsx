@@ -217,15 +217,15 @@ export default function AstrocartographyMap({ birthData, planetLines = [] }: Ast
       `);
 
       // Mouse hover effects
-      cityMarker.on('mouseover', function() {
-        this.setStyle({
+      cityMarker.on('mouseover', () => {
+        cityMarker.setStyle({
           radius: 6,
           fillOpacity: 1,
         });
       });
 
-      cityMarker.on('mouseout', function() {
-        this.setStyle({
+      cityMarker.on('mouseout', () => {
+        cityMarker.setStyle({
           radius: 4,
           fillOpacity: 0.8,
         });
@@ -312,15 +312,15 @@ export default function AstrocartographyMap({ birthData, planetLines = [] }: Ast
         `);
 
         // Add mouse hover effects
-        polyline.on('mouseover', function() {
-          this.setStyle({
+        polyline.on('mouseover', () => {
+          polyline.setStyle({
             weight: 4,
             opacity: 1
           });
         });
 
-        polyline.on('mouseout', function() {
-          this.setStyle({
+        polyline.on('mouseout', () => {
+          polyline.setStyle({
             weight: 2.5,
             opacity: 0.85
           });
