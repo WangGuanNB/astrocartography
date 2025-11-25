@@ -423,6 +423,17 @@
         }
       },
       {
+        "title": "Featured on Twelve Tools",
+        "url": "https://twelve.tools",
+        "target": "_blank",
+        "image": {
+          "src": "https://twelve.tools/badge0-white.svg",
+          "alt": "Featured on Twelve Tools",
+          "width": 200,
+          "height": 54
+        }
+      },
+      {
         "title": "Featured on Aura++",
         "url": "https://auraplusplus.com/projects/astrocarto",
         "target": "_blank",
@@ -431,6 +442,28 @@
           "alt": "Featured on Aura++",
           "width": 220,
           "height": 60
+        }
+      },
+      {
+        "title": "Featured on Days Launch",
+        "url": "https://dayslaunch.com",
+        "target": "_blank",
+        "image": {
+          "src": "https://dayslaunch.com/badages-awards.svg",
+          "alt": "Featured on Days Launch",
+          "width": 200,
+          "height": 54
+        }
+      },
+      {
+        "title": "Featured on The One Startup",
+        "url": "https://theonestartup.com",
+        "target": "_blank",
+        "image": {
+          "src": "https://theonestartup.com/badages-awards.svg",
+          "alt": "Featured on The One Startup",
+          "width": 200,
+          "height": 54
         }
       }
     ],
