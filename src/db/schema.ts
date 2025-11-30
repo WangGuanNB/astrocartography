@@ -12,7 +12,7 @@ import {
 
 // Users table
 export const users = pgTable(
-  "users_miniatur",
+  "users_astrocarto",
   {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
     uuid: varchar({ length: 255 }).notNull().unique(),
@@ -31,7 +31,7 @@ export const users = pgTable(
     is_affiliate: boolean().notNull().default(false),
   },
   (table) => [
-    uniqueIndex("email_miniatur_provider_unique_idx").on(
+    uniqueIndex("email_astrocarto_provider_unique_idx").on(
       table.email,
       table.signin_provider
     ),
@@ -39,7 +39,7 @@ export const users = pgTable(
 );
 
 // Orders table
-export const orders = pgTable("orders_miniatur", {
+export const orders = pgTable("orders_astrocarto", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   order_no: varchar({ length: 255 }).notNull().unique(),
   created_at: timestamp({ withTimezone: true }),
@@ -68,7 +68,7 @@ export const orders = pgTable("orders_miniatur", {
 });
 
 // API Keys table
-export const apikeys = pgTable("apikeys_miniatur", {
+export const apikeys = pgTable("apikeys_astrocarto", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   api_key: varchar({ length: 255 }).notNull().unique(),
   title: varchar({ length: 100 }),
@@ -78,7 +78,7 @@ export const apikeys = pgTable("apikeys_miniatur", {
 });
 
 // Credits table
-export const credits = pgTable("credits_miniatur", {
+export const credits = pgTable("credits_astrocarto", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   trans_no: varchar({ length: 255 }).notNull().unique(),
   created_at: timestamp({ withTimezone: true }),
@@ -90,7 +90,7 @@ export const credits = pgTable("credits_miniatur", {
 });
 
 // Posts table
-export const posts = pgTable("posts_miniatur", {
+export const posts = pgTable("posts_astrocarto", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   uuid: varchar({ length: 255 }).notNull().unique(),
   slug: varchar({ length: 255 }),
@@ -107,7 +107,7 @@ export const posts = pgTable("posts_miniatur", {
 });
 
 // Affiliates table
-export const affiliates = pgTable("affiliates_miniatur", {
+export const affiliates = pgTable("affiliates_astrocarto", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   user_uuid: varchar({ length: 255 }).notNull(),
   created_at: timestamp({ withTimezone: true }),
@@ -120,7 +120,7 @@ export const affiliates = pgTable("affiliates_miniatur", {
 });
 
 // Feedbacks table
-export const feedbacks = pgTable("feedbacks_miniatur", {
+export const feedbacks = pgTable("feedbacks_astrocarto", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
   created_at: timestamp({ withTimezone: true }),
   status: varchar({ length: 50 }),

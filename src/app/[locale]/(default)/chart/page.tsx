@@ -4,9 +4,12 @@ import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Download, Share2, Sparkles } from 'lucide-react';
+import { ArrowLeft, Download, Share2, Sparkles, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import AstroChat from '@/components/astro-chat';
+import { useAppContext } from '@/contexts/app';
+import SignModal from '@/components/sign/modal';
 
 // 动态导入地图组件（避免 SSR 问题）
 const AstrocartographyMap = dynamic(
@@ -30,11 +33,13 @@ interface PlanetLine {
 
 function ChartContent() {
   const searchParams = useSearchParams();
+  const { user, setShowSignModal } = useAppContext();
   const [chartData, setChartData] = useState<ChartData | null>(null);
   const [birthData, setBirthData] = useState<any>(null);
   const [planetLines, setPlanetLines] = useState<PlanetLine[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [chatOpen, setChatOpen] = useState(false);
 
   useEffect(() => {
     // 从 URL 参数获取出生信息
@@ -101,6 +106,17 @@ function ChartContent() {
     alert('链接已复制到剪贴板！');
   };
 
+  // 处理 AI 聊天按钮点击 - 检查登录状态
+  const handleAskAIClick = () => {
+    if (!user) {
+      // 未登录，显示登录弹窗
+      setShowSignModal(true);
+    } else {
+      // 已登录，打开聊天窗口
+      setChatOpen(true);
+    }
+  };
+
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* 主内容 - 全屏地图 (z-0) */}
@@ -134,67 +150,111 @@ function ChartContent() {
               />
             </div>
 
-            {/* 浮动操作按钮 */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
-              <div className="flex gap-3 bg-black/80 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
-                <Button
-                  onClick={handleDownload}
-                  className="bg-purple-600 hover:bg-purple-700 h-12"
-                >
-                  <Download className="mr-2 size-4" />
-                  下载星盘图
-                </Button>
-                <Button
-                  onClick={handleShare}
-                  variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 bg-white/5 h-12"
-                >
-                  <Share2 className="mr-2 size-4" />
-                  分享链接
-                </Button>
-                <Link href="/">
-                  <Button
-                    variant="outline"
-                    className="border-white/30 text-white hover:bg-white/10 bg-white/5 h-12 w-full"
-                  >
-                    <Sparkles className="mr-2 size-4" />
-                    生成新的星盘图
-                  </Button>
-                </Link>
-              </div>
-            </div>
           </>
         ) : null}
       </div>
 
-      {/* 顶部浮动栏 (z-20) */}
+      {/* 右侧导航栏 - 完全透明背景，按钮带背景 */}
       {chartData && (
-        <div className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm pointer-events-none">
-          <div className="container py-3 pointer-events-auto">
-            <div className="flex items-center justify-between">
-              {/* 返回按钮 */}
-              <Link href="/" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300">
-                <ArrowLeft className="size-4" />
-                <span className="hidden sm:inline">返回首页</span>
-              </Link>
-
-              {/* 标题信息 */}
-              <div className="flex-1 text-center">
-                <h1 className="text-lg md:text-xl font-bold text-white">
-                  Your Astrocartography Map
-                </h1>
-                <div className="text-gray-400 text-xs md:text-sm space-x-2 md:space-x-4">
-                  <span>📅 {chartData.birthDate}</span>
-                  <span>📍 {chartData.birthLocation}</span>
+        <div className="absolute top-0 right-0 bottom-0 z-[1100] pointer-events-none w-auto">
+          <div className="h-full flex flex-col py-6 px-4 pointer-events-auto">
+            {/* 标题和出生信息 */}
+            <div className="mb-6 bg-black/80 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">
+              <h1 className="text-sm md:text-base font-bold text-white mb-2">
+                Your Astrocartography Map
+              </h1>
+              <div className="text-gray-400 text-xs space-y-1">
+                <div className="flex items-center gap-1">
+                  <span>📅</span>
+                  <span>{chartData.birthDate}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span>📍</span>
+                  <span className="truncate max-w-[150px]">{chartData.birthLocation}</span>
                 </div>
               </div>
+            </div>
 
-              {/* 占位 */}
-              <div className="w-20"></div>
+            {/* 所有操作按钮 - 垂直排列，每个按钮都有背景 */}
+            <div className="flex flex-col gap-2">
+              {/* 返回首页 */}
+              <Link href="/">
+                <Button
+                  className="w-full justify-start bg-black/80 backdrop-blur-md hover:bg-black/90 text-white border border-white/20"
+                >
+                  <ArrowLeft className="size-4 mr-2" />
+                  返回首页
+                </Button>
+              </Link>
+
+              {/* AI 聊天按钮 */}
+              {birthData && planetLines.length > 0 && (
+                <Button
+                  onClick={handleAskAIClick}
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white justify-start shadow-lg"
+                >
+                  <MessageCircle className="size-4 mr-2" />
+                  Ask AI
+                </Button>
+              )}
+
+              {/* 下载按钮 */}
+              {birthData && planetLines.length > 0 && (
+                <Button
+                  onClick={handleDownload}
+                  className="w-full justify-start bg-black/80 backdrop-blur-md hover:bg-black/90 text-white border border-white/20"
+                >
+                  <Download className="size-4 mr-2" />
+                  下载
+                </Button>
+              )}
+
+              {/* 分享按钮 */}
+              {birthData && planetLines.length > 0 && (
+                <Button
+                  onClick={handleShare}
+                  className="w-full justify-start bg-black/80 backdrop-blur-md hover:bg-black/90 text-white border border-white/20"
+                >
+                  <Share2 className="size-4 mr-2" />
+                  分享
+                </Button>
+              )}
+
+              {/* 生成新星盘图 */}
+              <Link href="/">
+                <Button
+                  className="w-full justify-start bg-black/80 backdrop-blur-md hover:bg-black/90 text-white border border-white/20"
+                >
+                  <Sparkles className="size-4 mr-2" />
+                  新星盘图
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       )}
+
+      {/* AI 聊天对话框 - 只有登录用户才能使用 */}
+      {birthData && planetLines.length > 0 && user && (
+        <AstroChat
+          open={chatOpen}
+          onOpenChange={setChatOpen}
+          chartData={{
+            birthData: {
+              date: birthData.date,
+              time: birthData.time,
+              location: birthData.location,
+              latitude: birthData.latitude,
+              longitude: birthData.longitude,
+              timezone: chartData?.timezone || 'UTC',
+            },
+            planetLines: planetLines,
+          }}
+        />
+      )}
+
+      {/* 登录弹窗 */}
+      <SignModal />
     </div>
   );
 }

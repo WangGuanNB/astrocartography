@@ -20,7 +20,7 @@
       ]
     },
     "buttons": [],
-    "show_sign": false,
+    "show_sign": true,
     "show_theme": false,
     "show_locale": true
   },
