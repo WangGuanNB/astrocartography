@@ -106,15 +106,9 @@ function ChartContent() {
     alert('链接已复制到剪贴板！');
   };
 
-  // 处理 AI 聊天按钮点击 - 检查登录状态
+  // 处理 AI 聊天按钮点击 - 直接打开聊天窗口，不验证登录
   const handleAskAIClick = () => {
-    if (!user) {
-      // 未登录，显示登录弹窗
-      setShowSignModal(true);
-    } else {
-      // 已登录，打开聊天窗口
-      setChatOpen(true);
-    }
+    setChatOpen(true);
   };
 
   return (
@@ -234,8 +228,8 @@ function ChartContent() {
         </div>
       )}
 
-      {/* AI 聊天对话框 - 只有登录用户才能使用 */}
-      {birthData && planetLines.length > 0 && user && (
+      {/* AI 聊天对话框 - 未登录用户可免费问一个问题 */}
+      {birthData && planetLines.length > 0 && (
         <AstroChat
           open={chatOpen}
           onOpenChange={setChatOpen}
@@ -250,6 +244,8 @@ function ChartContent() {
             },
             planetLines: planetLines,
           }}
+          user={user}
+          onRequireLogin={() => setShowSignModal(true)}
         />
       )}
 
