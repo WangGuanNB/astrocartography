@@ -22,6 +22,13 @@ Allow: /privacy-policy
 Allow: /terms-of-service
 Allow: /refund-policy
 
+# 允许联系页面（合规要求 - Creem 审核必需）
+Allow: /contact
+Allow: /zh/contact
+Allow: /pt/contact
+Allow: /es/contact
+Allow: /it/contact
+
 # 阻止所有其他页面
 Disallow: /ms
 Disallow: /en

@@ -97,3 +97,4 @@ export interface AboutPage {
 
 // Export the new page types
 export type { ConverterPage, ColorPage, AboutPage };
+export type { ContactPage } from "./contact";

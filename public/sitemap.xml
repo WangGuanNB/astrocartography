@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <!-- ========================================== -->
-  <!-- 当前生效：英文首页、多语言首页和法律页面      -->
-  <!-- 更新日期: 2025-11-28                        -->
+  <!-- 当前生效：英文首页、多语言首页、法律页面和联系页面 -->
+  <!-- 更新日期: 2025-12-02                        -->
   <!-- ========================================== -->
   
   <!-- 英文首页 - 主关键词: astrocartography -->
@@ -67,6 +67,43 @@
     <lastmod>2025-11-28T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  
+  <!-- 联系页面（合规要求 - Creem 审核必需） -->
+  <url>
+    <loc>https://astrocarto.org/contact</loc>
+    <lastmod>2025-12-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- 多语言版本联系页面 -->
+  <url>
+    <loc>https://astrocarto.org/zh/contact</loc>
+    <lastmod>2025-12-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://astrocarto.org/pt/contact</loc>
+    <lastmod>2025-12-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://astrocarto.org/es/contact</loc>
+    <lastmod>2025-12-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://astrocarto.org/it/contact</loc>
+    <lastmod>2025-12-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 

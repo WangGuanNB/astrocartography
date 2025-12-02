@@ -27,7 +27,7 @@
   "hero": {
     "title": "星盘地图计算器 - 发现你的理想位置",
     "highlight_text": "永久免费",
-    "description": "星盘地图计算器将你的出生星盘投射到世界地图上，揭示行星线在哪里放大你的职业、人际关系和个人成长。使用精确到1英里的NASA级计算，我们分析了超过20万个全球坐标，以显示太阳、金星、木星和其他行星能量最强的地方。数字游民、搬迁规划者和占星爱好者信赖我们的免费工具，获取基于数据的位置洞察——无需注册，无限制。",
+    "description": "星盘地图计算器将你的出生星盘投射到世界地图上，揭示行星线在哪里放大你的职业、人际关系和个人成长。使用精确到1英里的专业级计算（Swiss Ephemeris），我们分析了超过20万个全球坐标，以显示太阳、金星、木星和其他行星能量最强的地方。数字游民、搬迁规划者和占星爱好者信赖我们的免费工具，获取基于数据的位置洞察——无需注册，无限制。",
     "announcement": {
       "label": "100% 免费",
       "title": "无需注册 • 无限生成",
@@ -82,10 +82,10 @@
         }
       },
       {
-        "title": "NASA级数据",
+        "title": "专业级计算",
         "image": {
           "src": "/imgs/logos/react.svg",
-          "alt": "NASA级计算"
+          "alt": "专业级计算"
         }
       },
       {
@@ -121,11 +121,11 @@
     },
     "items": [
       {
-        "title": "NASA级行星计算",
-        "description": "星盘地图计算器使用Swiss Ephemeris，这是与NASA行星数据匹配的天文标准。我们计算在你精确出生时刻，每个行星（太阳、月亮、金星、火星、木星、土星）在地球表面处于角度位置的地方——上升（ASC）、下降（DSC）、中天（MC）或天底（IC）。每条星盘地图线精确到1英里以内，确保你的星盘地图与专业占星师的计算相匹配。当你站在一条行星线上时，该行星的能量在那里主导你的体验。",
+        "title": "专业级行星计算",
+        "description": "星盘地图计算器使用Swiss Ephemeris，这是匹配NASA JPL精度的天文标准。我们计算在你精确出生时刻，每个行星（太阳、月亮、金星、火星、木星、土星）在地球表面处于角度位置的地方——上升（ASC）、下降（DSC）、中天（MC）或天底（IC）。每条星盘地图线精确到1英里以内，确保你的星盘地图与专业占星师的计算相匹配。当你站在一条行星线上时，该行星的能量在那里主导你的体验。",
         "image": {
           "src": "/imgs/features/hero-web.webp",
-          "alt": "NASA级星盘地图计算"
+          "alt": "专业级星盘地图计算"
         }
       },
       {
@@ -154,7 +154,7 @@
     "items": [
       {
         "title": "专业精度，完全免费",
-        "description": "虽然竞争对手对AI分析收取每月$15.9或对PDF报告收取$22.90，我们的星盘地图计算器提供无限制的免费访问。我们使用与360美元专业软件相同的Swiss Ephemeris库，精度达到1英里，符合NASA标准。生成无限星盘地图，下载无水印文件，访问AI解读——无需信用卡，无隐藏费用。无论你是学生、企业家还是退休人员，都可以零成本获得专业星盘地图分析。",
+        "description": "虽然竞争对手对AI分析收取每月$15.9或对PDF报告收取$22.90，我们的星盘地图计算器提供无限制的免费访问。我们使用与360美元专业软件相同的Swiss Ephemeris库，精度达到1英里，匹配NASA JPL精度标准。生成无限星盘地图，下载无水印文件，访问AI解读——无需信用卡，无隐藏费用。无论你是学生、企业家还是退休人员，都可以零成本获得专业星盘地图分析。",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/hero-web.webp",
@@ -261,7 +261,7 @@
       },
       {
         "title": "计算有多准确？",
-        "description": "我们使用NASA级行星计算，在地球表面精确到1英里以内。我们的计算考虑了时区、夏令时和历史日历变化。这是专业占星师在咨询时依赖的相同精度。"
+        "description": "我们使用Swiss Ephemeris计算，匹配NASA JPL精度，在地球表面精确到1英里以内。我们的计算考虑了时区、夏令时和历史日历变化。这是专业占星师在咨询时依赖的相同精度。"
       },
       {
         "title": "我应该仅基于星盘地图搬迁吗？",
@@ -337,7 +337,7 @@
   "cta": {
     "name": "cta",
     "title": "立即生成你的免费星盘地图",
-    "description": "使用星盘地图计算器创建你的专业级星盘地图，采用NASA级精度分析超过20万个全球位置。发现适合你职业、人际关系和个人成长的理想城市。无需注册，无限使用——3秒内获得专业分析。",
+    "description": "使用星盘地图计算器创建你的专业级星盘地图，采用Swiss Ephemeris精度分析超过20万个全球位置。发现适合你职业、人际关系和个人成长的理想城市。无需注册，无限使用——3秒内获得专业分析。",
     "buttons": [
       {
         "title": "立即生成免费地图",
@@ -476,6 +476,11 @@
               "url": "/#faq"
             },
             {
+              "title": "联系我们",
+              "url": "/contact",
+              "target": "_self"
+            },
+            {
               "title": "AIStage",
               "url": "https://aistage.net",
               "target": "_blank"
@@ -489,32 +494,7 @@
       ]
     },
     "social": {
-      "items": [
-        {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/astrocartography",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/astrocartography",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/astrocartography",
-          "target": "_blank"
-        },
-        {
-          "title": "Email",
-          "icon": "RiMailLine",
-          "url": "mailto:support@astrocarto.org",
-          "target": "_self"
-        }
-      ]
+      "items": []
     },
     "badges": [
       {

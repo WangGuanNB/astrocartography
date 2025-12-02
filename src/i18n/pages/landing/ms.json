@@ -463,46 +463,36 @@
     "nav": {
       "items": [
         {
-          "title": "Tentang",
-          "url": "/about"
+          "title": "Produk",
+          "children": []
         },
         {
           "title": "Sumber",
-          "url": "/#features"
+          "children": [
+            {
+              "title": "Soalan Lazim",
+              "url": "/#faq"
+            },
+            {
+              "title": "Hubungi Kami",
+              "url": "/contact",
+              "target": "_self"
+            },
+            {
+              "title": "AIStage",
+              "url": "https://aistage.net",
+              "target": "_blank"
+            }
+          ]
         },
         {
-          "title": "Rakan",
-          "url": "/#usage"
+          "title": "Komuniti",
+          "children": []
         }
       ]
     },
     "social": {
-      "items": [
-        {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/miniaturaiapp",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/miniaturaiapp",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/miniaturaiapp",
-          "target": "_blank"
-        },
-        {
-          "title": "Email",
-          "icon": "RiMailLine",
-          "url": "mailto:support@miniaturaiapp.com",
-          "target": "_self"
-        }
-      ]
+      "items": []
     },
     "badges": [
     

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Contáctenos - Soporte Astrocartography Calculator",
+    "description": "Póngase en contacto con el equipo de Astrocartography Calculator. Envíenos sus preguntas, comentarios o solicitudes de soporte. Responderemos en 1-2 días hábiles.",
+    "keywords": ["contacto astrocartografía", "soporte astrocartografía", "formulario de contacto", "ayuda calculadora astrocartografía"]
+  },
+  "title": "Contáctenos",
+  "subtitle": "Nos encantaría saber de usted",
+  "description": "¿Tiene una pregunta, sugerencia o necesita ayuda? Complete el formulario a continuación y nos pondremos en contacto lo antes posible, generalmente en 1-2 días hábiles.",
+  "form": {
+    "name": {
+      "label": "Su Nombre",
+      "placeholder": "Ingrese su nombre"
+    },
+    "email": {
+      "label": "Su Email",
+      "placeholder": "Ingrese su dirección de correo electrónico"
+    },
+    "subject": {
+      "label": "Asunto",
+      "placeholder": "¿De qué se trata?"
+    },
+    "message": {
+      "label": "Mensaje",
+      "placeholder": "Cuéntenos más sobre su pregunta o comentario..."
+    },
+    "submit": "Enviar Mensaje",
+    "submitting": "Enviando...",
+    "success": "¡Mensaje Enviado Exitosamente!",
+    "success_detail": "Gracias por contactarnos. Hemos recibido su mensaje y le responderemos en 1-2 días hábiles. Recibirá un correo de confirmación en breve.",
+    "error": "No se pudo enviar el mensaje",
+    "error_detail": "Encontramos un problema al enviar su mensaje. Por favor, intente nuevamente en un momento, o contáctenos directamente en support@astrocarto.org si el problema persiste."
+  },
+  "alternative": {
+    "title": "Métodos Alternativos de Contacto",
+    "email": {
+      "label": "Email",
+      "value": "support@astrocarto.org",
+      "description": "Envíenos un correo electrónico directamente"
+    },
+    "response": "Normalmente respondemos en 1-2 días hábiles."
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Qué tan rápido recibiré una respuesta?",
+        "answer": "Nuestro objetivo es responder a todas las consultas en 1-2 días hábiles. Para asuntos urgentes, mencione esto en la línea de asunto de su mensaje."
+      },
+      {
+        "question": "¿Qué debo incluir en mi mensaje?",
+        "answer": "Incluya tantos detalles como sea posible sobre su pregunta o problema, incluyendo capturas de pantalla relevantes, mensajes de error o pasos para reproducir el problema."
+      },
+      {
+        "question": "¿Puedo obtener soporte técnico para usar la calculadora?",
+        "answer": "¡Absolutamente! Estamos aquí para ayudar con cualquier pregunta sobre cómo usar el Astrocartography Calculator, interpretar resultados o solucionar problemas."
+      }
+    ]
+  }
+}
+

@@ -27,7 +27,7 @@
   "hero": {
     "title": "Astrocartography Calculator - Discover Your Ideal Location",
     "highlight_text": "Free Forever",
-    "description": "Astrocartography Calculator maps your birth chart onto the world, revealing where planetary lines amplify your career, relationships, and personal growth. Using NASA-grade calculations accurate to 1 mile, we analyze 200,000+ global coordinates to show where Sun, Venus, Jupiter, and other planetary energies are strongest. Digital nomads, relocators, and astrology enthusiasts trust our free tool for data-driven location insights—no sign-up, no limits.",
+      "description": "Astrocartography Calculator maps your birth chart onto the world, revealing where planetary lines amplify your career, relationships, and personal growth. Using professional-grade calculations with Swiss Ephemeris accurate to 1 mile, we analyze 200,000+ global coordinates to show where Sun, Venus, Jupiter, and other planetary energies are strongest. Digital nomads, relocators, and astrology enthusiasts trust our free tool for data-driven location insights—no sign-up, no limits.",
     "announcement": {
       "label": "100% Free",
       "title": "No Registration • Unlimited Charts",
@@ -82,10 +82,10 @@
         }
       },
       {
-        "title": "NASA-Grade Data",
+        "title": "Professional-Grade Calculations",
         "image": {
           "src": "/imgs/logos/react.svg",
-          "alt": "NASA-Grade Calculations"
+          "alt": "Professional-Grade Calculations"
         }
       },
       {
@@ -121,11 +121,11 @@
     },
     "items": [
       {
-        "title": "NASA-Grade Planetary Calculations",
-        "description": "Astrocartography Calculator uses Swiss Ephemeris, the astronomical standard matching NASA planetary data. We calculate where each planet (Sun, Moon, Venus, Mars, Jupiter, Saturn) was angular—rising (ASC), setting (DSC), culminating (MC), or at nadir (IC)—at your exact birth moment across Earth's surface. Each astrocartography line is accurate to within 1 mile, ensuring your astrocartography chart matches professional astrologer calculations. When you stand on a planetary line, that planet's energy dominates your experience there.",
+        "title": "Professional-Grade Planetary Calculations",
+        "description": "Astrocartography Calculator uses Swiss Ephemeris, the astronomical standard matching NASA JPL precision. We calculate where each planet (Sun, Moon, Venus, Mars, Jupiter, Saturn) was angular—rising (ASC), setting (DSC), culminating (MC), or at nadir (IC)—at your exact birth moment across Earth's surface. Each astrocartography line is accurate to within 1 mile, ensuring your astrocartography chart matches professional astrologer calculations. When you stand on a planetary line, that planet's energy dominates your experience there.",
         "image": {
           "src": "/imgs/features/hero-web.webp",
-          "alt": "NASA-grade astrocartography calculations"
+          "alt": "Professional-grade astrocartography calculations"
         }
       },
       {
@@ -154,7 +154,7 @@
     "items": [
       {
         "title": "Professional Precision, Completely Free",
-        "description": "While competitors charge $15.9/month for AI analysis or $22.90 for PDF reports, our astrocartography calculator offers unlimited free access. We use the same Swiss Ephemeris library that $360 professional software relies on, with 1-mile accuracy matching NASA standards. Generate unlimited astrocartography charts, download watermark-free files, and access AI interpretations—no credit card, no hidden fees. Whether you're a student, entrepreneur, or retiree, access professional astrocartography analysis at zero cost.",
+        "description": "While competitors charge $15.9/month for AI analysis or $22.90 for PDF reports, our astrocartography calculator offers unlimited free access. We use the same Swiss Ephemeris library that $360 professional software relies on, with 1-mile accuracy matching NASA JPL precision standards. Generate unlimited astrocartography charts, download watermark-free files, and access AI interpretations—no credit card, no hidden fees. Whether you're a student, entrepreneur, or retiree, access professional astrocartography analysis at zero cost.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/hero-web.webp",
@@ -261,7 +261,7 @@
       },
       {
         "title": "How accurate are the calculations?",
-        "description": "We use NASA-grade planetary calculations, accurate to within 1 mile on Earth's surface. Our calculations account for time zones, daylight saving time, and historical calendar changes. This is the same precision professional astrologers rely on for consultations."
+        "description": "We use Swiss Ephemeris calculations matching NASA JPL precision, accurate to within 1 mile on Earth's surface. Our calculations account for time zones, daylight saving time, and historical calendar changes. This is the same precision professional astrologers rely on for consultations."
       },
       {
         "title": "Should I move based solely on my astrocartography map?",
@@ -337,7 +337,7 @@
   "cta": {
     "name": "cta",
     "title": "Generate Your Free Astrocartography Map Now",
-    "description": "Use Astrocartography Calculator to create your professional-grade astrocartography chart with NASA-level precision analyzing 200,000+ global locations. Discover ideal cities for your career, relationships, and personal growth. No registration required, unlimited use—get professional analysis in 3 seconds.",
+    "description": "Use Astrocartography Calculator to create your professional-grade astrocartography chart with Swiss Ephemeris precision analyzing 200,000+ global locations. Discover ideal cities for your career, relationships, and personal growth. No registration required, unlimited use—get professional analysis in 3 seconds.",
     "buttons": [
       {
         "title": "Generate Free Map Now",
@@ -476,6 +476,11 @@
               "url": "/#faq"
             },
             {
+              "title": "Contact Us",
+              "url": "/contact",
+              "target": "_self"
+            },
+            {
               "title": "AIStage",
               "url": "https://aistage.net",
               "target": "_blank"
@@ -489,32 +494,7 @@
       ]
     },
     "social": {
-      "items": [
-        {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/astrocartography",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/astrocartography",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/astrocartography",
-          "target": "_blank"
-        },
-        {
-          "title": "Email",
-          "icon": "RiMailLine",
-          "url": "mailto:support@astrocarto.org",
-          "target": "_self"
-        }
-      ]
+      "items": []
     },
     "badges": [
       {

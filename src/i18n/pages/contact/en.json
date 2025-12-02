@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Contact Us - Astrocartography Calculator Support",
+    "description": "Get in touch with the Astrocartography Calculator team. Send us your questions, feedback, or support requests. We'll respond within 1-2 business days.",
+    "keywords": ["contact astrocartography", "astrocartography support", "contact form", "astrocartography calculator help"]
+  },
+  "title": "Contact Us",
+  "subtitle": "We'd love to hear from you",
+  "description": "Have a question, suggestion, or need help? Fill out the form below and we'll get back to you as soon as possible, typically within 1-2 business days.",
+  "form": {
+    "name": {
+      "label": "Your Name",
+      "placeholder": "Enter your name"
+    },
+    "email": {
+      "label": "Your Email",
+      "placeholder": "Enter your email address"
+    },
+    "subject": {
+      "label": "Subject",
+      "placeholder": "What is this regarding?"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Tell us more about your question or feedback..."
+    },
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success": "Message Sent Successfully!",
+    "success_detail": "Thank you for contacting us. We've received your message and will respond to you within 1-2 business days. You'll receive a confirmation email shortly.",
+    "error": "Unable to send message",
+    "error_detail": "We encountered an issue sending your message. Please try again in a moment, or contact us directly at support@astrocarto.org if the problem persists."
+  },
+  "alternative": {
+    "title": "Alternative Contact Methods",
+    "email": {
+      "label": "Email",
+      "value": "support@astrocarto.org",
+      "description": "Send us an email directly"
+    },
+    "response": "We typically respond within 1-2 business days."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How quickly will I receive a response?",
+        "answer": "We aim to respond to all inquiries within 1-2 business days. For urgent matters, please mention it in your message subject line."
+      },
+      {
+        "question": "What should I include in my message?",
+        "answer": "Please include as much detail as possible about your question or issue, including any relevant screenshots, error messages, or steps to reproduce the problem."
+      },
+      {
+        "question": "Can I get technical support for using the calculator?",
+        "answer": "Absolutely! We're here to help with any questions about using the Astrocartography Calculator, interpreting results, or troubleshooting issues."
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Hubungi Kami - Sokongan Astrocartography Calculator",
+    "description": "Hubungi pasukan Astrocartography Calculator. Hantar soalan, maklum balas, atau permintaan sokongan anda kepada kami. Kami akan membalas dalam 1-2 hari bekerja.",
+    "keywords": ["hubungi astrocartografi", "sokongan astrocartografi", "borang hubungan", "bantuan kalkulator astrocartografi"]
+  },
+  "title": "Hubungi Kami",
+  "subtitle": "Kami ingin mendengar daripada anda",
+  "description": "Ada soalan, cadangan, atau perlukan bantuan? Isikan borang di bawah dan kami akan menghubungi anda secepat mungkin, biasanya dalam 1-2 hari bekerja.",
+  "form": {
+    "name": {
+      "label": "Nama Anda",
+      "placeholder": "Masukkan nama anda"
+    },
+    "email": {
+      "label": "Emel Anda",
+      "placeholder": "Masukkan alamat emel anda"
+    },
+    "subject": {
+      "label": "Subjek",
+      "placeholder": "Berkenaan apakah ini?"
+    },
+    "message": {
+      "label": "Mesej",
+      "placeholder": "Beritahu kami lebih lanjut mengenai soalan atau maklum balas anda..."
+    },
+    "submit": "Hantar Mesej",
+    "submitting": "Menghantar...",
+    "success": "Mesej Berjaya Dihantar!",
+    "success_detail": "Terima kasih kerana menghubungi kami. Kami telah menerima mesej anda dan akan membalas dalam 1-2 hari bekerja. Anda akan menerima e-mel pengesahan tidak lama lagi.",
+    "error": "Tidak dapat menghantar mesej",
+    "error_detail": "Kami menghadapi masalah semasa menghantar mesej anda. Sila cuba lagi sebentar, atau hubungi kami terus di support@astrocarto.org jika masalah berterusan."
+  },
+  "alternative": {
+    "title": "Kaedah Hubungan Alternatif",
+    "email": {
+      "label": "Emel",
+      "value": "support@astrocarto.org",
+      "description": "Hantar emel kepada kami secara langsung"
+    },
+    "response": "Kami biasanya membalas dalam 1-2 hari bekerja."
+  },
+  "faq": {
+    "title": "Soalan Lazim",
+    "items": [
+      {
+        "question": "Seberapa cepat saya akan menerima jawapan?",
+        "answer": "Kami bertujuan untuk membalas semua pertanyaan dalam 1-2 hari bekerja. Untuk perkara mendesak, sila nyatakan dalam baris subjek mesej anda."
+      },
+      {
+        "question": "Apa yang patut saya sertakan dalam mesej saya?",
+        "answer": "Sila sertakan sebanyak mungkin butiran tentang soalan atau isu anda, termasuk sebarang tangkapan skrin, mesej ralat, atau langkah-langkah untuk menghasilkan semula masalah."
+      },
+      {
+        "question": "Bolehkah saya mendapat sokongan teknikal untuk menggunakan kalkulator?",
+        "answer": "Sudah tentu! Kami di sini untuk membantu dengan sebarang soalan tentang menggunakan Astrocartography Calculator, mentafsir hasil, atau menyelesaikan masalah."
+      }
+    ]
+  }
+}
+
