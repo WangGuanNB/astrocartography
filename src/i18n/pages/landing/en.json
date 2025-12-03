@@ -27,7 +27,7 @@
   "hero": {
     "title": "Astrocartography Calculator - Discover Your Ideal Location",
     "highlight_text": "Free Forever",
-      "description": "Astrocartography Calculator maps your birth chart onto the world, revealing where planetary lines amplify your career, relationships, and personal growth. Using professional-grade calculations with Swiss Ephemeris accurate to 1 mile, we analyze 200,000+ global coordinates to show where Sun, Venus, Jupiter, and other planetary energies are strongest. Digital nomads, relocators, and astrology enthusiasts trust our free tool for data-driven location insights—no sign-up, no limits.",
+      "description": "Astrocartography Calculator maps your birth chart onto the world, revealing where planetary lines amplify your career, relationships, and personal growth. Using professional-grade calculations with Swiss Ephemeris accurate to 1 mile, we analyze locations worldwide to show where Sun, Venus, Jupiter, and other planetary energies are strongest. Digital nomads, relocators, and astrology enthusiasts trust our free tool for data-driven location insights—no sign-up, no limits.",
     "announcement": {
       "label": "100% Free",
       "title": "No Registration • Unlimited Charts",
@@ -63,12 +63,12 @@
         "icon": "RiUserLine"
       },
       {
-        "value": "200,000+",
+        "value": "Global",
         "label": "Locations Analyzed",
         "icon": "RiMapPinLine"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "show_badge": false
   },
   "branding": {
@@ -99,7 +99,7 @@
         "title": "Global Coverage",
         "image": {
           "src": "/imgs/logos/shadcn.svg",
-          "alt": "200,000+ Locations"
+          "alt": "Global Locations"
         }
       },
       {
@@ -122,7 +122,7 @@
     "items": [
       {
         "title": "Professional-Grade Planetary Calculations",
-        "description": "Astrocartography Calculator uses Swiss Ephemeris, the astronomical standard matching NASA JPL precision. We calculate where each planet (Sun, Moon, Venus, Mars, Jupiter, Saturn) was angular—rising (ASC), setting (DSC), culminating (MC), or at nadir (IC)—at your exact birth moment across Earth's surface. Each astrocartography line is accurate to within 1 mile, ensuring your astrocartography chart matches professional astrologer calculations. When you stand on a planetary line, that planet's energy dominates your experience there.",
+        "description": "Astrocartography Calculator uses Swiss Ephemeris, the astronomical standard used by professional astrologers. We calculate where each planet (Sun, Moon, Venus, Mars, Jupiter, Saturn) was angular—rising (ASC), setting (DSC), culminating (MC), or at nadir (IC)—at your exact birth moment across Earth's surface. Each astrocartography line is accurate to within 1 mile, ensuring your astrocartography chart matches professional astrologer calculations. When you stand on a planetary line, that planet's energy dominates your experience there.",
         "image": {
           "src": "/imgs/features/hero-web.webp",
           "alt": "Professional-grade astrocartography calculations"
@@ -130,7 +130,7 @@
       },
       {
         "title": "AI-Powered Location Interpretation",
-        "description": "Our system analyzes how your birth chart interacts with 200,000+ global coordinates. The AI explains what each astrocartography line means: Venus lines activate love and creativity, Jupiter lines bring opportunities and expansion, Saturn lines strengthen career discipline. We don't just show where lines are—we explain how to read astrocartography maps and what each location means for your career, relationships, health, and creativity, making astrocartography for relocation practical and accessible.",
+        "description": "Our system analyzes how your birth chart interacts with locations worldwide. The AI explains what each astrocartography line means: Venus lines activate love and creativity, Jupiter lines bring opportunities and expansion, Saturn lines strengthen career discipline. We don't just show where lines are—we explain how to read astrocartography maps and what each location means for your career, relationships, health, and creativity, making astrocartography for relocation practical and accessible.",
         "image": {
           "src": "/imgs/features/hero-web.webp",
           "alt": "AI-powered astrocartography interpretation"
@@ -154,7 +154,7 @@
     "items": [
       {
         "title": "Professional Precision, Completely Free",
-        "description": "While competitors charge $15.9/month for AI analysis or $22.90 for PDF reports, our astrocartography calculator offers unlimited free access. We use the same Swiss Ephemeris library that $360 professional software relies on, with 1-mile accuracy matching NASA JPL precision standards. Generate unlimited astrocartography charts, download watermark-free files, and access AI interpretations—no credit card, no hidden fees. Whether you're a student, entrepreneur, or retiree, access professional astrocartography analysis at zero cost.",
+        "description": "Professional-grade astrocartography analysis with unlimited free access. We use the same Swiss Ephemeris library that professional astrology software relies on, with 1-mile accuracy using Swiss Ephemeris calculations. Generate unlimited astrocartography charts, download watermark-free files, and access AI interpretations—no credit card, no hidden fees. Whether you're a student, entrepreneur, or retiree, access professional astrocartography analysis at zero cost.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/hero-web.webp",
@@ -188,7 +188,7 @@
     "items": [
       {
         "title": "Enter Birth Information",
-        "description": "Input your birth date, time (as precise as possible to the minute), and city. Without exact birth time, you'll still see planetary lines (Sun, Moon, Venus, etc.) but not angular lines (ASC, DSC, MC, IC). Our database includes 100,000+ global cities with automatic timezone and historical daylight saving time handling.",
+        "description": "Input your birth date, time (as precise as possible to the minute), and city. Without exact birth time, you'll still see planetary lines (Sun, Moon, Venus, etc.) but not angular lines (ASC, DSC, MC, IC). Our database includes cities worldwide with automatic timezone and historical daylight saving time handling.",
         "icon": "RiCalendarLine"
       },
       {
@@ -220,12 +220,12 @@
       },
       {
         "title": "Swiss Ephemeris Calculation Engine",
-        "description": "We use Swiss Ephemeris, supporting planetary calculations from 3000 BCE to 3000 CE. Maintained by the Zurich Observatory, this library matches NASA JPL planetary orbit precision and powers professional astrology software worldwide. Whether analyzing historical figures or planning future relocations, your astrocartography map accuracy matches $360 professional software.",
+        "description": "We use Swiss Ephemeris, supporting planetary calculations from 3000 BCE to 3000 CE. Maintained by the Zurich Observatory, this library uses the same precision standards that professional astrology software worldwide relies on. Whether analyzing historical figures or planning future relocations, your astrocartography map accuracy matches professional astrology software.",
         "icon": "RiCompassLine"
       },
       {
         "title": "Multi-Language Global Coverage",
-        "description": "Search cities in Chinese, English, Japanese, and more across 100,000+ locations with historical timezone data. The system automatically handles daylight saving time changes (like US DST rule shifts 1970-2007) and timezone boundary adjustments, ensuring accurate astrocartography charts regardless of birth country or era.",
+        "description": "Search cities in Chinese, English, Japanese, and more across locations worldwide with historical timezone data. The system automatically handles daylight saving time changes (like US DST rule shifts 1970-2007) and timezone boundary adjustments, ensuring accurate astrocartography charts regardless of birth country or era.",
         "icon": "RiTranslate"
       },
       {
@@ -261,7 +261,7 @@
       },
       {
         "title": "How accurate are the calculations?",
-        "description": "We use Swiss Ephemeris calculations matching NASA JPL precision, accurate to within 1 mile on Earth's surface. Our calculations account for time zones, daylight saving time, and historical calendar changes. This is the same precision professional astrologers rely on for consultations."
+        "description": "We use Swiss Ephemeris calculations with professional-grade accuracy, precise to within 1 mile on Earth's surface. Our calculations account for time zones, daylight saving time, and historical calendar changes. This is the same precision professional astrologers rely on for consultations."
       },
       {
         "title": "Should I move based solely on my astrocartography map?",
@@ -279,6 +279,7 @@
   },
   "testimonial": {
     "name": "testimonial",
+    "disabled": true,
     "label": "Testimonials",
     "title": "Real Users Share Their Astrocartography Experiences",
     "description": "Users share how our astrocartography calculator informed their relocation decisions.",
@@ -337,7 +338,7 @@
   "cta": {
     "name": "cta",
     "title": "Generate Your Free Astrocartography Map Now",
-    "description": "Use Astrocartography Calculator to create your professional-grade astrocartography chart with Swiss Ephemeris precision analyzing 200,000+ global locations. Discover ideal cities for your career, relationships, and personal growth. No registration required, unlimited use—get professional analysis in 3 seconds.",
+    "description": "Use Astrocartography Calculator to create your professional-grade astrocartography chart with Swiss Ephemeris precision analyzing locations worldwide. Discover ideal cities for your career, relationships, and personal growth. No registration required, unlimited use—get professional analysis in 3 seconds.",
     "buttons": [
       {
         "title": "Generate Free Map Now",
@@ -437,7 +438,7 @@
         "original_price": "$15.9",
         "unit": "USD",
         "is_featured": false,
-        "tip": "Save 19% vs competitors, cancel anytime",
+        "tip": "Cancel anytime, no commitment",
         "button": {
           "title": "Subscribe Now",
           "url": "/#pricing",
@@ -454,7 +455,7 @@
     "name": "footer",
     "brand": {
       "title": "Astrocartography Calculator",
-      "description": "Astrocartography Calculator provides professional-grade astrocartography tools for digital nomads, relocation planners, and astrology practitioners. We use Swiss Ephemeris to ensure astronomical precision, and AI technology makes complex planetary line interpretations accessible. Strict privacy protection, 200,000+ global location analysis—making professional astrocartography charts accessible to everyone.",
+      "description": "Astrocartography Calculator provides professional-grade astrocartography tools for digital nomads, relocation planners, and astrology practitioners. We use Swiss Ephemeris to ensure astronomical precision, and AI technology makes complex planetary line interpretations accessible. Strict privacy protection, global location analysis—making professional astrocartography charts accessible to everyone.",
       "logo": {
         "src": "/logo.png",
         "alt": "Astrocartography Calculator"

@@ -69,7 +69,7 @@
         "icon": "RiImageLine"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "show_badge": true
   },
   "branding": {
@@ -265,6 +265,7 @@
   },
   "testimonial": {
     "name": "testimonial",
+    "disabled": true,
     "label": "Testimoni",
     "title": "Apa Kata Pencipta Tentang Miniatur AI",
     "description": "Maklum balas sebenar dari jurugambar dan artis yang menggunakan Miniatur AI untuk projek kreatif dan transformasi miniatur profesional mereka.",

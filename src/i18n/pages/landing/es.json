@@ -27,7 +27,7 @@
   "hero": {
     "title": "Calculadora de Astrocartografía - Descubre tu Ubicación Ideal",
     "highlight_text": "Gratis para Siempre",
-    "description": "La calculadora de astrocartografía proyecta tu carta natal en el mundo, revelando dónde las líneas planetarias amplifican tu carrera, relaciones y crecimiento personal. Utilizando cálculos de nivel profesional con Swiss Ephemeris precisos hasta 1 milla, analizamos más de 200,000 coordenadas globales para mostrar dónde las energías planetarias del Sol, Venus, Júpiter y otros planetas son más fuertes. Nómadas digitales, personas que planean relocalizarse y entusiastas de la astrología confían en nuestra herramienta gratuita para obtener información basada en datos sobre ubicaciones—sin registro, sin límites.",
+    "description": "La calculadora de astrocartografía proyecta tu carta natal en el mundo, revelando dónde las líneas planetarias amplifican tu carrera, relaciones y crecimiento personal. Utilizando cálculos de nivel profesional con Swiss Ephemeris precisos hasta 1 milla, analizamos ubicaciones en todo el mundo para mostrar dónde las energías planetarias del Sol, Venus, Júpiter y otros planetas son más fuertes. Nómadas digitales, personas que planean relocalizarse y entusiastas de la astrología confían en nuestra herramienta gratuita para obtener información basada en datos sobre ubicaciones—sin registro, sin límites.",
     "announcement": {
       "label": "100% Gratis",
       "title": "Sin Registro • Cartas Ilimitadas",
@@ -63,12 +63,12 @@
         "icon": "RiUserLine"
       },
       {
-        "value": "200,000+",
+        "value": "Global",
         "label": "Ubicaciones Analizadas",
         "icon": "RiMapPinLine"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "show_badge": false
   },
   "branding": {
@@ -99,7 +99,7 @@
         "title": "Cobertura Global",
         "image": {
           "src": "/imgs/logos/shadcn.svg",
-          "alt": "200,000+ Ubicaciones"
+          "alt": "Ubicaciones Globales"
         }
       },
       {
@@ -122,7 +122,7 @@
     "items": [
       {
         "title": "Cálculos Planetarios de Nivel Profesional",
-        "description": "La calculadora de astrocartografía utiliza Swiss Ephemeris, el estándar astronómico que coincide con la precisión de la NASA JPL. Calculamos dónde estaba cada planeta (Sol, Luna, Venus, Marte, Júpiter, Saturno) en posición angular—ascendiendo (ASC), poniéndose (DSC), culminando (MC), o en el nadir (IC)—en tu momento exacto de nacimiento en toda la superficie terrestre. Cada línea de astrocartografía es precisa hasta 1 milla, asegurando que tu carta de astrocartografía coincida con los cálculos de astrólogos profesionales. Cuando te encuentras en una línea planetaria, la energía de ese planeta domina tu experiencia allí.",
+        "description": "La calculadora de astrocartografía utiliza Swiss Ephemeris, el estándar astronómico usado por astrólogos profesionales. Calculamos dónde estaba cada planeta (Sol, Luna, Venus, Marte, Júpiter, Saturno) en posición angular—ascendiendo (ASC), poniéndose (DSC), culminando (MC), o en el nadir (IC)—en tu momento exacto de nacimiento en toda la superficie terrestre. Cada línea de astrocartografía es precisa hasta 1 milla, asegurando que tu carta de astrocartografía coincida con los cálculos de astrólogos profesionales. Cuando te encuentras en una línea planetaria, la energía de ese planeta domina tu experiencia allí.",
         "image": {
           "src": "/imgs/features/hero-web.webp",
           "alt": "Cálculos de astrocartografía de nivel profesional"
@@ -130,7 +130,7 @@
       },
       {
         "title": "Interpretación de Ubicación con IA",
-        "description": "Nuestro sistema analiza cómo tu carta natal interactúa con más de 200,000 coordenadas globales. La IA explica qué significa cada línea de astrocartografía: las líneas de Venus activan el amor y la creatividad, las líneas de Júpiter traen oportunidades y expansión, las líneas de Saturno fortalecen la disciplina profesional. No solo mostramos dónde están las líneas—explicamos cómo leer los mapas de astrocartografía y qué significa cada ubicación para tu carrera, relaciones, salud y creatividad, haciendo la astrocartografía para relocalización práctica y accesible.",
+        "description": "Nuestro sistema analiza cómo tu carta natal interactúa con ubicaciones en todo el mundo. La IA explica qué significa cada línea de astrocartografía: las líneas de Venus activan el amor y la creatividad, las líneas de Júpiter traen oportunidades y expansión, las líneas de Saturno fortalecen la disciplina profesional. No solo mostramos dónde están las líneas—explicamos cómo leer los mapas de astrocartografía y qué significa cada ubicación para tu carrera, relaciones, salud y creatividad, haciendo la astrocartografía para relocalización práctica y accesible.",
         "image": {
           "src": "/imgs/features/hero-web.webp",
           "alt": "Interpretación de astrocartografía con IA"
@@ -154,7 +154,7 @@
     "items": [
       {
         "title": "Precisión Profesional, Completamente Gratis",
-        "description": "Mientras que los competidores cobran $15.9/mes por análisis con IA o $22.90 por informes PDF, nuestra calculadora de astrocartografía ofrece acceso ilimitado gratuito. Usamos la misma biblioteca Swiss Ephemeris en la que confía el software profesional de $360, con precisión de 1 milla que coincide con los estándares de precisión de la NASA JPL. Genera cartas de astrocartografía ilimitadas, descarga archivos libres de marcas de agua y accede a interpretaciones con IA—sin tarjeta de crédito, sin tarifas ocultas. Ya seas estudiante, emprendedor o jubilado, accede a análisis profesional de astrocartografía sin costo.",
+        "description": "Análisis profesional de astrocartografía con acceso ilimitado gratuito. Usamos la misma biblioteca Swiss Ephemeris en la que confía el software profesional de astrología, con precisión de 1 milla usando cálculos Swiss Ephemeris. Genera cartas de astrocartografía ilimitadas, descarga archivos libres de marcas de agua y accede a interpretaciones con IA—sin tarjeta de crédito, sin tarifas ocultas. Ya seas estudiante, emprendedor o jubilado, accede a análisis profesional de astrocartografía sin costo.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/hero-web.webp",
@@ -188,7 +188,7 @@
     "items": [
       {
         "title": "Ingresa Información de Nacimiento",
-        "description": "Ingresa tu fecha de nacimiento, hora (lo más precisa posible hasta el minuto) y ciudad. Sin la hora exacta de nacimiento, aún verás líneas planetarias (Sol, Luna, Venus, etc.) pero no líneas angulares (ASC, DSC, MC, IC). Nuestra base de datos incluye más de 100,000 ciudades globales con manejo automático de zona horaria e histórico de horario de verano.",
+        "description": "Ingresa tu fecha de nacimiento, hora (lo más precisa posible hasta el minuto) y ciudad. Sin la hora exacta de nacimiento, aún verás líneas planetarias (Sol, Luna, Venus, etc.) pero no líneas angulares (ASC, DSC, MC, IC). Nuestra base de datos incluye ciudades en todo el mundo con manejo automático de zona horaria e histórico de horario de verano.",
         "icon": "RiCalendarLine"
       },
       {
@@ -220,12 +220,12 @@
       },
       {
         "title": "Motor de Cálculo Swiss Ephemeris",
-        "description": "Utilizamos Swiss Ephemeris, soportando cálculos planetarios desde 3000 a.C. hasta 3000 d.C. Mantenida por el Observatorio de Zurich, esta biblioteca coincide con la precisión de órbitas planetarias NASA JPL y potencia software profesional de astrología en todo el mundo. Ya sea analizando figuras históricas o planificando relocalizaciones futuras, la precisión de tu mapa de astrocartografía coincide con software profesional de $360.",
+        "description": "Utilizamos Swiss Ephemeris, soportando cálculos planetarios desde 3000 a.C. hasta 3000 d.C. Mantenida por el Observatorio de Zurich, esta biblioteca usa los mismos estándares de precisión en los que confía el software profesional de astrología en todo el mundo. Ya sea analizando figuras históricas o planificando relocalizaciones futuras, la precisión de tu mapa de astrocartografía coincide con software profesional de astrología.",
         "icon": "RiCompassLine"
       },
       {
         "title": "Cobertura Global Multiidioma",
-        "description": "Busca ciudades en chino, inglés, japonés y más en más de 100,000 ubicaciones con datos históricos de zona horaria. El sistema maneja automáticamente cambios de horario de verano (como cambios de reglas DST de EE.UU. 1970-2007) y ajustes de límites de zona horaria, asegurando cartas de astrocartografía precisas independientemente del país de nacimiento o era.",
+        "description": "Busca ciudades en chino, inglés, japonés y más en ubicaciones en todo el mundo con datos históricos de zona horaria. El sistema maneja automáticamente cambios de horario de verano (como cambios de reglas DST de EE.UU. 1970-2007) y ajustes de límites de zona horaria, asegurando cartas de astrocartografía precisas independientemente del país de nacimiento o era.",
         "icon": "RiTranslate"
       },
       {
@@ -261,7 +261,7 @@
       },
       {
         "title": "¿Qué tan precisos son los cálculos?",
-        "description": "Utilizamos cálculos Swiss Ephemeris correspondiendo a la precisión de la NASA JPL, precisos hasta 1 milla en la superficie terrestre. Nuestros cálculos tienen en cuenta zonas horarias, horario de verano y cambios históricos de calendario. Esta es la misma precisión en la que confían los astrólogos profesionales para consultas."
+        "description": "Utilizamos cálculos Swiss Ephemeris con precisión profesional, precisos hasta 1 milla en la superficie terrestre. Nuestros cálculos tienen en cuenta zonas horarias, horario de verano y cambios históricos de calendario. Esta es la misma precisión en la que confían los astrólogos profesionales para consultas."
       },
       {
         "title": "¿Debería mudarme basándome únicamente en mi mapa de astrocartografía?",
@@ -279,6 +279,7 @@
   },
   "testimonial": {
     "name": "testimonial",
+    "disabled": true,
     "label": "Testimonios",
     "title": "Usuarios Reales Comparten sus Experiencias de Astrocartografía",
     "description": "Los usuarios comparten cómo nuestra calculadora de astrocartografía informó sus decisiones de relocalización.",
@@ -337,7 +338,7 @@
   "cta": {
     "name": "cta",
     "title": "Genera tu Mapa de Astrocartografía Gratis Ahora",
-    "description": "Usa la Calculadora de Astrocartografía para crear tu carta profesional de astrocartografía con precisión del Swiss Ephemeris analizando más de 200,000 ubicaciones globales. Descubre ciudades ideales para tu carrera, relaciones y crecimiento personal. No se requiere registro, uso ilimitado—obtén análisis profesional en 3 segundos.",
+    "description": "Usa la Calculadora de Astrocartografía para crear tu carta profesional de astrocartografía con precisión del Swiss Ephemeris analizando ubicaciones en todo el mundo. Descubre ciudades ideales para tu carrera, relaciones y crecimiento personal. No se requiere registro, uso ilimitado—obtén análisis profesional en 3 segundos.",
     "buttons": [
       {
         "title": "Genera Mapa Gratis Ahora",
@@ -437,7 +438,7 @@
         "original_price": "$15.9",
         "unit": "USD",
         "is_featured": false,
-        "tip": "Ahorra 19% frente a la competencia, cancela en cualquier momento",
+        "tip": "Cancela en cualquier momento, sin compromiso",
         "button": {
           "title": "Suscribirse Ahora",
           "url": "/#pricing",
@@ -454,7 +455,7 @@
     "name": "footer",
     "brand": {
       "title": "Calculadora de Astrocartografía",
-      "description": "La Calculadora de Astrocartografía proporciona herramientas profesionales de astrocartografía para nómadas digitales, planificadores de relocalización y practicantes de astrología. Usamos Swiss Ephemeris para asegurar precisión astronómica, y la tecnología de IA hace accesibles las interpretaciones complejas de líneas planetarias. Protección estricta de privacidad, análisis de más de 200,000 ubicaciones globales—haciendo cartas profesionales de astrocartografía accesibles para todos.",
+      "description": "La Calculadora de Astrocartografía proporciona herramientas profesionales de astrocartografía para nómadas digitales, planificadores de relocalización y practicantes de astrología. Usamos Swiss Ephemeris para asegurar precisión astronómica, y la tecnología de IA hace accesibles las interpretaciones complejas de líneas planetarias. Protección estricta de privacidad, análisis de ubicaciones globales—haciendo cartas profesionales de astrocartografía accesibles para todos.",
       "logo": {
         "src": "/logo.png",
         "alt": "Calculadora de Astrocartografía"
