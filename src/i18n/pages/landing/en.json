@@ -480,6 +480,16 @@
               "title": "AIStage",
               "url": "https://aistage.net",
               "target": "_blank"
+            },
+            {
+              "title": "SeeWhatNewAI",
+              "url": "https://www.seewhatnewai.com",
+              "target": "_blank"
+            },
+            {
+              "title": "AI Toolz Dir",
+              "url": "https://www.aitoolzdir.com",
+              "target": "_blank"
             }
           ]
         },
@@ -544,6 +554,28 @@
         "image": {
           "src": "https://theonestartup.com/badages-awards.svg",
           "alt": "Featured on The One Startup",
+          "width": 200,
+          "height": 54
+        }
+      },
+      {
+        "title": "Featured on Startup Fame",
+        "url": "https://startupfa.me/s/astrocartography?utm_source=astrocarto.org",
+        "target": "_blank",
+        "image": {
+          "src": "https://startupfa.me/badges/featured-badge.webp",
+          "alt": "Astrocartography - Featured on Startup Fame",
+          "width": 171,
+          "height": 54
+        }
+      },
+      {
+        "title": "Listed on Turbo0",
+        "url": "https://turbo0.com/item/astrocarto",
+        "target": "_blank",
+        "image": {
+          "src": "https://img.turbo0.com/badge-listed-light.svg",
+          "alt": "Listed on Turbo0",
           "width": 200,
           "height": 54
         }
