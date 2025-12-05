@@ -194,7 +194,7 @@ export const authOptions: NextAuthConfig = {
       });
 
       // 如果 token.user 存在，直接使用
-      if (token && token.user && token.user.uuid) {
+      if (token?.user && "uuid" in token.user && token.user.uuid) {
         session.user = {
           ...session.user,
           ...token.user,

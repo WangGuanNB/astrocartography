@@ -4,10 +4,12 @@ declare module "next-auth" {
   interface JWT {
     user?: {
       uuid?: string;
+      email?: string;
       nickname?: string;
       avatar_url?: string;
-      created_at?: string;
+      created_at?: string | Date;
     };
+    email?: string;
   }
 
   interface Session {
@@ -15,7 +17,7 @@ declare module "next-auth" {
       uuid?: string;
       nickname?: string;
       avatar_url?: string;
-      created_at?: string;
+      created_at?: string | Date;
     } & DefaultSession["user"];
   }
 }
