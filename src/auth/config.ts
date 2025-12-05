@@ -140,9 +140,40 @@ export const authOptions: NextAuthConfig = {
       return baseUrl;
     },
     async session({ session, token, user }) {
+      // 如果 token.user 存在，直接使用
       if (token && token.user && token.user) {
         session.user = token.user;
+        return session;
       }
+
+      // 如果 token.user 不存在，尝试从数据库恢复
+      // 优先使用 token.email，如果没有则使用 session.user.email
+      const email = (token.email as string) || session.user?.email;
+      
+      if (email) {
+        try {
+          const { findUserByEmail } = await import("@/models/user");
+          const dbUser = await findUserByEmail(email);
+          
+          if (dbUser) {
+            // 恢复用户信息到 token，以便下次使用
+            token.user = {
+              uuid: dbUser.uuid,
+              email: dbUser.email,
+              nickname: dbUser.nickname || "",
+              avatar_url: dbUser.avatar_url || "",
+              created_at: dbUser.created_at,
+            };
+            token.email = dbUser.email;
+            
+            // 设置 session.user
+            session.user = token.user;
+          }
+        } catch (e) {
+          console.error("session callback: failed to recover user from database:", e);
+        }
+      }
+
       return session;
     },
     async jwt({ token, user, account }) {
@@ -173,21 +204,25 @@ export const authOptions: NextAuthConfig = {
         // 如果是 token 刷新（user 和 account 为 undefined）
         // 如果 token.user 不存在，尝试从数据库中恢复（通过 email）
         if (!token.user) {
-          // 优先使用 token.user.email，如果没有则使用 token.email
-          const email = (token.user as any)?.email || token.email;
+          // 使用 token.email 从数据库恢复用户信息
+          const email = token.email as string;
           if (email) {
-            const { findUserByEmail } = await import("@/models/user");
-            const dbUser = await findUserByEmail(email as string);
-            if (dbUser) {
-              token.user = {
-                uuid: dbUser.uuid,
-                email: dbUser.email,
-                nickname: dbUser.nickname || "",
-                avatar_url: dbUser.avatar_url || "",
-                created_at: dbUser.created_at,
-              };
-              // 确保 email 也被保存
-              token.email = dbUser.email;
+            try {
+              const { findUserByEmail } = await import("@/models/user");
+              const dbUser = await findUserByEmail(email);
+              if (dbUser) {
+                token.user = {
+                  uuid: dbUser.uuid,
+                  email: dbUser.email,
+                  nickname: dbUser.nickname || "",
+                  avatar_url: dbUser.avatar_url || "",
+                  created_at: dbUser.created_at,
+                };
+                // 确保 email 也被保存
+                token.email = dbUser.email;
+              }
+            } catch (e) {
+              console.error("jwt callback: failed to recover user from database:", e);
             }
           }
         }
