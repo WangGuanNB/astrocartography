@@ -67,7 +67,17 @@ export function usePayment() {
       }
 
       // 构建支付参数
-      const params = {
+      const params: {
+        product_id: string;
+        product_name?: string;
+        credits?: number;
+        interval: "month" | "year" | "one-time";
+        amount?: number;
+        currency?: string;
+        valid_months?: number;
+        locale: string;
+        creem_product_id?: string;
+      } = {
         product_id: item.product_id,
         product_name: item.product_name,
         credits: item.credits,
