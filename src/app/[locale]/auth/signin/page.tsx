@@ -14,7 +14,8 @@ export default async function SignInPage({
 
   const { callbackUrl } = await searchParams;
   const session = await auth();
-  if (session) {
+  // 只有当 session 存在且 session.user.uuid 也存在时，才重定向
+  if (session && session.user && (session.user as any).uuid) {
     return redirect(callbackUrl || "/");
   }
 

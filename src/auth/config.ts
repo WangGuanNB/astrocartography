@@ -148,22 +148,49 @@ export const authOptions: NextAuthConfig = {
     async jwt({ token, user, account }) {
       // Persist the OAuth access_token and or the user id to the token right after signin
       try {
-        if (!user || !account) {
+        // 如果是首次登录，处理用户信息
+        if (user && account) {
+          const userInfo = await handleSignInUser(user, account);
+          if (!userInfo) {
+            throw new Error("save user failed");
+          }
+
+          // 保存用户信息到 token
+          token.user = {
+            uuid: userInfo.uuid,
+            email: userInfo.email,
+            nickname: userInfo.nickname,
+            avatar_url: userInfo.avatar_url,
+            created_at: userInfo.created_at,
+          };
+          
+          // 同时保存 email 到 token，以便刷新时恢复
+          token.email = userInfo.email;
+
           return token;
         }
 
-        const userInfo = await handleSignInUser(user, account);
-        if (!userInfo) {
-          throw new Error("save user failed");
+        // 如果是 token 刷新（user 和 account 为 undefined）
+        // 如果 token.user 不存在，尝试从数据库中恢复（通过 email）
+        if (!token.user) {
+          // 优先使用 token.user.email，如果没有则使用 token.email
+          const email = (token.user as any)?.email || token.email;
+          if (email) {
+            const { findUserByEmail } = await import("@/models/user");
+            const dbUser = await findUserByEmail(email as string);
+            if (dbUser) {
+              token.user = {
+                uuid: dbUser.uuid,
+                email: dbUser.email,
+                nickname: dbUser.nickname || "",
+                avatar_url: dbUser.avatar_url || "",
+                created_at: dbUser.created_at,
+              };
+              // 确保 email 也被保存
+              token.email = dbUser.email;
+            }
+          }
         }
-
-        token.user = {
-          uuid: userInfo.uuid,
-          email: userInfo.email,
-          nickname: userInfo.nickname,
-          avatar_url: userInfo.avatar_url,
-          created_at: userInfo.created_at,
-        };
 
         return token;
       } catch (e) {
