@@ -63,6 +63,15 @@ export async function POST(req: Request) {
       isPriceValid = item?.amount === amount && item?.currency === currency;
     }
 
+    // 验证 credits：如果前端发送的 credits 为 0，但配置中应该是 1000，使用配置中的值
+    const expectedCredits = item?.credits ?? 0;
+    const actualCredits = credits ?? 0;
+    
+    // 对于 premium-2weeks 和 premium-monthly，如果前端发送 0，使用配置中的值
+    if (actualCredits === 0 && (expectedCredits === 1000 || expectedCredits > 0)) {
+      credits = expectedCredits;
+    }
+
     if (
       !item ||
       !item.amount ||
@@ -73,6 +82,16 @@ export async function POST(req: Request) {
       item.valid_months !== valid_months ||
       !isPriceValid
     ) {
+      console.error("Checkout params validation failed:", {
+        product_id,
+        expected_credits: item?.credits,
+        received_credits: credits,
+        expected_valid_months: item?.valid_months,
+        received_valid_months: valid_months,
+        expected_interval: item?.interval,
+        received_interval: interval,
+        isPriceValid,
+      });
       return respErr("invalid checkout params");
     }
 
