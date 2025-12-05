@@ -76,52 +76,6 @@ if (
   );
 }
 
-// UUID 测试登录 Provider（仅开发环境，通过 URL 参数直接登录）
-if (process.env.NODE_ENV === "development") {
-  providers.push(
-    CredentialsProvider({
-      id: "uuid-test",
-      name: "UUID Test Login",
-      credentials: {
-        uuid: { label: "UUID", type: "text" },
-      },
-      async authorize(credentials) {
-        const uuid = credentials?.uuid;
-        if (!uuid) {
-          console.log("uuid-test provider: no uuid provided");
-          return null;
-        }
-
-        try {
-          // 从数据库查找用户
-          const { findUserByUuid } = await import("@/models/user");
-          const dbUser = await findUserByUuid(uuid as string);
-
-          if (!dbUser) {
-            console.log("uuid-test provider: user not found for uuid", uuid);
-            return null;
-          }
-
-          console.log("uuid-test provider: found user", {
-            uuid: dbUser.uuid,
-            email: dbUser.email,
-          });
-
-          return {
-            id: dbUser.uuid,
-            email: dbUser.email,
-            name: dbUser.nickname || "Test User",
-            image: dbUser.avatar_url || "",
-          };
-        } catch (e) {
-          console.error("uuid-test provider: failed to authorize", e);
-          return null;
-        }
-      },
-    })
-  );
-}
-
 // Google Auth
 if (
   process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" &&
@@ -330,34 +284,7 @@ export const authOptions: NextAuthConfig = {
             userId: user.id,
           });
 
-          // uuid-test provider: 用户已存在，直接从数据库获取
-          if (account.provider === "uuid-test") {
-            console.log("🔑 [jwt callback] uuid-test provider，从数据库获取用户", { userId: user.id });
-            const { findUserByUuid } = await import("@/models/user");
-            const dbUser = await findUserByUuid(user.id); // user.id 就是 uuid
-            
-            if (dbUser) {
-              token.user = {
-                uuid: dbUser.uuid,
-                email: dbUser.email,
-                nickname: dbUser.nickname || "",
-                avatar_url: dbUser.avatar_url || "",
-                created_at: dbUser.created_at,
-              };
-              token.email = dbUser.email;
-              console.log("✅ [jwt callback] uuid-test 登录成功", {
-                uuid: dbUser.uuid,
-                email: dbUser.email,
-                tokenUser: JSON.stringify(token.user, null, 2),
-              });
-              return token;
-            } else {
-              console.error("❌ [jwt callback] uuid-test: 数据库中未找到用户", { userId: user.id });
-              throw new Error("uuid-test: user not found in database");
-            }
-          }
-
-          // 其他 provider: 调用 handleSignInUser 处理（创建或更新用户）
+          // 调用 handleSignInUser 处理（创建或更新用户）
           console.log("🔑 [jwt callback] 其他 provider，调用 handleSignInUser", { provider: account.provider });
           const userInfo = await handleSignInUser(user, account);
           if (!userInfo) {
