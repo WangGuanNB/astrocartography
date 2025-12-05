@@ -39,7 +39,7 @@ export async function POST(req: Request) {
 
       if (!isValid) {
         console.error("Invalid Creem webhook signature");
-        return respErr("invalid signature", 401);
+        return Response.json({ error: "invalid signature" }, { status: 401 });
       }
     }
 
@@ -89,7 +89,10 @@ export async function POST(req: Request) {
     return respOk();
   } catch (e: any) {
     console.error("creem webhook failed: ", e);
-    return respErr(`handle creem webhook failed: ${e.message}`, 500);
+    return Response.json(
+      { error: `handle creem webhook failed: ${e.message}` },
+      { status: 500 }
+    );
   }
 }
 
