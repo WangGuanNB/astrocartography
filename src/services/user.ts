@@ -54,7 +54,48 @@ export async function saveUser(user: User) {
   }
 }
 
+/**
+ * 获取或创建测试用户（仅在开发环境且启用测试模式时）
+ */
+async function getOrCreateTestUser() {
+  const TEST_USER_EMAIL = "test@local.dev";
+  const TEST_USER_UUID = "test-user-uuid-local-dev";
+
+  // 查找或创建测试用户
+  let testUser = await findUserByEmail(TEST_USER_EMAIL);
+  if (!testUser) {
+    // 创建测试用户
+    const newUser = {
+      uuid: TEST_USER_UUID,
+      email: TEST_USER_EMAIL,
+      nickname: "Test User",
+      avatar_url: "",
+      signin_type: "credentials",
+      signin_provider: "test",
+      signin_openid: "test",
+      created_at: new Date(),
+      invite_code: "",
+      invited_by: "",
+      is_affiliate: false,
+    };
+    testUser = await insertUser(newUser as typeof users.$inferInsert);
+  }
+
+  return testUser;
+}
+
 export async function getUserUuid() {
+  // 测试模式：仅在开发环境且启用测试模式时生效
+  const isTestMode =
+    process.env.SKIP_AUTH_FOR_TESTING === "true" &&
+    process.env.NODE_ENV !== "production";
+
+  if (isTestMode) {
+    console.log("🧪 [TEST MODE] Skipping authentication, using test user");
+    const testUser = await getOrCreateTestUser();
+    return testUser?.uuid || "";
+  }
+
   let user_uuid = "";
 
   const token = await getBearerToken();
@@ -87,6 +128,16 @@ export async function getBearerToken() {
 }
 
 export async function getUserEmail() {
+  // 测试模式：仅在开发环境且启用测试模式时生效
+  const isTestMode =
+    process.env.SKIP_AUTH_FOR_TESTING === "true" &&
+    process.env.NODE_ENV !== "production";
+
+  if (isTestMode) {
+    const testUser = await getOrCreateTestUser();
+    return testUser?.email || "test@local.dev";
+  }
+
   let user_email = "";
 
   const session = await auth();

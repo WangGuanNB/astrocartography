@@ -29,6 +29,7 @@ export interface PricingItem {
   credits?: number;
   valid_months?: number;
   group?: string;
+  creem_product_id?: string; // Creem 产品 ID（可选）
 }
 
 export interface Pricing {

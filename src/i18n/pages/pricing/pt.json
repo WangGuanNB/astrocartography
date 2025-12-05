@@ -65,7 +65,7 @@
         },
         "product_id": "premium-2weeks",
         "product_name": "Passe de Acesso Premium - 2 Semanas",
-        "credits": 0,
+        "credits": 1000,
         "valid_months": 0
       },
       {
@@ -96,7 +96,7 @@
         },
         "product_id": "premium-monthly",
         "product_name": "Assinatura Mensal Premium",
-        "credits": 0,
+        "credits": 1000,
         "valid_months": 1
       }
     ]

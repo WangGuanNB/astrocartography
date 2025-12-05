@@ -13,6 +13,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { toast } from "sonner";
 import { useAppContext } from "@/contexts/app";
 import { useLocale } from "next-intl";
+import { usePayment } from "@/hooks/usePayment";
 
 export default function Pricing({ pricing }: { pricing: PricingType }) {
   if (pricing.disabled) {
@@ -23,83 +24,40 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
 
   const { user, setShowSignModal } = useAppContext();
 
+  // 使用统一的支付 Hook
+  const { handleCheckout: handlePaymentCheckout, isLoading, productId } = usePayment();
+
   const [group, setGroup] = useState(pricing.groups?.[0]?.name);
-  const [isLoading, setIsLoading] = useState(false);
-  const [productId, setProductId] = useState<string | null>(null);
 
   const handleCheckout = async (item: PricingItem, cn_pay: boolean = false) => {
     try {
-      if (!user) {
+      // 检查是否是测试模式（通过环境变量，仅在开发环境可用）
+      const isTestMode = process.env.NEXT_PUBLIC_SKIP_AUTH_FOR_TESTING === "true";
+      
+      // 在测试模式下默认使用 Creem 支付，否则使用 Stripe
+      const paymentMethod = isTestMode ? "creem" : "stripe";
+
+      // 使用统一的支付处理函数
+      const result = await handlePaymentCheckout(item, cn_pay, paymentMethod);
+
+      if (result?.needAuth) {
         setShowSignModal(true);
         return;
       }
 
-      const params = {
-        product_id: item.product_id,
-        product_name: item.product_name,
-        credits: item.credits,
-        interval: item.interval,
-        amount: cn_pay ? item.cn_amount : item.amount,
-        currency: cn_pay ? "cny" : item.currency,
-        valid_months: item.valid_months,
-        locale: locale || "en",
-      };
-
-      setIsLoading(true);
-      setProductId(item.product_id);
-
-      const response = await fetch("/api/checkout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(params),
-      });
-
-      if (response.status === 401) {
-        setIsLoading(false);
-        setProductId(null);
-
-        setShowSignModal(true);
+      if (!result?.success) {
+        // 错误信息已经在 hook 中通过 toast 显示
         return;
-      }
-
-      const { code, message, data } = await response.json();
-      if (code !== 0) {
-        toast.error(message);
-        return;
-      }
-
-      const { public_key, session_id } = data;
-
-      const stripe = await loadStripe(public_key);
-      if (!stripe) {
-        toast.error("checkout failed");
-        return;
-      }
-
-      const result = await stripe.redirectToCheckout({
-        sessionId: session_id,
-      });
-
-      if (result.error) {
-        toast.error(result.error.message);
       }
     } catch (e) {
       console.log("checkout failed: ", e);
-
       toast.error("checkout failed");
-    } finally {
-      setIsLoading(false);
-      setProductId(null);
     }
   };
 
   useEffect(() => {
     if (pricing.items) {
       setGroup(pricing.items[0].group);
-      setProductId(pricing.items[0].product_id);
-      setIsLoading(false);
     }
   }, [pricing.items]);
 
