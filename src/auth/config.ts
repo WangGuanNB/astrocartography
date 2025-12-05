@@ -196,13 +196,15 @@ export const authOptions: NextAuthConfig = {
       // 如果 token.user 存在，直接使用
       const tokenUser = token?.user;
       if (tokenUser && typeof tokenUser === "object" && tokenUser !== null && "uuid" in tokenUser && tokenUser.uuid) {
+        // 类型断言：tokenUser 符合 JWT 的 user 类型
+        const userData = tokenUser as NonNullable<typeof token.user>;
         session.user = {
           ...session.user,
-          ...tokenUser,
+          ...userData,
         };
         console.log("✅ [session callback] 使用 token.user", {
-          uuid: tokenUser.uuid,
-          email: tokenUser.email,
+          uuid: userData.uuid,
+          email: userData.email,
           fullUser: JSON.stringify(session.user, null, 2),
         });
         return session;
