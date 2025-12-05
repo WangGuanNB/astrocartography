@@ -37,8 +37,8 @@ export default function Pricing({ pricing }: { pricing: PricingType }) {
         return;
       }
 
-      // 使用统一的支付处理函数，默认使用 Stripe
-      const result = await handlePaymentCheckout(item, cn_pay, "stripe");
+      // 使用统一的支付处理函数，使用 Creem 支付
+      const result = await handlePaymentCheckout(item, cn_pay, "creem");
 
       if (result?.needAuth) {
         setShowSignModal(true);
