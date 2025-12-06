@@ -239,10 +239,21 @@ export const authOptions: NextAuthConfig = {
             token.email = dbUser.email;
             
             // 设置 session.user
-            session.user = {
-              ...session.user,
-              ...token.user,
-            };
+            if (token.user && typeof token.user === "object") {
+              session.user = {
+                ...session.user,
+                ...token.user,
+              };
+            } else {
+              session.user = {
+                ...session.user,
+                uuid: dbUser.uuid,
+                email: dbUser.email,
+                nickname: dbUser.nickname || undefined,
+                avatar_url: dbUser.avatar_url || undefined,
+                created_at: dbUser.created_at,
+              };
+            }
             console.log("✅ [session callback] 从数据库恢复用户成功", {
               uuid: dbUser.uuid,
               email: dbUser.email,
