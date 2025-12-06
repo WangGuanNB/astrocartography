@@ -166,6 +166,31 @@ export const authOptions: NextAuthConfig = {
     },
     async redirect({ url, baseUrl }) {
       console.log("🔄 [redirect callback] 重定向检查", { url, baseUrl });
+      
+      // 🔥 关键修复：如果 url 是首页，检查是否有 callbackUrl 参数
+      // NextAuth 5.x 中，callbackUrl 可能通过 query string 传递
+      if (url === baseUrl || url === `${baseUrl}/`) {
+        // 尝试从 URL 的 query string 中获取 callbackUrl
+        try {
+          const urlObj = new URL(url);
+          const callbackUrl = urlObj.searchParams.get("callbackUrl");
+          if (callbackUrl) {
+            const finalUrl = callbackUrl.startsWith("/") 
+              ? `${baseUrl}${callbackUrl}` 
+              : callbackUrl;
+            console.log("🔄 [redirect callback] 从 query 参数获取 callbackUrl", { 
+              callbackUrl, 
+              finalUrl 
+            });
+            return finalUrl;
+          }
+        } catch (e) {
+          console.log("🔄 [redirect callback] 解析 URL 失败", { error: e });
+        }
+        console.log("🔄 [redirect callback] 检测到首页重定向，保持原样", { url });
+        return url;
+      }
+      
       // Allows relative callback URLs
       if (url.startsWith("/")) {
         const finalUrl = `${baseUrl}${url}`;
