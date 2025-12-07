@@ -391,6 +391,7 @@
           "搬迁图表分析",
           "国家探索器访问",
           "无广告体验",
+          "1000 积分",
           "一次性支付",
           "不自动续费"
         ],
@@ -412,37 +413,6 @@
         "product_name": "高级访问通行证 - 2周",
         "credits": 0,
         "valid_months": 0
-      },
-      {
-        "title": "月度订阅",
-        "description": "最适合常客用户",
-        "features_title": "所有高级功能",
-        "features": [
-          "无限 AI 聊天访问",
-          "搬迁图表分析",
-          "国家探索器访问",
-          "无广告体验",
-          "优先支持",
-          "随时取消"
-        ],
-        "interval": "month",
-        "amount": 1290,
-        "cn_amount": 8990,
-        "currency": "USD",
-        "price": "$12.9",
-        "original_price": "$15.9",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "随时取消，无任何承诺",
-        "button": {
-          "title": "立即订阅",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "premium-monthly",
-        "product_name": "高级月度订阅",
-        "credits": 0,
-        "valid_months": 1
       }
     ]
   },

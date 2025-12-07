@@ -46,6 +46,7 @@
           "Análise de gráfico de relocação",
           "Acesso ao explorador de países",
           "Experiência sem anúncios",
+          "1000 créditos incluídos",
           "Pagamento único",
           "Sem renovação automática"
         ],
@@ -67,37 +68,6 @@
         "product_name": "Passe de Acesso Premium - 2 Semanas",
         "credits": 1000,
         "valid_months": 0
-      },
-      {
-        "title": "Assinatura Mensal",
-        "description": "Melhor para usuários regulares",
-        "features_title": "Todos os Recursos Premium",
-        "features": [
-          "Acesso ilimitado ao chat de IA",
-          "Análise de gráfico de relocação",
-          "Acesso ao explorador de países",
-          "Experiência sem anúncios",
-          "Suporte prioritário",
-          "Cancele a qualquer momento"
-        ],
-        "interval": "month",
-        "amount": 1290,
-        "cn_amount": 8990,
-        "currency": "USD",
-        "price": "$12.9",
-        "original_price": "$15.9",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Cancele a qualquer momento, sem compromisso",
-        "button": {
-          "title": "Assinar Agora",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "premium-monthly",
-        "product_name": "Assinatura Mensal Premium",
-        "credits": 1000,
-        "valid_months": 1
       }
     ]
   }

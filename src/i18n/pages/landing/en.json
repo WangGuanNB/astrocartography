@@ -391,6 +391,7 @@
           "Relocation chart analysis",
           "Country explorer access",
           "Ad-free experience",
+          "1000 credits included",
           "One-time payment",
           "No auto-renewal"
         ],
@@ -412,37 +413,6 @@
         "product_name": "Premium Access Pass - 2 Weeks",
         "credits": 0,
         "valid_months": 0
-      },
-      {
-        "title": "Monthly Subscription",
-        "description": "Best for regular users",
-        "features_title": "All Premium Features",
-        "features": [
-          "Unlimited AI chat access",
-          "Relocation chart analysis",
-          "Country explorer access",
-          "Ad-free experience",
-          "Priority support",
-          "Cancel anytime"
-        ],
-        "interval": "month",
-        "amount": 1290,
-        "cn_amount": 8990,
-        "currency": "USD",
-        "price": "$12.9",
-        "original_price": "$15.9",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Cancel anytime, no commitment",
-        "button": {
-          "title": "Subscribe Now",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "premium-monthly",
-        "product_name": "Premium Monthly Subscription",
-        "credits": 0,
-        "valid_months": 1
       }
     ]
   },

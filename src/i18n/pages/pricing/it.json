@@ -46,6 +46,7 @@
           "Analisi grafico di rilocazione",
           "Accesso all'esploratore di paesi",
           "Esperienza senza pubblicità",
+          "1000 crediti inclusi",
           "Pagamento unico",
           "Nessun rinnovo automatico"
         ],
@@ -67,37 +68,6 @@
         "product_name": "Pass di Accesso Premium - 2 Settimane",
         "credits": 1000,
         "valid_months": 0
-      },
-      {
-        "title": "Abbonamento Mensile",
-        "description": "Migliore per utenti regolari",
-        "features_title": "Tutte le Funzionalità Premium",
-        "features": [
-          "Accesso illimitato alla chat AI",
-          "Analisi grafico di rilocazione",
-          "Accesso all'esploratore di paesi",
-          "Esperienza senza pubblicità",
-          "Supporto prioritario",
-          "Cancella in qualsiasi momento"
-        ],
-        "interval": "month",
-        "amount": 1290,
-        "cn_amount": 8990,
-        "currency": "USD",
-        "price": "$12.9",
-        "original_price": "$15.9",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Cancella in qualsiasi momento, nessun impegno",
-        "button": {
-          "title": "Abbonati Ora",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "premium-monthly",
-        "product_name": "Abbonamento Mensile Premium",
-        "credits": 1000,
-        "valid_months": 1
       }
     ]
   }

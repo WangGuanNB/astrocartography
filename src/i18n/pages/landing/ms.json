@@ -389,6 +389,7 @@
           "Analisis carta penempatan semula",
           "Akses penjelajah negara",
           "Pengalaman tanpa iklan",
+          "1000 kredit termasuk",
           "Pembayaran sekali",
           "Tiada pembaharuan automatik"
         ],
@@ -410,37 +411,6 @@
         "product_name": "Pas Akses Premium - 2 Minggu",
         "credits": 0,
         "valid_months": 0
-      },
-      {
-        "title": "Langganan Bulanan",
-        "description": "Terbaik untuk pengguna tetap",
-        "features_title": "Semua Ciri Premium",
-        "features": [
-          "Akses sembang AI tanpa had",
-          "Analisis carta penempatan semula",
-          "Akses penjelajah negara",
-          "Pengalaman tanpa iklan",
-          "Sokongan keutamaan",
-          "Batal pada bila-bila masa"
-        ],
-        "interval": "month",
-        "amount": 1290,
-        "cn_amount": 8990,
-        "currency": "USD",
-        "price": "$12.9",
-        "original_price": "$15.9",
-        "unit": "USD",
-        "is_featured": false,
-        "tip": "Jimat 19% berbanding pesaing, batal pada bila-bila masa",
-        "button": {
-          "title": "Langgan Sekarang",
-          "url": "/#pricing",
-          "icon": "RiFlashlightFill"
-        },
-        "product_id": "premium-monthly",
-        "product_name": "Langganan Bulanan Premium",
-        "credits": 0,
-        "valid_months": 1
       }
     ]
   },
