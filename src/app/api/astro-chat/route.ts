@@ -72,24 +72,24 @@ export async function POST(req: Request) {
 
     // 验证必需参数
     if (!messages || messages.length === 0) {
-      return respErr("消息不能为空");
+      return respErr("Messages cannot be empty");
     }
 
     // 获取最后一条用户消息
     const lastMessage = messages[messages.length - 1];
     if (lastMessage.role !== 'user' || !lastMessage.content.trim()) {
-      return respErr("问题不能为空");
+      return respErr("Question cannot be empty");
     }
 
     if (!chartData || !chartData.birthData || !chartData.planetLines) {
-      return respErr("星盘数据不完整");
+      return respErr("Chart data is incomplete");
     }
 
     // 🔥 检查用户是否登录
     const user_uuid = await getUserUuid();
     if (!user_uuid) {
       return new Response(
-        JSON.stringify({ code: 401, message: "请先登录" }),
+        JSON.stringify({ code: 401, message: "Please sign in first" }),
         { status: 401, headers: { 'Content-Type': 'application/json' } }
       );
     }
@@ -100,11 +100,11 @@ export async function POST(req: Request) {
     // 🔥 检查用户积分余额
     const userCredits = await getUserCredits(user_uuid);
     if (userCredits.left_credits < creditCost) {
-      // 返回 402 状态码，错误信息包含"积分不足"关键词，方便前端识别
+      // 返回 402 状态码，错误信息包含"insufficient"关键词，方便前端识别
       return new Response(
         JSON.stringify({
           code: 402,
-          message: `积分不足，需要 ${creditCost} 积分，当前余额：${userCredits.left_credits} 积分`,
+          message: `Insufficient credits. ${creditCost} credits required, current balance: ${userCredits.left_credits} credits`,
         }),
         {
           status: 402,
@@ -124,7 +124,7 @@ export async function POST(req: Request) {
     } catch (creditError: any) {
       console.error("❌ [Astro Chat] 消耗积分失败:", creditError);
       return new Response(
-        JSON.stringify({ code: 500, message: "积分扣除失败，请稍后重试" }),
+        JSON.stringify({ code: 500, message: "Failed to deduct credits, please try again later" }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       );
     }
@@ -133,7 +133,7 @@ export async function POST(req: Request) {
     const apiKey = process.env.DEEPSEEK_API_KEY;
     if (!apiKey) {
       console.error("DEEPSEEK_API_KEY not configured");
-      return respErr("AI 服务未配置：DEEPSEEK_API_KEY 环境变量未设置");
+      return respErr("AI service not configured: DEEPSEEK_API_KEY environment variable is not set");
     }
 
     // 初始化 DeepSeek 模型
@@ -185,7 +185,7 @@ export async function POST(req: Request) {
 
   } catch (err) {
     console.error("astro-chat error:", err);
-    const errorMessage = err instanceof Error ? err.message : "AI 聊天服务出错";
+    const errorMessage = err instanceof Error ? err.message : "AI chat service error";
     return respErr(errorMessage);
   }
 }

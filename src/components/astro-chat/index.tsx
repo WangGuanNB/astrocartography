@@ -117,7 +117,9 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
       const errorMessage = error.message || '';
       if (errorMessage.includes('积分不足') || 
           errorMessage.includes('insufficient') || 
-          (errorMessage.includes('需要') && errorMessage.includes('积分'))) {
+          errorMessage.includes('Insufficient') ||
+          (errorMessage.includes('需要') && errorMessage.includes('积分')) ||
+          (errorMessage.includes('required') && errorMessage.includes('credits'))) {
         handleInsufficientCredits();
       }
     },
@@ -374,7 +376,7 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
             {/* 错误提示 */}
             {error && (
               <div className="bg-red-500/10 border border-red-500/50 text-red-400 rounded-lg px-4 py-3 text-sm">
-                {error.message || '发生错误，请稍后重试'}
+                {error.message || 'An error occurred, please try again later'}
               </div>
             )}
 
