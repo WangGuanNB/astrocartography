@@ -5,9 +5,34 @@ import { getTranslations } from "next-intl/server";
 import { getUserInfo, getUserUuid } from "@/services/user";
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
+import { cookies, headers } from "next/headers";
 
 export default async function ({ children }: { children: ReactNode }) {
   console.log("🚪 [ConsoleLayout] 开始检查认证状态");
+  
+  // 🔍 添加详细的 Cookie 和请求头调试
+  const cookieStore = await cookies();
+  const headersList = await headers();
+  const expectedCookieName = process.env.NODE_ENV === "production" 
+    ? "__Secure-authjs.session-token" 
+    : "authjs.session-token";
+  const sessionCookie = cookieStore.get(expectedCookieName);
+  const allCookies = cookieStore.getAll();
+  const cookieHeader = headersList.get("cookie");
+  
+  console.log("🔍 [ConsoleLayout] Cookie 调试信息", {
+    NODE_ENV: process.env.NODE_ENV,
+    expectedCookieName,
+    hasSessionCookie: !!sessionCookie,
+    sessionCookieValue: sessionCookie?.value ? `${sessionCookie.value.substring(0, 30)}...` : "无",
+    allCookieNames: allCookies.map(c => c.name),
+    cookieHeaderExists: !!cookieHeader,
+    cookieHeaderLength: cookieHeader?.length || 0,
+    cookieHeaderPreview: cookieHeader ? `${cookieHeader.substring(0, 100)}...` : "无",
+    AUTH_URL: process.env.AUTH_URL,
+    hasAuthSecret: !!process.env.AUTH_SECRET,
+    authSecretPrefix: process.env.AUTH_SECRET?.substring(0, 10),
+  });
   
   // 先检查 session 是否存在
   console.log("🚪 [ConsoleLayout] 调用 auth() 获取 session");
