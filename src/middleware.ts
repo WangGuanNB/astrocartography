@@ -40,7 +40,46 @@ export default function middleware(request: NextRequest) {
   // 调用 next-intl 中间件
   const response = intl(request) as NextResponse;
   
-  // 🔍 调试：检查 next-intl 中间件处理后的响应
+  // 🔥 关键修复：手动转发所有 Cookie，确保它们能传递到 Server Components
+  // 这解决了 next-intl 中间件可能不正确转发 Cookie 的问题
+  console.log("🔧 [Middleware] 开始手动转发 Cookie");
+  const allCookies = request.cookies.getAll();
+  let forwardedCount = 0;
+  
+  allCookies.forEach(cookie => {
+    // 检查 response 中是否已经有这个 cookie
+    const existingCookie = response.cookies.get(cookie.name);
+    
+    if (!existingCookie) {
+      // 如果 response 中没有这个 cookie，手动添加
+      const isAuthCookie = cookie.name.includes('authjs') || cookie.name.includes('csrf-token');
+      const isSecureCookie = cookie.name.startsWith('__Secure-') || cookie.name.startsWith('__Host-');
+      
+      response.cookies.set(cookie.name, cookie.value, {
+        httpOnly: isAuthCookie,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'lax',
+        path: '/',
+      });
+      
+      forwardedCount++;
+      
+      if (isAuthCookie || isSecureCookie) {
+        console.log("🔧 [Middleware] 转发认证 Cookie", {
+          name: cookie.name,
+          valuePreview: cookie.value.substring(0, 30) + '...',
+        });
+      }
+    }
+  });
+  
+  console.log("✅ [Middleware] Cookie 转发完成", {
+    totalCookies: allCookies.length,
+    forwardedCookies: forwardedCount,
+    responseCookieCount: response.cookies.getAll().length,
+  });
+  
+  //  调试：检查 next-intl 中间件处理后的响应
   const responseCookies = response.cookies.getAll();
   console.log("🔍 [Middleware] next-intl 响应 Cookie 检查", {
     responseCookieCount: responseCookies.length,
