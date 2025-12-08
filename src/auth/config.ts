@@ -125,6 +125,8 @@ export const authOptions: NextAuthConfig = {
   },
   // 信任主机名，确保 cookie 在生产环境正确设置
   trustHost: true,
+  // 🔥 关键修复：明确设置 useSecureCookies，确保在 Vercel 上正确处理 Cookie
+  useSecureCookies: process.env.NODE_ENV === "production",
   // Cookie 配置，确保跨域和安全性
   // NextAuth v5 默认使用 authjs.session-token，需要与实际的 cookie 名称匹配
   cookies: {
