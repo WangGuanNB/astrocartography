@@ -550,6 +550,17 @@
           "width": 200,
           "height": 54
         }
+      },
+      {
+        "title": "Listed on SimilarLabs",
+        "url": "https://similarlabs.com/?ref=embed",
+        "target": "_blank",
+        "image": {
+          "src": "https://similarlabs.com/similarlabs-embed-badge-light.svg",
+          "alt": "SimilarLabs Embed Badge",
+          "width": 200,
+          "height": 54
+        }
       }
     ],
     "agreement": {
