@@ -18,6 +18,35 @@ declare global {
 }
 
 /**
+ * 等待 gtag 加载完成
+ * @param maxRetries 最大重试次数
+ * @param delay 每次重试的延迟（毫秒）
+ */
+function waitForGtag(maxRetries = 30, delay = 100): Promise<void> {
+  return new Promise((resolve, reject) => {
+    let retries = 0;
+    
+    const checkGtag = () => {
+      // 检查 gtag 是否已加载
+      if (typeof window !== 'undefined' && window.gtag) {
+        resolve();
+        return;
+      }
+      
+      retries++;
+      if (retries >= maxRetries) {
+        reject(new Error('gtag failed to load after maximum retries'));
+        return;
+      }
+      
+      setTimeout(checkGtag, delay);
+    };
+    
+    checkGtag();
+  });
+}
+
+/**
  * 发送 GA4 事件
  * @param eventName 事件名称
  * @param eventParams 事件参数
@@ -28,30 +57,53 @@ export function trackEvent(
     [key: string]: any;
   }
 ) {
-  // 只在客户端和生产环境执行
-  if (typeof window === 'undefined' || process.env.NODE_ENV !== 'production') {
-    // 开发环境打印日志，方便调试
-    if (process.env.NODE_ENV === 'development') {
-      console.log('📊 [GA4 Event]', eventName, eventParams);
+  // 只在客户端执行
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  // 开发环境：打印日志并尝试发送（如果 gtag 可用）
+  if (process.env.NODE_ENV !== 'production') {
+    console.log('📊 [GA4 Event]', eventName, eventParams);
+    // 开发环境也尝试发送（如果 gtag 可用），方便测试
+    if (window.gtag) {
+      try {
+        window.gtag('event', eventName, {
+          ...eventParams,
+          timestamp: new Date().toISOString(),
+        });
+        console.log('✅ [GA4 Event Sent]', eventName, '→ GA4');
+      } catch (error) {
+        console.error('❌ [GA4 Event Failed]', eventName, error);
+      }
+    } else {
+      console.warn('⚠️ [GA4 Event] gtag not loaded yet, event logged but not sent:', eventName);
     }
     return;
   }
 
-  // 检查 gtag 是否可用
-  if (!window.gtag) {
-    console.warn('GA4 gtag is not available');
-    return;
-  }
-
-  try {
-    window.gtag('event', eventName, {
-      ...eventParams,
-      // 添加时间戳
-      timestamp: new Date().toISOString(),
+  // 生产环境：等待 gtag 加载后发送
+  waitForGtag()
+    .then(() => {
+      if (window.gtag) {
+        try {
+          window.gtag('event', eventName, {
+            ...eventParams,
+            // 添加时间戳
+            timestamp: new Date().toISOString(),
+          });
+          // 生产环境也打印日志，方便调试
+          console.log('📊 [GA4 Event Sent]', eventName, eventParams);
+        } catch (error) {
+          console.error('Failed to track GA4 event:', error);
+        }
+      } else {
+        console.warn('📊 [GA4 Event Failed] gtag not available after wait:', eventName);
+      }
+    })
+    .catch((error) => {
+      console.warn('📊 [GA4 Event Failed] gtag not available after retries:', eventName, error);
     });
-  } catch (error) {
-    console.error('Failed to track GA4 event:', error);
-  }
 }
 
 /**

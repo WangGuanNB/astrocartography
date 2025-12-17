@@ -3,6 +3,7 @@
 import { GoogleAnalytics as NextGoogleAnalytics } from "@next/third-parties/google";
 
 export default function GoogleAnalytics() {
+  // 只在生产环境加载 GA4
   if (process.env.NODE_ENV !== "production") {
     return null;
   }
