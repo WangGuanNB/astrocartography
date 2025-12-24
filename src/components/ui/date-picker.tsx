@@ -50,6 +50,11 @@ export function DatePicker({
   // 将字符串转换为 Date 对象
   const selectedDate = value ? new Date(value + "T00:00:00") : undefined;
   
+  // 设置日期范围：允许选择 1900 年到当前年份的日期
+  const fromMonth = new Date(1900, 0, 1);
+  const toMonth = new Date();
+  const defaultMonth = selectedDate || new Date();
+  
   // 处理日期选择
   const handleSelect = (date: Date | undefined) => {
     if (date) {
@@ -87,13 +92,23 @@ export function DatePicker({
           selected={selectedDate}
           onSelect={handleSelect}
           locale={dateFnsLocale}
+          fromMonth={fromMonth}
+          toMonth={toMonth}
+          defaultMonth={defaultMonth}
+          captionLayout="dropdown"
+          fromYear={1900}
+          toYear={new Date().getFullYear()}
           initialFocus
           className="bg-gray-900 text-white"
           classNames={{
             months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
             month: "space-y-4",
             caption: "flex justify-center pt-1 relative items-center",
-            caption_label: "text-sm font-medium text-white",
+            caption_label: "hidden", // 隐藏标签文本，只显示下拉选择器
+            caption_dropdowns: "flex justify-center gap-2 items-center",
+            dropdown: "h-8 bg-white/10 border border-white/20 text-white hover:bg-white/20 text-xs px-3 rounded-md cursor-pointer",
+            dropdown_month: "h-8 bg-white/10 border border-white/20 text-white hover:bg-white/20 text-xs px-3 rounded-md cursor-pointer min-w-[100px]",
+            dropdown_year: "h-8 bg-white/10 border border-white/20 text-white hover:bg-white/20 text-xs px-3 rounded-md cursor-pointer min-w-[80px]",
             nav: "space-x-1 flex items-center",
             nav_button: cn(
               "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100 text-white hover:bg-white/10"
@@ -121,6 +136,7 @@ export function DatePicker({
     </Popover>
   );
 }
+
 
 
 
