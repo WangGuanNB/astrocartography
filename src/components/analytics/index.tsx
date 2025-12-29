@@ -1,6 +1,7 @@
 import GoogleAnalytics from "./google-analytics";
 import OpenPanelAnalytics from "./open-panel";
 import Plausible from "./plausible";
+import Clarity from "./clarity";
 
 export default function Analytics() {
   // 只在生产环境加载分析工具
@@ -13,6 +14,7 @@ export default function Analytics() {
       <OpenPanelAnalytics />
       <GoogleAnalytics />
       <Plausible />
+      <Clarity />
     </>
   );
 }

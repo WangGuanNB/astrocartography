@@ -53,6 +53,9 @@ importers:
       '@mdx-js/react':
         specifier: ^3.1.0
         version: 3.1.1(@types/react@18.3.26)(react@19.2.0)
+      '@microsoft/clarity':
+        specifier: ^1.0.2
+        version: 1.0.2
       '@next/env':
         specifier: ^15.5.2
         version: 15.5.6
@@ -1138,6 +1141,9 @@ packages:
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
+
+  '@microsoft/clarity@1.0.2':
+    resolution: {integrity: sha512-9EZYROFpJxEGmQpHvUFqvD3ZJ7QQSqnibYSWmS+1xusoZfG1QQ1/Al9yVBBc11DWMbJrs1pe1hLT273it/skJg==}
 
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
@@ -6574,6 +6580,8 @@ snapshots:
       '@types/mdx': 2.0.13
       '@types/react': 18.3.26
       react: 19.2.0
+
+  '@microsoft/clarity@1.0.2': {}
 
   '@napi-rs/wasm-runtime@0.2.12':
     dependencies:

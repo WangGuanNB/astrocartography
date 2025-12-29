@@ -88,8 +88,13 @@ export async function POST(req: Request) {
     // 🔥 检查用户是否登录
     const user_uuid = await getUserUuid();
     if (!user_uuid) {
+      // 返回 401 状态码，添加 type 字段标识为需要登录
       return new Response(
-        JSON.stringify({ code: 401, message: "Please sign in first" }),
+        JSON.stringify({ 
+          code: 401, 
+          type: 'auth_required',
+          message: "Please sign in to continue using Astro Chat" 
+        }),
         { status: 401, headers: { 'Content-Type': 'application/json' } }
       );
     }
@@ -100,11 +105,14 @@ export async function POST(req: Request) {
     // 🔥 检查用户积分余额
     const userCredits = await getUserCredits(user_uuid);
     if (userCredits.left_credits < creditCost) {
-      // 返回 402 状态码，错误信息包含"insufficient"关键词，方便前端识别
+      // 返回 402 状态码，添加 type 字段标识为积分不足
       return new Response(
         JSON.stringify({
           code: 402,
+          type: 'insufficient_credits',
           message: `Insufficient credits. ${creditCost} credits required, current balance: ${userCredits.left_credits} credits`,
+          creditCost,
+          currentBalance: userCredits.left_credits,
         }),
         {
           status: 402,

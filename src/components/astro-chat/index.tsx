@@ -119,16 +119,58 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
     body: {
       chartData,
     },
-    onError: (error) => {
-      console.error('Chat error:', error);
-      // 捕获 402 错误（积分不足），直接弹出价格弹窗
+    onError: async (error) => {
       const errorMessage = error.message || '';
-      if (errorMessage.includes('积分不足') || 
-          errorMessage.includes('insufficient') || 
-          errorMessage.includes('Insufficient') ||
-          (errorMessage.includes('需要') && errorMessage.includes('积分')) ||
-          (errorMessage.includes('required') && errorMessage.includes('credits'))) {
+      
+      // 尝试从错误消息中解析 JSON（useChat 可能会将响应体包含在错误消息中）
+      try {
+        // 检查错误消息是否包含 JSON 格式的错误信息
+        const jsonMatch = errorMessage.match(/\{.*"code".*"type".*\}/);
+        if (jsonMatch) {
+          const errorData = JSON.parse(jsonMatch[0]);
+          
+          // 401: 需要登录
+          if (errorData.code === 401 && errorData.type === 'auth_required') {
+            if (onRequireLogin) {
+              onRequireLogin();
+            }
+            // 不打印错误日志，这是正常的业务提示
+            return;
+          }
+          
+          // 402: 积分不足
+          if (errorData.code === 402 && errorData.type === 'insufficient_credits') {
+            handleInsufficientCredits();
+            // 不打印错误日志，这是正常的业务提示
+            return;
+          }
+        }
+      } catch (parseError) {
+        // 解析失败，继续使用关键词匹配
+      }
+      
+      // 通过关键词匹配识别错误类型（兼容旧格式）
+      if (errorMessage.includes('auth_required') || 
+          errorMessage.includes('Please sign in') ||
+          errorMessage.includes('sign in first')) {
+        if (onRequireLogin) {
+          onRequireLogin();
+        }
+        // 不打印错误日志
+        return;
+      }
+      
+      if (errorMessage.includes('insufficient_credits') || 
+          errorMessage.includes('积分不足') || 
+          errorMessage.includes('Insufficient credits')) {
         handleInsufficientCredits();
+        // 不打印错误日志
+        return;
+      }
+      
+      // 其他错误只在开发环境打印日志
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Chat error:', error);
       }
     },
   });
@@ -373,12 +415,28 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
               </div>
             )}
 
-            {/* 错误提示 */}
-            {error && (
-              <div className="bg-red-500/10 border border-red-500/50 text-red-400 rounded-lg px-4 py-3 text-sm">
-                {error.message || 'An error occurred, please try again later'}
-              </div>
-            )}
+            {/* 错误提示 - 不显示 401/402 错误（这些是业务提示，不是错误） */}
+            {error && (() => {
+              const errorMessage = error.message || '';
+              // 检查是否是业务提示错误（401/402），如果是则不显示
+              const isBusinessPrompt = 
+                errorMessage.includes('auth_required') ||
+                errorMessage.includes('insufficient_credits') ||
+                errorMessage.includes('Please sign in') ||
+                errorMessage.includes('sign in first') ||
+                errorMessage.includes('Insufficient credits') ||
+                errorMessage.includes('积分不足');
+              
+              // 只显示真正的系统错误
+              if (!isBusinessPrompt) {
+                return (
+                  <div className="bg-red-500/10 border border-red-500/50 text-red-400 rounded-lg px-4 py-3 text-sm">
+                    {errorMessage || 'An error occurred, please try again later'}
+                  </div>
+                );
+              }
+              return null;
+            })()}
 
             {/* 登录提示 - 当免费问题用完后显示 */}
             {!user && userMessageCount >= FREE_QUESTIONS_LIMIT && (
