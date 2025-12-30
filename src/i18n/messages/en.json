@@ -332,6 +332,14 @@
   },
   "astro_chat": {
     "credit_cost_notice": "Each conversation consumes {credits} credits",
-    "credit_cost_notice_singular": "Each conversation consumes {credits} credit"
+    "credit_cost_notice_singular": "Each conversation consumes {credits} credit",
+    "insufficient_credits_title": "Insufficient Credits",
+    "insufficient_credits_message": "Your free trial has been used up. To unlock more conversations, please upgrade to our premium plan.",
+    "insufficient_credits_close": "Close",
+    "insufficient_credits_upgrade": "Upgrade",
+    "download_chat": "Download Chat",
+    "download_success": "Chat downloaded successfully",
+    "download_failed": "Download failed, please try again",
+    "no_messages": "No messages to download"
   }
 }

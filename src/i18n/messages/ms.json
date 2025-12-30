@@ -254,5 +254,17 @@
       "insufficient_description": "Anda tidak mempunyai kredit yang mencukupi, sila naik taraf untuk terus menggunakan ciri AI",
       "upgrade_success": "Naik taraf berjaya! Ciri dibuka kunci"
     }
+  },
+  "astro_chat": {
+    "credit_cost_notice": "Setiap perbualan menggunakan {credits} kredit",
+    "credit_cost_notice_singular": "Setiap perbualan menggunakan {credits} kredit",
+    "insufficient_credits_title": "Kredit Tidak Mencukupi",
+    "insufficient_credits_message": "Percubaan percuma anda telah habis. Untuk membuka lebih banyak perbualan, sila gunakan fungsi berbayar kami.",
+    "insufficient_credits_close": "Tutup",
+    "insufficient_credits_upgrade": "Naik Taraf",
+    "download_chat": "Muat Turun Sembang",
+    "download_success": "Sembang berjaya dimuat turun",
+    "download_failed": "Muat turun gagal, sila cuba lagi",
+    "no_messages": "Tiada mesej untuk dimuat turun"
   }
 }

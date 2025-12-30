@@ -332,6 +332,14 @@
   },
   "astro_chat": {
     "credit_cost_notice": "每次对话消耗 {credits} 积分",
-    "credit_cost_notice_singular": "每次对话消耗 {credits} 积分"
+    "credit_cost_notice_singular": "每次对话消耗 {credits} 积分",
+    "insufficient_credits_title": "积分不足",
+    "insufficient_credits_message": "您的免费体验次数已用完，解锁更多对话次数，请使用我们的付费功能",
+    "insufficient_credits_close": "关闭",
+    "insufficient_credits_upgrade": "去付费",
+    "download_chat": "下载对话",
+    "download_success": "对话已成功下载",
+    "download_failed": "下载失败，请重试",
+    "no_messages": "暂无对话内容可下载"
   }
 }

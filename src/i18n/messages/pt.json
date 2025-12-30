@@ -304,5 +304,17 @@
       "description": "Acabei de gerar meu mapa de astrocartografia personalizado! Descubra suas conexões cósmicas ao redor do mundo.",
       "hashtags": ["Astrocartografia", "MapaAstro", "Astrologia", "ConexõesCósmicas", "MapaNatal"]
     }
+  },
+  "astro_chat": {
+    "credit_cost_notice": "Cada conversa consome {credits} créditos",
+    "credit_cost_notice_singular": "Cada conversa consome {credits} crédito",
+    "insufficient_credits_title": "Créditos Insuficientes",
+    "insufficient_credits_message": "Sua experiência gratuita foi esgotada. Para desbloquear mais conversas, use nossos recursos pagos.",
+    "insufficient_credits_close": "Fechar",
+    "insufficient_credits_upgrade": "Fazer Upgrade",
+    "download_chat": "Baixar Conversa",
+    "download_success": "Conversa baixada com sucesso",
+    "download_failed": "Falha ao baixar, tente novamente",
+    "no_messages": "Nenhuma mensagem para baixar"
   }
 }

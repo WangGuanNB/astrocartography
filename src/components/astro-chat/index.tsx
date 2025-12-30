@@ -7,13 +7,14 @@ import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from '@/components/u
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { MessageCircle, Send, Sparkles, X, Coins } from 'lucide-react';
+import { MessageCircle, Send, Sparkles, Coins, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { User } from '@/types/user';
 import { useTranslations, useLocale } from 'next-intl';
 import PricingModal from '@/components/pricing/pricing-modal';
 import { Pricing as PricingType } from '@/types/blocks/pricing';
 import { askAIEvents, paymentEvents } from '@/lib/analytics';
+import { toast } from 'sonner';
 
 interface AstroChatProps {
   open: boolean;
@@ -59,12 +60,13 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
   const [lastCredits, setLastCredits] = useState<number | null>(null); // 上次积分值，用于检测变化
   const [showPricingModal, setShowPricingModal] = useState(false);
   const [pricingData, setPricingData] = useState<PricingType | null>(null);
+  const [showInsufficientCreditsDialog, setShowInsufficientCreditsDialog] = useState(false); // 积分不足提示框
   const t = useTranslations('astro_chat');
   const locale = useLocale();
 
   // 获取用户积分余额
-  const fetchUserCredits = useCallback(async () => {
-    if (!user) return;
+  const fetchUserCredits = useCallback(async (): Promise<number | null> => {
+    if (!user) return null;
     
     try {
       const response = await fetch('/api/get-user-credits', {
@@ -81,9 +83,12 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
           return credits;
         });
         setUserCredits(credits);
+        return credits;
       }
+      return null;
     } catch (err) {
       console.error('Failed to fetch user credits:', err);
+      return null;
     }
   }, [user]);
 
@@ -100,19 +105,18 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
     }
   };
 
-  // 处理积分不足的情况
+  // 处理积分不足的情况（显示提示框而不是直接打开价格弹窗）
   const handleInsufficientCredits = useCallback(async () => {
-    // 先获取定价数据（如果还没有）
-    if (!pricingData) {
-      await fetchPricingData();
+    let currentCredits = userCredits;
+    // 刷新积分（确保显示最新的积分值）
+    if (user) {
+      currentCredits = await fetchUserCredits();
     }
-    // 弹出价格弹窗
-    setShowPricingModal(true);
-    // 📊 埋点：积分不足
-    askAIEvents.insufficientCredits(userCredits || 0, creditCost);
-    // 📊 埋点：打开价格弹窗（由积分不足触发）
-    paymentEvents.pricingModalOpened('insufficient_credits');
-  }, [pricingData, locale, userCredits, creditCost]);
+    // 显示积分不足提示框
+    setShowInsufficientCreditsDialog(true);
+    // 📊 埋点：积分不足（使用刷新后的积分值）
+    askAIEvents.insufficientCredits(currentCredits || 0, creditCost);
+  }, [user, userCredits, creditCost, fetchUserCredits]);
 
   const { messages, input, handleInputChange, handleSubmit, isLoading, error, append, setMessages } = useChat({
     api: '/api/astro-chat',
@@ -179,6 +183,61 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
   const userMessageCount = useMemo(() => {
     return messages.filter(msg => msg.role === 'user').length;
   }, [messages]);
+
+  // 下载聊天记录
+  const handleDownloadChat = useCallback(() => {
+    if (messages.length === 0) {
+      toast.error(t('no_messages'));
+      return;
+    }
+
+    try {
+      // 格式化日期时间
+      const now = new Date();
+      const dateStr = now.toLocaleString(locale, {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      });
+
+      // 构建文件内容
+      let content = 'Astro Chat Conversation\n';
+      content += '='.repeat(50) + '\n\n';
+      content += `Date: ${dateStr}\n`;
+      content += `Chart for: ${chartData.birthData.location}\n`;
+      content += '\n' + '='.repeat(50) + '\n';
+      content += 'Conversation\n';
+      content += '='.repeat(50) + '\n\n';
+
+      // 添加每条消息
+      messages.forEach((message) => {
+        const role = message.role === 'user' ? 'User' : 'AI';
+        content += `[${role}]\n`;
+        content += message.content + '\n';
+        content += '\n';
+      });
+
+      // 创建 Blob 并下载
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      const fileName = `astro-chat-${now.toISOString().slice(0, 19).replace(/:/g, '-')}.txt`;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+
+      toast.success(t('download_success'));
+    } catch (error) {
+      console.error('Failed to download chat:', error);
+      toast.error(t('download_failed'));
+    }
+  }, [messages, chartData, locale, t]);
 
   // 📊 埋点：收到 AI 回复（监听消息变化）
   useEffect(() => {
@@ -268,7 +327,7 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
 
 
   // 处理表单提交
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // 检查是否可以提问
@@ -278,6 +337,26 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
         onRequireLogin();
       }
       return;
+    }
+    
+    // 🔥 检查用户积分是否足够（仅对已登录用户）
+    if (user) {
+      let currentCredits = userCredits;
+      
+      // 如果积分还没加载，先尝试获取
+      if (currentCredits === null) {
+        currentCredits = await fetchUserCredits();
+      }
+      
+      // 如果获取到积分且积分不足，显示提示框
+      if (currentCredits !== null && currentCredits < creditCost) {
+        setShowInsufficientCreditsDialog(true);
+        // 📊 埋点：积分不足
+        askAIEvents.insufficientCredits(currentCredits, creditCost);
+        return;
+      }
+      
+      // 如果积分还是 null（网络问题），允许继续提交让后端检查
     }
     
     setShowSuggestions(false);
@@ -299,7 +378,7 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
   };
 
   // 处理预设问题点击
-  const handleSuggestedQuestionClick = (question: string) => {
+  const handleSuggestedQuestionClick = async (question: string) => {
     // 检查是否可以提问
     if (!canAskQuestion) {
       // 需要登录才能继续提问
@@ -307,6 +386,26 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
         onRequireLogin();
       }
       return;
+    }
+    
+    // 🔥 检查用户积分是否足够（仅对已登录用户）
+    if (user) {
+      let currentCredits = userCredits;
+      
+      // 如果积分还没加载，先尝试获取
+      if (currentCredits === null) {
+        currentCredits = await fetchUserCredits();
+      }
+      
+      // 如果获取到积分且积分不足，显示提示框
+      if (currentCredits !== null && currentCredits < creditCost) {
+        setShowInsufficientCreditsDialog(true);
+        // 📊 埋点：积分不足
+        askAIEvents.insufficientCredits(currentCredits, creditCost);
+        return;
+      }
+      
+      // 如果积分还是 null（网络问题），允许继续提交让后端检查
     }
     
     setShowSuggestions(false);
@@ -544,6 +643,19 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
                     </p>
                   </div>
                 </div>
+                {/* 下载按钮 */}
+                {messages.length > 0 && (
+                  <Button
+                    onClick={handleDownloadChat}
+                    variant="outline"
+                    size="sm"
+                    className="border-white/20 text-white hover:bg-white/10"
+                    title={t('download_chat')}
+                  >
+                    <Download className="size-4 mr-2" />
+                    {t('download_chat')}
+                  </Button>
+                )}
               </div>
               <div className="mt-3 flex items-center justify-between">
                 <div className="flex items-center gap-2 text-sm text-green-400">
@@ -581,6 +693,45 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
             }}
           />
         )}
+
+        {/* 积分不足提示框 - 桌面端和移动端都使用 Dialog，居中显示 */}
+        <Dialog open={showInsufficientCreditsDialog} onOpenChange={setShowInsufficientCreditsDialog}>
+          <DialogContent className="max-w-lg w-[calc(100%-2rem)] mx-4 bg-gradient-to-br from-purple-900/20 via-gray-900/95 to-gray-900/95 border border-white/10 backdrop-blur-xl p-4 sm:p-6">
+            <DialogHeader>
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-white">
+                {t('insufficient_credits_title')}
+              </DialogTitle>
+              <p className="text-sm sm:text-base text-gray-300 mt-2 sm:mt-3 leading-relaxed">
+                {t('insufficient_credits_message')}
+              </p>
+            </DialogHeader>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-end mt-6 sm:mt-8">
+              <Button
+                variant="outline"
+                onClick={() => setShowInsufficientCreditsDialog(false)}
+                className="border-white/20 text-white hover:bg-white/10 px-6 py-2.5 w-full sm:w-auto"
+              >
+                {t('insufficient_credits_close')}
+              </Button>
+              <Button
+                onClick={async () => {
+                  setShowInsufficientCreditsDialog(false);
+                  // 先获取定价数据（如果还没有）
+                  if (!pricingData) {
+                    await fetchPricingData();
+                  }
+                  // 打开价格弹窗
+                  setShowPricingModal(true);
+                  // 📊 埋点：打开价格弹窗（由积分不足触发）
+                  paymentEvents.pricingModalOpened('insufficient_credits');
+                }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2.5 w-full sm:w-auto"
+              >
+                {t('insufficient_credits_upgrade')}
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
       </>
     );
   }
@@ -591,18 +742,33 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
       <Drawer open={open} onOpenChange={onOpenChange}>
         <DrawerContent className="max-h-[85vh] bg-gradient-to-br from-purple-900/20 via-gray-900/95 to-gray-900/95 border-t border-white/10 backdrop-blur-xl flex flex-col">
           <DrawerHeader className="pb-3 border-b border-white/10">
-            <div className="flex items-center gap-3">
-              <div className="size-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                <Sparkles className="size-4 text-white" />
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="size-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                  <Sparkles className="size-4 text-white" />
+                </div>
+                <div>
+                  <DrawerTitle className="text-lg font-bold text-white">
+                    Astro Chat
+                  </DrawerTitle>
+                  <p className="text-xs text-gray-400">
+                    Revealing your planetary story
+                  </p>
+                </div>
               </div>
-              <div>
-                <DrawerTitle className="text-lg font-bold text-white">
-                  Astro Chat
-                </DrawerTitle>
-                <p className="text-xs text-gray-400">
-                  Revealing your planetary story
-                </p>
-              </div>
+              {/* 下载按钮 */}
+              {messages.length > 0 && (
+                <Button
+                  onClick={handleDownloadChat}
+                  variant="outline"
+                  size="sm"
+                  className="border-white/20 text-white hover:bg-white/10 text-xs px-2 py-1 h-auto"
+                  title={t('download_chat')}
+                >
+                  <Download className="size-3 mr-1" />
+                  <span className="hidden sm:inline">{t('download_chat')}</span>
+                </Button>
+              )}
             </div>
             <div className="mt-2 flex items-center justify-between flex-wrap gap-2">
               <div className="flex items-center gap-2 text-xs text-green-400">
@@ -642,6 +808,45 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
           }}
         />
       )}
+
+      {/* 积分不足提示框 - 桌面端和移动端都使用 Dialog，居中显示 */}
+      <Dialog open={showInsufficientCreditsDialog} onOpenChange={setShowInsufficientCreditsDialog}>
+        <DialogContent className="max-w-lg w-[calc(100%-2rem)] mx-4 bg-gradient-to-br from-purple-900/20 via-gray-900/95 to-gray-900/95 border border-white/10 backdrop-blur-xl p-4 sm:p-6">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl font-bold text-white">
+              {t('insufficient_credits_title')}
+            </DialogTitle>
+            <p className="text-sm sm:text-base text-gray-300 mt-2 sm:mt-3 leading-relaxed">
+              {t('insufficient_credits_message')}
+            </p>
+          </DialogHeader>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-end mt-6 sm:mt-8">
+            <Button
+              variant="outline"
+              onClick={() => setShowInsufficientCreditsDialog(false)}
+              className="border-white/20 text-white hover:bg-white/10 px-6 py-2.5 w-full sm:w-auto"
+            >
+              {t('insufficient_credits_close')}
+            </Button>
+            <Button
+              onClick={async () => {
+                setShowInsufficientCreditsDialog(false);
+                // 先获取定价数据（如果还没有）
+                if (!pricingData) {
+                  await fetchPricingData();
+                }
+                // 打开价格弹窗
+                setShowPricingModal(true);
+                // 📊 埋点：打开价格弹窗（由积分不足触发）
+                paymentEvents.pricingModalOpened('insufficient_credits');
+              }}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2.5 w-full sm:w-auto"
+            >
+              {t('insufficient_credits_upgrade')}
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
