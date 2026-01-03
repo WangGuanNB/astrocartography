@@ -39,13 +39,13 @@ interface AstroChatProps {
   onRequireLogin?: () => void;
 }
 
-// 预设问题
+// 预设问题（按转化优先级排序）
 const SUGGESTED_QUESTIONS = [
-  "What should I know about my planetary lines?",
-  "Where should I move for love and career?",
-  "What's special about my Venus placement?",
-  "Which locations support my career goals?",
-  "How do different cities affect my energy?",
+  "Where should I move to find love and success?",
+  "What are my top 3 cities for career growth?",
+  "How will moving to a new city change my life?",
+  "What does my Venus line reveal about relationships?",
+  "Compare my best locations for love vs. career",
 ];
 
 const FREE_QUESTIONS_LIMIT = 1; // 免费问题数量限制

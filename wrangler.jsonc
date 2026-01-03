@@ -38,6 +38,15 @@
   // 静态资源目录（OpenNext 输出）
   "assets": {
     "directory": ".open-next/assets"
+  },
+  // Workers 日志配置
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1, // 100% 采样率
+      "invocation_logs": true, // 包含调用日志
+      "persist": true // 保留日志到 Dashboard
+    }
   }
 }
 
