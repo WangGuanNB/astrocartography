@@ -1,5 +1,5 @@
 {
-  "name": "astrocarto",
+  "name": "astrocartography",
   "compatibility_date": "2025-01-10",
   "compatibility_flags": ["nodejs_compat"],
   "build": {
