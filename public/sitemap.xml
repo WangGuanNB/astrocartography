@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <!-- ========================================== -->
-  <!-- 当前生效：英文首页、多语言首页、法律页面、联系页面和博客页面 -->
-  <!-- 更新日期: 2025-12-09                        -->
+  <!-- 当前生效：英文首页、多语言首页、法律页面、联系页面、博客页面和 Astrocartography Calculator 页面 -->
+  <!-- 更新日期: 2026-01-10                        -->
   <!-- ========================================== -->
   
   <!-- 英文首页 - 主关键词: astrocartography -->
@@ -129,6 +129,48 @@
     <loc>https://astrocarto.org/posts/how-to-read-astrocartography-map/</loc>
     <lastmod>2025-12-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Astrocartography Calculator 页面
+  ────────────────────────────────────────────────────────── -->
+  <!-- 英文版本 - 主关键词: astrocartography calculator -->
+  <url>
+    <loc>https://astrocarto.org/astrocartography-calculator/</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 中文版本 - 主关键词: 星盘地图计算器 -->
+  <url>
+    <loc>https://astrocarto.org/zh/astrocartography-calculator/</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 西班牙语版本 - 主关键词: calculadora de astrocartografía -->
+  <url>
+    <loc>https://astrocarto.org/es/astrocartography-calculator/</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 葡萄牙语版本 - 主关键词: calculadora de astrocartografia -->
+  <url>
+    <loc>https://astrocarto.org/pt/astrocartography-calculator/</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 意大利语版本 - 主关键词: calcolatrice di astrocartografia -->
+  <url>
+    <loc>https://astrocarto.org/it/astrocartography-calculator/</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 

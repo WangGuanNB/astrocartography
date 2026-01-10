@@ -1,4 +1,4 @@
-import { LandingPage, PricingPage, ShowcasePage, ConverterPage, ColorPage, AboutPage, ContactPage } from "@/types/pages/landing";
+import { LandingPage, PricingPage, ShowcasePage, ConverterPage, ColorPage, AboutPage, ContactPage, CalculatorPage } from "@/types/pages/landing";
 import { replaceSocialMediaUrls } from "@/lib/utils";
 
 export async function getLandingPage(locale: string): Promise<LandingPage> {
@@ -31,10 +31,14 @@ export async function getContactPage(locale: string): Promise<ContactPage> {
   return (await getPage("contact", locale)) as ContactPage;
 }
 
+export async function getCalculatorPage(locale: string): Promise<CalculatorPage> {
+  return (await getPage("astrocartography-calculator", locale)) as CalculatorPage;
+}
+
 export async function getPage(
   name: string,
   locale: string
-): Promise<LandingPage | PricingPage | ShowcasePage | ConverterPage | ColorPage | AboutPage | ContactPage> {
+): Promise<LandingPage | PricingPage | ShowcasePage | ConverterPage | ColorPage | AboutPage | ContactPage | CalculatorPage> {
   try {
     if (locale === "zh-CN") {
       locale = "zh";

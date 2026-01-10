@@ -18,6 +18,20 @@
           "icon": "RiHomeLine"
         },
         {
+          "title": "Tools",
+          "icon": "RiToolsLine",
+          "url": "/astrocartography-calculator",
+          "children": [
+            {
+              "title": "Free Calculator",
+              "description": "Generate your astrocartography chart instantly",
+              "url": "/astrocartography-calculator",
+              "target": "_self",
+              "icon": "RiCalculatorLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"
@@ -437,7 +451,13 @@
       "items": [
         {
           "title": "Product",
-          "children": []
+          "children": [
+            {
+              "title": "Astrocartography Calculator",
+              "url": "/astrocartography-calculator",
+              "target": "_self"
+            }
+          ]
         },
         {
           "title": "Resources",
@@ -452,20 +472,11 @@
               "target": "_self"
             },
             {
-              "title": "pdf to video",
-              "url": "https://pdfvideo.org/",
-              "target": "_blank"
-            },
-            {
-              "title": "AI Dirs",
-              "url": "https://aidirs.org/",
-              "target": "_blank"
-            },
-            {
-              "title": "YP for AI",
-              "url": "https://ypforai.com/",
+              "title": "numerologycalculators",
+              "url": "https://numerologycalculators.org",
               "target": "_blank"
             }
+           
           ]
         },
         {
@@ -477,118 +488,7 @@
     "social": {
       "items": []
     },
-    "badges": [
-      {
-        "title": "Featured on ShowMeBestAI",
-        "url": "https://www.showmebest.ai",
-        "target": "_blank",
-        "image": {
-          "src": "https://www.showmebest.ai/badge/feature-badge-white.webp",
-          "alt": "Featured on ShowMeBestAI",
-          "width": 220,
-          "height": 60
-        }
-      },
-      {
-        "title": "Featured on Twelve Tools",
-        "url": "https://twelve.tools",
-        "target": "_blank",
-        "image": {
-          "src": "https://twelve.tools/badge0-white.svg",
-          "alt": "Featured on Twelve Tools",
-          "width": 200,
-          "height": 54
-        }
-      },
-      {
-        "title": "Featured on Aura++",
-        "url": "https://auraplusplus.com/projects/astrocarto",
-        "target": "_blank",
-        "image": {
-          "src": "https://auraplusplus.com/images/badges/featured-on-light.svg",
-          "alt": "Featured on Aura++",
-          "width": 220,
-          "height": 60
-        }
-      },
-      {
-        "title": "Featured on Days Launch",
-        "url": "https://dayslaunch.com",
-        "target": "_blank",
-        "image": {
-          "src": "https://dayslaunch.com/badages-awards.svg",
-          "alt": "Featured on Days Launch",
-          "width": 200,
-          "height": 54
-        }
-      },
-      {
-        "title": "Featured on The One Startup",
-        "url": "https://theonestartup.com",
-        "target": "_blank",
-        "image": {
-          "src": "https://theonestartup.com/badages-awards.svg",
-          "alt": "Featured on The One Startup",
-          "width": 200,
-          "height": 54
-        }
-      },
-      {
-        "title": "Featured on Startup Fame",
-        "url": "https://startupfa.me/s/astrocartography?utm_source=astrocarto.org",
-        "target": "_blank",
-        "image": {
-          "src": "https://startupfa.me/badges/featured-badge.webp",
-          "alt": "Astrocartography - Featured on Startup Fame",
-          "width": 171,
-          "height": 54
-        }
-      },
-      {
-        "title": "Listed on Turbo0",
-        "url": "https://turbo0.com/item/astrocarto",
-        "target": "_blank",
-        "image": {
-          "src": "https://img.turbo0.com/badge-listed-light.svg",
-          "alt": "Listed on Turbo0",
-          "width": 200,
-          "height": 54
-        }
-      },
-      {
-        "title": "Listed on SimilarLabs",
-        "url": "https://similarlabs.com/?ref=embed",
-        "target": "_blank",
-        "image": {
-          "src": "https://similarlabs.com/similarlabs-embed-badge-light.svg",
-          "alt": "SimilarLabs Embed Badge",
-          "width": 200,
-          "height": 54
-        }
-      },
-      {
-        "title": "Featured on startupdirs.com",
-        "url": "https://startupdirs.com",
-        "target": "_blank",
-        "image": {
-          "src": "https://startupdirs.com/bage.png",
-          "alt": "Featured on startupdirs.com",
-          "width": 200,
-          "height": 54
-        }
-      },
-      {
-        "title": "Featured on toolfame.com",
-        "url": "https://toolfame.com/item/astrocartography-calculator",
-        "target": "_blank",
-        "image": {
-          "src": "https://toolfame.com/badge-light.svg",
-          "alt": "Featured on toolfame.com",
-          "width": 200,
-          "height": 54
-        }
-      }
-    ],
+    "badges": [],
     "agreement": {
       "items": [
         {

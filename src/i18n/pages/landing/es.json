@@ -467,30 +467,7 @@
     "social": {
       "items": []
     },
-    "badges": [
-      {
-        "title": "Destacado en ShowMeBestAI",
-        "url": "https://www.showmebest.ai",
-        "target": "_blank",
-        "image": {
-          "src": "https://www.showmebest.ai/badge/feature-badge-white.webp",
-          "alt": "Destacado en ShowMeBestAI",
-          "width": 220,
-          "height": 60
-        }
-      },
-      {
-        "title": "Destacado en Aura++",
-        "url": "https://auraplusplus.com/projects/astrocarto",
-        "target": "_blank",
-        "image": {
-          "src": "https://auraplusplus.com/images/badges/featured-on-light.svg",
-          "alt": "Destacado en Aura++",
-          "width": 220,
-          "height": 60
-        }
-      }
-    ],
+    "badges": [],
     "agreement": {
       "items": [
         {

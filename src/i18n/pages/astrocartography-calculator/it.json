@@ -1,0 +1,196 @@
+{
+    "metadata": {
+      "title": "Calcolatrice di Astrocartografia Gratuita - Genera la Tua Mappa Online 2026",
+      "description": "Usa la nostra calcolatrice di astrocartografia gratuita per generare la tua mappa personalizzata all'istante. Calcoli professionali con Swiss Ephemeris, precisione di 1 miglio. Nessuna registrazione richiesta. Calcola linee planetarie per qualsiasi località mondiale."
+    },
+    "intentAnchor": {
+      "text": "A differenza delle guide generali di astrocartografia, questa pagina è progettata specificamente come una calcolatrice dedicata di astrocartografia per generare mappe all'istante. Se stai cercando una calcolatrice di astrocartografia gratuita piuttosto che spiegazioni concettuali, questo strumento fornisce calcoli diretti senza attriti."
+    },
+  "internalLinks": {
+    "title": "Risorse Correlate",
+    "items": [
+      {
+        "text": "Cerchi un'introduzione generale?",
+        "linkText": "Visita la Homepage",
+        "url": "/"
+      }
+    ]
+  },
+    "introduce": {
+      "name": "introduce",
+      "title": "Cos'è la Calcolatrice di Astrocartografia",
+      "label": "Introduzione",
+      "description": "La Calcolatrice di Astrocartografia è uno strumento di livello professionale che proietta il tuo tema natale su una mappa mondiale, rivelando dove le energie planetarie sono più forti sulla superficie terrestre. Questa calcolatrice di astrologia di rilocazione usa dati astronomici dello Swiss Ephemeris per calcolare posizioni planetarie con precisione di 1 miglio, rendendola la calcolatrice di mappa di astrocartografia gratuita più precisa disponibile online.",
+      "image": {
+        "src": "/imgs/features/hero-web.webp",
+        "alt": "Interfaccia della Calcolatrice di Astrocartografia"
+      },
+      "items": [
+        {
+          "title": "Come Funziona la Calcolatrice di Astrocartografia?",
+          "description": "La calcolatrice di linee planetarie usa lo Swiss Ephemeris per determinare la posizione di ogni pianeta nel cielo al momento della tua nascita, poi calcola dove questi pianeti erano angolari (sorgendo, tramontando, culminando o al nadir) sulla superficie terrestre. Questa calcolatrice di mappa astrale impiega trigonometria sferica—usando formule come cos(H) = -tan(φ) * tan(δ) per linee ASC/DSC—per proiettare posizioni planetarie su una mappa mondiale. Lo strumento di astrologia locazionale converte coordinate equatoriali (Ascensione Retta e Declinazione) in coordinate geografiche usando calcoli di tempo siderale, rendendo linee visibili che mostrano pattern di energia specifici della località. Questa calcolatrice di mappa di astrocartografia elabora tutti i calcoli in tempo reale, mostrando risultati su una mappa interattiva con precisione di livello professionale che corrisponde a software standard del settore.",
+          "image": {
+            "src": "/imgs/features/1.webp",
+            "alt": "Come funziona la calcolatrice di astrocartografia"
+          }
+        },
+        {
+          "title": "Quali Parametri Astrologici Usa la Calcolatrice?",
+          "description": "La calcolatrice di astrologia di rilocazione elabora nove pianeti (Sole, Luna, Venere, Marte, Giove, Saturno, Urano, Nettuno, Plutone) e quattro punti angolari: Ascendente (ASC), Discendente (DSC), Medio Cielo (MC) e Imum Coeli (IC). Per ogni pianeta, questa calcolatrice di linee planetarie calcola la sua Ascensione Retta (AR) e Declinazione (Dec) al momento della tua nascita, poi determina dove ogni pianeta era angolare sulla superficie terrestre. La calcolatrice di mappa astrale usa coordinate equatoriali per calcoli astronomici e le converte in coordinate geografiche (latitudine/longitudine) per visualizzazione sulla mappa. Questo strumento di astrologia locazionale gestisce automaticamente conversioni di fuso orario, regole storiche dell'ora legale e cambiamenti del sistema di calendario, assicurando posizioni angolari delle case precise basate su calcoli di tempo siderale locale.",
+          "image": {
+            "src": "/imgs/features/2.webp",
+            "alt": "Parametri astrologici nella calcolatrice di astrocartografia"
+          }
+        },
+        {
+          "title": "In Cosa Differisce l'Astrocartografia da un Tema Natale?",
+          "description": "Un tema natale fissa la tua località di nascita e mostra dove erano i pianeti nel cielo, mentre la calcolatrice di astrocartografia fissa la tua ora di nascita e mostra dove erano i pianeti sulla superficie terrestre. La calcolatrice di linee planetarie mostra risultati su una mappa mondiale interattiva con linee planetarie sovrapposte geograficamente, facilitando l'identificazione di città lungo linee planetarie specifiche. Un tema natale mostra un diagramma circolare con case e posizioni planetarie per analisi della personalità. Usa la calcolatrice di mappa astrale quando pianifichi rilocazioni, viaggi o località commerciali basate su posizioni di linee planetarie. Usa temi natali per autocomprensione e sviluppo personale. Questa calcolatrice di astrologia di rilocazione completa l'analisi del tema natale aggiungendo una dimensione geografica, rivelando come cambiare località influenzi l'attivazione planetaria.",
+          "image": {
+            "src": "/imgs/features/3.webp",
+            "alt": "Calcolatrice di astrocartografia vs tema natale"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "name": "benefit",
+      "title": "Perché Scegliere la Nostra Calcolatrice di Astrocartografia",
+      "label": "Vantaggi Principali",
+      "description": "La nostra calcolatrice di astrocartografia combina precisione di livello professionale con caratteristiche user-friendly, offrendo la calcolatrice di astrologia di rilocazione gratuita più completa disponibile.",
+      "items": [
+        {
+          "title": "Precisione Professionale con Accuratezza di 1 Miglio",
+          "description": "La calcolatrice di linee planetarie usa lo Swiss Ephemeris, mantenuto dall'Osservatorio di Zurigo, che fornisce posizioni planetarie accurate entro 1 miglio sulla superficie terrestre. Questa calcolatrice di mappa di astrocartografia è stata verificata contro software professionale come Solar Fire e AstroGold, producendo risultati identici. La calcolatrice di mappa astrale elabora automaticamente conversioni di fuso orario, tenendo conto di cambiamenti storici dell'ora legale e transizioni del sistema di calendario (Giuliano a Gregoriano). La precisione di questo strumento di astrologia locazionale assicura che le tue posizioni di linee planetarie siano affidabili per pianificazione seria di rilocazione e uso professionale.",
+          "icon": "RiShieldCheckLine",
+          "image": {
+            "src": "/imgs/features/4.webp",
+            "alt": "Precisione della calcolatrice di astrocartografia"
+          }
+        },
+        {
+          "title": "Completamente Gratuita, Uso Illimitato",
+          "description": "Questa calcolatrice di astrocartografia è completamente gratuita con uso illimitato—nessuna carta di credito, nessuna tariffa nascosta. Genera mappe illimitate, scarica file senza filigrana e accedi a interpretazioni IA a costo zero. La calcolatrice di astrologia di rilocazione elabora tutti i dati di nascita localmente nel tuo browser, assicurando privacy completa mantenendo precisione di calcolo professionale.",
+          "icon": "RiGiftLine",
+          "image": {
+            "src": "/imgs/features/4.webp",
+            "alt": "Calcolatrice di astrocartografia gratuita"
+          }
+        },
+        {
+          "title": "Interpretazioni Alimentate da IA",
+          "description": "Oltre ai calcoli, questa calcolatrice di linee planetarie fornisce interpretazioni alimentate da IA spiegando cosa significa ogni linea planetaria per la tua carriera, relazioni e crescita personale. La calcolatrice di mappa di astrocartografia ti aiuta a capire pattern di energia specifici della località, rendendo concetti astrologici complessi accessibili per decisioni pratiche.",
+          "icon": "RiSparklingLine",
+          "image": {
+            "src": "/imgs/features/4.webp",
+            "alt": "Interpretazioni IA nella calcolatrice di astrocartografia"
+          }
+        }
+      ]
+    },
+    "usage": {
+      "name": "usage",
+      "title": "Come Usare la Calcolatrice di Astrocartografia",
+      "description": "Genera la tua mappa di astrocartografia professionale in 4 semplici passaggi usando la nostra calcolatrice di astrologia di rilocazione.",
+      "items": [
+        {
+          "title": "Inserisci Informazioni di Nascita",
+          "description": "Inserisci la tua data di nascita, ora (il più precisa possibile) e città nella calcolatrice di astrocartografia. La calcolatrice di linee planetarie gestisce automaticamente conversioni di fuso orario. Senza ora esatta di nascita, la calcolatrice di mappa astrale mostra ancora linee planetarie ma non linee angolari (ASC/DSC/MC/IC)."
+        },
+        {
+          "title": "Seleziona Linee Planetarie",
+          "description": "Scegli quali pianeti visualizzare nello strumento di astrologia locazionale: Sole, Luna, Venere, Marte, Giove, Saturno, più pianeti esterni. La calcolatrice di mappa di astrocartografia renderizza linee in tempo reale sulla mappa mondiale, mostrando dove l'energia di ogni pianeta è più forte."
+        },
+        {
+          "title": "Esplora Mappa Interattiva",
+          "description": "Clicca su qualsiasi linea planetaria o punto di potere (intersezione di linee) nella calcolatrice di astrocartografia per interpretazione dettagliata IA. La calcolatrice di astrologia di rilocazione spiega come quel pianeta influenzi la tua carriera, relazioni e creatività in quella località."
+        },
+        {
+          "title": "Esporta File Professionali",
+          "description": "Scarica mappe ad alta risoluzione e rapporti di interpretazione dalla calcolatrice di linee planetarie. Tutti i file di questa calcolatrice di mappa astrale sono senza filigrana e supportano uso commerciale."
+        }
+      ]
+    },
+    "feature": {
+      "name": "feature",
+      "title": "Caratteristiche della Calcolatrice di Astrocartografia",
+      "description": "Sei caratteristiche principali rendono questa calcolatrice di astrocartografia lo strumento più completo per analisi astrologica basata su località.",
+      "items": [
+        {
+          "title": "Mappa Globale Interattiva",
+          "description": "La calcolatrice di astrologia di rilocazione mostra linee planetarie su una mappa mondiale interattiva. Trascina, ingrandisci e clicca su qualsiasi città in questa calcolatrice di linee planetarie per visualizzare la distribuzione di energia planetaria all'istante.",
+          "icon": "RiGlobalLine"
+        },
+        {
+          "title": "Motore Swiss Ephemeris",
+          "description": "Questa calcolatrice di mappa di astrocartografia usa lo Swiss Ephemeris, supportando calcoli dal 3000 a.C. al 3000 d.C. La calcolatrice di mappa astrale mantiene gli stessi standard di precisione del software professionale di astrologia in tutto il mondo.",
+          "icon": "RiCompassLine"
+        },
+        {
+          "title": "Copertura Multilingue",
+          "description": "Cerca città in tutto il mondo in più lingue usando lo strumento di astrologia locazionale. Questa calcolatrice di astrocartografia gestisce automaticamente dati storici di fuso orario e cambiamenti dell'ora legale.",
+          "icon": "RiTranslate"
+        },
+        {
+          "title": "Filtraggio Intelligente delle Linee",
+          "description": "Visualizza o nascondi combinazioni specifiche di linee planetarie nella calcolatrice di astrologia di rilocazione. Questa calcolatrice di linee planetarie ti permette di concentrarti su energie planetarie specifiche per analisi di località mirata.",
+          "icon": "RiFilterLine"
+        },
+        {
+          "title": "Analisi dei Punti di Potere",
+          "description": "La calcolatrice di mappa di astrocartografia identifica automaticamente intersezioni di linee (punti di potere) dove multiple energie planetarie si attivano simultaneamente. Questa calcolatrice di mappa astrale evidenzia queste zone di convergenza ad alta energia.",
+          "icon": "RiStarLine"
+        },
+        {
+          "title": "Storia e Confronto",
+          "description": "Lo strumento di astrologia locazionale salva automaticamente la tua cronologia di generazione e supporta il confronto di più mappe. Usa questa calcolatrice di astrocartografia per confrontare sovrapposizioni di linee planetarie con partner o membri del team.",
+          "icon": "RiTeamLine"
+        }
+      ]
+    },
+    "faq": {
+      "name": "faq",
+      "label": "Domande Frequenti",
+      "title": "Domande Frequenti sulla Calcolatrice di Astrocartografia",
+      "description": "Risposte a domande comuni su come funziona la calcolatrice di astrocartografia e cosa la rende diversa.",
+      "items": [
+        {
+          "title": "Come funziona la calcolatrice di astrocartografia?",
+          "description": "La calcolatrice di astrologia di rilocazione usa lo Swiss Ephemeris per calcolare posizioni planetarie al momento della tua nascita, poi determina dove questi pianeti erano angolari (sorgendo, tramontando, culminando o al nadir) sulla superficie terrestre. Questa calcolatrice di linee planetarie usa trigonometria sferica per proiettare posizioni planetarie su una mappa mondiale, creando linee visibili che mostrano pattern di energia specifici della località."
+        },
+        {
+          "title": "Quali parametri astrologici usa la calcolatrice di astrocartografia?",
+          "description": "La calcolatrice di mappa astrale elabora nove pianeti (Sole, Luna, Venere, Marte, Giove, Saturno, Urano, Nettuno, Plutone) e quattro punti angolari (ASC, DSC, MC, IC). Questo strumento di astrologia locazionale usa coordinate equatoriali (Ascensione Retta e Declinazione) e le converte in coordinate geografiche usando calcoli di tempo siderale per rendering preciso della mappa."
+        },
+        {
+          "title": "In cosa differisce l'astrocartografia da un tema natale?",
+          "description": "Un tema natale fissa la tua località di nascita e mostra posizioni planetarie nel cielo, mentre la calcolatrice di astrocartografia fissa la tua ora di nascita e mostra dove erano i pianeti sulla superficie terrestre. La calcolatrice di astrologia di rilocazione mostra risultati su una mappa mondiale per analisi di località, mentre i temi natali usano diagrammi circolari per analisi della personalità. Usa la calcolatrice di astrocartografia per pianificazione di rilocazione e temi natali per autocomprensione."
+        },
+        {
+          "title": "Quanto è accurata la calcolatrice di astrocartografia?",
+          "description": "La calcolatrice di linee planetarie raggiunge accuratezza di 1 miglio usando calcoli dello Swiss Ephemeris, corrispondendo a risultati di software professionale come Solar Fire e AstroGold. Questa calcolatrice di mappa di astrocartografia gestisce automaticamente conversioni di fuso orario, cambiamenti storici dell'ora legale e transizioni del sistema di calendario. La calcolatrice di mappa astrale è stata verificata contro eventi storici noti e consultazioni professionali."
+        },
+        {
+          "title": "E se non conosco la mia ora esatta di nascita?",
+          "description": "Puoi ancora usare la calcolatrice di astrocartografia! Senza ora esatta, questo strumento di astrologia locazionale non può mostrare linee ASC/DSC/MC/IC, ma vedrai ancora linee planetarie (Sole, Luna, Venere, ecc.) che rivelano compatibilità di località. Per i migliori risultati con la calcolatrice di astrologia di rilocazione, controlla il tuo certificato di nascita per l'ora precisa di nascita."
+        },
+        {
+          "title": "Posso usare la calcolatrice di astrocartografia per scopi commerciali?",
+          "description": "Sì. Tutte le mappe generate da questa calcolatrice di astrocartografia possono essere usate commercialmente senza tariffe di licenza. La calcolatrice di linee planetarie produce file senza filigrana adatti per consultazioni professionali, insegnamento, pubblicazioni o pianificazione personale. Questa calcolatrice di mappa di astrocartografia rispetta la tua privacy—tutti i calcoli avvengono localmente nel tuo browser."
+        }
+      ]
+    },
+    "cta": {
+      "name": "cta",
+      "title": "Genera la Tua Mappa di Astrocartografia Gratuita Ora",
+      "description": "Usa la nostra calcolatrice di astrocartografia professionale per creare la tua mappa personalizzata con precisione dello Swiss Ephemeris. Scopri città ideali per la tua carriera, relazioni e crescita personale. Questa calcolatrice di astrologia di rilocazione è completamente gratuita—nessuna registrazione richiesta, uso illimitato.",
+      "buttons": [
+        {
+          "title": "Genera Mappa Gratuita Ora",
+          "icon": "RiMapLine",
+          "url": "/#generator",
+          "target": "_self",
+          "variant": "default"
+        }
+      ]
+    }
+  }

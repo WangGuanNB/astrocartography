@@ -70,7 +70,14 @@ export default function Header({ header }: { header: HeaderType }) {
                           key={i}
                           className="text-muted-foreground"
                         >
-                          <NavigationMenuTrigger>
+                          <NavigationMenuTrigger
+                            className={cn(
+                              "text-muted-foreground",
+                              buttonVariants({
+                                variant: "ghost",
+                              })
+                            )}
+                          >
                             {item.icon && (
                               <Icon
                                 name={item.icon}
@@ -224,16 +231,20 @@ export default function Header({ header }: { header: HeaderType }) {
                             value={item.title || ""}
                             className="border-b-0"
                           >
-                            <AccordionTrigger className="mb-4 py-0 font-semibold hover:no-underline text-left">
+                            <AccordionTrigger className="font-semibold my-4 flex items-center gap-2 px-4 hover:no-underline justify-start [&>svg:last-child]:ml-auto">
+                              {item.icon && (
+                                <Icon
+                                  name={item.icon}
+                                  className="size-3 shrink-0"
+                                />
+                              )}
                               {item.title}
                             </AccordionTrigger>
-                            <AccordionContent className="mt-2">
+                            <AccordionContent className="pb-0">
                               {item.children.map((iitem, ii) => (
                                 <Link
                                   key={ii}
-                                  className={cn(
-                                    "flex select-none gap-4 rounded-md p-3 leading-none outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                  )}
+                                  className="font-semibold my-2 flex items-center gap-2 px-4 pl-8 text-sm"
                                   href={iitem.url as any}
                                   target={iitem.target}
                                 >
@@ -243,14 +254,7 @@ export default function Header({ header }: { header: HeaderType }) {
                                       className="size-3 shrink-0"
                                     />
                                   )}
-                                  <div>
-                                    <div className="text-sm font-semibold">
-                                      {iitem.title}
-                                    </div>
-                                    <p className="text-sm leading-snug text-muted-foreground">
-                                      {iitem.description}
-                                    </p>
-                                  </div>
+                                  {iitem.title}
                                 </Link>
                               ))}
                             </AccordionContent>

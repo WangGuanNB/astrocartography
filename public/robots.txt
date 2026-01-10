@@ -33,6 +33,13 @@ Allow: /it/contact
 Allow: /posts
 Allow: /posts/
 
+# 允许 Astrocartography Calculator 页面
+Allow: /astrocartography-calculator
+Allow: /zh/astrocartography-calculator
+Allow: /es/astrocartography-calculator
+Allow: /pt/astrocartography-calculator
+Allow: /it/astrocartography-calculator
+
 # 阻止所有其他页面
 Disallow: /ms
 Disallow: /en

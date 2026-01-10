@@ -95,6 +95,30 @@ export interface AboutPage {
   };
 }
 
+export interface CalculatorPage {
+  metadata: {
+    title: string;
+    description: string;
+  };
+  intentAnchor?: {
+    text: string;
+  };
+  internalLinks?: {
+    title: string;
+    items: Array<{
+      text: string;
+      linkText: string;
+      url: string;
+    }>;
+  };
+  introduce?: Section;
+  benefit?: Section;
+  usage?: Section;
+  feature?: Section;
+  faq?: Section;
+  cta?: Section;
+}
+
 // Export the new page types
 export type { ConverterPage, ColorPage, AboutPage };
 export type { ContactPage } from "./contact";

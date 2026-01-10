@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "title": "Free Astrocartography Calculator - Generate Your Chart Online 2026",
+    "description": "Use our free astrocartography calculator to generate your personalized chart instantly. Professional Swiss Ephemeris calculations, 1-mile accuracy. No signup required. Calculate planetary lines for any location worldwide."
+  },
+  "intentAnchor": {
+    "text": "Unlike general astrocartography guides, this page is designed specifically as a dedicated astrocartography calculator for generating charts instantly. If you're searching for a free astrocartography calculator rather than conceptual explanations, this tool provides direct calculations without friction."
+  },
+  "internalLinks": {
+    "title": "Related Resources",
+    "items": [
+      {
+        "text": "Looking for a general introduction?",
+        "linkText": "Visit Home",
+        "url": "/"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What is Astrocartography Calculator",
+    "label": "Introduction",
+    "description": "The Astrocartography Calculator is a professional-grade tool that projects your birth chart onto a world map, revealing where planetary energies are strongest across Earth's surface. This relocation astrology calculator uses Swiss Ephemeris astronomical data to calculate planetary positions with 1-mile accuracy, making it the most precise free astrocartography chart calculator available online.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Astrocartography Calculator Interface"
+    },
+    "items": [
+      {
+        "title": "How Does Astrocartography Calculator Work?",
+        "description": "The planetary line calculator uses Swiss Ephemeris to determine each planet's position in the sky at your birth moment, then calculates where these planets were angular (rising, setting, culminating, or at nadir) across Earth's surface. This astro map calculator employs spherical trigonometry—using formulas like cos(H) = -tan(φ) * tan(δ) for ASC/DSC lines—to project planetary positions onto a world map. The locational astrology tool converts equatorial coordinates (Right Ascension and Declination) to geographic coordinates using sidereal time calculations, rendering visible lines that show location-specific energy patterns. This astrocartography chart calculator processes all calculations in real-time, displaying results on an interactive map with professional-grade accuracy matching industry-standard software.",
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "How astrocartography calculator works"
+        }
+      },
+      {
+        "title": "What Astrological Parameters Does the Calculator Use?",
+        "description": "The relocation astrology calculator processes nine planets (Sun, Moon, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto) and four angular points: Ascendant (ASC), Descendant (DSC), Midheaven (MC), and Imum Coeli (IC). For each planet, this planetary line calculator calculates its Right Ascension (RA) and Declination (Dec) at your birth moment, then determines where each planet was angular across Earth's surface. The astro map calculator uses equatorial coordinates for astronomical calculations and converts them to geographic coordinates (latitude/longitude) for map display. This locational astrology tool automatically handles timezone conversions, historical daylight saving time rules, and calendar system changes, ensuring accurate angular house positions based on local sidereal time calculations.",
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Astrological parameters in astrocartography calculator"
+        }
+      },
+      {
+        "title": "How is Astrocartography Different from a Birth Chart?",
+        "description": "A birth chart fixes your birth location and shows where planets were in the sky, while the astrocartography calculator fixes your birth time and shows where planets were on Earth's surface. The planetary line calculator displays results on an interactive world map with planetary lines overlaid geographically, making it easy to identify cities along specific planetary lines. A birth chart shows a circular diagram with houses and planetary positions for personality analysis. Use the astro map calculator when planning relocations, travel, or business locations based on planetary line positions. Use birth charts for self-understanding and personal development. This relocation astrology calculator complements birth chart analysis by adding a geographic dimension, revealing how changing locations affects planetary activation.",
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Astrocartography calculator vs birth chart"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Choose Our Astrocartography Calculator",
+    "label": "Core Benefits",
+    "description": "Our astrocartography calculator combines professional-grade accuracy with user-friendly features, offering the most comprehensive free relocation astrology calculator available.",
+    "items": [
+      {
+        "title": "Professional Precision with 1-Mile Accuracy",
+        "description": "The planetary line calculator uses Swiss Ephemeris, maintained by Zurich Observatory, which provides planetary positions accurate to within 1 mile on Earth's surface. This astrocartography chart calculator has been verified against professional software like Solar Fire and AstroGold, producing identical results. The astro map calculator automatically processes timezone conversions, accounting for historical daylight saving time changes and calendar system transitions (Julian to Gregorian). This locational astrology tool precision ensures your planetary line positions are reliable for serious relocation planning and professional use.",
+        "icon": "RiShieldCheckLine",
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Accuracy of astrocartography calculator"
+        }
+      },
+      {
+        "title": "Completely Free, Unlimited Use",
+        "description": "This astrocartography calculator is completely free with unlimited use—no credit card, no hidden fees. Generate unlimited charts, download watermark-free files, and access AI interpretations at zero cost. The relocation astrology calculator processes all birth data locally in your browser, ensuring complete privacy while maintaining professional calculation accuracy.",
+        "icon": "RiGiftLine",
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Free astrocartography calculator"
+        }
+      },
+      {
+        "title": "AI-Powered Interpretations",
+        "description": "Beyond calculations, this planetary line calculator provides AI-powered interpretations explaining what each planetary line means for your career, relationships, and personal growth. The astrocartography chart calculator helps you understand location-specific energy patterns, making complex astrological concepts accessible for practical decision-making.",
+        "icon": "RiSparklingLine",
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "AI interpretations in astrocartography calculator"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Use Astrocartography Calculator",
+    "description": "Generate your professional astrocartography chart in 4 simple steps using our relocation astrology calculator.",
+    "items": [
+      {
+        "title": "Enter Birth Information",
+        "description": "Input your birth date, time (as precise as possible), and city into the astrocartography calculator. The planetary line calculator automatically handles timezone conversions. Without exact birth time, the astro map calculator still shows planetary lines but not angular lines (ASC/DSC/MC/IC).",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Select Planetary Lines",
+        "description": "Choose which planets to display in the locational astrology tool: Sun, Moon, Venus, Mars, Jupiter, Saturn, plus outer planets. The astrocartography chart calculator renders lines in real-time on the world map, showing where each planet's energy is strongest.",
+        "icon": "RiPlanetLine"
+      },
+      {
+        "title": "Explore Interactive Map",
+        "description": "Click any planetary line or power spot (line intersection) in the astrocartography calculator for detailed AI interpretation. The relocation astrology calculator explains how that planet affects your career, relationships, and creativity in that location.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Export Professional Files",
+        "description": "Download high-resolution maps and interpretation reports from the planetary line calculator. All files from this astro map calculator are watermark-free and support commercial use.",
+        "icon": "RiDownloadLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Astrocartography Calculator Features",
+    "description": "Six core features make this astrocartography calculator the most comprehensive tool for location-based astrological analysis.",
+    "items": [
+      {
+        "title": "Interactive Global Map",
+        "description": "The relocation astrology calculator displays planetary lines on an interactive world map. Drag, zoom, and click any city in this planetary line calculator to view planetary energy distribution instantly.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Swiss Ephemeris Engine",
+        "description": "This astrocartography chart calculator uses Swiss Ephemeris, supporting calculations from 3000 BCE to 3000 CE. The astro map calculator maintains the same precision standards as professional astrology software worldwide.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Multi-Language Coverage",
+        "description": "Search cities worldwide in multiple languages using the locational astrology tool. This astrocartography calculator automatically handles historical timezone data and daylight saving time changes.",
+        "icon": "RiTranslate"
+      },
+      {
+        "title": "Smart Line Filtering",
+        "description": "Display or hide specific planetary line combinations in the relocation astrology calculator. This planetary line calculator allows you to focus on specific planetary energies for targeted location analysis.",
+        "icon": "RiFilterLine"
+      },
+      {
+        "title": "Power Spots Analysis",
+        "description": "The astrocartography chart calculator automatically identifies line intersections (power spots) where multiple planetary energies activate simultaneously. This astro map calculator highlights these high-energy convergence zones.",
+        "icon": "RiStarLine"
+      },
+      {
+        "title": "History & Comparison",
+        "description": "The locational astrology tool auto-saves your generation history and supports comparing multiple charts. Use this astrocartography calculator to compare planetary line overlaps with partners or team members.",
+        "icon": "RiTeamLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Astrocartography Calculator FAQ",
+    "description": "Answers to common questions about how the astrocartography calculator works and what makes it different.",
+    "items": [
+      {
+        "title": "How does the astrocartography calculator work?",
+        "description": "The relocation astrology calculator uses Swiss Ephemeris to calculate planetary positions at your birth moment, then determines where these planets were angular (rising, setting, culminating, or at nadir) across Earth's surface. This planetary line calculator uses spherical trigonometry to project planetary positions onto a world map, creating visible lines that show location-specific energy patterns."
+      },
+      {
+        "title": "What astrological parameters does the astrocartography calculator use?",
+        "description": "The astro map calculator processes nine planets (Sun, Moon, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto) and four angular points (ASC, DSC, MC, IC). This locational astrology tool uses equatorial coordinates (Right Ascension and Declination) and converts them to geographic coordinates using sidereal time calculations for accurate map rendering."
+      },
+      {
+        "title": "How is astrocartography different from a birth chart?",
+        "description": "A birth chart fixes your birth location and shows planetary positions in the sky, while the astrocartography calculator fixes your birth time and shows where planets were on Earth's surface. The relocation astrology calculator displays results on a world map for location analysis, while birth charts use circular diagrams for personality analysis. Use the astrocartography calculator for relocation planning and birth charts for self-understanding."
+      },
+      {
+        "title": "How accurate is the astrocartography calculator?",
+        "description": "The planetary line calculator achieves 1-mile accuracy using Swiss Ephemeris calculations, matching results from professional software like Solar Fire and AstroGold. This astrocartography chart calculator automatically handles timezone conversions, historical daylight saving time changes, and calendar system transitions. The astro map calculator has been verified against known historical events and professional consultations."
+      },
+      {
+        "title": "What if I don't know my exact birth time?",
+        "description": "You can still use the astrocartography calculator! Without exact time, this locational astrology tool cannot show ASC/DSC/MC/IC lines, but you'll still see planetary lines (Sun, Moon, Venus, etc.) which reveal location compatibility. For best results with the relocation astrology calculator, check your birth certificate for precise birth time."
+      },
+      {
+        "title": "Can I use the astrocartography calculator for commercial purposes?",
+        "description": "Yes. All charts generated by this astrocartography calculator can be used commercially without licensing fees. The planetary line calculator produces watermark-free files suitable for professional consultations, teaching, publications, or personal planning. This astrocartography chart calculator respects your privacy—all calculations occur locally in your browser."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Generate Your Free Astrocartography Chart Now",
+    "description": "Use our professional astrocartography calculator to create your personalized chart with Swiss Ephemeris precision. Discover ideal cities for your career, relationships, and personal growth. This relocation astrology calculator is completely free—no registration required, unlimited use.",
+    "buttons": [
+      {
+        "title": "Generate Free Chart Now",
+        "icon": "RiMapLine",
+        "url": "/#generator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}
