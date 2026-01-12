@@ -534,7 +534,8 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
       }
 
       // 从 AI 生成的文本中提取 A/B/C 格式的追问建议
-      const suggestions = extractFollowUpSuggestions(data.text, userLanguage);
+      const aiGeneratedText = data.text; // 🔥 修复：定义 aiGeneratedText 变量
+      const suggestions = extractFollowUpSuggestions(aiGeneratedText, userLanguage);
 
       if (suggestions.length > 0) {
         setFollowUpSuggestions(prev => ({
