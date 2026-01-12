@@ -45,7 +45,7 @@ export default async function RootLayout({
           ))}
         <link rel="alternate" hrefLang="x-default" href={webUrl} />
       </head>
-      <body className={cn("min-h-screen overflow-x-hidden")}>
+      <body className={cn("min-h-screen overflow-x-hidden")} suppressHydrationWarning>
         {children}
         <Script id="enforce-external-nofollow" strategy="afterInteractive">
           {`

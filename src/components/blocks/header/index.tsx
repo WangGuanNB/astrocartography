@@ -6,16 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button, buttonVariants } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -23,6 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import dynamic from "next/dynamic";
 
 import { Header as HeaderType } from "@/types/blocks/header";
 import Icon from "@/components/icon";
@@ -31,7 +23,19 @@ import LocaleToggle from "@/components/locale/toggle";
 import { Menu } from "lucide-react";
 import SignToggle from "@/components/sign/toggle";
 import ThemeToggle from "@/components/theme/toggle";
-import { cn } from "@/lib/utils";
+
+// 🔥 修复 hydration 错误：使用 dynamic import 设置 ssr: false
+// 这样 NavigationMenu 只在客户端渲染，避免 SSR 和客户端 HTML 不匹配
+const DesktopNav = dynamic(
+  () => import("./desktop-nav"),
+  {
+    ssr: false,
+    loading: () => (
+      // SSR fallback：渲染一个简单的占位符，与客户端首次渲染一致
+      <div className="flex items-center gap-1" />
+    ),
+  }
+);
 
 export default function Header({ header }: { header: HeaderType }) {
   if (header.disabled) {
@@ -39,7 +43,7 @@ export default function Header({ header }: { header: HeaderType }) {
   }
 
   return (
-    <section className="py-3">
+    <section className="py-3" suppressHydrationWarning>
       <div className="container">
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
@@ -60,95 +64,9 @@ export default function Header({ header }: { header: HeaderType }) {
                 </span>
               )}
             </Link>
-            <div className="flex items-center">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  {header.nav?.items?.map((item, i) => {
-                    if (item.children && item.children.length > 0) {
-                      return (
-                        <NavigationMenuItem
-                          key={i}
-                          className="text-muted-foreground"
-                        >
-                          <NavigationMenuTrigger
-                            className={cn(
-                              "text-muted-foreground",
-                              buttonVariants({
-                                variant: "ghost",
-                              })
-                            )}
-                          >
-                            {item.icon && (
-                              <Icon
-                                name={item.icon}
-                                className="size-3 shrink-0 mr-2"
-                              />
-                            )}
-                            <span>{item.title}</span>
-                          </NavigationMenuTrigger>
-                          <NavigationMenuContent>
-                            <ul className="w-80 p-3">
-                              <NavigationMenuLink>
-                                {item.children.map((iitem, ii) => (
-                                  <li key={ii}>
-                                    <Link
-                                      className={cn(
-                                        "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                      )}
-                                      href={iitem.url as any}
-                                      target={iitem.target}
-                                    >
-                                      {iitem.icon && (
-                                        <Icon
-                                          name={iitem.icon}
-                                          className="size-5 shrink-0"
-                                        />
-                                      )}
-                                      <div>
-                                        <div className="text-sm font-semibold">
-                                          {iitem.title}
-                                        </div>
-                                        <p className="text-sm leading-snug text-muted-foreground">
-                                          {iitem.description}
-                                        </p>
-                                      </div>
-                                    </Link>
-                                  </li>
-                                ))}
-                              </NavigationMenuLink>
-                            </ul>
-                          </NavigationMenuContent>
-                        </NavigationMenuItem>
-                      );
-                    }
-
-                    return (
-                      <NavigationMenuItem key={i}>
-                        <Link
-                          className={cn(
-                            "text-muted-foreground",
-                            navigationMenuTriggerStyle,
-                            buttonVariants({
-                              variant: "ghost",
-                            })
-                          )}
-                          href={item.url as any}
-                          target={item.target}
-                        >
-                          {item.icon && (
-                            <Icon
-                              name={item.icon}
-                              className="size-3 shrink-0 mr-0"
-                            />
-                          )}
-                          {item.title}
-                        </Link>
-                      </NavigationMenuItem>
-                    );
-                  })}
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
+            {/* 🔥 修复 hydration 错误：使用 dynamic import，ssr: false */}
+            {/* 这样 NavigationMenu 只在客户端渲染，完全避免 hydration 不匹配 */}
+            <DesktopNav header={header} />
           </div>
           <div className="shrink-0 flex gap-2 items-center">
             {header.show_locale && <LocaleToggle />}

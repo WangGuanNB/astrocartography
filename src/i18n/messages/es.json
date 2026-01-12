@@ -387,6 +387,15 @@
     "download_chat": "Descargar Chat",
     "download_success": "Chat descargado exitosamente",
     "download_failed": "Error al descargar, intenta de nuevo",
-    "no_messages": "No hay mensajes para descargar"
+    "no_messages": "No hay mensajes para descargar",
+    "welcome_title": "¡Bienvenido! ¿Listo para explorar tu mapa planetario?",
+    "welcome_subtitle": "Descubre las historias escritas en tus estrellas y líneas planetarias",
+    "suggested_questions": [
+      "¿Dónde debería mudarme para encontrar amor y éxito?",
+      "¿Cuáles son mis 3 ciudades principales para el crecimiento profesional?",
+      "¿Cómo cambiará mi vida mudarme a una nueva ciudad?",
+      "¿Qué revela mi línea de Venus sobre las relaciones?",
+      "Compara mis mejores ubicaciones para el amor vs. la carrera"
+    ]
   }
 }

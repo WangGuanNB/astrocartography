@@ -33,6 +33,7 @@ import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
 import { getLandingPage } from "@/services/page";
 import { getCanonicalUrl } from "@/lib/utils";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 // import TestPaymentModal from '@/components/payment/test-payment-modal';
 
 
@@ -43,10 +44,34 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations();
+
+  const title = t("metadata.title") || "";
+  const description = t("metadata.description") || "";
+  const keywords = t("metadata.keywords") || "";
 
   const metadata: any = {
+    title: {
+      template: `%s`,
+      default: title,
+    },
+    description,
+    keywords,
     alternates: {
       canonical: getCanonicalUrl(locale),
+    },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: getCanonicalUrl(locale),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 

@@ -1,7 +1,8 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { useState, useRef, useCallback, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
+import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -16,6 +17,9 @@ import { DatePicker } from '@/components/ui/date-picker';
 export default function MiniaturaAIGenerator() {
   const t = useTranslations('astrocartographyGenerator');
   const router = useRouter();
+  const params = useParams();
+  // 获取当前语言，如果没有locale参数则说明是默认语言（英文）
+  const locale = (params.locale as string) || 'en';
   
   // 出生数据状态
   const [birthDate, setBirthDate] = useState('');
@@ -123,8 +127,24 @@ export default function MiniaturaAIGenerator() {
       })
     });
     
-    router.push(`/chart?${params.toString()}`);
-  }, [birthDate, birthTime, birthLocation, timezone, useCoordinates, selectedLocationCoords, validateBirthData, router]);
+    // 🔥 修复：构建包含语言前缀的路径
+    // 根据 localePrefix = "as-needed"，默认语言（en）不需要前缀
+    const chartPath = locale === 'en' 
+      ? `/chart?${params.toString()}`
+      : `/${locale}/chart?${params.toString()}`;
+    
+    // 调试日志（仅在开发环境）
+    if (process.env.NODE_ENV === 'development') {
+      console.log('🔍 [MiniaturaAIGenerator] 跳转到 chart 页面:', {
+        currentLocale: locale,
+        chartPath,
+        params: params.toString(),
+      });
+    }
+    
+    // 使用 window.location.href 确保 query 参数正确传递（与 locale/toggle.tsx 保持一致）
+    window.location.href = chartPath;
+  }, [birthDate, birthTime, birthLocation, timezone, useCoordinates, selectedLocationCoords, validateBirthData, router, locale]);
 
   // 下载星盘图功能
   const handleDownload = useCallback(() => {

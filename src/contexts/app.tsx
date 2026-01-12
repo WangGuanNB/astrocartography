@@ -22,11 +22,16 @@ const AppContext = createContext({} as ContextValue);
 export const useAppContext = () => useContext(AppContext);
 
 export const AppContextProvider = ({ children }: { children: ReactNode }) => {
-  if (isAuthEnabled() && isGoogleOneTapEnabled()) {
-    useOneTapLogin();
-  }
-
-  const { data: session, status: sessionStatus } = isAuthEnabled() ? useSession() : { data: null, status: "unauthenticated" };
+  // ⚠️ 重要：React Hooks 必须在组件顶层无条件调用
+  // 不能在条件语句、循环或嵌套函数中调用 hooks
+  
+  // 始终调用 useSession（hooks 必须在顶层调用）
+  // 如果 Auth 未启用或 SessionProvider 不存在，useSession 会返回 null session
+  const { data: session, status: sessionStatus } = useSession();
+  
+  // 始终调用 useOneTapLogin（hooks 必须在顶层调用）
+  // hook 内部会检查 isAuthEnabled 和 isGoogleOneTapEnabled
+  useOneTapLogin();
 
   const [showSignModal, setShowSignModal] = useState<boolean>(false);
   const [user, setUser] = useState<User | null>(null);
@@ -35,7 +40,6 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchUserInfo = async function () {
     try {
-      console.log("🔍 [AppContext] 开始获取用户信息");
       const resp = await fetch("/api/get-user-info", {
         method: "POST",
       });
@@ -49,15 +53,13 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
         throw new Error(message);
       }
 
-      console.log("✅ [AppContext] 获取用户信息成功", { 
-        uuid: data?.uuid, 
-        email: data?.email 
-      });
       setUser(data);
-
       updateInvite(data);
     } catch (e: any) {
-      console.log("❌ [AppContext] 获取用户信息失败:", e.message);
+      // 只在开发环境或出错时记录
+      if (process.env.NODE_ENV === 'development') {
+        console.error("❌ [AppContext] 获取用户信息失败:", e.message);
+      }
     }
   };
 
@@ -81,12 +83,10 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
 
       if (timeDiff <= 0 || timeDiff > 7200) {
         // user created more than 2 hours
-        console.log("user created more than 2 hours");
         return;
       }
 
       // update invite relation
-      console.log("update invite", inviteCode, user.uuid);
       const req = {
         invite_code: inviteCode,
         user_uuid: user.uuid,
@@ -114,13 +114,10 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    console.log("🔄 [AppContext] Session 状态变化", {
-      hasSession: !!session,
-      hasUser: !!(session && session.user),
-      sessionStatus,
-      userEmail: session?.user?.email,
-      userUuid: session?.user?.uuid,
-    });
+    // 只在开发环境或出错时记录 Session 状态变化
+    if (process.env.NODE_ENV === 'development' && (!session || !session.user)) {
+      // 静默处理，不输出日志
+    }
     
     if (session && session.user) {
       fetchUserInfo();

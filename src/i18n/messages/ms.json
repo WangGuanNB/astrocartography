@@ -265,6 +265,15 @@
     "download_chat": "Muat Turun Sembang",
     "download_success": "Sembang berjaya dimuat turun",
     "download_failed": "Muat turun gagal, sila cuba lagi",
-    "no_messages": "Tiada mesej untuk dimuat turun"
+    "no_messages": "Tiada mesej untuk dimuat turun",
+    "welcome_title": "Selamat datang! Bersedia untuk meneroka peta planet anda?",
+    "welcome_subtitle": "Temui cerita yang ditulis dalam bintang dan garis planet anda",
+    "suggested_questions": [
+      "Di manakah saya harus berpindah untuk mencari cinta dan kejayaan?",
+      "Apakah 3 bandar teratas saya untuk pertumbuhan kerjaya?",
+      "Bagaimanakah berpindah ke bandar baharu akan mengubah hidup saya?",
+      "Apakah yang didedahkan oleh garis Venus saya tentang hubungan?",
+      "Bandingkan lokasi terbaik saya untuk cinta vs. kerjaya"
+    ]
   }
 }
