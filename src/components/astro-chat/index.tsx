@@ -928,8 +928,8 @@ export default function AstroChat({ open, onOpenChange, chartData, user, onRequi
             })()}
 
             {/* 登录提示 - 当免费问题用完后显示 */}
-            {/* 暂时隐藏使用次数提醒 */}
-            {false && !user && userMessageCount >= FREE_QUESTIONS_LIMIT && (
+            {/* 🔥 修复：恢复登录按钮显示，当未登录且免费问题用完后显示 */}
+            {!user && userMessageCount >= FREE_QUESTIONS_LIMIT && (
               <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/50 text-white rounded-lg px-4 py-4 text-sm">
                 <div className="flex items-start gap-3">
                   <Sparkles className="size-5 text-purple-400 flex-shrink-0 mt-0.5" />
