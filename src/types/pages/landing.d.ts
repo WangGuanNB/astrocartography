@@ -99,6 +99,7 @@ export interface CalculatorPage {
   metadata: {
     title: string;
     description: string;
+    keywords?: string;
   };
   intentAnchor?: {
     text: string;
