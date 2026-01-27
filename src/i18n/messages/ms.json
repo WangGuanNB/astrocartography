@@ -51,6 +51,39 @@
       "status": "Status"
     }
   },
+  "birth_chart_tool": {
+    "error_failed": "Gagal menjana carta kelahiran.",
+    "form": {
+      "birth_date": "Tarikh lahir",
+      "date_placeholder": "YYYY/MM/DD",
+      "birth_time": "Masa lahir",
+      "birth_location": "Lokasi lahir",
+      "use_city_name": "Guna nama bandar",
+      "use_coordinates": "Guna koordinat",
+      "coordinates_placeholder": "cth. 40.7128, -74.0060",
+      "city_country_placeholder": "Bandar, Negara",
+      "location_tip": "Tip: sertakan negara untuk ketepatan lebih baik (cth. “Paris, France”).",
+      "timezone": "Zon waktu",
+      "generating": "Menjana…",
+      "generate": "Jana carta kelahiran",
+      "privacy_note": "Kami tidak menyimpan data kelahiran anda."
+    },
+    "results": {
+      "houses_label": "Rumah:",
+      "houses_suffix": "(Whole Sign).",
+      "title": "Kedudukan planet",
+      "asc_label": "ASC",
+      "table": {
+        "planet": "Planet",
+        "sign": "Zodiak",
+        "degree": "Darjah",
+        "house": "Rumah"
+      },
+      "bridge_text": "Carta kelahiran menunjukkan siapa anda. Astrocartography menunjukkan di mana anda berkembang.",
+      "cta_button": "Lihat carta anda pada peta dunia → Astrocartography",
+      "cta_help": "Butang ini membawa data kelahiran tepat anda ke peta dunia interaktif (tanpa perlu isi semula)."
+    }
+  },
   "my_credits": {
     "title": "Kredit Saya",
     "left_tip": "kredit baki: {left_credits}",

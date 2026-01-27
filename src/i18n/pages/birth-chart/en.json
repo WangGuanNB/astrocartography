@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "title": "Birth Chart Generator (Free) — Chart Wheel, Planet Positions, Houses",
+    "description": "Generate your complete natal chart wheel in seconds. See planet positions, zodiac signs, and houses — then view your chart on the world map with Astrocartography.",
+    "keywords": "birth chart generator, free birth chart generator, natal chart generator, birth chart wheel, planet positions, zodiac signs, houses, ascendant calculator"
+  },
+  "intentAnchor": {
+    "text": "If you’re searching for a Birth Chart Generator (not a long theory article), this page gives you the tool first: generate your natal chart wheel, review your planet placements, and then explore location themes on the world map with Astrocartography."
+  },
+  "internalLinks": {
+    "title": "Related Tools",
+    "items": [
+      {
+        "text": "Want the world‑map version?",
+        "linkText": "Try Astrocartography",
+        "url": "/astrocartography-calculator"
+      },
+      {
+        "text": "Prefer tutorials & examples?",
+        "linkText": "Read the Blog",
+        "url": "/posts"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What is Birth Chart Generator",
+    "label": "INTRODUCTION",
+    "description": "Birth Chart Generator creates your complete natal chart from your birth date, time, and location using professional astronomical calculations to reveal your cosmic blueprint.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Birth chart generator wheel example"
+    },
+    "items": [
+      {
+        "title": "Professional astronomical calculations",
+        "description": "Birth Chart Generator calculates geocentric positions of the Sun, Moon, and planets for your exact birth moment, then maps them into zodiac signs and degrees. We convert your local birth time to UTC and compute placements from astronomical data so your natal chart reflects the sky at birth (with house themes shown using Whole Sign Houses for clarity).",
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Birth chart wheel explained"
+        }
+      },
+      {
+        "title": "Instant chart wheel visualization",
+        "description": "Generate a natal chart wheel in seconds. The circular diagram shows the 12 houses, zodiac signs, and planetary placements in a clean, beginner‑friendly layout, so you can understand your chart at a glance and then dive deeper placement by placement.",
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "How a birth chart generator calculates placements"
+        }
+      },
+      {
+        "title": "From natal chart to real‑world locations",
+        "description": "Beyond seeing positions, the next step is using your birth data on the world map. Birth chart = “who am I?” Astrocartography = “where do I thrive?” After you generate your wheel here, one click takes your exact birth data to the astrocartography map to explore career, relationship, and growth themes by location.",
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Birth chart vs astrocartography"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Choose Our Birth Chart Generator",
+    "label": "Core Benefits",
+    "description": "Our natal chart calculator combines astronomical rigor with an easy, readable chart wheel—professional‑grade essentials that are completely free.",
+    "items": [
+      {
+        "title": "Astronomical rigor",
+        "description": "We calculate planet positions from astronomical data and time conversion so your natal chart reflects your birth moment. This matters most when you’re comparing close birth times or learning exact degrees and house themes.",
+        "icon": "RiFlashlightLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Astronomical rigor" }
+      },
+      {
+        "title": "Completely free",
+        "description": "Generate unlimited natal charts with no account, no credit card, and no hidden limits. Get your birth chart wheel plus a clean placements list (sign, degree, and house) in one page.",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Completely free birth chart generator" }
+      },
+      {
+        "title": "Privacy first",
+        "description": "Your birth data is used to run calculations and display results in your session. We don’t ask for an account to generate a chart, so you can use the tool with minimal friction and share selectively.",
+        "icon": "RiMapPinLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Privacy-first birth chart generator" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Generate Your Birth Chart in Seconds",
+    "label": "HOW TO USE",
+    "description": "Creating your natal chart takes under a minute with this streamlined process.",
+    "items": [
+      {
+        "title": "Enter birth data",
+        "description": "Input your birth date, exact time (to the minute if possible), and location. Birth time is crucial for your Ascendant and houses; without it, planet sign positions are still useful but house themes may be unreliable.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Generate wheel",
+        "description": "Click generate to render your natal chart wheel and your placements list (planets, zodiac signs, degrees, and houses). Use the wheel for a quick overview and the table for exact details.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Explore insights on the world map",
+        "description": "After you have your natal chart, use the CTA to jump to Astrocartography. It keeps your birth data and shows where your chart’s themes activate around the world.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Review your placements (Big Three + houses)",
+        "description": "Before you move on, scan your Sun, Moon, and Rising sign (Ascendant), then note which houses your key planets fall into. This 30‑second review makes your Birth Chart Generator results easier to understand and helps you ask better questions when exploring Astrocartography.",
+        "icon": "RiListCheck"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Birth Chart Calculator Features",
+    "label": "FEATURES",
+    "description": "Birth Chart Generator features are built for clarity: generate a wheel, confirm placements by sign and degree, understand houses, then continue to Astrocartography for location-based insights.",
+    "items": [
+      {
+        "title": "Chart wheel visualization",
+        "description": "The Birth Chart Generator renders a clean birth chart wheel (zodiac + houses + planets) so you can see the big picture instantly. Use the wheel for overview, then check the table for exact signs and degrees. This directly covers long‑tail intent like “birth chart wheel” and “natal chart generator.”",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Planet positions list",
+        "description": "The Birth Chart Generator lists planet positions (Sun–Pluto) with zodiac sign, exact degree, and house placement. Degrees add precision for learning, comparison, and cross‑checking results—useful for searches like “planet positions in birth chart” and “birth chart calculator with houses.”",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Whole Sign Houses (clear and learnable)",
+        "description": "We use Whole Sign Houses to keep the Birth Chart Generator readable and easy to learn. The rising sign becomes the 1st house, then houses follow in order—great for beginners searching “what are houses in a birth chart” without getting lost in complexity.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Location autocomplete",
+        "description": "Enter a city + country, or switch to coordinates for maximum precision. Location changes the Ascendant and houses because the local horizon changes by place. This covers long‑tail queries like “birth chart by coordinates” and “birth chart location accuracy.”",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Mobile‑friendly experience",
+        "description": "The Birth Chart Generator is mobile‑friendly: faster input (date/time pickers), easier location search, and a results layout that stays readable on phones. This supports mobile-first searches like “free birth chart generator” without sacrificing clarity.",
+        "icon": "RiCompass3Line"
+      },
+      {
+        "title": "One‑click handoff to Astrocartography",
+        "description": "After you generate your natal chart, the Birth Chart Generator keeps your birth data ready for Astrocartography. One click opens the world map so you can explore “where do I thrive” themes—ideal for relocation astrology and travel planning workflows.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "description": "Find answers about our birth chart generator and natal chart calculations.",
+    "items": [
+      {
+        "title": "Is this birth chart generator free?",
+        "description": "Yes—this Birth Chart Generator is free. Generate unlimited natal charts without payment or registration. You’ll get the chart wheel and placements list immediately, then you can continue to the Astrocartography map for location-based insights."
+      },
+      {
+        "title": "What birth information do I need?",
+        "description": "You need birth date, birth time (to the minute if possible), and birth location. Birth time matters for the rising sign (Ascendant) and houses. If time is approximate, planet signs and degrees are still useful, but houses may shift."
+      },
+      {
+        "title": "How accurate are calculations?",
+        "description": "We calculate geocentric planet positions from astronomical data and convert local birth time to UTC. Accuracy is strongest when time and birthplace are precise. If the time zone or location is wrong, Ascendant and houses can change—use the actual birthplace (or coordinates) when possible."
+      },
+      {
+        "title": "Which house system is used?",
+        "description": "This Birth Chart Generator uses Whole Sign Houses for a clean, beginner‑friendly wheel. The rising sign becomes the 1st house, then houses follow in order—making it easier to learn house meanings without visual clutter."
+      },
+      {
+        "title": "What if I don’t know my exact birth time?",
+        "description": "You can still use the Birth Chart Generator: planet signs and degrees remain meaningful. But the rising sign and houses can change quickly, so house themes may be unreliable. If you later find the exact time, regenerate for a more precise Ascendant and houses."
+      },
+      {
+        "title": "Is this a substitute for professional advice?",
+        "description": "No. Astrology is symbolic and interpretive, so use results for reflection and reference—not as medical, legal, or financial advice. Use the wheel + placements as a structured way to explore themes, then apply real‑world judgment and context."
+      },
+      {
+        "title": "Sun sign vs Rising sign — what’s the difference?",
+        "description": "Sun sign reflects core identity, Moon sign reflects emotional needs, and the rising sign (Ascendant) reflects how you meet the world. The Ascendant depends on birth time and location, which is why the same date can produce different rising signs in different places."
+      },
+      {
+        "title": "What should I do after generating my birth chart?",
+        "description": "Next, use Astrocartography. Your birth chart answers “who am I,” while Astrocartography explores “where do I thrive.” With the same birth data, the world map highlights location themes—useful for relocation astrology and “best places to live” exploration."
+      },
+      {
+        "title": "How do I read a birth chart wheel?",
+        "description": "Start with the rising sign, then find the Sun and Moon. Next, read planets by house theme (work, relationships, home, etc.). Use the placements list to confirm sign + degree so you don’t misread symbols. This matches long‑tail intent like “how to read a birth chart wheel.”"
+      },
+      {
+        "title": "What are houses in a birth chart?",
+        "description": "Houses divide the chart into 12 life areas (identity, money, communication, home, love, work, partnerships, transformation, beliefs, career, community, rest). Houses depend on the Ascendant, so birth time and location matter more for houses than for planet sign placements."
+      },
+      {
+        "title": "Why does location change the Ascendant and houses?",
+        "description": "Location changes the local horizon at your birth moment. Two people born at the same UTC time in different cities can have different rising signs and houses because the horizon shifts by longitude and latitude. Use the real birthplace (or coordinates) for the most reliable houses."
+      },
+      {
+        "title": "What do degrees mean in astrology?",
+        "description": "A sign shows the planet’s style; degrees add precision. Degrees help you compare charts, learn more advanced techniques later, and cross‑check results across tools. Start with sign + house meanings first, then return to degrees as you deepen your study."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Generate Your Free Birth Chart Now",
+    "description": "Create your natal chart wheel in seconds. Discover your Sun, Moon, and Rising signs, review your planet placements and houses, then explore your chart on the world map with Astrocartography.",
+    "buttons": [
+      {
+        "title": "See your chart on the world map → Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}
+

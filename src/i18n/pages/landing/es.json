@@ -18,6 +18,27 @@
           "icon": "RiHomeLine"
         },
         {
+          "title": "Herramientas",
+          "icon": "RiToolsLine",
+          "url": "/astrocartography-calculator",
+          "children": [
+            {
+              "title": "Calculadora gratis",
+              "description": "Genera tu mapa de astrocartografía al instante",
+              "url": "/astrocartography-calculator",
+              "target": "_self",
+              "icon": "RiCalculatorLine"
+            },
+            {
+              "title": "Generador de Carta Natal",
+              "description": "Genera tu rueda (signos + casas)",
+              "url": "/tools/birth-chart-generator",
+              "target": "_self",
+              "icon": "RiPieChartLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"

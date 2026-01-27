@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "title": "Gerador de Mapa Astral (Birth Chart Generator) — Roda, Posições dos Planetas e Casas",
+    "description": "Gere sua roda do mapa astral em segundos. Veja posições planetárias, signos e casas — e depois explore seu mapa no mundo com Astrocartography.",
+    "keywords": "gerador mapa astral, gerador mapa astral gratis, gerador carta natal, roda mapa astral, posicoes planetas, signos zodiaco, casas astrologia, calculadora ascendente"
+  },
+  "intentAnchor": {
+    "text": "Se você está procurando um gerador de mapa astral (Birth Chart Generator) — e não um artigo longo de teoria — esta página entrega a ferramenta primeiro: gere sua roda, revise suas posições planetárias e depois explore temas de localização no mapa-múndi com Astrocartography."
+  },
+  "internalLinks": {
+    "title": "Ferramentas relacionadas",
+    "items": [
+      {
+        "text": "Quer a versão com mapa do mundo?",
+        "linkText": "Experimente Astrocartography",
+        "url": "/astrocartography-calculator"
+      },
+      {
+        "text": "Prefere tutoriais e exemplos?",
+        "linkText": "Leia o Blog",
+        "url": "/posts"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "O que é um Gerador de Mapa Astral",
+    "label": "INTRODUÇÃO",
+    "description": "O Gerador de Mapa Astral cria seu mapa natal completo a partir da data, hora e local de nascimento, usando cálculos astronômicos profissionais para revelar seu “mapa” cósmico.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Exemplo de roda do mapa astral"
+    },
+    "items": [
+      {
+        "title": "Cálculos astronômicos profissionais",
+        "description": "O Gerador de Mapa Astral calcula posições geocêntricas do Sol, da Lua e dos planetas no seu momento de nascimento e as mapeia em signos e graus. Convertimos sua hora local para UTC e calculamos os posicionamentos a partir de dados astronômicos (com temas de casas via Whole Sign Houses para uma leitura mais clara).",
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Como ler a roda do mapa astral"
+        }
+      },
+      {
+        "title": "Visualização instantânea da roda",
+        "description": "Gere a roda do mapa natal em segundos. O diagrama circular mostra 12 casas, signos e posições planetárias em um layout limpo e amigável para iniciantes — ótimo para ver o todo e depois aprofundar posicionamento por posicionamento.",
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Como o gerador calcula posicionamentos"
+        }
+      },
+      {
+        "title": "Do mapa natal para locais reais",
+        "description": "Ver os posicionamentos é só o começo. Mapa natal = “quem eu sou”. Astrocartography = “onde eu prospero”. Depois de gerar sua roda aqui, um clique leva seus dados ao mapa de astrocartografia para explorar temas de carreira, relacionamentos e crescimento por localização.",
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Mapa natal vs Astrocartography"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por que escolher nosso Gerador de Mapa Astral",
+    "label": "Benefícios",
+    "description": "Nosso calculador de mapa natal combina rigor astronômico com uma roda fácil de ler — o essencial profissional, totalmente gratuito.",
+    "items": [
+      {
+        "title": "Rigor astronômico",
+        "description": "Calculamos posições planetárias com base em dados astronômicos e conversão de tempo para que seu mapa natal reflita o momento de nascimento. Isso é especialmente útil para comparar horários próximos e aprender graus e temas de casas.",
+        "icon": "RiFlashlightLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Rigor astronômico" }
+      },
+      {
+        "title": "Totalmente gratuito",
+        "description": "Gere mapas natais ilimitados sem conta, sem cartão e sem limites ocultos. Em uma única página, você obtém a roda e a lista de posicionamentos (signo, grau e casa).",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Gerador de mapa astral grátis" }
+      },
+      {
+        "title": "Privacidade em primeiro lugar",
+        "description": "Seus dados de nascimento são usados para calcular e exibir resultados na sua sessão. Não exigimos cadastro para gerar o mapa, reduzindo fricção e permitindo que você compartilhe apenas se quiser.",
+        "icon": "RiMapPinLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Privacidade em primeiro lugar" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Gere seu Mapa Astral em Segundos",
+    "label": "COMO USAR",
+    "description": "Criar seu mapa natal leva menos de um minuto com este processo simples.",
+    "items": [
+      {
+        "title": "Insira os dados de nascimento",
+        "description": "Informe data, hora (de preferência ao minuto) e local. A hora é importante para Ascendente e casas; sem ela, os signos dos planetas ainda ajudam, mas os temas de casas podem variar.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Gere a roda",
+        "description": "Clique em gerar para renderizar a roda e a lista de posicionamentos (planetas, signos, graus e casas). Use a roda para visão geral e a tabela para detalhes exatos.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Explore no mapa do mundo",
+        "description": "Depois de gerar seu mapa natal, use o CTA para ir ao Astrocartography. Ele mantém seus dados e mostra onde os temas do seu mapa tendem a se ativar pelo mundo.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Revise seus posicionamentos (Big Three + casas)",
+        "description": "Antes de seguir, confira Sol, Lua e Ascendente e observe em quais casas caem seus planetas principais. Essa revisão rápida ajuda a entender melhor os resultados do Birth Chart Generator e a explorar Astrocartography com mais clareza.",
+        "icon": "RiListCheck"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Recursos do Calculador de Mapa Astral",
+    "label": "RECURSOS",
+    "description": "Feito para clareza: gere a roda, confirme posicionamentos, entenda casas e depois avance para Astrocartography.",
+    "items": [
+      {
+        "title": "Visualização da roda",
+        "description": "O Birth Chart Generator renderiza uma roda limpa (zodíaco + casas + planetas) para você ver o todo de imediato. Use a roda para visão geral e a tabela para conferir signos e graus.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Lista de posições planetárias",
+        "description": "Mostra Sol–Plutão com signo, grau exato e casa. Graus adicionam precisão para estudo, comparação e conferência — útil para buscas como “posições planetárias no mapa astral” e “mapa astral com casas”.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Whole Sign Houses (claro e didático)",
+        "description": "Usamos Whole Sign Houses para manter a roda legível e fácil de aprender. O signo ascendente vira a 1ª casa e as demais seguem em ordem — ótimo para iniciantes.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Autocomplete de local / coordenadas",
+        "description": "Digite cidade + país ou use coordenadas para máxima precisão. O local altera Ascendente e casas porque o horizonte local muda conforme a posição geográfica.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Otimizado para celular",
+        "description": "O Birth Chart Generator é amigável no mobile: entrada rápida (data/hora), busca de local facilitada e resultados legíveis no telefone.",
+        "icon": "RiCompass3Line"
+      },
+      {
+        "title": "Atalho para Astrocartography",
+        "description": "Após gerar, seus dados ficam prontos para o mapa de Astrocartography. Um clique abre o mapa-múndi para explorar temas de “onde prosperar”, útil para relocalização e planejamento de viagens.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Perguntas frequentes",
+    "description": "Respostas sobre mapa astral, casas e próximos passos.",
+    "items": [
+      {
+        "title": "Este gerador de mapa astral é gratuito?",
+        "description": "Sim. O Birth Chart Generator é gratuito e pode ser usado sem cadastro. Você gera a roda e a lista de posicionamentos e, se quiser, segue para o mapa de Astrocartography para explorar temas por localização."
+      },
+      {
+        "title": "Quais dados de nascimento eu preciso?",
+        "description": "Você precisa de data, hora (ao minuto, se possível) e local de nascimento. A hora influencia Ascendente e casas; se for aproximada, signos e graus ainda ajudam, mas as casas podem mudar."
+      },
+      {
+        "title": "Quão precisos são os cálculos?",
+        "description": "Calculamos posições geocêntricas a partir de dados astronômicos e convertemos o horário local para UTC. A precisão é melhor quando hora e local estão corretos. Se fuso ou local estiverem errados, Ascendente e casas podem mudar."
+      },
+      {
+        "title": "Qual sistema de casas é usado?",
+        "description": "Usamos Whole Sign Houses para manter a roda limpa e didática. O signo do Ascendente vira a 1ª casa e as demais seguem em sequência, facilitando a leitura para iniciantes."
+      },
+      {
+        "title": "E se eu não souber a hora exata?",
+        "description": "Você ainda pode usar o Birth Chart Generator: signos e graus dos planetas continuam úteis. Porém, Ascendente e casas mudam rapidamente, então os temas de casas podem ser menos confiáveis. Se encontrar a hora exata depois, gere novamente."
+      },
+      {
+        "title": "Isso substitui aconselhamento profissional?",
+        "description": "Não. Astrologia é simbólica e interpretativa; use como reflexão e referência, não como aconselhamento médico, jurídico ou financeiro. Considere sempre o contexto real."
+      },
+      {
+        "title": "Sol, Lua e Ascendente — qual a diferença?",
+        "description": "O Sol fala de identidade e direção; a Lua, de necessidades emocionais; e o Ascendente, de como você se apresenta ao mundo. O Ascendente depende de hora e local, por isso esses dados são importantes."
+      },
+      {
+        "title": "O que fazer depois de gerar meu mapa?",
+        "description": "Um bom próximo passo é Astrocartography. O mapa natal ajuda a entender “quem sou eu”; Astrocartography ajuda a explorar “onde eu prospero”. Com os mesmos dados, o mapa-múndi destaca temas por localização."
+      },
+      {
+        "title": "Como ler a roda do mapa astral?",
+        "description": "Comece pelo Ascendente, depois localize Sol e Lua. Em seguida, leia os planetas por tema de casa (trabalho, relacionamentos, lar etc.). Use a tabela para confirmar signo e grau e evitar confusão com símbolos."
+      },
+      {
+        "title": "O que são as casas no mapa astral?",
+        "description": "As casas dividem o mapa em 12 áreas da vida (identidade, recursos, comunicação, lar, criatividade, trabalho, relacionamentos, transformação, crenças, carreira, comunidade e descanso). As casas dependem do Ascendente, então hora e local importam bastante."
+      },
+      {
+        "title": "Por que o local muda Ascendente e casas?",
+        "description": "O local define o horizonte no momento do nascimento. Mesmo no mesmo UTC, cidades diferentes podem gerar Ascendente e casas diferentes por causa da latitude/longitude. Para casas mais confiáveis, use o local real ou coordenadas."
+      },
+      {
+        "title": "O que significam os graus em astrologia?",
+        "description": "O signo mostra o “estilo” do planeta; os graus trazem precisão. Graus ajudam em comparações, estudos avançados e conferência entre ferramentas. Para começar, foque em signo + casa e volte aos graus depois."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Gere seu Mapa Astral Grátis Agora",
+    "description": "Crie sua roda do mapa natal em segundos. Veja Sol, Lua e Ascendente, revise posições e casas e depois explore seu mapa no mundo com Astrocartography.",
+    "buttons": [
+      {
+        "title": "Ver no mapa do mundo → Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}
+

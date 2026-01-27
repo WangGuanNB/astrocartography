@@ -50,6 +50,39 @@
       "status": "Estado"
     }
   },
+  "birth_chart_tool": {
+    "error_failed": "No se pudo generar la carta natal.",
+    "form": {
+      "birth_date": "Fecha de nacimiento",
+      "date_placeholder": "AAAA/MM/DD",
+      "birth_time": "Hora de nacimiento",
+      "birth_location": "Lugar de nacimiento",
+      "use_city_name": "Usar nombre de la ciudad",
+      "use_coordinates": "Usar coordenadas",
+      "coordinates_placeholder": "p. ej. 40.7128, -74.0060",
+      "city_country_placeholder": "Ciudad, País",
+      "location_tip": "Consejo: incluye el país para mayor precisión (p. ej. “Paris, France”).",
+      "timezone": "Zona horaria",
+      "generating": "Generando…",
+      "generate": "Generar carta natal",
+      "privacy_note": "No almacenamos tus datos de nacimiento."
+    },
+    "results": {
+      "houses_label": "Casas:",
+      "houses_suffix": "(Whole Sign).",
+      "title": "Posiciones planetarias",
+      "asc_label": "ASC",
+      "table": {
+        "planet": "Planeta",
+        "sign": "Signo",
+        "degree": "Grado",
+        "house": "Casa"
+      },
+      "bridge_text": "Tu carta natal muestra quién eres. Astrocartography muestra dónde prosperas.",
+      "cta_button": "Ver tu carta en el mapa del mundo → Astrocartography",
+      "cta_help": "Este botón lleva tus datos exactos al mapa mundial interactivo (sin volver a introducirlos)."
+    }
+  },
   "my_credits": {
     "title": "Mis Créditos",
     "left_tip": "créditos restantes: {left_credits}",

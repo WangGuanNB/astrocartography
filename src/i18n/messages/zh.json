@@ -51,6 +51,39 @@
       "status": "状态"
     }
   },
+  "birth_chart_tool": {
+    "error_failed": "生成本命盘失败。",
+    "form": {
+      "birth_date": "出生日期",
+      "date_placeholder": "YYYY/MM/DD",
+      "birth_time": "出生时间",
+      "birth_location": "出生地点",
+      "use_city_name": "使用城市名称",
+      "use_coordinates": "使用坐标",
+      "coordinates_placeholder": "例如 40.7128, -74.0060",
+      "city_country_placeholder": "城市, 国家",
+      "location_tip": "提示：建议包含国家以提高准确性（例如“Paris, France”）。",
+      "timezone": "时区",
+      "generating": "生成中…",
+      "generate": "生成本命盘",
+      "privacy_note": "我们不会存储你的出生信息。"
+    },
+    "results": {
+      "houses_label": "宫位：",
+      "houses_suffix": "（整宫制）",
+      "title": "行星落点",
+      "asc_label": "上升",
+      "table": {
+        "planet": "行星",
+        "sign": "星座",
+        "degree": "度数",
+        "house": "宫位"
+      },
+      "bridge_text": "本命盘更偏“你是谁”，Astrocartography 更偏“你在哪里更容易发挥”。",
+      "cta_button": "在世界地图上查看 → Astrocartography",
+      "cta_help": "此按钮会把你的出生数据带到世界地图（无需重新填写）。"
+    }
+  },
   "my_credits": {
     "title": "我的积分",
     "left_tip": "剩余积分: {left_credits}",

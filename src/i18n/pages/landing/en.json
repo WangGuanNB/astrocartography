@@ -28,6 +28,13 @@
               "url": "/astrocartography-calculator",
               "target": "_self",
               "icon": "RiCalculatorLine"
+            },
+            {
+              "title": "Birth Chart Generator",
+              "description": "Generate your birth chart wheel (signs + houses)",
+              "url": "/tools/birth-chart-generator",
+              "target": "_self",
+              "icon": "RiPieChartLine"
             }
           ]
         },
@@ -512,6 +519,11 @@
             {
               "title": "numerologycalculators",
               "url": "https://numerologycalculators.org",
+              "target": "_blank"
+            },
+            {
+              "title": "matrix-destiny",
+              "url": "https://matrix-destiny.net",
               "target": "_blank"
             }
           ]

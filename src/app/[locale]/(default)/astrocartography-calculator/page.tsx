@@ -35,11 +35,12 @@ export async function generateMetadata({
 
   const title = page.metadata.title;
   const description = page.metadata.description;
+  const keywords = page.metadata.keywords || "";
 
   return {
     title,
     description,
-    keywords: "astrocartography calculator, free astrocartography calculator, astrocartography calculator online, how astrocartography calculator works, astrocartography calculation method",
+    keywords,
     openGraph: {
       title,
       description,

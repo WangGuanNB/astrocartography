@@ -33,7 +33,6 @@ import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
 import { getLandingPage } from "@/services/page";
 import { getCanonicalUrl } from "@/lib/utils";
-import { setRequestLocale, getTranslations } from "next-intl/server";
 // import TestPaymentModal from '@/components/payment/test-payment-modal';
 
 
@@ -44,13 +43,23 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  setRequestLocale(locale);
 
-  const t = await getTranslations();
+  // 🔥 修复：直接导入语言文件，确保获取正确的 metadata
+  // 因为 getTranslations() 在 generateMetadata 中可能无法正确获取 locale
+  let messages;
+  try {
+    // 规范化 locale（确保小写）
+    const normalizedLocale = locale.toLowerCase();
+    messages = (await import(`@/i18n/messages/${normalizedLocale}.json`)).default;
+  } catch (e) {
+    // 如果导入失败，回退到英文
+    console.warn(`Failed to load messages for locale ${locale}, falling back to en`);
+    messages = (await import(`@/i18n/messages/en.json`)).default;
+  }
 
-  const title = t("metadata.title") || "";
-  const description = t("metadata.description") || "";
-  const keywords = t("metadata.keywords") || "";
+  const title = messages?.metadata?.title || "";
+  const description = messages?.metadata?.description || "";
+  const keywords = messages?.metadata?.keywords || "";
 
   const metadata: any = {
     title: {
@@ -61,6 +70,13 @@ export async function generateMetadata({
     keywords,
     alternates: {
       canonical: getCanonicalUrl(locale),
+      languages: {
+        'en': getCanonicalUrl('en', '/'),
+        'zh': getCanonicalUrl('zh', '/'),
+        'pt': getCanonicalUrl('pt', '/'),
+        'es': getCanonicalUrl('es', '/'),
+        'it': getCanonicalUrl('it', '/'),
+      },
     },
     openGraph: {
       title,

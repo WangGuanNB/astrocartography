@@ -50,6 +50,39 @@
       "status": "Stato"
     }
   },
+  "birth_chart_tool": {
+    "error_failed": "Impossibile generare il tema natale.",
+    "form": {
+      "birth_date": "Data di nascita",
+      "date_placeholder": "AAAA/MM/DD",
+      "birth_time": "Ora di nascita",
+      "birth_location": "Luogo di nascita",
+      "use_city_name": "Usa il nome della città",
+      "use_coordinates": "Usa coordinate",
+      "coordinates_placeholder": "es. 40.7128, -74.0060",
+      "city_country_placeholder": "Città, Paese",
+      "location_tip": "Suggerimento: includi il paese per maggiore precisione (es. “Paris, France”).",
+      "timezone": "Fuso orario",
+      "generating": "Generazione…",
+      "generate": "Genera tema natale",
+      "privacy_note": "Non memorizziamo i tuoi dati di nascita."
+    },
+    "results": {
+      "houses_label": "Case:",
+      "houses_suffix": "(Whole Sign).",
+      "title": "Posizioni dei pianeti",
+      "asc_label": "ASC",
+      "table": {
+        "planet": "Pianeta",
+        "sign": "Segno",
+        "degree": "Grado",
+        "house": "Casa"
+      },
+      "bridge_text": "Il tema natale mostra chi sei. Astrocartography mostra dove prosperi.",
+      "cta_button": "Vedi la tua carta sulla mappa del mondo → Astrocartography",
+      "cta_help": "Questo pulsante porta i tuoi dati esatti sulla mappa del mondo interattiva (senza reinserirli)."
+    }
+  },
   "my_credits": {
     "title": "I Miei Crediti",
     "left_tip": "crediti rimanenti: {left_credits}",

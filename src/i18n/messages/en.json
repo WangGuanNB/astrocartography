@@ -89,6 +89,39 @@
       "suffix": "for immediate astrocartography map generation and advanced features."
     }
   },
+  "birth_chart_tool": {
+    "error_failed": "Failed to generate birth chart.",
+    "form": {
+      "birth_date": "Birth Date",
+      "date_placeholder": "YYYY/MM/DD",
+      "birth_time": "Birth Time",
+      "birth_location": "Birth Location",
+      "use_city_name": "Use city name",
+      "use_coordinates": "Use coordinates",
+      "coordinates_placeholder": "e.g. 40.7128, -74.0060",
+      "city_country_placeholder": "City, Country",
+      "location_tip": "Tip: include country for better accuracy (e.g. “Paris, France”).",
+      "timezone": "Timezone",
+      "generating": "Generating…",
+      "generate": "Generate Birth Chart",
+      "privacy_note": "We don’t store your birth data."
+    },
+    "results": {
+      "houses_label": "Houses:",
+      "houses_suffix": "(lead‑gen mode).",
+      "title": "Your Planet Positions",
+      "asc_label": "ASC",
+      "table": {
+        "planet": "Planet",
+        "sign": "Sign",
+        "degree": "Degree",
+        "house": "House"
+      },
+      "bridge_text": "Your birth chart shows who you are. Astrocartography shows where you thrive.",
+      "cta_button": "See your chart on the world map → Astrocartography",
+      "cta_help": "This button takes your exact birth data to the interactive world map (no need to re‑enter)."
+    }
+  },
   "my_invites": {
     "title": "My Invites",
     "description": "View your invite records",

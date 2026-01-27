@@ -18,6 +18,27 @@
           "icon": "RiHomeLine"
         },
         {
+          "title": "工具",
+          "icon": "RiToolsLine",
+          "url": "/astrocartography-calculator",
+          "children": [
+            {
+              "title": "免费计算器",
+              "description": "快速生成你的星盘地图",
+              "url": "/astrocartography-calculator",
+              "target": "_self",
+              "icon": "RiCalculatorLine"
+            },
+            {
+              "title": "本命盘生成器",
+              "description": "生成本命盘轮盘（星座 + 宫位）",
+              "url": "/tools/birth-chart-generator",
+              "target": "_self",
+              "icon": "RiPieChartLine"
+            }
+          ]
+        },
+        {
           "title": "博客",
           "url": "/posts",
           "icon": "RiArticleLine"

@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "title": "Generador de Carta Natal (Birth Chart Generator) — Rueda, Posiciones Planetarias y Casas",
+    "description": "Genera tu rueda de carta natal en segundos. Verás posiciones planetarias, signos y casas — y luego podrás explorar tu carta en el mundo con Astrocartography.",
+    "keywords": "generador carta natal, generador carta natal gratis, generador mapa natal, rueda carta natal, posiciones planetarias, signos zodiaco, casas astrologia, calculadora ascendente"
+  },
+  "intentAnchor": {
+    "text": "Si buscas un generador de carta natal (Birth Chart Generator) y no un artículo largo de teoría, esta página te da la herramienta primero: genera tu rueda, revisa tus posiciones planetarias y luego explora temas de ubicación en el mapa mundial con Astrocartography."
+  },
+  "internalLinks": {
+    "title": "Herramientas relacionadas",
+    "items": [
+      {
+        "text": "¿Quieres la versión con mapa del mundo?",
+        "linkText": "Prueba Astrocartography",
+        "url": "/astrocartography-calculator"
+      },
+      {
+        "text": "¿Prefieres tutoriales y ejemplos?",
+        "linkText": "Lee el Blog",
+        "url": "/posts"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "¿Qué es un Generador de Carta Natal?",
+    "label": "INTRODUCCIÓN",
+    "description": "El Generador de Carta Natal crea tu carta natal completa a partir de tu fecha, hora y lugar de nacimiento, usando cálculos astronómicos profesionales para mostrar tu “plano” cósmico.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Ejemplo de rueda de carta natal"
+    },
+    "items": [
+      {
+        "title": "Cálculos astronómicos profesionales",
+        "description": "El Generador de Carta Natal calcula posiciones geocéntricas del Sol, la Luna y los planetas en tu momento de nacimiento y las mapea a signos y grados. Convertimos tu hora local a UTC y calculamos los posicionamientos desde datos astronómicos (con temas de casas usando Whole Sign Houses para mayor claridad).",
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Cómo leer la rueda de la carta natal"
+        }
+      },
+      {
+        "title": "Visualización instantánea de la rueda",
+        "description": "Genera una rueda de carta natal en segundos. El diagrama circular muestra 12 casas, signos y posiciones planetarias en un diseño limpio y apto para principiantes: primero entiendes el panorama, luego profundizas posicionamiento por posicionamiento.",
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Cómo calcula un generador de carta natal"
+        }
+      },
+      {
+        "title": "De la carta natal a lugares reales",
+        "description": "Ver posiciones es solo el primer paso. Carta natal = “¿quién soy?”. Astrocartography = “¿dónde prospero?”. Tras generar tu rueda aquí, un clic lleva tus datos al mapa de astrocartografía para explorar temas de carrera, relaciones y crecimiento por ubicación.",
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Carta natal vs Astrocartography"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por qué elegir nuestro Generador de Carta Natal",
+    "label": "Beneficios",
+    "description": "Nuestro calculador de carta natal combina rigor astronómico con una rueda fácil de leer — lo esencial de nivel profesional, totalmente gratis.",
+    "items": [
+      {
+        "title": "Rigor astronómico",
+        "description": "Calculamos posiciones planetarias con datos astronómicos y conversión de tiempo para que tu carta refleje el momento de nacimiento. Esto es especialmente útil para comparar horas cercanas y aprender grados exactos y temas de casas.",
+        "icon": "RiFlashlightLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Rigor astronómico" }
+      },
+      {
+        "title": "Completamente gratis",
+        "description": "Genera cartas natales ilimitadas sin cuenta, sin tarjeta y sin límites ocultos. Obtén la rueda y una lista clara de posicionamientos (signo, grado y casa) en una sola página.",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Generador de carta natal gratis" }
+      },
+      {
+        "title": "Privacidad primero",
+        "description": "Tus datos de nacimiento se usan para calcular y mostrar resultados en tu sesión. No exigimos registro para generar una carta, así puedes usarlo con menos fricción y compartir solo si lo deseas.",
+        "icon": "RiMapPinLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Privacidad primero" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Genera tu Carta Natal en Segundos",
+    "label": "CÓMO USAR",
+    "description": "Crear tu carta natal suele tomar menos de un minuto con este proceso simple.",
+    "items": [
+      {
+        "title": "Introduce tus datos de nacimiento",
+        "description": "Ingresa fecha, hora (idealmente al minuto) y lugar. La hora importa para el Ascendente y las casas; sin hora exacta, los signos y grados de los planetas siguen siendo útiles, pero las casas pueden variar.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Genera la rueda",
+        "description": "Haz clic en generar para renderizar tu rueda y tu lista de posicionamientos (planetas, signos, grados y casas). Usa la rueda para un vistazo general y la tabla para detalles exactos.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Explora en el mapa mundial",
+        "description": "Después de generar tu carta natal, usa el CTA para ir a Astrocartography. Mantiene tus datos y muestra dónde tus temas tienden a activarse alrededor del mundo.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Revisa tus posicionamientos (Big Three + casas)",
+        "description": "Antes de seguir, revisa Sol, Luna y Ascendente, y observa en qué casas caen tus planetas clave. Esta revisión rápida ayuda a entender mejor los resultados del Birth Chart Generator y a explorar Astrocartography con más claridad.",
+        "icon": "RiListCheck"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Funciones del Calculador de Carta Natal",
+    "label": "FUNCIONES",
+    "description": "Hecho para claridad: genera la rueda, confirma posicionamientos, entiende casas y luego continúa con Astrocartography.",
+    "items": [
+      {
+        "title": "Visualización de la rueda",
+        "description": "El Birth Chart Generator renderiza una rueda limpia (zodiaco + casas + planetas) para ver el panorama al instante. Usa la rueda para la visión general y la tabla para confirmar signos y grados.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Lista de posiciones planetarias",
+        "description": "Muestra Sol–Plutón con signo, grado exacto y casa. Los grados añaden precisión para estudiar, comparar y verificar resultados — útil para búsquedas como “posiciones planetarias en carta natal” y “calculadora de carta natal con casas”.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Whole Sign Houses (claro y didáctico)",
+        "description": "Usamos Whole Sign Houses para mantener la rueda legible y fácil de aprender. El signo ascendente se vuelve la casa 1 y el resto sigue en orden — ideal para principiantes.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Autocompletar de lugar / coordenadas",
+        "description": "Escribe ciudad + país o usa coordenadas para máxima precisión. El lugar cambia el Ascendente y las casas porque el horizonte local varía según la ubicación.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Optimizado para móvil",
+        "description": "El Birth Chart Generator es amigable en móvil: entrada rápida (fecha/hora), búsqueda de lugar más fácil y resultados legibles en el teléfono.",
+        "icon": "RiCompass3Line"
+      },
+      {
+        "title": "Acceso directo a Astrocartography",
+        "description": "Tras generar, tus datos quedan listos para Astrocartography. Un clic abre el mapa mundial para explorar temas de “dónde prospero”, útil para relocalización y planificación de viajes.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Preguntas frecuentes",
+    "description": "Respuestas sobre carta natal, casas y próximos pasos.",
+    "items": [
+      {
+        "title": "¿Este generador de carta natal es gratis?",
+        "description": "Sí. El Birth Chart Generator es gratis y no requiere registro. Generas la rueda y la lista de posicionamientos y, si quieres, sigues al mapa de Astrocartography para explorar temas por ubicación."
+      },
+      {
+        "title": "¿Qué información de nacimiento necesito?",
+        "description": "Necesitas fecha, hora (al minuto si es posible) y lugar de nacimiento. La hora afecta el Ascendente y las casas; si es aproximada, signos y grados siguen siendo útiles, pero las casas pueden cambiar."
+      },
+      {
+        "title": "¿Qué tan precisos son los cálculos?",
+        "description": "Calculamos posiciones geocéntricas con datos astronómicos y convertimos la hora local a UTC. La precisión es mejor cuando hora y lugar son correctos. Si el huso horario o el lugar están mal, el Ascendente y las casas pueden cambiar."
+      },
+      {
+        "title": "¿Qué sistema de casas se usa?",
+        "description": "Usamos Whole Sign Houses para una rueda limpia y fácil de aprender. El signo del Ascendente es la casa 1 y las demás siguen en secuencia, facilitando la lectura para principiantes."
+      },
+      {
+        "title": "¿Y si no conozco mi hora exacta de nacimiento?",
+        "description": "Aun así puedes usar el Birth Chart Generator: los signos y grados de los planetas siguen siendo útiles. Pero el Ascendente y las casas cambian rápido, así que los temas de casas pueden ser menos confiables. Si luego obtienes la hora exacta, genera de nuevo."
+      },
+      {
+        "title": "¿Esto sustituye el consejo profesional?",
+        "description": "No. La astrología es simbólica e interpretativa; úsala como reflexión y referencia, no como consejo médico, legal o financiero. Considera siempre el contexto real."
+      },
+      {
+        "title": "Sol, Luna y Ascendente: ¿cuál es la diferencia?",
+        "description": "El Sol habla de identidad y dirección; la Luna, de necesidades emocionales; y el Ascendente, de cómo te presentas al mundo. El Ascendente depende de la hora y el lugar, por eso esos datos importan."
+      },
+      {
+        "title": "¿Qué hago después de generar mi carta natal?",
+        "description": "Un buen siguiente paso es Astrocartography. La carta natal ayuda con “quién soy”; Astrocartography explora “dónde prospero”. Con los mismos datos, el mapa mundial destaca temas por ubicación."
+      },
+      {
+        "title": "¿Cómo leo la rueda de la carta natal?",
+        "description": "Empieza por el Ascendente, luego ubica Sol y Luna. Después lee los planetas por tema de casa (trabajo, relaciones, hogar, etc.). Usa la tabla para confirmar signo y grado y evitar confundir símbolos."
+      },
+      {
+        "title": "¿Qué son las casas en una carta natal?",
+        "description": "Las casas dividen la carta en 12 áreas de vida (identidad, recursos, comunicación, hogar, creatividad, trabajo, relaciones, transformación, creencias, carrera, comunidad y descanso). Dependen del Ascendente, así que la hora y el lugar importan mucho."
+      },
+      {
+        "title": "¿Por qué el lugar cambia el Ascendente y las casas?",
+        "description": "El lugar define el horizonte local en el momento del nacimiento. Incluso con el mismo UTC, ciudades distintas pueden producir Ascendente y casas diferentes por la latitud/longitud. Para casas más confiables, usa el lugar real o coordenadas."
+      },
+      {
+        "title": "¿Qué significan los grados en astrología?",
+        "description": "El signo muestra el “estilo” del planeta; los grados añaden precisión. Ayudan a comparar, estudiar técnicas más avanzadas y verificar entre herramientas. Para empezar, enfócate en signo + casa y vuelve a los grados después."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Genera tu Carta Natal Gratis Ahora",
+    "description": "Crea tu rueda de carta natal en segundos. Revisa Sol, Luna y Ascendente, posiciones y casas, y luego explora tu carta en el mapa mundial con Astrocartography.",
+    "buttons": [
+      {
+        "title": "Ver en el mapa mundial → Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}
+

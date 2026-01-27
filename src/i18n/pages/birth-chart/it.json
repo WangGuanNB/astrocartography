@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "title": "Generatore di Tema Natale (Birth Chart Generator) — Ruota, Posizioni dei Pianeti e Case",
+    "description": "Genera la tua ruota del tema natale in pochi secondi. Vedi posizioni planetarie, segni e case — poi esplora la tua carta nel mondo con Astrocartography.",
+    "keywords": "generatore tema natale, generatore tema natale gratis, generatore carta natale, ruota tema natale, posizioni planetarie, segni zodiaco, case astrologia, calcolatrice ascendente"
+  },
+  "intentAnchor": {
+    "text": "Se stai cercando un generatore di tema natale (Birth Chart Generator) e non un lungo articolo di teoria, questa pagina ti dà prima lo strumento: genera la ruota, controlla le posizioni dei pianeti e poi esplora i temi di luogo sulla mappa del mondo con Astrocartography."
+  },
+  "internalLinks": {
+    "title": "Strumenti correlati",
+    "items": [
+      {
+        "text": "Vuoi la versione con mappa del mondo?",
+        "linkText": "Prova Astrocartography",
+        "url": "/astrocartography-calculator"
+      },
+      {
+        "text": "Preferisci guide ed esempi?",
+        "linkText": "Leggi il Blog",
+        "url": "/posts"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Che cos’è un Generatore di Tema Natale",
+    "label": "INTRODUZIONE",
+    "description": "Il Generatore di Tema Natale crea il tuo tema natale completo da data, ora e luogo di nascita, usando calcoli astronomici professionali per mostrare la tua “mappa” cosmica.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Esempio di ruota del tema natale"
+    },
+    "items": [
+      {
+        "title": "Calcoli astronomici professionali",
+        "description": "Il Generatore di Tema Natale calcola le posizioni geocentriche di Sole, Luna e pianeti nel tuo momento di nascita e le mappa in segni e gradi. Convertiamo l’ora locale in UTC e calcoliamo i posizionamenti da dati astronomici (con temi di case tramite Whole Sign Houses per una lettura più chiara).",
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Come leggere la ruota del tema natale"
+        }
+      },
+      {
+        "title": "Visualizzazione istantanea della ruota",
+        "description": "Genera la ruota del tema natale in pochi secondi. Il diagramma circolare mostra 12 case, segni e posizioni planetarie in un layout pulito e adatto ai principianti: prima capisci l’insieme, poi approfondisci posizione per posizione.",
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Come calcola un generatore di tema natale"
+        }
+      },
+      {
+        "title": "Dal tema natale ai luoghi reali",
+        "description": "Vedere le posizioni è solo il primo passo. Tema natale = “chi sono”. Astrocartography = “dove prospero”. Dopo aver generato la ruota qui, un clic porta i tuoi dati alla mappa di astrocartografia per esplorare temi di carriera, relazioni e crescita per luogo.",
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Tema natale vs Astrocartography"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Perché scegliere il nostro Generatore di Tema Natale",
+    "label": "Vantaggi",
+    "description": "Il nostro calcolatore di tema natale unisce rigore astronomico e una ruota facile da leggere — l’essenziale di livello professionale, completamente gratuito.",
+    "items": [
+      {
+        "title": "Rigore astronomico",
+        "description": "Calcoliamo le posizioni dei pianeti con dati astronomici e conversione del tempo, così il tema natale riflette il momento di nascita. È particolarmente utile per confrontare orari vicini e imparare gradi e temi di case.",
+        "icon": "RiFlashlightLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Rigore astronomico" }
+      },
+      {
+        "title": "Completamente gratuito",
+        "description": "Genera temi natali illimitati senza account, senza carta e senza limiti nascosti. In un’unica pagina ottieni la ruota e la lista dei posizionamenti (segno, grado e casa).",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Generatore di tema natale gratis" }
+      },
+      {
+        "title": "Privacy prima di tutto",
+        "description": "I tuoi dati di nascita vengono usati per calcolare e mostrare i risultati nella tua sessione. Non richiediamo registrazione per generare una carta, così puoi usarla con meno frizione e condividere solo se vuoi.",
+        "icon": "RiMapPinLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Privacy prima di tutto" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Genera il tuo Tema Natale in Pochi Secondi",
+    "label": "COME USARE",
+    "description": "Creare il tuo tema natale richiede di solito meno di un minuto con questo processo semplice.",
+    "items": [
+      {
+        "title": "Inserisci i dati di nascita",
+        "description": "Inserisci data, ora (meglio al minuto) e luogo. L’ora è importante per Ascendente e case; senza un’ora precisa, segni e gradi dei pianeti restano utili, ma le case possono variare.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Genera la ruota",
+        "description": "Clicca su genera per renderizzare la ruota e la lista dei posizionamenti (pianeti, segni, gradi e case). Usa la ruota per una panoramica e la tabella per i dettagli esatti.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Esplora sulla mappa del mondo",
+        "description": "Dopo aver generato il tema natale, usa il CTA per andare su Astrocartography. Mantiene i tuoi dati e mostra dove i tuoi temi tendono ad attivarsi nel mondo.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Rivedi i posizionamenti (Big Three + case)",
+        "description": "Prima di proseguire, controlla Sole, Luna e Ascendente e osserva in quali case cadono i pianeti principali. Questa revisione rapida aiuta a capire meglio i risultati del Birth Chart Generator e a esplorare Astrocartography con più chiarezza.",
+        "icon": "RiListCheck"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Funzionalità del Calcolatore di Tema Natale",
+    "label": "FUNZIONALITÀ",
+    "description": "Pensato per la chiarezza: genera la ruota, conferma i posizionamenti, capisci le case e poi continua con Astrocartography.",
+    "items": [
+      {
+        "title": "Visualizzazione della ruota",
+        "description": "Il Birth Chart Generator renderizza una ruota pulita (zodiaco + case + pianeti) per vedere l’insieme subito. Usa la ruota per la panoramica e la tabella per confermare segni e gradi.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Lista delle posizioni planetarie",
+        "description": "Mostra Sole–Plutone con segno, grado esatto e casa. I gradi aggiungono precisione per studio, confronto e verifica — utile per ricerche come “posizioni dei pianeti nel tema natale” e “calcolatore con case”.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Whole Sign Houses (chiaro e didattico)",
+        "description": "Usiamo Whole Sign Houses per mantenere la ruota leggibile e facile da imparare. Il segno ascendente diventa la 1ª casa e le altre seguono in ordine — ideale per principianti.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Autocompletamento luogo / coordinate",
+        "description": "Scrivi città + paese o usa coordinate per la massima precisione. Il luogo cambia Ascendente e case perché l’orizzonte locale varia con la posizione geografica.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Ottimizzato per mobile",
+        "description": "Il Birth Chart Generator è mobile‑friendly: inserimento rapido (data/ora), ricerca luogo più semplice e risultati leggibili su smartphone.",
+        "icon": "RiCompass3Line"
+      },
+      {
+        "title": "Scorciatoia per Astrocartography",
+        "description": "Dopo la generazione, i tuoi dati sono pronti per Astrocartography. Un clic apre la mappa del mondo per esplorare temi di “dove prospero”, utile per relocation astrology e pianificazione viaggi.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Domande frequenti",
+    "description": "Risposte su tema natale, case e prossimi passi.",
+    "items": [
+      {
+        "title": "Questo generatore di tema natale è gratuito?",
+        "description": "Sì. Il Birth Chart Generator è gratuito e non richiede registrazione. Generi la ruota e la lista dei posizionamenti e, se vuoi, passi alla mappa di Astrocartography per esplorare temi per luogo."
+      },
+      {
+        "title": "Quali dati di nascita servono?",
+        "description": "Servono data, ora (al minuto se possibile) e luogo di nascita. L’ora influisce su Ascendente e case; se è approssimativa, segni e gradi restano utili, ma le case possono cambiare."
+      },
+      {
+        "title": "Quanto sono accurati i calcoli?",
+        "description": "Calcoliamo posizioni geocentriche da dati astronomici e convertiamo l’ora locale in UTC. L’accuratezza è migliore quando ora e luogo sono corretti. Se fuso orario o luogo sono sbagliati, Ascendente e case possono cambiare."
+      },
+      {
+        "title": "Quale sistema di case viene usato?",
+        "description": "Usiamo Whole Sign Houses per una ruota pulita e facile da imparare. Il segno dell’Ascendente è la 1ª casa e le altre seguono in sequenza, facilitando la lettura per principianti."
+      },
+      {
+        "title": "E se non conosco l’ora esatta di nascita?",
+        "description": "Puoi comunque usare il Birth Chart Generator: segni e gradi dei pianeti restano utili. Però Ascendente e case cambiano rapidamente, quindi i temi di case possono essere meno affidabili. Se trovi l’ora esatta, rigenera."
+      },
+      {
+        "title": "Questo sostituisce un parere professionale?",
+        "description": "No. L’astrologia è simbolica e interpretativa; usala per riflessione e riferimento, non come consiglio medico, legale o finanziario. Considera sempre il contesto reale."
+      },
+      {
+        "title": "Sole, Luna e Ascendente: qual è la differenza?",
+        "description": "Il Sole parla di identità e direzione; la Luna di bisogni emotivi; l’Ascendente di come ti presenti al mondo. L’Ascendente dipende da ora e luogo, quindi questi dati sono importanti."
+      },
+      {
+        "title": "Cosa fare dopo aver generato il tema natale?",
+        "description": "Un buon passo successivo è Astrocartography. Il tema natale aiuta con “chi sono”; Astrocartography esplora “dove prospero”. Con gli stessi dati, la mappa del mondo evidenzia temi per luogo."
+      },
+      {
+        "title": "Come leggere la ruota del tema natale?",
+        "description": "Inizia dall’Ascendente, poi trova Sole e Luna. Quindi leggi i pianeti per tema di casa (lavoro, relazioni, casa, ecc.). Usa la tabella per confermare segno e grado ed evitare confusione con i simboli."
+      },
+      {
+        "title": "Cosa sono le case nel tema natale?",
+        "description": "Le case dividono la carta in 12 aree di vita (identità, risorse, comunicazione, casa, creatività, lavoro, relazioni, trasformazione, credenze, carriera, comunità e riposo). Dipendono dall’Ascendente, quindi ora e luogo contano molto."
+      },
+      {
+        "title": "Perché il luogo cambia Ascendente e case?",
+        "description": "Il luogo definisce l’orizzonte locale al momento della nascita. Anche con lo stesso UTC, città diverse possono produrre Ascendente e case diverse per latitudine/longitudine. Per case più affidabili, usa il luogo reale o coordinate."
+      },
+      {
+        "title": "Cosa significano i gradi in astrologia?",
+        "description": "Il segno mostra lo “stile” del pianeta; i gradi aggiungono precisione. Aiutano nel confronto, nello studio di tecniche più avanzate e nella verifica tra strumenti. Per iniziare, concentrati su segno + casa e torna ai gradi più avanti."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Genera Gratis il tuo Tema Natale Ora",
+    "description": "Crea la tua ruota del tema natale in pochi secondi. Controlla Sole, Luna e Ascendente, posizioni e case, poi esplora la tua carta sulla mappa del mondo con Astrocartography.",
+    "buttons": [
+      {
+        "title": "Vedi sulla mappa del mondo → Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}
+

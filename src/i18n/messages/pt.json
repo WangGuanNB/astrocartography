@@ -51,6 +51,39 @@
       "status": "Status"
     }
   },
+  "birth_chart_tool": {
+    "error_failed": "Falha ao gerar o mapa astral.",
+    "form": {
+      "birth_date": "Data de nascimento",
+      "date_placeholder": "AAAA/MM/DD",
+      "birth_time": "Hora de nascimento",
+      "birth_location": "Local de nascimento",
+      "use_city_name": "Usar nome da cidade",
+      "use_coordinates": "Usar coordenadas",
+      "coordinates_placeholder": "ex.: 40.7128, -74.0060",
+      "city_country_placeholder": "Cidade, País",
+      "location_tip": "Dica: inclua o país para melhor precisão (ex.: “Paris, France”).",
+      "timezone": "Fuso horário",
+      "generating": "Gerando…",
+      "generate": "Gerar mapa astral",
+      "privacy_note": "Não armazenamos seus dados de nascimento."
+    },
+    "results": {
+      "houses_label": "Casas:",
+      "houses_suffix": "(Whole Sign).",
+      "title": "Posições dos planetas",
+      "asc_label": "ASC",
+      "table": {
+        "planet": "Planeta",
+        "sign": "Signo",
+        "degree": "Grau",
+        "house": "Casa"
+      },
+      "bridge_text": "O mapa natal mostra quem você é. Astrocartography mostra onde você prospera.",
+      "cta_button": "Ver sua carta no mapa do mundo → Astrocartography",
+      "cta_help": "Este botão leva seus dados exatos ao mapa mundial interativo (sem precisar digitar novamente)."
+    }
+  },
   "my_credits": {
     "title": "Meus Créditos",
     "left_tip": "créditos restantes: {left_credits}",

@@ -1,120 +1,210 @@
-# ShipFire项目环境变量配置
-# -----------------------------------------------------------------------------
-# Web Information
-# -----------------------------------------------------------------------------
-NEXT_PUBLIC_WEB_URL = "https://miniatur.org"
-NEXT_PUBLIC_PROJECT_NAME = "ShipFire"
+【目标】
+ 我现在需求你，帮我生成一篇 1200–1400 字的落地页内容，既能被Google理解（SEO优化良好），
+ 又能吸引真实用户（高转化率），语言自然、有可信度。
+ 关键词密度控制在3%~5%%左右，避免关键词堆砌，在确保主关键词密度够的情况下，能覆盖到更多的长尾关键词；
+ 必要的时候，你可以上网搜索这个关键词的用户需求和头部竞品网站的做法，来作为你的参考。
+ 
+【输入信息】
+ 主关键词：Birth Chart Generator
 
-# -----------------------------------------------------------------------------
-# Database with Supabase
-# -----------------------------------------------------------------------------
-# https://supabase.com/docs/guides/getting-started/quickstarts/nextjs
-# Set your Supabase DATABASE_URL
-DATABASE_URL = ""
+【细节要求】
+- 总字数：1200–1400，只计算title和description里面的字数之和是1200~1400
+- LSI 与语义词 8–12 次分散使用
+- 句子长度多样化，段落不超过 3–4 句
+- 避免陈词滥调、绝对化表述与未经证实的超大承诺
+- 我会给你我的代码模板，请按照我的代码模板的要求来写。
 
-# -----------------------------------------------------------------------------
-# Auth with next-auth
-# https://authjs.dev/getting-started/installation?framework=Next.js
-# Set your Auth URL and Secret
-# Secret can be generated with `openssl rand -base64 32`
-# -----------------------------------------------------------------------------
-AUTH_SECRET = ""
-AUTH_URL = "http://localhost:3000/api/auth"
-AUTH_TRUST_HOST = true
+【代码模板】
 
-# disable auth if needed
-NEXT_PUBLIC_AUTH_ENABLED = "true"
+## 2. Introduce 模块（总计 300-250 字）
 
-# Google Auth
-# https://authjs.dev/getting-started/providers/google
-AUTH_GOOGLE_ID = ""
-AUTH_GOOGLE_SECRET = ""
-NEXT_PUBLIC_AUTH_GOOGLE_ID = ""
-NEXT_PUBLIC_AUTH_GOOGLE_ENABLED = "false"
-NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED = "false"
+**label（1-3字）：**
+- INTRODUCTION / OVERVIEW
 
-# Github Auth
-# https://authjs.dev/getting-started/providers/github
-AUTH_GITHUB_ID = ""
-AUTH_GITHUB_SECRET = ""
-NEXT_PUBLIC_AUTH_GITHUB_ENABLED = "true"
+**title（5-8字）：**
+- 必须包含主关键词
 
-# -----------------------------------------------------------------------------
-# Analytics with Google Analytics
-# https://analytics.google.com
-# -----------------------------------------------------------------------------
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID = ""
+**description（20-30字）：**
+- 一句话概括工具的核心能力
 
-# -----------------------------------------------------------------------------
-# Analytics with OpenPanel
-# https://openpanel.dev
-# -----------------------------------------------------------------------------
-NEXT_PUBLIC_OPENPANEL_CLIENT_ID = ""
+**items（3个子功能卡片，每个 55-70 字）：**
 
-# Analytics with Plausible
-# https://plausible.io/
-NEXT_PUBLIC_PLAUSIBLE_DOMAIN = ""
-NEXT_PUBLIC_PLAUSIBLE_SCRIPT_URL = ""
+### 子功能卡片结构：
+**title（6-10字）：**
+- 强调核心特性
+- 可包含次要关键词
 
-# -----------------------------------------------------------------------------
-# Payment with Stripe
-# https://docs.stripe.com/keys
-# -----------------------------------------------------------------------------
-STRIPE_PUBLIC_KEY = ""
-STRIPE_PRIVATE_KEY = ""
-STRIPE_WEBHOOK_SECRET = ""
+**description（45-60字）：**
+- 第1句：说明是什么（15-20字）
+- 第2句：核心优势或适用场景（30-40字）
+- 去掉过多细节，保留最打动用户的点
 
-NEXT_PUBLIC_PAY_SUCCESS_URL = "/my-orders"
-NEXT_PUBLIC_PAY_FAIL_URL = "/pricing"
-NEXT_PUBLIC_PAY_CANCEL_URL = "/pricing"
+---
 
-NEXT_PUBLIC_LOCALE_DETECTION = "false"
+## 3. Benefit 模块（总计 280-320 字）
 
-ADMIN_EMAILS = ""
+**label（2-4字）：**
+- Core Benefits / Why Choose Us
 
-NEXT_PUBLIC_DEFAULT_THEME = "dark"
+**title（8-12字）：**
+- 必须包含主关键词
+- 以用户视角出发
 
-# -----------------------------------------------------------------------------
-# Storage with aws s3 sdk
-# https://docs.aws.amazon.com/s3/index.html
-# -----------------------------------------------------------------------------
-STORAGE_ENDPOINT = ""
-STORAGE_REGION = ""
-STORAGE_ACCESS_KEY = ""
-STORAGE_SECRET_KEY = ""
-STORAGE_BUCKET = ""
-STORAGE_DOMAIN = ""
+**description（25-35字）：**
+- 总结工具的差异化优势
 
-# Google Adsence Code
-# https://adsense.com/
-NEXT_PUBLIC_GOOGLE_ADCODE = ""
+**items（3个核心优势，每个 85-95 字）：**
 
-# ReSend
-RESEND_API_KEY = ""
-RESEND_SENDER_EMAIL = ""
+### 优势卡片结构：
+**title（4-6字）：**
+- 强调单个核心优势
+
+**description（75-85字）：**
+- 说明优势来源和用户价值
+- 避免重复主关键词，使用代称
+
+---
 
 
-# Replicate API - Required for Miniatur AI generation
-REPLICATE_API_TOKEN=""
+## 5. Feature 模块（总计 200-240 字）
 
-# Cloudflare R2 存储配置 
-# 应用程序URL
-R2_ACCOUNT_ID=""
-R2_BUCKET_NAME=""  
-R2_ACCESS_KEY_ID=""
-R2_SECRET_ACCESS_KEY=""
-R2_PUBLIC_URL=""
+**label（1-2字）：**
+- FEATURES
+
+**title（5-8字）：**
+- 包含主关键词
+
+**description（25-35字）：**
+- 总结功能价值
+
+**items（6个特性，每个 30-35 字）：**
+
+### 特性结构：
+**title（4-6字）：**
+- 清晰描述单个功能
+
+**description（24-28字）：**
+- 1-2句话说明功能作用和用户收益
+- 去掉过多技术细节
+
+---
+
+## 4. Usage 模块（总计 120-150 字）
+
+**label（2-4字）：**
+- HOW TO USE
+
+**title（6-10字）：**
+- 包含主关键词
+
+**description（20-30字）：**
+- 强调简单、快速
+
+**items（3个步骤，每个 30-40 字）：**
+
+### 步骤结构：
+**title（4-6字）：**
+- 描述操作动作
+
+**description（25-35字）：**
+- 说明具体操作
+
+---
 
 
-# =======================================================
-# 社交媒体和联系方式配置 (Social Media & Contact Configuration)
-#用于Landing Page Footer的联系方式
-# =======================================================
-# 客服邮箱 (Support Email),用于用户联系客服、反馈问题等
-NEXT_PUBLIC_SUPPORT_EMAIL=
-# Twitter/X 社交账号 (Twitter/X Account) 
-NEXT_PUBLIC_TWITTER_URL=
-# GitHub 开源仓库 (GitHub Repository)
-NEXT_PUBLIC_GITHUB_URL=
-# Discord 社区服务器 (Discord Community Server)
-NEXT_PUBLIC_DISCORD_URL=
+
+## 6. Testimonial 模块（总计 280-320 字）
+
+**label（1-2字）：**
+- Testimonials
+
+**title（6-10字）：**
+- 包含主关键词
+
+**description（15-25字）：**
+- 引导读者查看反馈
+
+**items（6个用户评价，每个 45-50 字）：**
+
+### 评价结构：
+**title（用户名，2-4字）**
+
+**label（职业/身份，3-6字）**
+
+**description（38-45字）：**
+- 第1句：具体使用场景或遇到的问题（15-20字）
+- 第2句：使用后的具体结果或感受（20-25字）
+- 可包含1次次要关键词
+- 数据量化结果更佳（如"转化率提升38%"）
+
+**注意：评价应覆盖不同用户类型和真实使用场景**
+
+---
+
+## 7. FAQ 模块（总计 600~800 字）
+
+**label（1字）：**
+- FAQ
+
+**title（3-5字）：**
+- Frequently Asked Questions
+
+**description（15-25字）：**
+- 引导用户寻求帮助
+
+**items（8个问题，每个答案 40 字以上）：**
+
+### FAQ 结构：
+
+**问题 1：是否免费/定价**
+- title（8-12字）：必须包含主关键词或次要关键词
+- description（35-42字）：详细说明免费程度、功能限制、商业授权
+
+**问题 2：支持格式/平台**
+- title（8-12字）：可包含次要关键词
+- description（35-42字）：列举具体格式，说明每种格式的适用场景
+
+**问题 3：使用门槛/技能要求**
+- title（10-15字）
+- description（35-42字）：说明零门槛特性，举例新手如何快速上手
+
+**问题 4：商业使用/版权**
+- title（8-12字）
+- description（35-42字）：明确授权范围，列举可用的商业场景
+
+**问题 5：操作流程/导出**
+- title（8-12字）
+- description（35-42字）：简要说明操作步骤和注意事项
+
+**问题 6：特色功能/支持范围**
+- title（8-12字）：可包含次要关键词
+- description（35-42字）：说明功能细节和支持范围
+
+**问题 7：其他问题
+- title（8-12字）：可包含次要关键词
+- description（42~45字）：
+
+**问题 8：其他问题
+- title（8-12字）：可包含次要关键词
+- description（35-42字）：
+
+**问题 9：其他问题
+- title（8-12字）：可包含次要关键词
+- description（35-42字）：
+
+
+---
+
+## 8. CTA 模块（总计 40-60 字）
+
+**title（10-15字）：**
+- 必须包含主关键词
+- 强调"立即"、"现在"等行动词
+
+**description（30-45字）：**
+- 强化核心价值主张
+- 说明无门槛优势
+- 营造紧迫感
+
+---
+

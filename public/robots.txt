@@ -40,6 +40,13 @@ Allow: /es/astrocartography-calculator
 Allow: /pt/astrocartography-calculator
 Allow: /it/astrocartography-calculator
 
+# 允许 Birth Chart Generator 页面
+Allow: /tools/birth-chart-generator
+Allow: /zh/tools/birth-chart-generator
+Allow: /es/tools/birth-chart-generator
+Allow: /pt/tools/birth-chart-generator
+Allow: /it/tools/birth-chart-generator
+
 # 阻止所有其他页面
 Disallow: /ms
 Disallow: /en

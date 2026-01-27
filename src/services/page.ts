@@ -35,6 +35,11 @@ export async function getCalculatorPage(locale: string): Promise<CalculatorPage>
   return (await getPage("astrocartography-calculator", locale)) as CalculatorPage;
 }
 
+// English-only page for now, but still routed under [locale].
+export async function getBirthChartPage(locale: string): Promise<CalculatorPage> {
+  return (await getPage("birth-chart", locale)) as CalculatorPage;
+}
+
 export async function getPage(
   name: string,
   locale: string
