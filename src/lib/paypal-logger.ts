@@ -59,7 +59,31 @@ interface PayPalLogData {
   currency?: string;
   credits?: number;
   status?: string;
+  order_status?: string;
   error?: string;
+  error_message?: string;
+  error_stack?: string;
+  success_url?: string;
+  approval_url?: string;
+  product_id?: string;
+  locale?: string;
+  capture_status?: string;
+  capture_id?: string;
+  event_type?: string;
+  webhook_data?: any;
+  body_length?: number;
+  has_webhook_id?: boolean;
+  old_status?: string;
+  new_status?: string;
+  paid_at?: string;
+  paid_email?: string;
+  email?: string;
+  message?: string;
+  skipped?: boolean;
+  reason?: string;
+  api_status?: number;
+  api_response?: any;
+  timeout_ms?: number;
   metadata?: Record<string, any>;
 }
 
