@@ -92,10 +92,10 @@ export default async function ({
     // 🔔 记录订单查询成功日志
     logPayPalEvent(PayPalLogEvent.SUCCESS_PAGE_ACCESSED, undefined, {
       order_no: order.order_no,
-      status: order.status,
-      paypal_order_id: order.stripe_session_id,
-      user_uuid: order.user_uuid,
-      user_email: order.user_email,
+      status: order.status ?? undefined,
+      paypal_order_id: order.stripe_session_id ?? undefined,
+      user_uuid: order.user_uuid ?? undefined,
+      user_email: order.user_email ?? undefined,
       amount: order.amount ?? undefined,
       currency: order.currency ?? undefined,
       credits: order.credits ?? undefined,
@@ -105,7 +105,7 @@ export default async function ({
     if (order.status === OrderStatus.Paid) {
       logPayPalEvent(PayPalLogEvent.SUCCESS_PAGE_ACCESSED, undefined, {
         order_no: order.order_no,
-        status: order.status,
+        status: order.status ?? undefined,
         metadata: { message: "订单已处理（Paid）" },
       });
       console.log("✅ [PayPal Pay Success] 订单已处理（Paid）:", order_no);
@@ -113,8 +113,8 @@ export default async function ({
     } else if (order.status === OrderStatus.Created) {
       logPayPalEvent(PayPalLogEvent.ORDER_CAPTURE_ATTEMPTED, undefined, {
         order_no: order.order_no,
-        paypal_order_id: order.stripe_session_id,
-        status: order.status,
+        paypal_order_id: order.stripe_session_id ?? undefined,
+        status: order.status ?? undefined,
         metadata: { message: "订单状态为 Created，尝试捕获支付" },
       });
       console.log("🔔 [PayPal Pay Success] 订单状态为 Created，尝试捕获支付");
@@ -155,7 +155,7 @@ export default async function ({
     } else {
       logPayPalWarning(PayPalLogEvent.SUCCESS_PAGE_ACCESSED, `订单状态异常: ${order.status}`, {
         order_no: order.order_no,
-        status: order.status,
+        status: order.status ?? undefined,
       });
       console.log("⚠️ [PayPal Pay Success] 订单状态异常:", order_no, order.status);
     }
