@@ -16,6 +16,7 @@ import { useLocale } from "next-intl";
 import { usePayment } from "@/hooks/usePayment";
 import { paymentEvents } from "@/lib/analytics";
 import { usePricingItemTracking } from "./pricing-item-card";
+import { PaymentMethodSelector } from "@/components/payment/PaymentMethodSelector";
 
 export default function Pricing({ pricing, isInModal = false }: { pricing: PricingType; isInModal?: boolean }) {
   if (pricing.disabled) {
@@ -27,7 +28,14 @@ export default function Pricing({ pricing, isInModal = false }: { pricing: Prici
   const { user, setShowSignModal } = useAppContext();
 
   // 使用统一的支付 Hook
-  const { handleCheckout: handlePaymentCheckout, isLoading, productId } = usePayment();
+  const {
+    handleCheckout: handlePaymentCheckout,
+    handlePaymentMethodSelect,
+    isLoading,
+    productId,
+    showPaymentSelector,
+    setShowPaymentSelector,
+  } = usePayment();
 
   const [group, setGroup] = useState(pricing.groups?.[0]?.name);
 
@@ -39,15 +47,20 @@ export default function Pricing({ pricing, isInModal = false }: { pricing: Prici
         return;
       }
 
-      // 使用统一的支付处理函数，使用 Creem 支付
-      const result = await handlePaymentCheckout(item, cn_pay, "creem");
+      // 使用统一的支付处理函数（会自动显示支付方式选择器或直接支付）
+      const result = await handlePaymentCheckout(item, cn_pay);
 
       if (result?.needAuth) {
         setShowSignModal(true);
         return;
       }
 
-      if (!result?.success) {
+      if (result?.showingSelector) {
+        // 正在显示支付方式选择器，等待用户选择
+        return;
+      }
+
+      if (result && !result.success) {
         // 错误信息已经在 hook 中通过 toast 显示
         return;
       }
@@ -270,6 +283,13 @@ export default function Pricing({ pricing, isInModal = false }: { pricing: Prici
           </div>
         </div>
       </div>
+
+      {/* 支付方式选择对话框 */}
+      <PaymentMethodSelector
+        open={showPaymentSelector}
+        onOpenChange={setShowPaymentSelector}
+        onSelect={handlePaymentMethodSelect}
+      />
     </section>
   );
 }

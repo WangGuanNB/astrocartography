@@ -8,6 +8,7 @@ import {
   OrderStatus,
   updateOrderStatus,
   findOrderByEmailAndAmount,
+  findOrderBySessionId,
 } from "@/models/order";
 import { getIsoTimestr } from "@/lib/time";
 import { gte, desc, eq, and } from "drizzle-orm";
@@ -453,6 +454,169 @@ export async function handleCreemOrder(data: CreemPaymentData) {
     console.log("✅ [handleCreemOrder] 积分:", order.credits);
   } catch (e: any) {
     console.error("handle creem order failed: ", e);
+    throw e;
+  }
+}
+
+/**
+ * 处理 PayPal 订单支付成功
+ * @param data PayPal webhook 数据
+ * @param eventType 事件类型
+ */
+export async function handlePayPalOrder(data: any, eventType: string) {
+  try {
+    // 🔔 记录 PayPal 订单处理开始日志
+    const { logPayPalEvent, logPayPalError, logPayPalWarning, PayPalLogEvent } = await import("@/lib/paypal-logger");
+    logPayPalEvent(PayPalLogEvent.WEBHOOK_PROCESSED, undefined, {
+      event_type: eventType,
+      webhook_data: data,
+    });
+
+    console.log("🔔 [handlePayPalOrder] ========== 开始处理 PayPal 订单 ==========");
+    console.log("🔔 [handlePayPalOrder] 事件类型:", eventType);
+
+    // 从 PayPal webhook 数据中提取订单信息
+    // PAYMENT.CAPTURE.COMPLETED 事件结构：
+    // {
+    //   id: "capture_id",
+    //   status: "COMPLETED",
+    //   supplementary_data: {
+    //     related_ids: {
+    //       order_id: "paypal_order_id"
+    //     }
+    //   }
+    // }
+
+    const paypalOrderId =
+      data.supplementary_data?.related_ids?.order_id ||
+      data.order_id ||
+      "";
+
+    console.log("🔔 [handlePayPalOrder] PayPal Order ID:", paypalOrderId);
+
+    if (!paypalOrderId) {
+      logPayPalError(PayPalLogEvent.WEBHOOK_PROCESSED, new Error("PayPal Order ID not found in webhook data"), {
+        event_type: eventType,
+        webhook_data: data,
+      });
+      console.error("❌ [handlePayPalOrder] 未找到 PayPal Order ID");
+      throw new Error("PayPal Order ID not found in webhook data");
+    }
+
+    // 通过 PayPal Order ID 查找订单（存储在 stripe_session_id 字段）
+    const order = await findOrderBySessionId(paypalOrderId);
+
+    if (!order) {
+      logPayPalError(PayPalLogEvent.WEBHOOK_PROCESSED, new Error("Order not found for PayPal Order ID"), {
+        paypal_order_id: paypalOrderId,
+        event_type: eventType,
+      });
+      console.error("❌ [handlePayPalOrder] 订单未找到:", paypalOrderId);
+      throw new Error("Order not found for PayPal Order ID: " + paypalOrderId);
+    }
+
+    console.log("✅ [handlePayPalOrder] 订单找到:", {
+      order_no: order.order_no,
+      status: order.status,
+      credits: order.credits,
+      user_uuid: order.user_uuid,
+    });
+
+    // 检查订单状态（防止重复处理）
+    if (order.status !== OrderStatus.Created) {
+      logPayPalWarning(PayPalLogEvent.WEBHOOK_PROCESSED, `订单已处理，跳过: ${order.status}`, {
+        order_no: order.order_no,
+        paypal_order_id: paypalOrderId,
+        order_status: order.status,
+        event_type: eventType,
+      });
+      console.log("⚠️ [handlePayPalOrder] 订单已处理，跳过:", order.order_no, order.status);
+      return;
+    }
+
+    // 获取支付信息
+    const paid_email = data.payer?.email_address || order.user_email || "";
+    const paid_detail = JSON.stringify(data);
+    const paid_at = getIsoTimestr();
+
+    // 🔔 记录订单状态更新日志
+    logPayPalEvent(PayPalLogEvent.ORDER_STATUS_UPDATED, undefined, {
+      order_no: order.order_no,
+      paypal_order_id: paypalOrderId,
+      old_status: order.status,
+      new_status: OrderStatus.Paid,
+      paid_at: paid_at,
+      paid_email: paid_email,
+    });
+
+    // 更新订单状态
+    await updateOrderStatus(
+      order.order_no,
+      OrderStatus.Paid,
+      paid_at,
+      paid_email,
+      paid_detail
+    );
+
+    // 发放积分
+    if (order.user_uuid) {
+      if (order.credits > 0) {
+        // 🔔 记录积分发放日志
+        logPayPalEvent(PayPalLogEvent.CREDITS_ISSUED, undefined, {
+          order_no: order.order_no,
+          user_uuid: order.user_uuid,
+          credits: order.credits,
+        });
+        await updateCreditForOrder(order as unknown as Order);
+      }
+
+      // 更新推荐人收益
+      await updateAffiliateForOrder(order as unknown as Order);
+    }
+
+    // 发送订单确认邮件
+    if (paid_email) {
+      try {
+        await sendOrderConfirmationEmail({
+          order: order as unknown as Order,
+          customerEmail: paid_email,
+        });
+        // 🔔 记录邮件发送成功日志
+        logPayPalEvent(PayPalLogEvent.EMAIL_SENT, undefined, {
+          order_no: order.order_no,
+          email: paid_email,
+        });
+      } catch (e) {
+        logPayPalError(PayPalLogEvent.EMAIL_SENT, e instanceof Error ? e : new Error(String(e)), {
+          order_no: order.order_no,
+          email: paid_email,
+        });
+        console.log("send order confirmation email failed: ", e);
+      }
+    }
+
+    // 🔔 记录 PayPal 订单处理成功日志
+    logPayPalEvent(PayPalLogEvent.WEBHOOK_PROCESSED, undefined, {
+      order_no: order.order_no,
+      paypal_order_id: paypalOrderId,
+      paid_at: paid_at,
+      paid_email: paid_email,
+      credits: order.credits,
+      message: "PayPal 订单处理成功",
+    });
+
+    console.log("✅ [handlePayPalOrder] ========== PayPal 订单处理成功 ==========");
+    console.log("✅ [handlePayPalOrder] 订单号:", order.order_no);
+    console.log("✅ [handlePayPalOrder] 支付时间:", paid_at);
+    console.log("✅ [handlePayPalOrder] 支付邮箱:", paid_email);
+    console.log("✅ [handlePayPalOrder] 积分:", order.credits);
+  } catch (e: any) {
+    const { logPayPalError, PayPalLogEvent } = await import("@/lib/paypal-logger");
+    logPayPalError(PayPalLogEvent.ERROR, e, {
+      error_message: e.message,
+      error_stack: e.stack,
+    });
+    console.error("handle paypal order failed: ", e);
     throw e;
   }
 }

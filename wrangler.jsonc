@@ -22,6 +22,11 @@
     "NEXT_PUBLIC_PAY_SUCCESS_URL": "/my-orders",
     "NEXT_PUBLIC_PAY_FAIL_URL": "/pricing",
     "NEXT_PUBLIC_PAY_CANCEL_URL": "/pricing",
+
+    "NEXT_PUBLIC_PAYMENT_STRIPE_ENABLED": "false",
+    "NEXT_PUBLIC_PAYMENT_PAYPAL_ENABLED": "false",
+    "NEXT_PUBLIC_PAYMENT_CREEM_ENABLED": "true",
+
     "NEXT_PUBLIC_LOCALE_DETECTION": "false",
     "NEXT_PUBLIC_DEFAULT_THEME": "dark",
     "NEXT_PUBLIC_GOOGLE_ADCODE": "ca-pub-1740791303497483",
@@ -34,6 +39,9 @@
     "NEXT_PUBLIC_GITHUB_URL": "",
     "NEXT_PUBLIC_DISCORD_URL": "",
     "SCRAPER_SECRET_KEY": "1"
+
+
+
   },
   // 由 OpenNext Cloudflare 生成
   "main": ".open-next/worker.js",

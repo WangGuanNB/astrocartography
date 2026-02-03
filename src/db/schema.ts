@@ -65,6 +65,7 @@ export const orders = pgTable("orders_astrocarto", {
   paid_at: timestamp({ withTimezone: true }),
   paid_email: varchar({ length: 255 }),
   paid_detail: text(),
+  pay_type: varchar({ length: 50 }),
 });
 
 // API Keys table

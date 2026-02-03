@@ -168,6 +168,7 @@ export async function POST(req: Request) {
       product_id: product_id,
       product_name: product_name,
       valid_months: valid_months,
+      pay_type: "creem",
     };
     await insertOrder(order as typeof orders.$inferInsert);
 

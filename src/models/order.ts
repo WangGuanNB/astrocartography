@@ -27,6 +27,22 @@ export async function findOrderByOrderNo(
   return order;
 }
 
+/**
+ * 通过 session ID 查找订单（用于 PayPal/Stripe）
+ * @param session_id PayPal Order ID 或 Stripe Session ID
+ */
+export async function findOrderBySessionId(
+  session_id: string
+): Promise<typeof orders.$inferSelect | undefined> {
+  const [order] = await db()
+    .select()
+    .from(orders)
+    .where(eq(orders.stripe_session_id, session_id))
+    .limit(1);
+
+  return order;
+}
+
 export async function getFirstPaidOrderByUserUuid(
   user_uuid: string
 ): Promise<typeof orders.$inferSelect | undefined> {
