@@ -1,0 +1,240 @@
+{
+  "metadata": {
+    "title": "Rising Sign Calculator - Free Ascendant by Birth Time | AstroCarto",
+    "description": "Calculate your rising sign in seconds with professional accuracy. Enter birth date, time & location to find your ascendant, ruling planet, and see how your rising sign changes across major cities worldwide.",
+    "keywords": "rising sign calculator, ascendant calculator, calculate rising sign, free ascendant, birth time astrology"
+  },
+  "intentAnchor": {
+    "text": "Looking for a Rising Sign Calculator? This page delivers the tool first—no long articles. Enter your birth date, exact time, and location to instantly discover your ascendant sign, degree, and ruling planet. Then explore how the same birth moment produces different rising signs in cities worldwide, and see where your chart comes alive through Astrocartography."
+  },
+  "internalLinks": {
+    "title": "Related Tools",
+    "items": [
+      {
+        "text": "Need your complete natal chart?",
+        "linkText": "Birth Chart Generator",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "Discover where your chart thrives globally.",
+        "linkText": "Astrocartography Calculator",
+        "url": "/astrocartography-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What Is a Rising Sign Calculator",
+    "label": "INTRODUCTION",
+    "description": "A Rising Sign Calculator determines the zodiac sign ascending on the eastern horizon at your exact birth moment. Using your birth date, precise time, and geographic location, this calculator reveals your ascendant—the mask you wear when meeting the world. Unlike your sun sign (which only needs a birth date), your rising sign shifts roughly every two hours as Earth rotates, making accurate birth time and location absolutely essential. The same UTC moment in New York versus Tokyo produces entirely different ascendants because the horizon angle changes with latitude and longitude.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Rising sign calculator interface showing birth data input form and world map"
+    },
+    "items": [
+      {
+        "title": "Why Precise Birth Time Matters",
+        "description": "Your ascendant moves approximately one degree every four minutes, completing a full zodiac cycle every 24 hours. A Rising Sign Calculator requires birth time accurate to the minute when possible. Even a 15-30 minute error can shift your ascendant degree significantly or, near sign boundaries, change the sign entirely. Without precise timing, house cusps become unreliable, affecting the entire chart structure. If your birth certificate shows time, use it. If estimating, understand results carry uncertainty—especially for borderline degrees between signs.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "Clock diagram showing rising sign changes every two hours" }
+      },
+      {
+        "title": "How Location Shapes Your Ascendant",
+        "description": "Geography fundamentally alters your rising sign because the horizon at birth depends on where you stand on Earth's surface. Two people born at identical UTC times in London and Sydney see completely different zodiac signs rising. Our calculator demonstrates this through a geographic perspective feature: after computing your ascendant for your birthplace, it shows what the same birth moment would produce in major cities worldwide. This bridges individual chart interpretation with Astrocartography—revealing how physical location influences astrological expression from birth onward.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "World map showing different rising signs across global cities" }
+      },
+      {
+        "title": "From Ascendant to Your Global Chart",
+        "description": "Once you know your rising sign, the natural next step is exploring where your entire chart activates across the planet. While this calculator answers 'what is my ascendant at birth,' Astrocartography extends that question globally: where do my planetary lines strengthen career, relationships, creativity, or personal transformation? The rising sign marks your beginning; the world map shows everywhere that energy can manifest. Use identical birth data in both tools for seamless exploration of location-based astrology.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "Transition from rising sign result to astrocartography world map" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Use Our Rising Sign Calculator",
+    "label": "Core Benefits",
+    "description": "This Rising Sign Calculator combines professional-grade astronomical calculation with user-friendly design. Get your ascendant sign, precise degree, ruling planet, and interpretation—plus a unique geographic perspective showing how location alters the ascendant. Completely free, no signup required.",
+    "items": [
+      {
+        "title": "Astronomical Precision You Can Trust",
+        "description": "We calculate rising signs using the same astronomical standards professional astrologers rely on. Enter your birth date, exact time (including timezone), and location coordinates or city name. The calculator returns your ascendant sign, degree to two decimal places, and modern ruling planet—giving you accurate, verifiable results. Whether cross-checking with astrology software or discovering your ascendant for the first time, precision matters. Birth time accuracy directly determines result reliability.",
+        "icon": "RiFlashlightLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Accurate astronomical calculation engine display" }
+      },
+      {
+        "title": "Completely Free, Zero Barriers",
+        "description": "Use this Rising Sign Calculator unlimited times without creating accounts, entering payment information, or watching advertisements. Calculate your ascendant, explore the geographic comparison across cities, read interpretations, then optionally continue to Astrocartography with one click—all free. We believe foundational astrological tools should be universally accessible. Whether you're a curious beginner or experienced practitioner double-checking data, access remains unrestricted and immediate.",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Free calculator interface with no signup requirements" }
+      },
+      {
+        "title": "Rising Sign vs Sun Sign—Finally Clear",
+        "description": "Many people confuse rising sign with sun sign. This calculator clarifies both. Your sun sign comes from birth date alone and represents core identity. Your rising sign requires birth date plus exact time and location—it shows how you instinctively approach the world and how others perceive you initially. We focus squarely on the ascendant here, explaining its role as chart foundation and first-house cusp. For integrated sun-moon-rising analysis, explore our Birth Chart Generator afterward.",
+        "icon": "RiMapPinLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Comparison chart showing rising sign versus sun sign differences" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Use the Rising Sign Calculator",
+    "label": "HOW TO USE",
+    "description": "Finding your rising sign takes under 60 seconds with our streamlined calculator. Follow four simple steps: enter birth details, receive your ascendant result, review the geographic perspective, and optionally explore Astrocartography for deeper location insights.",
+    "items": [
+      {
+        "title": "Enter Complete Birth Information",
+        "description": "Input your birth date (day, month, year), birth time as precisely as available—ideally to the minute from a birth certificate—and birth location. Select or verify the timezone matching your birthplace, accounting for historical daylight saving changes if applicable. The calculator uses these three data points to compute which zodiac sign occupied the eastern horizon at your birth. Incomplete or inaccurate time significantly reduces reliability, especially for borderline degrees.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Receive Your Ascendant and Ruling Planet",
+        "description": "Instantly see your rising sign, exact degree position (e.g., 'Leo 12°34'), and the planet ruling that sign (Mars for Aries, Venus for Taurus/Libra, etc.). A brief interpretation appears below, describing how this ascendant typically manifests in personality and first impressions. This answers the core question: 'What is my rising sign?' If the result seems unexpected, double-check birth time and timezone settings before concluding.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Explore the Geographic Perspective",
+        "description": "Below your result, view how the identical birth moment produces different rising signs in 6-8 major global cities. For example: if born with Gemini rising in Los Angeles, the same UTC time might yield Cancer rising in New York, Taurus rising in London, or Leo rising in Tokyo. This illustrates how powerfully location shapes the ascendant and naturally introduces Astrocartography's core concept: place matters in astrology, not just timing.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Continue to Astrocartography (Optional)",
+        "description": "Click the call-to-action button to transfer your birth data directly into our Astrocartography map. There, explore where planetary lines cross globally, activating themes related to career (Midheaven lines), relationships (Descendant lines), home (IC lines), and identity (Ascendant lines). The Rising Sign Calculator is your starting point; the world map takes understanding deeper—ideal for relocation planning, travel insights, or understanding how place influences personal astrology beyond the birth moment.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Rising Sign Calculator Features",
+    "label": "FEATURES",
+    "description": "Built for clarity and depth: instant ascendant calculation, precise degree measurement, ruling planet identification, thoughtful interpretation, geographic comparison across cities, and seamless handoff to Astrocartography for those seeking location-based chart exploration.",
+    "items": [
+      {
+        "title": "Exact Ascendant Sign and Degree",
+        "description": "See not just your rising sign but its precise degree—essential for advanced techniques like progressions, solar arc directions, and identifying close aspects to planets. Degree precision helps when comparing charts or consulting professional astrologers who need exact house cusps. This level of detail satisfies both 'rising sign calculator' and 'ascendant degree calculator' search intent comprehensively.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Ruling Planet for Each Ascendant",
+        "description": "Every rising sign has a planetary ruler (chart ruler) that colors your entire chart interpretation. Aries rising = Mars rules; Scorpio rising = Pluto (modern) or Mars (traditional); Pisces rising = Neptune or Jupiter. Knowing your chart ruler helps track major life themes through transits and progressions. We display this prominently so beginners learn the connection between sign and planet, while experienced practitioners confirm accuracy.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Thoughtful, Credible Interpretation",
+        "description": "Each rising sign receives a short interpretation focusing on outward demeanor, typical first impressions, and general life approach—written to be insightful without overpromising. Interpretations avoid medical claims, financial advice, or predictive certainty. They serve as reflection starting points, inviting curiosity rather than dictating fate. Language remains accessible to newcomers while respecting astrology's symbolic complexity.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Geographic Perspective—Unique Feature",
+        "description": "After calculating your ascendant, see how it would differ if you were born in New York, London, Tokyo, Sydney, Paris, Dubai, Los Angeles, or Singapore at the exact same UTC moment. This geographic comparison is rare among rising sign calculators and directly demonstrates why birth location matters as much as time. It also primes users for Astrocartography by showing location's role in astrological identity from the very beginning.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Timezone Selection for Accurate Results",
+        "description": "Accurate ascendant calculation depends on the local time at birth. Select the timezone that matches your birthplace (e.g., EST for New York, CET for Paris, JST for Tokyo). We offer common timezone options so you can align your birth time with the correct zone. Choosing the right timezone ensures the rising sign reflects the actual sky position at your birth; if unsure, use the timezone that was in effect at your birth location and date.",
+        "icon": "RiCompass3Line"
+      },
+      {
+        "title": "One-Click Astrocartography Handoff",
+        "description": "After discovering your rising sign, one button click transfers your birth data to the Astrocartography map—no re-entering information. There you'll see where your Sun, Moon, Venus, Mars, Jupiter, Saturn, and other planetary lines activate globally. While the Rising Sign Calculator focuses on the ascendant at birth, Astrocartography reveals where all chart points manifest geographically. Together they form a complete location-astrology toolkit for personal exploration or relocation planning.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Rising Sign Calculator — Frequently Asked Questions",
+    "description": "Common questions about using the Rising Sign Calculator, understanding ascendant results, birth time importance, and geographic variations in rising signs.",
+    "items": [
+      {
+        "title": "Is this Rising Sign Calculator completely free?",
+        "description": "Yes, absolutely. This Rising Sign Calculator is free to use without limits. Enter birth date, time, and location as many times as needed to calculate your ascendant, compare geographic variations, read interpretations, and access Astrocartography—all without payment, account creation, or advertisements. We believe core astrological tools should remain accessible to everyone regardless of budget."
+      },
+      {
+        "title": "What exactly is my rising sign?",
+        "description": "Your rising sign (also called the ascendant) is the zodiac sign that was ascending over the eastern horizon at your precise birth moment and location. It represents your outward personality, instinctive reactions, physical appearance tendencies, and the 'mask' you wear when meeting new people. To find it accurately, you need birth date, exact time (ideally from a birth certificate), and birthplace—since the ascendant changes approximately every two hours as Earth rotates."
+      },
+      {
+        "title": "Why does birth time matter so much for rising sign calculation?",
+        "description": "The ascendant moves roughly one degree every four minutes, cycling through all twelve zodiac signs in 24 hours. Even a 15-minute error in birth time can shift the degree significantly; near sign boundaries, it can change the sign entirely. Since the rising sign also determines your entire house system (affecting where planets fall in houses), inaccurate time undermines the whole chart structure. Use the most precise time available—preferably from official birth records—for reliable results."
+      },
+      {
+        "title": "Rising sign versus sun sign—what's the actual difference?",
+        "description": "Your sun sign depends only on birth date and represents core identity, ego, and conscious will. Your rising sign depends on birth date, exact time, and geographic location—it shows your instinctive approach to life and how others perceive you initially. Think of sun as 'who you are inside' and rising as 'how you meet the world.' This Rising Sign Calculator focuses specifically on the ascendant; for integrated sun-moon-rising analysis, use our Birth Chart Generator."
+      },
+      {
+        "title": "Why does my rising sign change depending on location?",
+        "description": "The rising sign reflects which zodiac constellation appeared on the eastern horizon from your birth location. Because Earth is round and observers at different latitudes/longitudes see different sky sections simultaneously, the same UTC moment produces different ascendants in different cities. Someone born at noon GMT in London sees a different horizon than someone born at noon GMT (7 AM local) in New York. Our geographic perspective feature demonstrates this by showing how your ascendant would differ in major cities worldwide."
+      },
+      {
+        "title": "How accurate is this ascendant calculator?",
+        "description": "We use professional astronomical calculations with proper timezone and coordinate handling, matching the precision of paid astrology software. Accuracy depends entirely on the accuracy of your input data. Correct birth time (to the minute), verified timezone, and precise location (city or coordinates) yield highly reliable results. Wrong timezone, rounded time (e.g., 'around 3 PM'), or incorrect location reduce accuracy proportionally. The calculator itself is precise; your data quality determines result reliability."
+      },
+      {
+        "title": "What if I don't know my exact birth time?",
+        "description": "You can still use the Rising Sign Calculator with estimated time, but understand the ascendant may be incorrect. If your estimate is within 1-2 hours, the sign might be right (though the degree won't be). If you only know morning/afternoon/evening, try calculating a range of times and see if one rising sign resonates more than others. For people without any birth time, some astrologers use chart rectification techniques, but that's beyond this calculator's scope. When possible, request official birth records—many hospitals and vital statistics offices keep precise times."
+      },
+      {
+        "title": "Can I calculate someone else's rising sign with this tool?",
+        "description": "Yes. Enter their birth date, time, and location to find their ascendant. The Rising Sign Calculator works for any birth data, whether yours or someone else's. Just ensure you have their actual birth time and place for accuracy—guessing can produce misleading results. This is useful for comparing charts with partners, children, or friends, or for astrologers serving clients."
+      },
+      {
+        "title": "What should I do after finding my rising sign?",
+        "description": "After discovering your ascendant, explore Astrocartography to see where your chart's planetary energies activate globally. While your rising sign shows how you instinctively engage the world, the Astrocartography map reveals geographic locations where specific chart themes—career, love, transformation, spirituality—manifest most powerfully. Use the call-to-action button on your result page to transfer birth data seamlessly and begin exploring location-based astrology for travel, relocation, or deeper self-understanding."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Discover Your Rising Sign Now",
+    "description": "Use our Rising Sign Calculator to instantly find your ascendant sign, precise degree, and ruling planet. See how the same birth moment creates different rising signs across global cities, then explore your complete chart on the world map with Astrocartography—free, accurate, no signup required.",
+    "buttons": [
+      {
+        "title": "Explore your chart globally → Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Birth date",
+      "birthTime": "Birth time (exact if possible)",
+      "birthLocation": "Birth location",
+      "timezone": "Timezone",
+      "submit": "Calculate rising sign"
+    },
+    "result": {
+      "title": "Your Rising Sign",
+      "sign": "Rising sign",
+      "degree": "Degree",
+      "ruler": "Chart ruler",
+      "interpretation": "Interpretation",
+      "geoTitle": "Same moment—different cities, different rising signs",
+      "geoSubtitle": "Your ascendant changes by location. See the full picture with Astrocartography.",
+      "ctaChart": "Explore my chart on the world map"
+    },
+    "errors": {
+      "required": "Please complete all fields to calculate your rising sign.",
+      "location": "Location not found. Try entering a city and country (e.g., New York, USA or London, UK).",
+      "generic": "Calculation error. Please verify your birth data and try again."
+    },
+    "interpretations": {
+      "Aries": "You project bold, direct energy from first meeting. People often perceive you as confident, quick to act, and unafraid of challenges. Your instinct is to lead rather than follow, approaching life with physical vitality and competitive spirit. Mars, your chart ruler, colors your entire personality with initiative and courage.",
+      "Taurus": "You come across as calm, grounded, and steady—someone others find reliable and comforting. First impressions often emphasize your appreciation for beauty, quality, and physical comfort. Venus as your chart ruler brings sensuality and a preference for stability over chaos. You instinctively move through life at your own deliberate pace.",
+      "Gemini": "Your presence reads as curious, articulate, and mentally agile. People notice your conversational ease and interest in diverse topics. Mercury, your chart ruler, makes you naturally adaptable and information-hungry. You tend to approach life through communication, observation, and keeping multiple options open simultaneously.",
+      "Cancer": "You appear caring, protective, and somewhat reserved at first encounter. Others sense emotional depth and nurturing instinct, even if you're selective about who receives it. The Moon as your chart ruler makes feelings and security central to how you navigate the world. Home and family themes often shape your life approach.",
+      "Leo": "You make a warm, confident, sometimes dramatic first impression. People notice your presence—there's a natural radiance and self-assurance that draws attention. The Sun as your chart ruler emphasizes identity, creative self-expression, and generosity. You instinctively seek recognition and opportunities to shine authentically.",
+      "Virgo": "You present as modest, precise, and helpful—someone who notices details others miss. First impressions often highlight competence and practical intelligence. Mercury as your chart ruler brings analytical thinking and a service-oriented approach to life. You instinctively seek to improve, refine, and make things work more efficiently.",
+      "Libra": "You come across as diplomatic, pleasant, and relationship-focused. People often perceive you as charming and considerate, skilled at finding common ground. Venus as your chart ruler emphasizes balance, aesthetics, and partnership. You naturally approach life through connection, comparison, and seeking harmony in your environment.",
+      "Scorpio": "Your first impression tends toward intensity, privacy, and perceptiveness—people sense depth even when you're guarded. Pluto (modern) or Mars (traditional) as chart ruler brings transformation, power dynamics, and emotional complexity to your life approach. You instinctively seek truth beneath surfaces and aren't satisfied with superficial engagement.",
+      "Sagittarius": "You project openness, optimism, and a love of freedom. First encounters often reveal your honesty, humor, and broad perspective. Jupiter as your chart ruler brings expansion, philosophy, and wanderlust to how you navigate the world. You instinctively seek meaning, adventure, and opportunities to grow beyond current boundaries.",
+      "Capricorn": "You appear serious, capable, and responsible from initial meeting. People often perceive you as mature, ambitious, and slightly reserved. Saturn as your chart ruler emphasizes structure, long-term planning, and respect for achievement. You instinctively approach life with discipline, accepting that worthwhile goals require sustained effort and patience.",
+      "Aquarius": "Your presence reads as original, somewhat detached, and intellectually independent. First impressions often highlight your unconventional thinking and interest in progressive ideas. Uranus (modern) or Saturn (traditional) as chart ruler brings innovation, objectivity, and group consciousness to your life approach. You naturally question norms and value individual freedom.",
+      "Pisces": "You come across as gentle, empathetic, and impressionable—someone whose boundaries feel permeable. People sense artistic or spiritual leanings even in brief encounters. Neptune (modern) or Jupiter (traditional) as chart ruler brings imagination, compassion, and subtle perception to how you navigate the world. You instinctively absorb surrounding energies and seek transcendence of mundane reality."
+    }
+  }
+}

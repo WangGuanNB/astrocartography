@@ -16,6 +16,11 @@
         "url": "/astrocartography-calculator"
       },
       {
+        "text": "Only need your ascendant?",
+        "linkText": "Rising Sign Calculator",
+        "url": "/rising-sign-calculator"
+      },
+      {
         "text": "Prefer tutorials & examples?",
         "linkText": "Read the Blog",
         "url": "/posts"

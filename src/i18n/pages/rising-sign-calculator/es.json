@@ -1,0 +1,240 @@
+{
+  "metadata": {
+    "title": "Calculadora del Signo Ascendente - Ascendente Gratis por Fecha y Hora | AstroCarto",
+    "description": "Calcula tu signo ascendente en segundos con precisión profesional. Introduce fecha, hora y lugar de nacimiento para obtener tu ascendente, planeta regente y ver cómo cambia el ascendente en ciudades del mundo.",
+    "keywords": "calculadora signo ascendente, calculadora ascendente, calcular ascendente, ascendente gratis, astrología hora nacimiento"
+  },
+  "intentAnchor": {
+    "text": "¿Buscas una calculadora del signo ascendente? Esta página te da la herramienta primero: introduce fecha, hora y lugar de nacimiento para descubrir al instante tu signo ascendente, grado y planeta regente. Luego explora cómo el mismo momento de nacimiento produce distintos ascendentes en ciudades del mundo y dónde tu carta cobra vida con Astrocartography."
+  },
+  "internalLinks": {
+    "title": "Herramientas relacionadas",
+    "items": [
+      {
+        "text": "¿Necesitas tu carta natal completa?",
+        "linkText": "Generador de Carta Natal",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "Descubre dónde tu carta prospera en el mundo.",
+        "linkText": "Calculadora Astrocartography",
+        "url": "/astrocartography-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Qué es una calculadora del signo ascendente",
+    "label": "INTRODUCCIÓN",
+    "description": "Una calculadora del signo ascendente determina el signo zodiacal que ascendía en el horizonte oriental en tu momento exacto de nacimiento. Con tu fecha, hora precisa y lugar geográfico, esta herramienta revela tu ascendente: la «máscara» que muestras al mundo. A diferencia del signo solar (que solo requiere la fecha), el ascendente cambia aproximadamente cada dos horas con la rotación terrestre, por lo que la hora y el lugar de nacimiento son esenciales. El mismo momento UTC en Nueva York y en Tokio produce ascendentes totalmente distintos según la latitud y longitud.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Calculadora del signo ascendente: formulario de datos de nacimiento y mapa mundial"
+    },
+    "items": [
+      {
+        "title": "Por qué importa la hora exacta de nacimiento",
+        "description": "Tu ascendente se mueve aproximadamente un grado cada cuatro minutos y recorre todo el zodíaco en 24 horas. La calculadora necesita la hora de nacimiento lo más precisa posible (idealmente al minuto). Un error de 15–30 minutos puede cambiar el grado e incluso el signo en los límites entre signos. Sin una hora precisa, las cúspides de las casas pierden fiabilidad. Si tu partida de nacimiento indica la hora, úsala; si estimas, ten en cuenta que el resultado puede variar.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "El ascendente cambia aproximadamente cada dos horas" }
+      },
+      {
+        "title": "Cómo el lugar da forma a tu ascendente",
+        "description": "La geografía altera tu ascendente porque el horizonte al nacer depende de tu posición en la Tierra. Dos personas nacidas al mismo UTC en Londres y Sídney verán signos ascendentes distintos. Nuestra calculadora lo muestra con la perspectiva geográfica: tras calcular tu ascendente en tu lugar de nacimiento, muestra qué produciría el mismo momento en otras ciudades del mundo, enlazando con el concepto de Astrocartography.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "Mapa mundial con distintos ascendentes por ciudad" }
+      },
+      {
+        "title": "Del ascendente a tu carta global",
+        "description": "Una vez conocido tu ascendente, el siguiente paso es explorar dónde se activa toda tu carta en el planeta. Esta calculadora responde «cuál es mi ascendente al nacer»; Astrocartography amplía la pregunta: ¿dónde se refuerzan carrera, relaciones, creatividad o transformación? El ascendente marca tu inicio; el mapa mundial muestra dónde puede manifestarse esa energía. Usa los mismos datos en ambas herramientas.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "Del resultado de ascendente al mapa Astrocartography" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por qué usar nuestra calculadora del ascendente",
+    "label": "Beneficios",
+    "description": "Esta calculadora combina precisión astronómica de nivel profesional con un diseño claro. Obtén tu signo ascendente, grado preciso, planeta regente e interpretación, más una perspectiva geográfica única. Totalmente gratis, sin registro.",
+    "items": [
+      {
+        "title": "Precisión astronómica fiable",
+        "description": "Calculamos el ascendente con los mismos estándares que usan astrólogos profesionales. Introduce fecha, hora (y zona horaria) y lugar o coordenadas. La calculadora devuelve el signo ascendente, grado con dos decimales y planeta regente moderno, para resultados comprobables. La precisión de la hora de nacimiento determina la fiabilidad del resultado.",
+        "icon": "RiFlashlightLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Cálculo astronómico preciso" }
+      },
+      {
+        "title": "Completamente gratis, sin barreras",
+        "description": "Usa esta calculadora sin límites: sin cuenta, sin pago ni anuncios. Calcula tu ascendente, compara por ciudades, lee interpretaciones y continúa a Astrocartography con un clic. Creemos que las herramientas astrológicas básicas deben ser accesibles para todos.",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora gratis sin registro" }
+      },
+      {
+        "title": "Ascendente vs signo solar: por fin claro",
+        "description": "Muchos confunden ascendente con signo solar. El signo solar depende solo de la fecha y representa la identidad central. El ascendente requiere fecha, hora y lugar exactos y muestra cómo te acercas al mundo y cómo te perciben al principio. Aquí nos centramos en el ascendente; para un análisis sol-luna-ascendente integrado, usa después el Generador de Carta Natal.",
+        "icon": "RiMapPinLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Ascendente frente a signo solar" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo usar la calculadora del ascendente",
+    "label": "CÓMO USAR",
+    "description": "Obtener tu ascendente lleva menos de 60 segundos: introduce los datos, recibe el resultado, revisa la perspectiva geográfica y opcionalmente explora Astrocartography.",
+    "items": [
+      {
+        "title": "Introduce los datos de nacimiento completos",
+        "description": "Indica fecha (día, mes, año), hora lo más precisa posible (idealmente al minuto, por ejemplo de la partida de nacimiento) y lugar de nacimiento. Selecciona la zona horaria que corresponda a tu lugar de nacimiento. La calculadora usa estos datos para calcular qué signo ocupaba el horizonte oriental al nacer.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Recibe tu ascendente y planeta regente",
+        "description": "Verás al instante tu signo ascendente, grado exacto (p. ej. «Leo 12°34») y el planeta regente de ese signo. Una breve interpretación describe cómo suele manifestarse este ascendente en personalidad y primeras impresiones. Si el resultado te sorprende, revisa hora y zona horaria.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Explora la perspectiva geográfica",
+        "description": "Debajo del resultado verás cómo el mismo momento de nacimiento produce distintos ascendentes en varias ciudades (p. ej. Nueva York, Londres, Tokio). Así se ve cómo el lugar influye en el ascendente y se introduce la idea de Astrocartography: el lugar importa en astrología, no solo el momento.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Continuar a Astrocartography (opcional)",
+        "description": "Haz clic en el botón de llamada a la acción para pasar tus datos al mapa de Astrocartography. Ahí podrás explorar dónde se activan las líneas planetarias (carrera, relaciones, hogar, identidad). La calculadora del ascendente es el punto de partida; el mapa mundial profundiza para mudanzas, viajes o comprensión del lugar en tu astrología.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Funciones de la calculadora del ascendente",
+    "label": "FUNCIONES",
+    "description": "Diseñada para claridad y profundidad: cálculo al instante, grado preciso, planeta regente, interpretación y comparación geográfica, con enlace directo a Astrocartography.",
+    "items": [
+      {
+        "title": "Signo y grado exactos del ascendente",
+        "description": "No solo el signo ascendente sino su grado preciso, útil para progresiones, direcciones de arco solar y aspectos. El grado ayuda a comparar cartas o trabajar con astrólogos que necesitan cúspides exactas.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Planeta regente por ascendente",
+        "description": "Cada ascendente tiene un planeta regente (regente de la carta) que matiza la interpretación. Aries = Marte; Escorpio = Plutón (moderno) o Marte (tradicional); Piscis = Neptuno o Júpiter. Mostramos el regente para que principiantes aprendan la relación signo–planeta y profesionales comprueben la precisión.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Interpretación clara y creíble",
+        "description": "Cada ascendente tiene una interpretación breve sobre la actitud exterior, primeras impresiones y enfoque vital, sin exagerar ni dar consejos médicos o financieros. Sirve como punto de reflexión.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Perspectiva geográfica (función única)",
+        "description": "Tras calcular tu ascendente, verás cómo variaría si hubieras nacido en Nueva York, Londres, Tokio, Sídney, París, Dubái, Los Ángeles o Singapur en el mismo momento UTC. Esta comparación es poco común en calculadoras de ascendente y muestra por qué el lugar de nacimiento importa tanto como la hora.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Selección de zona horaria para resultados precisos",
+        "description": "El cálculo del ascendente depende de la hora local al nacer. Elige la zona horaria que corresponda a tu lugar de nacimiento (p. ej. EST para Nueva York, CET para París, JST para Tokio). Ofrecemos opciones habituales para alinear tu hora de nacimiento con la zona correcta. Si dudas, usa la zona horaria vigente en tu lugar y fecha de nacimiento.",
+        "icon": "RiCompass3Line"
+      },
+      {
+        "title": "Un clic hacia Astrocartography",
+        "description": "Tras conocer tu ascendente, un botón transfiere tus datos al mapa de Astrocartography sin volver a introducirlos. Ahí verás dónde se activan el Sol, la Luna, Venus, Marte, Júpiter, Saturno y demás líneas planetarias en el mundo. Juntas forman un kit completo de astrología por ubicación.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Calculadora del ascendente — Preguntas frecuentes",
+    "description": "Preguntas habituales sobre el uso de la calculadora, el resultado del ascendente, la importancia de la hora de nacimiento y las variaciones geográficas.",
+    "items": [
+      {
+        "title": "¿Esta calculadora del ascendente es totalmente gratis?",
+        "description": "Sí. Puedes usarla sin límites: introduce fecha, hora y lugar las veces que quieras para calcular tu ascendente, comparar por ciudades, leer interpretaciones y acceder a Astrocartography, sin pago, cuenta ni anuncios."
+      },
+      {
+        "title": "¿Qué es exactamente mi signo ascendente?",
+        "description": "Tu signo ascendente (o ascendente) es el signo zodiacal que ascendía en el horizonte oriental en tu momento y lugar exactos de nacimiento. Representa tu personalidad exterior, reacciones instintivas, tendencias de apariencia y la «máscara» que muestras al conocer a otros. Para hallarlo con precisión necesitas fecha, hora (idealmente de partida de nacimiento) y lugar de nacimiento, ya que el ascendente cambia aproximadamente cada dos horas."
+      },
+      {
+        "title": "¿Por qué la hora de nacimiento es tan importante?",
+        "description": "El ascendente se mueve aproximadamente un grado cada cuatro minutos y recorre los doce signos en 24 horas. Un error de 15 minutos puede cambiar el grado o, en límites de signo, el signo entero. Como el ascendente también define el sistema de casas, una hora inexacta afecta toda la estructura de la carta. Usa la hora más precisa disponible, preferiblemente de registros oficiales."
+      },
+      {
+        "title": "Ascendente frente a signo solar: ¿cuál es la diferencia?",
+        "description": "El signo solar depende solo de la fecha de nacimiento y representa la identidad central. El ascendente depende de la fecha, hora exacta y lugar: muestra tu enfoque instintivo y cómo te perciben al principio. El sol es «quién eres por dentro», el ascendente «cómo te presentas al mundo». Para un análisis sol-luna-ascendente integrado, usa el Generador de Carta Natal."
+      },
+      {
+        "title": "¿Por qué mi ascendente cambia según el lugar?",
+        "description": "El ascendente refleja qué constelación zodiacal aparecía en el horizonte oriental desde tu lugar de nacimiento. Al estar la Tierra en una esfera, el mismo momento UTC en Londres y Nueva York corresponde a horizontes distintos. La función de perspectiva geográfica muestra cómo variaría tu ascendente en varias ciudades."
+      },
+      {
+        "title": "¿Qué precisión tiene esta calculadora del ascendente?",
+        "description": "Usamos cálculos astronómicos profesionales y manejo correcto de zona horaria y coordenadas. La precisión depende de la calidad de tus datos: hora correcta (al minuto), zona horaria verificada y lugar preciso (ciudad o coordenadas) dan resultados muy fiables. La calculadora es precisa; la fiabilidad del resultado depende de tus datos."
+      },
+      {
+        "title": "¿Y si no sé mi hora exacta de nacimiento?",
+        "description": "Puedes usar la calculadora con una hora estimada, pero el ascendente puede ser incorrecto. Si tu estimación está dentro de 1–2 horas, el signo podría coincidir (no así el grado). Si solo sabes mañana/tarde/noche, prueba varios horarios y comprueba si algún ascendente te resuena más. Cuando sea posible, solicita la partida de nacimiento o registros oficiales."
+      },
+      {
+        "title": "¿Puedo calcular el ascendente de otra persona?",
+        "description": "Sí. Introduce su fecha, hora y lugar de nacimiento. La calculadora funciona con cualquier dato. Asegúrate de tener hora y lugar reales para no obtener resultados engañosos. Útil para comparar cartas con pareja, hijos o amigos, o para astrólogos que atienden clientes."
+      },
+      {
+        "title": "¿Qué hacer después de conocer mi ascendente?",
+        "description": "Explora Astrocartography para ver dónde se activan las energías planetarias de tu carta en el mundo. Tu ascendente muestra cómo te relacionas con el mundo; el mapa de Astrocartography muestra los lugares donde temas como carrera, amor, transformación o espiritualidad se manifiestan con más fuerza. Usa el botón de la página de resultados para transferir tus datos y explorar la astrología por ubicación."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Descubre tu ascendente ahora",
+    "description": "Usa nuestra calculadora del ascendente para obtener al instante tu signo ascendente, grado preciso y planeta regente. Ve cómo el mismo momento de nacimiento genera distintos ascendentes en ciudades del mundo y explora tu carta en el mapa con Astrocartography: gratis, preciso y sin registro.",
+    "buttons": [
+      {
+        "title": "Explora tu carta en el mundo → Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Fecha de nacimiento",
+      "birthTime": "Hora de nacimiento (exacta si es posible)",
+      "birthLocation": "Lugar de nacimiento",
+      "timezone": "Zona horaria",
+      "submit": "Calcular ascendente"
+    },
+    "result": {
+      "title": "Tu signo ascendente",
+      "sign": "Signo ascendente",
+      "degree": "Grado",
+      "ruler": "Planeta regente de la carta",
+      "interpretation": "Interpretación",
+      "geoTitle": "Mismo momento — distintas ciudades, distintos ascendentes",
+      "geoSubtitle": "Tu ascendente cambia según el lugar. Descubre el panorama completo con Astrocartography.",
+      "ctaChart": "Explorar mi carta en el mapa mundial"
+    },
+    "errors": {
+      "required": "Completa todos los campos para calcular tu ascendente.",
+      "location": "No encontramos ese lugar. Prueba ciudad y país (p. ej. Nueva York, USA o Londres, UK).",
+      "generic": "Error de cálculo. Comprueba tus datos de nacimiento e inténtalo de nuevo."
+    },
+    "interpretations": {
+      "Aries": "Proyectas energía directa y decidida desde el primer contacto. Te perciben como seguro, activo y sin miedo a los retos. Tu instinto es liderar; afrontas la vida con vitalidad física y espíritu competitivo. Marte, tu regente, imprime iniciativa y valor.",
+      "Taurus": "Transmites calma, solidez y constancia; los demás te ven fiable y reconfortante. Las primeras impresiones destacan tu gusto por la belleza, la calidad y el bienestar. Venus como regente aporta sensualidad y preferencia por la estabilidad. Avanzas a tu ritmo.",
+      "Gemini": "Tu presencia denota curiosidad, facilidad de palabra y agilidad mental. Destacan tu conversación y tu interés por temas diversos. Mercurio, tu regente, te hace adaptable y ávido de información. Abordas la vida mediante la comunicación y manteniendo varias opciones abiertas.",
+      "Cancer": "Apareces como protector, afectuoso y algo reservado al principio. Los demás intuyen profundidad emocional e instinto maternal. La Luna como regente centra tu vida en los sentimientos y la seguridad. El hogar y la familia marcan tu enfoque vital.",
+      "Leo": "Causas una primera impresión cálida, segura y a veces dramática. Tu presencia y seguridad natural llaman la atención. El Sol como regente subraya la identidad, la expresión creativa y la generosidad. Buscas reconocimiento y oportunidades de brillar.",
+      "Virgo": "Te presentas como modesto, preciso y servicial; captas detalles que otros pasan por alto. Destacan tu competencia e inteligencia práctica. Mercurio como regente aporta análisis y orientación al servicio. Buscas mejorar, refinar y hacer que las cosas funcionen mejor.",
+      "Libra": "Transmites diplomacia, amabilidad y orientación a las relaciones. Te perciben encantador y considerado, hábil para encontrar puntos en común. Venus como regente enfatiza equilibrio, estética y pareja. Abordas la vida mediante la conexión y la búsqueda de armonía.",
+      "Scorpio": "Tu primera impresión tiende a la intensidad, la intimidad y la perspicacia; los demás intuyen profundidad aunque estés en guardia. Plutón (moderno) o Marte (tradicional) como regente aportan transformación y complejidad emocional. Buscas la verdad bajo la superficie.",
+      "Sagittarius": "Proyectas apertura, optimismo y amor por la libertad. Tu honestidad, humor y visión amplia destacan al conocerte. Júpiter como regente aporta expansión, filosofía y ganas de explorar. Buscas sentido, aventura y crecer más allá de los límites actuales.",
+      "Capricorn": "Apareces serio, capaz y responsable desde el primer encuentro. Te perciben maduro, ambicioso y algo reservado. Saturno como regente enfatiza estructura, planificación a largo plazo y respeto por el logro. Abordas la vida con disciplina y paciencia.",
+      "Aquarius": "Tu presencia denota originalidad, cierta distancia e independencia intelectual. Destacan tu pensamiento poco convencional e interés por ideas progresistas. Urano (moderno) o Saturno (tradicional) como regente aportan innovación y conciencia grupal. Cuestionas las normas y valoras la libertad individual.",
+      "Pisces": "Transmites suavidad, empatía y permeabilidad; los demás intuyen sensibilidad artística o espiritual. Neptuno (moderno) o Júpiter (tradicional) como regente aportan imaginación, compasión y percepción sutil. Absorbes el entorno y buscas trascender lo cotidiano."
+    }
+  }
+}

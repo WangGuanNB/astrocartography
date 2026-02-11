@@ -14,6 +14,11 @@
         "text": "Looking for a general introduction?",
         "linkText": "Visit Home",
         "url": "/"
+      },
+      {
+        "text": "Find your rising sign first.",
+        "linkText": "Rising Sign Calculator",
+        "url": "/rising-sign-calculator"
       }
     ]
   },

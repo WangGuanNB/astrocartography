@@ -35,6 +35,13 @@
               "url": "/tools/birth-chart-generator",
               "target": "_self",
               "icon": "RiPieChartLine"
+            },
+            {
+              "title": "上升星座计算器",
+              "description": "根据出生时间与地点查询上升星座",
+              "url": "/rising-sign-calculator",
+              "target": "_self",
+              "icon": "RiCompass3Line"
             }
           ]
         },

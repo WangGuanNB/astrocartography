@@ -47,6 +47,13 @@ Allow: /es/tools/birth-chart-generator
 Allow: /pt/tools/birth-chart-generator
 Allow: /it/tools/birth-chart-generator
 
+# 允许 Rising Sign Calculator 页面
+Allow: /rising-sign-calculator
+Allow: /zh/rising-sign-calculator
+Allow: /es/rising-sign-calculator
+Allow: /pt/rising-sign-calculator
+Allow: /it/rising-sign-calculator
+
 # 阻止所有其他页面
 Disallow: /ms
 Disallow: /en

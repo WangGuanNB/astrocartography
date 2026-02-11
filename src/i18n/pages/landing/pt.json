@@ -35,6 +35,13 @@
               "url": "/tools/birth-chart-generator",
               "target": "_self",
               "icon": "RiPieChartLine"
+            },
+            {
+              "title": "Calculadora do Signo Ascendente",
+              "description": "Descubra seu ascendente por data, hora e local",
+              "url": "/rising-sign-calculator",
+              "target": "_self",
+              "icon": "RiCompass3Line"
             }
           ]
         },

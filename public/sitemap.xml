@@ -216,6 +216,48 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Rising Sign Calculator 页面
+  ────────────────────────────────────────────────────────── -->
+  <!-- 英文版本 - 主关键词: rising sign calculator -->
+  <url>
+    <loc>https://astrocarto.org/rising-sign-calculator/</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 中文版本 - 主关键词: 上升星座计算器 -->
+  <url>
+    <loc>https://astrocarto.org/zh/rising-sign-calculator/</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 西班牙语版本 - 主关键词: calculadora del signo ascendente -->
+  <url>
+    <loc>https://astrocarto.org/es/rising-sign-calculator/</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 葡萄牙语版本 - 主关键词: calculadora do signo ascendente -->
+  <url>
+    <loc>https://astrocarto.org/pt/rising-sign-calculator/</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 意大利语版本 - 主关键词: calcolatore segno ascendente -->
+  <url>
+    <loc>https://astrocarto.org/it/rising-sign-calculator/</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ═══════════════════════════════════════════════════════════
   待开放页面 - 完成后删除注释标记即可开放 Google 收录
   ═══════════════════════════════════════════════════════════ -->
