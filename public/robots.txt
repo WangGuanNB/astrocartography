@@ -58,6 +58,7 @@ Allow: /es/rising-sign-calculator
 Allow: /pt/rising-sign-calculator
 Allow: /it/rising-sign-calculator
 Allow: /de/rising-sign-calculator
+Allow: /transit-chart-calculator
 
 # 阻止所有其他页面
 Disallow: /ms

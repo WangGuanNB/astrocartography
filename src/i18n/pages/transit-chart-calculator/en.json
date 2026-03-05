@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "title": "Transit Chart Calculator - Free Transit Chart by Date | AstroCarto",
+    "description": "Free transit chart calculator: see how current planets aspect your birth chart. Enter birth data and a date to get your transit chart with planetary positions and aspects. Then explore your chart on the world map with Astrocartography.",
+    "keywords": "transit chart, transit chart calculator, free transit chart, planetary transits, transit chart by date, natal transit chart"
+  },
+  "intentAnchor": {
+    "text": "Looking for a Transit Chart Calculator? This page gives you the tool first. Enter your birth date, time, and location, then pick a date to see how transiting planets aspect your natal chart. Get your transit chart in seconds, then explore where your chart thrives with Astrocartography."
+  },
+  "internalLinks": {
+    "title": "Related Tools",
+    "items": [
+      {
+        "text": "Need your complete natal chart?",
+        "linkText": "Birth Chart Generator",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "Discover where your chart thrives globally.",
+        "linkText": "Astrocartography Calculator",
+        "url": "/"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What Is a Transit Chart",
+    "label": "INTRODUCTION",
+    "description": "A transit chart compares the current positions of the planets in the sky with the positions in your birth chart. This transit chart calculator shows you how moving planets form aspects to your natal planets on any date you choose. Transits help you understand timing, current themes, and how cosmic weather interacts with your birth blueprint. Use our free transit chart tool to see planetary transits at 12:00 UTC for your chosen day, then take the same birth data to Astrocartography to see where those energies are strongest on the map.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Transit chart calculator showing natal and transit positions"
+    },
+    "items": [
+      {
+        "title": "Why Use a Transit Chart",
+        "description": "A transit chart answers: what is happening in the sky relative to my birth chart today (or on a specific date)? Transiting planets form conjunctions, squares, trines, and other aspects to your natal planets. These transits are used for timing and for understanding current life themes. Our transit chart calculator uses 12:00 UTC for the transit moment to avoid date-boundary confusion across time zones. You get a clear list of transit positions and aspects, then can explore location-based astrology with Astrocartography.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "Transit chart meaning and use" }
+      },
+      {
+        "title": "Transit Chart vs Birth Chart",
+        "description": "Your birth chart is a snapshot of the sky at your birth; a transit chart overlays the sky on a chosen date onto that snapshot. The birth chart is fixed; the transit chart changes every day. This transit chart calculator gives you both: your natal planet positions and the transiting planet positions for your selected date. Aspects between transiting and natal planets are calculated with standard orbs (conjunction and opposition ±8°, square and trine ±6°, sextile ±4°) so results stay professional and readable.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "Transit chart versus birth chart" }
+      },
+      {
+        "title": "From Transit Chart to Astrocartography",
+        "description": "Once you see your transit chart, the next step is seeing where your chart activates in the world. Astrocartography maps your birth chart onto the globe. Use the button below your transit chart results to go to our homepage and create your Astrocartography map with the same birth data. The transit chart shows when; the map shows where.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "From transit chart to world map" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Use Our Transit Chart Calculator",
+    "label": "Core Benefits",
+    "description": "Our transit chart calculator is free and uses the same astronomical standards as professional software. Get your transit chart with natal and transit positions plus aspects in one place, then explore Astrocartography.",
+    "items": [
+      {
+        "title": "Professional-Grade Transit Chart",
+        "description": "We compute geocentric positions for the Sun, Moon, and all classical and outer planets. Transit positions use 12:00 UTC for your chosen date. Aspect orbs follow common practice: conjunction and opposition ±8°, square and trine ±6°, sextile ±4°. Your transit chart is suitable for personal study and for cross-checking with other tools.",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Accurate transit chart calculation" }
+      },
+      {
+        "title": "Free Transit Chart, No Signup",
+        "description": "Generate a transit chart as often as you like without an account. Enter birth data and a transit date to see planetary positions and aspects. Then use the same birth data on our homepage to create your Astrocartography map and see where your chart energies are strongest worldwide.",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Free transit chart calculator" }
+      },
+      {
+        "title": "Clear Aspect List",
+        "description": "The transit chart result shows which transiting planets aspect which natal planets, with orb. You see at a glance the main transits for your chosen date. For deeper interpretation, use our AI-powered reading (uses credits). The free transit chart gives you the data; the map and premium features add location and interpretation.",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Transit chart aspects list" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Use the Transit Chart Calculator",
+    "label": "HOW TO USE",
+    "description": "Get your transit chart in four steps: enter birth data, choose a date, view results, then optionally explore Astrocartography.",
+    "items": [
+      {
+        "title": "Enter Birth Information",
+        "description": "Input your birth date, birth time (as precise as possible), and birth location. Select the timezone that matches your birthplace. The transit chart calculator uses this to compute your natal planet positions. Accurate birth time improves the reliability of your natal positions.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Choose Your Transit Date",
+        "description": "Pick the date you want to see transits for. The calculator uses 12:00 UTC on that date for all transiting planet positions. You can check today, a past date, or a future date to see how transits aspect your birth chart.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "View Your Transit Chart",
+        "description": "Results show your natal positions, the transit positions for your chosen date, and a list of aspects between transiting and natal planets (with orbs). Use this transit chart to see which transits are active and then explore Astrocartography for where those energies manifest on the map.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Explore Astrocartography (Optional)",
+        "description": "Click the button below your transit chart to go to our homepage and create your Astrocartography map with the same birth data. The transit chart shows timing; the world map shows location. Together they give you a full picture.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Transit Chart Calculator Features",
+    "label": "FEATURES",
+    "description": "Our transit chart calculator provides natal and transit positions plus aspects, with a direct path to Astrocartography for location-based insights.",
+    "items": [
+      {
+        "title": "Natal and Transit Positions",
+        "description": "The transit chart shows two sets of positions: your birth chart (natal) and the sky on your chosen date (transit). Both use the same list of planets (Sun through Pluto). Transit positions are calculated at 12:00 UTC for the selected date so the transit chart is consistent across time zones.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Aspect Calculation with Standard Orbs",
+        "description": "Aspects between transiting and natal planets use industry-standard orbs: conjunction and opposition ±8°, square and trine ±6°, sextile ±4°. This keeps your transit chart readable and avoids weak or noisy aspects.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Any Date Transit Chart",
+        "description": "You can generate a transit chart for today, a past date, or a future date. Choose the date that matters to you—e.g. a trip, a decision, or simply today—and see how transits aspect your natal chart on that day.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "One-Click Link to Astrocartography",
+        "description": "After viewing your transit chart, one button takes you to our homepage to create your Astrocartography map with the same birth data. The transit chart answers \"what transits are affecting me\"; the map answers \"where do my chart energies thrive.\"",
+        "icon": "RiMapLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Transit Chart Calculator — Frequently Asked Questions",
+    "description": "Common questions about the transit chart, how to use the transit chart calculator, and how it fits with Astrocartography.",
+    "items": [
+      {
+        "title": "What is a transit chart?",
+        "description": "A transit chart compares the positions of the planets on a chosen date (the transits) with the positions in your birth chart (natal). It shows how current planetary movements aspect your natal planets. Our transit chart calculator uses 12:00 UTC for the transit date so the transit chart is consistent globally."
+      },
+      {
+        "title": "Is this transit chart calculator free?",
+        "description": "Yes. You can generate a transit chart as often as you like without signing up. You get natal positions, transit positions for your chosen date, and a list of aspects. For AI-powered interpretation of your transits, we offer a full reading that uses credits; the free transit chart gives you the data to work with."
+      },
+      {
+        "title": "Why 12:00 UTC for the transit chart?",
+        "description": "We use 12:00 UTC for the transit moment to avoid date-boundary issues. At 0:00 UTC, many users in Asia would see \"yesterday\" in their local date. Using noon UTC keeps the transit chart aligned with the date you select regardless of time zone."
+      },
+      {
+        "title": "What orbs does the transit chart calculator use?",
+        "description": "We use standard orbs: conjunction and opposition ±8°, square and trine ±6°, sextile ±4°. Only aspects within these orbs are shown, so your transit chart stays clear and professional."
+      },
+      {
+        "title": "What should I do after viewing my transit chart?",
+        "description": "Use the button on the result page to go to our homepage and create your Astrocartography map with the same birth data. The transit chart shows when certain energies are active; the map shows where on Earth those energies are strongest. Together they support timing and location decisions."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Create Your Transit Chart, Then Explore the Map",
+    "description": "Use our free transit chart calculator to see how transits aspect your birth chart. Then explore where your chart thrives on the world map with Astrocartography—same birth data, no signup required.",
+    "buttons": [
+      {
+        "title": "Explore my chart on the world map → Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Birth date",
+      "birthTime": "Birth time (exact if possible)",
+      "birthLocation": "Birth location",
+      "timezone": "Timezone",
+      "transitDate": "Transit date",
+      "submit": "Calculate transit chart"
+    },
+    "result": {
+      "title": "Your Transit Chart",
+      "transitDateLabel": "Transit date",
+      "natalTitle": "Natal positions (birth chart)",
+      "transitTitle": "Transit positions",
+      "aspectsTitle": "Active aspects (transit → natal)",
+      "planet": "Planet",
+      "sign": "Sign",
+      "degree": "Degree",
+      "aspect": "Aspect",
+      "orb": "Orb",
+      "ctaChart": "Explore my chart on the world map",
+      "creditsCta": "Want AI-powered interpretation of your transits? Get Full Reading — uses credits"
+    },
+    "errors": {
+      "required": "Please complete all fields to calculate your transit chart.",
+      "location": "Location not found. Try entering a city and country (e.g., New York, USA or London, UK).",
+      "generic": "Calculation error. Please verify your birth data and transit date and try again."
+    }
+  }
+}

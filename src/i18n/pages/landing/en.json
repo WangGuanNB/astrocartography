@@ -46,6 +46,20 @@
           ]
         },
         {
+          "title": "Chart",
+          "icon": "RiPieChart2Line",
+          "url": "/transit-chart-calculator",
+          "children": [
+            {
+              "title": "Transit Chart Calculator",
+              "description": "See how transiting planets aspect your birth chart",
+              "url": "/transit-chart-calculator",
+              "target": "_self",
+              "icon": "RiTimeLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"

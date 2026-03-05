@@ -46,6 +46,20 @@
             ]
           },
           {
+            "title": "Carta",
+            "icon": "RiPieChart2Line",
+            "url": "/transit-chart-calculator",
+            "children": [
+              {
+                "title": "Calcolatore Carta di Transito",
+                "description": "Vedi come i pianeti in transito aspectano la tua carta natale",
+                "url": "/transit-chart-calculator",
+                "target": "_self",
+                "icon": "RiTimeLine"
+              }
+            ]
+          },
+          {
             "title": "Blog",
             "url": "/posts",
             "icon": "RiArticleLine"

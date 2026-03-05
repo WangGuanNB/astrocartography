@@ -1,0 +1,205 @@
+{
+    "metadata": {
+      "title": "Calcolatore Carta di Transito - Carta di Transito Gratis per Data | AstroCarto",
+      "description": "Calcolatore gratuito della carta di transito: vedi come i pianeti attuali aspectano la tua carta natale. Inserisci dati di nascita e una data per ottenere la tua carta di transito con posizioni e aspetti. Poi esplora la tua carta sul mappamondo con Astrocartography.",
+      "keywords": "carta di transito, calcolatore transiti, carta transiti gratis, transiti planetari, carta transiti per data, transiti carta natale"
+    },
+    "intentAnchor": {
+      "text": "Cerchi un calcolatore della carta di transito? Questa pagina ti offre subito lo strumento: inserisci data, ora e luogo di nascita, scegli una data e vedi come i pianeti in transito aspectano la tua carta natale. Ottieni la tua carta di transito in pochi secondi, poi esplora dove la tua carta prospera con Astrocartography."
+    },
+    "internalLinks": {
+      "title": "Strumenti correlati",
+      "items": [
+        {
+          "text": "Ti serve la carta natale completa?",
+          "linkText": "Generatore Tema Natale",
+          "url": "/tools/birth-chart-generator"
+        },
+        {
+          "text": "Scopri dove la tua carta prospera nel mondo.",
+          "linkText": "Calcolatore Astrocartography",
+          "url": "/"
+        }
+      ]
+    },
+    "introduce": {
+      "name": "introduce",
+      "title": "Cos'è una carta di transito",
+      "label": "INTRODUZIONE",
+      "description": "Una carta di transito confronta le posizioni attuali dei pianeti nel cielo con quelle della tua carta natale. Questo calcolatore mostra come i pianeti in movimento formano aspetti ai tuoi pianeti natali nella data che scegli. I transiti aiutano a capire i tempi, i temi attuali e come il «tempo cosmico» interagisce con la tua carta di nascita. Usa il nostro strumento gratuito per vedere i transiti alle 12:00 UTC del giorno scelto, poi porta gli stessi dati ad Astrocartography per vedere dove quelle energie sono più forti sulla mappa.",
+      "image": {
+        "src": "/imgs/features/hero-web.webp",
+        "alt": "Calcolatore carta di transito: posizioni natali e in transito"
+      },
+      "items": [
+        {
+          "title": "Perché usare una carta di transito",
+          "description": "Una carta di transito risponde: cosa sta succedendo nel cielo rispetto alla mia carta natale oggi (o in una data specifica)? I pianeti in transito formano congiunzioni, quadrati, trigoni e altri aspetti ai tuoi pianeti natali. Questi transiti si usano per il timing e per capire i temi di vita attuali. Il nostro calcolatore usa le 12:00 UTC come momento del transito per evitare confusioni di data tra fusi orari. Ottieni una lista chiara di posizioni e aspetti, poi puoi esplorare l'astrologia per luogo con Astrocartography.",
+          "image": { "src": "/imgs/features/1.webp", "alt": "Significato e uso della carta di transito" }
+        },
+        {
+          "title": "Carta di transito vs carta natale",
+          "description": "La tua carta natale è uno snapshot del cielo alla nascita; una carta di transito sovrappone il cielo di una data scelta a quello snapshot. La carta natale è fissa; quella di transito cambia ogni giorno. Questo calcolatore ti dà entrambe: le posizioni natali e quelle in transito per la data scelta. Gli aspetti tra transiti e natali sono calcolati con orbi standard (congiunzione e opposizione ±8°, quadrato e trigono ±6°, sestile ±4°) per risultati professionali e leggibili.",
+          "image": { "src": "/imgs/features/2.webp", "alt": "Carta di transito contro carta natale" }
+        },
+        {
+          "title": "Dalla carta di transito ad Astrocartography",
+          "description": "Una volta vista la tua carta di transito, il passo successivo è vedere dove la tua carta si attiva nel mondo. Astrocartography proietta la tua carta natale sul globo. Usa il pulsante sotto i risultati per andare alla homepage e creare la tua mappa Astrocartography con gli stessi dati di nascita. La carta di transito mostra quando; la mappa mostra dove.",
+          "image": { "src": "/imgs/features/3.webp", "alt": "Dalla carta di transito alla mappa mondiale" }
+        }
+      ]
+    },
+    "benefit": {
+      "name": "benefit",
+      "title": "Perché usare il nostro calcolatore di transiti",
+      "label": "Vantaggi",
+      "description": "Il nostro calcolatore della carta di transito è gratuito e usa gli stessi standard astronomici del software professionale. Ottieni la tua carta con posizioni natali e in transito più aspetti in un unico posto, poi esplora Astrocartography.",
+      "items": [
+        {
+          "title": "Carta di transito di livello professionale",
+          "description": "Calcoliamo le posizioni geocentriche del Sole, della Luna e di tutti i pianeti classici ed esterni. Le posizioni in transito usano le 12:00 UTC della data scelta. Gli orbi degli aspetti seguono la pratica comune: congiunzione e opposizione ±8°, quadrato e trigono ±6°, sestile ±4°. La tua carta di transito è adatta per studio personale e per confronto con altri strumenti.",
+          "icon": "RiShieldCheckLine",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Calcolo preciso della carta di transito" }
+        },
+        {
+          "title": "Carta di transito gratis, senza registrazione",
+          "description": "Genera una carta di transito tutte le volte che vuoi senza account. Inserisci dati di nascita e data di transito per vedere posizioni e aspetti. Poi usa gli stessi dati nella homepage per creare la tua mappa Astrocartography e vedere dove le energie della tua carta sono più forti nel mondo.",
+          "icon": "RiGiftLine",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Calcolatore carta di transito gratuito" }
+        },
+        {
+          "title": "Lista aspetti chiara",
+          "description": "Il risultato mostra quali pianeti in transito aspectano quali pianeti natali e con quale orbe. Vedi a colpo d'occhio i transiti principali della data scelta. Per un'interpretazione più approfondita offriamo una lettura con IA (consuma crediti). La carta di transito gratuita ti dà i dati; la mappa e le funzioni premium aggiungono luogo e interpretazione.",
+          "icon": "RiListCheck",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Lista aspetti della carta di transito" }
+        }
+      ]
+    },
+    "usage": {
+      "name": "usage",
+      "title": "Come usare il calcolatore di transiti",
+      "label": "COME USARE",
+      "description": "Ottieni la tua carta di transito in quattro passi: inserisci i dati di nascita, scegli la data, consulta i risultati e opzionalmente esplora Astrocartography.",
+      "items": [
+        {
+          "title": "Inserisci i dati di nascita",
+          "description": "Indica data, ora (il più precisa possibile) e luogo di nascita. Seleziona il fuso orario del luogo di nascita. Il calcolatore li usa per calcolare le posizioni natali. Un'ora di nascita precisa migliora l'affidabilità.",
+          "icon": "RiCalendarLine"
+        },
+        {
+          "title": "Scegli la data di transito",
+          "description": "Scegli la data per cui vuoi vedere i transiti. Il calcolatore usa le 12:00 UTC di quella data per tutte le posizioni in transito. Puoi controllare oggi, una data passata o futura.",
+          "icon": "RiTimeLine"
+        },
+        {
+          "title": "Consulta la tua carta di transito",
+          "description": "I risultati mostrano le posizioni natali, quelle in transito per la data scelta e l'elenco degli aspetti tra transiti e natali (con orbi). Usa questa carta per vedere quali transiti sono attivi e poi esplora Astrocartography.",
+          "icon": "RiPieChartLine"
+        },
+        {
+          "title": "Esplora Astrocartography (opzionale)",
+          "description": "Clicca il pulsante sotto la tua carta di transito per andare alla homepage e creare la tua mappa Astrocartography con gli stessi dati. La carta di transito mostra il quando; la mappa mondiale mostra il dove.",
+          "icon": "RiArrowRightLine"
+        }
+      ]
+    },
+    "feature": {
+      "name": "feature",
+      "title": "Funzioni del calcolatore di transiti",
+      "label": "FUNZIONI",
+      "description": "Il nostro calcolatore offre posizioni natali e in transito più aspetti, con un collegamento diretto ad Astrocartography per insight per luogo.",
+      "items": [
+        {
+          "title": "Posizioni natali e in transito",
+          "description": "La carta di transito mostra due set: la tua carta natale e il cielo nella data scelta. Entrambi usano la stessa lista di pianeti (Sole a Plutone). Le posizioni in transito sono calcolate alle 12:00 UTC della data selezionata.",
+          "icon": "RiTableLine"
+        },
+        {
+          "title": "Aspetti con orbi standard",
+          "description": "Gli aspetti tra transiti e natali usano orbi di uso comune: congiunzione e opposizione ±8°, quadrato e trigono ±6°, sestile ±4°. Così la carta resta leggibile e senza aspetti deboli o rumorosi.",
+          "icon": "RiCompassLine"
+        },
+        {
+          "title": "Carta di transito per qualsiasi data",
+          "description": "Puoi generare una carta per oggi, una data passata o futura. Scegli la data che ti interessa e vedi come i transiti aspectano la tua carta natale quel giorno.",
+          "icon": "RiCalendarLine"
+        },
+        {
+          "title": "Un clic ad Astrocartography",
+          "description": "Dopo aver visto la tua carta di transito, un pulsante ti porta alla homepage per creare la tua mappa Astrocartography con gli stessi dati. La carta risponde «quali transiti mi riguardano»; la mappa risponde «dove prosperano le energie della mia carta».",
+          "icon": "RiMapLine"
+        }
+      ]
+    },
+    "faq": {
+      "name": "faq",
+      "label": "FAQ",
+      "title": "Calcolatore di transiti — Domande frequenti",
+      "description": "Domande comuni sulla carta di transito, come usare il calcolatore e il suo legame con Astrocartography.",
+      "items": [
+        {
+          "title": "Cos'è una carta di transito?",
+          "description": "Una carta di transito confronta le posizioni dei pianeti in una data scelta (i transiti) con quelle della tua carta natale. Mostra come i movimenti planetari attuali aspectano i tuoi pianeti natali. Il nostro calcolatore usa le 12:00 UTC per la data di transito, così la carta è coerente a livello globale."
+        },
+        {
+          "title": "Questo calcolatore di transiti è gratuito?",
+          "description": "Sì. Puoi generare una carta di transito tutte le volte che vuoi senza registrarti. Ottieni posizioni natali, in transito per la data scelta e lista degli aspetti. Per un'interpretazione con IA offriamo una lettura completa che consuma crediti; la carta gratuita ti dà i dati."
+        },
+        {
+          "title": "Perché le 12:00 UTC per la carta di transito?",
+          "description": "Usiamo le 12:00 UTC come momento del transito per evitare problemi di cambio data. Alle 0:00 UTC molti utenti in Asia vedrebbero «ieri» nella loro data locale. Usare mezzogiorno UTC mantiene la carta allineata alla data che scegli indipendentemente dal fuso orario."
+        },
+        {
+          "title": "Quali orbi usa il calcolatore?",
+          "description": "Usiamo orbi standard: congiunzione e opposizione ±8°, quadrato e trigono ±6°, sestile ±4°. Vengono mostrati solo gli aspetti entro questi orbi così la carta resta chiara e professionale."
+        },
+        {
+          "title": "Cosa fare dopo aver visto la mia carta di transito?",
+          "description": "Usa il pulsante nella pagina dei risultati per andare alla homepage e creare la tua mappa Astrocartography con gli stessi dati. La carta di transito mostra quando certe energie sono attive; la mappa mostra dove sulla Terra sono più forti. Insieme supportano decisioni di tempo e luogo."
+        }
+      ]
+    },
+    "cta": {
+      "name": "cta",
+      "title": "Crea la tua carta di transito e esplora la mappa",
+      "description": "Usa il nostro calcolatore gratuito per vedere come i transiti aspectano la tua carta natale. Poi esplora dove la tua carta prospera sulla mappa mondiale con Astrocartography — stessi dati, nessuna registrazione.",
+      "buttons": [
+        {
+          "title": "Esplora la mia carta sulla mappa mondiale → Astrocartography",
+          "icon": "RiMapLine",
+          "url": "/",
+          "target": "_self",
+          "variant": "default"
+        }
+      ]
+    },
+    "tool": {
+      "form": {
+        "birthDate": "Data di nascita",
+        "birthTime": "Ora di nascita (esatta se possibile)",
+        "birthLocation": "Luogo di nascita",
+        "timezone": "Fuso orario",
+        "transitDate": "Data di transito",
+        "submit": "Calcola carta di transito"
+      },
+      "result": {
+        "title": "La tua carta di transito",
+        "transitDateLabel": "Data di transito",
+        "natalTitle": "Posizioni natali (carta natale)",
+        "transitTitle": "Posizioni in transito",
+        "aspectsTitle": "Aspetti attivi (transito → natale)",
+        "planet": "Pianeta",
+        "sign": "Segno",
+        "degree": "Grado",
+        "aspect": "Aspetto",
+        "orb": "Orbe",
+        "ctaChart": "Esplora la mia carta sulla mappa mondiale",
+        "creditsCta": "Vuoi un'interpretazione con IA dei tuoi transiti? Ottieni la lettura completa — consuma crediti"
+      },
+      "errors": {
+        "required": "Completa tutti i campi per calcolare la tua carta di transito.",
+        "location": "Luogo non trovato. Prova con città e paese (es. Roma, Italia o Londra, Regno Unito).",
+        "generic": "Errore di calcolo. Verifica i dati di nascita e la data di transito e riprova."
+      }
+    }
+  }

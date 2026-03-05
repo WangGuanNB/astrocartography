@@ -1,0 +1,205 @@
+{
+    "metadata": {
+      "title": "Calculadora de Tránsitos - Carta de Tránsitos Gratis por Fecha | AstroCarto",
+      "description": "Calculadora de carta de tránsitos gratis: ve cómo los planetas actuales aspectan tu carta natal. Introduce datos de nacimiento y una fecha para obtener tu carta de tránsitos con posiciones y aspectos. Luego explora tu carta en el mapa mundial con Astrocartography.",
+      "keywords": "carta de tránsitos, calculadora tránsitos, carta tránsitos gratis, tránsitos planetarios, carta tránsitos por fecha, tránsitos carta natal"
+    },
+    "intentAnchor": {
+      "text": "¿Buscas una calculadora de carta de tránsitos? Esta página te da primero la herramienta: introduce fecha, hora y lugar de nacimiento, elige una fecha y verás cómo los planetas en tránsito aspectan tu carta natal. Obtén tu carta de tránsitos en segundos y explora dónde tu carta prospera con Astrocartography."
+    },
+    "internalLinks": {
+      "title": "Herramientas relacionadas",
+      "items": [
+        {
+          "text": "¿Necesitas tu carta natal completa?",
+          "linkText": "Generador de Carta Natal",
+          "url": "/tools/birth-chart-generator"
+        },
+        {
+          "text": "Descubre dónde tu carta prospera en el mundo.",
+          "linkText": "Calculadora Astrocartography",
+          "url": "/"
+        }
+      ]
+    },
+    "introduce": {
+      "name": "introduce",
+      "title": "Qué es una carta de tránsitos",
+      "label": "INTRODUCCIÓN",
+      "description": "Una carta de tránsitos compara las posiciones actuales de los planetas en el cielo con las de tu carta natal. Esta calculadora te muestra cómo los planetas en movimiento forman aspectos a tus planetas natales en la fecha que elijas. Los tránsitos ayudan a entender el momento, los temas actuales y cómo el «tiempo cósmico» interactúa con tu carta de nacimiento. Usa nuestra herramienta gratuita para ver los tránsitos a las 12:00 UTC del día elegido y luego lleva los mismos datos a Astrocartography para ver dónde esas energías son más fuertes en el mapa.",
+      "image": {
+        "src": "/imgs/features/hero-web.webp",
+        "alt": "Calculadora de carta de tránsitos: posiciones natal y tránsitos"
+      },
+      "items": [
+        {
+          "title": "Por qué usar una carta de tránsitos",
+          "description": "Una carta de tránsitos responde: ¿qué está pasando en el cielo respecto a mi carta natal hoy (o en una fecha concreta)? Los planetas en tránsito forman conjunciones, cuadraturas, trinos y otros aspectos a tus planetas natales. Estos tránsitos se usan para el timing y para entender temas de vida actuales. Nuestra calculadora usa 12:00 UTC como momento del tránsito para evitar confusiones de fecha entre zonas horarias. Obtienes una lista clara de posiciones y aspectos, y luego puedes explorar astrología por ubicación con Astrocartography.",
+          "image": { "src": "/imgs/features/1.webp", "alt": "Significado y uso de la carta de tránsitos" }
+        },
+        {
+          "title": "Carta de tránsitos vs carta natal",
+          "description": "Tu carta natal es una foto del cielo al nacer; una carta de tránsitos superpone el cielo de una fecha elegida sobre esa foto. La carta natal es fija; la de tránsitos cambia cada día. Esta calculadora te da ambas: tus posiciones natales y las posiciones en tránsito para la fecha elegida. Los aspectos entre tránsitos y natales se calculan con orbes estándar (conjunción y oposición ±8°, cuadratura y trino ±6°, sextil ±4°) para resultados profesionales y legibles.",
+          "image": { "src": "/imgs/features/2.webp", "alt": "Carta de tránsitos frente a carta natal" }
+        },
+        {
+          "title": "De la carta de tránsitos a Astrocartography",
+          "description": "Una vez vista tu carta de tránsitos, el siguiente paso es ver dónde se activa tu carta en el mundo. Astrocartography proyecta tu carta natal en el globo. Usa el botón bajo los resultados para ir a la página principal y crear tu mapa Astrocartography con los mismos datos de nacimiento. La carta de tránsitos muestra cuándo; el mapa muestra dónde.",
+          "image": { "src": "/imgs/features/3.webp", "alt": "De carta de tránsitos al mapa mundial" }
+        }
+      ]
+    },
+    "benefit": {
+      "name": "benefit",
+      "title": "Por qué usar nuestra calculadora de tránsitos",
+      "label": "Beneficios",
+      "description": "Nuestra calculadora de carta de tránsitos es gratis y usa los mismos estándares astronómicos que el software profesional. Obtén tu carta con posiciones natal y tránsitos más aspectos en un solo lugar y luego explora Astrocartography.",
+      "items": [
+        {
+          "title": "Carta de tránsitos de nivel profesional",
+          "description": "Calculamos posiciones geocéntricas del Sol, la Luna y todos los planetas clásicos y exteriores. Las posiciones de tránsito usan 12:00 UTC de la fecha elegida. Los orbes de aspectos siguen la práctica habitual: conjunción y oposición ±8°, cuadratura y trino ±6°, sextil ±4°. Tu carta de tránsitos es adecuada para estudio personal y para cruzar con otras herramientas.",
+          "icon": "RiShieldCheckLine",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Cálculo preciso de carta de tránsitos" }
+        },
+        {
+          "title": "Carta de tránsitos gratis, sin registro",
+          "description": "Genera una carta de tránsitos tantas veces como quieras sin cuenta. Introduce datos de nacimiento y fecha de tránsito para ver posiciones y aspectos. Luego usa los mismos datos en la página principal para crear tu mapa Astrocartography y ver dónde las energías de tu carta son más fuertes en el mundo.",
+          "icon": "RiGiftLine",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora de carta de tránsitos gratis" }
+        },
+        {
+          "title": "Lista clara de aspectos",
+          "description": "El resultado muestra qué planetas en tránsito aspectan a qué planetas natales y con qué orbe. Ves de un vistazo los tránsitos principales de la fecha elegida. Para una interpretación más profunda ofrecemos una lectura con IA (consume créditos). La carta de tránsitos gratis te da los datos; el mapa y las funciones premium añaden ubicación e interpretación.",
+          "icon": "RiListCheck",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Lista de aspectos de la carta de tránsitos" }
+        }
+      ]
+    },
+    "usage": {
+      "name": "usage",
+      "title": "Cómo usar la calculadora de tránsitos",
+      "label": "CÓMO USAR",
+      "description": "Obtén tu carta de tránsitos en cuatro pasos: introduce datos de nacimiento, elige fecha, revisa resultados y opcionalmente explora Astrocartography.",
+      "items": [
+        {
+          "title": "Introduce los datos de nacimiento",
+          "description": "Indica fecha, hora (lo más precisa posible) y lugar de nacimiento. Selecciona la zona horaria de tu lugar de nacimiento. La calculadora usa esto para calcular tus posiciones natales. Una hora de nacimiento precisa mejora la fiabilidad.",
+          "icon": "RiCalendarLine"
+        },
+        {
+          "title": "Elige la fecha de tránsito",
+          "description": "Elige la fecha para la que quieres ver los tránsitos. La calculadora usa 12:00 UTC de esa fecha para todas las posiciones en tránsito. Puedes consultar hoy, una fecha pasada o futura.",
+          "icon": "RiTimeLine"
+        },
+        {
+          "title": "Revisa tu carta de tránsitos",
+          "description": "Los resultados muestran tus posiciones natales, las de tránsito para la fecha elegida y la lista de aspectos entre tránsitos y natales (con orbes). Usa esta carta para ver qué tránsitos están activos y luego explora Astrocartography.",
+          "icon": "RiPieChartLine"
+        },
+        {
+          "title": "Explorar Astrocartography (opcional)",
+          "description": "Haz clic en el botón bajo tu carta de tránsitos para ir a la página principal y crear tu mapa Astrocartography con los mismos datos. La carta de tránsitos muestra el cuándo; el mapa mundial muestra el dónde.",
+          "icon": "RiArrowRightLine"
+        }
+      ]
+    },
+    "feature": {
+      "name": "feature",
+      "title": "Funciones de la calculadora de tránsitos",
+      "label": "FUNCIONES",
+      "description": "Nuestra calculadora ofrece posiciones natal y tránsitos más aspectos, con un enlace directo a Astrocartography para insights por ubicación.",
+      "items": [
+        {
+          "title": "Posiciones natal y tránsitos",
+          "description": "La carta de tránsitos muestra dos conjuntos: tu carta natal y el cielo en la fecha elegida. Ambos usan la misma lista de planetas (Sol a Plutón). Las posiciones de tránsito se calculan a las 12:00 UTC de la fecha seleccionada.",
+          "icon": "RiTableLine"
+        },
+        {
+          "title": "Aspectos con orbes estándar",
+          "description": "Los aspectos entre tránsitos y natales usan orbes habituales: conjunción y oposición ±8°, cuadratura y trino ±6°, sextil ±4°. Así la carta se mantiene legible y sin aspectos débiles o ruidosos.",
+          "icon": "RiCompassLine"
+        },
+        {
+          "title": "Carta de tránsitos para cualquier fecha",
+          "description": "Puedes generar una carta para hoy, una fecha pasada o futura. Elige la fecha que te interese y ve cómo los tránsitos aspectan tu carta natal ese día.",
+          "icon": "RiCalendarLine"
+        },
+        {
+          "title": "Un clic a Astrocartography",
+          "description": "Tras ver tu carta de tránsitos, un botón te lleva a la página principal para crear tu mapa Astrocartography con los mismos datos. La carta responde «qué tránsitos me afectan»; el mapa responde «dónde prosperan las energías de mi carta».",
+          "icon": "RiMapLine"
+        }
+      ]
+    },
+    "faq": {
+      "name": "faq",
+      "label": "FAQ",
+      "title": "Calculadora de tránsitos — Preguntas frecuentes",
+      "description": "Preguntas habituales sobre la carta de tránsitos, cómo usar la calculadora y su relación con Astrocartography.",
+      "items": [
+        {
+          "title": "¿Qué es una carta de tránsitos?",
+          "description": "Una carta de tránsitos compara las posiciones de los planetas en una fecha elegida (los tránsitos) con las de tu carta natal. Muestra cómo los movimientos planetarios actuales aspectan tus planetas natales. Nuestra calculadora usa 12:00 UTC para la fecha de tránsito, así la carta es consistente globalmente."
+        },
+        {
+          "title": "¿Esta calculadora de tránsitos es gratis?",
+          "description": "Sí. Puedes generar una carta de tránsitos tantas veces como quieras sin registrarte. Obtienes posiciones natales, de tránsito para la fecha elegida y lista de aspectos. Para interpretación con IA ofrecemos una lectura completa que consume créditos; la carta gratis te da los datos."
+        },
+        {
+          "title": "¿Por qué 12:00 UTC para la carta de tránsitos?",
+          "description": "Usamos 12:00 UTC como momento del tránsito para evitar problemas de cambio de fecha. A las 0:00 UTC muchos usuarios en Asia verían «ayer» en su fecha local. Usar mediodía UTC mantiene la carta alineada con la fecha que eliges sin importar la zona horaria."
+        },
+        {
+          "title": "¿Qué orbes usa la calculadora?",
+          "description": "Usamos orbes estándar: conjunción y oposición ±8°, cuadratura y trino ±6°, sextil ±4°. Solo se muestran aspectos dentro de estos orbes para que la carta se mantenga clara y profesional."
+        },
+        {
+          "title": "¿Qué hacer después de ver mi carta de tránsitos?",
+          "description": "Usa el botón de la página de resultados para ir a la página principal y crear tu mapa Astrocartography con los mismos datos. La carta de tránsitos muestra cuándo están activas ciertas energías; el mapa muestra dónde en la Tierra son más fuertes. Juntos apoyan decisiones de momento y lugar."
+        }
+      ]
+    },
+    "cta": {
+      "name": "cta",
+      "title": "Crea tu carta de tránsitos y explora el mapa",
+      "description": "Usa nuestra calculadora gratuita para ver cómo los tránsitos aspectan tu carta natal. Luego explora dónde tu carta prospera en el mapa mundial con Astrocartography — mismos datos, sin registro.",
+      "buttons": [
+        {
+          "title": "Explorar mi carta en el mapa mundial → Astrocartography",
+          "icon": "RiMapLine",
+          "url": "/",
+          "target": "_self",
+          "variant": "default"
+        }
+      ]
+    },
+    "tool": {
+      "form": {
+        "birthDate": "Fecha de nacimiento",
+        "birthTime": "Hora de nacimiento (exacta si es posible)",
+        "birthLocation": "Lugar de nacimiento",
+        "timezone": "Zona horaria",
+        "transitDate": "Fecha de tránsito",
+        "submit": "Calcular carta de tránsitos"
+      },
+      "result": {
+        "title": "Tu carta de tránsitos",
+        "transitDateLabel": "Fecha de tránsito",
+        "natalTitle": "Posiciones natales (carta natal)",
+        "transitTitle": "Posiciones en tránsito",
+        "aspectsTitle": "Aspectos activos (tránsito → natal)",
+        "planet": "Planeta",
+        "sign": "Signo",
+        "degree": "Grado",
+        "aspect": "Aspecto",
+        "orb": "Orbe",
+        "ctaChart": "Explorar mi carta en el mapa mundial",
+        "creditsCta": "¿Quieres interpretación con IA de tus tránsitos? Obtén la lectura completa — consume créditos"
+      },
+      "errors": {
+        "required": "Completa todos los campos para calcular tu carta de tránsitos.",
+        "location": "No se encontró el lugar. Prueba con ciudad y país (ej.: Madrid, España o Londres, Reino Unido).",
+        "generic": "Error de cálculo. Verifica tus datos de nacimiento y la fecha de tránsito e inténtalo de nuevo."
+      }
+    }
+  }

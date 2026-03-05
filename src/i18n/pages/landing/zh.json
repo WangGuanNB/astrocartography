@@ -46,6 +46,20 @@
           ]
         },
         {
+          "title": "星盘",
+          "icon": "RiPieChart2Line",
+          "url": "/transit-chart-calculator",
+          "children": [
+            {
+              "title": "过运盘计算器",
+              "description": "查看行运行星如何与本命盘形成相位",
+              "url": "/transit-chart-calculator",
+              "target": "_self",
+              "icon": "RiTimeLine"
+            }
+          ]
+        },
+        {
           "title": "博客",
           "url": "/posts",
           "icon": "RiArticleLine"

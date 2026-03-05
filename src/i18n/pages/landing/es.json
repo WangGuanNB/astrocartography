@@ -46,6 +46,20 @@
           ]
         },
         {
+          "title": "Carta",
+          "icon": "RiPieChart2Line",
+          "url": "/transit-chart-calculator",
+          "children": [
+            {
+              "title": "Calculadora de Tránsitos",
+              "description": "Ver cómo los planetas en tránsito aspectan tu carta natal",
+              "url": "/transit-chart-calculator",
+              "target": "_self",
+              "icon": "RiTimeLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"

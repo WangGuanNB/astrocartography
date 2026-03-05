@@ -1,0 +1,205 @@
+{
+    "metadata": {
+      "title": "Transit Chart Rechner – Kostenlose Transitchart nach Datum | AstroCarto",
+      "description": "Kostenloser Transitchart-Rechner: sehen Sie, wie aktuelle Planeten Ihre Geburtskarte aspectieren. Geburtsdaten und ein Datum eingeben – Transitchart mit Planetenpositionen und Aspekten. Dann Ihre Karte auf der Weltkarte mit Astrokartografie erkunden.",
+      "keywords": "Transitchart, Transit Chart Rechner, kostenlose Transitchart, Planeten-Transite, Transitchart nach Datum, Geburtskarte Transite"
+    },
+    "intentAnchor": {
+      "text": "Sie suchen einen Transit Chart Rechner? Diese Seite liefert zuerst das Tool: Geburtsdatum, -zeit und -ort eingeben, ein Datum wählen und sehen, wie Transite Ihre Geburtskarte aspectieren. Holen Sie sich Ihre Transitchart in Sekunden und erkunden Sie, wo Ihre Karte mit Astrokartografie gedeiht."
+    },
+    "internalLinks": {
+      "title": "Verwandte Tools",
+      "items": [
+        {
+          "text": "Vollständiges Geburtshoroskop benötigt?",
+          "linkText": "Geburtshoroskop Generator",
+          "url": "/tools/birth-chart-generator"
+        },
+        {
+          "text": "Wo Ihr Chart global gedeiht.",
+          "linkText": "Astrokartografie Rechner",
+          "url": "/"
+        }
+      ]
+    },
+    "introduce": {
+      "name": "introduce",
+      "title": "Was ist eine Transitchart",
+      "label": "EINFÜHRUNG",
+      "description": "Eine Transitchart vergleicht die aktuellen Planetenpositionen am Himmel mit denen Ihrer Geburtskarte. Dieser Rechner zeigt, wie sich bewegende Planeten Aspekte zu Ihren Geburtsplaneten am von Ihnen gewählten Datum bilden. Transite helfen, Timing, aktuelle Themen und das Zusammenspiel von «kosmischem Wetter» mit Ihrer Geburtskarte zu verstehen. Nutzen Sie unser kostenloses Tool für Transite um 12:00 UTC am gewählten Tag und nehmen Sie dieselben Geburtsdaten mit zur Astrokartografie, um zu sehen, wo diese Energien auf der Karte am stärksten sind.",
+      "image": {
+        "src": "/imgs/features/hero-web.webp",
+        "alt": "Transit Chart Rechner: Geburts- und Transitpositionen"
+      },
+      "items": [
+        {
+          "title": "Warum eine Transitchart nutzen",
+          "description": "Eine Transitchart beantwortet: Was passiert am Himmel relativ zu meiner Geburtskarte heute (oder an einem bestimmten Datum)? Transite bilden Konjunktionen, Quadrate, Trigone und andere Aspekte zu Ihren Geburtsplaneten. Diese Transite dienen dem Timing und dem Verständnis aktueller Lebensthemen. Unser Rechner nutzt 12:00 UTC als Transitmoment, um Datumsgrenzen-Verwirrung über Zeitzonen zu vermeiden. Sie erhalten eine klare Liste von Transitpositionen und Aspekten und können standortbezogene Astrologie mit Astrokartografie erkunden.",
+          "image": { "src": "/imgs/features/1.webp", "alt": "Bedeutung und Nutzen der Transitchart" }
+        },
+        {
+          "title": "Transitchart vs. Geburtshoroskop",
+          "description": "Ihre Geburtskarte ist eine Momentaufnahme des Himmels bei der Geburt; eine Transitchart legt den Himmel eines gewählten Datums über diese Aufnahme. Die Geburtskarte ist fix; die Transitchart ändert sich täglich. Dieser Rechner liefert beides: Ihre Geburtsplanetenpositionen und die Transitpositionen für Ihr gewähltes Datum. Aspekte zwischen Transiten und Geburtsplaneten werden mit Standardorben berechnet (Konjunktion und Opposition ±8°, Quadrat und Trigon ±6°, Sextil ±4°) für professionelle, lesbare Ergebnisse.",
+          "image": { "src": "/imgs/features/2.webp", "alt": "Transitchart gegenüber Geburtskarte" }
+        },
+        {
+          "title": "Von der Transitchart zur Astrokartografie",
+          "description": "Sobald Sie Ihre Transitchart gesehen haben, ist der nächste Schritt zu sehen, wo Ihre Karte weltweit aktiv wird. Astrokartografie projiziert Ihre Geburtskarte auf den Globus. Nutzen Sie den Button unter den Ergebnissen, um zur Startseite zu gehen und Ihre Astrokartografie-Karte mit denselben Geburtsdaten zu erstellen. Die Transitchart zeigt wann; die Karte zeigt wo.",
+          "image": { "src": "/imgs/features/3.webp", "alt": "Von Transitchart zur Weltkarte" }
+        }
+      ]
+    },
+    "benefit": {
+      "name": "benefit",
+      "title": "Warum unseren Transit Chart Rechner nutzen",
+      "label": "Kernvorteile",
+      "description": "Unser Transit Chart Rechner ist kostenlos und nutzt dieselben astronomischen Standards wie Profi-Software. Holen Sie sich Ihre Transitchart mit Geburts- und Transitpositionen plus Aspekten an einem Ort, dann Astrokartografie erkunden.",
+      "items": [
+        {
+          "title": "Transitchart in Profi-Qualität",
+          "description": "Wir berechnen geozentrische Positionen für Sonne, Mond und alle klassischen und äußeren Planeten. Transitpositionen nutzen 12:00 UTC für Ihr gewähltes Datum. Aspektorben folgen gängiger Praxis: Konjunktion und Opposition ±8°, Quadrat und Trigon ±6°, Sextil ±4°. Ihre Transitchart eignet sich für persönliches Studium und zum Abgleich mit anderen Tools.",
+          "icon": "RiShieldCheckLine",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Präzise Transitchart-Berechnung" }
+        },
+        {
+          "title": "Kostenlose Transitchart, ohne Anmeldung",
+          "description": "Erzeugen Sie so oft Sie möchten eine Transitchart ohne Konto. Geburtsdaten und Transitdatum eingeben für Planetenpositionen und Aspekte. Dann dieselben Daten auf der Startseite nutzen, um Ihre Astrokartografie-Karte zu erstellen und zu sehen, wo Ihre Chart-Energien weltweit am stärksten sind.",
+          "icon": "RiGiftLine",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Transit Chart Rechner" }
+        },
+        {
+          "title": "Klare Aspektliste",
+          "description": "Das Ergebnis zeigt, welche Transite welche Geburtsplaneten aspectieren und mit welchem Orbis. Sie sehen auf einen Blick die Haupttransite für Ihr gewähltes Datum. Für tiefere Deutung bieten wir eine KI-gestützte Lesung (verbraucht Credits); die kostenlose Transitchart liefert die Daten; Karte und Premium-Funktionen ergänzen Ort und Deutung.",
+          "icon": "RiListCheck",
+          "image": { "src": "/imgs/features/4.webp", "alt": "Transitchart Aspektliste" }
+        }
+      ]
+    },
+    "usage": {
+      "name": "usage",
+      "title": "So nutzen Sie den Transit Chart Rechner",
+      "label": "SO NUTZEN SIE",
+      "description": "Ihre Transitchart in vier Schritten: Geburtsdaten eingeben, Datum wählen, Ergebnisse ansehen, optional Astrokartografie erkunden.",
+      "items": [
+        {
+          "title": "Geburtsdaten eingeben",
+          "description": "Geburtsdatum, -zeit (so genau wie möglich) und -ort angeben. Zeitzone zum Geburtsort wählen. Der Rechner nutzt dies für Ihre Geburtsplanetenpositionen. Genaue Geburtszeit verbessert die Zuverlässigkeit.",
+          "icon": "RiCalendarLine"
+        },
+        {
+          "title": "Transitdatum wählen",
+          "description": "Wählen Sie das Datum, für das Sie Transite sehen möchten. Der Rechner nutzt 12:00 UTC an diesem Tag für alle Transitpositionen. Sie können heute, ein vergangenes oder zukünftiges Datum prüfen.",
+          "icon": "RiTimeLine"
+        },
+        {
+          "title": "Ihre Transitchart ansehen",
+          "description": "Ergebnisse zeigen Ihre Geburtspositionen, die Transitpositionen für Ihr gewähltes Datum und die Liste der Aspekte zwischen Transiten und Geburtsplaneten (mit Orben). Nutzen Sie diese Transitchart, um aktive Transite zu sehen, dann Astrokartografie für die Orte, an denen diese Energien auf der Karte wirken.",
+          "icon": "RiPieChartLine"
+        },
+        {
+          "title": "Astrokartografie erkunden (optional)",
+          "description": "Klicken Sie den Button unter Ihrer Transitchart, um zur Startseite zu gehen und Ihre Astrokartografie-Karte mit denselben Geburtsdaten zu erstellen. Die Transitchart zeigt das Wann; die Weltkarte zeigt das Wo.",
+          "icon": "RiArrowRightLine"
+        }
+      ]
+    },
+    "feature": {
+      "name": "feature",
+      "title": "Transit Chart Rechner – Funktionen",
+      "label": "FUNKTIONEN",
+      "description": "Unser Rechner liefert Geburts- und Transitpositionen plus Aspekte, mit direktem Weg zur Astrokartografie für standortbezogene Einblicke.",
+      "items": [
+        {
+          "title": "Geburts- und Transitpositionen",
+          "description": "Die Transitchart zeigt zwei Sätze: Ihre Geburtskarte und den Himmel an Ihrem gewählten Datum. Beide nutzen dieselbe Planetenliste (Sonne bis Pluto). Transitpositionen werden um 12:00 UTC des gewählten Datums berechnet, die Transitchart ist damit zeitzonenübergreifend konsistent.",
+          "icon": "RiTableLine"
+        },
+        {
+          "title": "Aspektberechnung mit Standardorben",
+          "description": "Aspekte zwischen Transiten und Geburtsplaneten nutzen übliche Orben: Konjunktion und Opposition ±8°, Quadrat und Trigon ±6°, Sextil ±4°. So bleibt Ihre Transitchart lesbar und ohne schwache oder verrauschte Aspekte.",
+          "icon": "RiCompassLine"
+        },
+        {
+          "title": "Transitchart für beliebiges Datum",
+          "description": "Sie können eine Transitchart für heute, ein vergangenes oder zukünftiges Datum erzeugen. Wählen Sie das für Sie relevante Datum und sehen Sie, wie Transite an diesem Tag Ihre Geburtskarte aspectieren.",
+          "icon": "RiCalendarLine"
+        },
+        {
+          "title": "Ein Klick zur Astrokartografie",
+          "description": "Nach dem Ansehen Ihrer Transitchart bringt Sie ein Button zur Startseite, um Ihre Astrokartografie-Karte mit denselben Geburtsdaten zu erstellen. Die Transitchart beantwortet «welche Transite betreffen mich»; die Karte beantwortet «wo gedeihen meine Chart-Energien».",
+          "icon": "RiMapLine"
+        }
+      ]
+    },
+    "faq": {
+      "name": "faq",
+      "label": "FAQ",
+      "title": "Transit Chart Rechner — Häufige Fragen",
+      "description": "Häufige Fragen zur Transitchart, zur Nutzung des Rechners und zur Verbindung mit Astrokartografie.",
+      "items": [
+        {
+          "title": "Was ist eine Transitchart?",
+          "description": "Eine Transitchart vergleicht die Planetenpositionen an einem gewählten Datum (die Transite) mit denen Ihrer Geburtskarte. Sie zeigt, wie aktuelle Planetenbewegungen Ihre Geburtsplaneten aspectieren. Unser Rechner nutzt 12:00 UTC für das Transitdatum, sodass die Transitchart global konsistent ist."
+        },
+        {
+          "title": "Ist dieser Transit Chart Rechner kostenlos?",
+          "description": "Ja. Sie können so oft Sie möchten eine Transitchart erzeugen, ohne sich anzumelden. Sie erhalten Geburtspositionen, Transitpositionen für Ihr gewähltes Datum und eine Aspektliste. Für KI-gestützte Deutung Ihrer Transite bieten wir eine vollständige Lesung (verbraucht Credits); die kostenlose Transitchart liefert die Daten."
+        },
+        {
+          "title": "Warum 12:00 UTC für die Transitchart?",
+          "description": "Wir nutzen 12:00 UTC als Transitmoment, um Datumsgrenzen-Probleme zu vermeiden. Um 0:00 UTC würden viele Nutzer in Asien «gestern» als lokales Datum sehen. Mittag UTC hält die Transitchart mit dem von Ihnen gewählten Datum in Einklang, unabhängig von der Zeitzone."
+        },
+        {
+          "title": "Welche Orben nutzt der Rechner?",
+          "description": "Wir nutzen Standardorben: Konjunktion und Opposition ±8°, Quadrat und Trigon ±6°, Sextil ±4°. Es werden nur Aspekte innerhalb dieser Orben angezeigt, damit Ihre Transitchart klar und professionell bleibt."
+        },
+        {
+          "title": "Was tun nach dem Ansehen meiner Transitchart?",
+          "description": "Nutzen Sie den Button auf der Ergebnisseite, um zur Startseite zu gehen und Ihre Astrokartografie-Karte mit denselben Geburtsdaten zu erstellen. Die Transitchart zeigt, wann bestimmte Energien aktiv sind; die Karte zeigt, wo auf der Erde diese Energien am stärksten sind. Zusammen unterstützen sie Timing- und Ortsentscheidungen."
+        }
+      ]
+    },
+    "cta": {
+      "name": "cta",
+      "title": "Erstellen Sie Ihre Transitchart und erkunden Sie die Karte",
+      "description": "Nutzen Sie unseren kostenlosen Transit Chart Rechner, um zu sehen, wie Transite Ihre Geburtskarte aspectieren. Dann erkunden Sie, wo Ihre Karte auf der Weltkarte mit Astrokartografie gedeiht – dieselben Geburtsdaten, keine Anmeldung.",
+      "buttons": [
+        {
+          "title": "Meine Karte auf der Weltkarte erkunden → Astrocartography",
+          "icon": "RiMapLine",
+          "url": "/",
+          "target": "_self",
+          "variant": "default"
+        }
+      ]
+    },
+    "tool": {
+      "form": {
+        "birthDate": "Geburtsdatum",
+        "birthTime": "Geburtszeit (exakt wenn möglich)",
+        "birthLocation": "Geburtsort",
+        "timezone": "Zeitzone",
+        "transitDate": "Transitdatum",
+        "submit": "Transitchart berechnen"
+      },
+      "result": {
+        "title": "Ihre Transitchart",
+        "transitDateLabel": "Transitdatum",
+        "natalTitle": "Geburtspositionen (Geburtshoroskop)",
+        "transitTitle": "Transitpositionen",
+        "aspectsTitle": "Aktive Aspekte (Transit → Geburt)",
+        "planet": "Planet",
+        "sign": "Zeichen",
+        "degree": "Grad",
+        "aspect": "Aspekt",
+        "orb": "Orbis",
+        "ctaChart": "Meine Karte auf der Weltkarte erkunden",
+        "creditsCta": "KI-Deutung Ihrer Transite? Vollständige Lesung — verbraucht Credits"
+      },
+      "errors": {
+        "required": "Bitte füllen Sie alle Felder aus, um Ihre Transitchart zu berechnen.",
+        "location": "Ort nicht gefunden. Versuchen Sie Stadt und Land (z. B. Berlin, Deutschland oder London, UK).",
+        "generic": "Berechnungsfehler. Bitte Geburtsdaten und Transitdatum prüfen und erneut versuchen."
+      }
+    }
+  }

@@ -44,6 +44,10 @@ export async function getRisingSignPage(locale: string): Promise<CalculatorPage>
   return (await getPage("rising-sign-calculator", locale)) as CalculatorPage;
 }
 
+export async function getTransitChartPage(locale: string): Promise<CalculatorPage> {
+  return (await getPage("transit-chart-calculator", locale)) as CalculatorPage;
+}
+
 export async function getPage(
   name: string,
   locale: string

@@ -46,6 +46,20 @@
           ]
         },
         {
+          "title": "Chart",
+          "icon": "RiPieChart2Line",
+          "url": "/transit-chart-calculator",
+          "children": [
+            {
+              "title": "Transit Chart Rechner",
+              "description": "So sehen Sie, wie Transite Ihre Geburtskarte aspectieren",
+              "url": "/transit-chart-calculator",
+              "target": "_self",
+              "icon": "RiTimeLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"
