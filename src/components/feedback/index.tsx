@@ -21,6 +21,7 @@ import { useAppContext } from "@/contexts/app";
 import { useState } from "react";
 import { SocialItem } from "@/types/blocks/base";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function Feedback({
   socialLinks,
@@ -28,6 +29,7 @@ export default function Feedback({
   socialLinks?: SocialItem[];
 }) {
   const t = useTranslations();
+  const pathname = usePathname();
 
   const { user, setShowSignModal, showFeedback, setShowFeedback } =
     useAppContext();
@@ -110,6 +112,17 @@ export default function Feedback({
     { emoji: "😐", value: 5 },
     { emoji: "😊", value: 10 },
   ];
+
+  // Hide feedback trigger on chart routes to avoid covering Ask AI CTA.
+  const normalizedPath = (pathname || "").replace(/\/+$/, "");
+  const pathSegments = (normalizedPath || "/").split("/").filter(Boolean);
+  const isChartRoute =
+    pathSegments[0] === "chart" ||
+    (pathSegments.length >= 2 && pathSegments[1] === "chart");
+
+  if (isChartRoute) {
+    return null;
+  }
 
   return (
     <div className="fixed bottom-8 right-8 z-50">

@@ -5,7 +5,7 @@ import { useSearchParams, useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Download, Share2, Sparkles, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowLeft, Download, Share2, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import AstroChat from '@/components/astro-chat';
@@ -267,10 +267,9 @@ export default function ChartContent() {
         ) : null}
       </div>
 
-      {/* 移动端：右上角工具栏（可折叠） */}
+      {/* 移动端：右上角工具栏（可折叠，仅含工具类按钮） */}
       {chartData && isMobile && (
         <div className="fixed top-16 right-3 z-[1100] flex flex-col items-end gap-2">
-          {/* 折叠/展开切换按钮 */}
           <Button
             size="icon"
             variant="outline"
@@ -284,7 +283,6 @@ export default function ChartContent() {
             )}
           </Button>
 
-          {/* 工具栏按钮组（可折叠） */}
           {isToolbarExpanded && (
             <div className="flex flex-col gap-2 animate-in slide-in-from-top-2 fade-in duration-200">
               {birthData && planetLines.length > 0 && (
@@ -321,17 +319,40 @@ export default function ChartContent() {
         </div>
       )}
 
-      {/* 移动端：右下角 Ask AI 按钮（始终显示） */}
-      {chartData && isMobile && birthData && planetLines.length > 0 && (
-        <div className="fixed right-3 bottom-20 z-[1100]">
-          <Button
-            onClick={handleAskAIClick}
-            className="h-11 px-5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-700 hover:via-pink-700 hover:to-purple-700 text-white shadow-2xl shadow-purple-500/60 text-sm font-semibold flex items-center gap-2"
-          >
-            <MessageCircle className="size-4" />
-            <span>Ask AI</span>
-            <Sparkles className="size-4 text-yellow-300" />
-          </Button>
+      {/* ─── Ask AI 底部 CTA ────────────────────────────────────────────
+          移动端：全宽底部栏（替换右下角小按钮）
+          PC端：居中悬浮胶囊
+      ──────────────────────────────────────────────────────────────── */}
+      {chartData && birthData && planetLines.length > 0 && !chatOpen && (
+        <div
+          className={`fixed z-[1100] pointer-events-none
+            bottom-0 left-0 right-0
+            md:bottom-5 md:left-1/2 md:right-auto md:w-auto md:-translate-x-1/2`}
+        >
+          {/* 移动端：全宽底部栏 */}
+          <div className="pointer-events-auto md:hidden bg-black/90 backdrop-blur-md border-t border-white/10 px-4 py-3 flex items-center gap-3">
+            <div className="flex-1 min-w-0">
+              <p className="text-white text-sm font-semibold leading-tight">✨ Ask AI about your chart</p>
+              <p className="text-white/50 text-xs mt-0.5">Tap a line or city, then ask</p>
+            </div>
+            <Button
+              onClick={handleAskAIClick}
+              className="flex-shrink-0 h-10 px-5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:opacity-90 text-white font-bold text-sm shadow-lg shadow-purple-500/40 transition-all"
+            >
+              Ask AI <Sparkles className="size-3.5 ml-1.5 text-yellow-300 inline" />
+            </Button>
+          </div>
+
+          {/* PC端：居中悬浮胶囊 */}
+          <div className="pointer-events-auto hidden md:flex items-center gap-3 bg-black/85 backdrop-blur-md rounded-full border border-white/15 px-5 py-2.5 shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40 transition-shadow">
+            <span className="text-white/75 text-sm whitespace-nowrap">✨ Ask AI about your chart</span>
+            <Button
+              onClick={handleAskAIClick}
+              className="h-9 px-5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:opacity-90 text-white font-bold text-sm shadow-md shadow-purple-500/40 transition-all"
+            >
+              Ask AI
+            </Button>
+          </div>
         </div>
       )}
 
@@ -368,23 +389,7 @@ export default function ChartContent() {
                   </Button>
                 </Link>
 
-                {/* AI 聊天按钮 - 更醒目的设计 */}
-                {birthData && planetLines.length > 0 && (
-                  <Button
-                    onClick={handleAskAIClick}
-                    className="w-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-700 hover:via-pink-700 hover:to-purple-700 text-white justify-center font-bold text-base py-4 shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/70 transition-all duration-300 transform hover:scale-105 border-2 border-purple-400/50 hover:border-purple-300 relative overflow-hidden group"
-                  >
-                    {/* 背景光效 */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                    
-                    {/* 按钮内容 */}
-                    <div className="relative flex items-center gap-2">
-                      <MessageCircle className="size-5 animate-pulse" />
-                      <span className="text-lg font-extrabold tracking-wide">Ask AI</span>
-                      <Sparkles className="size-4 text-yellow-300 animate-pulse" />
-                    </div>
-                  </Button>
-                )}
+                {/* AI 聊天按钮已移至底部悬浮胶囊 */}
 
                 {/* 下载按钮 */}
                 {birthData && planetLines.length > 0 && (
