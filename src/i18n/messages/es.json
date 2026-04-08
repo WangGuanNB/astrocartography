@@ -407,7 +407,13 @@
     "result": {
       "title": "¡Mira mi Carta de Astrocartografía!",
       "description": "¡Acabo de generar mi mapa de astrocartografía personalizado! Descubre tus conexiones cósmicas alrededor del mundo.",
-      "hashtags": ["Astrocartografía", "MapaAstro", "Astrología", "ConexionesCósmicas", "CartaNatal"]
+      "hashtags": [
+        "Astrocartografía",
+        "MapaAstro",
+        "Astrología",
+        "ConexionesCósmicas",
+        "CartaNatal"
+      ]
     }
   },
   "astro_chat": {
@@ -418,6 +424,7 @@
     "insufficient_credits_close": "Cerrar",
     "insufficient_credits_upgrade": "Actualizar",
     "download_chat": "Descargar Chat",
+    "view_history": "Historial",
     "download_success": "Chat descargado exitosamente",
     "download_failed": "Error al descargar, intenta de nuevo",
     "no_messages": "No hay mensajes para descargar",
@@ -513,5 +520,15 @@
         "questionTemplate": "¿{city} cambiará mi vida a un nivel profundo?"
       }
     }
+  },
+  "ai_chat_history_page": {
+    "title": "Historial de chat con IA",
+    "empty": "Aún no hay conversaciones guardadas.",
+    "pro_required": "Actualiza al plan Profesional para activar el historial en la nube: guardado automático de chats, sincronización entre dispositivos y consulta en cualquier momento (después de activarlo, tu historial se almacenará y se podrá descargar). Antes de activarlo, no guardamos tu historial de chat en la nube.",
+    "sign_in_prompt": "Inicia sesión para ver tus conversaciones guardadas.",
+    "view_plans": "Ver planes",
+    "back": "Volver a la lista",
+    "message_count": "{count} mensajes",
+    "close": "Cerrar"
   }
 }

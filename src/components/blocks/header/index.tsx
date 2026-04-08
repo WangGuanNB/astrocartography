@@ -117,7 +117,7 @@ export default function Header({ header }: { header: HeaderType }) {
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
+              <SheetContent className="inset-y-auto top-3 bottom-auto h-auto max-h-[82vh] overflow-y-auto rounded-l-2xl">
                 <SheetHeader>
                   <SheetTitle>
                     <Link
@@ -198,7 +198,6 @@ export default function Header({ header }: { header: HeaderType }) {
                     })}
                   </Accordion>
                 </div>
-                <div className="flex-1"></div>
                 <div className="border-t pt-4">
                   <div className="mt-2 flex flex-col gap-3">
                     {header.buttons?.map((item, i) => {

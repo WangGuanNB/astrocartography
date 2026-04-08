@@ -18,7 +18,15 @@ import { paymentEvents } from "@/lib/analytics";
 import { usePricingItemTracking } from "./pricing-item-card";
 import { PaymentMethodSelector } from "@/components/payment/PaymentMethodSelector";
 
-export default function Pricing({ pricing, isInModal = false }: { pricing: PricingType; isInModal?: boolean }) {
+export default function Pricing({
+  pricing,
+  isInModal = false,
+  preferredProductId,
+}: {
+  pricing: PricingType;
+  isInModal?: boolean;
+  preferredProductId?: string;
+}) {
   if (pricing.disabled) {
     return null;
   }
@@ -80,13 +88,17 @@ export default function Pricing({ pricing, isInModal = false }: { pricing: Prici
   const sortedItems = useMemo(() => {
     if (!pricing.items) return [];
     return [...pricing.items].sort((a, b) => {
+      if (preferredProductId) {
+        if (a.product_id === preferredProductId && b.product_id !== preferredProductId) return -1;
+        if (b.product_id === preferredProductId && a.product_id !== preferredProductId) return 1;
+      }
       // 付费方案排在前面
       if (a.amount > 0 && b.amount === 0) return -1;
       if (a.amount === 0 && b.amount > 0) return 1;
       // 如果都是付费或都是免费，保持原有顺序
       return 0;
     });
-  }, [pricing.items]);
+  }, [pricing.items, preferredProductId]);
   
   return (
     <section id={pricing.name} className={isInModal ? "py-0" : "py-6 md:py-8"}>

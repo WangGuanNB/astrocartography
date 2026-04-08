@@ -122,6 +122,37 @@ export class Storage {
     };
   }
 
+  async getFile({
+    key,
+    bucket,
+  }: {
+    key: string;
+    bucket?: string;
+  }): Promise<{ body: Uint8Array; contentType: string | null }> {
+    const targetBucket = bucket || this.bucket;
+    if (!targetBucket) {
+      throw new Error("Bucket is required");
+    }
+
+    const url = `${this.endpoint}/${targetBucket}/${key}`;
+    const { AwsClient } = await import("aws4fetch");
+    const client = new AwsClient({
+      accessKeyId: this.accessKeyId,
+      secretAccessKey: this.secretAccessKey,
+    });
+
+    const response = await client.fetch(new Request(url, { method: "GET" }));
+    if (!response.ok) {
+      throw new Error(`Get file failed: ${response.status} ${response.statusText}`);
+    }
+
+    const arr = await response.arrayBuffer();
+    return {
+      body: new Uint8Array(arr),
+      contentType: response.headers.get("content-type"),
+    };
+  }
+
   async downloadAndUpload({
     url,
     key,

@@ -29,6 +29,10 @@ export default function SignUser({ user }: { user: User }) {
       url: "/my-orders",
     },
     {
+      title: t("user.ai_chat_history"),
+      url: "/ai-chat-history",
+    },
+    {
       title: t("user.sign_out"),
       onClick: () => signOut(),
     },

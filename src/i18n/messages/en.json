@@ -10,7 +10,18 @@
     "credits": "Credits",
     "api_keys": "API Keys",
     "my_orders": "My Orders",
-    "user_center": "User Center"
+    "user_center": "User Center",
+    "ai_chat_history": "AI chat history"
+  },
+  "ai_chat_history_page": {
+    "title": "AI chat history",
+    "empty": "No saved conversations yet.",
+    "pro_required": "Upgrade to Professional to enable cloud history: auto-save chats, sync across devices, and review anytime (after enabling, your chat history will be stored and downloadable). Before enabling, we do not save your cloud chat history.",
+    "sign_in_prompt": "Sign in to view your saved conversations.",
+    "view_plans": "View plans",
+    "back": "Back to list",
+    "message_count": "{count} messages",
+    "close": "Close"
   },
   "sign_modal": {
     "sign_in_title": "Sign In",
@@ -168,7 +179,7 @@
     "uploading": "Preparing graffiti for sharing...",
     "platforms": {
       "twitter": "Twitter",
-      "facebook": "Facebook", 
+      "facebook": "Facebook",
       "linkedin": "LinkedIn",
       "pinterest": "Pinterest",
       "whatsapp": "WhatsApp",
@@ -344,6 +355,7 @@
       },
       "errorGeneral": {
         "downloadFailed": "Download failed, please try again later",
+        "chartDownloadRequiresPaid": "Map download requires a Standard or Professional plan.",
         "downloadInDevelopment": "Download feature is under development...",
         "calculationFailed": "Calculation failed",
         "generationFailed": "Failed to generate chart",
@@ -360,7 +372,13 @@
     "result": {
       "title": "Check out my Astrocartography Chart!",
       "description": "I just generated my personalized astrocartography map! Discover your cosmic connections around the world.",
-      "hashtags": ["Astrocartography", "AstroMap", "Astrology", "CosmicConnections", "BirthChart"]
+      "hashtags": [
+        "Astrocartography",
+        "AstroMap",
+        "Astrology",
+        "CosmicConnections",
+        "BirthChart"
+      ]
     }
   },
   "astro_chat": {
@@ -371,6 +389,8 @@
     "insufficient_credits_close": "Close",
     "insufficient_credits_upgrade": "Upgrade",
     "download_chat": "Download Chat",
+    "export_requires_paid": "Export is available on Standard or Professional plans. Upgrade to save this conversation.",
+    "view_history": "History",
     "download_success": "Chat downloaded successfully",
     "download_failed": "Download failed, please try again",
     "no_messages": "No messages to download",

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState, Suspense, useRef, useCallback } from 'react';
 import { useSearchParams, useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
@@ -11,8 +11,17 @@ import dynamic from 'next/dynamic';
 import AstroChat from '@/components/astro-chat';
 import { useAppContext } from '@/contexts/app';
 import SignModal from '@/components/sign/modal';
-import { askAIEvents, pageEvents } from '@/lib/analytics';
+import { askAIEvents, pageEvents, paymentEvents } from '@/lib/analytics';
 import { useIsMobile } from '@/hooks/use-mobile';
+import type { AstrocartographyMapHandle } from '@/components/astrocartography-map';
+import { toast } from 'sonner';
+import {
+  applyBrandingFooterToPngDataUrl,
+  withShareAttributionParams,
+} from '@/lib/export-branding';
+import PricingModal from '@/components/pricing/pricing-modal';
+import { Pricing as PricingType } from '@/types/blocks/pricing';
+import type { UserEntitlements } from '@/types/user';
 
 // 动态导入地图组件（避免 SSR 问题）
 const AstrocartographyMap = dynamic(
@@ -40,9 +49,15 @@ const AUTO_POPUP_DISMISSED_KEY = 'astro-chat-auto-popup-dismissed';
 export default function ChartContent() {
   const searchParams = useSearchParams();
   const params = useParams();
+  const locale = (params?.locale as string) || 'en';
   const t = useTranslations('astrocartographyGenerator');
   const isMobile = useIsMobile();
   const { user, setShowSignModal } = useAppContext();
+  const mapExportRef = useRef<AstrocartographyMapHandle>(null);
+  const [chartEntitlements, setChartEntitlements] =
+    useState<UserEntitlements | null>(null);
+  const [showChartPricingModal, setShowChartPricingModal] = useState(false);
+  const [chartPricingData, setChartPricingData] = useState<PricingType | null>(null);
   const [chartData, setChartData] = useState<ChartData | null>(null);
   const [birthData, setBirthData] = useState<any>(null);
   const [planetLines, setPlanetLines] = useState<PlanetLine[]>([]);
@@ -85,6 +100,45 @@ export default function ChartContent() {
     }
   }, [searchParams]);
 
+  const fetchChartPricing = useCallback(async () => {
+    try {
+      const response = await fetch(`/api/get-pricing?locale=${locale}`);
+      const data = await response.json();
+      if (data.success && data.pricing) {
+        setChartPricingData(data.pricing);
+      }
+    } catch (err) {
+      console.error('Failed to fetch pricing:', err);
+    }
+  }, [locale]);
+
+  useEffect(() => {
+    if (!user) {
+      setChartEntitlements(null);
+      return;
+    }
+    fetch('/api/get-user-credits', { method: 'POST' })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.code === 0 && data.data?.entitlements) {
+          setChartEntitlements(data.data.entitlements);
+        } else {
+          setChartEntitlements({
+            canExportCurrentChat: false,
+            canDownloadChart: false,
+            canViewChatHistory: false,
+          });
+        }
+      })
+      .catch(() =>
+        setChartEntitlements({
+          canExportCurrentChat: false,
+          canDownloadChart: false,
+          canViewChatHistory: false,
+        })
+      );
+  }, [user]);
+
   const calculateChart = async (data: ChartData) => {
     try {
       setIsLoading(true);
@@ -113,14 +167,43 @@ export default function ChartContent() {
     }
   };
 
-  const handleDownload = () => {
-    // TODO: 实现地图截图下载功能
-    alert(t('messages.errorGeneral.downloadInDevelopment'));
+  const handleDownload = async () => {
+    if (!user) {
+      setShowSignModal(true);
+      return;
+    }
+    if (!chartEntitlements?.canDownloadChart) {
+      toast.error(t('messages.errorGeneral.chartDownloadRequiresPaid'));
+      await fetchChartPricing();
+      setShowChartPricingModal(true);
+      paymentEvents.pricingModalOpened('other');
+      return;
+    }
+    const raw = await mapExportRef.current?.exportMapPng();
+    if (!raw) {
+      toast.error(t('messages.errorGeneral.downloadFailed'));
+      return;
+    }
+    try {
+      const dataUrl = await applyBrandingFooterToPngDataUrl(raw);
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = `astrocartography-map-${Date.now()}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      toast.success(t('messages.success.chartDownloaded'));
+    } catch {
+      toast.error(t('messages.errorGeneral.downloadFailed'));
+    }
   };
 
   const handleShare = () => {
-    // 复制当前 URL
-    navigator.clipboard.writeText(window.location.href);
+    const url = withShareAttributionParams(window.location.href, {
+      source: 'share',
+      medium: 'chart',
+    });
+    void navigator.clipboard.writeText(url);
     alert(t('messages.success.linkCopied'));
   };
 
@@ -255,7 +338,8 @@ export default function ChartContent() {
           <>
             {/* 全屏地图 */}
             <div className="absolute inset-0 w-full h-full">
-              <AstrocartographyMap 
+              <AstrocartographyMap
+                ref={mapExportRef}
                 birthData={birthData}
                 planetLines={planetLines}
                 onCityQuickAsk={handleCityQuickAsk}
@@ -327,30 +411,30 @@ export default function ChartContent() {
         <div
           className={`fixed z-[1100] pointer-events-none
             bottom-0 left-0 right-0
-            md:bottom-5 md:left-1/2 md:right-auto md:w-auto md:-translate-x-1/2`}
+            md:bottom-5 md:right-5 md:left-auto md:w-auto`}
         >
           {/* 移动端：全宽底部栏 */}
           <div className="pointer-events-auto md:hidden bg-black/90 backdrop-blur-md border-t border-white/10 px-4 py-3 flex items-center gap-3">
             <div className="flex-1 min-w-0">
-              <p className="text-white text-sm font-semibold leading-tight">✨ Ask AI about your chart</p>
-              <p className="text-white/50 text-xs mt-0.5">Tap a line or city, then ask</p>
+              <p className="text-white text-sm font-semibold leading-tight">✨ Ask about your chart</p>
+              <p className="text-white/50 text-xs mt-0.5 truncate">Tap a line or city, then ask</p>
             </div>
             <Button
               onClick={handleAskAIClick}
-              className="flex-shrink-0 h-10 px-5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:opacity-90 text-white font-bold text-sm shadow-lg shadow-purple-500/40 transition-all"
+              className="flex-shrink-0 h-11 min-w-[224px] px-7 justify-center rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:opacity-90 text-white font-bold text-base shadow-lg shadow-purple-500/40 transition-all"
             >
-              Ask AI <Sparkles className="size-3.5 ml-1.5 text-yellow-300 inline" />
+              Ask <Sparkles className="size-3.5 ml-1.5 text-yellow-300 inline" />
             </Button>
           </div>
 
-          {/* PC端：居中悬浮胶囊 */}
+          {/* PC端：右下角悬浮胶囊 */}
           <div className="pointer-events-auto hidden md:flex items-center gap-3 bg-black/85 backdrop-blur-md rounded-full border border-white/15 px-5 py-2.5 shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40 transition-shadow">
-            <span className="text-white/75 text-sm whitespace-nowrap">✨ Ask AI about your chart</span>
+            <span className="text-white/75 text-sm whitespace-nowrap">✨ Ask about your chart</span>
             <Button
               onClick={handleAskAIClick}
               className="h-9 px-5 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:opacity-90 text-white font-bold text-sm shadow-md shadow-purple-500/40 transition-all"
             >
-              Ask AI
+              Ask
             </Button>
           </div>
         </div>
@@ -449,6 +533,23 @@ export default function ChartContent() {
           }}
           user={user}
           onRequireLogin={() => setShowSignModal(true)}
+        />
+      )}
+
+      {chartPricingData && (
+        <PricingModal
+          open={showChartPricingModal}
+          onOpenChange={setShowChartPricingModal}
+          pricing={chartPricingData}
+          onSuccess={() => {
+            fetch('/api/get-user-credits', { method: 'POST' })
+              .then((r) => r.json())
+              .then((data) => {
+                if (data.code === 0 && data.data?.entitlements) {
+                  setChartEntitlements(data.data.entitlements);
+                }
+              });
+          }}
         />
       )}
 

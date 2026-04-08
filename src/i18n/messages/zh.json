@@ -11,7 +11,18 @@
     "api_keys": "API 密钥",
     "my_orders": "我的订单",
     "user_center": "用户中心",
-    "admin_system": "管理后台"
+    "admin_system": "管理后台",
+    "ai_chat_history": "AI 对话历史"
+  },
+  "ai_chat_history_page": {
+    "title": "AI 对话历史",
+    "empty": "暂无已保存的对话。",
+    "pro_required": "升级到专业版，可启用云端历史记录：自动保存对话、跨设备同步、随时回看（启用后将保存您的历史对话记录，并支持下载）。未启用前，我们不会为您保存云端历史记录。",
+    "sign_in_prompt": "登录后可查看已保存的对话。",
+    "view_plans": "查看方案",
+    "back": "返回列表",
+    "message_count": "{count} 条消息",
+    "close": "关闭"
   },
   "sign_modal": {
     "sign_in_title": "登录",
@@ -169,7 +180,7 @@
     "uploading": "正在准备图片分享...",
     "platforms": {
       "twitter": "Twitter",
-      "facebook": "Facebook", 
+      "facebook": "Facebook",
       "linkedin": "LinkedIn",
       "pinterest": "Pinterest",
       "whatsapp": "WhatsApp",
@@ -177,7 +188,7 @@
       "reddit": "Reddit",
       "copy": "复制"
     }
-  } ,
+  },
   "miniatureGenerator": {
     "ui": {
       "title": "使用 Miniatur AI 构建您的微缩世界",
@@ -344,6 +355,7 @@
       },
       "errorGeneral": {
         "downloadFailed": "下载失败，请稍后重试",
+        "chartDownloadRequiresPaid": "下载地图需标准包或专业包。",
         "downloadInDevelopment": "下载功能开发中...",
         "calculationFailed": "计算失败",
         "generationFailed": "生成星盘图失败",
@@ -360,7 +372,13 @@
     "result": {
       "title": "查看我的星盘地图！",
       "description": "我刚刚生成了我的个性化星盘地图！发现你在世界各地的宇宙连接。",
-      "hashtags": ["星盘地图", "占星地图", "占星学", "宇宙连接", "出生星盘"]
+      "hashtags": [
+        "星盘地图",
+        "占星地图",
+        "占星学",
+        "宇宙连接",
+        "出生星盘"
+      ]
     }
   },
   "astro_chat": {
@@ -371,6 +389,8 @@
     "insufficient_credits_close": "关闭",
     "insufficient_credits_upgrade": "去付费",
     "download_chat": "下载对话",
+    "export_requires_paid": "导出对话需标准包或专业包，请升级后保存本次会话。",
+    "view_history": "历史记录",
     "download_success": "对话已成功下载",
     "download_failed": "下载失败，请重试",
     "no_messages": "暂无对话内容可下载",

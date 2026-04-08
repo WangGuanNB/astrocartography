@@ -10,6 +10,7 @@ import { Order } from "@/types/order";
 import { UserCredits } from "@/types/user";
 import { getFirstPaidOrderByUserUuid } from "@/models/order";
 import { getAIChatCreditCost as getAIChatCreditCostFromConfig } from "./config";
+import { getUserEntitlements } from "./entitlements";
 
 export enum CreditsTransType {
   NewUser = "new_user", // initial credits for new user
@@ -53,10 +54,19 @@ export async function getUserCredits(user_uuid: string): Promise<UserCredits> {
       user_credits.is_pro = true;
     }
 
+    user_credits.entitlements = await getUserEntitlements(user_uuid);
+
     return user_credits;
   } catch (e) {
     console.log("get user credits failed: ", e);
-    return user_credits;
+    return {
+      ...user_credits,
+      entitlements: {
+        canExportCurrentChat: false,
+        canDownloadChart: false,
+        canViewChatHistory: false,
+      },
+    };
   }
 }
 

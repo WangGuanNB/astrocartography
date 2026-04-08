@@ -407,7 +407,13 @@
     "result": {
       "title": "Guarda la Mia Carta Astrocartografia!",
       "description": "Ho appena generato la mia mappa astrocartografia personalizzata! Scopri le tue connessioni cosmiche in tutto il mondo.",
-      "hashtags": ["Astrocartografia", "MappaAstro", "Astrologia", "ConnessioniCosmiche", "TemaNatale"]
+      "hashtags": [
+        "Astrocartografia",
+        "MappaAstro",
+        "Astrologia",
+        "ConnessioniCosmiche",
+        "TemaNatale"
+      ]
     }
   },
   "astro_chat": {
@@ -418,6 +424,7 @@
     "insufficient_credits_close": "Chiudi",
     "insufficient_credits_upgrade": "Aggiorna",
     "download_chat": "Scarica Chat",
+    "view_history": "Cronologia",
     "download_success": "Chat scaricata con successo",
     "download_failed": "Download fallito, riprova",
     "no_messages": "Nessun messaggio da scaricare",
@@ -513,5 +520,15 @@
         "questionTemplate": "{city} cambierà la mia vita a un livello profondo?"
       }
     }
+  },
+  "ai_chat_history_page": {
+    "title": "Cronologia chat IA",
+    "empty": "Nessuna conversazione salvata al momento.",
+    "pro_required": "Passa al piano Professional per abilitare la cronologia cloud: salvataggio automatico delle chat, sincronizzazione tra dispositivi e consultazione in qualsiasi momento (dopo l'attivazione, la cronologia verrà archiviata e potrà essere scaricata). Prima dell'attivazione, non salviamo la tua cronologia chat nel cloud.",
+    "sign_in_prompt": "Accedi per vedere le tue conversazioni salvate.",
+    "view_plans": "Vedi piani",
+    "back": "Torna all'elenco",
+    "message_count": "{count} messaggi",
+    "close": "Chiudi"
   }
 }

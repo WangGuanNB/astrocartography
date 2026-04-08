@@ -87,6 +87,7 @@
     "fumadocs-ui": "^15.6.3",
     "google-one-tap": "^1.0.6",
     "highlight.js": "^11.11.0",
+    "html-to-image": "^1.11.13",
     "http-proxy-agent": "^7.0.2",
     "https-proxy-agent": "^7.0.6",
     "leaflet": "^1.9.4",

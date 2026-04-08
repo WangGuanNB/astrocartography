@@ -11,7 +11,6 @@
     "api_keys": "Kunci API",
     "my_orders": "Pesanan Saya",
     "user_center": "Pusat Pengguna"
-   
   },
   "sign_modal": {
     "sign_in_title": "Log Masuk",
@@ -169,7 +168,7 @@
     "uploading": "Menyediakan imej untuk perkongsian...",
     "platforms": {
       "twitter": "Twitter",
-      "facebook": "Facebook", 
+      "facebook": "Facebook",
       "linkedin": "LinkedIn",
       "pinterest": "Pinterest",
       "whatsapp": "WhatsApp",
@@ -177,7 +176,7 @@
       "reddit": "Reddit",
       "copy": "Salin"
     }
-  }  ,
+  },
   "miniatureGenerator": {
     "ui": {
       "title": "Bina Dunia Miniatur Anda dengan Miniatur AI",
@@ -296,6 +295,7 @@
     "insufficient_credits_close": "Tutup",
     "insufficient_credits_upgrade": "Naik Taraf",
     "download_chat": "Muat Turun Sembang",
+    "view_history": "Sejarah",
     "download_success": "Sembang berjaya dimuat turun",
     "download_failed": "Muat turun gagal, sila cuba lagi",
     "no_messages": "Tiada mesej untuk dimuat turun",
@@ -309,5 +309,15 @@
       "Apakah yang didedahkan oleh garis Venus saya tentang hubungan?",
       "Bandingkan lokasi terbaik saya untuk cinta vs. kerjaya"
     ]
+  },
+  "ai_chat_history_page": {
+    "title": "Sejarah sembang AI",
+    "empty": "Belum ada perbualan yang disimpan.",
+    "pro_required": "Naik taraf ke pelan Professional untuk mengaktifkan sejarah awan: simpan perbualan secara automatik, segerak merentas peranti, dan semak semula pada bila-bila masa (selepas diaktifkan, sejarah perbualan anda akan disimpan dan boleh dimuat turun). Sebelum diaktifkan, kami tidak menyimpan sejarah perbualan awan anda.",
+    "sign_in_prompt": "Log masuk untuk melihat perbualan anda yang disimpan.",
+    "view_plans": "Lihat pelan",
+    "back": "Kembali ke senarai",
+    "message_count": "{count} mesej",
+    "close": "Tutup"
   }
 }

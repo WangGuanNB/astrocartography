@@ -16,6 +16,14 @@ export interface User {
   is_affiliate?: boolean;
 }
 
+/** Feature flags from paid orders (product_id). Not the same as is_pro (credits balance). */
+export interface UserEntitlements {
+  canExportCurrentChat: boolean;
+  /** Map/chart PNG download; true when user has a paid tier order (product_id). */
+  canDownloadChart: boolean;
+  canViewChatHistory: boolean;
+}
+
 export interface UserCredits {
   one_time_credits?: number;
   monthly_credits?: number;
@@ -24,5 +32,7 @@ export interface UserCredits {
   left_credits: number;
   free_credits?: number;
   is_recharged?: boolean;
+  /** True when left_credits > 0; legacy name — do not use for tier-gated features. */
   is_pro?: boolean;
+  entitlements?: UserEntitlements;
 }

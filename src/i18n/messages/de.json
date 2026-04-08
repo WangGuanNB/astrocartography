@@ -247,9 +247,30 @@
       "creem_payment": "Creem"
     },
     "test": {
-      "basic": { "title": "Basic-Tarif", "description": "100 Credits", "feature1": "100 Graffiti-Erstellungen", "feature2": "Standardgeschwindigkeit", "feature3": "E-Mail-Support" },
-      "pro": { "title": "Pro-Tarif", "description": "500 Credits", "feature1": "500 Graffiti-Erstellungen", "feature2": "Prioritätsgeschwindigkeit", "feature3": "24/7 technischer Support", "feature4": "HD-Ausgabe" },
-      "enterprise": { "title": "Enterprise-Tarif", "description": "2000 Credits", "feature1": "2000 Graffiti-Erstellungen", "feature2": "Höchste Geschwindigkeit", "feature3": "Dedizierter Support", "feature4": "API-Zugang", "feature5": "Stapelverarbeitung" },
+      "basic": {
+        "title": "Basic-Tarif",
+        "description": "100 Credits",
+        "feature1": "100 Graffiti-Erstellungen",
+        "feature2": "Standardgeschwindigkeit",
+        "feature3": "E-Mail-Support"
+      },
+      "pro": {
+        "title": "Pro-Tarif",
+        "description": "500 Credits",
+        "feature1": "500 Graffiti-Erstellungen",
+        "feature2": "Prioritätsgeschwindigkeit",
+        "feature3": "24/7 technischer Support",
+        "feature4": "HD-Ausgabe"
+      },
+      "enterprise": {
+        "title": "Enterprise-Tarif",
+        "description": "2000 Credits",
+        "feature1": "2000 Graffiti-Erstellungen",
+        "feature2": "Höchste Geschwindigkeit",
+        "feature3": "Dedizierter Support",
+        "feature4": "API-Zugang",
+        "feature5": "Stapelverarbeitung"
+      },
       "test_title": "Zahlungs-Modal Test",
       "open_default": "Zahlungs-Modal öffnen (Standard)",
       "open_custom": "Zahlungs-Modal öffnen (Benutzerdefiniert)",
@@ -280,8 +301,14 @@
       "subtitle": "Geburtsdaten eingeben für Ihre persönliche Astrokartografie-Karte"
     },
     "form": {
-      "birthDate": { "label": "Geburtsdatum", "placeholder": "TT/MM/JJJJ" },
-      "birthTime": { "label": "Geburtszeit", "placeholder": "--:--" },
+      "birthDate": {
+        "label": "Geburtsdatum",
+        "placeholder": "TT/MM/JJJJ"
+      },
+      "birthTime": {
+        "label": "Geburtszeit",
+        "placeholder": "--:--"
+      },
       "birthLocation": {
         "label": "Geburtsort",
         "placeholder": "Geburtsstadt eingeben...",
@@ -289,7 +316,9 @@
         "useCoordinates": "Koordinaten",
         "useCityName": "Stadtname"
       },
-      "timezone": { "label": "Zeitzone" },
+      "timezone": {
+        "label": "Zeitzone"
+      },
       "buttons": {
         "generate": "✨ Karte erstellen ✨",
         "generating": "Wird erstellt...",
@@ -331,7 +360,13 @@
     "result": {
       "title": "Schauen Sie sich meine Astrokartografie-Karte an!",
       "description": "Ich habe gerade meine persönliche Astrokartografie-Karte erstellt! Entdecken Sie Ihre kosmischen Verbindungen weltweit.",
-      "hashtags": ["Astrokartografie", "AstroMap", "Astrologie", "KosmischeVerbindungen", "Geburtshoroskop"]
+      "hashtags": [
+        "Astrokartografie",
+        "AstroMap",
+        "Astrologie",
+        "KosmischeVerbindungen",
+        "Geburtshoroskop"
+      ]
     }
   },
   "astro_chat": {
@@ -342,6 +377,7 @@
     "insufficient_credits_close": "Schließen",
     "insufficient_credits_upgrade": "Upgraden",
     "download_chat": "Chat herunterladen",
+    "view_history": "Verlauf",
     "download_success": "Chat erfolgreich heruntergeladen",
     "download_failed": "Download fehlgeschlagen, bitte erneut versuchen",
     "no_messages": "Keine Nachrichten zum Herunterladen",
@@ -437,5 +473,15 @@
         "questionTemplate": "Wird {city} mein Leben auf einer tiefen Ebene verändern?"
       }
     }
+  },
+  "ai_chat_history_page": {
+    "title": "KI-Chatverlauf",
+    "empty": "Noch keine gespeicherten Gespräche.",
+    "pro_required": "Upgrade auf den Professional-Plan, um den Cloud-Verlauf zu aktivieren: automatische Speicherung von Chats, geräteübergreifende Synchronisierung und jederzeitiges Nachsehen (nach der Aktivierung wird dein Verlauf gespeichert und kann heruntergeladen werden). Vor der Aktivierung speichern wir deinen Cloud-Chatverlauf nicht.",
+    "sign_in_prompt": "Melden Sie sich an, um Ihre gespeicherten Gespräche zu sehen.",
+    "view_plans": "Pläne ansehen",
+    "back": "Zurück zur Liste",
+    "message_count": "{count} Nachrichten",
+    "close": "Schließen"
   }
 }

@@ -1,6 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  useMemo,
+  forwardRef,
+  useImperativeHandle,
+} from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { X, Eye, EyeOff, ChevronLeft, MessageCircle } from 'lucide-react';
@@ -14,6 +22,10 @@ interface PlanetLine {
   coordinates: [number, number][];
   color: string;
 }
+
+export type AstrocartographyMapHandle = {
+  exportMapPng: () => Promise<string | null>;
+};
 
 interface AstrocartographyMapProps {
   birthData: {
@@ -212,12 +224,44 @@ function LinePopupCard({
 
 // MAJOR_CITIES is now imported from @/lib/cities
 
-export default function AstrocartographyMap({ birthData, planetLines = [], onAskOther }: AstrocartographyMapProps) {
+const AstrocartographyMap = forwardRef<
+  AstrocartographyMapHandle,
+  AstrocartographyMapProps
+>(function AstrocartographyMap(
+  { birthData, planetLines = [], onAskOther },
+  ref
+) {
   const isMobile = useIsMobile();
   const t = useTranslations('astrocartographyMap');
-  const mapRef = useRef<L.Map | null>(null);
+  const leafletMapRef = useRef<L.Map | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const polylinesRef = useRef<Map<string, L.Polyline>>(new Map());
+
+  useImperativeHandle(ref, () => ({
+    async exportMapPng() {
+      if (!mapContainerRef.current) return null;
+      try {
+        /**
+         * html2canvas parses CSS in JS and chokes on modern color syntax (`lab()`, etc.).
+         * html-to-image rasterizes via SVG foreignObject — the browser paints the DOM, so
+         * Tailwind / theme colors work without parsing them in our bundle.
+         */
+        const { toPng } = await import("html-to-image");
+        const el = mapContainerRef.current;
+        leafletMapRef.current?.invalidateSize();
+        await new Promise((r) => requestAnimationFrame(() => r(undefined)));
+        return await toPng(el, {
+          cacheBust: true,
+          pixelRatio: Math.min(2, window.devicePixelRatio || 1),
+          backgroundColor: "#000000",
+          fetchRequestInit: { mode: "cors" },
+        });
+      } catch (e) {
+        console.error("exportMapPng", e);
+        return null;
+      }
+    },
+  }));
   const [isLoading, setIsLoading] = useState(true);
   const [isPanelOpen, setIsPanelOpen] = useState(true);
   const [showAngleTypes, setShowAngleTypes] = useState(false);
@@ -319,7 +363,7 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
   }, [isMobile]);
 
   useEffect(() => {
-    if (!mapContainerRef.current || mapRef.current) return;
+    if (!mapContainerRef.current || leafletMapRef.current) return;
 
     // Initialize map - using colorful continent style (similar to competitors)
     // Ensure global view is displayed, support dragging, zooming, and panning
@@ -445,7 +489,7 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
       map.getContainer().style.cursor = 'grab';
     });
 
-    mapRef.current = map;
+    leafletMapRef.current = map;
     setIsLoading(false);
 
     // Force recalculation of map size
@@ -454,18 +498,18 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
     }, 100);
 
     return () => {
-      if (mapRef.current) {
-        mapRef.current.remove();
-        mapRef.current = null;
+      if (leafletMapRef.current) {
+        leafletMapRef.current.remove();
+        leafletMapRef.current = null;
       }
     };
   }, [birthData]);
 
   // Draw planetary lines
   useEffect(() => {
-    if (!mapRef.current || planetLines.length === 0) return;
+    if (!leafletMapRef.current || planetLines.length === 0) return;
 
-    const map = mapRef.current;
+    const map = leafletMapRef.current;
 
     // Clear previous lines
     polylinesRef.current.forEach((polyline) => {
@@ -552,7 +596,7 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
       newVisibility[planet] = !newVisibility[planet];
       
       // Update lines on map
-      if (mapRef.current) {
+      if (leafletMapRef.current) {
         planetLines.forEach(line => {
           if (line.planet === planet) {
             const lineId = `${planet}-${line.type}`;
@@ -560,10 +604,10 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
             if (polyline) {
               if (newVisibility[planet]) {
                 if (lineTypeVisibility[line.type]) {
-                  polyline.addTo(mapRef.current!);
+                  polyline.addTo(leafletMapRef.current!);
                 }
               } else {
-                mapRef.current!.removeLayer(polyline);
+                leafletMapRef.current!.removeLayer(polyline);
               }
             }
           }
@@ -583,15 +627,15 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
     setPlanetVisibility(newVisibility);
 
     // Update all lines on map
-    if (mapRef.current) {
+    if (leafletMapRef.current) {
       polylinesRef.current.forEach((polyline, lineId) => {
         const [planet, type] = lineId.split('-') as [string, PlanetLine["type"]];
         if (show) {
-          if (newVisibility[planet] && lineTypeVisibility[type] && !mapRef.current!.hasLayer(polyline)) {
-            polyline.addTo(mapRef.current!);
+          if (newVisibility[planet] && lineTypeVisibility[type] && !leafletMapRef.current!.hasLayer(polyline)) {
+            polyline.addTo(leafletMapRef.current!);
           }
         } else {
-          mapRef.current!.removeLayer(polyline);
+          leafletMapRef.current!.removeLayer(polyline);
         }
       });
     }
@@ -601,7 +645,7 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
     setLineTypeVisibility((prev) => {
       const next = { ...prev, [type]: !prev[type] };
 
-      if (mapRef.current) {
+      if (leafletMapRef.current) {
         planetLines.forEach((line) => {
           if (line.type !== type) return;
           const lineId = `${line.planet}-${line.type}`;
@@ -611,9 +655,9 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
           const planetVisible = planetVisibility[line.planet] ?? true;
           const typeVisible = next[type];
           if (planetVisible && typeVisible) {
-            if (!mapRef.current!.hasLayer(polyline)) polyline.addTo(mapRef.current!);
+            if (!leafletMapRef.current!.hasLayer(polyline)) polyline.addTo(leafletMapRef.current!);
           } else {
-            mapRef.current!.removeLayer(polyline);
+            leafletMapRef.current!.removeLayer(polyline);
           }
         });
       }
@@ -1024,4 +1068,6 @@ export default function AstrocartographyMap({ birthData, planetLines = [], onAsk
       )}
     </div>
   );
-}
+});
+
+export default AstrocartographyMap;

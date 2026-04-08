@@ -12,6 +12,7 @@ interface PricingModalProps {
   onOpenChange: (open: boolean) => void;
   pricing: PricingType;
   onSuccess?: () => void;
+  preferredProductId?: string;
 }
 
 /**
@@ -23,6 +24,7 @@ export default function PricingModal({
   onOpenChange,
   pricing,
   onSuccess,
+  preferredProductId,
 }: PricingModalProps) {
   const t = useTranslations();
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -46,7 +48,11 @@ export default function PricingModal({
             </DialogHeader>
             {/* 🔥 修复：使用 flex-1 和 overflow-y-auto 让内容区域可滚动，避免双重滚动 */}
             <div className="flex-1 overflow-y-auto px-5 pb-5 min-h-0">
-              <Pricing pricing={pricing} isInModal={true} />
+              <Pricing
+                pricing={pricing}
+                isInModal={true}
+                preferredProductId={preferredProductId}
+              />
             </div>
           </DialogContent>
         </DialogPortal>
@@ -69,7 +75,11 @@ export default function PricingModal({
           )}
         </DrawerHeader>
         <div className="px-3 pb-3 overflow-y-auto">
-          <Pricing pricing={pricing} isInModal={true} />
+          <Pricing
+            pricing={pricing}
+            isInModal={true}
+            preferredProductId={preferredProductId}
+          />
         </div>
       </DrawerContent>
     </Drawer>

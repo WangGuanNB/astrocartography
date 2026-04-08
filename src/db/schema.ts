@@ -8,6 +8,8 @@ import {
   timestamp,
   unique,
   uniqueIndex,
+  jsonb,
+  index,
 } from "drizzle-orm/pg-core";
 
 // Users table
@@ -119,6 +121,26 @@ export const affiliates = pgTable("affiliates_astrocarto", {
   reward_percent: integer().notNull().default(0),
   reward_amount: integer().notNull().default(0),
 });
+
+// AI chat sessions (cloud history for Professional tier; synced server-side)
+export const aiChatSessions = pgTable(
+  "ai_chat_sessions_astrocarto",
+  {
+    id: varchar({ length: 36 }).primaryKey(),
+    user_uuid: varchar({ length: 255 }).notNull(),
+    created_at: timestamp({ withTimezone: true }),
+    updated_at: timestamp({ withTimezone: true }),
+    title: varchar({ length: 500 }),
+    chart_context_json: text(),
+    is_synastry: boolean().notNull().default(false),
+    message_count: integer().notNull().default(0),
+    messages_r2_key: text(),
+    messages: jsonb("messages").notNull().$type<
+      Array<{ role: "user" | "assistant"; content: string }>
+    >(),
+  },
+  (table) => [index("ai_chat_sessions_user_uuid_idx").on(table.user_uuid)]
+);
 
 // Feedbacks table
 export const feedbacks = pgTable("feedbacks_astrocarto", {

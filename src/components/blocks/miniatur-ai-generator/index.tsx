@@ -2,7 +2,6 @@
 import { useTranslations } from 'next-intl';
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -14,11 +13,17 @@ import CompactSocialShare from '@/components/blocks/social-share/compact';
 import { LocationAutocomplete } from '@/components/ui/location-autocomplete';
 import { DatePicker } from '@/components/ui/date-picker';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useAppContext } from '@/contexts/app';
+import PricingModal from '@/components/pricing/pricing-modal';
+import { Pricing as PricingType } from '@/types/blocks/pricing';
+import type { UserEntitlements } from '@/types/user';
+import { paymentEvents } from '@/lib/analytics';
+import { applyBrandingFooterToPngDataUrl } from '@/lib/export-branding';
 
 export default function MiniaturaAIGenerator() {
   const t = useTranslations('astrocartographyGenerator');
-  const router = useRouter();
   const params = useParams();
+  const { user, setShowSignModal } = useAppContext();
   // 获取当前语言，如果没有locale参数则说明是默认语言（英文）
   const locale = (params.locale as string) || 'en';
   
@@ -45,7 +50,10 @@ export default function MiniaturaAIGenerator() {
     remaining: number;
     isLoggedIn: boolean;
   } | null>(null);
-  
+  const [miniEntitlements, setMiniEntitlements] =
+    useState<UserEntitlements | null>(null);
+  const [showPricingModal, setShowPricingModal] = useState(false);
+  const [pricingData, setPricingData] = useState<PricingType | null>(null);
   const progressTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // 检查使用限制
@@ -145,15 +153,52 @@ export default function MiniaturaAIGenerator() {
     
     // 使用 window.location.href 确保 query 参数正确传递（与 locale/toggle.tsx 保持一致）
     window.location.href = chartPath;
-  }, [birthDate, birthTime, birthLocation, timezone, useCoordinates, selectedLocationCoords, validateBirthData, router, locale]);
+  }, [birthDate, birthTime, birthLocation, timezone, useCoordinates, selectedLocationCoords, validateBirthData, locale]);
 
-  // 下载星盘图功能
-  const handleDownload = useCallback(() => {
-    if (!generatedChartData) return;
-
+  const fetchMiniPricing = useCallback(async () => {
     try {
+      const response = await fetch(`/api/get-pricing?locale=${locale}`);
+      const data = await response.json();
+      if (data.success && data.pricing) {
+        setPricingData(data.pricing);
+      }
+    } catch (e) {
+      console.error('Failed to fetch pricing:', e);
+    }
+  }, [locale]);
+
+  useEffect(() => {
+    if (!user) {
+      setMiniEntitlements(null);
+      return;
+    }
+    fetch('/api/get-user-credits', { method: 'POST' })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.code === 0 && data.data?.entitlements) {
+          setMiniEntitlements(data.data.entitlements);
+        }
+      })
+      .catch(() => {});
+  }, [user]);
+
+  const handleDownload = useCallback(async () => {
+    if (!generatedChartData) return;
+    if (!user) {
+      setShowSignModal(true);
+      return;
+    }
+    if (!miniEntitlements?.canDownloadChart) {
+      toast.error(t('messages.errorGeneral.chartDownloadRequiresPaid'));
+      await fetchMiniPricing();
+      setShowPricingModal(true);
+      paymentEvents.pricingModalOpened('other');
+      return;
+    }
+    try {
+      const dataUrl = await applyBrandingFooterToPngDataUrl(generatedChartData);
       const link = document.createElement('a');
-      link.href = generatedChartData;
+      link.href = dataUrl;
       link.download = `astrocartography-chart-${Date.now()}.png`;
       document.body.appendChild(link);
       link.click();
@@ -162,7 +207,14 @@ export default function MiniaturaAIGenerator() {
     } catch (error) {
       toast.error(t('messages.errorGeneral.downloadFailed'));
     }
-  }, [generatedChartData, t]);
+  }, [
+    generatedChartData,
+    t,
+    user,
+    miniEntitlements?.canDownloadChart,
+    fetchMiniPricing,
+    setShowSignModal,
+  ]);
 
   // 分享回调
   const handleShare = useCallback((platform: string) => {
@@ -423,7 +475,7 @@ export default function MiniaturaAIGenerator() {
                       <Button 
                         variant="outline" 
                         className="flex-1 h-12 border-white/30 text-white hover:bg-white/10 bg-white/5"
-                        onClick={handleDownload}
+                        onClick={() => void handleDownload()}
                       >
                         <Calendar className="mr-2 size-4" />
                         {t('form.buttons.download')}
@@ -457,6 +509,22 @@ export default function MiniaturaAIGenerator() {
           )}
         </div>
       </div>
+      {pricingData && (
+        <PricingModal
+          open={showPricingModal}
+          onOpenChange={setShowPricingModal}
+          pricing={pricingData}
+          onSuccess={() => {
+            fetch('/api/get-user-credits', { method: 'POST' })
+              .then((r) => r.json())
+              .then((data) => {
+                if (data.code === 0 && data.data?.entitlements) {
+                  setMiniEntitlements(data.data.entitlements);
+                }
+              });
+          }}
+        />
+      )}
     </section>
   );
 }

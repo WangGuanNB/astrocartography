@@ -11,7 +11,6 @@
     "api_keys": "Chaves API",
     "my_orders": "Meus Pedidos",
     "user_center": "Centro do Usuário"
-   
   },
   "sign_modal": {
     "sign_in_title": "Entrar",
@@ -159,7 +158,7 @@
     "contact_tip": "Outras formas de nos contatar",
     "rating_tip": "Como você se sente sobre o nosso produto?",
     "placeholder": "Deixe suas palavras aqui..."
-  } ,
+  },
   "miniatureGenerator": {
     "ui": {
       "title": "Construa Seu Mundo em Miniatura com Miniatur AI",
@@ -335,7 +334,13 @@
     "result": {
       "title": "Confira meu Mapa de Astrocartografia!",
       "description": "Acabei de gerar meu mapa de astrocartografia personalizado! Descubra suas conexões cósmicas ao redor do mundo.",
-      "hashtags": ["Astrocartografia", "MapaAstro", "Astrologia", "ConexõesCósmicas", "MapaNatal"]
+      "hashtags": [
+        "Astrocartografia",
+        "MapaAstro",
+        "Astrologia",
+        "ConexõesCósmicas",
+        "MapaNatal"
+      ]
     }
   },
   "astro_chat": {
@@ -346,6 +351,7 @@
     "insufficient_credits_close": "Fechar",
     "insufficient_credits_upgrade": "Fazer Upgrade",
     "download_chat": "Baixar Conversa",
+    "view_history": "Histórico",
     "download_success": "Conversa baixada com sucesso",
     "download_failed": "Falha ao baixar, tente novamente",
     "no_messages": "Nenhuma mensagem para baixar",
@@ -441,5 +447,15 @@
         "questionTemplate": "{city} vai mudar a minha vida em um nível profundo?"
       }
     }
+  },
+  "ai_chat_history_page": {
+    "title": "Histórico de chat com IA",
+    "empty": "Ainda não há conversas salvas.",
+    "pro_required": "Faça upgrade para o plano Profissional para ativar o histórico na nuvem: salvamento automático das conversas, sincronização entre dispositivos e revisão a qualquer momento (após ativar, seu histórico será armazenado e poderá ser baixado). Antes da ativação, não salvamos seu histórico de conversas na nuvem.",
+    "sign_in_prompt": "Faça login para ver suas conversas salvas.",
+    "view_plans": "Ver planos",
+    "back": "Voltar à lista",
+    "message_count": "{count} mensagens",
+    "close": "Fechar"
   }
 }

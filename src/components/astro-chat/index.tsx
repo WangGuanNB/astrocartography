@@ -9,7 +9,8 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { MessageCircle, Send, Sparkles, Coins, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { User } from '@/types/user';
+import { User, type UserEntitlements } from '@/types/user';
+import { useRouter } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import PricingModal from '@/components/pricing/pricing-modal';
@@ -73,16 +74,32 @@ export default function AstroChat({
   const [userCredits, setUserCredits] = useState<number | null>(null); // 用户积分余额
   const [lastCredits, setLastCredits] = useState<number | null>(null); // 上次积分值，用于检测变化
   const [showPricingModal, setShowPricingModal] = useState(false);
+  const [pricingPreferredProductId, setPricingPreferredProductId] = useState<string | undefined>(undefined);
   const [pricingData, setPricingData] = useState<PricingType | null>(null);
+  const [showHistoryUpgradeDialog, setShowHistoryUpgradeDialog] = useState(false);
   const [showInsufficientCreditsDialog, setShowInsufficientCreditsDialog] = useState(false); // 积分不足提示框
+  const [entitlements, setEntitlements] = useState<UserEntitlements | null>(null);
   const [followUpSuggestions, setFollowUpSuggestions] = useState<Record<string, string[]>>({}); // 存储每个消息的追问建议
   const [generatingFollowUp, setGeneratingFollowUp] = useState<Record<string, boolean>>({}); // 标记正在生成的追问建议
   const t = useTranslations('astro_chat');
+  const tHistory = useTranslations('ai_chat_history_page');
   const params = useParams();
+  const router = useRouter();
   // 🔥 修复：使用 useParams() 获取 locale，与 locale/toggle.tsx 保持一致
   // 获取当前语言，如果没有locale参数则说明是默认语言（英文）
   const locale = (params.locale as string) || 'en';
   
+  const chartSessionKey = useMemo(
+    () => `${chartData.birthData.location}|${synastryData ? 'syn' : 'map'}`,
+    [chartData.birthData.location, synastryData]
+  );
+  const sessionIdRef = useRef(
+    typeof crypto !== 'undefined' ? crypto.randomUUID() : `session-${Date.now()}`
+  );
+  useEffect(() => {
+    sessionIdRef.current = crypto.randomUUID();
+  }, [chartSessionKey]);
+
   const suggestedQuestions = useMemo(() => {
     if (synastryData) {
       return [
@@ -126,6 +143,15 @@ export default function AstroChat({
           return credits;
         });
         setUserCredits(credits);
+        if (data.data.entitlements) {
+          setEntitlements(data.data.entitlements);
+        } else {
+          setEntitlements({
+            canExportCurrentChat: false,
+            canDownloadChart: false,
+            canViewChatHistory: false,
+          });
+        }
         return credits;
       }
       return null;
@@ -147,6 +173,38 @@ export default function AstroChat({
       console.error('Failed to fetch pricing data:', err);
     }
   };
+
+  const handleHistoryClick = useCallback(async () => {
+    if (!user) {
+      onRequireLogin?.();
+      return;
+    }
+
+    if (entitlements?.canViewChatHistory) {
+      router.push('/ai-chat-history');
+      return;
+    }
+
+    // entitlements may be stale or not yet loaded; refresh once before gating.
+    try {
+      if (!entitlements) {
+        const response = await fetch('/api/get-user-credits', { method: 'POST' });
+        const data = await response.json();
+        if (data.code === 0 && data.data?.entitlements) {
+          const latest = data.data.entitlements as UserEntitlements;
+          setEntitlements(latest);
+          if (latest.canViewChatHistory) {
+            router.push('/ai-chat-history');
+            return;
+          }
+        }
+      }
+    } catch {
+      // keep fallback behavior below
+    }
+
+    setShowHistoryUpgradeDialog(true);
+  }, [user, entitlements, onRequireLogin, router]);
 
   // 处理积分不足的情况（显示提示框而不是直接打开价格弹窗）
   const handleInsufficientCredits = useCallback(async () => {
@@ -440,9 +498,23 @@ export default function AstroChat({
   }, [messages]);
 
   // 下载聊天记录
-  const handleDownloadChat = useCallback(() => {
+  const handleDownloadChat = useCallback(async () => {
     if (messages.length === 0) {
       toast.error(t('no_messages'));
+      return;
+    }
+
+    if (!user) {
+      onRequireLogin?.();
+      return;
+    }
+
+    if (!entitlements?.canExportCurrentChat) {
+      toast.error(t('export_requires_paid'));
+      await fetchPricingData();
+      setPricingPreferredProductId(undefined);
+      setShowPricingModal(true);
+      paymentEvents.pricingModalOpened('other');
       return;
     }
 
@@ -494,7 +566,16 @@ export default function AstroChat({
       console.error('Failed to download chat:', error);
       toast.error(t('download_failed'));
     }
-  }, [messages, chartData, synastryData, locale, t]);
+  }, [
+    messages,
+    chartData,
+    synastryData,
+    locale,
+    t,
+    user,
+    entitlements?.canExportCurrentChat,
+    onRequireLogin,
+  ]);
 
   // 📊 埋点：收到 AI 回复（监听消息变化）
   useEffect(() => {
@@ -687,6 +768,7 @@ export default function AstroChat({
       // 未登录用户清空积分显示
       setUserCredits(null);
       setLastCredits(null);
+      setEntitlements(null);
     }
   }, [open, user, fetchUserCredits]);
 
@@ -718,6 +800,35 @@ export default function AstroChat({
     }
   }, [messages.length, isLoading, user, fetchUserCredits]);
 
+  useEffect(() => {
+    if (!open || !user) return;
+    const last = messages[messages.length - 1];
+    if (!last || last.role !== 'assistant' || isLoading) return;
+
+    const tmr = setTimeout(() => {
+      void fetch('/api/ai-chat/sessions/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId: sessionIdRef.current,
+          chartData,
+          synastryData: synastryData ?? undefined,
+          messages: messages.map((m) => ({
+            role: m.role as 'user' | 'assistant',
+            content: m.content,
+          })),
+        }),
+      });
+    }, 600);
+    return () => clearTimeout(tmr);
+  }, [
+    messages,
+    open,
+    user,
+    isLoading,
+    chartData,
+    synastryData,
+  ]);
 
   // 处理表单提交
   const onSubmit = async (e: React.FormEvent) => {
@@ -1111,19 +1222,27 @@ export default function AstroChat({
                     </DialogDescription>
                   </div>
                 </div>
-                {/* 下载按钮 */}
-                {messages.length > 0 && (
-                  <Button
-                    onClick={handleDownloadChat}
-                    variant="outline"
-                    size="sm"
-                    className="border-white/20 text-white hover:bg-white/10"
-                    title={t('download_chat')}
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => void handleHistoryClick()}
+                    className="text-sm font-medium whitespace-nowrap rounded-full border border-purple-400/50 bg-purple-500/15 px-3.5 py-1.5 text-purple-100 hover:bg-purple-500/25 hover:text-white transition-colors"
                   >
-                    <Download className="size-4 mr-2" />
-                    {t('download_chat')}
-                  </Button>
-                )}
+                    {t('view_history')}
+                  </button>
+                  {messages.length > 0 && (
+                    <Button
+                      onClick={() => void handleDownloadChat()}
+                      variant="outline"
+                      size="sm"
+                      className="border-white/20 text-white hover:bg-white/10"
+                      title={t('download_chat')}
+                    >
+                      <Download className="size-4 mr-2" />
+                      {t('download_chat')}
+                    </Button>
+                  )}
+                </div>
               </div>
               <div className="mt-3 flex items-center justify-between">
                 <div className="flex items-center gap-2 text-sm text-green-400">
@@ -1200,6 +1319,7 @@ export default function AstroChat({
                     await fetchPricingData();
                   }
                   // 打开价格弹窗
+                  setPricingPreferredProductId(undefined);
                   setShowPricingModal(true);
                   // 📊 埋点：打开价格弹窗（由积分不足触发）
                   paymentEvents.pricingModalOpened('insufficient_credits');
@@ -1235,19 +1355,27 @@ export default function AstroChat({
                   </p>
                 </div>
               </div>
-              {/* 下载按钮 */}
-              {messages.length > 0 && (
-                <Button
-                  onClick={handleDownloadChat}
-                  variant="outline"
-                  size="sm"
-                  className="border-white/20 text-white hover:bg-white/10 text-xs px-2 py-1 h-auto"
-                  title={t('download_chat')}
+              <div className="flex items-center gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => void handleHistoryClick()}
+                  className="text-xs font-medium rounded-full border border-purple-400/50 bg-purple-500/15 px-2.5 py-1 text-purple-100 hover:bg-purple-500/25 hover:text-white transition-colors max-w-[104px] truncate"
                 >
-                  <Download className="size-3 mr-1" />
-                  <span className="hidden sm:inline">{t('download_chat')}</span>
-                </Button>
-              )}
+                  {t('view_history')}
+                </button>
+                {messages.length > 0 && (
+                  <Button
+                    onClick={() => void handleDownloadChat()}
+                    variant="outline"
+                    size="sm"
+                    className="border-white/20 text-white hover:bg-white/10 text-xs px-2 py-1 h-auto"
+                    title={t('download_chat')}
+                  >
+                    <Download className="size-3 mr-1" />
+                    <span className="hidden sm:inline">{t('download_chat')}</span>
+                  </Button>
+                )}
+              </div>
             </div>
             <div className="mt-2 flex items-center justify-between flex-wrap gap-2">
               <div className="flex items-center gap-2 text-xs text-green-400">
@@ -1289,15 +1417,55 @@ export default function AstroChat({
 
       {/* 价格弹窗 */}
       {pricingData && (
-        <PricingModal
+          <PricingModal
           open={showPricingModal}
           onOpenChange={setShowPricingModal}
           pricing={pricingData}
+            preferredProductId={pricingPreferredProductId}
           onSuccess={() => {
             fetchUserCredits();
           }}
         />
       )}
+
+        <Dialog
+          open={showHistoryUpgradeDialog}
+          onOpenChange={setShowHistoryUpgradeDialog}
+        >
+          <DialogContent className="max-w-lg w-[calc(100%-2rem)] mx-4 bg-gradient-to-br from-purple-900/20 via-gray-900/95 to-gray-900/95 border border-white/10 backdrop-blur-xl p-4 sm:p-6">
+            <DialogHeader>
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-white">
+                {tHistory('title')}
+              </DialogTitle>
+              <DialogDescription className="text-sm sm:text-base text-gray-300 mt-2 sm:mt-3 leading-relaxed">
+                {tHistory('pro_required')}
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-end mt-6 sm:mt-8">
+              <Button
+                variant="outline"
+                onClick={() => setShowHistoryUpgradeDialog(false)}
+                className="border-white/20 text-white hover:bg-white/10 px-6 py-2.5 w-full sm:w-auto"
+              >
+                {tHistory('close')}
+              </Button>
+              <Button
+                onClick={async () => {
+                  setShowHistoryUpgradeDialog(false);
+                  if (!pricingData) {
+                    await fetchPricingData();
+                  }
+                  setPricingPreferredProductId('professional');
+                  setShowPricingModal(true);
+                  paymentEvents.pricingModalOpened('other');
+                }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2.5 w-full sm:w-auto"
+              >
+                {tHistory('view_plans')}
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
 
       {/* 积分不足提示框 - 桌面端和移动端都使用 Dialog，居中显示 */}
       <Dialog open={showInsufficientCreditsDialog} onOpenChange={setShowInsufficientCreditsDialog}>
@@ -1326,6 +1494,7 @@ export default function AstroChat({
                   await fetchPricingData();
                 }
                 // 打开价格弹窗
+                  setPricingPreferredProductId(undefined);
                 setShowPricingModal(true);
                 // 📊 埋点：打开价格弹窗（由积分不足触发）
                 paymentEvents.pricingModalOpened('insufficient_credits');

@@ -13,6 +13,10 @@ import {
 } from 'lucide-react';
 import Icon from '@/components/icon';
 import { useTranslations } from 'next-intl';
+import {
+  applyBrandingFooterToPngDataUrl,
+  getLandingAttributionUrl,
+} from '@/lib/export-branding';
 
 export interface CompactSocialShareProps {
   imageUrl: string;
@@ -62,13 +66,21 @@ export default function CompactSocialShare({
 
     setIsUploading(true);
     try {
+      let dataToUpload = imageData;
+      if (mimeType === 'image/png' && imageData.startsWith('data:image/')) {
+        try {
+          dataToUpload = await applyBrandingFooterToPngDataUrl(imageData);
+        } catch {
+          /* keep original */
+        }
+      }
       const response = await fetch('/api/upload-image', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          imageData: imageData,
+          imageData: dataToUpload,
           mimeType: mimeType,
         }),
       });
@@ -93,24 +105,25 @@ export default function CompactSocialShare({
   const getShareText = (platform: string, shareUrl: string) => {
     const hashtagsText = hashtags.map(tag => `#${tag}`).join(' ');
     const baseText = t('text');
-    
+    const siteLine = getLandingAttributionUrl();
+
     switch (platform) {
       case 'twitter':
-        return `${baseText} ${shareUrl} ${hashtagsText}`;
+        return `${baseText} ${shareUrl}\n${siteLine} ${hashtagsText}`;
       case 'facebook':
-        return `${baseText} ${shareUrl} 🎨✨`;
+        return `${baseText} ${shareUrl}\n${siteLine} 🎨✨`;
       case 'linkedin':
-        return `${baseText} ${shareUrl} ${hashtagsText}`;
+        return `${baseText} ${shareUrl}\n${siteLine} ${hashtagsText}`;
       case 'pinterest':
-        return `${baseText} ${shareUrl} 🎨 ${hashtagsText}`;
+        return `${baseText} ${shareUrl}\n${siteLine} 🎨 ${hashtagsText}`;
       case 'whatsapp':
-        return `${baseText} ${shareUrl}`;
+        return `${baseText} ${shareUrl}\n${siteLine}`;
       case 'telegram':
-        return `${baseText} ${shareUrl}`;
+        return `${baseText} ${shareUrl}\n${siteLine}`;
       case 'reddit':
-        return `${baseText} ${shareUrl}`;
+        return `${baseText} ${shareUrl}\n${siteLine}`;
       default:
-        return `${baseText} ${shareUrl} ${hashtagsText}`;
+        return `${baseText} ${shareUrl}\n${siteLine} ${hashtagsText}`;
     }
   };
 
@@ -168,7 +181,8 @@ export default function CompactSocialShare({
     if (!url) return;
 
     try {
-      await navigator.clipboard.writeText(url);
+      const siteLine = getLandingAttributionUrl();
+      await navigator.clipboard.writeText(`${url}\n${siteLine}`);
       trackShare('copy', url);
       toast.success(t('success'));
       onShare?.('copy');
