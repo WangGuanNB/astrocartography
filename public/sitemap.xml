@@ -427,6 +427,45 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Solar Return Chart Calculator
+       ────────────────────────────────────────────────────────── -->
+  <url>
+    <loc>https://astrocarto.org/solar-return-chart-calculator/</loc>
+    <lastmod>2026-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/solar-return-chart-calculator/</loc>
+    <lastmod>2026-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/solar-return-chart-calculator/</loc>
+    <lastmod>2026-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/solar-return-chart-calculator/</loc>
+    <lastmod>2026-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/solar-return-chart-calculator/</loc>
+    <lastmod>2026-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/solar-return-chart-calculator/</loc>
+    <lastmod>2026-04-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Natal Chart 页面 - 主关键词: natal chart / carta natal / Geburtshoroskop / carta natale / mapa astral
   ────────────────────────────────────────────────────────── -->
   <!-- 英文版本 - natal chart calculator -->

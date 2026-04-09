@@ -77,6 +77,13 @@
               "url": "/synastry-chart-calculator",
               "target": "_self",
               "icon": "RiHeartLine"
+            },
+            {
+              "title": "Solar Return Chart Calculator",
+              "description": "Annual solar return chart for any year, optional relocated return",
+              "url": "/solar-return-chart-calculator",
+              "target": "_self",
+              "icon": "RiSunLine"
             }
           ]
         },

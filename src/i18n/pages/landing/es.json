@@ -70,6 +70,13 @@
               "url": "/relocation-chart-calculator",
               "target": "_self",
               "icon": "RiFlightTakeoffLine"
+            },
+            {
+              "title": "Solar Return Chart Calculator",
+              "description": "Carta de revolución solar anual para cualquier año, ubicación opcional",
+              "url": "/solar-return-chart-calculator",
+              "target": "_self",
+              "icon": "RiSunLine"
             }
           ]
         },

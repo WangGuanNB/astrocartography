@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "title": "Calcolatore rivoluzione solare gratis | Tema annuale | AstroCarto",
+    "description": "Calcola online la tua rivoluzione solare (tema di compleanno) per qualsiasi anno: zodiaco tropicale, case intere, possibilità di fissare un luogo diverso se quel giorno non sei nella città di nascita. Poi vai alla pagina iniziale e apri Astrocartography con gli stessi dati per vedere le linee sulla mappa.",
+    "keywords": "rivoluzione solare, calcolatore rivoluzione solare, tema annuale, rivoluzione solare gratis, astrologia predittiva, rivoluzione solare altro luogo, case intere, astrocartografia"
+  },
+  "intentAnchor": {
+    "text": "Ti serve una rivoluzione solare chiara e verificabile? Inizia dal modulo: data, ora e luogo di nascita, anno che vuoi studiare e, se serve, la città in cui ti troverai nel momento del ritorno del Sole alla longitudine natale (tipico quando il compleanno si festeggia lontano da casa). Ottieni il tema annuale e un collegamento diretto alla pagina iniziale di Astrocartography per proiettare gli stessi dati sul globo."
+  },
+  "internalLinks": {
+    "title": "Altri strumenti",
+    "items": [
+      {
+        "text": "Linee planetarie dalla",
+        "linkText": "pagina iniziale Astrocartography",
+        "url": "/"
+      },
+      {
+        "text": "Cielo di un giorno sul tema natale:",
+        "linkText": "Calcolatore transiti",
+        "url": "/transit-chart-calculator"
+      },
+      {
+        "text": "Stesso momento di nascita, altra città:",
+        "linkText": "Calcolatore tema spostato",
+        "url": "/relocation-chart-calculator"
+      },
+      {
+        "text": "Tema natale classico:",
+        "linkText": "Generatore tema natale",
+        "url": "/tools/birth-chart-generator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Cos’è la rivoluzione solare",
+    "label": "INTRODUZIONE",
+    "description": "In Italia si dice «rivoluzione solare» o, più colloquialmente, «tema di compleanno»: è la mappa del cielo nel preciso istante in cui, ogni anno, il Sole torna alla stessa longitudine eclittica che aveva alla tua nascita. Non è l’oroscopo del segno solare: servono ora e luogo di nascita, e se quel giorno sei altrove puoi chiedere il calcolo «per quella città». È uno degli strumenti classici dell’astrologia predittiva europea e americana. Lo abbiamo affiancato ad Astrocartography perché molte persone uniscono la lettura annuale a domande di trasferimento, studio all’estero o lunghi soggiorni.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Calcolatore rivoluzione solare — tema annuale"
+    },
+    "items": [
+      {
+        "title": "Come si legge in pratica",
+        "description": "Si parte spesso dall’Ascendente della rivoluzione, dalla Luna per casa e dai pianeti sugli assi. Non sostituisce un supporto psicologico o un consulente finanziario, ma dà cornice ai temi dell’anno. Qui mettiamo in primo piano i numeri—poi puoi passare alla mappa sulla pagina iniziale e vedere come il tema natale si proietta sul mondo.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "Lettura pratica della rivoluzione solare" }
+      },
+      {
+        "title": "Rivoluzione solare e tema natale",
+        "description": "Il natale è la bussola di fondo; la rivoluzione solare aggiorna il racconto per i dodici mesi tra un compleanno e l’altro. Se cambi solo il luogo di calcolo (stesso istante, altre coordinate), cambiano case e angoli: è la cosiddetta rivoluzione «spostata» o per altro luogo, molto usata dai viaggiatori.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "Rivoluzione solare e tema natale" }
+      },
+      {
+        "title": "Compleanno in viaggio",
+        "description": "Se sai già che non sarai nel luogo di nascita, conviene impostare la rivoluzione per la città dove si festeggia: il Sole torna allo stesso grado, ma le case seguono il nuovo orizzonte. Da lì, con un clic puoi aprire Astrocartography sulla pagina iniziale senza reinserire data e ora.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "Rivoluzione solare in viaggio" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Perché usare questo calcolatore",
+    "label": "Vantaggi",
+    "description": "Calcolo esplicito, case intere e passaggio diretto alla mappa del sito con i tuoi dati di nascita.",
+    "items": [
+      {
+        "title": "Tutti i dati per confrontare",
+        "description": "Pianeti, segni, gradi e case intere rispetto all’Ascendente della rivoluzione, più l’istante UTC del ritorno del Sole. Utile per controllare le effemeridi o convertire in ora locale.",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Precisione rivoluzione solare" }
+      },
+      {
+        "title": "Gratis per provare",
+        "description": "Cambia anno o luogo di calcolo senza costi sul tema base. Altrove sul sito le funzioni avanzate possono essere a pagamento; qui il nucleo resta aperto.",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Calcolatore gratuito" }
+      },
+      {
+        "title": "Collegamento alla pagina iniziale",
+        "description": "Dopo la lettura, un pulsante porta i tuoi dati alla pagina iniziale per la mappa delle linee: niente copia e incolla.",
+        "icon": "RiMapLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Dalla rivoluzione solare alla mappa" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Come si usa",
+    "label": "PASSI",
+    "description": "Quattro passaggi: dati di nascita, anno della rivoluzione, luogo opzionale, poi eventualmente la mappa sulla pagina iniziale.",
+    "items": [
+      {
+        "title": "Dati di nascita attendibili",
+        "description": "Data, ora e città come sull’atto; fuso orario coerente. La posizione del Sole natale dipende dall’ora: più è precisa, più è stabile il resto del tema.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Scegli l’anno",
+        "description": "Di solito l’anno del prossimo ciclo di compleanno; anche gli anni passati sono utili per confronti. Il programma individua l’istante tropicale del ritorno vicino alla data del compleanno.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Luogo del ritorno (facoltativo)",
+        "description": "Vuoto = case calcolate per la città natale. Altra città = rivoluzione «per quel luogo» se ci sarai quel giorno.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Leggi il tema e apri la mappa",
+        "description": "Controlla Ascendente e case; se la domanda è anche geografica, passa ad Astrocartography dalla pagina iniziale con gli stessi dati.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Cosa offre lo strumento",
+    "label": "FUNZIONI",
+    "description": "Pensato per chi segue l’astrologia occidentale tropicale e vuole continuità con la mappa di astrocartografia.",
+    "items": [
+      {
+        "title": "Istante tropicale del ritorno",
+        "description": "Individuiamo il momento in cui il Sole torna alla longitudine natale e calcoliamo il tema per quell’istante.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Case intere",
+        "description": "Ogni casa coincide con un segno intero dall’Ascendente della rivoluzione: lettura semplice per iniziare. Altri sistemi di case possono spostare le cuspidi, non i gradi planetari.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Ruota grafica",
+        "description": "Utile per scorgere subito pianeti angolari e aspetti principali.",
+        "icon": "RiPlanetLine"
+      },
+      {
+        "title": "Stessi dati sulla pagina iniziale",
+        "description": "Astrocartography è il prodotto di punta del sito: puoi chiudere il cerchio sulla mappa mondiale con un solo flusso di dati.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Rivoluzione per altro luogo",
+        "description": "Campo vuoto = città natale; altrimenti indica dove sarai nel momento del ritorno, così angoli e case seguono quel luogo.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Scelta dell’anno",
+        "description": "Confronta periodi o pianifica: il selettore allinea il tema alla cronologia che ti interessa prima di passare alla mappa.",
+        "icon": "RiCalendarLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Domande frequenti — rivoluzione solare",
+    "description": "Risposte brevi su tema annuale, calcolatore e Astrocartography.",
+    "items": [
+      {
+        "title": "Che differenza c’è con l’oroscopo del segno?",
+        "description": "La rivoluzione solare è un tema calcolato per te, con data, ora e luogo di nascita (e opzionalmente luogo del ritorno). Mostriamo case intere e ora UTC usata nel calcolo."
+      },
+      {
+        "title": "È gratuito?",
+        "description": "Sì, per generare il tema base. Altre parti del sito possono avere costi o crediti; il nucleo di questa pagina resta accessibile."
+      },
+      {
+        "title": "Il ritorno cade sempre il giorno del compleanno?",
+        "description": "Di solito è molto vicino, ma l’orario esatto dipende da fuso e anno bisestile. Forniamo UTC per convertire in ora italiana o locale."
+      },
+      {
+        "title": "Cos’è la rivoluzione «spostata»?",
+        "description": "Stesso istante astronomico, ma case e angoli calcolati per una città diversa da quella di nascita—tipico se sei in viaggio."
+      },
+      {
+        "title": "Come si collega ad Astrocartography?",
+        "description": "La rivoluzione solare descrive l’anno; la mappa mostra dove il tuo tema natale si proietta sul globo. Il pulsante verso la pagina iniziale riusa i dati."
+      },
+      {
+        "title": "Posso basarmi solo su questo per scelte importanti?",
+        "description": "Usa la carta come supporto alla riflessione, non come unico criterio. Per salute, denaro o questioni legali rivolgiti a professionisti idonei."
+      },
+      {
+        "title": "Perché il link alla pagina iniziale?",
+        "description": "Perché chi studia il tema annuale spesso ha anche domande su trasferimenti e soggiorni lunghi: la mappa del sito completa il quadro."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Calcola la rivoluzione solare e apri la mappa",
+    "description": "Scegli l’anno, leggi Ascendente e case; se ti serve il contesto geografico, vai alla pagina iniziale di Astrocartography con gli stessi dati di nascita.",
+    "buttons": [
+      {
+        "title": "Vai alla pagina iniziale Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Data di nascita",
+      "birthTime": "Ora di nascita (più precisa possibile)",
+      "birthLocation": "Luogo di nascita",
+      "timezone": "Fuso orario",
+      "returnYear": "Anno della rivoluzione solare",
+      "returnLocation": "Luogo del ritorno (opzionale)",
+      "returnLocationHint": "Lascia vuoto per usare il luogo di nascita. Indica un’altra città se quel giorno sarai altrove.",
+      "submit": "Calcola rivoluzione solare"
+    },
+    "result": {
+      "title": "La tua rivoluzione solare",
+      "momentLabel": "Istante del ritorno (UTC)",
+      "yearLabel": "Anno",
+      "placeLabel": "Luogo usato per le case",
+      "systemLine": "Angoli calcolati per il luogo di ritorno indicato o, in assenza, per il luogo di nascita.",
+      "ascLabel": "Ascendente della rivoluzione",
+      "tableTitle": "Pianeti in questa rivoluzione solare",
+      "planet": "Pianeta",
+      "sign": "Segno",
+      "degree": "Grado",
+      "house": "Casa",
+      "ctaChart": "Apri Astrocartography dalla pagina iniziale con questi dati",
+      "bridgeText": "Tema calcolato per l’istante UTC in cui il Sole raggiunge la longitudine natale. Abbinalo alla mappa sulla pagina iniziale per unire anno e geografia.",
+      "footnote": "Case intere; zodiaco tropicale. Per uso professionale, confronta con il tuo software abituale."
+    },
+    "errors": {
+      "required": "Compila data, ora, luogo, fuso e anno della rivoluzione.",
+      "location": "Luogo non trovato. Prova «città, Paese» (es. Lisbona, Portogallo).",
+      "generic": "Calcolo non completato. Controlla i dati e riprova."
+    }
+  }
+}

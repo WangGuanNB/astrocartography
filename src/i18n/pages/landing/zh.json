@@ -70,6 +70,13 @@
               "url": "/relocation-chart-calculator",
               "target": "_self",
               "icon": "RiFlightTakeoffLine"
+            },
+            {
+              "title": "太阳回归盘计算器",
+              "description": "按出生数据生成指定年份的太阳回归盘，可选回归地点",
+              "url": "/solar-return-chart-calculator",
+              "target": "_self",
+              "icon": "RiSunLine"
             }
           ]
         },

@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "title": "Solarrevolution berechnen — kostenloses Jahreshoroskop zum Geburtstag | AstroCarto",
+    "description": "Berechnen Sie Ihre Solarrevolution (jährliches Sonnenrückkehr-Horoskop) für jedes Jahr aus Geburtsdatum, -zeit und -ort: tropisches Tierkreiszeichen, Vollhäuser, optional anderer Ort am Tag der Rückkehr. Anschließend gelangen Sie mit einem Klick zur Startseite und öffnen Astrocartography mit denselben Daten auf der Weltkarte.",
+    "keywords": "Solarrevolution, Solarrevolution berechnen, Sonnenrückkehr, Jahreshoroskop Geburtstag, Astrologie Jahreshoroskop, verlegte Solarrevolution, Vollhäuser, Astrokartografie"
+  },
+  "intentAnchor": {
+    "text": "Sie möchten eine nachvollziehbare Solarrevolution? Zuerst die Eingabe: Geburtsdatum, -zeit und -ort, das Jahr, das Sie betrachten wollen, und bei Bedarf den Ort, an dem Sie sich im Moment der Sonnenrückkehr zur natalen Länge befinden — typisch bei Geburtstag auf Reisen. Sie erhalten das Jahresrad und einen Direktlink zur Astrocartography-Startseite, um dieselben Geburtsdaten auf dem Globus zu sehen."
+  },
+  "internalLinks": {
+    "title": "Weitere Tools",
+    "items": [
+      {
+        "text": "Planetenlinien von der",
+        "linkText": "Astrocartography-Startseite",
+        "url": "/"
+      },
+      {
+        "text": "Tageshimmel zum Radix:",
+        "linkText": "Transit-Rechner",
+        "url": "/transit-chart-calculator"
+      },
+      {
+        "text": "Gleicher Geburtstag, anderer Ort:",
+        "linkText": "Standort- / Umzugs-Rechner",
+        "url": "/relocation-chart-calculator"
+      },
+      {
+        "text": "Klassisches Radix:",
+        "linkText": "Geburtshoroskop-Generator",
+        "url": "/tools/birth-chart-generator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Was ist die Solarrevolution",
+    "label": "EINFÜHRUNG",
+    "description": "Im deutschsprachigen Raum heißt die Technik meist Solarrevolution oder Sonnenrückkehr: Es ist das Horoskop für den exakten Zeitpunkt, zu dem die Sonne jedes Jahr wieder dieselbe ekliptikale Länge erreicht wie bei Ihrer Geburt. Damit lesen Astrologinnen und Astrologen den Ton des Jahres zwischen zwei Geburtstagen — nicht zu verwechseln mit Zeitungshoroskopen nach Sternzeichen. Gebraucht werden immer Geburtszeit und -ort; wer den Geburtstag woanders feiert, kann die Solarrevolution für jene Stadt berechnen (verlegte oder ortsbezogene Rückkehr). Wir verbinden das mit Astrocartography, weil viele Menschen Jahresfragen mit Umzug, Auslandsaufenthalt oder längerer Reise kombinieren.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Solarrevolution-Rechner — Jahreshoroskop"
+    },
+    "items": [
+      {
+        "title": "Wofür man es im Alltag nutzt",
+        "description": "Üblich ist der Blick auf den Aszendenten der Revolution, den Mond in den Häusern und Planeten an den Achsen. Eine sorgfältig berechnete Solarrevolution ersetzt keine Therapie und keine Steuer- oder Rechtsberatung, aber sie ordnet oft bereits gespürte Jahresthemen. Bei uns stehen zuerst belastbare astronomische Angaben — danach können Sie zur Startseitenkarte wechseln und sehen, wie sich Ihr Radix auf der Erde abbildet.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "Praxis der Solarrevolution" }
+      },
+      {
+        "title": "Solarrevolution und Radix",
+        "description": "Das Radix beschreibt die Grundfigur; die Solarrevolution aktualisiert die Geschichte für ein Jahr. Ändern Sie nur den Berechnungsort (gleicher Zeitpunkt, andere Koordinaten), ändern sich Häuser und Winkel: das nennt man verlegte oder ortsbezogene Solarrevolution und ist bei Reisen üblich.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "Solarrevolution und Geburtshoroskop" }
+      },
+      {
+        "title": "Geburtstag unterwegs",
+        "description": "Wenn Sie wissen, dass Sie nicht am Geburtsort feiern, sollte die Solarrevolution für jene Stadt gerechnet werden, in der Sie sich tatsächlich aufhalten — Sonnengrad gleich, Häuser neu. Anschließend lässt sich Astrocartography auf der Startseite mit denselben Geburtsdaten öffnen, ohne alles neu einzutippen.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "Solarrevolution auf Reisen" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Vorteile dieses Rechners",
+    "label": "Vorteile",
+    "description": "Klare Zeitangaben, Vollhäuser und direkter Übergang zur Karte auf der Startseite mit Ihren Geburtsdaten.",
+    "items": [
+      {
+        "title": "Alle Angaben zum Nachrechnen",
+        "description": "Planeten, Zeichen, Grade und Vollhäuser bezogen auf den Aszendenten der Revolution plus UTC-Zeitpunkt der Sonnenrückkehr — geeignet für Ephemeridenvergleich oder Umrechnung in Ortszeit.",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Präzise Solarrevolution" }
+      },
+      {
+        "title": "Kostenlos zum Ausprobieren",
+        "description": "Jahr oder Ort wechseln, ohne für das Grundrad zu zahlen. Andere Bereiche der Website können kostenpflichtig sein; der Kern dieser Seite bleibt offen.",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Rechner" }
+      },
+      {
+        "title": "Sprung zur Startseite",
+        "description": "Nach der Lektüre bringt ein Button Ihre Daten zur Startseitenkarte — ohne Copy und Paste.",
+        "icon": "RiMapLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Von der Solarrevolution zur Weltkarte" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Bedienung",
+    "label": "SCHRITTE",
+    "description": "Vier Schritte: Geburtsdaten, Jahr der Revolution, optional anderer Ort, bei Bedarf Karte auf der Startseite.",
+    "items": [
+      {
+        "title": "Zuverlässige Geburtsangaben",
+        "description": "Datum, Uhrzeit und Ort wie in der Urkunde; passende Zeitzone. Die natale Sonnenposition hängt von der Minute ab.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Jahr wählen",
+        "description": "Meist der nächste Geburtstagszyklus; vergangene Jahre zum Vergleich. Das System findet den tropischen Rückkehrzeitpunkt nahe Ihres Geburtstags.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Optional: Ort der Rückkehr",
+        "description": "Leer = Häuser für den Geburtsort. Anderer Ort = Solarrevolution so, als stünden Sie dort im Rückkehrmoment.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Rad lesen, dann Globus",
+        "description": "Aszendent und Häuser prüfen; bei geografischen Fragen Astrocartography über die Startseite mit denselben Daten öffnen.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Was der Rechner leistet",
+    "label": "FUNKTIONEN",
+    "description": "Ausgerichtet auf tropische westliche Astrologie und nahtlose Nutzung der Linienkarte.",
+    "items": [
+      {
+        "title": "Tropischer Rückkehrzeitpunkt",
+        "description": "Wir ermitteln den Moment, in dem die Sonne ihre natale Länge wieder erreicht, und stellen das Rad für diesen Zeitpunkt auf.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Vollhäuser",
+        "description": "Jedes Haus entspricht einem ganzen Zeichen ab dem Aszendenten der Revolution — übersichtlich für den Einstieg. Andere Häusersysteme ändern die Deutung der Häuser, nicht die Planetengrade.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Grafische Rad-Darstellung",
+        "description": "Hilft, Winkelplaneten und Hauptaspekte schnell zu erkennen.",
+        "icon": "RiPlanetLine"
+      },
+      {
+        "title": "Gleiche Daten auf der Startseite",
+        "description": "Astrocartography ist das Kernprodukt: Sie können vom Jahreshoroskop zur Weltkarte in einem Datenfluss wechseln.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Verlegte Rückkehr",
+        "description": "Feld leer lassen für den Geburtsort oder eine andere Stadt eintragen, wenn Sie dort den Rückkehrmoment erleben.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Jahreswahl",
+        "description": "Reise planen, Perioden vergleichen oder ein vergangenes Jahr betrachten — der Schalter richtet das Rad auf Ihre Zeitachse aus.",
+        "icon": "RiCalendarLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Häufige Fragen — Solarrevolution",
+    "description": "Kurze Antworten zum Jahreshoroskop, diesem Rechner und Astrocartography.",
+    "items": [
+      {
+        "title": "Ist Solarrevolution dasselbe wie Sonnenrückkehr?",
+        "description": "Ja, beide Begriffe bezeichnen das Horoskop des Sonnenrückkehr-Moments. Wir zeigen Vollhäuser und die verwendete UTC-Zeit."
+      },
+      {
+        "title": "Ist der Rechner kostenlos?",
+        "description": "Ja, für das Basisrad. Andere Funktionen der Website können kostenpflichtig sein; der Kern dieser Seite bleibt frei zugänglich."
+      },
+      {
+        "title": "Fällt die Rückkehr immer auf den Geburtstag?",
+        "description": "Sie liegt meist sehr nahe, hängt aber von Schaltjahr und Zeitzone ab. UTC erlaubt die Umrechnung in lokale Zeit."
+      },
+      {
+        "title": "Was ist eine verlegte Solarrevolution?",
+        "description": "Gleicher astronomischer Moment, aber Winkel und Häuser für einen anderen Ort als den Geburtsort — üblich bei Geburtstag auf Reisen."
+      },
+      {
+        "title": "Wie passt Astrocartography dazu?",
+        "description": "Die Solarrevolution beschreibt das Jahr; Astrocartography projiziert Ihr Radix auf die Erde. Der Startseiten-Button übernimmt die Daten."
+      },
+      {
+        "title": "Kann ich allein danach entscheiden?",
+        "description": "Nutzen Sie die Deutung als eine von mehreren Informationsquellen. Wichtige Entscheidungen brauchen Sachverstand und ggf. Fachberatung."
+      },
+      {
+        "title": "Warum der Link zur Startseite?",
+        "description": "Weil Jahresfragen und Standortfragen oft zusammengehören: die Karte des Angebots schließt diese Perspektive."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Solarrevolution berechnen und Karte öffnen",
+    "description": "Wählen Sie das Jahr, lesen Sie Aszendent und Häuser; bei geografischen Fragen wechseln Sie zur Astrocartography-Startseite mit denselben Geburtsdaten.",
+    "buttons": [
+      {
+        "title": "Zur Astrocartography-Startseite",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Geburtsdatum",
+      "birthTime": "Geburtszeit (möglichst genau)",
+      "birthLocation": "Geburtsort",
+      "timezone": "Zeitzone",
+      "returnYear": "Jahr der Solarrevolution",
+      "returnLocation": "Ort am Rückkehrmoment (optional)",
+      "returnLocationHint": "Leer = Häuser für Geburtsort. Anderer Ort = verlegte Solarrevolution für diesen Standort.",
+      "submit": "Solarrevolution berechnen"
+    },
+    "result": {
+      "title": "Ihre Solarrevolution",
+      "momentLabel": "Zeitpunkt der Rückkehr (UTC)",
+      "yearLabel": "Jahr",
+      "placeLabel": "Ort für Häuser",
+      "systemLine": "Winkel beziehen sich auf den angegebenen Rückkehr-Ort oder auf den Geburtsort.",
+      "ascLabel": "Aszendent der Solarrevolution",
+      "tableTitle": "Planeten in dieser Solarrevolution",
+      "planet": "Planet",
+      "sign": "Zeichen",
+      "degree": "Grad",
+      "house": "Haus",
+      "ctaChart": "Astrocartography auf der Startseite mit diesen Daten öffnen",
+      "bridgeText": "Rad für den UTC-Moment, in dem die Sonne ihre natale Länge erreicht. Kombinieren Sie es mit der Karte auf der Startseite für Jahr und Geographie.",
+      "footnote": "Vollhäuser; tropisches Tierkreiszeichen. Für professionelle Arbeit mit Ihrer gewohnten Software abgleichen."
+    },
+    "errors": {
+      "required": "Bitte Geburtsdatum, -zeit, -ort, Zeitzone und Jahr der Solarrevolution ausfüllen.",
+      "location": "Ort nicht gefunden. Versuchen Sie „Stadt, Land“ (z. B. Lissabon, Portugal).",
+      "generic": "Berechnung nicht abgeschlossen. Bitte Daten prüfen und erneut versuchen."
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "title": "Solar Return Chart Calculator — Free Annual Solar Return Chart | AstroCarto",
+    "description": "Free solar return chart calculator: cast your annual solar return chart for any year from your birth data. Get a tropical solar return chart with whole-sign houses, optional relocated return location, then explore Astrocartography on the homepage with one click.",
+    "keywords": "solar return chart, solar return chart calculator, free solar return chart, annual solar return, solar return astrology, birthday chart astrology, relocated solar return chart, year ahead chart, tropical solar return"
+  },
+  "intentAnchor": {
+    "text": "Want a clear solar return chart without guesswork? Use the calculator first: enter birth details, pick a return year, and optionally choose where you will be when the Sun meets its natal longitude. You get a readable annual chart for the months ahead, then a direct link to the Astrocartography homepage to map the same birth data worldwide."
+  },
+  "internalLinks": {
+    "title": "Related tools",
+    "items": [
+      {
+        "text": "Map planetary lines from the",
+        "linkText": "Astrocartography homepage",
+        "url": "/"
+      },
+      {
+        "text": "Overlay the sky on any date:",
+        "linkText": "Transit chart calculator",
+        "url": "/transit-chart-calculator"
+      },
+      {
+        "text": "Shift houses by city:",
+        "linkText": "Relocation chart calculator",
+        "url": "/relocation-chart-calculator"
+      },
+      {
+        "text": "Classic natal wheel:",
+        "linkText": "Birth chart generator",
+        "url": "/tools/birth-chart-generator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What Is a Solar Return Chart",
+    "label": "INTRODUCTION",
+    "description": "A solar return chart is the snapshot of the sky cast for the moment each year when the Sun returns to the same zodiacal longitude it held when you were born. That annual chart is one of the most practical tools in predictive astrology because it frames mood, opportunity, and pressure points for the twelve months until your next birthday. Unlike generic Sun-sign blurbs, a personalized solar return chart ties interpretation to your birth data and—if you choose—to the city where you plan to celebrate. We built this solar return chart calculator next to Astrocartography so you can move from a yearly lens to a geographic lens with one workflow.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Solar return chart calculator preview for an annual chart"
+    },
+    "items": [
+      {
+        "title": "Why the Annual Solar Return Matters",
+        "description": "Readers study the Ascendant of the return wheel, the Moon’s house, and angular planets to sense where life will ask for attention. A careful solar return chart does not replace professional advice, yet it gives vocabulary for patterns you may already feel. Our tool emphasizes transparent numbers first—then invites you to open the Astrocartography homepage and see where natal lines reinforce those yearly themes.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "Meaning of the annual solar return" }
+      },
+      {
+        "title": "Solar Return Chart vs Natal Chart",
+        "description": "Your natal chart is fixed; each new return refreshes the story because the Ascendant and house rulers change unless you relocate. Comparing the two wheels shows how this birthday cycle differs from your lifelong blueprint. Advanced students sometimes request a relocated return for travel years—the same Sun degree, but houses recalculated for another longitude. We label the UTC moment and location so you always know what the wheel represents.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "Solar return compared with the natal chart" }
+      },
+      {
+        "title": "Relocated Returns and Travel Planning",
+        "description": "If you already know you will be abroad on your birthday, testing a relocated chart can show how angles and house topics shift. Pair that insight with planetary lines on our map to align “when” with “where.” Astrocartography on the homepage uses identical birth data, so you do not retype cities when you switch tools.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "Relocated solar return and travel" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Use Our Solar Return Chart Calculator",
+    "label": "Core benefits",
+    "description": "We combine precise timing, whole-sign clarity, and a homepage bridge so your session stays actionable. The wheel you generate is free and ready to pair with our flagship map experience.",
+    "items": [
+      {
+        "title": "Clear Positions and Timing Notes",
+        "description": "Every result lists planets, signs, degrees, and whole-sign houses anchored to the return Ascendant. You also see the UTC timestamp for the solar return instant, which helps cross-check ephemerides or convert to local time before a trip.",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Accurate solar return positions" }
+      },
+      {
+        "title": "Free Access for Planning Cycles",
+        "description": "Refresh results while comparing two cities or two years—no paywall on the core wheel. We want the calculator to earn trust through usefulness before you explore optional premium Astrocartography insights elsewhere.",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Free solar return calculator" }
+      },
+      {
+        "title": "Homepage Link With Your Birth Data",
+        "description": "After you review the return wheel, one button sends your birth information to the Astrocartography homepage so you can study planetary lines without manual copy-paste. That flow respects how people plan: interpret the year, then ask where on Earth those stories intensify.",
+        "icon": "RiMapLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "From solar return to world map" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Use the Solar Return Chart Calculator",
+    "label": "HOW TO USE",
+    "description": "Four steps: enter birth data, choose a year, optionally relocate, then open the homepage map when you are ready.",
+    "items": [
+      {
+        "title": "Enter Accurate Birth Information",
+        "description": "Add birth date, time, and city, then pick the timezone that matches your certificate. The return moment depends on natal Sun longitude, so precision improves reliability for every house topic in the wheel.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Choose the Return Year",
+        "description": "Select the calendar year you want to study—often the upcoming birthday cycle, though past years work for reflection. The engine searches near your birthday month and solves for the tropical instant that completes the return.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Optionally Set a Return Location",
+        "description": "Leave the field blank to cast houses for your birth city, or type another destination to model travel. This is how you preview a relocated return when tickets are already booked.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Read the Wheel, Then Visit the Homepage",
+        "description": "Review the chart, note the Ascendant story, and click through to Astrocartography on the homepage to layer geographic intelligence on the same birth data. Timing meets location in one continuous path.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Solar Return Chart Calculator Features",
+    "label": "FEATURES",
+    "description": "Focused capabilities keep your session accurate, educational, and easy to extend into relocation research.",
+    "items": [
+      {
+        "title": "Tropical Solar Return Timing",
+        "description": "We find the instant the tropical Sun revisits its natal longitude, then cast the wheel for that moment—matching what most Western astrologers mean by an annual return.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Whole-Sign Houses",
+        "description": "Whole-sign houses keep the wheel legible: each house aligns with one sign from the return Ascendant. If you compare software, remember other house systems may label cusps differently.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Visual Wheel for Quick Scanning",
+        "description": "The graphic layout helps you spot angular planets and major aspects before you dive into detailed interpretation alone or with a professional.",
+        "icon": "RiPlanetLine"
+      },
+      {
+        "title": "Direct Homepage Integration",
+        "description": "Because Astrocartography is our core product, every session can end on the homepage map using the same birth data—turning a yearly forecast into a relocation-aware workflow.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Optional Relocated Return",
+        "description": "Many searches for a solar return chart assume one fixed place—but advanced users also want a relocated return when they will celebrate away from home. Leave the return location blank to use your birth city, or enter another destination so angles and houses reflect where you actually plan to be.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Year Selection for Annual Planning",
+        "description": "People look up a solar return chart to frame the year ahead, compare two birthday cycles, or reflect on a past chapter. Choosing the return year lets you align the wheel with the timeline you care about—upcoming travel, career moves, or relationship milestones—before you jump to the map.",
+        "icon": "RiCalendarLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Solar Return Chart Calculator — Frequently Asked Questions",
+    "description": "Common questions about the annual return, this calculator, and how it connects to Astrocartography.",
+    "items": [
+      {
+        "title": "What is a solar return chart?",
+        "description": "It is the chart for the moment each year when the Sun reaches the same longitudinal position it held at your birth. People use it as a yearly forecast lens. We show whole-sign houses and the exact UTC time used."
+      },
+      {
+        "title": "Is this solar return chart calculator free?",
+        "description": "Yes. You can generate wheels for different years or locations without a fee. Premium Astrocartography features elsewhere may use credits, but the core return data on this page stays open so you can evaluate it honestly."
+      },
+      {
+        "title": "Does the return always fall on my birthday?",
+        "description": "The astronomical instant usually lands within about a day of your birthday depending on leap years and zones. We report UTC so you can convert to local time and plan travel if you are testing a relocated chart."
+      },
+      {
+        "title": "What is a relocated solar return chart?",
+        "description": "It keeps the same Sun return instant but calculates angles and houses for a different city than your birthplace—useful when you know where you will be. Enter an optional return city in the form to explore that scenario."
+      },
+      {
+        "title": "How does this connect to Astrocartography?",
+        "description": "The return wheel describes yearly themes; Astrocartography maps your natal chart on the globe. After viewing results, use the homepage button so identical birth data opens the map—timing questions meet location questions."
+      },
+      {
+        "title": "Can I rely on this for major life decisions?",
+        "description": "Treat any astrological chart as one input among many. We aim for consistent astronomy, yet major choices deserve practical planning and professional counsel. Use insights for reflection, not as a substitute for medical, legal, or financial advice."
+      },
+      {
+        "title": "Why emphasize a link to the homepage?",
+        "description": "Passing structured birth data to the homepage reduces friction and strengthens internal discovery of our core map tool. It also helps visitors who want both a solar return chart and geographic context in one session."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Generate Your Solar Return Chart, Then Open the Homepage Map",
+    "description": "Cast the wheel for the year you care about, note the Ascendant and house emphasis, and jump to Astrocartography on the homepage to see where planetary lines cross the world. The return chart frames the annual story; the homepage map shows geographic leverage.",
+    "buttons": [
+      {
+        "title": "Go to Astrocartography homepage",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Birth date",
+      "birthTime": "Birth time (exact if possible)",
+      "birthLocation": "Birth location",
+      "timezone": "Timezone",
+      "returnYear": "Solar return year",
+      "returnLocation": "Return location (optional)",
+      "returnLocationHint": "Leave blank to use your birth city for houses. Enter another city for a relocated return chart.",
+      "submit": "Calculate solar return chart"
+    },
+    "result": {
+      "title": "Your solar return chart",
+      "momentLabel": "Solar return (UTC)",
+      "yearLabel": "Return year",
+      "placeLabel": "Chart location",
+      "systemLine": "Angles use the return location you selected (or your birth city).",
+      "ascLabel": "Solar return Ascendant",
+      "tableTitle": "Planetary positions in this solar return chart",
+      "planet": "Planet",
+      "sign": "Sign",
+      "degree": "Degree",
+      "house": "House",
+      "ctaChart": "Open Astrocartography on the homepage with this birth data",
+      "bridgeText": "This wheel is cast for the UTC moment when the Sun meets its natal longitude. Pair it with the Astrocartography map on our homepage to combine annual themes with planetary lines.",
+      "footnote": "Whole-sign houses; tropical zodiac. For professional work, cross-check with your preferred software and house system."
+    },
+    "errors": {
+      "required": "Please complete birth date, birth time, birth location, timezone, and return year to calculate your solar return chart.",
+      "location": "Location not found. Try entering a city and country (for example, Lisbon, Portugal).",
+      "generic": "We could not finish this solar return chart. Check your data and try again."
+    }
+  }
+}

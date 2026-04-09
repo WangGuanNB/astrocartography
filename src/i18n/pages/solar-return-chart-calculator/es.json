@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "title": "Calculadora de revolución solar gratis | Carta anual | AstroCarto",
+    "description": "Calcula tu revolución solar (carta de cumpleaños) para cualquier año con tus datos de nacimiento: zodíaco tropical, casas enteras y opción de calcularla para otra ciudad si ese día no estarás en tu lugar natal. Luego pasa a la página principal y abre Astrocartography con los mismos datos para ver tus líneas en el mapa.",
+    "keywords": "revolución solar, calculadora revolución solar, carta solar revolución, revolución solar gratis, astrología predictiva, carta anual cumpleaños, revolución solar en otro lugar, casas enteras, astrocartografía"
+  },
+  "intentAnchor": {
+    "text": "¿Buscas una revolución solar clara y bien calculada? Empieza aquí: introduce fecha, hora y lugar de nacimiento, elige el año que quieres estudiar y, si hace falta, la ciudad donde vas a estar cuando se produzca el retorno del Sol a su posición natal (muy útil si cumples años de viaje). Verás la carta del año y un acceso directo a la página principal de Astrocartography para proyectar los mismos datos sobre el mapa mundial."
+  },
+  "internalLinks": {
+    "title": "Otras herramientas",
+    "items": [
+      {
+        "text": "Ver tus líneas planetarias desde la",
+        "linkText": "página principal de Astrocartography",
+        "url": "/"
+      },
+      {
+        "text": "Comparar el cielo de un día con tu natal:",
+        "linkText": "Calculadora de tránsitos",
+        "url": "/transit-chart-calculator"
+      },
+      {
+        "text": "Misma hora de nacimiento, otra ciudad:",
+        "linkText": "Carta de reubicación",
+        "url": "/relocation-chart-calculator"
+      },
+      {
+        "text": "Tema natal clásico:",
+        "linkText": "Generador de carta natal",
+        "url": "/tools/birth-chart-generator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Qué es la revolución solar",
+    "label": "INTRODUCCIÓN",
+    "description": "En la astrología de habla hispana, «revolución solar» es el nombre habitual de la carta que se traza en el instante exacto en que el Sol vuelve cada año a la misma longitud eclíptica que tenía en tu nacimiento. Esa carta anual sirve para leer el tono del año que va de un cumpleaños al siguiente: dónde se concentra la acción, qué casas se activan y qué planetas quedan angulares. No es lo mismo que el horóscopo del signo solar: aquí entran tu hora y tu lugar de nacimiento, y si vas a estar en otra ciudad el día del retorno, también puedes calcular la revolución «para ese lugar». Lo acercamos a Astrocartography porque muchas personas combinan la lectura anual con preguntas de mudanza o viajes largos.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Calculadora de revolución solar — carta anual"
+    },
+    "items": [
+      {
+        "title": "Para qué sirve en la práctica",
+        "description": "Quien interpreta suele mirar primero el Ascendente de la revolución, la Luna por casa y los planetas en la cruz (casas I, IV, VII, X). La carta no reemplaza terapia ni asesoría legal o financiera, pero ordena intuiciones sobre el año. Aquí priorizamos cifras astronómicas claras; después puedes pasar al mapa de la página principal y ver cómo esas mismas configuraciones natales se proyectan sobre el globo.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "Uso práctico de la revolución solar" }
+      },
+      {
+        "title": "Revolución solar y tema natal",
+        "description": "El natal describe el guion de fondo; la revolución solar actualiza el guion del año. Cada vuelta cambia Ascendente y distribución por casas (salvo que calcules todo para el mismo lugar y el mismo instante). Quienes viajan el día del cumpleaños a veces comparan la revolución en el lugar natal y en el lugar de visita: el Sol retorna al mismo grado, pero las casas cambian de registro. Por eso mostramos el instante UTC y el lugar usado para las casas.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "Revolución solar frente a carta natal" }
+      },
+      {
+        "title": "Otro lugar el día del retorno",
+        "description": "Si ya sabes que estarás fuera de tu ciudad natal, conviene calcular la revolución para las coordenadas donde realmente vas a estar: es la forma hispana habitual de hablar de la «revolución en otro lugar» o carta anual desplazada. Después, en Astrocartography puedes seguir con las mismas fechas y horas de nacimiento para ver líneas planetarias sin volver a teclear datos.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "Revolución solar en otro lugar" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Ventajas de esta calculadora",
+    "label": "Ventajas",
+    "description": "Cálculo transparente, casas enteras y enlace directo al mapa principal del sitio con tus datos de nacimiento.",
+    "items": [
+      {
+        "title": "Datos completos para contrastar",
+        "description": "Planetas, signos, grados y casas enteras tomadas desde el Ascendente de la revolución, más la hora UTC del retorno solar. Así puedes cotejar con tu efeméride o pasar a hora local.",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Precisión en la revolución solar" }
+      },
+      {
+        "title": "Gratis para probar varias opciones",
+        "description": "Cambia de año o de ciudad de retorno sin coste en la carta base. Las funciones avanzadas de Astrocartography en otras secciones pueden tener otro esquema, pero aquí el núcleo es abierto.",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Revolución solar gratuita" }
+      },
+      {
+        "title": "Salto a la página principal con un clic",
+        "description": "Tras leer la revolución, un botón lleva tus datos a la página principal para abrir el mapa de líneas sin copiar y pegar: primero el año, después el «dónde» en el planeta.",
+        "icon": "RiMapLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "De la revolución solar al mapa" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo usar la calculadora",
+    "label": "PASOS",
+    "description": "Cuatro pasos: datos de nacimiento, año de la revolución, ciudad del retorno si aplica, y opcionalmente el mapa en la página principal.",
+    "items": [
+      {
+        "title": "Datos de nacimiento fiables",
+        "description": "Fecha, hora y lugar tal como figuran en el registro, más la zona horaria correcta. La posición natal del Sol depende de la hora: cuanto más exacta, más estable es el resto de la carta.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Elige el año civil",
+        "description": "Lo habitual es el próximo ciclo de cumpleaños; también puedes revisar años pasados. El sistema localiza el instante tropical del retorno cerca de la fecha de tu cumpleaños.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Ciudad del retorno (opcional)",
+        "description": "En blanco = casas calculadas para tu lugar de nacimiento. Si vas a estar en otra ciudad, escríbela para ver la revolución «desde allí».",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Lee la carta y abre el mapa",
+        "description": "Revisa Ascendente y énfasis de casas; si tu pregunta incluye mudanza o estancia larga, entra en Astrocartography desde la página principal con los mismos datos.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Qué incluye esta herramienta",
+    "label": "FUNCIONES",
+    "description": "Pensada para lectores de astrología occidental que quieren números fiables y continuidad con el mapa de líneas.",
+    "items": [
+      {
+        "title": "Instante tropical del retorno",
+        "description": "Buscamos el momento en que el Sol vuelve a su longitud natal en el zodíaco tropical y trazamos la carta para ese instante.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Casas enteras",
+        "description": "Cada casa ocupa un signo completo desde el Ascendente de la revolución, lo que facilita la lectura inicial. Si usas otro sistema de casas en tu software, los grados de los planetas seguirán siendo los mismos.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Gráfico circular",
+        "description": "La rueda ayuda a ver de un vistazo planetas angulares y aspectos principales antes de profundizar.",
+        "icon": "RiPlanetLine"
+      },
+      {
+        "title": "Mismo nacimiento en la página principal",
+        "description": "Astrocartography es el corazón del sitio: puedes terminar en el mapa de la página principal con los mismos datos y pasar de la lectura anual a la lectura por ubicaciones.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Revolución en otro lugar",
+        "description": "No todo el mundo cumple años en su ciudad natal. Deja el campo vacío o indica otra ciudad para que el Ascendente y las casas reflejen donde estarás.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Elección del año",
+        "description": "Compara años, planifica viajes o revisa un periodo pasado: el selector alinea la carta con el arco temporal que te interesa antes de saltar al mapa.",
+        "icon": "RiCalendarLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Preguntas frecuentes — revolución solar",
+    "description": "Dudas habituales sobre la carta anual, esta calculadora y Astrocartography.",
+    "items": [
+      {
+        "title": "¿Qué es exactamente la revolución solar?",
+        "description": "La carta del instante en que el Sol regresa cada año a la misma longitud que tenía en tu nacimiento. Mostramos casas enteras y la hora UTC del cálculo."
+      },
+      {
+        "title": "¿Es gratis?",
+        "description": "Sí, puedes generar varias cartas cambiando año o lugar. Otras funciones del sitio pueden tener precio o créditos; la revolución básica de esta página no está bloqueada."
+      },
+      {
+        "title": "¿Siempre cae el día de mi cumpleaños?",
+        "description": "Astronómicamente suele estar muy cerca, pero puede desplazarse unas horas o un día según año bisiesto y huso horario. Damos UTC para que lo pases a tu hora local."
+      },
+      {
+        "title": "¿Qué es la revolución «en otro lugar»?",
+        "description": "Mismo instante de retorno del Sol, pero cálculo de casas y ángulos para otra ciudad—lo que en español se comenta mucho cuando el cumpleaños se festeja fuera de casa."
+      },
+      {
+        "title": "¿Y Astrocartography?",
+        "description": "La revolución solar habla del año; Astrocartography proyecta tu natal sobre el mapa. El botón a la página principal reutiliza tus datos para abrir las líneas sin repetir formularios."
+      },
+      {
+        "title": "¿Puedo decidir solo con esto?",
+        "description": "Úsalo como una herramienta más. Las decisiones importantes requieren criterio personal y, si aplica, asesoría profesional en salud, legal o económica."
+      },
+      {
+        "title": "¿Por qué insistir en el enlace a la página principal?",
+        "description": "Porque mucha gente que estudia la revolución solar también pregunta por mudanzas o largas estancias: el mapa del sitio conecta esas dos necesidades con un solo flujo."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Calcula tu revolución solar y abre el mapa",
+    "description": "Elige el año, mira Ascendente y casas, y si tu pregunta es también geográfica, pasa a la página principal de Astrocartography para ver cómo se cruzan las líneas en el mundo.",
+    "buttons": [
+      {
+        "title": "Ir a la página principal de Astrocartography",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Fecha de nacimiento",
+      "birthTime": "Hora de nacimiento (lo más exacta posible)",
+      "birthLocation": "Lugar de nacimiento",
+      "timezone": "Zona horaria",
+      "returnYear": "Año de la revolución solar",
+      "returnLocation": "Lugar del retorno (opcional)",
+      "returnLocationHint": "Vacío = usar el lugar de nacimiento para las casas. Otra ciudad = revolución calculada como si estuvieras allí ese día.",
+      "submit": "Calcular revolución solar"
+    },
+    "result": {
+      "title": "Tu revolución solar",
+      "momentLabel": "Instante del retorno (UTC)",
+      "yearLabel": "Año",
+      "placeLabel": "Lugar usado para casas",
+      "systemLine": "Los ángulos corresponden al lugar de retorno indicado o, si no hay, al lugar de nacimiento.",
+      "ascLabel": "Ascendente de la revolución",
+      "tableTitle": "Planetas en esta revolución solar",
+      "planet": "Planeta",
+      "sign": "Signo",
+      "degree": "Grado",
+      "house": "Casa",
+      "ctaChart": "Abrir Astrocartography en la página principal con estos datos",
+      "bridgeText": "Carta calculada para el instante UTC en que el Sol vuelve a su longitud natal. Combínala con el mapa de la página principal para unir año y geografía.",
+      "footnote": "Casas enteras; zodíaco tropical. Para trabajo profesional, contrasta con tu programa habitual."
+    },
+    "errors": {
+      "required": "Completa fecha, hora, lugar, zona horaria y año de la revolución.",
+      "location": "No encontramos ese lugar. Prueba «ciudad, país» (ej.: Lisboa, Portugal).",
+      "generic": "No se pudo completar el cálculo. Revisa los datos e inténtalo otra vez."
+    }
+  }
+}

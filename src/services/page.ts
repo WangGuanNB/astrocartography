@@ -60,6 +60,10 @@ export async function getSynastryChartPage(locale: string): Promise<CalculatorPa
   return (await getPage("synastry-chart-calculator", locale)) as CalculatorPage;
 }
 
+export async function getSolarReturnChartPage(locale: string): Promise<CalculatorPage> {
+  return (await getPage("solar-return-chart-calculator", locale)) as CalculatorPage;
+}
+
 export async function getPage(
   name: string,
   locale: string
