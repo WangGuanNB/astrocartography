@@ -271,6 +271,7 @@ export async function getPayPalOrder(orderId: string) {
 
 /**
  * 验证 PayPal Webhook 签名
+ * 调用 PayPal 官方 /v1/notifications/verify-webhook-signature API 进行真实验证
  * @param body 请求体（原始字符串）
  * @param headers 请求头
  * @param webhookId Webhook ID（从环境变量获取）
@@ -295,25 +296,78 @@ export async function verifyPayPalWebhookSignature(
       !transmissionSig ||
       !transmissionTime
     ) {
-      console.error("Missing PayPal webhook headers");
+      console.error("❌ [PayPal Sig] 缺少必要的 Webhook 请求头", {
+        authAlgo: !!authAlgo,
+        certUrl: !!certUrl,
+        transmissionId: !!transmissionId,
+        transmissionSig: !!transmissionSig,
+        transmissionTime: !!transmissionTime,
+      });
       return false;
     }
 
-    // PayPal Webhook 验证需要使用 PayPal SDK 的验证方法
-    // 这里简化处理，实际生产环境应该使用 PayPal SDK 的验证方法
-    // 参考：https://developer.paypal.com/docs/api-basics/notifications/webhooks/notification-messages/#verify-an-http-signature
-
-    // 临时方案：如果配置了 webhook ID，进行基本验证
-    const configuredWebhookId =
-      webhookId || process.env.PAYPAL_WEBHOOK_ID;
-    if (configuredWebhookId) {
-      // 基本验证：检查必要字段是否存在
-      return true; // 简化处理，生产环境应使用完整的签名验证
+    const configuredWebhookId = webhookId || process.env.PAYPAL_WEBHOOK_ID;
+    if (!configuredWebhookId) {
+      // 未配置 Webhook ID：无法验证，返回 false（调用方决定是否继续）
+      console.warn("⚠️ [PayPal Sig] 未配置 PAYPAL_WEBHOOK_ID，无法验证签名");
+      return false;
     }
 
-    return false;
+    // 解析请求体（verify-webhook-signature API 需要传入事件对象）
+    let webhookEvent: any;
+    try {
+      webhookEvent = JSON.parse(body);
+    } catch (e) {
+      console.error("❌ [PayPal Sig] 请求体 JSON 解析失败");
+      return false;
+    }
+
+    // 调用 PayPal 官方签名验证 API
+    // 参考：https://developer.paypal.com/docs/api/webhooks/v1/#verify-webhook-signature
+    const token = await getPayPalAccessToken();
+    const baseUrl = getPayPalBaseUrl();
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), PAYPAL_API_TIMEOUT_MS);
+
+    try {
+      const res = await fetch(`${baseUrl}/v1/notifications/verify-webhook-signature`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          auth_algo: authAlgo,
+          cert_url: certUrl,
+          transmission_id: transmissionId,
+          transmission_sig: transmissionSig,
+          transmission_time: transmissionTime,
+          webhook_id: configuredWebhookId,
+          webhook_event: webhookEvent,
+        }),
+        signal: controller.signal,
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        console.error("❌ [PayPal Sig] 签名验证 API 响应错误:", res.status, data);
+        return false;
+      }
+
+      const isValid = data.verification_status === "SUCCESS";
+      if (isValid) {
+        console.log("✅ [PayPal Sig] 签名验证通过");
+      } else {
+        console.error("❌ [PayPal Sig] 签名验证失败，verification_status:", data.verification_status);
+      }
+      return isValid;
+    } finally {
+      clearTimeout(timeoutId);
+    }
   } catch (error) {
-    console.error("Failed to verify PayPal webhook signature:", error);
+    console.error("❌ [PayPal Sig] 签名验证异常:", error);
     return false;
   }
 }

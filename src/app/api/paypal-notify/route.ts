@@ -46,9 +46,16 @@ export async function POST(req: Request) {
     if (isValid) {
       logPayPalEvent(PayPalLogEvent.WEBHOOK_VERIFIED, undefined, {});
     } else if (paypalWebhookId) {
-      logPayPalWarning(PayPalLogEvent.WEBHOOK_VERIFIED, "签名验证失败，但继续处理（开发环境）", {});
-      console.warn("⚠️ [PayPal Webhook] 签名验证失败，但继续处理（开发环境）");
-      // 生产环境应该严格验证，这里为了开发方便暂时允许
+      // 生产环境：配置了 PAYPAL_WEBHOOK_ID 但验证失败 → 拒绝请求，防止伪造攻击
+      logPayPalError(PayPalLogEvent.WEBHOOK_VERIFIED, new Error("Webhook 签名验证失败，拒绝请求"), {
+        has_webhook_id: true,
+      });
+      console.error("❌ [PayPal Webhook] 签名验证失败，返回 401");
+      return Response.json({ error: "invalid webhook signature" }, { status: 401 });
+    } else {
+      // 开发/沙盒：未配置 PAYPAL_WEBHOOK_ID → 跳过验证，仅记录警告
+      logPayPalWarning(PayPalLogEvent.WEBHOOK_VERIFIED, "未配置 PAYPAL_WEBHOOK_ID，跳过签名验证（仅限开发/沙盒环境）", {});
+      console.warn("⚠️ [PayPal Webhook] 未配置 PAYPAL_WEBHOOK_ID，跳过签名验证");
     }
 
     // 解析事件数据

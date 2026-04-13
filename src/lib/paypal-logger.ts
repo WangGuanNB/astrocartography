@@ -1,6 +1,14 @@
 /**
- * @fileoverview PayPal 支付日志工具
- * @description 提供结构化的 PayPal 支付日志记录，便于追踪和排查问题
+ * @fileoverview PayPal & Creem 支付结构化日志
+ * @description 统一日志格式，便于在 Cloudflare Dashboard 中排查支付问题
+ *
+ * Cloudflare Dashboard → Workers & Pages → 你的 Worker → Logs 中搜索：
+ *   用户邮箱        → 找到该用户所有支付事件
+ *   order=<订单号>  → 追踪某笔订单全流程
+ *   CREDITS_ISSUED  → 确认积分是否发放
+ *   [ERROR]         → 查看所有支付失败
+ *   [PAYPAL]        → 仅看 PayPal 流程
+ *   [CREEM]         → 仅看 Creem 流程
  */
 
 /**
@@ -88,48 +96,55 @@ interface PayPalLogData {
 }
 
 /**
- * 记录 PayPal 支付日志
- * @param event 事件类型
- * @param level 日志级别
- * @param data 日志数据
+ * 构建可搜索的单行日志
+ * 格式：🔵 [PAYPAL][CREDITS_ISSUED][INFO] order=xxx | email=xxx | credits=100 | ts=xxx
+ * 方便在 Cloudflare Dashboard Logs 中用关键字（邮箱/订单号）定位问题
  */
+function buildLogLine(
+  tag: string,
+  stage: string,
+  level: string,
+  data: Partial<PayPalLogData>
+): string {
+  const parts: string[] = [];
+  if (data.order_no)        parts.push(`order=${data.order_no}`);
+  if (data.user_email)      parts.push(`email=${data.user_email}`);
+  if (data.paid_email && data.paid_email !== data.user_email)
+                            parts.push(`paid_email=${data.paid_email}`);
+  if (data.paypal_order_id) parts.push(`paypal_id=${data.paypal_order_id}`);
+  if (data.amount !== undefined)
+                            parts.push(`amount=${data.amount}${data.currency ? ` ${data.currency.toUpperCase()}` : ''}`);
+  if (data.credits !== undefined) parts.push(`credits=${data.credits}`);
+  if (data.status)          parts.push(`status=${data.status}`);
+  if (data.capture_status)  parts.push(`capture=${data.capture_status}`);
+  if (data.event_type)      parts.push(`type=${data.event_type}`);
+  if (data.old_status && data.new_status)
+                            parts.push(`${data.old_status}→${data.new_status}`);
+  if (data.error)           parts.push(`error="${data.error}"`);
+  if (data.message)         parts.push(`msg="${data.message}"`);
+  if (data.reason)          parts.push(`reason="${data.reason}"`);
+  if (data.metadata) {
+    for (const [k, v] of Object.entries(data.metadata)) {
+      if (typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean') {
+        parts.push(`${k}=${v}`);
+      }
+    }
+  }
+  const emoji = level === 'ERROR' ? '🔴' : level === 'WARN' ? '🟡' : tag === 'CREEM' ? '🟢' : '🔵';
+  return `${emoji} [${tag}][${stage}][${level}]${parts.length ? ' ' + parts.join(' | ') : ''} | ts=${new Date().toISOString()}`;
+}
+
 export function logPayPalEvent(
   event: PayPalLogEvent,
   level: PayPalLogLevel = PayPalLogLevel.INFO,
   data: Partial<PayPalLogData> = {}
 ): void {
-  const logData: PayPalLogData = {
-    event,
-    level,
-    timestamp: new Date().toISOString(),
-    ...data,
-  };
-
-  // 格式化日志输出
-  const logMessage = `[PayPal Log] ${logData.timestamp} [${level.toUpperCase()}] ${event}`;
-  const logDetails = {
-    order_no: logData.order_no,
-    paypal_order_id: logData.paypal_order_id,
-    user_uuid: logData.user_uuid,
-    user_email: logData.user_email,
-    amount: logData.amount,
-    currency: logData.currency,
-    credits: logData.credits,
-    status: logData.status,
-    error: logData.error,
-    ...logData.metadata,
-  };
-
-  // 根据日志级别输出
+  const stage = (event as string).replace(/^paypal_/, '').toUpperCase();
+  const line = buildLogLine('PAYPAL', stage, level.toUpperCase(), data);
   switch (level) {
-    case PayPalLogLevel.ERROR:
-      console.error(logMessage, logDetails);
-      break;
-    case PayPalLogLevel.WARN:
-      console.warn(logMessage, logDetails);
-      break;
-    default:
-      console.log(logMessage, logDetails);
+    case PayPalLogLevel.ERROR: console.error(line); break;
+    case PayPalLogLevel.WARN:  console.warn(line);  break;
+    default:                   console.log(line);
   }
 }
 
@@ -142,10 +157,7 @@ export function logPayPalError(
   data: Partial<PayPalLogData> = {}
 ): void {
   const errorMessage = error instanceof Error ? error.message : error;
-  logPayPalEvent(event, PayPalLogLevel.ERROR, {
-    ...data,
-    error: errorMessage,
-  });
+  logPayPalEvent(event, PayPalLogLevel.ERROR, { ...data, error: errorMessage });
 }
 
 /**
@@ -156,8 +168,66 @@ export function logPayPalWarning(
   message: string,
   data: Partial<PayPalLogData> = {}
 ): void {
-  logPayPalEvent(event, PayPalLogLevel.WARN, {
-    ...data,
-    error: message,
-  });
+  logPayPalEvent(event, PayPalLogLevel.WARN, { ...data, error: message });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Creem 结构化日志（格式与 PayPal 完全一致）
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Creem 日志数据结构
+ */
+export interface CreemLogData {
+  order_no?: string;
+  user_email?: string;
+  paid_email?: string;
+  amount?: number;
+  currency?: string;
+  credits?: number;
+  status?: string;
+  error?: string;
+  message?: string;
+}
+
+/**
+ * 记录 Creem 支付日志
+ * @param stage  日志阶段，如 "CREDITS_ISSUED"、"ORDER_PAID"
+ * @param data   关键字段（order_no / user_email / credits 等）
+ * @param level  日志级别，默认 INFO
+ */
+export function logCreemEvent(
+  stage: string,
+  data: Partial<CreemLogData> = {},
+  level: PayPalLogLevel = PayPalLogLevel.INFO
+): void {
+  const line = buildLogLine('CREEM', stage.toUpperCase(), level.toUpperCase(), data as any);
+  switch (level) {
+    case PayPalLogLevel.ERROR: console.error(line); break;
+    case PayPalLogLevel.WARN:  console.warn(line);  break;
+    default:                   console.log(line);
+  }
+}
+
+/**
+ * 记录 Creem 支付错误
+ */
+export function logCreemError(
+  stage: string,
+  error: Error | string,
+  data: Partial<CreemLogData> = {}
+): void {
+  const errorMessage = error instanceof Error ? error.message : error;
+  logCreemEvent(stage, { ...data, error: errorMessage }, PayPalLogLevel.ERROR);
+}
+
+/**
+ * 记录 Creem 支付警告
+ */
+export function logCreemWarning(
+  stage: string,
+  message: string,
+  data: Partial<CreemLogData> = {}
+): void {
+  logCreemEvent(stage, { ...data, message }, PayPalLogLevel.WARN);
 }

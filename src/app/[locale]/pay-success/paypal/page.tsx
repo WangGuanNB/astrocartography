@@ -1,5 +1,6 @@
 import { findOrderByOrderNo, OrderStatus } from "@/models/order";
 import { capturePayPalOrder } from "@/services/paypal";
+import { handlePayPalOrder } from "@/services/order";
 import PaymentSuccess from "@/components/payment/payment-success";
 import { logPayPalEvent, logPayPalError, logPayPalWarning, PayPalLogEvent } from "@/lib/paypal-logger";
 
@@ -134,8 +135,28 @@ export default async function ({
           });
           console.log("✅ [PayPal Pay Success] 订单捕获成功:", captureResult);
 
-          // 捕获成功后，webhook 会被触发，订单状态会被更新为 Paid
-          // 这里不需要手动更新订单状态，让 webhook 处理
+          // 🔥 关键兜底：capture 成功后，直接激活订单
+          // 不能只依赖 webhook，因为 webhook 可能延迟或失败
+          // handlePayPalOrder 内部会检查订单状态，如果已 Paid 则跳过（幂等安全）
+          if (captureResult?.status === "COMPLETED") {
+            try {
+              const captureId = captureResult.purchase_units?.[0]?.payments?.captures?.[0]?.id || "";
+              await handlePayPalOrder(
+                {
+                  // 构造与 webhook 相同结构，让 handlePayPalOrder 能通过 paypalOrderId 找到订单
+                  supplementary_data: { related_ids: { order_id: paypalOrderId } },
+                  payer: captureResult.payer || {},
+                  id: captureId,
+                  status: "COMPLETED",
+                },
+                "PAYMENT.CAPTURE.COMPLETED"
+              );
+              console.log("✅ [PayPal Pay Success] 订单直接激活成功（兜底机制）");
+            } catch (activateError: any) {
+              // 可能是 webhook 已经先处理了（订单已 Paid），不视为错误
+              console.warn("⚠️ [PayPal Pay Success] 直接激活完成（若报错可能已由webhook激活）:", activateError.message);
+            }
+          }
         } catch (captureError: any) {
           logPayPalError(PayPalLogEvent.ORDER_CAPTURE_ATTEMPTED, captureError, {
             order_no: order.order_no,

@@ -115,6 +115,19 @@ export default function PaymentSuccess({
             </p>
           </div>
 
+          {/* 兜底联系入口 */}
+          <div className="text-center">
+            <p className="text-xs text-muted-foreground">
+              Credits not arrived after 5 minutes?{" "}
+              <a
+                href={`mailto:${process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@astrocarto.org"}?subject=Payment%20Issue%20-%20Order%20${orderNo}&body=Hi%2C%20I%20completed%20payment%20but%20my%20credits%20have%20not%20arrived.%20Order%20No%3A%20${orderNo}`}
+                className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity"
+              >
+                Contact support
+              </a>
+            </p>
+          </div>
+
           {/* 操作按钮 */}
           <div className="space-y-3">
             <Button

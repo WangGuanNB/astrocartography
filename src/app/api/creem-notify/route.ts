@@ -11,6 +11,7 @@ import { updateAffiliateForOrder } from "@/services/affiliate";
 import { sendOrderConfirmationEmail } from "@/services/email";
 import { getIsoTimestr } from "@/lib/time";
 import { Order } from "@/types/order";
+import { logCreemEvent, logCreemError } from "@/lib/paypal-logger";
 
 export async function POST(req: Request) {
   try {
@@ -173,6 +174,7 @@ async function handleCreemPaymentSuccess(data: any) {
     }
 
     if (!order) {
+      logCreemError("ORDER_NOT_FOUND", "无法通过 request_id/邮箱/金额匹配到订单，请手动核查", { order_no: order_no || undefined });
       console.error("❌ [Creem Webhook] 无法找到订单:", order_no || "未提供订单号");
       return; // 找不到订单，但不返回错误，避免 Creem 重复发送
     }
@@ -201,12 +203,14 @@ async function handleCreemPaymentSuccess(data: any) {
       paid_email,
       paid_detail
     );
+    logCreemEvent("ORDER_PAID", { order_no, user_email: paid_email, amount: order.amount ?? undefined, currency: order.currency ?? undefined, credits: order.credits ?? undefined });
     console.log("✅ [Creem Webhook] 订单状态已更新为 Paid:", order_no);
 
     // 发放积分
     if (order.user_uuid && order.credits > 0) {
       try {
         await updateCreditForOrder(order as unknown as Order);
+        logCreemEvent("CREDITS_ISSUED", { order_no, user_email: paid_email, amount: order.amount ?? undefined, currency: order.currency ?? undefined, credits: order.credits ?? undefined });
         console.log("✅ [Creem Webhook] 积分已发放:", order.credits);
       } catch (e: any) {
         console.error("❌ [Creem Webhook] 发放积分失败:", e);
@@ -236,8 +240,10 @@ async function handleCreemPaymentSuccess(data: any) {
       }
     }
 
+    logCreemEvent("WEBHOOK_COMPLETED", { order_no, user_email: paid_email, credits: order.credits ?? undefined });
     console.log("✅ [Creem Webhook] 支付成功事件处理完成:", order_no);
   } catch (e: any) {
+    logCreemError("WEBHOOK_ERROR", e, {});
     console.error("❌ [Creem Webhook] 处理支付成功事件失败:", e);
     // 不抛出错误，避免 Creem 重复发送 webhook
   }

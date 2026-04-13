@@ -5,6 +5,7 @@ import { sendOrderConfirmationEmail } from "@/services/email";
 import { getIsoTimestr } from "@/lib/time";
 import { Order } from "@/types/order";
 import PaymentSuccess from "@/components/payment/payment-success";
+import { logCreemEvent, logCreemError } from "@/lib/paypal-logger";
 
 /**
  * Creem 支付成功页面（查询参数方式）
@@ -58,6 +59,7 @@ export default async function ({
       );
     }
 
+    logCreemEvent("SUCCESS_PAGE_ACCESSED", { order_no });
     console.log("🔔 [Creem Pay Success] 获取到订单号:", {
       order_no,
       source: urlSearchParams.request_id ? "request_id (API方式)" : "order_no (产品ID方式)",
@@ -108,6 +110,7 @@ export default async function ({
         if (order.user_uuid && order.credits > 0) {
           try {
             await updateCreditForOrder(order as unknown as Order);
+            logCreemEvent("CREDITS_ISSUED_VIA_PAGE", { order_no, user_email: order.user_email ?? undefined, amount: order.amount ?? undefined, currency: order.currency ?? undefined, credits: order.credits ?? undefined });
             console.log("✅ [Creem Pay Success] 积分已发放:", order.credits);
           } catch (e: any) {
             console.error("❌ [Creem Pay Success] 发放积分失败:", e);
@@ -164,6 +167,7 @@ export default async function ({
       />
     );
   } catch (e: any) {
+    logCreemError("PAGE_ERROR", e, {});
     console.error("Handle Creem payment success failed:", e);
     // 即使处理失败，也显示成功页面（但可能订单信息不完整）
     // 重新获取参数，因为可能在 try 块外部
