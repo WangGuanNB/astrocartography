@@ -79,6 +79,13 @@
               "icon": "RiHeartLine"
             },
             {
+              "title": "Composite Chart Calculator",
+              "description": "Blend two birth charts into relationship soul chart using midpoint method",
+              "url": "/composite-chart-calculator",
+              "target": "_self",
+              "icon": "RiTeamLine"
+            },
+            {
               "title": "Solar Return Chart Calculator",
               "description": "Annual solar return chart for any year, optional relocated return",
               "url": "/solar-return-chart-calculator",

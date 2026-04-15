@@ -427,6 +427,56 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Composite Chart Calculator 页面
+       ────────────────────────────────────────────────────────── -->
+  <!-- 英文版本 - 主关键词: composite chart calculator -->
+  <url>
+    <loc>https://astrocarto.org/composite-chart-calculator/</loc>
+    <lastmod>2026-04-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 中文版本 - 主关键词: 复合盘计算器 -->
+  <url>
+    <loc>https://astrocarto.org/zh/composite-chart-calculator/</loc>
+    <lastmod>2026-04-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 西班牙语版本 - 主关键词: calculadora de carta compuesta -->
+  <url>
+    <loc>https://astrocarto.org/es/composite-chart-calculator/</loc>
+    <lastmod>2026-04-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 意大利语版本 - 主关键词: calcolatrice carta composita -->
+  <url>
+    <loc>https://astrocarto.org/it/composite-chart-calculator/</loc>
+    <lastmod>2026-04-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 葡萄牙语版本 - 主关键词: calculadora de carta composta -->
+  <url>
+    <loc>https://astrocarto.org/pt/composite-chart-calculator/</loc>
+    <lastmod>2026-04-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 德语版本 - 主关键词: Komposit-Horoskop berechnen -->
+  <url>
+    <loc>https://astrocarto.org/de/composite-chart-calculator/</loc>
+    <lastmod>2026-04-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Solar Return Chart Calculator
        ────────────────────────────────────────────────────────── -->
   <url>

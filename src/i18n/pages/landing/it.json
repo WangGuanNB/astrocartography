@@ -72,6 +72,20 @@
                 "icon": "RiFlightTakeoffLine"
               },
               {
+                "title": "Calcolatore Sinastria",
+                "description": "Due carte natali, biruota, aspetti, sovrapposizioni opzionali",
+                "url": "/synastry-chart-calculator",
+                "target": "_self",
+                "icon": "RiHeartLine"
+              },
+              {
+                "title": "Calcolatore Carta Composita",
+                "description": "Fonde due carte natali in una carta dell'anima relazionale",
+                "url": "/composite-chart-calculator",
+                "target": "_self",
+                "icon": "RiTeamLine"
+              },
+              {
                 "title": "Calcolatore Ritorno Solare",
                 "description": "Carta di rivoluzione solare annuale per ogni anno, luogo opzionale",
                 "url": "/solar-return-chart-calculator",

@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "title": "Calculadora de mapa composto grátis online | Carta da alma do relacionamento",
+    "description": "Calculadora de mapa composto grátis: una dois mapas astrais pelo método do ponto médio. Roda dupla, aspectos e casas—resultado instantâneo, sem cadastro.",
+    "keywords": "mapa composto, calculadora mapa composto, mapa composto grátis, astrologia de casal, método ponto médio, compatibilidade astrológica, sinastria vs mapa composto"
+  },
+  "intentAnchor": {
+    "text": "Se você procura um mapa composto que revele o que é o seu relacionamento de fato —não apenas como vocês se comparam— comece aqui. Esta calculadora gratuita une dois perfis de nascimento em um único mapa de relacionamento pelo método do ponto médio: posições planetárias fundidas, principais aspectos e casas em uma roda dupla. O mapa composto não é uma comparação; é o próprio mapa astral do relacionamento."
+  },
+  "internalLinks": {
+    "title": "Ferramentas relacionadas",
+    "items": [
+      {
+        "text": "Central de mapas e calculadoras.",
+        "linkText": "Início",
+        "url": "/"
+      },
+      {
+        "text": "Compare dois mapas astrais diretamente.",
+        "linkText": "Sinastria",
+        "url": "/synastry-chart-calculator"
+      },
+      {
+        "text": "Veja seus planetas e casas natais.",
+        "linkText": "Mapa natal",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "Descubra onde o seu relacionamento floresce na Terra.",
+        "linkText": "Mapa de Astrocartografia",
+        "url": "/astrocartography-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "O que é o mapa composto (e por que funciona)",
+    "label": "INTRODUÇÃO",
+    "description": "O mapa composto une dois mapas natais em um único calculando o ponto médio de cada planeta, casa e ângulo. Ao contrário da sinastria —que mantém ambas as pessoas visíveis e as compara—, o mapa composto funde suas posições em um terceiro mapa que descreve o relacionamento como uma entidade própria. Leia-o como um mapa natal, mas lembre: esta carta pertence ao relacionamento, não a nenhuma das duas pessoas.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Calculadora de mapa composto com roda dupla e carta da alma do relacionamento"
+    },
+    "items": [
+      {
+        "title": "Mapa composto vs. sinastria: qual você precisa?",
+        "description": "A sinastria responde «como os seus planetas interagem?» comparando mapa a mapa. O mapa composto responde «o que é este relacionamento?» fundindo ambos em um. A maioria dos astrólogos usa os dois: sinastria para entender as dinâmicas individuais e as fricções, mapa composto para compreender a identidade central do vínculo. Comece com a sinastria para compatibilidade; use o mapa composto para entender o que a parceria representa.",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Diferenças entre mapa composto e sinastria"
+        }
+      },
+      {
+        "title": "Como esta calculadora de mapa composto funciona",
+        "description": "Insira duas datas de nascimento, horários opcionais (padrão 12:00 local), locais e fusos horários, e calcule. A ferramenta encontra a longitude do ponto médio para cada um dos dez planetas clássicos, os posiciona em casas usando o Ascendente composto e exibe uma roda dupla com tabela de aspectos ordenável. Orbes mais apertados indicam temas relacionais mais intensos.",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Calculadora de mapa composto com aspectos e roda dupla"
+        }
+      },
+      {
+        "title": "Mapa composto + sinastria + mapas: a imagem completa",
+        "description": "Após o mapa composto, abra a sinastria para ver como cada pessoa vive individualmente o relacionamento. Depois verifique a astrocartografia para descobrir quais cidades amplificam a energia do vínculo. Três ferramentas, um fluxo só: mapa composto para o que é o relacionamento, sinastria para como cada um o vive, mapas para onde ele floresce.",
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Mapa composto combinado com sinastria e mapas de astrocartografia"
+        }
+      },
+      {
+        "title": "O que ver primeiro no seu mapa composto",
+        "description": "Comece pelo Sol composto —ele descreve a identidade central e a direção compartilhada do relacionamento. Depois veja o signo lunar para o tom emocional e as necessidades de segurança em comum. Vênus mostra o que une vocês e os valores compartilhados; Marte revela o impulso e a paixão conjuntos. Por fim, percorra a tabela de aspectos procurando planetas dentro de 3° de orbe: as conjunções fundem energias de forma tão completa que definem o caráter do relacionamento. Saturno no mapa composto sinaliza onde o vínculo pede comprometimento e paciência —um Saturno composto proeminente costuma indicar longevidade.",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Como ler o mapa composto: Sol Lua Vênus Marte Saturno"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por que usar esta calculadora de mapa composto",
+    "label": "VANTAGENS",
+    "description": "Construída para clareza: entrada dual rápida, cálculos de ponto médio confiáveis e caminho direto do mapa composto para a sinastria ou mapas geográficos.",
+    "items": [
+      {
+        "title": "Resultados claros, sem excesso de jargão",
+        "description": "Uma roda dupla visual e uma lista de aspectos ordenável —os orbes mais apertados primeiro. Escaneie as primeiras linhas para encontrar os temas mais fortes do relacionamento em minutos.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Navegar o mapa composto com facilidade"
+        }
+      },
+      {
+        "title": "Cálculos de ponto médio precisos",
+        "description": "Cada planeta composto é calculado com o ponto médio matemático padrão —o mesmo método usado por astrólogos profissionais. Posições exatas que você pode verificar e discutir.",
+        "icon": "RiShieldCheckLine",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Cálculos precisos de ponto médio para o mapa composto"
+        }
+      },
+      {
+        "title": "Uma sessão, imagem completa do relacionamento",
+        "description": "Após o mapa composto, vá para sinastria ou mapas de astrocartografia com os mesmos dados —sem precisar reinserí-los. Uma sessão na ferramenta se torna um fluxo completo de astrologia relacional.",
+        "icon": "RiMapPinLine",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Do mapa composto para a sinastria e mapas"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Como calcular seu mapa composto",
+    "label": "COMO USAR",
+    "description": "Quatro passos dos dados de nascimento até um mapa composto completo.",
+    "items": [
+      {
+        "title": "Insira os dois perfis de nascimento",
+        "description": "Data, horário opcional (padrão 12:00 local), local de nascimento e fuso horário para cada pessoa. Horários precisos refinam Lua e Ascendente.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Calcule seu mapa composto",
+        "description": "Envie e calcule instantaneamente as posições de ponto médio para os dez planetas, gerando a roda dupla com casas.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Leia a roda dupla e os aspectos",
+        "description": "Comece pelo Sol composto (identidade do relacionamento), depois a Lua (vínculo emocional), Vênus e Marte. Percorra a tabela de aspectos ordenada por orbe: qualquer planeta dentro de 3° de outro é um dos temas definidores. As casas mostram quais áreas da vida o relacionamento mais ativa.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Aprofunde com sinastria ou mapas",
+        "description": "Compare o mapa composto com a sinastria para dinâmicas individuais, ou abra a astrocartografia para ver onde a energia relacional atinge seu pico na Terra.",
+        "icon": "RiSparklingLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Recursos da calculadora de mapa composto",
+    "label": "RECURSOS",
+    "description": "Tudo que você precisa para gerar e interpretar um mapa composto, em uma única página.",
+    "items": [
+      {
+        "title": "Método padrão do ponto médio",
+        "description": "Longitudes de ponto médio matemático para todos os dez planetas clássicos —a abordagem padrão do setor para mapas compostos.",
+        "icon": "RiSparklingLine"
+      },
+      {
+        "title": "Visualização completa em roda dupla",
+        "description": "Ambos os mapas natais exibidos juntos com os pontos médios compostos claramente sobrepostos para uma visão rápida do relacionamento.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Tabela de aspectos ordenável",
+        "description": "Conjunção, oposição, quadratura, trígono e sextil —ordenados por orbe para que as dinâmicas mais fortes apareçam primeiro.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Casas em signo inteiro",
+        "description": "Sistema de casas consistente entre ferramentas de mapa composto, natal e sinastria para uma experiência de leitura coerente.",
+        "icon": "RiEarthLine"
+      },
+      {
+        "title": "Sinastria com um clique",
+        "description": "Passe para a sinastria com os mesmos dados de nascimento logo após ver seu mapa composto —sem precisar reinserir nada.",
+        "icon": "RiChat3Line"
+      },
+      {
+        "title": "Interface em vários idiomas",
+        "description": "Disponível em português, inglês, chinês, espanhol, italiano e alemão —os mesmos cálculos precisos em cada idioma.",
+        "icon": "RiTranslate"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "PERGUNTAS FREQUENTES",
+    "title": "Perguntas frequentes sobre a calculadora de mapa composto",
+    "description": "Dúvidas comuns sobre mapas compostos e como usar esta calculadora.",
+    "items": [
+      {
+        "title": "O que é um mapa composto?",
+        "description": "Um mapa composto é um único mapa unificado criado encontrando o ponto médio matemático entre as posições planetárias de duas pessoas. Ele representa o relacionamento em si como uma entidade distinta —não uma comparação de dois indivíduos, mas a alma do vínculo entre eles."
+      },
+      {
+        "title": "Esta calculadora de mapa composto é gratuita?",
+        "description": "Sim —calcular o mapa composto, visualizar a roda dupla, a tabela de aspectos e as posições nas casas é completamente gratuito sem cadastro. A leitura opcional com IA utiliza créditos."
+      },
+      {
+        "title": "Qual a diferença entre mapa composto e sinastria?",
+        "description": "A sinastria compara dois mapas diretamente, mostrando as interações planeta a planeta entre duas pessoas. O mapa composto funde ambos em um só, revelando a identidade e os temas próprios do relacionamento. Use a sinastria para compatibilidade individual; o mapa composto para o caráter da parceria."
+      },
+      {
+        "title": "Quão preciso é o mapa composto sem horários exatos de nascimento?",
+        "description": "As posições planetárias permanecem precisas sem os horários. A precisão da Lua e as casas baseadas no Ascendente tornam-se aproximadas —usamos 12:00 local quando o horário é desconhecido. Para um mapa composto mais significativo, forneça os horários exatos de ambas as pessoas."
+      },
+      {
+        "title": "O que significam Sol, Lua e Vênus no mapa composto?",
+        "description": "O Sol composto é a identidade e o propósito compartilhado do relacionamento. A Lua composta é o tom emocional —como o relacionamento se sente instintivamente e o que precisa para se sentir seguro. Vênus composto mostra o que une vocês e os valores compartilhados. Esses três planetas são os primeiros a ler após calcular o mapa composto."
+      },
+      {
+        "title": "O que significa Saturno no mapa composto?",
+        "description": "Saturno no mapa composto sinaliza comprometimento, estrutura e as áreas onde o relacionamento pede paciência e esforço. Um Saturno proeminente (em conjunção com Sol, Lua ou Ascendente composto) costuma indicar um vínculo sério e duradouro —mas também uma tensão que exige trabalho consciente. Saturno composto não é incompatibilidade; é durabilidade que pede investimento."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Após o mapa composto, continue explorando",
+    "description": "O mapa composto mostra o que é o relacionamento. A sinastria mostra como cada pessoa o vive. Os mapas de astrocartografia revelam onde a energia do casal é mais forte na Terra.",
+    "buttons": [
+      {
+        "title": "Mapa de Astrocartografia",
+        "icon": "RiMapPinLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Calculadora de Sinastria",
+        "icon": "RiHeartLine",
+        "url": "/synastry-chart-calculator",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "personA": "Pessoa A",
+      "personB": "Pessoa B",
+      "wheelAxisInner": "Pessoa A",
+      "wheelAxisOuter": "Pessoa B",
+      "biwheelFootnote": "Esta roda dupla mostra os dois mapas natais separadamente. Os pontos médios compostos serão exibidos após o cálculo.",
+      "birthDate": "Data de nascimento",
+      "birthTime": "Horário de nascimento (opcional; padrão 12:00 local)",
+      "birthLocation": "Local de nascimento",
+      "timezone": "Fuso horário no nascimento",
+      "submit": "Calcular mapa composto"
+    },
+    "tabs": {
+      "composite": "Mapa composto"
+    },
+    "result": {
+      "title": "Seu mapa composto",
+      "aspectsTitle": "Planetas e aspectos compostos",
+      "planet": "Planeta",
+      "sign": "Signo",
+      "degree": "Grau",
+      "house": "Casa",
+      "aspect": "Aspecto",
+      "orb": "Orbe",
+      "aspectsDesc": "Aspectos entre planetas compostos —os temas psicológicos do seu relacionamento.",
+      "footnote": "Casas em signo inteiro. O mapa composto usa longitudes de ponto médio e o sistema de casas do ponto médio. Todas as posições são calculadas para ambos os dados e locais de nascimento, depois reduzidas à média do ponto médio matemático."
+    },
+    "errors": {
+      "required": "Por favor, insira os dados de nascimento completos de ambas as pessoas.",
+      "generic": "Cálculo falhou. Verifique os dados e tente novamente."
+    }
+  }
+}

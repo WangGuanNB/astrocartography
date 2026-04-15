@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "title": "Calcolatore tema composito gratis online | Carta dell'anima di coppia",
+    "description": "Calcola gratis il tuo tema composito: unisci due temi natali con il metodo del punto medio. Doppia ruota, aspetti e case—risultato istantaneo, senza registrazione.",
+    "keywords": "tema composito, calcolatore tema composito, tema composito gratis, astrologia di coppia, metodo punto medio, compatibilità astrologica, sinastria vs tema composito"
+  },
+  "intentAnchor": {
+    "text": "Se cerchi un tema composito che mostri cos'è davvero la tua relazione —non solo come vi confrontate— inizia da qui. Questo calcolatore gratuito fonde due profili di nascita in un unico tema di relazione con il metodo del punto medio: posizioni planetarie unificate, aspetti principali e case in un'unica doppia ruota. Il tema composito non è un confronto; è il tema natale proprio della relazione."
+  },
+  "internalLinks": {
+    "title": "Strumenti correlati",
+    "items": [
+      {
+        "text": "Hub di mappe e calcolatori.",
+        "linkText": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Confronta due temi natali direttamente.",
+        "linkText": "Sinastria",
+        "url": "/synastry-chart-calculator"
+      },
+      {
+        "text": "Consulta i tuoi pianeti e le tue case natali.",
+        "linkText": "Tema natale",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "Scopri dove fiorisce la vostra relazione nel mondo.",
+        "linkText": "Mappa di Astrocartografia",
+        "url": "/astrocartography-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Cos'è il tema composito (e perché funziona)",
+    "label": "INTRODUZIONE",
+    "description": "Il tema composito unisce due temi natali in uno solo calcolando il punto medio di ogni pianeta, casa e angolo. A differenza della sinastria —che mantiene visibili entrambe le persone confrontandole—, il tema composito fonde le loro posizioni in un terzo tema che descrive la relazione come entità autonoma. Leggilo come un tema natale, ma ricorda: questa carta appartiene alla relazione, non a nessuno dei due individui.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Calcolatore tema composito con doppia ruota e carta dell'anima di coppia"
+    },
+    "items": [
+      {
+        "title": "Tema composito vs. sinastria: quale ti serve?",
+        "description": "La sinastria risponde «come interagiscono i vostri pianeti?» confrontando tema a tema. Il tema composito risponde «cos'è questa relazione?» fondendo entrambi in uno. La maggior parte degli astrologi usa entrambi: la sinastria per le dinamiche individuali e le tensioni, il tema composito per cogliere l'identità centrale del legame. Inizia con la sinastria per la compatibilità; usa il tema composito per capire di cosa si carica la vostra unione.",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Differenze tra tema composito e sinastria"
+        }
+      },
+      {
+        "title": "Come funziona questo calcolatore di tema composito",
+        "description": "Inserisci due date di nascita, orari opzionali (predefinito 12:00 locale), luoghi e fusi orari, poi calcola. Lo strumento trova la longitudine del punto medio per ciascuno dei dieci pianeti classici, li posiziona in case usando l'Ascendente composito e mostra una doppia ruota con tabella degli aspetti ordinabile. Orbi più stretti significano temi relazionali più intensi.",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Calcolatore tema composito con aspetti e doppia ruota"
+        }
+      },
+      {
+        "title": "Tema composito + sinastria + mappe: il quadro completo",
+        "description": "Dopo il tema composito, apri la sinastria per vedere come ogni persona vive individualmente la relazione. Poi controlla l'astrocartografia per trovare quali città amplificano l'energia del vostro legame. Tre strumenti, un unico flusso: tema composito per sapere cosa è la relazione, sinastria per come la vive ciascuno, mappe per dove fiorisce.",
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Tema composito combinato con sinastria e mappe di astrocartografia"
+        }
+      },
+      {
+        "title": "Cosa guardare per primo nel tuo tema composito",
+        "description": "Inizia dal Sole composito —descrive l'identità centrale e la direzione condivisa. Poi il segno lunare per il tono emotivo e i bisogni di sicurezza condivisi. Venere mostra cosa vi avvicina e i valori comuni; Marte rivela la spinta e la passione condivise. Infine scorri la tabella degli aspetti cercando pianeti entro 3° di orbe: le congiunzioni fondono le energie così completamente da definire il carattere della relazione. Saturno nel tema composito segnala dove il legame chiede impegno e pazienza —un Saturno composito prominente indica spesso longevità.",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Come leggere il tema composito: Sole Luna Venere Marte Saturno"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Perché usare questo calcolatore di tema composito",
+    "label": "VANTAGGI",
+    "description": "Costruito per la chiarezza: inserimento doppio rapido, calcoli del punto medio affidabili e percorso diretto dal tema composito alla sinastria o alle mappe geografiche.",
+    "items": [
+      {
+        "title": "Risultati chiari, senza eccesso di tecnicismi",
+        "description": "Una doppia ruota visiva e una lista di aspetti ordinabile —gli orbi più stretti per primi. Scansiona le prime righe per trovare i temi più forti della relazione in pochi minuti.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Navigare il tema composito con facilità"
+        }
+      },
+      {
+        "title": "Calcoli del punto medio precisi",
+        "description": "Ogni pianeta composito è calcolato con il punto medio matematico standard —lo stesso metodo applicato dagli astrologi professionisti. Posizioni accurate che puoi verificare e discutere.",
+        "icon": "RiShieldCheckLine",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Calcoli precisi del punto medio per il tema composito"
+        }
+      },
+      {
+        "title": "Una sessione, quadro completo della relazione",
+        "description": "Dopo il tema composito, passa alla sinastria o alle mappe di astrocartografia con gli stessi dati —senza reinserirli. Una sessione nello strumento diventa un flusso completo di astrologia relazionale.",
+        "icon": "RiMapPinLine",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Dal tema composito alla sinastria e alle mappe"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Come calcolare il tuo tema composito",
+    "label": "COME USARLO",
+    "description": "Quattro passi dai dati di nascita a un tema composito completo.",
+    "items": [
+      {
+        "title": "Inserisci i due profili di nascita",
+        "description": "Data, orario opzionale (predefinito 12:00 locale), luogo di nascita e fuso orario per ciascuna persona. Gli orari precisi affinano Luna e Ascendente.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Calcola il tuo tema composito",
+        "description": "Invia e calcola istantaneamente le posizioni del punto medio per tutti i dieci pianeti, generando la doppia ruota con le case.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Leggi la doppia ruota e gli aspetti",
+        "description": "Parti dal Sole composito (identità della relazione), poi la Luna (legame emotivo), Venere e Marte. Scorri la tabella degli aspetti ordinata per orbe: qualsiasi pianeta entro 3° da un altro è uno dei temi definitori. Le case mostrano quali aree di vita la relazione attiva di più.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Approfondisci con sinastria o mappe",
+        "description": "Confronta il tema composito con la sinastria per le dinamiche individuali, oppure apri l'astrocartografia per vedere dove l'energia relazionale raggiunge il suo picco sulla Terra.",
+        "icon": "RiSparklingLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Funzionalità del calcolatore di tema composito",
+    "label": "FUNZIONALITÀ",
+    "description": "Tutto il necessario per generare e leggere un tema composito, in un'unica pagina.",
+    "items": [
+      {
+        "title": "Metodo standard del punto medio",
+        "description": "Longitudini del punto medio matematico per tutti i dieci pianeti classici —l'approccio standard del settore per i temi compositi.",
+        "icon": "RiSparklingLine"
+      },
+      {
+        "title": "Visualizzazione completa in doppia ruota",
+        "description": "Entrambi i temi natali mostrati insieme con i punti medii compositi chiaramente sovrapposti per un'immagine della relazione a colpo d'occhio.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Tabella degli aspetti ordinabile",
+        "description": "Congiunzione, opposizione, quadratura, trigono e sestile —ordinati per orbe così le dinamiche più forti emergono per prime.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Case in segno intero",
+        "description": "Sistema di case coerente tra strumenti compositi, natali e di sinastria per un'esperienza di lettura omogenea.",
+        "icon": "RiEarthLine"
+      },
+      {
+        "title": "Sinastria con un clic",
+        "description": "Passa alla sinastria con gli stessi dati di nascita subito dopo aver visto il tuo tema composito —senza doverli reinserire.",
+        "icon": "RiChat3Line"
+      },
+      {
+        "title": "Interfaccia multilingua",
+        "description": "Disponibile in italiano, inglese, cinese, spagnolo, portoghese e tedesco —gli stessi calcoli accurati in ogni lingua.",
+        "icon": "RiTranslate"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "DOMANDE FREQUENTI",
+    "title": "Domande frequenti sul calcolatore di tema composito",
+    "description": "Le domande più comuni sui temi compositi e sull'uso di questo calcolatore.",
+    "items": [
+      {
+        "title": "Cos'è un tema composito?",
+        "description": "Un tema composito è un unico tema unificato creato trovando il punto medio matematico tra le posizioni planetarie di due persone. Rappresenta la relazione stessa come entità distinta —non un confronto tra due individui, ma l'anima del legame tra loro."
+      },
+      {
+        "title": "Questo calcolatore di tema composito è gratuito?",
+        "description": "Sì —calcolare il tema composito, visualizzare la doppia ruota, la tabella degli aspetti e le posizioni in casa è completamente gratuito senza registrazione. La lettura IA opzionale utilizza crediti."
+      },
+      {
+        "title": "Qual è la differenza tra tema composito e sinastria?",
+        "description": "La sinastria confronta direttamente due temi, mostrando le interazioni pianeta per pianeta tra due persone. Il tema composito fonde entrambi in uno, rivelando l'identità propria e i temi della relazione. Usa la sinastria per la compatibilità individuale; il tema composito per il carattere della coppia."
+      },
+      {
+        "title": "Quanto è preciso il tema composito senza orari di nascita esatti?",
+        "description": "Le posizioni dei pianeti rimangono accurate senza gli orari. La precisione della Luna e le case basate sull'Ascendente diventano approssimative —usiamo le 12:00 locali quando l'orario è sconosciuto. Per un tema composito più significativo, fornisci gli orari esatti di entrambe le persone."
+      },
+      {
+        "title": "Cosa significano Sole, Luna e Venere nel tema composito?",
+        "description": "Il Sole composito è l'identità della relazione e lo scopo condiviso. La Luna composita è il tono emotivo —come la relazione si sente istintivamente e di cosa ha bisogno per sentirsi sicura. Venere compositivo mostra cosa vi unisce e i valori condivisi. Questi tre pianeti sono i primi da leggere dopo aver calcolato il tema composito."
+      },
+      {
+        "title": "Cosa significa Saturno nel tema composito?",
+        "description": "Saturno nel tema composito segnala impegno, struttura e le aree in cui la relazione chiede pazienza e lavoro. Un Saturno prominente (in congiunzione con Sole, Luna o Ascendente composito) indica spesso un legame serio e duraturo —ma anche una tensione che richiede uno sforzo consapevole. Saturno composito non è incompatibilità; è longevità che richiede investimento."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Dopo il tema composito, continua a esplorare",
+    "description": "Il tema composito mostra cos'è la relazione. La sinastria mostra come la vive ciascuno. Le mappe di astrocartografia rivelano dove la vostra energia relazionale è più forte sulla Terra.",
+    "buttons": [
+      {
+        "title": "Mappa di Astrocartografia",
+        "icon": "RiMapPinLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Calcolatore di Sinastria",
+        "icon": "RiHeartLine",
+        "url": "/synastry-chart-calculator",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "personA": "Persona A",
+      "personB": "Persona B",
+      "wheelAxisInner": "Persona A",
+      "wheelAxisOuter": "Persona B",
+      "biwheelFootnote": "Questa doppia ruota mostra i due temi natali separatamente. I punti medii compositi verranno visualizzati dopo il calcolo.",
+      "birthDate": "Data di nascita",
+      "birthTime": "Ora di nascita (opzionale; predefinita 12:00 locale)",
+      "birthLocation": "Luogo di nascita",
+      "timezone": "Fuso orario alla nascita",
+      "submit": "Calcola tema composito"
+    },
+    "tabs": {
+      "composite": "Tema composito"
+    },
+    "result": {
+      "title": "Il tuo tema composito",
+      "aspectsTitle": "Pianeti e aspetti compositi",
+      "planet": "Pianeta",
+      "sign": "Segno",
+      "degree": "Grado",
+      "house": "Casa",
+      "aspect": "Aspetto",
+      "orb": "Orbe",
+      "aspectsDesc": "Aspetti tra pianeti compositi —i temi psicologici della vostra relazione.",
+      "footnote": "Case in segno intero. Il tema composito utilizza longitudini del punto medio e il sistema di case del punto medio. Tutte le posizioni vengono calcolate per entrambi i dati e luoghi di nascita, poi mediate al punto medio matematico."
+    },
+    "errors": {
+      "required": "Inserisci i dati di nascita completi per entrambe le persone.",
+      "generic": "Calcolo fallito. Controlla i dati e riprova."
+    }
+  }
+}

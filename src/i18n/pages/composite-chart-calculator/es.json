@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "title": "Calculadora de carta compuesta gratis online | Carta del alma de pareja",
+    "description": "Calculadora de carta compuesta gratis: fusiona dos temas natales en una carta de relación por el método del punto medio. Doble rueda, aspectos y casas—al instante, sin registro.",
+    "keywords": "carta compuesta, calculadora carta compuesta, carta compuesta gratis, astrología de pareja, método punto medio, compatibilidad astrológica, sinastría vs carta compuesta"
+  },
+  "intentAnchor": {
+    "text": "Si buscas una carta compuesta que muestre qué es vuestra relación en sí —no solo cómo os comparáis— empieza aquí. Esta calculadora gratuita fusiona dos perfiles de nacimiento en una carta unificada usando el método del punto medio: posiciones planetarias combinadas, aspectos principales y casas, todo en una doble rueda. La carta compuesta no es una comparación; es el horóscopo propio de la relación."
+  },
+  "internalLinks": {
+    "title": "Herramientas relacionadas",
+    "items": [
+      {
+        "text": "Centro de mapas y calculadoras.",
+        "linkText": "Inicio",
+        "url": "/"
+      },
+      {
+        "text": "Compara dos temas natales directamente.",
+        "linkText": "Sinastría",
+        "url": "/synastry-chart-calculator"
+      },
+      {
+        "text": "Consulta tus planetas y casas natales.",
+        "linkText": "Tema natal",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "Descubre dónde florece vuestra relación en el mundo.",
+        "linkText": "Mapa de Astrocartografía",
+        "url": "/astrocartography-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Qué es la carta compuesta (y por qué funciona)",
+    "label": "INTRODUCCIÓN",
+    "description": "La carta compuesta fusiona dos temas natales en uno solo calculando el punto medio de cada planeta, casa y eje. A diferencia de la sinastría —que mantiene ambas personas visibles y las compara—, la carta compuesta combina sus posiciones en un tercer mapa que describe la relación como entidad propia. Léela como un tema natal, pero recuerda: esta carta pertenece a la relación, no a ninguna de las dos personas.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Calculadora de carta compuesta con doble rueda y carta del alma de pareja"
+    },
+    "items": [
+      {
+        "title": "Carta compuesta vs. sinastría: ¿cuál necesitas?",
+        "description": "La sinastría responde «¿cómo interactúan vuestros planetas?» comparando carta a carta. La carta compuesta responde «¿qué es esta relación?» fusionando ambas en una sola. La mayoría de los astrólogos usan las dos: sinastría para entender las dinámicas individuales y la fricción, carta compuesta para comprender la identidad central del vínculo. Empieza con sinastría para la compatibilidad; usa la carta compuesta para entender lo que representa vuestra unión.",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Diferencias entre carta compuesta y sinastría"
+        }
+      },
+      {
+        "title": "Cómo funciona esta calculadora de carta compuesta",
+        "description": "Introduce dos fechas de nacimiento, horas opcionales (por defecto 12:00 local), lugares y zonas horarias, y calcula. La herramienta halla la longitud del punto medio para cada uno de los diez planetas clásicos, los ubica en casas usando el Ascendente compuesto y muestra una doble rueda con tabla de aspectos ordenable. Cuanto menor el orbe, más intenso el tema en la relación.",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Calculadora de carta compuesta con aspectos y doble rueda"
+        }
+      },
+      {
+        "title": "Carta compuesta + sinastría + mapas: la imagen completa",
+        "description": "Tras tu carta compuesta, abre la sinastría para ver cómo vive cada persona la relación individualmente. Luego revisa la astrocartografía para encontrar qué ciudades amplifican la energía de vuestro vínculo. Tres herramientas, un solo flujo: carta compuesta para saber qué es la relación, sinastría para cómo la vive cada uno, mapas para dónde florece.",
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Carta compuesta combinada con sinastría y mapas de astrocartografía"
+        }
+      },
+      {
+        "title": "Qué mirar primero en tu carta compuesta",
+        "description": "Empieza por el Sol compuesto —describe la identidad central y la dirección compartida de la relación. Luego el signo lunar para el tono emocional y las necesidades de seguridad compartidas. Venus muestra qué os une y vuestros valores comunes; Marte revela el impulso y la pasión conjuntos. Finalmente recorre la tabla de aspectos en busca de planetas a menos de 3° de orbe: las conjunciones fusionan energías de forma tan completa que definen el carácter de la relación. Saturno en la carta compuesta señala dónde el vínculo pide compromiso y paciencia: un Saturno compuesto prominente suele indicar longevidad.",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Cómo leer la carta compuesta: Sol Luna Venus Marte Saturno"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por qué usar esta calculadora de carta compuesta",
+    "label": "VENTAJAS",
+    "description": "Pensada para la claridad: entrada dual rápida, cálculos de punto medio fiables y ruta directa desde la carta compuesta a la sinastría o los mapas geográficos.",
+    "items": [
+      {
+        "title": "Resultados claros, sin sobrecarga de jerga",
+        "description": "Una doble rueda visual y una lista de aspectos ordenable —los orbes más ajustados primero. Escanea las primeras filas para encontrar los temas más intensos de la relación en minutos.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Navegar la carta compuesta con facilidad"
+        }
+      },
+      {
+        "title": "Cálculos de punto medio precisos",
+        "description": "Cada planeta compuesto se calcula con el punto medio matemático estándar —el mismo método que aplican los astrólogos profesionales. Posiciones exactas que puedes verificar y comentar.",
+        "icon": "RiShieldCheckLine",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Cálculos precisos de punto medio para la carta compuesta"
+        }
+      },
+      {
+        "title": "Una sesión, imagen completa de la relación",
+        "description": "Tras tu carta compuesta, salta a sinastría o mapas de astrocartografía con los mismos datos —sin volver a introducirlos. Una sesión en la herramienta se convierte en un flujo completo de astrología relacional.",
+        "icon": "RiMapPinLine",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "De la carta compuesta a la sinastría y los mapas"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo calcular tu carta compuesta",
+    "label": "USO",
+    "description": "Cuatro pasos desde los datos de nacimiento hasta una carta compuesta completa.",
+    "items": [
+      {
+        "title": "Introduce los dos perfiles de nacimiento",
+        "description": "Fecha, hora opcional (por defecto 12:00 local), lugar de nacimiento y zona horaria para cada persona. Las horas exactas mejoran la Luna y el Ascendente.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Calcula tu carta compuesta",
+        "description": "Envía y calcula al instante las posiciones de punto medio de los diez planetas, generando la doble rueda con casas.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Lee la doble rueda y los aspectos",
+        "description": "Empieza por el Sol compuesto (identidad de la relación), luego la Luna (vínculo emocional), Venus y Marte. Escanea la tabla de aspectos ordenada por orbe: cualquier planeta a menos de 3° del otro define la relación. Las casas muestran qué áreas de vida activa más el vínculo.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Profundiza con sinastría o mapas",
+        "description": "Contrasta los hallazgos de la carta compuesta con la sinastría para las dinámicas individuales, o abre la astrocartografía para ver dónde alcanza su punto álgido la energía relacional.",
+        "icon": "RiSparklingLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Funciones de la calculadora de carta compuesta",
+    "label": "FUNCIONALIDADES",
+    "description": "Todo lo necesario para generar e interpretar una carta compuesta, en una sola página.",
+    "items": [
+      {
+        "title": "Método estándar del punto medio",
+        "description": "Longitudes de punto medio matemáticas para los diez planetas clásicos —el enfoque estándar del sector para cartas compuestas.",
+        "icon": "RiSparklingLine"
+      },
+      {
+        "title": "Visualización completa en doble rueda",
+        "description": "Ambos temas natales mostrados juntos con los puntos medios compuestos superpuestos para una imagen de la relación de un solo vistazo.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Tabla de aspectos ordenable",
+        "description": "Conjunción, oposición, cuadrado, trígono y sextil —ordenados por orbe para que las dinámicas más potentes aparezcan primero.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Casas en signo entero",
+        "description": "Sistema de casas consistente en herramientas de carta compuesta, natal y sinastría para una lectura coherente entre ellas.",
+        "icon": "RiEarthLine"
+      },
+      {
+        "title": "Sinastría con un clic",
+        "description": "Pasa a la sinastría con los mismos datos de nacimiento justo después de ver tu carta compuesta —sin volver a introducirlos.",
+        "icon": "RiChat3Line"
+      },
+      {
+        "title": "Interfaz multiidioma",
+        "description": "Disponible en español, inglés, chino, italiano, portugués y alemán —los mismos cálculos precisos en cada idioma.",
+        "icon": "RiTranslate"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "PREGUNTAS FRECUENTES",
+    "title": "Preguntas frecuentes sobre la calculadora de carta compuesta",
+    "description": "Preguntas habituales sobre cartas compuestas y uso de esta calculadora.",
+    "items": [
+      {
+        "title": "¿Qué es una carta compuesta?",
+        "description": "Una carta compuesta es un único mapa unificado creado hallando el punto medio matemático entre las posiciones planetarias de dos personas. Representa la relación misma como entidad diferenciada —no una comparación de dos individuos, sino el alma del vínculo entre ellos."
+      },
+      {
+        "title": "¿Es gratuita esta calculadora de carta compuesta?",
+        "description": "Sí —calcular la carta compuesta, ver la doble rueda, la tabla de aspectos y los posicionamientos en casas es completamente gratuito y sin registro. La lectura con IA opcional requiere créditos."
+      },
+      {
+        "title": "¿Qué diferencia hay entre carta compuesta y sinastría?",
+        "description": "La sinastría compara dos cartas directamente, mostrando las interacciones planeta a planeta entre dos personas. La carta compuesta fusiona ambas en una sola, revelando la identidad y los temas propios de la relación. Usa la sinastría para la compatibilidad individual; la carta compuesta para el carácter de la pareja."
+      },
+      {
+        "title": "¿Qué exactitud tiene la carta compuesta sin horas de nacimiento exactas?",
+        "description": "Las posiciones planetarias siguen siendo exactas sin los horarios. La precisión de la Luna y las casas basadas en el Ascendente se vuelven aproximadas —usamos las 12:00 locales cuando la hora es desconocida. Para una carta compuesta más significativa, facilita las horas exactas de ambas personas."
+      },
+      {
+        "title": "¿Qué significan el Sol, la Luna y Venus en la carta compuesta?",
+        "description": "El Sol compuesto es la identidad y el propósito compartido de la relación. La Luna compuesta marca el tono emocional —cómo se siente instintivamente el vínculo y qué necesita para sentirse seguro. Venus compuesto muestra qué os atrae mutuamente y los valores compartidos. Estos tres planetas son los primeros que leer al obtener tu carta compuesta."
+      },
+      {
+        "title": "¿Qué significa Saturno en la carta compuesta?",
+        "description": "Saturno en la carta compuesta señala el compromiso, la estructura y las áreas donde el vínculo exige paciencia y esfuerzo. Un Saturno prominente (conjunto al Sol, la Luna o el Ascendente compuesto) suele indicar un lazo serio y duradero —pero también una tensión que requiere trabajo consciente. Saturno compuesto no es incompatibilidad; es durabilidad que pide inversión."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Tras tu carta compuesta, sigue explorando",
+    "description": "La carta compuesta muestra qué es la relación. La sinastría muestra cómo la vive cada persona. Los mapas de astrocartografía revelan dónde se siente más fuerte vuestra energía en el mundo.",
+    "buttons": [
+      {
+        "title": "Mapa de Astrocartografía",
+        "icon": "RiMapPinLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Calculadora de Sinastría",
+        "icon": "RiHeartLine",
+        "url": "/synastry-chart-calculator",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "personA": "Persona A",
+      "personB": "Persona B",
+      "wheelAxisInner": "Persona A",
+      "wheelAxisOuter": "Persona B",
+      "biwheelFootnote": "Esta doble rueda muestra los dos temas natales por separado. Los puntos medios de la carta compuesta aparecerán tras el cálculo.",
+      "birthDate": "Fecha de nacimiento",
+      "birthTime": "Hora de nacimiento (opcional; por defecto 12:00 local)",
+      "birthLocation": "Lugar de nacimiento",
+      "timezone": "Zona horaria al nacer",
+      "submit": "Calcular carta compuesta"
+    },
+    "tabs": {
+      "composite": "Carta compuesta"
+    },
+    "result": {
+      "title": "Tu carta compuesta",
+      "aspectsTitle": "Planetas y aspectos compuestos",
+      "planet": "Planeta",
+      "sign": "Signo",
+      "degree": "Grado",
+      "house": "Casa",
+      "aspect": "Aspecto",
+      "orb": "Orbe",
+      "aspectsDesc": "Aspectos entre planetas compuestos —los temas psicológicos de vuestra relación.",
+      "footnote": "Casas en signo entero. La carta compuesta usa longitudes de punto medio y el sistema de casas del punto medio. Todas las posiciones se calculan para ambas fechas y lugares de nacimiento, luego se promedian al punto medio matemático."
+    },
+    "errors": {
+      "required": "Por favor, introduce los datos de nacimiento completos de ambas personas.",
+      "generic": "Cálculo fallido. Comprueba los datos e inténtalo de nuevo."
+    }
+  }
+}

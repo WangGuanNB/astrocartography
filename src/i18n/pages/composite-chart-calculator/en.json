@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "title": "Free Composite Chart Calculator Online | Relationship Soul Chart",
+    "description": "Free composite chart calculator: blend two birth charts into one relationship soul chart using midpoint method. Biwheel, aspects & houses—instant, no sign-up.",
+    "keywords": "composite chart, composite chart calculator, free composite chart, relationship astrology, couple chart, midpoint method, birth chart compatibility"
+  },
+  "intentAnchor": {
+    "text": "If you are searching for a composite chart that shows what your relationship truly is—not just how you compare—start here. This free composite chart calculator blends two birth profiles into one unified relationship chart using the midpoint method: merged planetary positions, major aspects, and house placements in a single biwheel. A composite chart is not a comparison; it is the relationship's own chart."
+  },
+  "internalLinks": {
+    "title": "Related",
+    "items": [
+      {
+        "text": "Hub for astrocartography and all calculators.",
+        "linkText": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Compare two birth charts directly.",
+        "linkText": "Synastry Chart",
+        "url": "/synastry-chart-calculator"
+      },
+      {
+        "text": "See your birth planets and houses.",
+        "linkText": "Natal Chart",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "Find where your relationship thrives on Earth.",
+        "linkText": "Astrocartography Map",
+        "url": "/astrocartography-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What Is a Composite Chart (and Why It Works)",
+    "label": "INTRODUCTION",
+    "description": "A composite chart blends two natal charts into one unified chart by calculating the midpoint of each planet, house, and angle. Unlike synastry—which keeps both people visible and compares them—a composite chart merges their positions into a single third chart that describes the relationship as its own entity. Read it like a natal chart, but understand: this chart belongs to the relationship, not either person.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Composite chart calculator showing midpoint wheel and relationship soul chart"
+    },
+    "items": [
+      {
+        "title": "Composite Chart vs. Synastry: Which Do You Need?",
+        "description": "Synastry answers \"how do your planets interact?\" by comparing chart to chart. A composite chart answers \"what is this relationship?\" by merging both charts into one. Most astrologers use both: synastry for understanding individual dynamics and friction, composite chart for grasping the bond's core identity. Start with synastry for compatibility; use composite chart to understand what your partnership stands for.",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Composite chart vs synastry comparison"
+        }
+      },
+      {
+        "title": "How This Composite Chart Calculator Works",
+        "description": "Enter two birth dates, optional times (defaults to 12:00 local), locations, and timezones—then calculate. The tool finds the midpoint longitude for each of the ten classical planets, places them in houses using the midpoint Ascendant, and displays a biwheel with a sortable aspect table. Tighter orbs mean stronger relationship themes.",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Composite chart calculator showing aspects and biwheel"
+        }
+      },
+      {
+        "title": "Composite Chart + Synastry + Maps: The Full Picture",
+        "description": "After your composite chart, open synastry to see how each person individually experiences the relationship. Then check astrocartography to find which cities amplify your bond's energy. Three tools, one workflow: composite chart for what the relationship is, synastry for how each person lives it, maps for where it thrives.",
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Composite chart with synastry and astrocartography maps"
+        }
+      },
+      {
+        "title": "What to Read First in Your Composite Chart",
+        "description": "Start with the composite Sun sign—it describes the relationship's core identity and direction. Then check the Moon sign for emotional tone and security needs you share. Venus shows what draws you together and what you value jointly; Mars reveals shared drive and passion. Finally, scan the aspect table for any planet within 3°: conjunctions fuse energies so completely they define the relationship's character, while oppositions create the push-pull that keeps the bond dynamic. Saturn's sign and house in the composite chart signals where the relationship asks for commitment and patience—a strong composite Saturn often means longevity.",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "How to read a composite chart: Sun Moon Venus Mars Saturn"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Use This Composite Chart Calculator",
+    "label": "BENEFITS",
+    "description": "Built for clarity: fast dual-profile input, midpoint calculations you can trust, and a direct path from composite chart to synastry or geographic maps.",
+    "items": [
+      {
+        "title": "Clear Results, No Jargon Overload",
+        "description": "A visual biwheel and a sortable aspect list—tightest orbs first. Scan the top rows to find your relationship's loudest themes in minutes.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Navigate your composite chart easily"
+        }
+      },
+      {
+        "title": "Precise Midpoint Calculations",
+        "description": "Every composite planet is computed using the standard mathematical midpoint—the same method professional astrologers apply. Accurate positions you can verify and discuss.",
+        "icon": "RiShieldCheckLine",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Precise composite chart midpoint calculations"
+        }
+      },
+      {
+        "title": "One Session, Full Relationship Picture",
+        "description": "After your composite chart, jump to synastry or astrocartography maps with the same birth data—no re-entry. One tool session becomes a complete relationship astrology workflow.",
+        "icon": "RiMapPinLine",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Composite chart to synastry and maps"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Calculate Your Composite Chart",
+    "label": "HOW TO USE",
+    "description": "Four steps from birth data to a complete composite chart.",
+    "items": [
+      {
+        "title": "Enter both birth profiles",
+        "description": "Date, optional time (defaults to 12:00 local), birth location, and timezone for each person. Accurate times sharpen Moon and Ascendant results.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Calculate your composite chart",
+        "description": "Submit to instantly compute midpoint positions for all ten planets and generate the biwheel with house placements.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Read the biwheel and aspects",
+        "description": "Start with the composite Sun sign (relationship identity), then Moon (emotional bond), then Venus and Mars. Scan the aspect table sorted by orb: any planet within 3° of another is one of the relationship's defining themes. Check house placements to see which life areas the relationship activates most.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Deepen with synastry or maps",
+        "description": "Compare composite chart findings with synastry for individual dynamics, or open astrocartography to see where your relationship energy peaks on Earth.",
+        "icon": "RiSparklingLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Composite Chart Calculator Features",
+    "label": "FEATURES",
+    "description": "Everything you need to generate and read a composite chart, in one page.",
+    "items": [
+      {
+        "title": "Standard midpoint method",
+        "description": "Mathematical midpoint longitudes for all ten classical planets—the industry-standard approach for composite charts.",
+        "icon": "RiSparklingLine"
+      },
+      {
+        "title": "Full biwheel visualization",
+        "description": "Both natal charts displayed together with composite midpoints clearly overlaid for an at-a-glance relationship picture.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Sortable aspect table",
+        "description": "Conjunction, opposition, square, trine, and sextile—sorted by orb so the strongest relationship dynamics surface first.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Whole-sign house placements",
+        "description": "Consistent house system across composite, natal, and synastry tools for a coherent cross-tool reading experience.",
+        "icon": "RiEarthLine"
+      },
+      {
+        "title": "One-click synastry comparison",
+        "description": "Switch to synastry using the same birth data immediately after viewing your composite chart—no re-entry needed.",
+        "icon": "RiChat3Line"
+      },
+      {
+        "title": "Multi-language interface",
+        "description": "Available in English, Chinese, Spanish, Italian, Portuguese, and German—same accurate calculations in every language.",
+        "icon": "RiTranslate"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Composite Chart Calculator FAQ",
+    "description": "Common questions about composite charts and how to use this calculator.",
+    "items": [
+      {
+        "title": "What is a composite chart?",
+        "description": "A composite chart is a single unified chart created by finding the mathematical midpoint between two people's planetary positions. It represents the relationship itself as a distinct entity—not a comparison of two individuals, but the soul of the bond between them."
+      },
+      {
+        "title": "Is this composite chart calculator free?",
+        "description": "Yes—calculating the composite chart, viewing the biwheel, aspect table, and house placements is completely free with no sign-up required. Optional AI reading uses credits."
+      },
+      {
+        "title": "What is the difference between a composite chart and synastry?",
+        "description": "Synastry compares two charts directly, showing planet-to-planet interactions between two people. A composite chart merges both charts into one, revealing the relationship's own identity and themes. Use synastry for individual compatibility; use composite chart for the partnership's character."
+      },
+      {
+        "title": "How accurate is a composite chart without exact birth times?",
+        "description": "Planetary positions remain accurate without birth times. Moon precision and Ascendant-based house placements become approximate—we default to 12:00 local when times are unknown. For the most meaningful composite chart, provide exact birth times for both people."
+      },
+      {
+        "title": "What does the composite chart Sun, Moon, and Venus mean?",
+        "description": "The composite Sun is the relationship's identity and shared purpose. The composite Moon is the emotional tone—how the relationship instinctively feels and what it needs to feel safe. Composite Venus shows what draws you together, shared values, and how you enjoy each other. These three planets are the first to read after calculating your composite chart."
+      },
+      {
+        "title": "What does Saturn mean in a composite chart?",
+        "description": "Saturn in a composite chart signals commitment, structure, and the areas where the relationship asks for patience and work. A prominent Saturn (conjunct composite Sun, Moon, or Ascendant) often indicates a serious, long-lasting bond—but also tension that requires conscious effort to navigate. Saturn does not mean incompatibility; it means durability requires investment."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "After Your Composite Chart, Explore More",
+    "description": "Composite chart shows what the relationship is. Synastry shows how each person experiences it. Astrocartography maps reveal where your relationship energy feels strongest on Earth.",
+    "buttons": [
+      {
+        "title": "Astrocartography Map",
+        "icon": "RiMapPinLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Synastry Chart",
+        "icon": "RiHeartLine",
+        "url": "/synastry-chart-calculator",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "personA": "Person A",
+      "personB": "Person B",
+      "wheelAxisInner": "Person A",
+      "wheelAxisOuter": "Person B",
+      "biwheelFootnote": "This biwheel shows the two natal charts separately. Your composite chart midpoints will display after calculation.",
+      "birthDate": "Birth date",
+      "birthTime": "Birth time (optional; defaults to 12:00 local)",
+      "birthLocation": "Birth location",
+      "timezone": "Timezone at birth",
+      "submit": "Calculate composite chart"
+    },
+    "tabs": {
+      "composite": "Composite chart"
+    },
+    "result": {
+      "title": "Your composite chart",
+      "aspectsTitle": "Composite planets and aspects",
+      "planet": "Planet",
+      "sign": "Sign",
+      "degree": "Degree",
+      "house": "House",
+      "aspect": "Aspect",
+      "orb": "Orb",
+      "aspectsDesc": "Aspects between composite planets—the psychological themes of your relationship.",
+      "footnote": "Whole-sign houses. Composite chart uses midpoint longitudes and the midpoint house system. All positions calculated for both birth times and locations then averaged to the mathematical midpoint."
+    },
+    "errors": {
+      "required": "Please provide complete birth data for both people.",
+      "generic": "Calculation failed. Check your data and try again."
+    }
+  }
+}

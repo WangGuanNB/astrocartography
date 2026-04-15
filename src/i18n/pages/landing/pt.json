@@ -72,6 +72,20 @@
               "icon": "RiFlightTakeoffLine"
             },
             {
+              "title": "Calculadora Sinastria",
+              "description": "Dois mapas natais, biroda, aspectos, sobreposições opcionais",
+              "url": "/synastry-chart-calculator",
+              "target": "_self",
+              "icon": "RiHeartLine"
+            },
+            {
+              "title": "Calculadora Mapa Composto",
+              "description": "Funde dois mapas natais em um mapa da alma relacional",
+              "url": "/composite-chart-calculator",
+              "target": "_self",
+              "icon": "RiTeamLine"
+            },
+            {
               "title": "Calculadora Retorno Solar",
               "description": "Mapa de revolução solar anual para qualquer ano, local opcional",
               "url": "/solar-return-chart-calculator",

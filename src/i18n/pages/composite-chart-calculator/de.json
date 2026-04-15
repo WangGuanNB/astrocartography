@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "title": "Komposit-Horoskop kostenlos online berechnen | Beziehungshoroskop",
+    "description": "Komposit-Horoskop kostenlos: zwei Radix-Horoskope per Mittelpunktmethode zu einem Beziehungshoroskop zusammenführen. Doppelrad, Aspekte und Häuser—sofort, ohne Anmeldung.",
+    "keywords": "Komposit-Horoskop, Komposit-Horoskop berechnen, Komposit gratis, Beziehungsastrologie, Partnerhoroskop, Mittelpunktmethode, Synastrie vs Komposit"
+  },
+  "intentAnchor": {
+    "text": "Wenn Sie ein Komposit-Horoskop suchen, das zeigt, was Ihre Beziehung wirklich ist —nicht nur, wie Sie sich vergleichen— starten Sie hier. Dieser kostenlose Rechner führt zwei Geburtsprofile mit der Mittelpunktmethode zu einem einheitlichen Beziehungshoroskop zusammen: gemeinsame Planetenpositionen, Hauptaspekte und Häuser in einem Doppelrad. Ein Komposit ist kein Vergleich; es ist das eigene Horoskop der Beziehung."
+  },
+  "internalLinks": {
+    "title": "Verwandte Tools",
+    "items": [
+      {
+        "text": "Zentrale für Karten und Rechner.",
+        "linkText": "Startseite",
+        "url": "/"
+      },
+      {
+        "text": "Zwei Geburtshoroskope direkt vergleichen.",
+        "linkText": "Synastrie",
+        "url": "/synastry-chart-calculator"
+      },
+      {
+        "text": "Eigene Planeten und Häuser einsehen.",
+        "linkText": "Geburtshoroskop",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "Herausfinden, wo Ihre Beziehungsenergie auf der Erde am stärksten ist.",
+        "linkText": "Astrokartografie-Karte",
+        "url": "/astrocartography-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Was ist ein Komposit-Horoskop (und warum es funktioniert)",
+    "label": "EINLEITUNG",
+    "description": "Ein Komposit-Horoskop führt zwei Radix-Horoskope zu einem zusammen, indem es den Mittelpunkt jedes Planeten, jeden Hauses und jeden Winkels berechnet. Anders als die Synastrie —die beide Personen sichtbar hält und vergleicht— fügt das Komposit ihre Positionen zu einem dritten Horoskop zusammen, das die Beziehung als eigenständige Entität beschreibt. Lesen Sie es wie ein Geburtshoroskop, aber denken Sie daran: dieses Horoskop gehört der Beziehung, nicht einer der beiden Personen.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Komposit-Horoskop Rechner mit Doppelrad und Beziehungshoroskop"
+    },
+    "items": [
+      {
+        "title": "Komposit vs. Synastrie: Was brauchen Sie?",
+        "description": "Synastrie beantwortet «Wie interagieren Ihre Planeten?» durch Vergleich von Horoskop zu Horoskop. Das Komposit beantwortet «Was ist diese Beziehung?» durch Zusammenführen beider zu einem. Die meisten Astrologen nutzen beide: Synastrie zum Verstehen individueller Dynamiken und Reibungen, Komposit zum Erfassen der Kernidentität des Bandes. Starten Sie mit Synastrie für Kompatibilität; nutzen Sie das Komposit zum Verstehen, wofür Ihre Partnerschaft steht.",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Unterschiede zwischen Komposit-Horoskop und Synastrie"
+        }
+      },
+      {
+        "title": "Wie dieser Komposit-Rechner funktioniert",
+        "description": "Geben Sie zwei Geburtsdaten, optionale Zeiten (Standard 12:00 Ortszeit), Geburtsorte und Zeitzonen ein und berechnen Sie. Das Tool findet die Mittelpunktlongitude für jeden der zehn klassischen Planeten, platziert sie in Häusern über den Komposit-Aszendenten und zeigt ein Doppelrad mit sortierbarer Aspekttabelle. Engere Orben bedeuten stärkere Beziehungsthemen.",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Komposit-Horoskop Rechner mit Aspekten und Doppelrad"
+        }
+      },
+      {
+        "title": "Komposit + Synastrie + Karten: Das vollständige Bild",
+        "description": "Nach Ihrem Komposit öffnen Sie die Synastrie, um zu sehen, wie jede Person die Beziehung individuell erlebt. Prüfen Sie dann die Astrokartografie, um herauszufinden, welche Städte die Energie Ihres Bandes verstärken. Drei Tools, ein Workflow: Komposit für das, was die Beziehung ist, Synastrie für, wie jeder sie erlebt, Karten für, wo sie gedeiht.",
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Komposit-Horoskop kombiniert mit Synastrie und Astrokartografie-Karten"
+        }
+      },
+      {
+        "title": "Was im Komposit zuerst lesen",
+        "description": "Beginnen Sie mit der Sonne im Komposit —sie beschreibt die Kernidentität und gemeinsame Richtung der Beziehung. Dann das Mondzeichen für emotionale Grundstimmung und gemeinsame Sicherheitsbedürfnisse. Venus zeigt, was Sie zusammenbringt und gemeinsame Werte; Mars enthüllt gemeinsamen Antrieb und Leidenschaft. Schließlich die Aspekttabelle nach Planeten innerhalb von 3° absuchen: Konjunktionen verschmelzen Energien so vollständig, dass sie den Charakter der Beziehung definieren. Saturn im Komposit signalisiert, wo die Beziehung Verpflichtung und Geduld fordert —ein prominenter Komposit-Saturn deutet oft auf Langlebigkeit hin.",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Wie man ein Komposit-Horoskop liest: Sonne Mond Venus Mars Saturn"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Warum dieser Komposit-Horoskop-Rechner",
+    "label": "VORTEILE",
+    "description": "Auf Klarheit ausgerichtet: schnelle Doppeleingabe, zuverlässige Mittelpunktberechnungen und direkter Weg vom Komposit zu Synastrie oder geografischen Karten.",
+    "items": [
+      {
+        "title": "Klare Ergebnisse, kein Jargon-Overload",
+        "description": "Ein visuelles Doppelrad und eine sortierbare Aspektliste —engste Orben zuerst. Die oberen Zeilen zeigen die lautesten Beziehungsthemen in wenigen Minuten.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Komposit-Horoskop klar navigieren"
+        }
+      },
+      {
+        "title": "Präzise Mittelpunktberechnungen",
+        "description": "Jeder Komposit-Planet wird mit dem standardmäßigen mathematischen Mittelpunkt berechnet —dieselbe Methode, die professionelle Astrologen anwenden. Genaue Positionen, die Sie überprüfen und besprechen können.",
+        "icon": "RiShieldCheckLine",
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Präzise Mittelpunktberechnungen für das Komposit-Horoskop"
+        }
+      },
+      {
+        "title": "Eine Sitzung, vollständiges Beziehungsbild",
+        "description": "Nach dem Komposit direkt zu Synastrie oder Astrokartografie-Karten mit denselben Geburtsdaten springen —keine erneute Eingabe. Eine Tool-Sitzung wird zum vollständigen Beziehungsastrologie-Workflow.",
+        "icon": "RiMapPinLine",
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Vom Komposit-Horoskop zu Synastrie und Karten"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Wie man ein Komposit-Horoskop berechnet",
+    "label": "ANLEITUNG",
+    "description": "Vier Schritte von Geburtsdaten zu einem vollständigen Komposit-Horoskop.",
+    "items": [
+      {
+        "title": "Beide Geburtsprofile eingeben",
+        "description": "Datum, optionale Zeit (Standard 12:00 Ortszeit), Geburtsort und Zeitzone für jede Person. Genaue Zeiten verbessern Mond- und Aszendenten-Ergebnisse.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Komposit-Horoskop berechnen",
+        "description": "Senden und sofort Mittelpunktpositionen aller zehn Planeten berechnen sowie das Doppelrad mit Häuserplanungen generieren.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Doppelrad und Aspekte lesen",
+        "description": "Mit der Komposit-Sonne beginnen (Beziehungsidentität), dann Mond (emotionales Band), dann Venus und Mars. Aspekttabelle nach Orben sortiert durchgehen: jeder Planet innerhalb von 3° ist eines der prägenden Themen der Beziehung. Häuser zeigen, welche Lebensbereiche die Beziehung am meisten aktiviert.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Mit Synastrie oder Karten vertiefen",
+        "description": "Komposit-Erkenntnisse mit Synastrie für individuelle Dynamiken vergleichen, oder Astrokartografie öffnen, um zu sehen, wo die Beziehungsenergie auf der Erde ihren Höhepunkt erreicht.",
+        "icon": "RiSparklingLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Funktionen des Komposit-Horoskop-Rechners",
+    "label": "FUNKTIONEN",
+    "description": "Alles, was Sie brauchen, um ein Komposit zu erstellen und zu lesen, auf einer Seite.",
+    "items": [
+      {
+        "title": "Standard-Mittelpunktmethode",
+        "description": "Mathematische Mittelpunktlongituden für alle zehn klassischen Planeten —der Industriestandard für Komposit-Horoskope.",
+        "icon": "RiSparklingLine"
+      },
+      {
+        "title": "Vollständige Doppelrad-Visualisierung",
+        "description": "Beide Radix-Horoskope gemeinsam dargestellt mit klar überlagerten Komposit-Mittelpunkten für ein Beziehungsbild auf einen Blick.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Sortierbare Aspekttabelle",
+        "description": "Konjunktion, Opposition, Quadrat, Trigon und Sextil —nach Orben sortiert, damit die stärksten Beziehungsdynamiken zuerst erscheinen.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Ganzzeichienhäuser",
+        "description": "Einheitliches Haushaltssystem in Komposit-, Radix- und Synastrie-Tools für ein kohärentes, werkzeigübergreifendes Leseerlebnis.",
+        "icon": "RiEarthLine"
+      },
+      {
+        "title": "Synastrie per Mausklick",
+        "description": "Nach dem Komposit sofort zur Synastrie mit denselben Geburtsdaten wechseln —keine erneute Eingabe nötig.",
+        "icon": "RiChat3Line"
+      },
+      {
+        "title": "Mehrsprachige Oberfläche",
+        "description": "Verfügbar auf Deutsch, Englisch, Chinesisch, Spanisch, Italienisch und Portugiesisch —dieselben genauen Berechnungen in jeder Sprache.",
+        "icon": "RiTranslate"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "HÄUFIGE FRAGEN",
+    "title": "Häufige Fragen zum Komposit-Horoskop-Rechner",
+    "description": "Häufige Fragen zu Komposit-Horoskopen und zur Nutzung dieses Rechners.",
+    "items": [
+      {
+        "title": "Was ist ein Komposit-Horoskop?",
+        "description": "Ein Komposit-Horoskop ist ein einziges vereinheitlichtes Horoskop, das durch Berechnung des mathematischen Mittelpunkts der Planetenpositionen zweier Personen entsteht. Es repräsentiert die Beziehung selbst als eigenständige Entität —kein Vergleich zweier Individuen, sondern die Seele des Bandes zwischen ihnen."
+      },
+      {
+        "title": "Ist dieser Komposit-Horoskop-Rechner kostenlos?",
+        "description": "Ja —Komposit-Horoskop berechnen, Doppelrad anzeigen, Aspekttabelle und Häuserplanungen einsehen ist komplett kostenlos ohne Registrierung. Optionale KI-Deutung verbraucht Credits."
+      },
+      {
+        "title": "Was ist der Unterschied zwischen Komposit-Horoskop und Synastrie?",
+        "description": "Synastrie vergleicht zwei Horoskope direkt und zeigt Planeten-zu-Planeten-Interaktionen zwischen zwei Personen. Das Komposit führt beide zu einem zusammen und enthüllt die eigene Identität und Themen der Beziehung. Synastrie für individuelle Kompatibilität; Komposit für den Charakter der Partnerschaft."
+      },
+      {
+        "title": "Wie genau ist ein Komposit ohne genaue Geburtszeiten?",
+        "description": "Planetenpositionen bleiben ohne Geburtszeiten genau. Mondpräzision und aszendentenbasierte Häuser werden näherungsweise —wir verwenden 12:00 Ortszeit, wenn Zeiten unbekannt sind. Für das aussagekräftigste Komposit genaue Geburtszeiten beider Personen angeben."
+      },
+      {
+        "title": "Was bedeuten Sonne, Mond und Venus im Komposit-Horoskop?",
+        "description": "Die Komposit-Sonne ist die Identität und der gemeinsame Zweck der Beziehung. Der Komposit-Mond ist der emotionale Grundton —wie sich die Beziehung instinktiv anfühlt und was sie braucht, um sich sicher zu fühlen. Komposit-Venus zeigt, was Sie zusammenbringt und gemeinsame Werte. Diese drei Planeten sind die ersten, die nach der Berechnung des Komposits gelesen werden."
+      },
+      {
+        "title": "Was bedeutet Saturn im Komposit-Horoskop?",
+        "description": "Saturn im Komposit signalisiert Verpflichtung, Struktur und die Bereiche, wo die Beziehung Geduld und Arbeit fordert. Ein prominenter Saturn (Konjunktion mit Komposit-Sonne, Mond oder Aszendent) weist oft auf ein ernstes, langlebiges Band hin —aber auch auf Spannung, die bewusste Anstrengung erfordert. Komposit-Saturn bedeutet keine Unverträglichkeit; er bedeutet Dauerhaftigkeit, die Investition erfordert."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Nach dem Komposit-Horoskop weiter erkunden",
+    "description": "Das Komposit zeigt, was die Beziehung ist. Synastrie zeigt, wie jede Person sie erlebt. Astrokartografie-Karten enthüllen, wo Ihre Beziehungsenergie auf der Erde am stärksten ist.",
+    "buttons": [
+      {
+        "title": "Astrokartografie-Karte",
+        "icon": "RiMapPinLine",
+        "url": "/astrocartography-calculator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Synastrie-Rechner",
+        "icon": "RiHeartLine",
+        "url": "/synastry-chart-calculator",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "personA": "Person A",
+      "personB": "Person B",
+      "wheelAxisInner": "Person A",
+      "wheelAxisOuter": "Person B",
+      "biwheelFootnote": "Dieses Doppelrad zeigt die beiden Radix-Horoskope getrennt. Die Komposit-Mittelpunkte werden nach der Berechnung angezeigt.",
+      "birthDate": "Geburtsdatum",
+      "birthTime": "Geburtszeit (optional; Standard 12:00 Ortszeit)",
+      "birthLocation": "Geburtsort",
+      "timezone": "Zeitzone bei Geburt",
+      "submit": "Komposit-Horoskop berechnen"
+    },
+    "tabs": {
+      "composite": "Komposit-Horoskop"
+    },
+    "result": {
+      "title": "Ihr Komposit-Horoskop",
+      "aspectsTitle": "Komposit-Planeten und Aspekte",
+      "planet": "Planet",
+      "sign": "Zeichen",
+      "degree": "Grad",
+      "house": "Haus",
+      "aspect": "Aspekt",
+      "orb": "Orb",
+      "aspectsDesc": "Aspekte zwischen Komposit-Planeten —die psychologischen Themen Ihrer Beziehung.",
+      "footnote": "Ganzzeichenhäuser. Komposit-Horoskop verwendet Mittelpunktlongituden und das Mittelpunkt-Haushaltssystem. Alle Positionen werden für beide Geburtszeiten und -orte berechnet und dann zum mathematischen Mittelpunkt gemittelt."
+    },
+    "errors": {
+      "required": "Bitte vollständige Geburtsdaten für beide Personen eingeben.",
+      "generic": "Berechnung fehlgeschlagen. Daten prüfen und erneut versuchen."
+    }
+  }
+}

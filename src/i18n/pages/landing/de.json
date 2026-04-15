@@ -72,6 +72,20 @@
               "icon": "RiFlightTakeoffLine"
             },
             {
+              "title": "Synastrie Rechner",
+              "description": "Zwei Geburtshoroskope, Birad, Aspekte, optionale gemeinsame Ortsüberlagen",
+              "url": "/synastry-chart-calculator",
+              "target": "_self",
+              "icon": "RiHeartLine"
+            },
+            {
+              "title": "Composit Chart Rechner",
+              "description": "Verschmilzt zwei Geburtshoroskope zu einer Beziehungs-Seelen-Karte",
+              "url": "/composite-chart-calculator",
+              "target": "_self",
+              "icon": "RiTeamLine"
+            },
+            {
               "title": "Solar Return Rechner",
               "description": "Jahres-Solarreturn für ein beliebiges Jahr, optional anderer Ort",
               "url": "/solar-return-chart-calculator",
