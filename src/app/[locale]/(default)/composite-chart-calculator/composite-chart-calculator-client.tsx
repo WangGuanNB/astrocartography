@@ -207,8 +207,8 @@ export default function CompositeChartCalculatorClient({ tool }: { tool: ToolLab
                   </label>
                   <LocationAutocomplete
                     value={aLoc}
-                    onChange={setALoc}
-                    onLocationSelect={setACoords}
+                    onChange={(v) => { setALoc(v); if (!v) setACoords(null); }}
+                    onSelect={(r) => setACoords(r.coordinates)}
                     placeholder="City, Country"
                   />
                 </div>
@@ -262,8 +262,8 @@ export default function CompositeChartCalculatorClient({ tool }: { tool: ToolLab
                   </label>
                   <LocationAutocomplete
                     value={bLoc}
-                    onChange={setBLoc}
-                    onLocationSelect={setBCoords}
+                    onChange={(v) => { setBLoc(v); if (!v) setBCoords(null); }}
+                    onSelect={(r) => setBCoords(r.coordinates)}
                     placeholder="City, Country"
                   />
                 </div>
