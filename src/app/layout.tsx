@@ -21,7 +21,6 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="yandex-verification" content="a6467e0d534ab12d" />
         {googleAdsenseCode && (
           <>
             <meta name="google-adsense-account" content={googleAdsenseCode} />
