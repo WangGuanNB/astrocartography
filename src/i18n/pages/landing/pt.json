@@ -145,7 +145,7 @@
         "icon": "RiMapPinLine"
       }
     ],
-      "show_happy_users": false,
+    "show_happy_users": false,
     "show_badge": false
   },
   "branding": {
@@ -190,35 +190,35 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "O que é a Calculadora de Astrocartografia",
-    "label": "Introdução",
-    "description": "A calculadora de astrocartografia projeta seu mapa natal globalmente, mostrando onde os planetas estavam angulares no momento do seu nascimento.",
+    "title": "O que É a Astrocartografia — e Como Funciona?",
+    "label": "Astrocartografia Explicada",
+    "description": "A astrocartografia é um ramo da astrologia locacional que projeta sua carta natal no globo terrestre, revelando como a energia de cada planeta muda dependendo de onde você vive ou viaja. Desenvolvida pelo astrólogo americano Jim Lewis nos anos 70, tornou-se o sistema mais utilizado para entender como a geografia molda sua vida — da carreira e criatividade ao amor e crescimento pessoal.",
     "image": {
       "src": "/imgs/features/hero-web.webp"
     },
     "items": [
       {
-        "title": "Cálculos Planetários de Nível Profissional",
-          "description": "A calculadora de astrocartografia utiliza Swiss Ephemeris, o padrão astronômico usado por astrólogos profissionais. Calculamos onde cada planeta (Sol, Lua, Vênus, Marte, Júpiter, Saturno) estava angular—ascendendo (ASC), pondo-se (DSC), culminando (MC), ou no nadir (IC)—no seu momento exato de nascimento em toda a superfície terrestre. Cada linha de astrocartografia é precisa até 1 milha, garantindo que seu mapa de astrocartografia corresponda aos cálculos de astrólogos profissionais. Quando você está em uma linha planetária, a energia desse planeta domina sua experiência ali.",
+        "title": "Como as Linhas de Astrocartografia São Calculadas",
+        "description": "No momento exato do seu nascimento, cada planeta ocupava uma posição angular específica no céu. A astrocartografia calcula quatro linhas por planeta — onde esse planeta estava nascendo no horizonte (linha ASC/Ascendente), se pondo abaixo do horizonte (linha DSC/Descendente), diretamente acima no meio do céu (linha MC), ou em seu ponto mais baixo sob seus pés (linha IC). Essas quatro linhas por planeta criam até 40 linhas de energia pessoal cruzando o globo. Quando você vive ou viaja perto de qualquer uma dessas linhas, a influência desse planeta se intensifica — moldando seus relacionamentos, visibilidade na carreira, produção criativa e senso de pertencimento naquela localização específica.",
         "image": {
           "src": "/imgs/features/1.webp",
-          "alt": "Cálculos de astrocartografia de nível profissional"
+          "alt": "Como as linhas astrocartográficas são calculadas — ASC, DSC, MC, IC explicados"
         }
       },
       {
-        "title": "Interpretação de Localização com IA",
-        "description": "Nosso sistema analisa como seu mapa natal interage com localizações em todo o mundo. A IA explica o que cada linha de astrocartografia significa: linhas de Vênus ativam amor e criatividade, linhas de Júpiter trazem oportunidades e expansão, linhas de Saturno fortalecem disciplina profissional. Não apenas mostramos onde estão as linhas—explicamos como ler os mapas de astrocartografia e o que cada localização significa para sua carreira, relacionamentos, saúde e criatividade, tornando a astrocartografia para realocação prática e acessível.",
+        "title": "O que Cada Linha Planetária Significa no Seu Mapa Astrocartográfico",
+        "description": "Cada planeta carrega uma energia distinta no seu mapa astrocartográfico. As linhas do Sol amplificam a autoexpressão e o reconhecimento — ideais para visibilidade e papéis de liderança. As linhas de Vênus atraem amor, beleza e fluxo financeiro — amplamente favorecidas para romance e trabalho criativo. As linhas de Júpiter expandem oportunidade e abundância — as mais amplamente recomendadas para realocação. As linhas de Saturno constroem estrutura e disciplina — intensas mas profundamente recompensadoras para objetivos de carreira de longo prazo. As linhas de Marte alimentam determinação e ambição. As linhas de Mercúrio melhoram comunicação e intelecto. As linhas da Lua aprofundam laços emocionais e uma sensação de lar. Os locais mais poderosos são os \"pontos de poder\" — onde duas ou mais linhas planetárias se intersectam, combinando suas energias em um único lugar.",
         "image": {
           "src": "/imgs/features/2.webp",
-          "alt": "Interpretação de astrocartografia com IA"
+          "alt": "Significado das linhas planetárias astrocartográficas — Sol, Vênus, Júpiter, Saturno, Lua"
         }
       },
       {
-        "title": "Exportação Instantânea em Múltiplos Formatos",
-        "description": "Gere seu mapa de astrocartografia em 3 segundos, depois baixe arquivos PNG de alta resolução, PDF ou SVG. Os mapas marcam claramente todas as linhas planetárias, pontos de poder (interseções de linhas) e nomes de cidades. Combinado com relatórios de interpretação com IA, seu mapa de astrocartografia está pronto para planejamento pessoal, consultas profissionais ou decisões de realocação em equipe. Todos os arquivos estão livres de marcas d'água com direitos comerciais completos.",
+        "title": "Usando a Astrocartografia para Realocação, Viagens e Planejamento de Vida",
+        "description": "A astrocartografia oferece um guia personalizado, planeta por planeta, para decisões de localização. Profissionais em busca de crescimento na carreira procuram linhas MC de Júpiter ou Sol MC — regiões onde visibilidade e expansão são amplificadas. Aqueles que priorizam relacionamentos exploram linhas DSC de Vênus, onde a energia de parceria atinge o pico. Profissionais criativos preferem linhas ASC de Netuno para inspiração e fluxo. Até viagens curtas podem ser planejadas intencionalmente: visite sua linha de Júpiter para uma reunião de negócios de alto risco, ou sua linha IC da Lua para restauração emocional e cura. Nossa calculadora de astrocartografia gratuita gera seu mapa pessoal completo instantaneamente usando Swiss Ephemeris — o mesmo sistema de cálculo profissional em que astrólogos do mundo inteiro confiam.",
         "image": {
           "src": "/imgs/features/3.webp",
-          "alt": "Exporte mapas de astrocartografia instantaneamente"
+          "alt": "Astrocartografia para realocação e planejamento de viagens"
         }
       }
     ]
@@ -231,7 +231,7 @@
     "items": [
       {
         "title": "Precisão Profissional, Completamente Grátis",
-          "description": "Análise profissional de astrocartografia com acesso ilimitado gratuito. Usamos a mesma biblioteca Swiss Ephemeris na qual o software profissional de astrologia confia, com precisão de 1 milha usando cálculos Swiss Ephemeris. Gere mapas de astrocartografia ilimitados, baixe arquivos livres de marcas d'água e acesse interpretações com IA—sem cartão de crédito, sem taxas ocultas. Seja você estudante, empreendedor ou aposentado, acesse análise profissional de astrocartografia sem custo.",
+        "description": "Análise profissional de astrocartografia com acesso ilimitado gratuito. Usamos a mesma biblioteca Swiss Ephemeris na qual o software profissional de astrologia confia, com precisão de 1 milha usando cálculos Swiss Ephemeris. Gere mapas de astrocartografia ilimitados, baixe arquivos livres de marcas d'água e acesse interpretações com IA—sem cartão de crédito, sem taxas ocultas. Seja você estudante, empreendedor ou aposentado, acesse análise profissional de astrocartografia sem custo.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -297,7 +297,7 @@
       },
       {
         "title": "Motor de Cálculo Swiss Ephemeris",
-          "description": "Usamos Swiss Ephemeris, suportando cálculos planetários de 3000 a.C. a 3000 d.C. Mantida pelo Observatório de Zurique, esta biblioteca usa os mesmos padrões de precisão nos quais o software profissional de astrologia em todo o mundo confia. Quer esteja analisando figuras históricas ou planejando realocações futuras, a precisão do seu mapa de astrocartografia corresponde a software profissional de astrologia.",
+        "description": "Usamos Swiss Ephemeris, suportando cálculos planetários de 3000 a.C. a 3000 d.C. Mantida pelo Observatório de Zurique, esta biblioteca usa os mesmos padrões de precisão nos quais o software profissional de astrologia em todo o mundo confia. Quer esteja analisando figuras históricas ou planejando realocações futuras, a precisão do seu mapa de astrocartografia corresponde a software profissional de astrologia.",
         "icon": "RiCompassLine"
       },
       {
@@ -329,6 +329,26 @@
     "description": "Respostas reais para perguntas que nossos usuários realmente fazem.",
     "items": [
       {
+        "title": "O que é astrocartografia?",
+        "description": "A astrocartografia é uma técnica de astrologia locacional que projeta sua carta natal em um mapa do mundo para revelar como as energias planetárias variam por localização. Desenvolvida pelo astrólogo Jim Lewis nos anos 70, ela traça linhas planetárias — lugares na Terra onde cada planeta estava nascendo (ASC), se pondo (DSC), no meio do céu (MC) ou em seu ponto mais baixo (IC) no momento exato do seu nascimento. Viver ou viajar perto dessas linhas amplifica a influência desse planeta na sua vida cotidiana, moldando suas experiências em amor, carreira, criatividade e crescimento pessoal."
+      },
+      {
+        "title": "O que significa cada linha planetária na astrocartografia?",
+        "description": "Cada linha carrega a energia central do seu planeta: linhas do Sol melhoram visibilidade e reconhecimento, linhas da Lua aprofundam conforto emocional e sensação de lar, linhas de Vênus atraem amor e beleza, linhas de Marte amplificam determinação e paixão, linhas de Júpiter trazem sorte e expansão, linhas de Saturno constroem disciplina e lições kármicas, linhas de Urano desencadeiam liberdade e mudança, linhas de Netuno intensificam intuição e criatividade, linhas de Plutão desencadeiam transformação profunda. Cada planeta também tem quatro tipos de linhas — ASC (nascente), DSC (poente), MC (acima), IC (abaixo) — expressando sua energia em diferentes áreas da vida."
+      },
+      {
+        "title": "Qual é a melhor linha de astrocartografia para viver?",
+        "description": "Não existe uma única linha 'melhor' universal — a linha ideal depende dos seus objetivos de vida atuais. As linhas de Júpiter (especialmente Júpiter MC) são amplamente recomendadas como as mais positivas em geral para abundância e oportunidade. As linhas DSC de Vênus ou IC da Lua se adaptam a quem prioriza amor e segurança emocional em casa. As linhas MC do Sol beneficiam quem busca reconhecimento na carreira e visibilidade pública. Use nossa calculadora de astrocartografia gratuita para gerar seu mapa pessoal e ver quais linhas passam pelas localizações que você está considerando."
+      },
+      {
+        "title": "Como a astrocartografia é diferente de uma carta natal?",
+        "description": "Sua carta natal é fixada ao seu local de nascimento e mostra as posições planetárias naquela única localização. A astrocartografia pega os mesmos dados de nascimento e os projeta por todo o globo, mostrando como essas mesmas energias planetárias se expressariam se você vivesse em qualquer lugar da Terra. Pense nisso como uma 'carta natal para cada lugar da Terra' — os planetas são os mesmos, mas suas posições angulares e influência mudam drasticamente dependendo de onde você está. A astrocartografia adiciona uma dimensão geográfica à astrologia natal tradicional."
+      },
+      {
+        "title": "Quem inventou a astrocartografia?",
+        "description": "A astrocartografia foi desenvolvida e popularizada pelo astrólogo americano Jim Lewis (1941–1995) nos anos 70. Ele cunhou o termo 'Astro*Carto*Graphy', criou o software para projetar cartas natais em mapas do mundo e sistematizou a prática de ler linhas planetárias baseadas em localização. Jim Lewis criou o framework moderno que é usado por astrólogos em todo o mundo hoje."
+      },
+      {
         "title": "E se eu não souber minha hora exata de nascimento?",
         "description": "Você ainda pode usar a Calculadora de Astrocartografia! Sem a hora exata, não podemos mostrar suas linhas ASC/DSC/MC/IC, mas você ainda verá linhas planetárias (Sol, Lua, Vênus, etc.) que revelam muito sobre a compatibilidade da localização. Para melhores resultados, verifique sua certidão de nascimento ou entre em contato com o hospital onde você nasceu."
       },
@@ -338,7 +358,7 @@
       },
       {
         "title": "Quão precisos são os cálculos?",
-          "description": "Usamos cálculos Swiss Ephemeris com precisão profissional, precisos até 1 milha na superfície terrestre. Nossos cálculos levam em conta fusos horários, horário de verão e mudanças históricas de calendário. Esta é a mesma precisão na qual astrólogos profissionais confiam para consultas."
+        "description": "Usamos cálculos Swiss Ephemeris com precisão profissional, precisos até 1 milha na superfície terrestre. Nossos cálculos levam em conta fusos horários, horário de verão e mudanças históricas de calendário. Esta é a mesma precisão na qual astrólogos profissionais confiam para consultas."
       },
       {
         "title": "Devo me mudar baseado apenas no meu mapa de astrocartografia?",

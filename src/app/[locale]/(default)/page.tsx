@@ -131,8 +131,27 @@ export default async function LandingPage({
   const { locale } = await params;
   const page = await getLandingPage(locale);
 
+  const faqSchema = page.faq?.items?.length ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": page.faq.items.map((item: any) => ({
+      "@type": "Question",
+      "name": item.title,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.description
+      }
+    }))
+  } : null;
+
   return (
     <>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       {/* Hero Section：一句主标题 + 一句副标题 + 一段简短价值描述 + CTA按钮文字-----------*/}
       {page.hero && <Hero hero={page.hero}/> }
       {/* 图片类的网站 */}

@@ -190,35 +190,35 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "What is Astrocartography Calculator",
-    "label": "Introduction",
-    "description": "Astrocartography Calculator projects your birth chart globally, showing where planets were angular at your birth moment.",
+    "title": "What Is Astrocartography — And How Does It Work?",
+    "label": "Astrocartography Explained",
+    "description": "Astrocartography is a branch of locational astrology that projects your natal birth chart onto the world globe, revealing how each planet's energy shifts depending on where on Earth you live or travel. Developed by American astrologer Jim Lewis in the 1970s, it has become the most widely used system for understanding how geography shapes your life — from career and creativity to love and personal growth.",
     "image": {
       "src": "/imgs/features/hero-web.webp"
     },
     "items": [
       {
-        "title": "Professional-Grade Planetary Calculations",
-        "description": "Astrocartography Calculator uses Swiss Ephemeris, the astronomical standard used by professional astrologers. We calculate where each planet (Sun, Moon, Venus, Mars, Jupiter, Saturn) was angular—rising (ASC), setting (DSC), culminating (MC), or at nadir (IC)—at your exact birth moment across Earth's surface. Each astrocartography line is accurate to within 1 mile, ensuring your astrocartography chart matches professional astrologer calculations. When you stand on a planetary line, that planet's energy dominates your experience there.",
+        "title": "How Astrocartography Lines Are Calculated",
+        "description": "At your exact birth moment, each planet occupied a specific angular position in the sky. Astrocartography calculates four lines per planet — where that planet was rising on the horizon (Ascendant/ASC line), setting below the horizon (Descendant/DSC line), directly overhead at midheaven (MC line), or at its lowest point underfoot (IC line). These four lines per planet create up to 40 personal energy lines crossing the globe. When you live or travel near any of these lines, that planet's influence intensifies — shaping your relationships, career visibility, creative output, and sense of belonging in that specific location.",
         "image": {
           "src": "/imgs/features/1.webp",
-          "alt": "Professional-grade astrocartography calculations"
+          "alt": "How astrocartography lines are calculated — ASC, DSC, MC, IC explained"
         }
       },
       {
-        "title": "AI-Powered Location Interpretation",
-        "description": "Our system analyzes how your birth chart interacts with locations worldwide. The AI explains what each astrocartography line means: Venus lines activate love and creativity, Jupiter lines bring opportunities and expansion, Saturn lines strengthen career discipline. We don't just show where lines are—we explain how to read astrocartography maps and what each location means for your career, relationships, health, and creativity, making astrocartography for relocation practical and accessible.",
+        "title": "What Each Planet Line Means in Your Astrocartography Map",
+        "description": "Each planet carries a distinct energy across your astrocartography map. Sun lines boost self-expression and recognition — ideal for visibility and leadership roles. Venus lines attract love, beauty, and financial flow — widely favored for romance and creative work. Jupiter lines expand opportunity and abundance — the most broadly recommended for relocation. Saturn lines build structure and discipline — intense but deeply rewarding for long-term career goals. Mars lines fuel drive and ambition. Mercury lines enhance communication and intellect. Moon lines deepen emotional bonds and a feeling of home. The most powerful locations are 'power spots' — where two or more planetary lines intersect, combining their energies in one place.",
         "image": {
           "src": "/imgs/features/2.webp",
-          "alt": "AI-powered astrocartography interpretation"
+          "alt": "Astrocartography planetary line meanings — Sun, Venus, Jupiter, Saturn, Moon lines"
         }
       },
       {
-        "title": "Instant Multi-Format Export",
-        "description": "Generate your astrocartography map in 3 seconds, then download high-resolution PNG, PDF, or SVG files. Maps clearly mark all planetary lines, power spots (line intersections), and city names. Paired with AI interpretation reports, your astrocartography chart is ready for personal planning, professional consultations, or team relocation decisions. All files are watermark-free with full commercial rights.",
+        "title": "Using Astrocartography for Relocation, Travel, and Life Planning",
+        "description": "Astrocartography gives you a personalized, planet-by-planet guide for location decisions. Professionals seeking career growth look for Jupiter MC or Sun MC lines — regions where visibility and expansion are amplified. Those prioritizing relationships explore Venus DSC lines, where partnership energy peaks. Creative professionals favor Neptune ASC lines for inspiration and flow. Even short trips can be intentionally planned: visit your Jupiter line for a high-stakes business meeting, or your Moon IC line for emotional restoration and healing. Our free astrocartography calculator generates your complete personal map instantly using Swiss Ephemeris — the same professional-grade calculation system that astrologers worldwide rely on.",
         "image": {
           "src": "/imgs/features/3.webp",
-          "alt": "Export astrocartography charts instantly"
+          "alt": "Astrocartography for relocation and travel planning"
         }
       }
     ]
@@ -328,6 +328,26 @@
     "title": "Astrocartography Calculator FAQ - Common Questions Answered",
     "description": "Real answers to questions our users actually ask.",
     "items": [
+      {
+        "title": "What is astrocartography?",
+        "description": "Astrocartography is a locational astrology technique that projects your birth chart onto a world map to reveal how planetary energies vary by location. Developed by astrologer Jim Lewis in the 1970s, it draws planetary lines — places on Earth where each planet was rising (ASC), setting (DSC), at midheaven (MC), or at its lowest point (IC) at your exact birth moment. Living or traveling near these lines amplifies that planet's influence in your daily life, shaping your experiences in love, career, creativity, and personal growth."
+      },
+      {
+        "title": "What does each planet line mean in astrocartography?",
+        "description": "Each line carries its planet's core energy: Sun lines enhance visibility and recognition, Moon lines deepen emotional comfort and home feelings, Venus lines attract love and beauty, Mars lines amplify drive and passion, Jupiter lines bring luck and expansion, Saturn lines build discipline and karmic lessons, Uranus lines spark freedom and change, Neptune lines heighten intuition and creativity, Pluto lines trigger deep transformation. Each planet also has four line types — ASC (rising), DSC (setting), MC (overhead), IC (underfoot) — expressing its energy in different life areas: identity, relationships, career, and inner world."
+      },
+      {
+        "title": "What is the best astrocartography line to live on?",
+        "description": "There is no single universally 'best' line — the ideal line depends on your current life goals. Jupiter lines (especially Jupiter MC) are widely recommended as the most broadly positive for abundance and opportunity. Venus DSC or Moon IC lines suit those prioritizing love and emotional security at home. Sun MC lines benefit those seeking career recognition and public visibility. Even challenging lines like Saturn or Pluto can be powerful for intentional growth. Use our free astrocartography calculator to generate your personal map and see which lines pass through locations you're considering."
+      },
+      {
+        "title": "How is astrocartography different from a birth chart?",
+        "description": "Your birth chart is fixed to your place of birth and shows your planetary positions at that single location. Astrocartography takes the same birth data and projects it across the entire globe, showing how those same planetary energies would express if you lived anywhere on Earth. Think of it as a 'birth chart for every place on Earth' — the planets are the same, but their angular positions and influence shift dramatically depending on where you are. Astrocartography adds a geographical dimension to traditional natal astrology."
+      },
+      {
+        "title": "Who invented astrocartography?",
+        "description": "Astrocartography was developed and popularized by American astrologer Jim Lewis (1941–1995) in the 1970s. He coined the term 'Astro*Carto*Graphy', created the software to project birth charts onto world maps, and systematized the practice of reading location-based planetary lines. While earlier astrologers had explored related concepts in locational astrology, Jim Lewis created the modern framework that is used by astrologers worldwide today."
+      },
       {
         "title": "What if I don't know my exact birth time?",
         "description": "You can still use Astrocartography Calculator! Without exact time, we can't show your ASC/DSC/MC/IC lines, but you'll still see planetary lines (Sun, Moon, Venus, etc.) which reveal plenty about location compatibility. For best results, check your birth certificate or contact the hospital where you were born."
