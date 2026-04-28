@@ -630,9 +630,9 @@
         "url": "https://fazier.com/launches/astrocarto.org",
         "target": "_blank",
         "image": {
-          "src": "https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light",
+          "src": "https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light",
           "alt": "Fazier badge",
-          "width": 120
+          "width": 250
         }
       },
       {
