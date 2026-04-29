@@ -53,3 +53,10 @@ CONFIG.md
 SOCIAL_CONFIG.env
 *.env.local
 *.env.example
+# 本地 SQLite 数据库
+local.db
+local.db-shm
+local.db-wal
+
+# 数据迁移生成的 SQL 批次文件（含生产数据，不入库）
+scripts/d1-import/

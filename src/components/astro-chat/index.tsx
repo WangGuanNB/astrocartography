@@ -1286,11 +1286,52 @@ export default function AstroChat({
             open={showPricingModal}
             onOpenChange={setShowPricingModal}
             pricing={pricingData}
+            preferredProductId={pricingPreferredProductId}
             onSuccess={() => {
               fetchUserCredits();
             }}
           />
         )}
+
+        {/* History 升级提示弹窗 - 桌面端 */}
+        <Dialog
+          open={showHistoryUpgradeDialog}
+          onOpenChange={setShowHistoryUpgradeDialog}
+        >
+          <DialogContent className="max-w-lg w-[calc(100%-2rem)] mx-4 bg-gradient-to-br from-purple-900/20 via-gray-900/95 to-gray-900/95 border border-white/10 backdrop-blur-xl p-4 sm:p-6">
+            <DialogHeader>
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-white">
+                {tHistory('title')}
+              </DialogTitle>
+              <DialogDescription className="text-sm sm:text-base text-gray-300 mt-2 sm:mt-3 leading-relaxed">
+                {tHistory('pro_required')}
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-end mt-6 sm:mt-8">
+              <Button
+                variant="outline"
+                onClick={() => setShowHistoryUpgradeDialog(false)}
+                className="border-white/20 text-white hover:bg-white/10 px-6 py-2.5 w-full sm:w-auto"
+              >
+                {tHistory('close')}
+              </Button>
+              <Button
+                onClick={async () => {
+                  setShowHistoryUpgradeDialog(false);
+                  if (!pricingData) {
+                    await fetchPricingData();
+                  }
+                  setPricingPreferredProductId('professional');
+                  setShowPricingModal(true);
+                  paymentEvents.pricingModalOpened('other');
+                }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2.5 w-full sm:w-auto"
+              >
+                {tHistory('view_plans')}
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
 
         {/* 积分不足提示框 - 桌面端和移动端都使用 Dialog，居中显示 */}
         <Dialog open={showInsufficientCreditsDialog} onOpenChange={setShowInsufficientCreditsDialog}>
