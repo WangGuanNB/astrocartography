@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Astro Zodiac Widget — Free WordPress Zodiac Plugin | AstroCarto</title>
+  <meta name="description" content="A free WordPress plugin that reveals your zodiac sign, personality traits, and daily horoscope from your birthday. Add [astro_zodiac] to any page instantly." />
+  <link rel="canonical" href="https://astrocarto.org/wp-astro-zodiac-widget.html" />
+  <meta property="og:title" content="Astro Zodiac Widget — Free WordPress Zodiac Plugin | AstroCarto" />
+  <meta property="og:description" content="A free WordPress plugin that reveals your zodiac sign, personality traits, and daily horoscope from your birthday. Add [astro_zodiac] to any page instantly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://astrocarto.org/wp-astro-zodiac-widget.html" />
+  <meta property="og:image" content="https://astrocarto.org/logo.png" />
+  <meta name="theme-color" content="#0c1022" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #070a12;
+      --bg-card: rgba(22, 28, 48, 0.72);
+      --bg-card-solid: #12182c;
+      --text: #e8ecff;
+      --muted: #9aa3c4;
+      --accent: #b794f6;
+      --accent-soft: rgba(183, 148, 246, 0.15);
+      --gold: #f6d365;
+      --border: rgba(148, 163, 184, 0.18);
+      --glow: 0 0 80px rgba(139, 92, 246, 0.12);
+      --radius: 14px;
+      --radius-lg: 22px;
+      --max: 1080px;
+      --font-sans: "DM Sans", system-ui, sans-serif;
+      --font-display: "Fraunces", Georgia, serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg-deep);
+      min-height: 100vh;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(99, 102, 241, 0.22), transparent 55%),
+        radial-gradient(ellipse 80% 50% at 100% 30%, rgba(139, 92, 246, 0.12), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 0% 80%, rgba(56, 189, 248, 0.08), transparent 45%),
+        var(--bg-deep);
+    }
+    .stars::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.45;
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 60% 70%, rgba(255,255,255,0.35), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.25), transparent),
+        radial-gradient(1.5px 1.5px at 80% 10%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(1px 1px at 90% 60%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 33% 90%, rgba(255,255,255,0.35), transparent),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.2), transparent);
+      background-size: 100% 100%;
+    }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { color: #d4bcff; }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem 4rem;
+    }
+
+    header.site {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .brand span { color: var(--muted); font-weight: 500; }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      padding: 2.5rem 0 3.5rem;
+      text-align: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(183, 148, 246, 0.35);
+      color: #ddd6fe;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 2.85rem);
+      line-height: 1.15;
+      margin: 1.25rem 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .hero-lead {
+      max-width: 36rem;
+      margin: 0 auto 2rem;
+      color: var(--muted);
+      font-size: 1.125rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .btn:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #8b5cf6, #6366f1);
+      color: #fff;
+      box-shadow: var(--glow), 0 4px 24px rgba(99, 102, 241, 0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 100px rgba(139, 92, 246, 0.2), 0 8px 28px rgba(99, 102, 241, 0.45);
+      color: #fff;
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--text);
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+    .section-head {
+      margin-bottom: 1.5rem;
+    }
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 1.85rem);
+      font-weight: 600;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 42rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 768px) {
+      .demo-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .demo-mock {
+      background: var(--bg-card-solid);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+    }
+    .demo-mock h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      color: var(--gold);
+      font-family: var(--font-display);
+    }
+    .mock-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
+    }
+    .tag {
+      font-size: 0.8125rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 8px;
+      background: rgba(99, 102, 241, 0.2);
+      color: #c4b5fd;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+    .mock-zodiac {
+      font-size: 2.5rem;
+      line-height: 1;
+      margin: 0.5rem 0;
+    }
+    .mock-copy {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .steps {
+      display: grid;
+      gap: 1rem;
+      counter-reset: step;
+    }
+    @media (min-width: 640px) {
+      .steps { grid-template-columns: repeat(3, 1fr); }
+    }
+    .step {
+      position: relative;
+      padding: 1.25rem 1.25rem 1.25rem 3.25rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(18, 24, 44, 0.65);
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 1rem;
+      top: 1.15rem;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #6366f1);
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .step p {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--muted);
+    }
+
+    .code-block {
+      font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
+      font-size: 0.9rem;
+      background: #0a0d18;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      overflow-x: auto;
+      color: #e2e8f0;
+      margin: 0.75rem 0 0;
+    }
+    .code-label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 1.25rem;
+    }
+    .code-label:first-child { margin-top: 0; }
+
+    .faq-list { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); }
+    details.faq-item {
+      border-bottom: 1px solid var(--border);
+      background: rgba(18, 24, 44, 0.5);
+    }
+    details.faq-item:last-child { border-bottom: none; }
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.1rem 1.25rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: "+";
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+    details.faq-item[open] summary::after { content: "−"; }
+    details.faq-item summary:hover { background: rgba(255,255,255,0.03); }
+    .faq-body {
+      padding: 0 1.25rem 1.15rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .cta-band {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(183, 148, 246, 0.35);
+      background: linear-gradient(160deg, rgba(99, 102, 241, 0.18), rgba(18, 24, 44, 0.9));
+      box-shadow: var(--glow);
+    }
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      margin: 0 0 0.75rem;
+    }
+    .cta-band p {
+      margin: 0 auto 1.5rem;
+      max-width: 32rem;
+      color: var(--muted);
+    }
+
+    footer.site-footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer.site-footer a { color: var(--muted); }
+    footer.site-footer a:hover { color: var(--text); }
+
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Astro Zodiac Widget",
+    "applicationCategory": "WebApplication",
+    "operatingSystem": "WordPress",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Free WordPress shortcode plugin: visitors enter a birthday to see Western zodiac sign, traits, and a daily horoscope snippet.",
+    "url": "https://wordpress.org/plugins/astro-zodiac-widget/",
+    "author": { "@type": "Organization", "name": "AstroCarto", "url": "https://astrocarto.org" }
+  }
+  </script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="https://astrocarto.org/">AstroCarto <span>Plugin</span></a>
+      <nav class="nav-links" aria-label="On-page">
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="#shortcode">Shortcode</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <span class="badge">WordPress · Shortcode · Free</span>
+        <h1 id="hero-title">Astro Zodiac Widget</h1>
+        <p class="hero-lead">
+          Let visitors discover their <strong>zodiac sign</strong>, elemental vibe, ruling planet, personality tags, and a short <strong>horoscope</strong>—right inside any post or page. The <strong>Astro Zodiac Widget</strong> is free, runs in the browser, and needs no account.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#faq">Plugin Under Review — Coming Soon ✨</a>
+          <a class="btn btn-ghost" href="https://astrocarto.org/">Explore AstroCarto</a>
+        </div>
+      </section>
+
+      <section id="features" aria-labelledby="features-title">
+        <div class="section-head">
+          <h2 id="features-title">What visitors see after entering a birthday</h2>
+          <p>
+            The widget is designed for clarity and delight: a compact card-style readout that feels at home on blogs, landing pages, and member areas—without sending personal data to your server.
+          </p>
+        </div>
+        <div class="demo-grid">
+          <div class="card demo-mock">
+            <h3>Sign &amp; symbolism</h3>
+            <div class="mock-zodiac" aria-hidden="true">♌</div>
+            <p class="mock-copy">Example: <strong>Leo</strong> — Sun-ruled fire sign. Great for hero sections where you want a playful, cosmic touch.</p>
+            <div class="mock-row" aria-label="Example traits">
+              <span class="tag">Fire</span>
+              <span class="tag">Sun</span>
+              <span class="tag">Fixed</span>
+            </div>
+          </div>
+          <div class="card demo-mock">
+            <h3>Traits &amp; daily line</h3>
+            <p class="mock-copy">Short personality labels help readers connect at a glance. A brief <strong>horoscope</strong>-style line keeps the experience fresh for return visits.</p>
+            <div class="mock-row">
+              <span class="tag">Creative</span>
+              <span class="tag">Warm</span>
+              <span class="tag">Expressive</span>
+            </div>
+            <p class="mock-copy" style="margin-top:0.75rem;font-style:italic;color:#a5b4fc;">“A spotlight moment—share your idea while the room is listening.”</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="install" aria-labelledby="install-title">
+        <div class="section-head">
+          <h2 id="install-title">Install in three steps</h2>
+          <p>No API keys and no tracking: install the plugin, activate it, then drop the shortcode wherever you want the experience to appear.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3>Install the plugin</h3>
+            <p>In wp-admin, go to <strong>Plugins → Add New</strong>, search for <em>Astro Zodiac Widget</em>, then click <strong>Install Now</strong>.</p>
+          </article>
+          <article class="step">
+            <h3>Activate</h3>
+            <p>Click <strong>Activate</strong>. The plugin adds the shortcode handler—no extra setup screens required.</p>
+          </article>
+          <article class="step">
+            <h3>Paste the shortcode</h3>
+            <p>Edit any page or post (Block or Classic editor) and add <code>[astro_zodiac]</code>. Publish and you are done.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="shortcode" aria-labelledby="shortcode-title">
+        <div class="section-head">
+          <h2 id="shortcode-title">Shortcode examples</h2>
+          <p>Use the default block title or customize it for your layout. Both work in Gutenberg shortcode blocks and the Classic editor.</p>
+        </div>
+        <div class="card">
+          <p class="code-label">Default</p>
+          <pre class="code-block" tabindex="0"><code>[astro_zodiac]</code></pre>
+          <p class="code-label">Custom heading</p>
+          <pre class="code-block" tabindex="0"><code>[astro_zodiac title="What's Your Sign?"]</code></pre>
+        </div>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <div class="section-head">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <p>Quick answers for site owners, editors, and anyone reviewing the plugin listing.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does the Astro Zodiac Widget collect or store visitor birthdays?</summary>
+            <div class="faq-body">No. The experience is designed to run client-side for privacy: visitors can enjoy a <strong>zodiac sign</strong> readout without accounts, and you do not need to store their birth dates in WordPress.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Will it slow down my site?</summary>
+            <div class="faq-body">The footprint is small and front-end oriented. As with any shortcode, avoid placing dozens of instances on a single page unless you need to—one widget per article is the typical pattern.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Does it work with the block editor and Classic?</summary>
+            <div class="faq-body">Yes. Add a Shortcode block in Gutenberg, or paste directly in Classic. The same <code>[astro_zodiac]</code> syntax applies everywhere.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is this related to astrocartography maps?</summary>
+            <div class="faq-body">This plugin focuses on quick Western zodiac and <strong>horoscope</strong>-style copy from a birthday. For full relocation charts and line maps, visit <a href="https://astrocarto.org/">astrocarto.org</a>—the same team behind this <strong>Astro Zodiac Widget</strong>, bridging casual star curiosity with deeper <strong>astrocartography</strong> tools.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is the WordPress.org download link live?</summary>
+            <div class="faq-body">The listing becomes available at <a href="https://wordpress.org/plugins/astro-zodiac-widget/">wordpress.org/plugins/astro-zodiac-widget/</a> once the plugin passes review. This page stays online so reviewers and early users always land on a real destination.</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-title">
+        <h2 id="cta-title">Ready for full astrocartography on the map?</h2>
+        <p>
+          When readers outgrow a single <strong>zodiac sign</strong> snapshot, send them to AstroCarto for interactive <strong>astrocartography</strong>: planetary lines, relocated insights, and tools built for serious sky-minded explorers.
+        </p>
+        <a class="btn btn-primary" href="https://astrocarto.org/">Visit astrocarto.org</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="https://astrocarto.org/">© 2025 AstroCarto</a> · <a href="https://astrocarto.org/">astrocarto.org</a></p>
+    </footer>
+  </div>
+</body>
+</html>

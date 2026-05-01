@@ -677,6 +677,17 @@
         }
       },
       {
+        "title": "Featured on Wired Business",
+        "url": "https://wired.business",
+        "target": "_blank",
+        "image": {
+          "src": "https://wired.business/badge0-white.svg",
+          "alt": "Featured on Wired Business",
+          "width": 200,
+          "height": 54
+        }
+      },
+      {
         "title": "MossAI Tools",
         "url": "https://mossai.org",
         "target": "_blank",
