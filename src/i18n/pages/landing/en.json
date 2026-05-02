@@ -695,6 +695,17 @@
           "src": "https://mossai.org/logo.svg",
           "alt": "MossAI Tools"
         }
+      },
+      {
+        "title": "AgentHunter — Featured AI Agent",
+        "url": "https://www.agenthunter.io?utm_source=badge&utm_medium=embed&utm_campaign=astrocarto.org",
+        "target": "_blank",
+        "image": {
+          "src": "https://www.agenthunter.io/logo-light.svg",
+          "alt": "AgentHunter — Featured AI Agent",
+          "width": 40,
+          "height": 40
+        }
       }
     ],
     "agreement": {
