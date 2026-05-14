@@ -381,6 +381,49 @@
       }
     ]
   },
+    "label": "Erfahrungsberichte",
+    "title": "Echte Nutzer teilen ihre Astrokartografie-Erfahrungen",
+    "description": "Nutzer berichten, wie der Astrokartografie Rechner ihre Umzugsentscheidungen unterstützt hat.",
+    "icon": "RiThumbUpLine",
+    "items": [
+      {
+        "title": "Sophia Chen",
+        "label": "Digitaler Nomade",
+        "description": "Als digitale Nomadin habe ich den Astrokartografie Rechner für über 20 Kandidatenstädte genutzt. Ich wählte Lissabon, wo meine Venus-Linie verläuft – mein soziales Umfeld wuchs schnell, ich traf meinen jetzigen Partner. Astrokartografie ist keine Magie, half mir aber zu verstehen, warum manche Städte sich besser anfühlen.",
+        "image": { "src": "/imgs/users/1.png" }
+      },
+      {
+        "title": "Marcus Liu",
+        "label": "Astrologie-Berater",
+        "description": "Bei 60 % meiner Beratungen geht es um Umzug. Der Astrokartografie Rechner zeigt Kunden schnell ihre Planetenlinien und ergänzt Relocation-Charts. Ein Kunde gründete erfolgreich in einer Jupiter-Linien-Stadt und verwies 5 Freunde. Das Tool hat meinen Service professionalisiert.",
+        "image": { "src": "/imgs/users/2.png" }
+      },
+      {
+        "title": "Elena Rodriguez",
+        "label": "Astrologie-Studentin",
+        "description": "Nach zwei Jahren Astrokartografie und mehreren kostenpflichtigen Tools: Die Swiss-Ephemeris-Ergebnisse dieses Rechners entsprechen exakt meiner Solar-Fire-Software, mit freundlicherer Oberfläche und klaren Interpretationen. Sehr empfehlenswert für alle Astrologie-Lernenden.",
+        "image": { "src": "/imgs/users/3.png" }
+      },
+      {
+        "title": "James Park",
+        "label": "Unternehmer",
+        "description": "Bei der Planung einer Asien-Niederlassung nutzte ich den Astrokartografie Rechner für Singapur, Bangkok und Tokio. Ich wählte Bangkok, wo meine Sonnen- und Jupiter-Linien sich kreuzen – die Entwicklung übertraf die Erwartungen. Astrokartografie ist für mich ein Referenzfaktor; Geschäftsumfeld und Marktforschung zählen ebenso.",
+        "image": { "src": "/imgs/users/6.png" }
+      },
+      {
+        "title": "Amelia Wang",
+        "label": "Beraterin für psychische Gesundheit",
+        "description": "Ich integriere Astrokartografie-Karten in die Karriereplanung meiner Klienten. Viele spüren in manchen Städten ‚etwas stimmt nicht‘, können es aber nicht erklären – Astrokartografie liefert einen Deutungsrahmen. Der Datenschutz ist sehr gut; Klienten können Karten selbst erstellen und mitbringen.",
+        "image": { "src": "/imgs/users/4.png" }
+      },
+      {
+        "title": "David Kim",
+        "label": "Ruhestandsplaner",
+        "description": "Vor dem Ruhestand habe ich 10 Kandidatenorte recherchiert. Der Astrokartografie Rechner zeigte meine Mond-Linie durch die Südinsel Neuseelands. Nach Besuchen wählte ich Neuseeland und fühlte emotionale Ruhe und Zugehörigkeit. Ich habe aber auch Gesundheitswesen und Lebenshaltungskosten berücksichtigt. Astrokartografie-Karten sind ein ausgezeichneter Ausgangspunkt.",
+        "image": { "src": "/imgs/users/5.png" }
+      }
+    ]
+  },
   "cta": {
     "name": "cta",
     "title": "Jetzt Ihre kostenlose Astrokartografie-Karte erstellen",

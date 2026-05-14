@@ -436,61 +436,6 @@
       }
     ]
   },
-    "label": "Depoimentos",
-    "title": "Usuários Reais Compartilham Suas Experiências com Astrocartografia",
-    "description": "Os usuários compartilham como nossa calculadora de astrocartografia informou suas decisões de realocação.",
-    "icon": "RiThumbUpLine",
-    "items": [
-      {
-        "title": "Sophia Chen",
-        "label": "Nômade Digital",
-        "description": "Como nômade digital, usei a calculadora de astrocartografia para analisar mais de 20 cidades candidatas. Escolhi Lisboa onde minha linha de Vênus passa, e depois de chegar, meu círculo social se expandiu rapidamente—até conheci meu parceiro atual. A astrocartografia não é mágica, mas me ajudou a entender por que certas cidades se sentem mais confortáveis.",
-        "image": {
-          "src": "/imgs/users/1.png"
-        }
-      },
-      {
-        "title": "Marcus Liu",
-        "label": "Consultor de Astrologia",
-        "description": "60% das minhas consultas com clientes envolvem perguntas de realocação. A calculadora de astrocartografia me permite mostrar rapidamente aos clientes suas distribuições de linhas planetárias, combinada com análise de mapa de realocação. Um cliente teve sucesso iniciando um negócio em uma cidade de linha de Júpiter e indicou 5 amigos. Esta ferramenta elevou o profissionalismo do meu serviço.",
-        "image": {
-          "src": "/imgs/users/2.png"
-        }
-      },
-      {
-        "title": "Elena Rodriguez",
-        "label": "Estudante de Astrologia",
-        "description": "Depois de estudar astrocartografia por 2 anos e testar várias ferramentas pagas, os resultados do Swiss Ephemeris desta calculadora correspondem exatamente ao meu software Solar Fire, mas com uma interface mais amigável e interpretações mais claras. Altamente recomendado para todos os estudantes de astrologia.",
-        "image": {
-          "src": "/imgs/users/3.png"
-        }
-      },
-      {
-        "title": "James Park",
-        "label": "Empreendedor",
-        "description": "Ao planejar abrir uma filial na Ásia, usei a calculadora de astrocartografia para analisar Singapura, Bangkok e Tóquio. Escolhi Bangkok onde minhas linhas de Sol e Júpiter convergem, e o desenvolvimento superou as expectativas. Mas entendo: a astrocartografia é apenas um fator de referência—o ambiente de negócios e a pesquisa de mercado importam igualmente.",
-        "image": {
-          "src": "/imgs/users/6.png"
-        }
-      },
-      {
-        "title": "Amelia Wang",
-        "label": "Conselheira de Saúde Mental",
-        "description": "Integro mapas de astrocartografia em consultas de planejamento de carreira de clientes. Muitos clientes sentem que 'algo está errado' em certas cidades mas não conseguem explicar por quê—a astrocartografia fornece uma estrutura interpretativa. A proteção de privacidade é excelente; os clientes podem gerar mapas por si mesmos e trazê-los para discutir.",
-        "image": {
-          "src": "/imgs/users/4.png"
-        }
-      },
-      {
-        "title": "David Kim",
-        "label": "Planejador de Aposentadoria",
-        "description": "Antes da aposentadoria, pesquisei 10 localizações candidatas. A calculadora de astrocartografia mostrou minha linha de Lua passando pela Ilha Sul da Nova Zelândia. Depois de visitas ao local, escolhi a Nova Zelândia e realmente senti paz emocional e pertencimento. Mas também valorizei recursos de saúde e custo de vida. Os mapas de astrocartografia são pontos de partida excelentes.",
-        "image": {
-          "src": "/imgs/users/5.png"
-        }
-      }
-    ]
-  },
   "cta": {
     "name": "cta",
     "title": "Gere seu Mapa de Astrocartografia Grátis Agora",

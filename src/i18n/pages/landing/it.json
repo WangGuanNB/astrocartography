@@ -436,61 +436,6 @@
       }
     ]
   },
-    "label": "Testimonianze",
-    "title": "Utenti Reali Condividono le Loro Esperienze di Astrocartografia",
-    "description": "Gli utenti condividono come il nostro calcolatore astrocartografia ha informato le loro decisioni di trasferimento.",
-    "icon": "RiThumbUpLine",
-    "items": [
-      {
-        "title": "Sophia Chen",
-        "label": "Nomade Digitale",
-        "description": "Come nomade digitale, ho usato il calcolatore astrocartografia per analizzare oltre 20 città candidate. Ho scelto Lisbona dove passa la mia linea di Venere, e dopo l'arrivo, il mio cerchio sociale si è espanso rapidamente—ho persino incontrato il mio attuale partner. L'astrocartografia non è magia, ma mi ha aiutato a capire perché certe città si sentono più comode.",
-        "image": {
-          "src": "/imgs/users/1.png"
-        }
-      },
-      {
-        "title": "Marcus Liu",
-        "label": "Consulente di Astrologia",
-        "description": "Il 60% delle mie consultazioni con i clienti coinvolgono domande di trasferimento. Il calcolatore astrocartografia mi consente di mostrare rapidamente ai clienti le loro distribuzioni di linee planetarie, abbinato all'analisi della carta di trasferimento. Un cliente ha avuto successo iniziando un'attività in una città di linea di Giove e ha riferito 5 amici. Questo strumento ha elevato il professionismo del mio servizio.",
-        "image": {
-          "src": "/imgs/users/2.png"
-        }
-      },
-      {
-        "title": "Elena Rodriguez",
-        "label": "Studente di Astrologia",
-        "description": "Dopo aver studiato astrocartografia per 2 anni e testato diversi strumenti a pagamento, i risultati di Swiss Ephemeris di questo calcolatore corrispondono esattamente al mio software Solar Fire, ma con un'interfaccia più amichevole e interpretazioni più chiare. Altamente raccomandato per tutti gli studenti di astrologia.",
-        "image": {
-          "src": "/imgs/users/3.png"
-        }
-      },
-      {
-        "title": "James Park",
-        "label": "Imprenditore",
-        "description": "Quando pianificavo di aprire una filiale in Asia, ho usato il calcolatore astrocartografia per analizzare Singapore, Bangkok e Tokyo. Ho scelto Bangkok dove convergono le mie linee di Sole e Giove, e lo sviluppo ha superato le aspettative. Ma capisco: l'astrocartografia è solo un fattore di riferimento—l'ambiente aziendale e la ricerca di mercato contano ugualmente.",
-        "image": {
-          "src": "/imgs/users/6.png"
-        }
-      },
-      {
-        "title": "Amelia Wang",
-        "label": "Consulente di Salute Mentale",
-        "description": "Integro le mappe di astrocartografia nelle consultazioni di pianificazione della carriera dei clienti. Molti clienti sentono che 'qualcosa non va' in certe città ma non riescono a spiegare perché—l'astrocartografia fornisce un quadro interpretativo. La protezione della privacy è eccellente; i clienti possono generare mappe da soli e portarle per discutere.",
-        "image": {
-          "src": "/imgs/users/4.png"
-        }
-      },
-      {
-        "title": "David Kim",
-        "label": "Pianificatore Pensionistico",
-        "description": "Prima del pensionamento, ho ricercato 10 posizioni candidate. Il calcolatore astrocartografia ha mostrato la mia linea di Luna che passa attraverso l'Isola del Sud della Nuova Zelanda. Dopo le visite sul posto, ho scelto la Nuova Zelanda e ho veramente sentito pace emotiva e appartenenza. Ma ho anche valorizzato le risorse sanitarie e il costo della vita. Le mappe di astrocartografia sono punti di partenza eccellenti.",
-        "image": {
-          "src": "/imgs/users/5.png"
-        }
-      }
-    ]
-  },
   "cta": {
     "name": "cta",
     "title": "Genera la Tua Mappa Astrocartografia Gratis Ora",
