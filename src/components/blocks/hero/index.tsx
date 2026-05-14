@@ -10,10 +10,10 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
-// 🔥 性能优化：懒加载 Globe 组件，避免阻塞首屏渲染
+// 🔥 性能优化：懒加载 Starfield 组件，避免阻塞首屏渲染
 // Cloudflare Workers 兼容：dynamic import 在 Edge Runtime 中完全支持
-const Globe = dynamic(() => import("@/components/ui/globe"), {
-  ssr: false,  // Globe 依赖 Canvas API，只在客户端渲染
+const Starfield = dynamic(() => import("@/components/ui/animated-shader-background"), {
+  ssr: false,  // Starfield 依赖 Canvas API，只在客户端渲染
   loading: () => <div className="absolute inset-0" />,  // 占位符，避免布局偏移
 });
 
@@ -35,7 +35,7 @@ export default function Hero({ hero }: { hero: HeroType }) {
       )}
     >
       <div className="pointer-events-none absolute inset-0">
-        <Globe />
+        <Starfield />
       </div>
 
       <section className="relative z-10 w-full">

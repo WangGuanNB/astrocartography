@@ -67,6 +67,43 @@ pre {
   }
 }
 
+/* 🌟 新增：Animated Shader Background 动画 */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
 @layer utilities {
   .animate-blob {
     animation: blob 7s ease-in-out infinite;
@@ -97,5 +134,18 @@ pre {
     /* 🔥 性能优化：启用硬件加速，减少重排 */
     will-change: transform;
     transform: translateZ(0);
+  }
+
+  /* 🌟 新增：Shader Background 动画类 */
+  .animate-slide-right {
+    animation: slide-right 8s ease-in-out infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .animate-float-up {
+    animation: float-up 4s ease-in-out infinite;
   }
 }
