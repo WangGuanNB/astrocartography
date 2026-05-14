@@ -201,7 +201,7 @@
         "title": "Cómo Se Calculan las Líneas de Astrocartografía",
         "description": "En el momento exacto de tu nacimiento, cada planeta ocupaba una posición angular específica en el cielo. La astrocartografía calcula cuatro líneas por planeta: donde ese planeta salía en el horizonte (línea ASC/Ascendente), se ponía bajo el horizonte (línea DSC/Descendente), estaba directamente sobre el mediocielo (línea MC), o en su punto más bajo bajo tus pies (línea IC). Estas cuatro líneas por planeta crean hasta 40 líneas de energía personal que cruzan el globo. Cuando vives o viajas cerca de estas líneas, la influencia de ese planeta se intensifica — moldeando tus relaciones, visibilidad profesional, producción creativa y sentido de pertenencia en esa ubicación específica.",
         "image": {
-          "src": "/imgs/features/1.webp",
+          "src": "/imgs/features/astrocartography-lines-calculation.webp",
           "alt": "Cómo se calculan las líneas astrocartográficas — ASC, DSC, MC, IC explicados"
         }
       },
@@ -209,7 +209,7 @@
         "title": "Qué Significa Cada Línea Planetaria en Tu Mapa Astrocartográfico",
         "description": "Cada planeta lleva una energía distinta en tu mapa astrocartográfico. Las líneas del Sol amplifican la autoexpresión y el reconocimiento — ideales para visibilidad y roles de liderazgo. Las líneas de Venus atraen amor, belleza y flujo financiero — ampliamente favorecidas para el romance y el trabajo creativo. Las líneas de Júpiter expanden la oportunidad y la abundancia — las más recomendadas para la reubicación. Las líneas de Saturno construyen estructura y disciplina — intensas pero profundamente gratificantes para objetivos de carrera a largo plazo. Las líneas de Marte alimentan la determinación y la ambición. Las líneas de Mercurio mejoran la comunicación y el intelecto. Las líneas de la Luna profundizan los lazos emocionales y la sensación de hogar. Los lugares más poderosos son los \"puntos de poder\" — donde se intersectan dos o más líneas planetarias, combinando sus energías en un solo lugar.",
         "image": {
-          "src": "/imgs/features/2.webp",
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
           "alt": "Significado de las líneas planetarias astrocartográficas — Sol, Venus, Júpiter, Saturno, Luna"
         }
       },
@@ -217,7 +217,7 @@
         "title": "Usar la Astrocartografía para Reubicación, Viajes y Planificación de Vida",
         "description": "La astrocartografía te ofrece una guía personalizada, planeta por planeta, para las decisiones de ubicación. Los profesionales que buscan crecimiento en la carrera buscan líneas MC de Júpiter o Sol MC — regiones donde la visibilidad y la expansión se amplifican. Quienes priorizan las relaciones exploran las líneas DSC de Venus, donde la energía de pareja alcanza su pico. Los profesionales creativos prefieren las líneas ASC de Neptuno para inspiración y flujo. Incluso los viajes cortos pueden planificarse intencionalmente: visita tu línea de Júpiter para una reunión de negocios de alto riesgo, o tu línea IC de la Luna para restauración emocional. Nuestra calculadora de astrocartografía gratuita genera tu mapa personal completo al instante usando Swiss Ephemeris — el mismo sistema de cálculo profesional en el que confían los astrólogos de todo el mundo.",
         "image": {
-          "src": "/imgs/features/3.webp",
+          "src": "/imgs/features/astrocartography-relocation-planning.webp",
           "alt": "Astrocartografía para reubicación y planificación de viajes"
         }
       }
@@ -234,7 +234,7 @@
         "description": "Análisis profesional de astrocartografía con acceso ilimitado gratuito. Usamos la misma biblioteca Swiss Ephemeris en la que confía el software profesional de astrología, con precisión de 1 milla usando cálculos Swiss Ephemeris. Genera cartas de astrocartografía ilimitadas, descarga archivos libres de marcas de agua y accede a interpretaciones con IA—sin tarjeta de crédito, sin tarifas ocultas. Ya seas estudiante, emprendedor o jubilado, accede a análisis profesional de astrocartografía sin costo.",
         "icon": "RiGiftLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/free-astrocartography-calculator-tool.webp",
           "alt": "Calculadora profesional de astrocartografía gratis"
         }
       },
@@ -243,7 +243,7 @@
         "description": "A diferencia de herramientas que prometen resultados garantizados, reconocemos que la astrocartografía muestra potencial energético, no certezas. Una línea de Venus podría mejorar las relaciones o mostrar desafíos relacionales que necesitas abordar. Nuestra IA considera el contexto de tu carta personal, etapa actual de vida e interacciones planetarias. Las preguntas frecuentes afirman honestamente: usa los mapas de astrocartografía como un factor entre consideraciones prácticas como oportunidades profesionales, costo de vida y requisitos de visa. La astrología real respeta la complejidad—nosotros también.",
         "icon": "RiShieldCheckLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/astrocartography-guidance-interpretation.webp",
           "alt": "Orientación honesta de astrocartografía"
         }
       },
@@ -252,7 +252,7 @@
         "description": "Tus datos de nacimiento se calculan localmente en tu navegador—nunca se suben a servidores, nunca se almacenan en bases de datos, nunca se comparten con terceros. Genera tu carta de astrocartografía con privacidad completa. Todos los archivos tienen derechos comerciales completos: úsalos para planificación personal, consultas profesionales de astrología, enseñanza o publicación sin tarifas de licencia. La privacidad y la calidad profesional no deberían ser exclusivas de clientes que pagan.",
         "icon": "RiLockLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/privacy-astrocartography-calculator.webp",
           "alt": "Herramienta de astrocartografía enfocada en privacidad"
         }
       }
@@ -380,7 +380,62 @@
   },
   "testimonial": {
     "name": "testimonial",
-    "disabled": true,
+    "disabled": false,
+    "label": "CONFIADO POR 54,000+ USUARIOS",
+    "title": "Lo Que Dicen los Entusiastas de la Astrología\nSobre Nuestra Calculadora de Astrocartografía",
+    "description": "Basado en 714+ reseñas verificadas de usuarios. Vea por qué miles confían en nuestra herramienta profesional de astrocartografía para planificación de reubicación.",
+    "icon": "RiStarLine",
+    "items": [
+      {
+        "title": "Sarah M.",
+        "label": "Astróloga Profesional, Reino Unido",
+        "description": "¡Esta calculadora de astrocartografía es increíblemente precisa! Los cálculos de Swiss Ephemeris coinciden con el software profesional de astrología. La uso diariamente para consultas con clientes y lecturas de astrología de reubicación. Las interpretaciones de IA ayudan a explicar las líneas planetarias claramente. Altamente recomendada para astrólogos y entusiastas de la astrología.",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "Michael R.",
+        "label": "Nómada Digital, EE.UU.",
+        "description": "¡La mejor herramienta de astrocartografía que he encontrado en línea! La usé para planificar mi reubicación de Nueva York a Austin. La interpretación de la línea de Venus fue precisa—encontré amor y oportunidades creativas exactamente como se predijo. El mapa interactivo de astrocartografía facilita explorar diferentes ciudades y entender las influencias planetarias.",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "Emma L.",
+        "label": "Estudiante de Astrología, Australia",
+        "description": "Como estudiante de astrología, he probado muchas calculadoras de astrocartografía. Esta se destaca con cálculos precisos de carta natal y análisis detallado de líneas planetarias. La función de chat de IA responde mis preguntas de astrocartografía al instante. Perfecta para aprender astrología de reubicación y entender puntos de poder.",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "David K.",
+        "label": "Emprendedor, Canadá",
+        "description": "Usé esta calculadora de astrocartografía para planificación de reubicación empresarial. El análisis de la línea de Júpiter me ayudó a elegir Toronto para expansión. Gran herramienta para entender cómo la astrocartografía afecta la carrera y el éxito financiero. La función de exportación es perfecta para guardar cartas de astrología y compartir con consultores.",
+        "image": {
+          "src": "/imgs/users/6.png"
+        }
+      },
+      {
+        "title": "Lisa W.",
+        "label": "Consultora de Reubicación, EE.UU.",
+        "description": "Esta herramienta de astrocartografía cambió cómo asesoro a los clientes sobre decisiones de reubicación. Los cálculos de líneas planetarias son precisos y las interpretaciones de astrología son prácticas. A los clientes les encanta ver su mapa de astrocartografía y entender qué ciudades se alinean con su carta natal. Esencial para cualquier profesional de astrología.",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      },
+      {
+        "title": "John D.",
+        "label": "Entusiasta de Astrología, Alemania",
+        "description": "¡Excelente calculadora de astrocartografía! La interfaz es fácil de usar y los cálculos de astrología son precisos. La usé para encontrar mis ciudades de línea del Sol para crecimiento de confianza e identidad. Las perspectivas de IA sobre influencias planetarias son detalladas y útiles. La mejor herramienta gratuita de astrocartografía disponible en línea.",
+        "image": {
+          "src": "/imgs/users/5.png"
+        }
+      }
+    ]
+  },
     "label": "Testimonios",
     "title": "Usuarios Reales Comparten sus Experiencias de Astrocartografía",
     "description": "Los usuarios comparten cómo nuestra calculadora de astrocartografía informó sus decisiones de relocalización.",

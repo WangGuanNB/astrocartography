@@ -796,7 +796,7 @@ const AstrocartographyMap = forwardRef<
       
       {/* First-time guide — hide when any popup is open */}
       {showGuide && !selectedCity && !selectedLinePopup && (
-        <div className="absolute left-1/2 top-4 z-[1150] -translate-x-1/2 w-[560px] max-w-[92vw] pointer-events-auto">
+        <div className="absolute left-1/2 top-[76px] md:top-24 z-[1150] -translate-x-1/2 w-[560px] max-w-[92vw] pointer-events-auto">
           <div className="rounded-lg border border-white/15 bg-black/70 backdrop-blur-md px-4 py-2.5 shadow-lg">
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
@@ -823,20 +823,27 @@ const AstrocartographyMap = forwardRef<
       {/* Planetary control panel */}
       {planetLines.length > 0 && (
         <div
-          className={`absolute left-0 top-0 bottom-0 z-[1000] transition-transform duration-300 ${
+          className={`absolute left-0 top-[72px] md:top-20 bottom-0 z-[1000] transition-transform duration-300 ${
           isPanelOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         >
-          <div className="h-full bg-black/90 backdrop-blur-md border-r border-white/20 shadow-2xl overflow-y-auto">
+          <div 
+            className="h-full bg-black/90 backdrop-blur-md border-r border-white/20 shadow-2xl overflow-y-auto"
+            onTouchStart={(e) => e.stopPropagation()}
+            onTouchMove={(e) => e.stopPropagation()}
+            style={{ touchAction: 'pan-y' }}
+          >
             <div className="p-4 space-y-4 min-w-[200px] md:min-w-[240px] w-[70vw] md:w-auto">
-              {/* Panel title */}
+              {/* Panel title with collapse button */}
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-white font-semibold text-sm">Planetary Lines</h3>
                 <button
                   onClick={() => setIsPanelOpen(false)}
-                  className="text-white/60 hover:text-white transition-colors"
+                  className="flex items-center gap-1 px-2 py-1 text-xs text-white/70 hover:text-white bg-white/5 hover:bg-white/10 rounded-md transition-colors border border-white/10"
+                  aria-label="Collapse panel"
                 >
-                  <ChevronLeft className="size-4" />
+                  <ChevronLeft className="size-3.5" />
+                  <span className="hidden md:inline">Collapse</span>
                 </button>
               </div>
 
@@ -1061,7 +1068,8 @@ const AstrocartographyMap = forwardRef<
       {!isPanelOpen && (
         <button
           onClick={() => setIsPanelOpen(true)}
-          className="absolute left-4 top-16 z-[1000] bg-black/80 hover:bg-black backdrop-blur-md text-white p-2 rounded-md shadow-lg transition-colors"
+          className="absolute left-3 top-[76px] md:top-24 z-[1000] bg-black/80 hover:bg-black backdrop-blur-md text-white p-2 rounded-md shadow-lg transition-colors"
+          aria-label="Open planetary lines panel"
         >
           <ChevronLeft className="size-5 rotate-180" />
         </button>

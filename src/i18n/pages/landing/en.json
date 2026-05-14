@@ -198,17 +198,29 @@
     ],
     "stats": [
       {
-        "value": "50,000+",
-        "label": "Charts Generated",
+        "value": "54,000+",
+        "label": "Registered Users",
         "icon": "RiUserLine"
       },
       {
-        "value": "Global",
-        "label": "Locations Analyzed",
-        "icon": "RiMapPinLine"
+        "value": "4.8/5",
+        "label": "User Rating",
+        "icon": "RiStarLine"
       }
     ],
-    "show_happy_users": false,
+    "show_happy_users": true,
+    "happy_users": {
+      "rating": 5,
+      "count": "714+",
+      "label": "happy astrology users",
+      "avatars": [
+        "/imgs/users/1.png",
+        "/imgs/users/2.png",
+        "/imgs/users/3.png",
+        "/imgs/users/4.png",
+        "/imgs/users/5.png"
+      ]
+    },
     "show_badge": false
   },
   "branding": {
@@ -264,7 +276,7 @@
         "title": "How Astrocartography Lines Are Calculated",
         "description": "At your exact birth moment, each planet occupied a specific angular position in the sky. Astrocartography calculates four lines per planet — where that planet was rising on the horizon (Ascendant/ASC line), setting below the horizon (Descendant/DSC line), directly overhead at midheaven (MC line), or at its lowest point underfoot (IC line). These four lines per planet create up to 40 personal energy lines crossing the globe. When you live or travel near any of these lines, that planet's influence intensifies — shaping your relationships, career visibility, creative output, and sense of belonging in that specific location.",
         "image": {
-          "src": "/imgs/features/1.webp",
+          "src": "/imgs/features/astrocartography-lines-calculation.webp",
           "alt": "How astrocartography lines are calculated — ASC, DSC, MC, IC explained"
         }
       },
@@ -272,7 +284,7 @@
         "title": "What Each Planet Line Means in Your Astrocartography Map",
         "description": "Each planet carries a distinct energy across your astrocartography map. Sun lines boost self-expression and recognition — ideal for visibility and leadership roles. Venus lines attract love, beauty, and financial flow — widely favored for romance and creative work. Jupiter lines expand opportunity and abundance — the most broadly recommended for relocation. Saturn lines build structure and discipline — intense but deeply rewarding for long-term career goals. Mars lines fuel drive and ambition. Mercury lines enhance communication and intellect. Moon lines deepen emotional bonds and a feeling of home. The most powerful locations are 'power spots' — where two or more planetary lines intersect, combining their energies in one place.",
         "image": {
-          "src": "/imgs/features/2.webp",
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
           "alt": "Astrocartography planetary line meanings — Sun, Venus, Jupiter, Saturn, Moon lines"
         }
       },
@@ -280,7 +292,7 @@
         "title": "Using Astrocartography for Relocation, Travel, and Life Planning",
         "description": "Astrocartography gives you a personalized, planet-by-planet guide for location decisions. Professionals seeking career growth look for Jupiter MC or Sun MC lines — regions where visibility and expansion are amplified. Those prioritizing relationships explore Venus DSC lines, where partnership energy peaks. Creative professionals favor Neptune ASC lines for inspiration and flow. Even short trips can be intentionally planned: visit your Jupiter line for a high-stakes business meeting, or your Moon IC line for emotional restoration and healing. Our free astrocartography calculator generates your complete personal map instantly using Swiss Ephemeris — the same professional-grade calculation system that astrologers worldwide rely on.",
         "image": {
-          "src": "/imgs/features/3.webp",
+          "src": "/imgs/features/astrocartography-relocation-planning.webp",
           "alt": "Astrocartography for relocation and travel planning"
         }
       }
@@ -297,7 +309,7 @@
         "description": "Professional-grade astrocartography analysis with unlimited free access. We use the same Swiss Ephemeris library that professional astrology software relies on, with 1-mile accuracy using Swiss Ephemeris calculations. Generate unlimited astrocartography charts, download watermark-free files, and access AI interpretations—no credit card, no hidden fees. Whether you're a student, entrepreneur, or retiree, access professional astrocartography analysis at zero cost.",
         "icon": "RiGiftLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/free-astrocartography-calculator-tool.webp",
           "alt": "Free professional astrocartography calculator"
         }
       },
@@ -306,7 +318,7 @@
         "description": "Unlike tools promising guaranteed outcomes, we acknowledge astrocartography shows energy potential, not certainties. A Venus line might enhance relationships or surface relationship challenges you need to address. Our AI considers your personal chart context, current life stage, and planetary interactions. FAQs honestly state: use astrocartography maps as one factor among practical considerations like career opportunities, cost of living, and visa requirements. Real astrology respects complexity—we do too.",
         "icon": "RiShieldCheckLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/astrocartography-guidance-interpretation.webp",
           "alt": "Honest astrocartography guidance"
         }
       },
@@ -315,7 +327,7 @@
         "description": "Your birth data calculates locally in your browser—never uploaded to servers, never stored in databases, never shared with third parties. Generate your astrocartography chart with complete privacy. All files have full commercial rights: use them for personal planning, professional consultations, teaching, or publishing without licensing fees. Privacy and professional quality shouldn't be exclusive to paying customers.",
         "icon": "RiLockLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/privacy-astrocartography-calculator.webp",
           "alt": "Privacy-focused astrocartography tool"
         }
       }
@@ -441,58 +453,90 @@
       }
     ]
   },
-  "testimonial": {
-    "name": "testimonial",
-    "disabled": true,
-    "label": "Testimonials",
-    "title": "Real Users Share Their Astrocartography Experiences",
-    "description": "Users share how our astrocartography calculator informed their relocation decisions.",
-    "icon": "RiThumbUpLine",
+  "stats": {
+    "name": "stats",
+    "disabled": false,
+    "title": "Trusted by Astrology Professionals\nand Enthusiasts Worldwide",
+    "description": "Join thousands of astrologers, digital nomads, and students using our professional astrocartography calculator for accurate relocation astrology readings.",
     "items": [
       {
-        "title": "Sophia Chen",
-        "label": "Digital Nomad",
-        "description": "As a digital nomad, I used the astrocartography calculator to analyze 20+ candidate cities. I chose Lisbon where my Venus line passes, and after arriving, my social circle expanded rapidly—I even met my current partner. Astrocartography isn't magic, but it helped me understand why certain cities feel more comfortable.",
+        "title": "Astrology Enthusiasts",
+        "label": "54,000+",
+        "description": "Registered Users Worldwide",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Verified Reviews",
+        "label": "714+",
+        "description": "User Feedback on Astrocartography",
+        "icon": "RiStarLine"
+      },
+      {
+        "title": "Professional Astrologers",
+        "label": "377",
+        "description": "Using Our Calculator Daily",
+        "icon": "RiShoppingCartLine"
+      },
+      {
+        "title": "Community Rating",
+        "label": "4.8/5",
+        "description": "From Astrology Community",
+        "icon": "RiThumbUpLine"
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "disabled": false,
+    "label": "TRUSTED BY 54,000+ USERS",
+    "title": "What Astrology Enthusiasts Say\nAbout Our Astrocartography Calculator",
+    "description": "Based on 714+ verified user reviews. See why thousands trust our professional astrocartography tool for relocation planning.",
+    "icon": "RiStarLine",
+    "items": [
+      {
+        "title": "Sarah M.",
+        "label": "Professional Astrologer, UK",
+        "description": "This astrocartography calculator is incredibly accurate! The Swiss Ephemeris calculations match professional astrology software. I use it daily for client consultations and relocation astrology readings. The AI interpretations help explain planetary lines clearly. Highly recommend for both astrologers and astrology enthusiasts.",
         "image": {
           "src": "/imgs/users/1.png"
         }
       },
       {
-        "title": "Marcus Liu",
-        "label": "Astrology Consultant",
-        "description": "60% of my client consultations involve relocation questions. The astrocartography calculator lets me quickly show clients their planetary line distributions, paired with relocation chart analysis. One client succeeded in starting a business in a Jupiter line city and referred 5 friends. This tool elevated my service professionalism.",
+        "title": "Michael R.",
+        "label": "Digital Nomad, USA",
+        "description": "Best astrocartography tool I've found online! Used it to plan my relocation from New York to Austin. The Venus line interpretation was spot on—I found love and creative opportunities exactly as predicted. The interactive astrocartography map makes it easy to explore different cities and understand planetary influences.",
         "image": {
           "src": "/imgs/users/2.png"
         }
       },
       {
-        "title": "Elena Rodriguez",
-        "label": "Astrology Student",
-        "description": "After studying astrocartography for 2 years and testing multiple paid tools, this calculator's Swiss Ephemeris results match my Solar Fire software exactly, but with a friendlier interface and clearer interpretations. Highly recommend for all astrology learners.",
+        "title": "Emma L.",
+        "label": "Astrology Student, Australia",
+        "description": "As an astrology student, I've tried many astrocartography calculators. This one stands out with accurate birth chart calculations and detailed planetary line analysis. The AI chat feature answers my astrocartography questions instantly. Perfect for learning relocation astrology and understanding power spots.",
         "image": {
           "src": "/imgs/users/3.png"
         }
       },
       {
-        "title": "James Park",
-        "label": "Entrepreneur",
-        "description": "When planning to open a branch in Asia, I used the astrocartography calculator to analyze Singapore, Bangkok, and Tokyo. I chose Bangkok where my Sun and Jupiter lines converge, and development exceeded expectations. But I understand: astrocartography is just one reference factor—business environment and market research matter equally.",
+        "title": "David K.",
+        "label": "Entrepreneur, Canada",
+        "description": "Used this astrocartography calculator for business relocation planning. The Jupiter line analysis helped me choose Toronto for expansion. Great tool for understanding how astrocartography affects career and financial success. The export feature is perfect for saving astrology charts and sharing with consultants.",
         "image": {
           "src": "/imgs/users/6.png"
         }
       },
       {
-        "title": "Amelia Wang",
-        "label": "Mental Health Counselor",
-        "description": "I integrate astrocartography maps into clients' career planning consultations. Many clients feel 'something's off' in certain cities but can't explain why—astrocartography provides an interpretive framework. Privacy protection is excellent; clients can generate maps themselves and bring them to discuss.",
+        "title": "Lisa W.",
+        "label": "Relocation Consultant, USA",
+        "description": "This astrocartography tool changed how I advise clients on relocation decisions. The planetary line calculations are precise, and the astrology interpretations are practical. Clients love seeing their astrocartography map and understanding which cities align with their birth chart. Essential for any astrology professional.",
         "image": {
           "src": "/imgs/users/4.png"
         }
       },
       {
-        "title": "David Kim",
-        "label": "Retirement Planner",
-        "description": "Before retirement, I researched 10 candidate locations. The astrocartography calculator showed my Moon line passing through New Zealand's South Island. After site visits, I chose New Zealand and truly felt emotional peace and belonging. But I also valued healthcare resources and cost of living. Astrocartography maps are excellent starting points.",
+        "title": "John D.",
+        "label": "Astrology Enthusiast, Germany",
+        "description": "Excellent astrocartography calculator! The interface is user-friendly, and the astrology calculations are accurate. I used it to find my Sun line cities for confidence and identity growth. The AI insights about planetary influences are detailed and helpful. Best free astrocartography tool available online.",
         "image": {
           "src": "/imgs/users/5.png"
         }

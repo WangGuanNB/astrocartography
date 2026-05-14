@@ -45,16 +45,16 @@ export default function Feature2({ section }: { section: SectionType }) {
   return (
     <section id={section.name} className="py-32">
       <div className="container">
-        <div className="mx-auto max-w-3xl lg:max-w-4xl">
+        <div className="mx-auto max-w-3xl text-center lg:max-w-4xl lg:text-left">
           {section.label && (
             <Badge variant="outline" className="mb-4">
               {section.label}
             </Badge>
           )}
-          <h2 className="mb-6 text-pretty text-3xl font-bold lg:text-4xl">
+          <h2 className="mb-6 text-pretty text-2xl font-bold md:text-3xl lg:text-4xl">
             {section.title}
           </h2>
-          <p className="text-lg text-muted-foreground lg:text-xl">
+          <p className="text-sm text-muted-foreground md:text-base lg:text-lg xl:text-xl">
             {section.description}
           </p>
         </div>

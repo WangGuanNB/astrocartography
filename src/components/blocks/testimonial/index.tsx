@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import {
   Carousel,
@@ -28,7 +29,7 @@ export default function Testimonial({ section }: { section: SectionType }) {
 
   return (
     <section id={section.name} className="py-16">
-      <div className="flex flex-col items-center gap-4">
+      <div className="container flex flex-col items-center gap-4">
         {section.label && (
           <div className="flex items-center gap-1 text-sm font-semibold text-primary">
             {section.icon && (
@@ -37,14 +38,19 @@ export default function Testimonial({ section }: { section: SectionType }) {
             {section.label}
           </div>
         )}
-        <h2 className="text-center text-3xl font-semibold lg:text-4xl">
-          {section.title}
+        <h2 className="text-center text-2xl font-semibold md:text-3xl lg:text-4xl max-w-4xl">
+          {section.title?.split('\n').map((line, index, array) => (
+            <React.Fragment key={index}>
+              {line}
+              {index < array.length - 1 && <br />}
+            </React.Fragment>
+          ))}
         </h2>
-        <p className="text-center text-muted-foreground lg:text-lg">
+        <p className="text-center text-sm text-muted-foreground md:text-base lg:text-lg max-w-3xl px-4">
           {section.description}
         </p>
       </div>
-      <div className="lg:container">
+      <div className="w-full">
         <div className="mt-16 space-y-4">
           <Carousel
             opts={{

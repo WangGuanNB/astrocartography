@@ -47,6 +47,26 @@ pre {
   }
 }
 
+/* Hero 渐入动画 */
+@keyframes heroTextUp {
+  0% { opacity: 0; transform: translateY(28px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes heroTextDown {
+  0% { opacity: 0; transform: translateY(-24px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes retro-grid {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @layer utilities {
   .animate-blob {
     animation: blob 7s ease-in-out infinite;
@@ -62,5 +82,20 @@ pre {
 
   .animation-delay-6000 {
     animation-delay: 1s;
+  }
+
+  .hero-text-up {
+    animation: heroTextUp 0.85s ease forwards;
+  }
+
+  .hero-text-down {
+    animation: heroTextDown 0.85s ease forwards;
+  }
+
+  .animate-grid {
+    animation: retro-grid 15s linear infinite;
+    /* 🔥 性能优化：启用硬件加速，减少重排 */
+    will-change: transform;
+    transform: translateZ(0);
   }
 }

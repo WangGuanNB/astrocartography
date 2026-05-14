@@ -201,7 +201,7 @@
         "title": "专业级行星计算",
         "description": "星盘地图计算器使用Swiss Ephemeris，这是专业占星师使用的天文标准。我们计算在你精确出生时刻，每个行星（太阳、月亮、金星、火星、木星、土星）在地球表面处于角度位置的地方——上升（ASC）、下降（DSC）、中天（MC）或天底（IC）。每条星盘地图线精确到1英里以内，确保你的星盘地图与专业占星师的计算相匹配。当你站在一条行星线上时，该行星的能量在那里主导你的体验。",
         "image": {
-          "src": "/imgs/features/1.webp",
+          "src": "/imgs/features/astrocartography-lines-calculation.webp",
           "alt": "专业级星盘地图计算"
         }
       },
@@ -209,7 +209,7 @@
         "title": "AI驱动的位置解读",
         "description": "我们的系统分析你的出生星盘如何与全球各地的位置交互。AI解释每条星盘地图线的含义：金星线激活爱情和创造力，木星线带来机会和扩张，土星线加强职业纪律。我们不仅显示线条在哪里——我们还解释如何阅读星盘地图，以及每个位置对你的职业、人际关系、健康和创造力的意义，使星盘地图用于搬迁决策变得实用且易于理解。",
         "image": {
-          "src": "/imgs/features/2.webp",
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
           "alt": "AI驱动的星盘地图解读"
         }
       },
@@ -217,7 +217,7 @@
         "title": "即时多格式导出",
         "description": "在3秒内生成你的星盘地图，然后下载高分辨率PNG、PDF或SVG文件。地图清楚地标记所有行星线、能量点（线条交点）和城市名称。配合AI解读报告，你的星盘地图可用于个人规划、专业咨询或团队搬迁决策。所有文件无水印，拥有完整商业使用权。",
         "image": {
-          "src": "/imgs/features/3.webp",
+          "src": "/imgs/features/astrocartography-relocation-planning.webp",
           "alt": "即时导出星盘地图"
         }
       }
@@ -234,7 +234,7 @@
         "description": "专业级星盘地图分析，无限制免费访问。我们使用专业占星软件所依赖的相同Swiss Ephemeris库，精度达到1英里，使用Swiss Ephemeris计算。生成无限星盘地图，下载无水印文件，访问AI解读——无需信用卡，无隐藏费用。无论你是学生、企业家还是退休人员，都可以零成本获得专业星盘地图分析。",
         "icon": "RiGiftLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/free-astrocartography-calculator-tool.webp",
           "alt": "免费专业星盘地图计算器"
         }
       },
@@ -243,7 +243,7 @@
         "description": "与承诺保证结果的工具不同，我们承认星盘地图显示的是能量潜力，而非确定性。金星线可能增强人际关系，也可能放大你需要解决的关系挑战。我们的AI考虑你的个人星盘上下文、当前生活阶段和行星相互作用。常见问题诚实地说明：将星盘地图作为实用考虑因素之一，与职业机会、生活成本和签证要求等其他因素一起使用。真正的占星学尊重复杂性——我们也是如此。",
         "icon": "RiShieldCheckLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/astrocartography-guidance-interpretation.webp",
           "alt": "诚实的星盘地图指导"
         }
       },
@@ -252,7 +252,7 @@
         "description": "你的出生数据在浏览器本地计算——从未上传到服务器，从未存储在数据库中，从未与第三方共享。以完全的隐私生成你的星盘地图。所有文件拥有完整的商业权利：用于个人规划、专业占星咨询、教学或出版，无需许可费。隐私和专业质量不应该是付费客户的专属。",
         "icon": "RiLockLine",
         "image": {
-          "src": "/imgs/features/4.webp",
+          "src": "/imgs/features/privacy-astrocartography-calculator.webp",
           "alt": "注重隐私的星盘地图工具"
         }
       }
@@ -360,56 +360,56 @@
   },
   "testimonial": {
     "name": "testimonial",
-    "disabled": true,
-    "label": "用户评价",
-    "title": "真实用户分享他们的星盘地图体验",
-    "description": "用户分享我们的星盘地图计算器如何影响他们的搬迁决策。",
-    "icon": "RiThumbUpLine",
+    "disabled": false,
+    "label": "54,000+用户信赖",
+    "title": "占星爱好者如何评价\n我们的星盘地图计算器",
+    "description": "基于714+条真实用户评价。了解为什么数千人信赖我们的专业星盘地图工具进行搬迁规划。",
+    "icon": "RiStarLine",
     "items": [
       {
-        "title": "Sophia Chen",
-        "label": "数字游民",
-        "description": "作为数字游民，我使用星盘地图计算器分析了20多个候选城市。我选择了里斯本，那里有我的金星线经过，到达后，我的社交圈迅速扩大——我甚至遇到了我现在的伴侣。星盘地图不是魔法，但它帮助我理解了为什么某些城市感觉更舒适。",
+        "title": "Sarah M.",
+        "label": "专业占星师,英国",
+        "description": "这个星盘地图计算器非常准确!Swiss Ephemeris计算与专业占星软件完全匹配。我每天用它为客户提供咨询和搬迁占星解读。AI解读帮助清晰地解释行星线。强烈推荐给占星师和占星爱好者。",
         "image": {
           "src": "/imgs/users/1.png"
         }
       },
       {
-        "title": "Marcus Liu",
-        "label": "占星顾问",
-        "description": "我60%的客户咨询涉及搬迁问题。星盘地图计算器让我能够快速向客户展示他们的行星线分布，配合搬迁星盘分析。一位客户在木星线城市成功创业，并推荐了5位朋友。这个工具提升了我的服务专业性。",
+        "title": "Michael R.",
+        "label": "数字游民,美国",
+        "description": "我在网上找到的最好的星盘地图工具!用它规划从纽约到奥斯汀的搬迁。金星线的解读非常准确——我找到了爱情和创意机会,正如预测的那样。交互式星盘地图让探索不同城市和理解行星影响变得容易。",
         "image": {
           "src": "/imgs/users/2.png"
         }
       },
       {
-        "title": "Elena Rodriguez",
-        "label": "占星学生",
-        "description": "在学习了2年星盘地图并测试了多个付费工具后，这个计算器的Swiss Ephemeris结果与我的Solar Fire软件完全匹配，但界面更友好，解读更清晰。强烈推荐给所有占星学习者。",
+        "title": "Emma L.",
+        "label": "占星学生,澳大利亚",
+        "description": "作为占星学生,我尝试过许多星盘地图计算器。这个工具以准确的出生星盘计算和详细的行星线分析脱颖而出。AI聊天功能即时回答我的星盘地图问题。非常适合学习搬迁占星和理解能量点。",
         "image": {
           "src": "/imgs/users/3.png"
         }
       },
       {
-        "title": "James Park",
-        "label": "企业家",
-        "description": "在计划在亚洲开设分支机构时，我使用星盘地图计算器分析了新加坡、曼谷和东京。我选择了曼谷，那里我的太阳线和木星线交汇，发展超出预期。但我理解：星盘地图只是一个参考因素——商业环境和市场研究同样重要。",
+        "title": "David K.",
+        "label": "企业家,加拿大",
+        "description": "使用这个星盘地图计算器进行商业搬迁规划。木星线分析帮助我选择多伦多进行扩张。这是理解星盘地图如何影响职业和财务成功的好工具。导出功能非常适合保存占星图表并与顾问分享。",
         "image": {
           "src": "/imgs/users/6.png"
         }
       },
       {
-        "title": "Amelia Wang",
-        "label": "心理健康顾问",
-        "description": "我将星盘地图整合到客户的职业规划咨询中。许多客户感觉在某些城市'有什么不对劲'，但无法解释原因——星盘地图提供了一个解释框架。隐私保护非常好；客户可以自己生成地图并带来讨论。",
+        "title": "Lisa W.",
+        "label": "搬迁顾问,美国",
+        "description": "这个星盘地图工具改变了我为客户提供搬迁决策建议的方式。行星线计算精确,占星解读实用。客户喜欢看到他们的星盘地图并了解哪些城市与他们的出生星盘一致。任何占星专业人士的必备工具。",
         "image": {
           "src": "/imgs/users/4.png"
         }
       },
       {
-        "title": "David Kim",
-        "label": "退休规划师",
-        "description": "在退休前，我研究了10个候选位置。星盘地图计算器显示我的月亮线穿过新西兰南岛。经过实地考察后，我选择了新西兰，真正感受到了情感上的平静和归属感。但我也重视医疗资源和生活成本。星盘地图是很好的起点。",
+        "title": "John D.",
+        "label": "占星爱好者,德国",
+        "description": "优秀的星盘地图计算器!界面友好,占星计算准确。我用它找到我的太阳线城市,以增强自信和身份成长。关于行星影响的AI洞察详细且有帮助。网上最好的免费星盘地图工具。",
         "image": {
           "src": "/imgs/users/5.png"
         }

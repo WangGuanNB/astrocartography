@@ -21,10 +21,10 @@ export default function FAQ({ section }: { section: SectionType }) {
               {section.label}
             </Badge>
           )}
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+          <h2 className="text-center text-2xl font-bold tracking-tight md:text-3xl mb-2">
             {section.title}
           </h2>
-          <p className="mx-auto max-w-4xl text-lg text-muted-foreground">
+          <p className="mx-auto max-w-4xl text-center text-sm text-muted-foreground md:text-base lg:text-lg">
             {section.description}
           </p>
         </div>

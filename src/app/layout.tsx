@@ -3,6 +3,13 @@ import "@/app/globals.css";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { cn } from "@/lib/utils";
 import Script from "next/script";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export default async function RootLayout({
   children,
@@ -24,7 +31,7 @@ export default async function RootLayout({
 
         <link rel="icon" href="/logo.ico" />
       </head>
-      <body className={cn("min-h-screen overflow-x-hidden")} suppressHydrationWarning>
+      <body className={cn("min-h-screen overflow-x-hidden", inter.variable)} suppressHydrationWarning>
         {children}
         {googleAdsenseCode ? (
           <Script

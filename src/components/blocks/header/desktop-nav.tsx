@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,9 +14,18 @@ import { cn } from "@/lib/utils";
 
 /**
  * 桌面端导航菜单组件
- * 使用 DropdownMenu 替代 NavigationMenu，确保下拉框精确定位在 trigger 正下方
+ * 🔥 SSR 优化：延迟挂载 DropdownMenu，避免 hydration 错误
+ * Cloudflare Workers 兼容：不依赖 Node.js 特定 API
  */
 export default function DesktopNav({ header }: { header: HeaderType }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  // 🔥 关键优化：等待客户端挂载后再渲染交互式组件
+  // 这样 SSR 时只渲染静态链接，客户端 hydration 后再启用下拉菜单
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   if (!header.nav?.items || header.nav.items.length === 0) {
     return null;
   }
@@ -24,6 +34,27 @@ export default function DesktopNav({ header }: { header: HeaderType }) {
     <div className="flex items-center gap-1">
       {header.nav.items.map((item, i) => {
         if (item.children && item.children.length > 0) {
+          // 🔥 SSR 时渲染静态按钮，客户端挂载后渲染完整的 DropdownMenu
+          if (!isMounted) {
+            return (
+              <button
+                key={i}
+                className={cn(
+                  "text-muted-foreground",
+                  buttonVariants({ variant: "ghost" }),
+                  "flex items-center gap-1"
+                )}
+                disabled
+              >
+                {item.icon && (
+                  <Icon name={item.icon} className="size-3 shrink-0 mr-1" />
+                )}
+                <span>{item.title}</span>
+                <Icon name="RiArrowDownSLine" className="size-3 ml-1 opacity-60" />
+              </button>
+            );
+          }
+
           return (
             <DropdownMenu key={i}>
               <DropdownMenuTrigger

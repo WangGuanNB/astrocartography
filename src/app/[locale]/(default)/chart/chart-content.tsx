@@ -312,9 +312,9 @@ export default function ChartContent() {
   }
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-screen overflow-hidden bg-black pt-[72px] md:pt-20">
       {/* 主内容 - 全屏地图 (z-0) */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-full z-0 top-[72px] md:top-20">
         {isLoading ? (
           <div className="w-full h-full flex items-center justify-center bg-black">
             <div className="flex flex-col items-center justify-center">
@@ -351,9 +351,9 @@ export default function ChartContent() {
         ) : null}
       </div>
 
-      {/* 移动端：右上角工具栏（可折叠，仅含工具类按钮） */}
+      {/* 移动端：右上角工具栏（可折叠，仅含工具类按钮） - 移除独立的面板展开按钮 */}
       {chartData && isMobile && (
-        <div className="fixed top-16 right-3 z-[1100] flex flex-col items-end gap-2">
+        <div className="fixed top-[76px] right-3 z-[1100] flex flex-col items-end gap-2">
           <Button
             size="icon"
             variant="outline"
@@ -442,7 +442,7 @@ export default function ChartContent() {
 
       {/* 桌面端：右侧导航栏 */}
       {chartData && !isMobile && (
-        <div className="absolute top-0 right-0 z-[1100] pointer-events-none w-auto">
+        <div className="absolute top-20 right-0 z-[1100] pointer-events-none w-auto">
             <div className="flex flex-col py-6 px-4 pointer-events-auto">
               {/* 标题和出生信息 */}
               <div className="mb-6 bg-black/80 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">

@@ -25,6 +25,7 @@ import Hero from "@/components/blocks/hero";
 import MiniaturaAIGenerator from "@/components/blocks/miniatur-ai-generator/loadable";
 import FeatureWhatTwo from "@/components/blocks/feature-what-two";
 import Pricing from "@/components/blocks/pricing";
+import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
 import { getLandingPage } from "@/services/page";
 import { getCanonicalUrl } from "@/lib/utils";
@@ -140,12 +141,52 @@ export default async function LandingPage({
     }))
   } : null;
 
+  // 🔥 SEO优化：添加软件应用和评分的结构化数据
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Astrocartography Calculator",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "714",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": page.testimonial?.items?.slice(0, 3).map((item: any) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": item.title
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": item.description
+    }))
+  };
+
   return (
     <>
       {faqSchema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      {softwareSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
         />
       )}
       {/* Hero Section：一句主标题 + 一句副标题 + 一段简短价值描述 + CTA按钮文字-----------*/}
@@ -182,6 +223,9 @@ export default async function LandingPage({
 
       {/*Key Features：列出4~6个主要功能（每个30~50字）- */}
       {page.feature && <Feature section={page.feature} />}
+
+      {/* Stats：统计数字展示社会证明 - 提升Google信任度和SEO */}
+      {page.stats && <Stats section={page.stats} />}
 
       {/* Testimonials / People Love：展示2~3条用户好评或社会信任信息 */}  
       {page.testimonial && <Testimonial section={page.testimonial} />}

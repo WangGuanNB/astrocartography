@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Footer as FooterType } from "@/types/blocks/footer";
 import Icon from "@/components/icon";
 import ToplistBadge from "./toplist-badge";
@@ -9,6 +12,16 @@ export default function Footer({
   footer: FooterType;
   locale?: string;
 }) {
+  const pathname = usePathname();
+  
+  // 检测是否是工具页面（chart页面）
+  const isToolPage = pathname?.includes('/chart');
+  
+  // 如果是工具页面，完全不渲染Footer
+  if (isToolPage) {
+    return null;
+  }
+  
   if (footer.disabled) {
     return null;
   }
