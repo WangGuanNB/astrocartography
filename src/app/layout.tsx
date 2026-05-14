@@ -41,12 +41,7 @@ export default async function RootLayout({
             crossOrigin="anonymous"
           />
         ) : null}
-        <Script
-          id="code-market-widget"
-          src="https://code.market/widget.min.js"
-          strategy="lazyOnload"
-        />
-        <Script id="enforce-external-nofollow" strategy="afterInteractive">
+        <Script id="enforce-external-nofollow" strategy="lazyOnload">
           {`
             (function(){
               try{
