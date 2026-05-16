@@ -151,11 +151,11 @@
       "count": "714+",
       "label": "usuarios felices de astrología",
       "avatars": [
-        "/imgs/users/1.png",
-        "/imgs/users/2.png",
-        "/imgs/users/3.png",
-        "/imgs/users/4.png",
-        "/imgs/users/5.png"
+        "/imgs/users/1.webp",
+        "/imgs/users/2.webp",
+        "/imgs/users/3.webp",
+        "/imgs/users/4.webp",
+        "/imgs/users/5.webp"
       ]
     },
     "show_badge": false
@@ -403,7 +403,7 @@
         "label": "Astróloga Profesional, Reino Unido",
         "description": "¡Esta calculadora de astrocartografía es increíblemente precisa! Los cálculos de Swiss Ephemeris coinciden con el software profesional de astrología. La uso diariamente para consultas con clientes y lecturas de astrología de reubicación. Las interpretaciones de IA ayudan a explicar las líneas planetarias claramente. Altamente recomendada para astrólogos y entusiastas de la astrología.",
         "image": {
-          "src": "/imgs/users/1.png"
+          "src": "/imgs/users/1.webp"
         }
       },
       {
@@ -411,7 +411,7 @@
         "label": "Nómada Digital, EE.UU.",
         "description": "¡La mejor herramienta de astrocartografía que he encontrado en línea! La usé para planificar mi reubicación de Nueva York a Austin. La interpretación de la línea de Venus fue precisa—encontré amor y oportunidades creativas exactamente como se predijo. El mapa interactivo de astrocartografía facilita explorar diferentes ciudades y entender las influencias planetarias.",
         "image": {
-          "src": "/imgs/users/2.png"
+          "src": "/imgs/users/2.webp"
         }
       },
       {
@@ -419,7 +419,7 @@
         "label": "Estudiante de Astrología, Australia",
         "description": "Como estudiante de astrología, he probado muchas calculadoras de astrocartografía. Esta se destaca con cálculos precisos de carta natal y análisis detallado de líneas planetarias. La función de chat de IA responde mis preguntas de astrocartografía al instante. Perfecta para aprender astrología de reubicación y entender puntos de poder.",
         "image": {
-          "src": "/imgs/users/3.png"
+          "src": "/imgs/users/3.webp"
         }
       },
       {
@@ -427,7 +427,7 @@
         "label": "Emprendedor, Canadá",
         "description": "Usé esta calculadora de astrocartografía para planificación de reubicación empresarial. El análisis de la línea de Júpiter me ayudó a elegir Toronto para expansión. Gran herramienta para entender cómo la astrocartografía afecta la carrera y el éxito financiero. La función de exportación es perfecta para guardar cartas de astrología y compartir con consultores.",
         "image": {
-          "src": "/imgs/users/6.png"
+          "src": "/imgs/users/6.webp"
         }
       },
       {
@@ -435,7 +435,7 @@
         "label": "Consultora de Reubicación, EE.UU.",
         "description": "Esta herramienta de astrocartografía cambió cómo asesoro a los clientes sobre decisiones de reubicación. Los cálculos de líneas planetarias son precisos y las interpretaciones de astrología son prácticas. A los clientes les encanta ver su mapa de astrocartografía y entender qué ciudades se alinean con su carta natal. Esencial para cualquier profesional de astrología.",
         "image": {
-          "src": "/imgs/users/4.png"
+          "src": "/imgs/users/4.webp"
         }
       },
       {
@@ -443,7 +443,7 @@
         "label": "Entusiasta de Astrología, Alemania",
         "description": "¡Excelente calculadora de astrocartografía! La interfaz es fácil de usar y los cálculos de astrología son precisos. La usé para encontrar mis ciudades de línea del Sol para crecimiento de confianza e identidad. Las perspectivas de IA sobre influencias planetarias son detalladas y útiles. La mejor herramienta gratuita de astrocartografía disponible en línea.",
         "image": {
-          "src": "/imgs/users/5.png"
+          "src": "/imgs/users/5.webp"
         }
       }
     ]

@@ -214,11 +214,11 @@
       "count": "714+",
       "label": "happy astrology users",
       "avatars": [
-        "/imgs/users/1.png",
-        "/imgs/users/2.png",
-        "/imgs/users/3.png",
-        "/imgs/users/4.png",
-        "/imgs/users/5.png"
+        "/imgs/users/1.webp",
+        "/imgs/users/2.webp",
+        "/imgs/users/3.webp",
+        "/imgs/users/4.webp",
+        "/imgs/users/5.webp"
       ]
     },
     "show_badge": false
@@ -498,7 +498,7 @@
         "label": "Professional Astrologer, UK",
         "description": "This astrocartography calculator is incredibly accurate! The Swiss Ephemeris calculations match professional astrology software. I use it daily for client consultations and relocation astrology readings. The AI interpretations help explain planetary lines clearly. Highly recommend for both astrologers and astrology enthusiasts.",
         "image": {
-          "src": "/imgs/users/1.png"
+          "src": "/imgs/users/1.webp"
         }
       },
       {
@@ -506,7 +506,7 @@
         "label": "Digital Nomad, USA",
         "description": "Best astrocartography tool I've found online! Used it to plan my relocation from New York to Austin. The Venus line interpretation was spot on—I found love and creative opportunities exactly as predicted. The interactive astrocartography map makes it easy to explore different cities and understand planetary influences.",
         "image": {
-          "src": "/imgs/users/2.png"
+          "src": "/imgs/users/2.webp"
         }
       },
       {
@@ -514,7 +514,7 @@
         "label": "Astrology Student, Australia",
         "description": "As an astrology student, I've tried many astrocartography calculators. This one stands out with accurate birth chart calculations and detailed planetary line analysis. The AI chat feature answers my astrocartography questions instantly. Perfect for learning relocation astrology and understanding power spots.",
         "image": {
-          "src": "/imgs/users/3.png"
+          "src": "/imgs/users/3.webp"
         }
       },
       {
@@ -522,7 +522,7 @@
         "label": "Entrepreneur, Canada",
         "description": "Used this astrocartography calculator for business relocation planning. The Jupiter line analysis helped me choose Toronto for expansion. Great tool for understanding how astrocartography affects career and financial success. The export feature is perfect for saving astrology charts and sharing with consultants.",
         "image": {
-          "src": "/imgs/users/6.png"
+          "src": "/imgs/users/6.webp"
         }
       },
       {
@@ -530,7 +530,7 @@
         "label": "Relocation Consultant, USA",
         "description": "This astrocartography tool changed how I advise clients on relocation decisions. The planetary line calculations are precise, and the astrology interpretations are practical. Clients love seeing their astrocartography map and understanding which cities align with their birth chart. Essential for any astrology professional.",
         "image": {
-          "src": "/imgs/users/4.png"
+          "src": "/imgs/users/4.webp"
         }
       },
       {
@@ -538,7 +538,7 @@
         "label": "Astrology Enthusiast, Germany",
         "description": "Excellent astrocartography calculator! The interface is user-friendly, and the astrology calculations are accurate. I used it to find my Sun line cities for confidence and identity growth. The AI insights about planetary influences are detailed and helpful. Best free astrocartography tool available online.",
         "image": {
-          "src": "/imgs/users/5.png"
+          "src": "/imgs/users/5.webp"
         }
       }
     ]

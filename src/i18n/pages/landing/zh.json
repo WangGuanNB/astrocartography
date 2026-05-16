@@ -151,11 +151,11 @@
       "count": "714+",
       "label": "快乐的占星用户",
       "avatars": [
-        "/imgs/users/1.png",
-        "/imgs/users/2.png",
-        "/imgs/users/3.png",
-        "/imgs/users/4.png",
-        "/imgs/users/5.png"
+        "/imgs/users/1.webp",
+        "/imgs/users/2.webp",
+        "/imgs/users/3.webp",
+        "/imgs/users/4.webp",
+        "/imgs/users/5.webp"
       ]
     },
     "show_badge": false
@@ -383,7 +383,7 @@
         "label": "专业占星师,英国",
         "description": "这个星盘地图计算器非常准确!Swiss Ephemeris计算与专业占星软件完全匹配。我每天用它为客户提供咨询和搬迁占星解读。AI解读帮助清晰地解释行星线。强烈推荐给占星师和占星爱好者。",
         "image": {
-          "src": "/imgs/users/1.png"
+          "src": "/imgs/users/1.webp"
         }
       },
       {
@@ -391,7 +391,7 @@
         "label": "数字游民,美国",
         "description": "我在网上找到的最好的星盘地图工具!用它规划从纽约到奥斯汀的搬迁。金星线的解读非常准确——我找到了爱情和创意机会,正如预测的那样。交互式星盘地图让探索不同城市和理解行星影响变得容易。",
         "image": {
-          "src": "/imgs/users/2.png"
+          "src": "/imgs/users/2.webp"
         }
       },
       {
@@ -399,7 +399,7 @@
         "label": "占星学生,澳大利亚",
         "description": "作为占星学生,我尝试过许多星盘地图计算器。这个工具以准确的出生星盘计算和详细的行星线分析脱颖而出。AI聊天功能即时回答我的星盘地图问题。非常适合学习搬迁占星和理解能量点。",
         "image": {
-          "src": "/imgs/users/3.png"
+          "src": "/imgs/users/3.webp"
         }
       },
       {
@@ -407,7 +407,7 @@
         "label": "企业家,加拿大",
         "description": "使用这个星盘地图计算器进行商业搬迁规划。木星线分析帮助我选择多伦多进行扩张。这是理解星盘地图如何影响职业和财务成功的好工具。导出功能非常适合保存占星图表并与顾问分享。",
         "image": {
-          "src": "/imgs/users/6.png"
+          "src": "/imgs/users/6.webp"
         }
       },
       {
@@ -415,7 +415,7 @@
         "label": "搬迁顾问,美国",
         "description": "这个星盘地图工具改变了我为客户提供搬迁决策建议的方式。行星线计算精确,占星解读实用。客户喜欢看到他们的星盘地图并了解哪些城市与他们的出生星盘一致。任何占星专业人士的必备工具。",
         "image": {
-          "src": "/imgs/users/4.png"
+          "src": "/imgs/users/4.webp"
         }
       },
       {
@@ -423,7 +423,7 @@
         "label": "占星爱好者,德国",
         "description": "优秀的星盘地图计算器!界面友好,占星计算准确。我用它找到我的太阳线城市,以增强自信和身份成长。关于行星影响的AI洞察详细且有帮助。网上最好的免费星盘地图工具。",
         "image": {
-          "src": "/imgs/users/5.png"
+          "src": "/imgs/users/5.webp"
         }
       }
     ]

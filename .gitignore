@@ -60,3 +60,6 @@ local.db-wal
 
 # 数据迁移生成的 SQL 批次文件（含生产数据，不入库）
 scripts/d1-import/
+
+# 数据导出文件（含用户隐私数据，不入库）
+exports/

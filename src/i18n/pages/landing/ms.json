@@ -75,11 +75,11 @@
       "count": "714+",
       "label": "pengguna astrologi yang bahagia",
       "avatars": [
-        "/imgs/users/1.png",
-        "/imgs/users/2.png",
-        "/imgs/users/3.png",
-        "/imgs/users/4.png",
-        "/imgs/users/5.png"
+        "/imgs/users/1.webp",
+        "/imgs/users/2.webp",
+        "/imgs/users/3.webp",
+        "/imgs/users/4.webp",
+        "/imgs/users/5.webp"
       ]
     },
     "show_badge": true
@@ -288,7 +288,7 @@
         "label": "Jurugambar Profesional",
         "description": "Miniatur AI memberikan hasil yang menyaingi lensa tilt-shift mahal saya. Kecerdasan buatan ini memahami kedalaman lebih baik daripada mana-mana perisian editing yang pernah saya gunakan untuk fotografi miniatur.",
         "image": {
-          "src": "/imgs/users/1.png"
+          "src": "/imgs/users/1.webp"
         }
       },
       {
@@ -296,7 +296,7 @@
         "label": "Pencipta Kandungan",
         "description": "AI ini luar biasa! Saya mencipta kandungan gaya miniatur untuk Instagram dalam beberapa saat. Engagement saya meningkat 300% sejak menggunakan Miniatur AI untuk penciptaan kandungan media sosial.",
         "image": {
-          "src": "/imgs/users/2.png"
+          "src": "/imgs/users/2.webp"
         }
       },
       {
@@ -304,7 +304,7 @@
         "label": "Artis Digital",
         "description": "Kesan miniatur sangat realistik. Miniatur AI menjimatkan berjam-jam editing manual sambil menghasilkan hasil berkualiti profesional setiap kali dengan pemprosesan kecerdasan buatan canggih.",
         "image": {
-          "src": "/imgs/users/3.png"
+          "src": "/imgs/users/3.webp"
         }
       },
       {
@@ -312,7 +312,7 @@
         "label": "Blogger Pelancongan",
         "description": "Saya menggunakan Miniatur AI untuk semua foto perjalanan saya sekarang. Kesan miniatur menjadikan adegan biasa kelihatan seperti dunia kecil yang ajaib dengan kualiti transformasi AI profesional.",
         "image": {
-          "src": "/imgs/users/6.png"
+          "src": "/imgs/users/6.webp"
         }
       }
     ]
