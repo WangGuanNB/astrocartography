@@ -11,7 +11,7 @@ import { Link } from "@/i18n/navigation";
 
 export const dynamic = "force-static";
 export const revalidate = 604800;
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 const PATH = "/uranus-line-astrocartography";
 const LOCALES = ["en", "zh", "pt", "es", "it", "de"];

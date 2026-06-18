@@ -13,7 +13,7 @@ import NextLink from "next/link";
 
 export const dynamic = "force-static";
 export const revalidate = 604800;
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 const PATH = "/pluto-line-astrocartography";
 const LOCALES = ["en", "zh", "pt", "es", "it", "de"];
