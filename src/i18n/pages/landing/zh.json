@@ -13,12 +13,12 @@
     "nav": {
       "items": [
         {
-          "title": "星盘地图",
+          "title": "首页",
           "url": "/",
-          "icon": "RiGlobalLine"
+          "icon": "RiHomeLine"
         },
         {
-          "title": "计算器",
+          "title": "工具",
           "icon": "RiToolsLine",
           "url": "/astrocartography-calculator",
           "children": [
@@ -121,6 +121,13 @@
           "url": "/astrocartography-lines",
           "children": [
             {
+              "title": "全部 Astrocartography 行星线",
+              "description": "完整了解每一条行星线，以及 ASC/DSC/MC/IC 四个角度如何改变影响",
+              "url": "/astrocartography-lines",
+              "target": "_self",
+              "icon": "RiGlobalLine"
+            },
+            {
               "title": "太阳线",
               "description": "事业可见度、自信与真实自我表达",
               "url": "/sun-line-astrocartography",
@@ -142,6 +149,13 @@
               "icon": "RiHeartLine"
             },
             {
+              "title": "火星线",
+              "description": "行动力、身体能量、野心与职业竞争",
+              "url": "/mars-line-astrocartography",
+              "target": "_self",
+              "icon": "RiFireLine"
+            },
+            {
               "title": "木星线",
               "description": "好运、扩张、丰盛与适合成长的地点",
               "url": "/jupiter-line-astrocartography",
@@ -156,18 +170,25 @@
               "icon": "RiShieldLine"
             },
             {
-              "title": "浏览全部行星线",
-              "description": "进入完整目录，查找所有已发布的行星线指南",
-              "url": "/astrocartography-lines#lines-directory",
+              "title": "水星线",
+              "description": "沟通、学习、写作与商业敏锐度",
+              "url": "/mercury-line-astrocartography",
               "target": "_self",
-              "icon": "RiArrowRightCircleLine"
+              "icon": "RiMessage3Line"
+            },
+            {
+              "title": "天王星线",
+              "description": "自由、突变、自我重塑与非传统人生路径",
+              "url": "/uranus-line-astrocartography",
+              "target": "_self",
+              "icon": "RiFlashlightLine"
             }
           ]
         },
         {
-          "title": "学习",
+          "title": "博客",
           "url": "/posts",
-          "icon": "RiBookOpenLine"
+          "icon": "RiArticleLine"
         }
       ]
     },

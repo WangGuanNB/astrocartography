@@ -13,12 +13,12 @@
     "nav": {
       "items": [
         {
-          "title": "Astrokartografie-Karte",
+          "title": "Start",
           "url": "/",
-          "icon": "RiGlobalLine"
+          "icon": "RiHomeLine"
         },
         {
-          "title": "Rechner",
+          "title": "Tools",
           "icon": "RiToolsLine",
           "url": "/astrocartography-calculator",
           "children": [
@@ -67,7 +67,7 @@
           ]
         },
         {
-          "title": "Horoskope",
+          "title": "Chart",
           "icon": "RiPieChart2Line",
           "url": "/transit-chart-calculator",
           "children": [
@@ -121,6 +121,13 @@
           "url": "/astrocartography-lines",
           "children": [
             {
+              "title": "Alle Astrokartografie-Linien",
+              "description": "Vollständiger Leitfaden zu jeder Planetenlinie und wie die 4 Winkel ihre Wirkung verändern",
+              "url": "/astrocartography-lines",
+              "target": "_self",
+              "icon": "RiGlobalLine"
+            },
+            {
               "title": "Sonnenlinie",
               "description": "Berufliche Sichtbarkeit, Selbstvertrauen und authentischer Ausdruck",
               "url": "/sun-line-astrocartography",
@@ -142,6 +149,13 @@
               "icon": "RiHeartLine"
             },
             {
+              "title": "Marslinie",
+              "description": "Körperliche Energie, Antrieb, Ehrgeiz und beruflicher Wettbewerb",
+              "url": "/mars-line-astrocartography",
+              "target": "_self",
+              "icon": "RiFireLine"
+            },
+            {
               "title": "Jupiterlinie",
               "description": "Glück, Expansion, Fülle und beste Orte zum Aufblühen",
               "url": "/jupiter-line-astrocartography",
@@ -156,18 +170,25 @@
               "icon": "RiShieldLine"
             },
             {
-              "title": "Alle Linien entdecken",
-              "description": "Das vollständige Verzeichnis nach Planet oder Ziel durchsuchen",
-              "url": "/astrocartography-lines#lines-directory",
+              "title": "Merkurlinie",
+              "description": "Kommunikation, Lernen, Schreiben und geschäftlicher Scharfsinn",
+              "url": "/mercury-line-astrocartography",
               "target": "_self",
-              "icon": "RiArrowRightCircleLine"
+              "icon": "RiMessage3Line"
+            },
+            {
+              "title": "Uranus-Linie",
+              "description": "Freiheit, plötzlicher Wandel, Neuerfindung und unkonventionelle Lebenswege",
+              "url": "/uranus-line-astrocartography",
+              "target": "_self",
+              "icon": "RiFlashlightLine"
             }
           ]
         },
         {
-          "title": "Lernen",
+          "title": "Blog",
           "url": "/posts",
-          "icon": "RiBookOpenLine"
+          "icon": "RiArticleLine"
         }
       ]
     },

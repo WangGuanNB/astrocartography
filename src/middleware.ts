@@ -4,13 +4,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 const intl = createMiddleware(routing);
 
-function getResponseLocale(pathname: string) {
-  const firstSegment = pathname.split("/").filter(Boolean)[0];
-  return routing.locales.includes(firstSegment as any)
-    ? firstSegment
-    : routing.defaultLocale;
-}
-
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
@@ -31,7 +24,7 @@ export default function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL(correctPath, request.url));
     }
   }
-
+  
   // 🔥 关键修复：在调用 next-intl 之前，将 session token 添加到请求 headers
   // 因为 Middleware 的 response headers 不会传递到 Server Components
   const sessionToken = request.cookies.get('__Secure-authjs.session-token');
@@ -74,7 +67,6 @@ export default function middleware(request: NextRequest) {
     if (isBlocked) {
       response.headers.set("X-Robots-Tag", "noindex, nofollow");
     }
-    response.headers.set("Content-Language", getResponseLocale(pathname));
 
     return response;
   }
@@ -112,7 +104,6 @@ export default function middleware(request: NextRequest) {
   if (isBlocked) {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
   }
-  response.headers.set("Content-Language", getResponseLocale(pathname));
   
   return response;
 }

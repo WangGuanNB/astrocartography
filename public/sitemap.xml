@@ -604,7 +604,7 @@
   
   
   
-  <!-- Astrocartography Lines Hub + 9 Planet Line Pages
+  <!-- Astrocartography Lines Hub + 8 Planet Line Pages
        ────────────────────────────────────────────────────────── -->
   <url>
     <loc>https://astrocarto.org/astrocartography-lines/</loc>
@@ -657,42 +657,6 @@
   <url>
     <loc>https://astrocarto.org/uranus-line-astrocartography/</loc>
     <lastmod>2026-06-10T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://astrocarto.org/pluto-line-astrocartography/</loc>
-    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://astrocarto.org/zh/pluto-line-astrocartography/</loc>
-    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://astrocarto.org/pt/pluto-line-astrocartography/</loc>
-    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://astrocarto.org/es/pluto-line-astrocartography/</loc>
-    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://astrocarto.org/it/pluto-line-astrocartography/</loc>
-    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://astrocarto.org/de/pluto-line-astrocartography/</loc>
-    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

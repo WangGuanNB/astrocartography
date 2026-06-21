@@ -4,10 +4,10 @@ import { getAstrocartographyLinesPage } from "@/services/page";
 import FeatureWhatTwo from "@/components/blocks/feature-what-two";
 import Feature2 from "@/components/blocks/feature2";
 import Feature3 from "@/components/blocks/feature3";
+import Feature from "@/components/blocks/feature";
 import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
 import { Link } from "@/i18n/navigation";
-import LinesDirectory from "@/components/astrocartography/lines-directory";
 
 export const dynamic = "force-static";
 export const revalidate = 604800;
@@ -15,17 +15,6 @@ export const dynamicParams = true;
 
 const PATH = "/astrocartography-lines";
 const LOCALES = ["en"];
-const PUBLISHED_LINE_GUIDES = [
-  { name: "Sun Line", path: "/sun-line-astrocartography" },
-  { name: "Moon Line", path: "/moon-line-astrocartography" },
-  { name: "Mercury Line", path: "/mercury-line-astrocartography" },
-  { name: "Venus Line", path: "/venus-line-astrocartography" },
-  { name: "Mars Line", path: "/mars-line-astrocartography" },
-  { name: "Jupiter Line", path: "/jupiter-line-astrocartography" },
-  { name: "Saturn Line", path: "/saturn-line-astrocartography" },
-  { name: "Uranus Line", path: "/uranus-line-astrocartography" },
-  { name: "Pluto Line", path: "/pluto-line-astrocartography" },
-];
 
 export async function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -110,11 +99,10 @@ export default async function AstrocartographyLinesPage({
         </div>
       )}
 
-      <LinesDirectory />
-
       {page.introduce && <FeatureWhatTwo section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
       {page.usage && <Feature3 section={page.usage} />}
+      {page.feature && <Feature section={page.feature} />}
       {page.faq && <FAQ section={page.faq} />}
       {page.cta && <CTA section={page.cta} />}
 
@@ -123,26 +111,12 @@ export default async function AstrocartographyLinesPage({
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: h1Title,
+            "@type": "Article",
+            headline: h1Title,
             description: page.metadata.description,
             url: getCanonicalUrl(locale, PATH),
-            mainEntity: {
-              "@type": "ItemList",
-              name: "Published Astrocartography Line Guides",
-              numberOfItems: PUBLISHED_LINE_GUIDES.length,
-              itemListElement: PUBLISHED_LINE_GUIDES.map((guide, index) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                name: guide.name,
-                url: getCanonicalUrl(locale, guide.path),
-              })),
-            },
-            isPartOf: {
-              "@type": "WebSite",
-              name: "Astrocartography Calculator",
-              url: getCanonicalUrl("en", "/"),
-            },
+            author: { "@type": "Organization", name: "Astrocartography Calculator" },
+            publisher: { "@type": "Organization", name: "Astrocartography Calculator", url: getCanonicalUrl("en", "/") },
           }),
         }}
       />

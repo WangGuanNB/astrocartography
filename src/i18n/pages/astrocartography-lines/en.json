@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Astrocartography Lines: Meanings, Angles & Guides",
-    "description": "Explore astrocartography line meanings by planet, angle, and life goal, with practical guides for love, career, home, travel, growth, and transformation.",
+    "title": "Astrocartography Lines: Complete Guide to Every Planetary Line",
+    "description": "Understand every astrocartography line and what each planet means for your life. This complete guide covers Sun, Moon, Venus, Mars, Jupiter, Saturn, Mercury lines—and the 4 angles (ASC, DSC, MC, IC) that determine how each line affects you.",
     "keywords": "astrocartography lines, astrocartography lines meaning, planetary lines astrocartography, what are astrocartography lines, astrocartography line guide, astrocartography lines explained, best astrocartography lines, astrocartography lines ASC DSC MC IC, how to read astrocartography lines, astrocartography relocation lines"
   },
   "intentAnchor": {
@@ -72,7 +72,7 @@
     "name": "benefit",
     "title": "Every Planetary Line and What It Means",
     "label": "PLANETARY LINES",
-    "description": "Each planet in astrocartography carries distinct themes that shape your experience in the locations where its lines fall. Start with the directory above, then use this overview to compare the seven traditional planetary lines and the four angles (ASC, DSC, MC, IC).",
+    "description": "Each planet in astrocartography carries distinct themes that shape your experience in the locations where its lines fall. Here is a concise guide to all seven major planetary lines, along with how their influence shifts depending on the angle (ASC, DSC, MC, IC).",
     "items": [
       {
         "title": "Sun Line — Identity, Career & Visibility",
@@ -168,6 +168,59 @@
       {
         "title": "Which Astrocartography Line Is Best for Your Goal?",
         "description": "The best line depends entirely on what you're seeking. For love and romance, Venus DSC is the most powerful—widely known as the 'honeymoon line.' For career growth and recognition, Jupiter MC or Sun MC are the strongest choices. For a true sense of home and belonging, Moon IC is consistently the top recommendation. For lasting professional authority through mastery, Saturn MC builds the most durable reputation. For ambition and entrepreneurial drive, Mars MC is unmatched. For communication, writing, and business, Mercury MC is the most targeted placement. For personal confidence and identity, Sun ASC or Venus ASC are both excellent. No single line is universally 'best'—the right line is the one that matches what you actually want from a location right now.",
+        "icon": "RiCompassLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "In-Depth Guides for Every Planetary Line",
+    "label": "FULL GUIDES",
+    "description": "Each planetary line has its own complete guide covering the four angles (ASC, DSC, MC, IC), life areas most affected, practical use strategies, and a full FAQ. Choose the line most relevant to your current goals.",
+    "items": [
+      {
+        "title": "Sun Line — Career, Confidence & Identity",
+        "description": "The Sun line amplifies your core identity, confidence, and desire for recognition. Sun MC is the strongest career placement in all of astrocartography. Learn how all four Sun line angles affect your life differently, and whether a Sun line city matches your current goals. Read our complete Sun Line Astrocartography guide for the full breakdown.",
+        "icon": "RiSunLine"
+      },
+      {
+        "title": "Moon Line — Home, Emotions & Family",
+        "description": "Moon lines are the most powerful placement for finding a genuine sense of home and belonging—especially Moon IC, often called the 'cozy sweater line.' They also heighten emotional sensitivity, intuition, and family bonds. Read our complete Moon Line Astrocartography guide to understand which angle best fits your needs.",
+        "icon": "RiMoonLine"
+      },
+      {
+        "title": "Venus Line — Love, Beauty & Relationships",
+        "description": "The Venus line is among the most sought-after in astrocartography for its effect on romance, social ease, and daily quality of life. Venus DSC is the most powerful placement for finding a romantic partner. Read our complete Venus Line Astrocartography guide to understand all four angles and how to use them.",
+        "icon": "RiHeartLine"
+      },
+      {
+        "title": "Jupiter Line — Luck, Expansion & Opportunity",
+        "description": "Jupiter lines are consistently rated the most favorable lines for relocation—career doors open more easily, relationships are more generous, and life carries a quality of expansive optimism. Jupiter MC is especially powerful for professional recognition. Read our complete Jupiter Line Astrocartography guide for a full breakdown.",
+        "icon": "RiStarLine"
+      },
+      {
+        "title": "Mars Line — Energy, Drive & Ambition",
+        "description": "Mars lines amplify physical drive, competitive edge, and ambition. They are excellent for bold career moves and athletic pursuits, but require intentional direction to avoid burnout and conflict. Mars MC is the most professionally productive angle. Read our complete Mars Line Astrocartography guide to decide if a Mars line fits your goals.",
+        "icon": "RiFireLine"
+      },
+      {
+        "title": "Saturn Line — Discipline, Growth & Lasting Achievement",
+        "description": "Saturn lines are the most demanding but also the most rewarding for long-term builders. Saturn MC creates lasting professional authority through genuine mastery and sustained effort. These are not lines to choose for comfort—but for those ready to build something permanent. Read our complete Saturn Line Astrocartography guide.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "Mercury Line — Communication, Learning & Business",
+        "description": "Mercury lines sharpen the mind, accelerate learning, and support all forms of professional communication. Mercury MC is the strongest placement for writers, journalists, educators, traders, and knowledge workers. Read our complete Mercury Line Astrocartography guide to see how all four angles express Mercury's energy.",
+        "icon": "RiMessage3Line"
+      },
+      {
+        "title": "Uranus Line — Freedom, Change & Innovation",
+        "description": "Uranus lines activate sudden change, independence, and personal reinvention. They are transformative rather than comfortable—excellent when you want to break old patterns, but demanding if you need stability. Uranus MC supports unconventional careers and innovation. Read our complete Uranus Line Astrocartography guide for all four angles and practical use strategies.",
+        "icon": "RiFlashlightLine"
+      },
+      {
+        "title": "Which Astrocartography Line Is Right for You?",
+        "description": "Your ideal line depends on your current life priority. For career growth and public recognition: Jupiter MC (opportunities come easily), Sun MC (leadership and visibility), Saturn MC (lasting authority through mastery). For love and relationships: Venus DSC (the 'honeymoon line'—most powerful for romance), Moon DSC (deep emotional bonding), Venus ASC (personal magnetism). For finding a true home: Moon IC (the strongest belonging placement in all of astrocartography), Venus IC (beauty and domestic harmony). For ambition and drive: Mars MC (boldest career moves), Mars ASC (physical energy and assertiveness). For communication and learning: Mercury MC (writing, teaching, business), Mercury ASC (social intelligence and networking). Use your free chart to see exactly which cities fall on each of your personal lines—and match each location to your current life goal.",
         "icon": "RiCompassLine"
       }
     ]

@@ -98,7 +98,7 @@ export default async function MercuryLinePage({
         </div>
       )}
 
-      {page.introduce && <FeatureWhatTwo section={page.introduce} compactTop />}
+      {page.introduce && <FeatureWhatTwo section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
       {page.usage && <Feature3 section={page.usage} />}
       {page.feature && <Feature section={page.feature} />}

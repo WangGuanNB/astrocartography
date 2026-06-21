@@ -9,23 +9,15 @@ import { ChevronDown } from "lucide-react";
 
 export default function FeatureWhatTwo({
   section,
-  compactTop = false,
 }: {
   section: SectionType;
-  compactTop?: boolean;
 }) {
   if (section.disabled) {
     return null;
   }
 
   return (
-    <section
-      id={section.name}
-      className={cn(
-        "pb-20 lg:pb-24",
-        compactTop ? "pt-12 lg:pt-16" : "pt-20 lg:pt-24"
-      )}
-    >
+    <section id={section.name} className="py-20 lg:py-24">
       <div className="container max-w-6xl space-y-16">
         <header className="flex flex-col items-center text-center gap-4">
           {section.label && (

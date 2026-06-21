@@ -49,17 +49,17 @@ export default function Header({ header }: { header: HeaderType }) {
       >
         <div
           className={cn(
-            "mx-auto mt-2 max-w-[96rem] px-4 transition-all duration-300 md:px-6 xl:px-8",
+            "mx-auto mt-2 max-w-7xl px-6 transition-all duration-300 lg:px-12",
             (isScrolled || isToolPage) &&
               "bg-background/50 rounded-2xl border border-border/30 backdrop-blur-lg"
           )}
         >
-          <div className="relative flex items-center justify-between gap-4 py-3 xl:py-4">
+          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             {/* 左侧：Logo + 导航菜单 */}
-            <div className="flex min-w-0 flex-1 items-center justify-between xl:justify-start xl:gap-4">
+            <div className="flex w-full items-center justify-between lg:w-auto lg:justify-start lg:gap-6">
               <Link
                 href={(header.brand?.url as any) || "/"}
-                className="flex shrink-0 items-center gap-2"
+                className="flex items-center gap-2"
                 aria-label="home"
                 onClick={() => setMenuState(false)}
               >
@@ -80,19 +80,19 @@ export default function Header({ header }: { header: HeaderType }) {
               <button
                 onClick={() => setMenuState(!menuState)}
                 aria-label={menuState ? "Close Menu" : "Open Menu"}
-                className="relative z-20 -m-2.5 -mr-2 block cursor-pointer p-2.5 xl:hidden"
+                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
               >
                 <Menu className="group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
                 <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
               </button>
               {/* 桌面端导航菜单 - 靠左，紧跟在 Logo 后面 */}
-              <div className="hidden min-w-0 xl:block">
+              <div className="hidden lg:block">
                 <DesktopNav header={header} />
               </div>
             </div>
 
             {/* 右侧控制按钮 - 桌面端 */}
-            <div className="hidden shrink-0 items-center justify-end gap-1 xl:flex">
+            <div className="hidden w-full flex-wrap items-center justify-end gap-2 lg:flex lg:w-fit">
               {header.show_locale && <LocaleToggle />}
               {header.show_theme && <ThemeToggle />}
               {header.buttons?.map((item, i) => {
@@ -141,34 +141,23 @@ export default function Header({ header }: { header: HeaderType }) {
                         </AccordionTrigger>
                         <AccordionContent className="pb-2">
                           <div className="space-y-2 pl-7">
-                            {item.children.map((iitem, ii) => {
-                              const isViewAll =
-                                item.url === "/astrocartography-lines" &&
-                                (iitem.url === item.url ||
-                                  Boolean(iitem.url?.startsWith(`${item.url}#`)));
-
-                              return (
-                                <Link
-                                  key={ii}
-                                  href={iitem.url as any}
-                                  target={iitem.target}
-                                  className={cn(
-                                    "text-foreground/80 hover:text-foreground flex items-center gap-2 py-2 text-sm font-medium transition-colors duration-150",
-                                    isViewAll &&
-                                      "mt-2 border-t border-border/60 pt-4 text-primary"
-                                  )}
-                                  onClick={() => setMenuState(false)}
-                                >
-                                  {iitem.icon && (
-                                    <Icon
-                                      name={iitem.icon}
-                                      className="size-3 shrink-0"
-                                    />
-                                  )}
-                                  <span>{iitem.title}</span>
-                                </Link>
-                              );
-                            })}
+                            {item.children.map((iitem, ii) => (
+                              <Link
+                                key={ii}
+                                href={iitem.url as any}
+                                target={iitem.target}
+                                className="text-foreground/80 hover:text-foreground flex items-center gap-2 py-2 text-sm font-medium transition-colors duration-150"
+                                onClick={() => setMenuState(false)}
+                              >
+                                {iitem.icon && (
+                                  <Icon
+                                    name={iitem.icon}
+                                    className="size-3 shrink-0"
+                                  />
+                                )}
+                                <span>{iitem.title}</span>
+                              </Link>
+                            ))}
                           </div>
                         </AccordionContent>
                       </AccordionItem>

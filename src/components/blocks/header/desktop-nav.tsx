@@ -31,11 +31,9 @@ export default function DesktopNav({ header }: { header: HeaderType }) {
   }
 
   return (
-    <div className="flex items-center gap-0 whitespace-nowrap">
+    <div className="flex items-center gap-1">
       {header.nav.items.map((item, i) => {
         if (item.children && item.children.length > 0) {
-          const isLinesMenu = item.url === "/astrocartography-lines";
-
           // 🔥 SSR 时渲染静态按钮，客户端挂载后渲染完整的 DropdownMenu
           if (!isMounted) {
             return (
@@ -72,76 +70,27 @@ export default function DesktopNav({ header }: { header: HeaderType }) {
                 <span>{item.title}</span>
                 <Icon name="RiArrowDownSLine" className="size-3 ml-1 opacity-60" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="start"
-                sideOffset={8}
-                className={cn(
-                  "p-3",
-                  isLinesMenu
-                    ? "grid w-[32rem] grid-cols-2 gap-2 rounded-xl border-border/60 bg-popover/95 p-2 shadow-2xl backdrop-blur-xl"
-                    : "w-80"
-                )}
-              >
-                {item.children.map((iitem, ii) => {
-                  const isViewAll =
-                    isLinesMenu &&
-                    (iitem.url === item.url ||
-                      Boolean(iitem.url?.startsWith(`${item.url}#`)));
-
-                  return (
-                    <Link
-                      key={ii}
-                      className={cn(
-                        "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                        isLinesMenu &&
-                          !isViewAll &&
-                          "group min-h-[5.25rem] gap-3 rounded-lg border border-transparent hover:border-border/60 hover:bg-accent/60",
-                        isViewAll &&
-                          "col-span-2 mt-1 items-center rounded-lg border border-primary/15 bg-primary/5 px-4 py-3 text-primary hover:border-primary/30 hover:bg-primary/10 focus:bg-primary/10"
-                      )}
-                      href={iitem.url as any}
-                      target={iitem.target}
-                    >
-                      {iitem.icon && (
-                        <span
-                          className={cn(
-                            "flex shrink-0 items-center justify-center",
-                            isLinesMenu &&
-                              !isViewAll &&
-                              "size-9 rounded-lg bg-foreground/5 text-foreground transition-colors group-hover:bg-primary/10 group-hover:text-primary",
-                            isViewAll && "size-8 rounded-full bg-primary/10"
-                          )}
-                        >
-                          <Icon
-                            name={iitem.icon}
-                            className={cn(
-                              "size-5 shrink-0",
-                              isViewAll && "size-4"
-                            )}
-                          />
-                        </span>
-                      )}
-                      <div className="min-w-0">
-                        <div
-                          className={cn(
-                            "text-sm font-semibold",
-                            isViewAll && "text-primary"
-                          )}
-                        >
-                          {iitem.title}
-                        </div>
-                        <p
-                          className={cn(
-                            "mt-1 text-sm leading-snug text-muted-foreground",
-                            isViewAll && "text-xs"
-                          )}
-                        >
-                          {iitem.description}
-                        </p>
-                      </div>
-                    </Link>
-                  );
-                })}
+              <DropdownMenuContent align="start" className="w-80 p-3">
+                {item.children.map((iitem, ii) => (
+                  <Link
+                    key={ii}
+                    className={cn(
+                      "flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                    )}
+                    href={iitem.url as any}
+                    target={iitem.target}
+                  >
+                    {iitem.icon && (
+                      <Icon name={iitem.icon} className="size-5 shrink-0" />
+                    )}
+                    <div>
+                      <div className="text-sm font-semibold">{iitem.title}</div>
+                      <p className="text-sm leading-snug text-muted-foreground">
+                        {iitem.description}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
           );
@@ -167,3 +116,4 @@ export default function DesktopNav({ header }: { header: HeaderType }) {
     </div>
   );
 }
+

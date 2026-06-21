@@ -13,12 +13,12 @@
     "nav": {
       "items": [
         {
-          "title": "Mapa de Astrocartografía",
+          "title": "Inicio",
           "url": "/",
-          "icon": "RiGlobalLine"
+          "icon": "RiHomeLine"
         },
         {
-          "title": "Calculadoras",
+          "title": "Herramientas",
           "icon": "RiToolsLine",
           "url": "/astrocartography-calculator",
           "children": [
@@ -67,7 +67,7 @@
           ]
         },
         {
-          "title": "Cartas",
+          "title": "Carta",
           "icon": "RiPieChart2Line",
           "url": "/transit-chart-calculator",
           "children": [
@@ -121,6 +121,13 @@
           "url": "/astrocartography-lines",
           "children": [
             {
+              "title": "Todas las líneas de astrocartografía",
+              "description": "Guía completa de cada línea planetaria y cómo los 4 ángulos cambian su efecto",
+              "url": "/astrocartography-lines",
+              "target": "_self",
+              "icon": "RiGlobalLine"
+            },
+            {
               "title": "Línea del Sol",
               "description": "Visibilidad profesional, confianza y expresión auténtica",
               "url": "/sun-line-astrocartography",
@@ -142,6 +149,13 @@
               "icon": "RiHeartLine"
             },
             {
+              "title": "Línea de Marte",
+              "description": "Energía física, impulso, ambición y competencia profesional",
+              "url": "/mars-line-astrocartography",
+              "target": "_self",
+              "icon": "RiFireLine"
+            },
+            {
               "title": "Línea de Júpiter",
               "description": "Suerte, expansión, abundancia y mejores lugares para prosperar",
               "url": "/jupiter-line-astrocartography",
@@ -156,18 +170,25 @@
               "icon": "RiShieldLine"
             },
             {
-              "title": "Explorar todas las líneas",
-              "description": "Consulta el directorio completo por planeta u objetivo",
-              "url": "/astrocartography-lines#lines-directory",
+              "title": "Línea de Mercurio",
+              "description": "Comunicación, aprendizaje, escritura y agudeza comercial",
+              "url": "/mercury-line-astrocartography",
               "target": "_self",
-              "icon": "RiArrowRightCircleLine"
+              "icon": "RiMessage3Line"
+            },
+            {
+              "title": "Línea de Urano",
+              "description": "Libertad, cambios repentinos, reinvención y caminos no convencionales",
+              "url": "/uranus-line-astrocartography",
+              "target": "_self",
+              "icon": "RiFlashlightLine"
             }
           ]
         },
         {
-          "title": "Aprender",
+          "title": "Blog",
           "url": "/posts",
-          "icon": "RiBookOpenLine"
+          "icon": "RiArticleLine"
         }
       ]
     },
