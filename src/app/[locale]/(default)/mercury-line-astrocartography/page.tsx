@@ -14,7 +14,7 @@ export const revalidate = 604800;
 export const dynamicParams = true;
 
 const PATH = "/mercury-line-astrocartography";
-const LOCALES = ["en"];
+const LOCALES = ["en", "zh", "pt", "es", "it", "de"];
 
 export async function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -35,7 +35,15 @@ export async function generateMetadata({
     keywords,
     alternates: {
       canonical: getCanonicalUrl(locale, PATH),
-      languages: { en: getCanonicalUrl("en", PATH) },
+      languages: {
+        en: getCanonicalUrl("en", PATH),
+        zh: getCanonicalUrl("zh", PATH),
+        pt: getCanonicalUrl("pt", PATH),
+        es: getCanonicalUrl("es", PATH),
+        it: getCanonicalUrl("it", PATH),
+        de: getCanonicalUrl("de", PATH),
+        "x-default": getCanonicalUrl("en", PATH),
+      },
     },
     openGraph: {
       title,

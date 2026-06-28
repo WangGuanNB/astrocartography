@@ -614,43 +614,253 @@
   </url>
   <url>
     <loc>https://astrocarto.org/sun-line-astrocartography/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/sun-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/sun-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/sun-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/sun-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/sun-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://astrocarto.org/moon-line-astrocartography/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/moon-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/moon-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/moon-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/moon-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/moon-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://astrocarto.org/venus-line-astrocartography/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/venus-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/venus-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/venus-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/venus-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/venus-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://astrocarto.org/mars-line-astrocartography/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/mars-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/mars-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/mars-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/mars-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/mars-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://astrocarto.org/jupiter-line-astrocartography/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/jupiter-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/jupiter-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/jupiter-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/jupiter-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/jupiter-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://astrocarto.org/saturn-line-astrocartography/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/saturn-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/saturn-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/saturn-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/saturn-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/saturn-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://astrocarto.org/mercury-line-astrocartography/</loc>
-    <lastmod>2026-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/mercury-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/mercury-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/mercury-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/mercury-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/mercury-line-astrocartography/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
