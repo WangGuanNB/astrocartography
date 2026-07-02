@@ -16,6 +16,11 @@
         "url": "/"
       },
       {
+        "text": "¿Solo conoces tu fecha de nacimiento?",
+        "linkText": "Calculadora Signo Zodiacal",
+        "url": "/zodiac-calculator"
+      },
+      {
         "text": "¿Prefieres tutoriales y ejemplos?",
         "linkText": "Lee el Blog",
         "url": "/posts"

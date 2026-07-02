@@ -11,6 +11,11 @@
     "title": "相关工具",
     "items": [
       {
+        "text": "只知道出生日期？",
+        "linkText": "星座计算器",
+        "url": "/zodiac-calculator"
+      },
+      {
         "text": "需要完整本命盘？",
         "linkText": "本命盘生成器",
         "url": "/tools/birth-chart-generator"

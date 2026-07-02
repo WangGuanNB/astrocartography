@@ -11,6 +11,11 @@
     "title": "Strumenti correlati",
     "items": [
       {
+        "text": "Conosci solo la data di nascita?",
+        "linkText": "Calcolatore Segno Zodiacale",
+        "url": "/zodiac-calculator"
+      },
+      {
         "text": "Ti serve la carta natale completa?",
         "linkText": "Generatore Tema Natale",
         "url": "/tools/birth-chart-generator"

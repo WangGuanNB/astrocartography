@@ -16,6 +16,11 @@
         "url": "/"
       },
       {
+        "text": "Nur Geburtsdatum bekannt?",
+        "linkText": "Sternzeichen Rechner",
+        "url": "/zodiac-calculator"
+      },
+      {
         "text": "Nur Ihren Aszendenten benötigt?",
         "linkText": "Aszendent Rechner",
         "url": "/rising-sign-calculator"

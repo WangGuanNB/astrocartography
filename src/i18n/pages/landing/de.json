@@ -37,6 +37,13 @@
               "icon": "RiPieChartLine"
             },
             {
+              "title": "Sternzeichen Rechner",
+              "description": "Sonnenzeichen nur mit Geburtsdatum ermitteln",
+              "url": "/zodiac-calculator",
+              "target": "_self",
+              "icon": "RiSunLine"
+            },
+            {
               "title": "Aszendent Rechner",
               "description": "Aszendent nach Geburtszeit und -ort ermitteln",
               "url": "/rising-sign-calculator",

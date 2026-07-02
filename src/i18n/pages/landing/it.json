@@ -37,6 +37,13 @@
               "icon": "RiPieChartLine"
             },
             {
+              "title": "Calcolatore Segno Zodiacale",
+              "description": "Trova il tuo segno solare solo con la data di nascita",
+              "url": "/zodiac-calculator",
+              "target": "_self",
+              "icon": "RiSunLine"
+            },
+            {
               "title": "Calcolatore Segno Ascendente",
               "description": "Trova il tuo ascendente per data, ora e luogo",
               "url": "/rising-sign-calculator",

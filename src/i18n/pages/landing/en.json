@@ -37,6 +37,13 @@
               "icon": "RiPieChartLine"
             },
             {
+              "title": "Zodiac Sign Calculator",
+              "description": "Find your sun sign by birth date only",
+              "url": "/zodiac-calculator",
+              "target": "_self",
+              "icon": "RiSunLine"
+            },
+            {
               "title": "Rising Sign Calculator",
               "description": "Find your ascendant by birth time and location",
               "url": "/rising-sign-calculator",

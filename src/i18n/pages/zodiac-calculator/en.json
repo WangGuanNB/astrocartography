@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "title": "Zodiac Calculator — Sun Sign by Birth Date | AstroCarto",
+    "description": "Free zodiac calculator: enter your birth date for sun sign, element, modality, ruling planet, and cusp notes. Then open your birth chart and Astrocartography map.",
+    "keywords": "zodiac calculator, zodiac sign calculator, sun sign calculator, what is my zodiac sign, find my zodiac sign by birth date, free zodiac calculator"
+  },
+  "intentAnchor": {
+    "text": "Looking for a zodiac calculator? This page puts the tool first. Enter your birth date to instantly find your tropical sun sign, element, modality, and ruling planet. No birth time required. Then continue to your full birth chart or explore where your chart activates on the world map with Astrocartography."
+  },
+  "internalLinks": {
+    "title": "Related Tools",
+    "items": [
+      {
+        "text": "Want moon, rising, and houses too?",
+        "linkText": "Birth Chart Generator",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "Know your birth time?",
+        "linkText": "Rising Sign Calculator",
+        "url": "/rising-sign-calculator"
+      },
+      {
+        "text": "Explore love and values in your chart.",
+        "linkText": "Venus Sign Calculator",
+        "url": "/venus-sign-calculator"
+      },
+      {
+        "text": "See where your chart thrives globally.",
+        "linkText": "Astrocartography Map",
+        "url": "/"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What Is a Zodiac Sign Calculator",
+    "label": "INTRODUCTION",
+    "description": "A zodiac sign calculator (also called a sun sign calculator) identifies which of the twelve zodiac signs the Sun occupied on your birth date. In Western tropical astrology, your sun sign describes core identity, conscious will, and the life themes you naturally express. Unlike your rising sign, which requires birth time and location, your sun sign can be calculated from your birth date alone—making this the fastest entry point into natal astrology for beginners.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Zodiac sign calculator showing birth date input and sun sign result"
+    },
+    "items": [
+      {
+        "title": "Sun Sign from Birth Date Only",
+        "description": "Most people searching for a zodiac calculator want a quick answer: what is my zodiac sign? This tool uses your birth date and ephemeris-backed astronomical calculation to return your tropical sun sign, degree in sign, element (Fire, Earth, Air, Water), modality (Cardinal, Fixed, Mutable), and ruling planet. You do not need birth time or birthplace for the sun sign itself—though those details become essential when you move to rising sign, moon sign, and house placements.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "Calendar input for zodiac sign calculator" }
+      },
+      {
+        "title": "Tropical Western Zodiac",
+        "description": "This zodiac calculator uses the tropical zodiac—the system used by most Western horoscopes and birth chart software. Tropical signs are tied to seasons, not fixed star constellations. If you follow Vedic or sidereal astrology, your sign may differ by roughly one sign. We disclose this clearly so you can compare systems honestly rather than assuming one universal answer.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "Tropical zodiac wheel illustration" }
+      },
+      {
+        "title": "From Sun Sign to Full Chart",
+        "description": "Your sun sign is one layer of a much richer natal chart. After using this zodiac sign calculator, continue to our Birth Chart Generator for moon sign, rising sign, planetary placements, and houses—or explore Astrocartography to see where those energies activate geographically. The sun sign answers who you are at your core; the full chart and map show how that core expresses across relationships, career, home, and location.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "Path from sun sign result to full birth chart and world map" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Use Our Zodiac Sign Calculator",
+    "label": "Core Benefits",
+    "description": "This free zodiac calculator combines accurate ephemeris calculation with clear educational content. Get your sun sign instantly, understand element and modality, read an honest cusp disclaimer when needed, and continue to deeper tools without re-entering unrelated data.",
+    "items": [
+      {
+        "title": "Ephemeris-Backed Accuracy",
+        "description": "We calculate your sun sign using the same astronomical engine that powers our birth chart and placement calculators—not static date tables alone. The Sun's position shifts sign boundaries by year, especially near cusp dates. Ephemeris calculation at a consistent reference time gives you a reliable tropical result with transparent limitations when you were born on a sign-change day.",
+        "icon": "RiFlashlightLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Accurate sun sign calculation display" }
+      },
+      {
+        "title": "Free, No Signup Required",
+        "description": "Use this zodiac sign calculator as many times as you want without creating an account or paying. Calculate your sign, a friend's sign, or compare family birthdays. When you are ready for moon, rising, Venus, or relocation insights, our other calculators and Astrocartography map remain free entry points into location-based astrology.",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Free zodiac calculator with no signup" }
+      },
+      {
+        "title": "Sun vs Rising vs Moon—Clear Next Steps",
+        "description": "Many zodiac calculator searches confuse sun sign with rising sign or moon sign. This page explains the difference plainly: sun sign needs only birth date; rising sign needs birth time and location; moon sign changes roughly every two and a half days. After your sun sign result, we link you to the Rising Sign Calculator and Birth Chart Generator so you can deepen the picture without keyword confusion or duplicate content.",
+        "icon": "RiMapPinLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Sun sign versus rising sign comparison" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Use the Zodiac Calculator",
+    "label": "HOW TO USE",
+    "description": "Finding your zodiac sign takes seconds. Enter your birth date, review your sun sign result with element and modality, read any cusp note if applicable, then continue to your full birth chart or Astrocartography map.",
+    "items": [
+      {
+        "title": "Enter Your Birth Date",
+        "description": "Select or type your birth date in YYYY-MM-DD format. The zodiac calculator uses this single input to compute your tropical sun sign. If you were born on a date listed near a sign boundary in popular date-range charts, pay attention to the cusp note in your result—it may suggest confirming with birth time via our Birth Chart Generator.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Review Your Sun Sign Result",
+        "description": "Instantly see your sun sign, degree in sign, element, modality, ruling planet, and typical date range for that sign. A short interpretation describes how this sign often expresses core identity and life direction. Results use tropical Western astrology; sidereal signs may differ.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Check Cusp Notes When Relevant",
+        "description": "If your Sun sits within one degree of a sign boundary, the calculator flags a cusp situation. On those birth dates, the Sun may change signs during the day depending on the year and your birth time. A date-only zodiac calculator gives the best estimate at a standard reference time—we disclose this honestly rather than overclaiming precision you cannot get without a clock time.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Continue to Full Chart or Map",
+        "description": "Click through to the Birth Chart Generator for moon, rising, houses, and aspects—or open the Astrocartography map to see where your Sun line and other planetary lines cross the globe. Your sun sign is the starting point; location astrology shows where that energy may feel strongest in the real world.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Zodiac Sign Calculator Features",
+    "label": "FEATURES",
+    "description": "Built for search intent and honest astrology: instant sun sign by date, element and modality metadata, cusp transparency, 12-sign reference context, and seamless links to birth chart and Astrocartography tools.",
+    "items": [
+      {
+        "title": "Instant Sun Sign by Birth Date",
+        "description": "The core zodiac calculator promise: enter birth date, get sun sign. No friction from time zones, geocoding, or birth certificates. Ideal for beginners asking what is my zodiac sign before they invest in full chart data.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Element, Modality, and Ruling Planet",
+        "description": "Each result includes Fire/Earth/Air/Water element and Cardinal/Fixed/Mutable modality—frameworks that help you compare signs and read compatibility more thoughtfully than sun-sign memes alone. The ruling planet connects your sun sign to transits and chart ruler themes in advanced work.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "12 Zodiac Sign Date Ranges Reference",
+        "description": "Educational sections below the tool explain approximate tropical date ranges for all twelve signs: Aries (Mar 21–Apr 19), Taurus (Apr 20–May 20), Gemini (May 21–Jun 20), Cancer (Jun 21–Jul 22), Leo (Jul 23–Aug 22), Virgo (Aug 23–Sep 22), Libra (Sep 23–Oct 22), Scorpio (Oct 23–Nov 21), Sagittarius (Nov 22–Dec 21), Capricorn (Dec 22–Jan 19), Aquarius (Jan 20–Feb 18), Pisces (Feb 19–Mar 20). Year-specific ephemeris still matters near boundaries.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Honest Cusp and System Disclosures",
+        "description": "We flag near-cusp degrees and explain tropical versus sidereal differences. A polished zodiac sign calculator should not pretend date-only input equals a professional rectified chart. Transparency builds trust and routes serious users to birth time tools when they need them.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Sun, Moon, and Rising Comparison",
+        "description": "Feature content clarifies that sun sign is identity, moon sign is emotional style, and rising sign is first impression and chart foundation. This zodiac calculator owns the sun-sign job; our Rising Sign Calculator and Birth Chart Generator own the rest—reducing internal competition and helping users pick the right tool.",
+        "icon": "RiCompass3Line"
+      },
+      {
+        "title": "Handoff to Birth Chart and Astrocartography",
+        "description": "Result buttons link to the Birth Chart Generator and Rising Sign Calculator. From there, one more step opens the Astrocartography map where Sun lines and other planetary lines show geographic activation. The zodiac calculator is a funnel, not a dead-end horoscope page.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Zodiac Sign Calculator — Frequently Asked Questions",
+    "description": "Common questions about finding your zodiac sign by birth date, cusp dates, tropical versus sidereal systems, and how sun sign relates to rising and moon signs.",
+    "items": [
+      {
+        "title": "What is my zodiac sign?",
+        "description": "Your zodiac sign in Western tropical astrology usually means your sun sign—the sign the Sun occupied on your birth date. Enter your birth date in the calculator above to find it instantly. For moon sign or rising sign, you need additional birth data and should use our Birth Chart Generator or Rising Sign Calculator."
+      },
+      {
+        "title": "Is this zodiac calculator free?",
+        "description": "Yes. This zodiac sign calculator is completely free with no account required. Calculate your sun sign, read element and modality details, and continue to other free astrology tools on Astrocarto.org whenever you are ready."
+      },
+      {
+        "title": "What if I was born on a cusp?",
+        "description": "Cusp dates occur when the Sun changes signs—often around the 19th–23rd of a month, but the exact moment varies by year. A date-only zodiac calculator uses a standard reference time and may flag when your Sun sits near a sign boundary. If you were born on a cusp day, birth time can confirm whether you are one sign or the other. Use our Birth Chart Generator with your exact birth time when available."
+      },
+      {
+        "title": "Sun sign vs rising sign—what is the difference?",
+        "description": "Sun sign comes from birth date and describes core identity and conscious direction. Rising sign (ascendant) requires birth date, exact time, and birthplace—it describes first impressions and sets the whole house system. Many people share a sun sign but have different rising signs. This page is a zodiac calculator for sun sign; use the Rising Sign Calculator for ascendant."
+      },
+      {
+        "title": "Is this tropical or sidereal?",
+        "description": "This zodiac calculator uses the tropical Western zodiac tied to seasons. Sidereal (Vedic) astrology uses star-based sign boundaries, so your sidereal sun sign may be about one sign earlier. We use tropical because it matches most Western birth chart tools and search intent for zodiac calculator in English."
+      },
+      {
+        "title": "Do I need birth time for my zodiac sign?",
+        "description": "No—for sun sign, birth date alone is enough. Birth time becomes important for rising sign, house placements, and exact moon sign on days when the Moon changes sign. After this zodiac sign calculator, add birth time in the Birth Chart Generator for a complete natal picture."
+      },
+      {
+        "title": "How accurate is a zodiac sign calculator?",
+        "description": "When the Sun is clearly in the middle of a sign, date-only calculation is highly reliable in tropical astrology. Accuracy decreases near sign boundaries without birth time. We use ephemeris-backed calculation rather than oversimplified static tables, and we disclose cusp uncertainty honestly."
+      },
+      {
+        "title": "What should I do after finding my zodiac sign?",
+        "description": "Explore your full Birth Chart Generator result for moon, rising, Venus, and houses. Then open the Astrocartography map to see where your Sun line and other planetary lines cross countries and cities—useful for travel, relocation, or understanding how place amplifies chart themes."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Find Your Zodiac Sign Now",
+    "description": "Use our free zodiac sign calculator to discover your tropical sun sign by birth date. Read element, modality, and ruling planet details, then generate your full birth chart and explore your Astrocartography map—no signup required.",
+    "buttons": [
+      {
+        "title": "Generate your full birth chart →",
+        "icon": "RiMapLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Birth date",
+      "submit": "Calculate my zodiac sign",
+      "calculating": "Calculating…"
+    },
+    "result": {
+      "title": "Your Sun Sign",
+      "sign": "Zodiac sign",
+      "degree": "Degree",
+      "element": "Element",
+      "modality": "Modality",
+      "ruler": "Ruling planet",
+      "dateRange": "Typical date range",
+      "interpretation": "Interpretation",
+      "cuspTitle": "Near a sign boundary (cusp)",
+      "cuspNote": "Your Sun is at the edge of {sign}. If you were born early or late in the day, you might be {adjacent} instead. Add birth time in the Birth Chart Generator to confirm.",
+      "systemNote": "Tropical Western zodiac. Sidereal/Vedic signs may differ by about one sign.",
+      "ctaBirthChart": "Generate your full birth chart",
+      "ctaRising": "Calculate rising sign (needs birth time)"
+    },
+    "errors": {
+      "required": "Enter your birth date to calculate your zodiac sign.",
+      "generic": "Calculation error. Please check your birth date and try again."
+    },
+    "interpretations": {
+      "Aries": "Aries sun signs tend toward directness, initiative, and a need to act on instinct. Core identity often expresses through courage, competition, and pioneering projects. Mars as ruler emphasizes action, self-assertion, and learning through challenge.",
+      "Taurus": "Taurus sun signs seek stability, sensory pleasure, and tangible results. Identity builds through patience, values, and loyalty to what feels worth keeping. Venus as ruler brings appreciation for beauty, comfort, and steady growth.",
+      "Gemini": "Gemini sun signs thrive on curiosity, language, and mental variety. Core identity often shows through communication, adaptability, and connecting ideas across domains. Mercury as ruler emphasizes learning, wit, and social exchange.",
+      "Cancer": "Cancer sun signs orient around emotional security, belonging, and protective care. Identity expresses through memory, family themes, and intuitive responsiveness. The Moon as ruler highlights mood, nurture, and inner safety.",
+      "Leo": "Leo sun signs radiate creative self-expression, warmth, and desire for meaningful recognition. Core identity often seeks authenticity, play, and generous leadership. The Sun as ruler emphasizes vitality, pride, and heart-centered purpose.",
+      "Virgo": "Virgo sun signs refine life through analysis, service, and practical improvement. Identity expresses through discernment, craft, and helpfulness without fanfare. Mercury as ruler brings precision, health awareness, and problem-solving.",
+      "Libra": "Libra sun signs pursue balance, partnership, and aesthetic harmony. Core identity often develops through relationship, fairness, and social grace. Venus as ruler emphasizes cooperation, design, and diplomatic intelligence.",
+      "Scorpio": "Scorpio sun signs engage depth, transformation, and emotional truth. Identity expresses through intensity, loyalty, and willingness to confront what others avoid. Pluto as ruler highlights power, renewal, and psychological insight.",
+      "Sagittarius": "Sagittarius sun signs expand through philosophy, travel, and big-picture meaning. Core identity seeks freedom, honesty, and growth beyond familiar limits. Jupiter as ruler brings optimism, teaching, and adventurous faith.",
+      "Capricorn": "Capricorn sun signs build identity through discipline, responsibility, and long-range goals. Expression tends toward maturity, structure, and respect earned over time. Saturn as ruler emphasizes ambition, boundaries, and mastery.",
+      "Aquarius": "Aquarius sun signs value originality, community, and forward-thinking ideals. Core identity often expresses through innovation, detachment, and humanitarian or intellectual causes. Uranus as ruler highlights change, individuality, and systems thinking.",
+      "Pisces": "Pisces sun signs absorb, imagine, and empathize across visible and invisible worlds. Identity expresses through compassion, artistry, and spiritual sensitivity. Neptune as ruler emphasizes dreams, surrender, and subtle perception."
+    }
+  }
+}

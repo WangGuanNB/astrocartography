@@ -16,6 +16,11 @@
         "url": "/"
       },
       {
+        "text": "只知道出生日期？",
+        "linkText": "星座计算器",
+        "url": "/zodiac-calculator"
+      },
+      {
         "text": "想看教程与示例？",
         "linkText": "阅读博客",
         "url": "/posts"

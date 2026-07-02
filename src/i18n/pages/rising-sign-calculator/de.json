@@ -11,6 +11,11 @@
     "title": "Verwandte Tools",
     "items": [
       {
+        "text": "Nur Geburtsdatum bekannt?",
+        "linkText": "Sternzeichen Rechner",
+        "url": "/zodiac-calculator"
+      },
+      {
         "text": "Vollständiges Geburtshoroskop benötigt?",
         "linkText": "Geburtshoroskop Generator",
         "url": "/tools/birth-chart-generator"

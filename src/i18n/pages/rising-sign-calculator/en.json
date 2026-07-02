@@ -11,6 +11,11 @@
     "title": "Related Tools",
     "items": [
       {
+        "text": "Only know your birth date?",
+        "linkText": "Zodiac Sign Calculator",
+        "url": "/zodiac-calculator"
+      },
+      {
         "text": "Need your complete natal chart?",
         "linkText": "Birth Chart Generator",
         "url": "/tools/birth-chart-generator"

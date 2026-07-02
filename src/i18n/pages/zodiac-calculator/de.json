@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "title": "Sternzeichen Rechner — Sonnenzeichen nach Datum | AstroCarto",
+    "description": "Kostenloser Sternzeichen Rechner: Geburtsdatum für Sonnenzeichen, Element, Modalität und Herrscher. Dann Geburtshoroskop und Astrokartografie-Karte.",
+    "keywords": "Sternzeichen Rechner, Sonnenzeichen Rechner, welches Sternzeichen bin ich, Sternzeichen nach Geburtsdatum, kostenloser Sternzeichen Rechner, zodiac calculator"
+  },
+  "intentAnchor": {
+    "text": "Sie suchen einen Sternzeichen Rechner? Diese Seite stellt das Tool zuerst bereit. Geburtsdatum eingeben und sofort Ihr tropisches Sonnenzeichen, Element, Modalität und Herrscherplanet entdecken. Keine Geburtszeit nötig. Dann weiter zum vollständigen Geburtshoroskop oder erkunden Sie, wo Ihr Chart auf der Weltkarte durch Astrokartografie aktiviert wird."
+  },
+  "internalLinks": {
+    "title": "Verwandte Tools",
+    "items": [
+      {
+        "text": "Mond, Aszendent und Häuser benötigt?",
+        "linkText": "Geburtshoroskop Generator",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "Geburtszeit bekannt?",
+        "linkText": "Aszendent Rechner",
+        "url": "/rising-sign-calculator"
+      },
+      {
+        "text": "Liebe und Werte in Ihrem Chart erkunden.",
+        "linkText": "Venuszeichen Rechner",
+        "url": "/venus-sign-calculator"
+      },
+      {
+        "text": "Sehen Sie, wo Ihr Chart weltweit gedeiht.",
+        "linkText": "Astrokartografie Karte",
+        "url": "/"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Was ist ein Sternzeichen Rechner",
+    "label": "EINFÜHRUNG",
+    "description": "Ein Sternzeichen Rechner (auch Sonnenzeichen Rechner genannt) ermittelt, in welchem der zwölf Tierkreiszeichen die Sonne an Ihrem Geburtsdatum stand. In der westlichen tropischen Astrologie beschreibt Ihr Sonnenzeichen Kernidentität, bewussten Willen und Lebensthemen, die Sie natürlich ausdrücken. Anders als der Aszendent, der Geburtszeit und -ort braucht, lässt sich Ihr Sternzeichen allein aus dem Geburtsdatum berechnen – der schnellste Einstieg in die Geburtshoroskop-Astrologie für Einsteiger.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Sternzeichen Rechner mit Geburtsdatum-Eingabe und Sonnenzeichen-Ergebnis"
+    },
+    "items": [
+      {
+        "title": "Sonnenzeichen nur aus dem Geburtsdatum",
+        "description": "Die meisten, die einen Sternzeichen Rechner suchen, wollen eine schnelle Antwort: Welches Sternzeichen bin ich? Dieses Tool nutzt Ihr Geburtsdatum und ephemeridenbasierte astronomische Berechnung, um Ihr tropisches Sonnenzeichen, Grad im Zeichen, Element (Feuer, Erde, Luft, Wasser), Modalität (Kardinal, Fix, Veränderlich) und Herrscherplanet zurückzugeben. Für das Sonnenzeichen selbst brauchen Sie keine Geburtszeit oder Geburtsort – diese Angaben werden jedoch wichtig, wenn Sie zu Aszendent, Mondzeichen und Hausstellungen wechseln.",
+        "image": { "src": "/imgs/features/1.webp", "alt": "Kalendereingabe für Sternzeichen Rechner" }
+      },
+      {
+        "title": "Tropischer westlicher Tierkreis",
+        "description": "Dieser Sternzeichen Rechner nutzt den tropischen Tierkreis – das System der meisten westlichen Horoskope und Geburtshoroskop-Software. Tropische Zeichen sind an Jahreszeiten gebunden, nicht an feste Sternbilder. Bei vedischer oder siderischer Astrologie kann Ihr Zeichen etwa ein Zeichen abweichen. Wir weisen darauf klar hin, damit Sie Systeme ehrlich vergleichen können, statt eine universelle Antwort vorauszusetzen.",
+        "image": { "src": "/imgs/features/2.webp", "alt": "Illustration des tropischen Tierkreisrads" }
+      },
+      {
+        "title": "Vom Sonnenzeichen zum vollständigen Chart",
+        "description": "Ihr Sternzeichen ist eine Schicht eines viel reicheren Geburtshoroskops. Nach dem Sternzeichen Rechner geht es weiter zum Geburtshoroskop Generator für Mondzeichen, Aszendent, Planetenstellungen und Häuser – oder erkunden Sie Astrokartografie, um zu sehen, wo diese Energien geografisch aktiv werden. Das Sonnenzeichen beantwortet, wer Sie im Kern sind; Chart und Karte zeigen, wie sich dieser Kern in Beziehungen, Karriere, Zuhause und am Ort ausdrückt.",
+        "image": { "src": "/imgs/features/3.webp", "alt": "Weg vom Sonnenzeichen-Ergebnis zum Geburtshoroskop und zur Weltkarte" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Warum unseren Sternzeichen Rechner nutzen",
+    "label": "Kernvorteile",
+    "description": "Dieser kostenlose Sternzeichen Rechner verbindet präzise Ephemeriden-Berechnung mit klarem Bildungsinhalt. Erhalten Sie Ihr Sonnenzeichen sofort, verstehen Sie Element und Modalität, lesen Sie bei Bedarf einen ehrlichen Grenzgrad-Hinweis und gehen Sie ohne erneute Dateneingabe zu tieferen Tools über.",
+    "items": [
+      {
+        "title": "Ephemeriden-gestützte Genauigkeit",
+        "description": "Wir berechnen Ihr Sonnenzeichen mit derselben astronomischen Engine wie unsere Geburtshoroskop- und Planeten-Rechner – nicht nur statischen Datumstabellen. Die Sonnenposition verschiebt Zeichengrenzen jährlich, besonders nahe Grenzdaten. Ephemeriden-Berechnung zu einer einheitlichen Referenzzeit liefert ein zuverlässiges tropisches Ergebnis mit transparenter Einschränkung, wenn Sie an einem Zeichenwechseltag geboren wurden.",
+        "icon": "RiFlashlightLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Präzise Sonnenzeichen-Berechnungsanzeige" }
+      },
+      {
+        "title": "Kostenlos, ohne Anmeldung",
+        "description": "Nutzen Sie diesen Sternzeichen Rechner so oft Sie möchten, ohne Konto oder Zahlung. Berechnen Sie Ihr Zeichen, das eines Freundes oder vergleichen Sie Familiengeburtstage. Wenn Sie bereit sind für Mond, Aszendent, Venus oder Umzugs-Insights, bleiben unsere anderen Rechner und die Astrokartografie-Karte kostenlose Einstiegspunkte in die standortbezogene Astrologie.",
+        "icon": "RiListCheck",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Sternzeichen Rechner ohne Anmeldung" }
+      },
+      {
+        "title": "Sonne vs. Aszendent vs. Mond – klare nächste Schritte",
+        "description": "Viele Sternzeichen-Rechner-Suchen verwechseln Sonnenzeichen mit Aszendent oder Mondzeichen. Diese Seite erklärt den Unterschied klar: Sonnenzeichen braucht nur Geburtsdatum; Aszendent braucht Geburtszeit und -ort; Mondzeichen wechselt etwa alle zweieinhalb Tage. Nach Ihrem Ergebnis verlinken wir zum Aszendent Rechner und Geburtshoroskop Generator, damit Sie das Bild vertiefen können – ohne Keyword-Verwirrung oder doppelten Inhalt.",
+        "icon": "RiMapPinLine",
+        "image": { "src": "/imgs/features/4.webp", "alt": "Vergleich Sonnenzeichen vs. Aszendent" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "So nutzen Sie den Sternzeichen Rechner",
+    "label": "SO NUTZEN SIE",
+    "description": "Ihr Sternzeichen finden Sie in Sekunden. Geburtsdatum eingeben, Sonnenzeichen-Ergebnis mit Element und Modalität prüfen, ggf. Grenzgrad-Hinweis lesen, dann weiter zum vollständigen Geburtshoroskop oder zur Astrokartografie-Karte.",
+    "items": [
+      {
+        "title": "Geburtsdatum eingeben",
+        "description": "Geburtsdatum im Format JJJJ-MM-TT wählen oder eingeben. Der Sternzeichen Rechner nutzt diese einzige Eingabe für Ihr tropisches Sonnenzeichen. Wurden Sie an einem Datum nahe einer Zeichengrenze in populären Datumsbereichstabellen geboren, beachten Sie den Grenzgrad-Hinweis im Ergebnis – er kann empfehlen, mit Geburtszeit über unseren Geburtshoroskop Generator zu bestätigen.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Sonnenzeichen-Ergebnis prüfen",
+        "description": "Sofort sehen Sie Ihr Sonnenzeichen, Grad im Zeichen, Element, Modalität, Herrscherplanet und typischen Datumsbereich für dieses Zeichen. Eine kurze Interpretation beschreibt, wie sich dieses Zeichen oft in Kernidentität und Lebensrichtung ausdrückt. Ergebnisse nutzen tropische westliche Astrologie; siderische Zeichen können abweichen.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Grenzgrad-Hinweise bei Bedarf prüfen",
+        "description": "Steht Ihre Sonne innerhalb eines Grads einer Zeichengrenze, markiert der Rechner eine Grenzgrad-Situation. An solchen Geburtsdaten kann die Sonne je nach Jahr und Geburtszeit im Tagesverlauf das Zeichen wechseln. Ein datumsbasierter Sternzeichen Rechner liefert die beste Schätzung zu einer Standard-Referenzzeit – wir weisen ehrlich darauf hin, statt Präzision zu behaupten, die ohne Uhrzeit nicht möglich ist.",
+        "icon": "RiGlobalLine"
+      },
+      {
+        "title": "Weiter zum vollständigen Chart oder zur Karte",
+        "description": "Klicken Sie zum Geburtshoroskop Generator für Mond, Aszendent, Häuser und Aspekte – oder öffnen Sie die Astrokartografie-Karte, um zu sehen, wo Ihre Sonnenlinie und andere Planetenlinien die Erde kreuzen. Ihr Sternzeichen ist der Ausgangspunkt; Standort-Astrologie zeigt, wo diese Energie in der realen Welt am stärksten wirken kann.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Funktionen des Sternzeichen Rechners",
+    "label": "FUNKTIONEN",
+    "description": "Für Suchintention und ehrliche Astrologie: sofortiges Sonnenzeichen nach Datum, Element- und Modalitäts-Metadaten, Grenzgrad-Transparenz, 12-Zeichen-Referenzkontext und nahtlose Links zu Geburtshoroskop und Astrokartografie.",
+    "items": [
+      {
+        "title": "Sofortiges Sonnenzeichen nach Geburtsdatum",
+        "description": "Das Kernversprechen des Sternzeichen Rechners: Geburtsdatum eingeben, Sonnenzeichen erhalten. Keine Reibung durch Zeitzonen, Geocoding oder Geburtsurkunden. Ideal für Einsteiger, die fragen, welches Sternzeichen bin ich, bevor sie in vollständige Chart-Daten investieren.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Element, Modalität und Herrscherplanet",
+        "description": "Jedes Ergebnis enthält Feuer/Erde/Luft/Wasser-Element und Kardinal/Fix/Veränderlich-Modalität – Rahmen, die helfen, Zeichen zu vergleichen und Kompatibilität durchdachter zu lesen als nur Sternzeichen-Meme. Der Herrscherplanet verbindet Ihr Sonnenzeichen mit Transiten und Chart-Herrscher-Themen in fortgeschrittener Arbeit.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Referenz: Datumsbereiche aller 12 Zeichen",
+        "description": "Bildungsabschnitte unter dem Tool erklären ungefähre tropische Datumsbereiche für alle zwölf Zeichen: Widder (21. Mär – 19. Apr), Stier (20. Apr – 20. Mai), Zwillinge (21. Mai – 20. Jun), Krebs (21. Jun – 22. Jul), Löwe (23. Jul – 22. Aug), Jungfrau (23. Aug – 22. Sep), Waage (23. Sep – 22. Okt), Skorpion (23. Okt – 21. Nov), Schütze (22. Nov – 21. Dez), Steinbock (22. Dez – 19. Jan), Wassermann (20. Jan – 18. Feb), Fische (19. Feb – 20. Mär). Jahresspezifische Ephemeriden zählen nahe Grenzen weiterhin.",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Ehrliche Grenzgrad- und System-Hinweise",
+        "description": "Wir markieren nahe-Grenzgrade und erklären tropisch vs. siderisch. Ein professioneller Sternzeichen Rechner sollte nicht so tun, als wäre Datums-Eingabe gleich einem professionell rekonstruierten Chart. Transparenz schafft Vertrauen und leitet ernsthafte Nutzer zu Geburtszeit-Tools, wenn nötig.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Vergleich Sonne, Mond und Aszendent",
+        "description": "Feature-Inhalt klärt: Sonnenzeichen ist Identität, Mondzeichen emotionaler Stil, Aszendent erster Eindruck und Chart-Grundlage. Dieser Sternzeichen Rechner übernimmt die Sonnenzeichen-Aufgabe; Aszendent Rechner und Geburtshoroskop Generator den Rest – weniger interne Konkurrenz und Nutzer finden das richtige Tool.",
+        "icon": "RiCompass3Line"
+      },
+      {
+        "title": "Übergabe an Geburtshoroskop und Astrokartografie",
+        "description": "Ergebnis-Buttons verlinken zum Geburtshoroskop Generator und Aszendent Rechner. Von dort öffnet ein weiterer Schritt die Astrokartografie-Karte, wo Sonnenlinien und andere Planetenlinien geografische Aktivierung zeigen. Der Sternzeichen Rechner ist ein Trichter, keine Sackgasse-Horoskop-Seite.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Sternzeichen Rechner – Häufig gestellte Fragen",
+    "description": "Häufige Fragen zum Finden Ihres Sternzeichens nach Geburtsdatum, Grenzdaten, tropisch vs. siderisch und wie sich Sonnenzeichen zu Aszendent und Mondzeichen verhält.",
+    "items": [
+      {
+        "title": "Welches Sternzeichen bin ich?",
+        "description": "Ihr Sternzeichen in der westlichen tropischen Astrologie bedeutet meist Ihr Sonnenzeichen – das Zeichen, in dem die Sonne an Ihrem Geburtsdatum stand. Geburtsdatum oben im Rechner eingeben, um es sofort zu finden. Für Mondzeichen oder Aszendent brauchen Sie weitere Geburtsdaten – nutzen Sie unseren Geburtshoroskop Generator oder Aszendent Rechner."
+      },
+      {
+        "title": "Ist dieser Sternzeichen Rechner kostenlos?",
+        "description": "Ja. Dieser Sternzeichen Rechner ist vollständig kostenlos ohne Konto. Berechnen Sie Ihr Sonnenzeichen, lesen Sie Element- und Modalitäts-Details und nutzen Sie jederzeit weitere kostenlose Astrologie-Tools auf Astrocarto.org."
+      },
+      {
+        "title": "Was, wenn ich an einem Grenzdatum geboren wurde?",
+        "description": "Grenzdaten entstehen, wenn die Sonne das Zeichen wechselt – oft um den 19.–23. eines Monats, der genaue Moment variiert jährlich. Ein datumsbasierter Sternzeichen Rechner nutzt eine Standard-Referenzzeit und kann markieren, wenn Ihre Sonne nahe einer Zeichengrenze liegt. An einem Grenztag kann Geburtszeit bestätigen, ob Sie ein Zeichen oder das andere sind. Nutzen Sie unseren Geburtshoroskop Generator mit exakter Geburtszeit, wenn verfügbar."
+      },
+      {
+        "title": "Sonnenzeichen vs. Aszendent – was ist der Unterschied?",
+        "description": "Sonnenzeichen kommt vom Geburtsdatum und beschreibt Kernidentität und bewusste Richtung. Aszendent (aufsteigendes Zeichen) braucht Geburtsdatum, exakte Zeit und Geburtsort – er beschreibt ersten Eindruck und setzt das gesamte Haussystem. Viele teilen ein Sonnenzeichen, haben aber unterschiedliche Aszendenten. Diese Seite ist ein Sternzeichen Rechner für das Sonnenzeichen; für den Aszendenten nutzen Sie den Aszendent Rechner."
+      },
+      {
+        "title": "Ist das tropisch oder siderisch?",
+        "description": "Dieser Sternzeichen Rechner nutzt den tropischen westlichen Tierkreis, gebunden an Jahreszeiten. Siderische (vedische) Astrologie nutzt sternbasierte Zeichengrenzen, Ihr siderisches Sonnenzeichen kann etwa ein Zeichen früher liegen. Wir nutzen tropisch, weil es den meisten westlichen Geburtshoroskop-Tools und der Suchintention für Sternzeichen Rechner entspricht."
+      },
+      {
+        "title": "Brauche ich die Geburtszeit für mein Sternzeichen?",
+        "description": "Nein – für das Sonnenzeichen reicht das Geburtsdatum. Geburtszeit wird wichtig für Aszendent, Hausstellungen und exaktes Mondzeichen an Tagen, an denen der Mond das Zeichen wechselt. Nach diesem Sternzeichen Rechner Geburtszeit im Geburtshoroskop Generator ergänzen für ein vollständiges Geburtshoroskop."
+      },
+      {
+        "title": "Wie genau ist ein Sternzeichen Rechner?",
+        "description": "Steht die Sonne klar in der Mitte eines Zeichens, ist datumsbasierte Berechnung in tropischer Astrologie sehr zuverlässig. Die Genauigkeit sinkt nahe Zeichengrenzen ohne Geburtszeit. Wir nutzen ephemeridenbasierte Berechnung statt vereinfachter statischer Tabellen und weisen Grenzgrad-Unsicherheit ehrlich aus."
+      },
+      {
+        "title": "Was soll ich tun, nachdem ich mein Sternzeichen kenne?",
+        "description": "Erkunden Sie Ihr vollständiges Geburtshoroskop für Mond, Aszendent, Venus und Häuser. Dann öffnen Sie die Astrokartografie-Karte, um zu sehen, wo Ihre Sonnenlinie und andere Planetenlinien Länder und Städte kreuzen – nützlich für Reisen, Umzug oder Verständnis, wie der Ort Chart-Themen verstärkt."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Finden Sie jetzt Ihr Sternzeichen",
+    "description": "Nutzen Sie unseren kostenlosen Sternzeichen Rechner, um Ihr tropisches Sonnenzeichen nach Geburtsdatum zu entdecken. Lesen Sie Element, Modalität und Herrscherplanet, erstellen Sie dann Ihr vollständiges Geburtshoroskop und erkunden Sie Ihre Astrokartografie-Karte – ohne Anmeldung.",
+    "buttons": [
+      {
+        "title": "Vollständiges Geburtshoroskop erstellen →",
+        "icon": "RiMapLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Geburtsdatum",
+      "submit": "Mein Sternzeichen berechnen",
+      "calculating": "Wird berechnet…"
+    },
+    "result": {
+      "title": "Ihr Sonnenzeichen",
+      "sign": "Sternzeichen",
+      "degree": "Grad",
+      "element": "Element",
+      "modality": "Modalität",
+      "ruler": "Herrscherplanet",
+      "dateRange": "Typischer Datumsbereich",
+      "interpretation": "Interpretation",
+      "cuspTitle": "Nahe einer Zeichengrenze (Grenzgrad)",
+      "cuspNote": "Ihre Sonne steht am Rand von {sign}. Wurden Sie früh oder spät am Tag geboren, könnten Sie stattdessen {adjacent} sein. Geburtszeit im Geburtshoroskop Generator ergänzen, um zu bestätigen.",
+      "systemNote": "Tropischer westlicher Tierkreis. Siderische/vedische Zeichen können etwa ein Zeichen abweichen.",
+      "ctaBirthChart": "Vollständiges Geburtshoroskop erstellen",
+      "ctaRising": "Aszendent berechnen (Geburtszeit nötig)"
+    },
+    "errors": {
+      "required": "Geburtsdatum eingeben, um Ihr Sternzeichen zu berechnen.",
+      "generic": "Berechnungsfehler. Bitte Geburtsdatum prüfen und erneut versuchen."
+    },
+    "interpretations": {
+      "Aries": "Widder-Sonnenzeichen neigen zu Direktheit, Initiative und dem Bedürfnis, instinktiv zu handeln. Kernidentität drückt sich oft durch Mut, Wettbewerb und Pionierprojekte aus. Mars als Herrscher betont Handlung, Selbstbehauptung und Lernen durch Herausforderung.",
+      "Taurus": "Stier-Sonnenzeichen suchen Stabilität, sinnliche Freude und greifbare Ergebnisse. Identität baut sich durch Geduld, Werte und Loyalität gegenüber dem auf, was es wert ist zu bewahren. Venus als Herrscher bringt Wertschätzung für Schönheit, Komfort und stetiges Wachstum.",
+      "Gemini": "Zwillinge-Sonnenzeichen gedeihen durch Neugier, Sprache und geistige Vielfalt. Kernidentität zeigt sich oft durch Kommunikation, Anpassungsfähigkeit und das Verbinden von Ideen über Bereiche hinweg. Merkur als Herrscher betont Lernen, Witz und sozialen Austausch.",
+      "Cancer": "Krebs-Sonnenzeichen orientieren sich an emotionaler Sicherheit, Zugehörigkeit und schützender Fürsorge. Identität drückt sich durch Erinnerung, Familienthemen und intuitive Reaktionsfähigkeit aus. Der Mond als Herrscher hebt Stimmung, Fürsorge und innere Sicherheit hervor.",
+      "Leo": "Löwe-Sonnenzeichen strahlen kreativen Selbstausdruck, Wärme und Wunsch nach bedeutungsvoller Anerkennung aus. Kernidentität sucht oft Authentizität, Spiel und großzügige Führung. Die Sonne als Herrscher betont Vitalität, Stolz und herz-zentrierten Sinn.",
+      "Virgo": "Jungfrau-Sonnenzeichen verfeinern das Leben durch Analyse, Dienst und praktische Verbesserung. Identität drückt sich durch Unterscheidungsvermögen, Handwerk und Hilfsbereitschaft ohne Aufsehen aus. Merkur als Herrscher bringt Präzision, Gesundheitsbewusstsein und Problemlösung.",
+      "Libra": "Waage-Sonnenzeichen streben Balance, Partnerschaft und ästhetische Harmonie an. Kernidentität entwickelt sich oft durch Beziehung, Fairness und soziale Anmut. Venus als Herrscher betont Kooperation, Gestaltung und diplomatische Intelligenz.",
+      "Scorpio": "Skorpion-Sonnenzeichen gehen in Tiefe, Transformation und emotionale Wahrheit ein. Identität drückt sich durch Intensität, Loyalität und Bereitschaft aus, dem zu begegnen, was andere meiden. Pluto als Herrscher hebt Macht, Erneuerung und psychologische Einsicht hervor.",
+      "Sagittarius": "Schütze-Sonnenzeichen expandieren durch Philosophie, Reisen und großes Bild-Sinn. Kernidentität sucht Freiheit, Ehrlichkeit und Wachstum jenseits vertrauter Grenzen. Jupiter als Herrscher bringt Optimismus, Lehren und abenteuerlichen Glauben.",
+      "Capricorn": "Steinbock-Sonnenzeichen bauen Identität durch Disziplin, Verantwortung und langfristige Ziele. Ausdruck neigt zu Reife, Struktur und über Zeit verdientem Respekt. Saturn als Herrscher betont Ambition, Grenzen und Meisterschaft.",
+      "Aquarius": "Wassermann-Sonnenzeichen schätzen Originalität, Gemeinschaft und zukunftsorientierte Ideale. Kernidentität drückt sich oft durch Innovation, Distanz und humanitäre oder intellektuelle Anliegen aus. Uranus als Herrscher hebt Wandel, Individualität und Systemdenken hervor.",
+      "Pisces": "Fische-Sonnenzeichen nehmen auf, imaginieren und empathisieren zwischen sichtbaren und unsichtbaren Welten. Identität drückt sich durch Mitgefühl, Kunst und spirituelle Sensibilität aus. Neptun als Herrscher betont Träume, Hingabe und feine Wahrnehmung."
+    }
+  }
+}

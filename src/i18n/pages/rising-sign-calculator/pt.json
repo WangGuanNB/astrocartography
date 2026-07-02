@@ -11,6 +11,11 @@
     "title": "Ferramentas relacionadas",
     "items": [
       {
+        "text": "Só conhece sua data de nascimento?",
+        "linkText": "Calculadora Signo Zodíaco",
+        "url": "/zodiac-calculator"
+      },
+      {
         "text": "Precisa da sua carta natal completa?",
         "linkText": "Gerador de Mapa Astral",
         "url": "/tools/birth-chart-generator"

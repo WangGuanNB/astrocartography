@@ -37,6 +37,13 @@
               "icon": "RiPieChartLine"
             },
             {
+              "title": "星座计算器",
+              "description": "仅凭出生日期查询太阳星座",
+              "url": "/zodiac-calculator",
+              "target": "_self",
+              "icon": "RiSunLine"
+            },
+            {
               "title": "上升星座计算器",
               "description": "根据出生时间与地点查询上升星座",
               "url": "/rising-sign-calculator",

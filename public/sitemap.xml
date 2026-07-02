@@ -294,6 +294,48 @@
   </url>
 
   <url>
+    <loc>https://astrocarto.org/zodiac-calculator/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/zh/zodiac-calculator/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/es/zodiac-calculator/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/pt/zodiac-calculator/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/it/zodiac-calculator/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/de/zodiac-calculator/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://astrocarto.org/rising-sign-calculator/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
