@@ -31,8 +31,8 @@
     ],
     "actions": [
       {
-        "title": "Generate Your Map",
-        "url": "/astrocartography-calculator",
+        "title": "Free Astrocartography Calculator",
+        "url": "/",
         "icon": "RiArrowRightLine"
       },
       {
@@ -49,7 +49,7 @@
       {
         "text": "Need your map first?",
         "linkText": "Free Astrocartography Calculator",
-        "url": "/astrocartography-calculator"
+        "url": "/"
       },
       {
         "text": "Want every line meaning?",
@@ -245,7 +245,7 @@
       {
         "title": "Generate Your Free Astrocartography Map",
         "icon": "RiMapLine",
-        "url": "/astrocartography-calculator",
+        "url": "/",
         "target": "_self",
         "variant": "default"
       },

@@ -28,9 +28,9 @@ const navPills = [
 
 const startHereItems = [
   {
-    title: "Free Astrocartography Map",
+    title: "Free Astrocartography Calculator",
     description: "Generate your personal map first, then come back to read each line with context.",
-    href: "/astrocartography-calculator",
+    href: "/",
     icon: "RiMapLine",
   },
   {
@@ -220,10 +220,10 @@ export default async function AstrocartographyLinesPage({
               )}
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link
-                  href="/astrocartography-calculator"
+                  href="/"
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:bg-primary/90"
                 >
-                  Generate Your Map
+                  Free Astrocartography Calculator
                   <Icon name="RiArrowRightLine" className="size-4" />
                 </Link>
                 <Link
@@ -291,6 +291,25 @@ export default async function AstrocartographyLinesPage({
           </div>
         </div>
       </section>
+
+      {page.internalLinks && (
+        <div className="container max-w-4xl px-4 pb-8 lg:pb-10">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {page.internalLinks.items.map((item, index) => (
+              <Link
+                key={index}
+                href={item.url as any}
+                className="group flex flex-col gap-1.5 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition-all hover:border-primary/30 hover:bg-white/10"
+              >
+                <span className="text-xs leading-relaxed text-muted-foreground">{item.text}</span>
+                <span className="text-sm font-semibold text-primary group-hover:underline">
+                  {item.linkText} →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       <HubSection
         id="start-here"

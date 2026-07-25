@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "Gerar seu mapa",
-        "url": "/astrocartography-calculator",
+        "url": "/",
         "icon": "RiArrowRightLine"
       },
       {
@@ -49,7 +49,7 @@
       {
         "text": "Precisa do seu mapa primeiro?",
         "linkText": "Calculadora de astrocartografia grátis",
-        "url": "/astrocartography-calculator"
+        "url": "/"
       },
       {
         "text": "Quer entender cada linha?",
@@ -245,7 +245,7 @@
       {
         "title": "Gerar mapa de astrocartografia grátis",
         "icon": "RiMapLine",
-        "url": "/astrocartography-calculator",
+        "url": "/",
         "target": "_self",
         "variant": "default"
       },

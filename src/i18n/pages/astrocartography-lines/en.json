@@ -263,7 +263,7 @@
     "description": "Generate your personalized astrocartography map using Swiss Ephemeris calculations with 1-mile accuracy. See exactly where every planetary line falls on the globe—then click any line or city for an instant AI-powered interpretation. Completely free, no sign-up required.",
     "buttons": [
       {
-        "title": "Generate Your Free Chart",
+        "title": "Free Astrocartography Calculator",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

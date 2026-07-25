@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "生成你的占星地图",
-        "url": "/astrocartography-calculator",
+        "url": "/",
         "icon": "RiArrowRightLine"
       },
       {
@@ -49,7 +49,7 @@
       {
         "text": "还没有生成地图？",
         "linkText": "免费占星地图计算器",
-        "url": "/astrocartography-calculator"
+        "url": "/"
       },
       {
         "text": "想了解每条行星线？",
@@ -245,7 +245,7 @@
       {
         "title": "生成免费占星地图",
         "icon": "RiMapLine",
-        "url": "/astrocartography-calculator",
+        "url": "/",
         "target": "_self",
         "variant": "default"
       },

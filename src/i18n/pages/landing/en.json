@@ -344,6 +344,14 @@
           "src": "/imgs/features/astrocartography-relocation-planning.webp",
           "alt": "Astrocartography for relocation and travel planning"
         }
+      },
+      {
+        "title": "Astrocartography vs Natal Chart vs Relocation Chart",
+        "description": "A natal chart (birth chart) is a fixed sky map for the moment and place you were born — it describes your core personality, houses, and planetary placements. Astrocartography takes that same birth data and projects it onto the world map, showing where each planet's angular energy is strongest as you move. A relocation chart is different again: it recalculates your houses for one specific city so you can see how that place reframes your chart. Use a natal chart to understand yourself, an astrocartography map to compare locations worldwide, and a relocation chart to deep-dive one finalist city before you move or travel.",
+        "image": {
+          "src": "/imgs/features/hero-web.webp",
+          "alt": "Astrocartography compared with natal chart and relocation chart"
+        }
       }
     ]
   },

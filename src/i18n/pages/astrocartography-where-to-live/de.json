@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "Karte erstellen",
-        "url": "/astrocartography-calculator",
+        "url": "/",
         "icon": "RiArrowRightLine"
       },
       {
@@ -49,7 +49,7 @@
       {
         "text": "Brauchst du zuerst deine Karte?",
         "linkText": "Kostenloser Astrokartografie-Rechner",
-        "url": "/astrocartography-calculator"
+        "url": "/"
       },
       {
         "text": "Möchtest du jede Linie verstehen?",
@@ -245,7 +245,7 @@
       {
         "title": "Kostenlose Astrokartografie-Karte erstellen",
         "icon": "RiMapLine",
-        "url": "/astrocartography-calculator",
+        "url": "/",
         "target": "_self",
         "variant": "default"
       },
