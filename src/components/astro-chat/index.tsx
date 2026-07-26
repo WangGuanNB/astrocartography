@@ -129,7 +129,7 @@ export default function AstroChat({
     if (!user) return null;
     
     try {
-      const response = await fetch('/api/get-user-credits', {
+      const response = await fetch('/api/get-user-credits/', {
         method: 'POST',
       });
       const data = await response.json();
@@ -188,7 +188,7 @@ export default function AstroChat({
     // entitlements may be stale or not yet loaded; refresh once before gating.
     try {
       if (!entitlements) {
-        const response = await fetch('/api/get-user-credits', { method: 'POST' });
+        const response = await fetch('/api/get-user-credits/', { method: 'POST' });
         const data = await response.json();
         if (data.code === 0 && data.data?.entitlements) {
           const latest = data.data.entitlements as UserEntitlements;
@@ -751,7 +751,7 @@ export default function AstroChat({
   useEffect(() => {
     if (open && user) {
       // 获取积分消耗配置
-      fetch('/api/ai-chat-credit-cost')
+      fetch('/api/ai-chat-credit-cost/')
         .then(res => res.json())
         .then(data => {
           if (data.success && data.creditCost) {

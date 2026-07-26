@@ -12,8 +12,10 @@ import {
   type SynastryPayloadForAI,
 } from "@/lib/astro-format";
 import { getUserUuid } from "@/services/user";
-import { getUserCredits, decreaseCredits, CreditsTransType } from "@/services/credit";
+import { getUserCredits, decreaseCredits, increaseCredits, CreditsTransType } from "@/services/credit";
 import { getAIChatCreditCost } from "@/services/config";
+
+const ASTRO_CHAT_MODEL = process.env.DEEPSEEK_ASTRO_CHAT_MODEL || "deepseek-v4-flash";
 
 // 检测用户问题的语言
 function detectUserLanguage(text: string): string {
@@ -234,61 +236,74 @@ export async function POST(req: Request) {
       return respErr("AI service not configured: DEEPSEEK_API_KEY environment variable is not set");
     }
 
-    // 初始化 DeepSeek 模型
-    // 使用 deepseek-reasoner 模型（内部推理链，回答质量更高、逻辑更严谨）
-    // 推理过程在后台运行，前端只接收最终答案，不影响用户体验
-    const textModel: LanguageModelV1 = deepseek("deepseek-reasoner");
+    try {
+      // 初始化 DeepSeek V4 模型。deepseek-reasoner 已于 2026-07-24 弃用。
+      const textModel: LanguageModelV1 = deepseek(ASTRO_CHAT_MODEL);
 
-    // 检测用户问题的语言
-    const userLanguage = detectUserLanguage(lastMessage.content);
-    
-    // 计算问题数量（如果未提供，从 messages 计算）
-    const actualQuestionCount = questionCount ?? messages.filter(m => m.role === 'user').length;
-    const actualRemainingFreeQuestions = remainingFreeQuestions ?? 0;
-    
-    const chartContext = synastryData
-      ? formatSynastryContext(synastryData)
-      : formatChartContext(chartData);
+      // 检测用户问题的语言
+      const userLanguage = detectUserLanguage(lastMessage.content);
+      
+      // 计算问题数量（如果未提供，从 messages 计算）
+      const actualQuestionCount = questionCount ?? messages.filter(m => m.role === 'user').length;
+      const actualRemainingFreeQuestions = remainingFreeQuestions ?? 0;
+      
+      const chartContext = synastryData
+        ? formatSynastryContext(synastryData)
+        : formatChartContext(chartData);
 
-    const systemPrompt = synastryData
-      ? getSynastrySystemPrompt(userLanguage, actualQuestionCount, actualRemainingFreeQuestions, userLocale)
-      : getSystemPrompt(userLanguage, actualQuestionCount, actualRemainingFreeQuestions, userLocale);
+      const systemPrompt = synastryData
+        ? getSynastrySystemPrompt(userLanguage, actualQuestionCount, actualRemainingFreeQuestions, userLocale)
+        : getSystemPrompt(userLanguage, actualQuestionCount, actualRemainingFreeQuestions, userLocale);
 
-    const chartDataIntro = synastryData
-      ? userLanguage === "中文"
-        ? "以下是双方的合盘（比较盘）数据："
-        : "Below is the synastry (two-chart relationship) data:"
-      : userLanguage === "中文"
-        ? "以下是用户的星盘数据："
-        : userLanguage === "英文"
-          ? "Below is the user's astrocartography chart data:"
-          : "Below is the user's astrocartography chart data:";
-    
-    const systemMessage = {
-      role: 'system' as const,
-      content: `${systemPrompt}\n\n${chartDataIntro}\n\n${chartContext}`,
-    };
+      const chartDataIntro = synastryData
+        ? userLanguage === "中文"
+          ? "以下是双方的合盘（比较盘）数据："
+          : "Below is the synastry (two-chart relationship) data:"
+        : userLanguage === "中文"
+          ? "以下是用户的星盘数据："
+          : userLanguage === "英文"
+            ? "Below is the user's astrocartography chart data:"
+            : "Below is the user's astrocartography chart data:";
+      
+      const systemMessage = {
+        role: 'system' as const,
+        content: `${systemPrompt}\n\n${chartDataIntro}\n\n${chartContext}`,
+      };
 
-    // 🔥 修复：构建完整的对话上下文（系统消息 + 所有用户消息，包括当前问题）
-    // useChat 会将当前输入添加到 messages 的最后一条，我们必须包含它，否则 AI 看不到当前问题
-    const conversationMessages = [
-      systemMessage,
-      ...messages, // ✅ 包含所有消息，包括当前用户问题（最后一条）
-    ];
+      // 🔥 修复：构建完整的对话上下文（系统消息 + 所有用户消息，包括当前问题）
+      // useChat 会将当前输入添加到 messages 的最后一条，我们必须包含它，否则 AI 看不到当前问题
+      const conversationMessages = [
+        systemMessage,
+        ...messages, // ✅ 包含所有消息，包括当前用户问题（最后一条）
+      ];
 
-    // 调用 AI 生成流式响应
-    const result = await streamText({
-      model: textModel,
-      messages: conversationMessages,
-      maxTokens: 3000, // 🔥 优化：增加 maxTokens 以支持更详细的回答（从 2000 增至 3000）
-      temperature: 0.5, // 🔥 优化：降低 temperature 提高准确性和一致性（从 0.7 降至 0.5）
-    });
+      // 调用 AI 生成流式响应
+      const result = await streamText({
+        model: textModel,
+        messages: conversationMessages,
+        maxTokens: 1800,
+        temperature: 0.5, // 🔥 优化：降低 temperature 提高准确性和一致性（从 0.7 降至 0.5）
+      });
 
-    // 返回流式响应
-    // 注意：追问建议由前端在 onFinish 回调中生成，不需要在这里追加
-    return result.toDataStreamResponse({
-      sendReasoning: false, // 不向前端传输推理内容，用户直接看到最终答案
-    });
+      // 返回流式响应
+      // 注意：追问建议由前端在 onFinish 回调中生成，不需要在这里追加
+      return result.toDataStreamResponse({
+        sendReasoning: false, // 不向前端传输推理内容，用户直接看到最终答案
+      });
+    } catch (aiError) {
+      console.error("❌ [Astro Chat] AI 调用失败，退回已扣积分:", aiError);
+      try {
+        await increaseCredits({
+          user_uuid,
+          trans_type: CreditsTransType.SystemAdd,
+          credits: creditCost,
+        });
+        console.log(`✅ [Astro Chat] 已退回用户 ${user_uuid} 的 ${creditCost} 积分`);
+      } catch (refundError) {
+        console.error("❌ [Astro Chat] 退回积分失败:", refundError);
+      }
+      throw aiError;
+    }
 
   } catch (err) {
     console.error("astro-chat error:", err);
@@ -296,4 +311,3 @@ export async function POST(req: Request) {
     return respErr(errorMessage);
   }
 }
-

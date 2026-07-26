@@ -3,6 +3,8 @@ import { generateText, LanguageModelV1 } from 'ai';
 import { deepseek } from '@ai-sdk/deepseek';
 import { detectLanguage } from '@/lib/astro-format';
 
+const FOLLOW_UP_MODEL = process.env.DEEPSEEK_FOLLOW_UP_MODEL || 'deepseek-v4-flash';
+
 /**
  * 生成追问建议的 API 路由
  * 基于用户问题和 AI 回答，使用 AI 生成 3 个相关的追问建议
@@ -36,8 +38,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 追问建议用轻量模型，速度更快成本更低
-    const textModel: LanguageModelV1 = deepseek('deepseek-chat');
+    // 追问建议用轻量模型，速度更快成本更低。deepseek-chat 已于 2026-07-24 弃用。
+    const textModel: LanguageModelV1 = deepseek(FOLLOW_UP_MODEL);
 
     // 调用 AI 生成追问建议（使用 generateText 而非 streamText，因为追问建议很短）
     const result = await generateText({
