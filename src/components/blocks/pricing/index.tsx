@@ -226,29 +226,6 @@ export default function Pricing({
     [pricing.groups, pricing.items]
   );
 
-  // When a preferred plan is set (e.g. Professional $18.9), bring it into view
-  // inside the modal/drawer scroll container — especially important on mobile.
-  useEffect(() => {
-    if (!preferredProductId || !isInModal) return;
-
-    const preferredGroup = pricing.items?.find(
-      (item) => item.product_id === preferredProductId
-    )?.group;
-    if (preferredGroup && preferredGroup !== group) {
-      setGroup(preferredGroup);
-      return;
-    }
-
-    const timer = window.setTimeout(() => {
-      const el = document.querySelector(
-        `[data-product-id="${preferredProductId}"]`
-      ) as HTMLElement | null;
-      el?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 120);
-
-    return () => window.clearTimeout(timer);
-  }, [preferredProductId, isInModal, group, pricing.items, visibleItems.length]);
-
   const gridColsClass =
     visibleItems.length >= 3
       ? "md:grid-cols-3"
