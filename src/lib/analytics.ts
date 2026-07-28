@@ -206,6 +206,61 @@ export const cityToolEvents = {
     });
   },
 
+  cityRemoved: (
+    cityName: string,
+    cityCount: number
+  ) => {
+    trackEvent('city_tool_city_removed', {
+      city_name: cityName,
+      city_count: cityCount,
+      event_category: 'City Tools',
+    });
+  },
+
+  goalChanged: (goal: string) => {
+    trackEvent('city_tool_goal_changed', {
+      goal,
+      event_category: 'City Tools',
+    });
+  },
+
+  comparisonRun: (
+    goal: string,
+    cityCount: number,
+    topCity?: string,
+    topScore?: number
+  ) => {
+    trackEvent('city_tool_comparison_run', {
+      goal,
+      city_count: cityCount,
+      top_city: topCity || '',
+      top_score: topScore ?? 0,
+      event_category: 'City Tools',
+    });
+  },
+
+  limitReached: (
+    maxCities: number,
+    userState: 'anonymous' | 'signed_in'
+  ) => {
+    trackEvent('city_tool_compare_limit_reached', {
+      max_cities: maxCities,
+      user_state: userState,
+      event_category: 'City Tools',
+    });
+  },
+
+  reportUnlocked: (
+    reportType: 'city_comparison_report',
+    creditsRequired: number
+  ) => {
+    trackEvent('city_tool_report_unlock_clicked', {
+      report_type: reportType,
+      credits_required: creditsRequired,
+      event_category: 'City Tools',
+    });
+  },
+
   aiContinued: (
     tool: 'check_city' | 'compare_cities',
     cityCount: number

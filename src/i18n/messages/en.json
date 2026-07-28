@@ -369,7 +369,7 @@
         "share": "Share",
         "newChart": "New Chart",
         "checkCity": "Check City",
-        "compareCities": "Compare",
+        "compareCities": "Compare Cities",
         "askAI": "Ask AI",
         "new": "New"
       }
@@ -381,6 +381,9 @@
       "mobileFullMapHint": "Open full map for more space →",
       "interpretTitle": "Interpret this map",
       "interpretDescription": "Start with the generated map. Check one city, compare places, then ask AI using the map evidence.",
+      "askAIDescription": "Get a personal interpretation from your generated map.",
+      "checkCityDescription": "Review nearby planetary lines, distance, and strength.",
+      "compareCitiesDescription": "Not sure which city fits you best? Compare options side by side.",
       "nextStepTitle": "What to do next",
       "nextStepDescription": "Use Ask AI for interpretation, Check City for a specific place, or Compare Cities when choosing between locations."
     },
@@ -458,10 +461,11 @@
       "interpretTitle": "Interpret this map",
       "interpretDescription": "Check a city, compare places, then ask AI using the map evidence.",
       "askAI": "Ask AI",
+      "askAIDescription": "Get a personal interpretation from your generated map.",
       "checkCity": "Check City",
       "checkCityDescription": "Review nearby planetary lines, distance, and strength.",
       "compareCities": "Compare Cities",
-      "compareCitiesDescription": "Add 2–4 cities, choose a goal, and compare evidence.",
+      "compareCitiesDescription": "Not sure which city fits you best? Compare options side by side.",
       "quickQuestionsTitle": "QUICK QUESTIONS",
       "viewMore": "View more questions",
       "showFewer": "Show fewer questions",
@@ -478,6 +482,13 @@
       "checkDescription": "Enter a real city to review nearby planetary lines, approximate distance, strength, and map evidence.",
       "compareTitle": "Compare Cities",
       "compareDescription": "Add 2–4 places, choose a goal, and compare calculated support, caution, and trade-offs side by side.",
+      "suggestedNearTitle": "Cities near your lines",
+      "suggestedNearHint": "Tap to add a city. Search below if you want somewhere else.",
+      "showDetails": "Show details",
+      "hideDetails": "Hide details",
+      "limitNote": "You can compare up to {count} cities in this session.",
+      "signInForMore": "Sign in to compare more.",
+      "limitReached": "You have reached the {count}-city limit for this session.",
       "searchPlaceholder": "Try London, Sydney, Tokyo...",
       "addCity": "Add",
       "nearbyLines": "Nearby planetary lines",
@@ -508,6 +519,28 @@
       "rankingDisclaimer": "This is a goal-specific signal ranking, not a claim that one city is best in every part of life.",
       "keySignal": "Key free signal",
       "moreSignals": "+{count} important signals to interpret",
+      "scoreLabel": "Fit score",
+      "bestForLabel": "Best for",
+      "bestForValue": "{themes}",
+      "watchOutLabel": "Watch out",
+      "recommendationLabel": "Recommendation",
+      "bestFor": {
+        "overall": "Overall relocation decisions",
+        "career": "Career, visibility, and opportunity",
+        "relationships": "Love, partnership, and social ease",
+        "home": "Home, belonging, and emotional steadiness",
+        "travel": "Short stays, travel, and exploration"
+      },
+      "watchOut": {
+        "support": "The signal is clearer, but real-world logistics still matter.",
+        "mixed": "Support and tension appear together, so the details deserve a closer read.",
+        "caution": "The map shows fewer supportive signals for this goal."
+      },
+      "recommendations": {
+        "support": "Keep this city on your shortlist and compare practical factors next.",
+        "mixed": "Ask AI to unpack the trade-offs before treating this as a top option.",
+        "caution": "Use this as a prompt for deeper review rather than a final decision."
+      },
       "statusHints": {
         "support": "More aligned with your selected goal",
         "mixed": "Support and trade-offs appear together",
@@ -515,6 +548,26 @@
       },
       "lockedTitle": "AI deeper comparison",
       "lockedDescription": "Explore why the ranking formed, the main trade-offs between cities, and which option better fits your selected goal.",
+      "fullReport": {
+        "title": "Full AI City Comparison Report",
+        "creditBadge": "{credits} credits",
+        "description": "Unlock a structured AI report for this exact city set and goal. The report explains the ranking, trade-offs, cautions, and next steps.",
+        "previewIntro": "The full report includes:",
+        "previewItems": {
+          "ranking": "Why the top city ranks first for your selected goal",
+          "tradeoffs": "Key trade-offs between each city",
+          "lifeAreas": "Career, love, home, travel, and long-term living breakdown"
+        },
+        "signInCTA": "Sign in to unlock report",
+        "unlockCTA": "Unlock Full Report ({credits} credits)",
+        "stickyViewCTA": "View interpretation report",
+        "generatingCTA": "Generating your report...",
+        "readyTitle": "Report ready",
+        "viewReadyCTA": "View report",
+        "downloadCTA": "Download Report",
+        "genericError": "The report could not be generated. Please try again.",
+        "prompt": "Generate a full astrocartography city comparison report for the selected goal: {goal}.\n\nUse only the calculated evidence below. Do not invent extra cities, exact outcomes, guarantees, or life-changing promises.\n\nRequired structure:\n1. Executive summary: which city should be prioritized and why.\n2. City ranking: explain each city's score and strongest evidence.\n3. Side-by-side trade-offs: what each city supports and what needs caution.\n4. Life areas: career, relationships/love, home/emotional stability, travel/exploration, and long-term living.\n5. Practical next checks before moving.\n6. Final recommendation with uncertainty and birth-time accuracy caveat.\n\nCalculated evidence:\n{evidence}"
+      },
       "askHooksTitle": "Questions worth exploring",
       "askHooks": {
         "whyFirst": "Why does {city} rank first for my goal?",

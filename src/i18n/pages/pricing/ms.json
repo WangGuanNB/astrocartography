@@ -51,18 +51,18 @@
       },
       {
         "title": "Pelan Standard",
-        "description": "Sesuai untuk pengguna yang membuat keputusan relokasi serius",
+        "description": "Best for comparing cities and making a relocation decision",
         "group": "one-time",
         "label": "Paling Popular",
         "features_title": "Ciri Premium",
         "features": [
-          "1000 kredit (100 soalan AI)",
-          "Analisis carta relokasi",
-          "Akses peneroka negara",
-          "Eksport sembang AI sebagai TXT & muat turun peta (akses seumur hidup; kredit laman pada imej)",
-          "Pengalaman tanpa iklan",
-          "Sah selama-lamanya, tiada had masa",
-          "Pembayaran sekali, tiada pembaharuan automatik"
+          "1000 credits — about 100 AI chats or ~20 full city comparison reports",
+          "Full AI City Comparison Reports (50 credits each)",
+          "Relocation chart analysis",
+          "Country explorer access",
+          "Export AI chat (TXT) & download maps",
+          "Ad-free experience",
+          "Valid forever — one-time payment, no auto-renewal"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -72,7 +72,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "100 soalan, selama-lamanya — nilai lebih baik daripada 2 bulan Plus",
+        "tip": "Chats + city comparison reports, forever — better value than 2 months of Plus",
         "switch_group": "subscription",
         "switch_group_label": "Dari $6.9/bulan →",
         "button": {
@@ -87,19 +87,18 @@
       },
       {
         "title": "Pelan Profesional",
-        "description": "Ideal untuk penyelidikan mendalam pelbagai bandar dan pengguna profesional",
+        "description": "Best for deep multi-city research and repeated decision reviews",
         "group": "one-time",
         "label": "Nilai Terbaik",
         "features_title": "Semua ciri Standard, tambahan",
         "features": [
-          "3000 kredit (300 soalan AI)",
-          "Sejarah sembang kekal — lihat, semak & eksport dalam akaun (tidak termasuk langganan)",
-          "Semua ciri Pelan Standard",
-          "Tindak balas AI keutamaan (2x lebih cepat)",
-          "Analisis garis planet lanjutan (Chiron, Lilith, dll.)",
-          "Sokongan emel (balasan dalam 48 jam)",
-          "Sah selama-lamanya, tiada had masa",
-          "Pembayaran sekali, tiada pembaharuan automatik"
+          "3000 credits — about 300 AI chats or ~60 full city comparison reports",
+          "All Standard Plan features",
+          "Permanent chat history — view, review & export in your account",
+          "Priority AI response (2x faster)",
+          "Advanced planetary line analysis (Chiron, Lilith, etc.)",
+          "Email support (48-hour response)",
+          "Valid forever — one-time payment, no auto-renewal"
         ],
         "interval": "one-time",
         "amount": 1890,
@@ -109,7 +108,7 @@
         "original_price": "$24.9",
         "unit": "",
         "is_featured": false,
-        "tip": "Sejarah sembang kekal eksklusif — hanya $0.063 setiap soalan",
+        "tip": "More comparison reports + permanent history — about $0.063 per chat",
         "button": {
           "title": "Beli Sekarang",
           "url": "/#pricing",
@@ -127,7 +126,7 @@
         "label": "Fleksibel",
         "features_title": "Termasuk",
         "features": [
-          "500 kredit (50 soalan AI) sebulan",
+          "500 credits/month — about 50 AI chats or ~10 city comparison reports",
           "Peta astrocartografi tanpa had",
           "Muat turun peta PNG & eksport sembang TXT",
           "Pembaharuan bulanan — batal bila-bila masa"
@@ -158,7 +157,7 @@
         "label": "Jimat ~29%",
         "features_title": "Termasuk",
         "features": [
-          "500 kredit (50 soalan AI) sebulan",
+          "500 credits/month — about 50 AI chats or ~10 city comparison reports",
           "Peta astrocartografi tanpa had",
           "Muat turun peta PNG & eksport sembang TXT",
           "Pembaharuan tahunan — batal bila-bila masa"

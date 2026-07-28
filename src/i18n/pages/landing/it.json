@@ -665,18 +665,18 @@
       },
       {
         "title": "Piano Standard",
-        "description": "Perfetto per utenti che prendono decisioni serie di trasferimento",
+        "description": "Ideale per confrontare città e decidere un trasferimento",
         "group": "one-time",
         "label": "Più Popolare",
         "features_title": "Funzionalità Premium",
         "features": [
-          "1000 crediti (100 domande IA)",
-          "Analisi carta di trasferimento",
-          "Accesso all'esploratore di paesi",
-          "Esporta chat IA in TXT e scarica mappe (accesso a vita; credito sito sulle immagini)",
+          "1000 crediti — circa 100 chat AI o ~20 report completi di confronto città",
+          "Report AI completi di confronto città (50 crediti ciascuno)",
+          "Analisi del tema di rilocazione",
+          "Accesso all'esploratore paesi",
+          "Esporta chat AI (TXT) e scarica mappe",
           "Esperienza senza pubblicità",
-          "Valido per sempre, nessun limite di tempo",
-          "Pagamento unico, nessun rinnovo automatico"
+          "Valido per sempre — pagamento unico, senza rinnovo automatico"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -686,7 +686,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "100 domande, per sempre — miglior valore di 2 mesi di Plus",
+        "tip": "Chat + report di confronto città, per sempre — più conveniente di 2 mesi di Plus",
         "switch_group": "subscription",
         "switch_group_label": "Da $6.9/mese →",
         "button": {
@@ -701,19 +701,18 @@
       },
       {
         "title": "Piano Professionale",
-        "description": "Ideale per ricerche approfondite su più città e utenti professionali",
+        "description": "Ideale per ricerche approfondite su più città e revisioni ripetute",
         "group": "one-time",
         "label": "Miglior Valore",
         "features_title": "Tutte le funzionalità Standard, più",
         "features": [
-          "3000 crediti (300 domande IA)",
-          "Cronologia chat permanente — visualizza, rivedi ed esporta nel tuo account (non inclusa nell'abbonamento)",
+          "3000 crediti — circa 300 chat AI o ~60 report completi di confronto città",
           "Tutte le funzionalità del Piano Standard",
-          "Risposta IA prioritaria (2x più veloce)",
-          "Analisi avanzata delle linee planetarie (Chiron, Lilith, ecc.)",
+          "Cronologia chat permanente — visualizza, rivedi ed esporta nel tuo account",
+          "Risposta AI prioritaria (2x più veloce)",
+          "Analisi avanzata delle linee planetarie (Chirone, Lilith, ecc.)",
           "Supporto email (risposta entro 48 ore)",
-          "Valido per sempre, nessun limite di tempo",
-          "Pagamento unico, nessun rinnovo automatico"
+          "Valido per sempre — pagamento unico, senza rinnovo automatico"
         ],
         "interval": "one-time",
         "amount": 1890,
@@ -723,7 +722,7 @@
         "original_price": "$24.9",
         "unit": "",
         "is_featured": false,
-        "tip": "Cronologia chat permanente esclusiva — solo $0,063 per domanda",
+        "tip": "Più report di confronto + cronologia permanente — circa $0.063 per chat",
         "button": {
           "title": "Acquista Ora",
           "url": "/#pricing",
@@ -741,7 +740,7 @@
         "label": "Flessibile",
         "features_title": "Include",
         "features": [
-          "500 crediti (50 domande IA) al mese",
+          "500 crediti/mese — circa 50 chat AI o ~10 report di confronto città",
           "Mappe di astrocartografia illimitate",
           "Download mappe PNG ed esportazione chat TXT",
           "Rinnovo mensile — annulla quando vuoi"
@@ -772,7 +771,7 @@
         "label": "Risparmia ~29%",
         "features_title": "Include",
         "features": [
-          "500 crediti (50 domande IA) al mese",
+          "500 crediti/mese — circa 50 chat AI o ~10 report di confronto città",
           "Mappe di astrocartografia illimitate",
           "Download mappe PNG ed esportazione chat TXT",
           "Rinnovo annuale — annulla quando vuoi"

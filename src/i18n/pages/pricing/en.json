@@ -51,18 +51,18 @@
       },
       {
         "title": "Standard Plan",
-        "description": "Perfect for users making serious relocation decisions",
+        "description": "Best for comparing cities and making a relocation decision",
         "group": "one-time",
         "label": "Most Popular",
         "features_title": "Premium Features",
         "features": [
-          "1000 credits (100 AI questions)",
+          "1000 credits — about 100 AI chats or ~20 full city comparison reports",
+          "Full AI City Comparison Reports (50 credits each)",
           "Relocation chart analysis",
           "Country explorer access",
-          "Export AI chat as TXT & download maps (paid; lifetime access; site credit on images)",
+          "Export AI chat (TXT) & download maps",
           "Ad-free experience",
-          "Valid forever, no time limit",
-          "One-time payment, no auto-renewal"
+          "Valid forever — one-time payment, no auto-renewal"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -72,7 +72,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "100 questions, forever — better value than 2 months of Plus",
+        "tip": "Chats + city comparison reports, forever — better value than 2 months of Plus",
         "switch_group": "subscription",
         "switch_group_label": "From $6.9/mo →",
         "button": {
@@ -87,19 +87,18 @@
       },
       {
         "title": "Professional Plan",
-        "description": "Ideal for deep research on multiple cities and professional users",
+        "description": "Best for deep multi-city research and repeated decision reviews",
         "group": "one-time",
         "label": "Best Value",
         "features_title": "All Standard features, plus",
         "features": [
-          "3000 credits (300 AI questions)",
-          "Permanent chat history — view, review & export in your account (not in subscription)",
+          "3000 credits — about 300 AI chats or ~60 full city comparison reports",
           "All Standard Plan features",
+          "Permanent chat history — view, review & export in your account",
           "Priority AI response (2x faster)",
           "Advanced planetary line analysis (Chiron, Lilith, etc.)",
           "Email support (48-hour response)",
-          "Valid forever, no time limit",
-          "One-time payment, no auto-renewal"
+          "Valid forever — one-time payment, no auto-renewal"
         ],
         "interval": "one-time",
         "amount": 1890,
@@ -109,7 +108,7 @@
         "original_price": "$24.9",
         "unit": "",
         "is_featured": false,
-        "tip": "Permanent chat history exclusive — only $0.063 per question",
+        "tip": "More comparison reports + permanent history — about $0.063 per chat",
         "button": {
           "title": "Buy Now",
           "url": "/#pricing",
@@ -127,7 +126,7 @@
         "label": "Flexible",
         "features_title": "Includes",
         "features": [
-          "500 credits (50 AI questions) per month",
+          "500 credits/month — about 50 AI chats or ~10 city comparison reports",
           "Unlimited astrocartography maps",
           "PNG map download & TXT chat export",
           "Renews monthly — cancel anytime"
@@ -158,7 +157,7 @@
         "label": "Save ~29%",
         "features_title": "Includes",
         "features": [
-          "500 credits (50 AI questions) per month",
+          "500 credits/month — about 50 AI chats or ~10 city comparison reports",
           "Unlimited astrocartography maps",
           "PNG map download & TXT chat export",
           "Renews yearly — cancel anytime"

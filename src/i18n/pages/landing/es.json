@@ -665,18 +665,18 @@
       },
       {
         "title": "Plan Estándar",
-        "description": "Perfecto para usuarios que toman decisiones serias de reubicación",
+        "description": "Ideal para comparar ciudades y decidir una mudanza",
         "group": "one-time",
         "label": "Más Popular",
         "features_title": "Funciones Premium",
         "features": [
-          "1000 créditos (100 preguntas de IA)",
+          "1000 créditos — unas 100 chats de IA o ~20 informes completos de comparación de ciudades",
+          "Informes completos de comparación de ciudades con IA (50 créditos cada uno)",
           "Análisis de carta de reubicación",
           "Acceso al explorador de países",
-          "Exportar chat de IA en TXT y descargar mapas (acceso de por vida; crédito del sitio en imágenes)",
+          "Exportar chat de IA (TXT) y descargar mapas",
           "Experiencia sin anuncios",
-          "Válido para siempre, sin límite de tiempo",
-          "Pago único, sin renovación automática"
+          "Válido para siempre — pago único, sin renovación automática"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -686,7 +686,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "100 preguntas, para siempre — mejor valor que 2 meses de Plus",
+        "tip": "Chats + informes de comparación de ciudades, para siempre — mejor valor que 2 meses de Plus",
         "switch_group": "subscription",
         "switch_group_label": "Desde $6.9/mes →",
         "button": {
@@ -701,19 +701,18 @@
       },
       {
         "title": "Plan Profesional",
-        "description": "Ideal para investigación profunda en múltiples ciudades y usuarios profesionales",
+        "description": "Ideal para investigar varias ciudades a fondo y revisar decisiones",
         "group": "one-time",
         "label": "Mejor Valor",
         "features_title": "Todas las funciones Estándar, más",
         "features": [
-          "3000 créditos (300 preguntas de IA)",
-          "Historial de chat permanente — ver, revisar y exportar en tu cuenta (no incluido en suscripción)",
+          "3000 créditos — unas 300 chats de IA o ~60 informes completos de comparación de ciudades",
           "Todas las funciones del Plan Estándar",
-          "Respuesta prioritaria de IA (2x más rápido)",
-          "Análisis avanzado de líneas planetarias (Chiron, Lilith, etc.)",
-          "Soporte por correo (respuesta en 48 horas)",
-          "Válido para siempre, sin límite de tiempo",
-          "Pago único, sin renovación automática"
+          "Historial de chat permanente — ver, revisar y exportar en tu cuenta",
+          "Respuesta prioritaria de IA (2x más rápida)",
+          "Análisis avanzado de líneas planetarias (Quirón, Lilith, etc.)",
+          "Soporte por email (respuesta en 48 horas)",
+          "Válido para siempre — pago único, sin renovación automática"
         ],
         "interval": "one-time",
         "amount": 1890,
@@ -723,7 +722,7 @@
         "original_price": "$24.9",
         "unit": "",
         "is_featured": false,
-        "tip": "Historial de chat permanente exclusivo — solo $0.063 por pregunta",
+        "tip": "Más informes de comparación + historial permanente — unos $0.063 por chat",
         "button": {
           "title": "Comprar Ahora",
           "url": "/#pricing",
@@ -741,7 +740,7 @@
         "label": "Flexible",
         "features_title": "Incluye",
         "features": [
-          "500 créditos (50 preguntas de IA) al mes",
+          "500 créditos/mes — unas 50 chats de IA o ~10 informes de comparación de ciudades",
           "Mapas de astrocartografía ilimitados",
           "Descarga de mapas PNG y exportación de chat TXT",
           "Renovación mensual — cancela cuando quieras"
@@ -772,7 +771,7 @@
         "label": "Ahorra ~29%",
         "features_title": "Incluye",
         "features": [
-          "500 créditos (50 preguntas de IA) al mes",
+          "500 créditos/mes — unas 50 chats de IA o ~10 informes de comparación de ciudades",
           "Mapas de astrocartografía ilimitados",
           "Descarga de mapas PNG y exportación de chat TXT",
           "Renovación anual — cancela cuando quieras"

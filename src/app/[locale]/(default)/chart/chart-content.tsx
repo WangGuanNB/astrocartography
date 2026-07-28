@@ -77,6 +77,7 @@ export default function ChartContent() {
   const [autoSendQuestionKey, setAutoSendQuestionKey] = useState(0);
   const [askOtherPrefillText, setAskOtherPrefillText] = useState<string | null>(null);
   const [askOtherPrefillKey, setAskOtherPrefillKey] = useState(0);
+  const [askOtherRequestType, setAskOtherRequestType] = useState<'city_comparison_report' | undefined>(undefined);
   const [isToolbarExpanded, setIsToolbarExpanded] = useState(false); // 右上角工具栏折叠状态
   const [showMobileCompareNew, setShowMobileCompareNew] = useState(false);
   const [hasAutoPopped, setHasAutoPopped] = useState(false);
@@ -229,6 +230,7 @@ export default function ChartContent() {
 
   // 处理 AI 聊天按钮点击 - 直接打开聊天窗口，不验证登录
   const handleAskAIClick = () => {
+    setAskOtherRequestType(undefined);
     setChatOpen(true);
     // 📊 埋点：手动打开 Ask AI 对话框
     askAIEvents.dialogOpened('manual');
@@ -239,16 +241,21 @@ export default function ChartContent() {
     setChatOpen(true);
     setAutoSendQuestion(question);
     setAskOtherPrefillText(null);
+    setAskOtherRequestType(undefined);
     setAutoSendQuestionKey((prev) => prev + 1);
     // 复用同一个打开入口的埋点逻辑
     askAIEvents.dialogOpened('manual');
   };
 
-  const handleAskOther = (prefillText: string) => {
+  const handleAskOther = (
+    prefillText: string,
+    options?: { requestType?: 'city_comparison_report' }
+  ) => {
     // 仅覆盖输入框，不自动提交（不消耗 credits）
     setChatOpen(true);
     setAutoSendQuestion(null);
     setAskOtherPrefillText(prefillText);
+    setAskOtherRequestType(options?.requestType);
     setAskOtherPrefillKey((prev) => prev + 1);
     askAIEvents.dialogOpened('manual');
   };
@@ -258,6 +265,7 @@ export default function ChartContent() {
     if (!open) {
       setAutoSendQuestion(null);
       setAskOtherPrefillText(null);
+      setAskOtherRequestType(undefined);
     }
     if (!open && hasAutoPopped) {
       try {
@@ -359,6 +367,9 @@ export default function ChartContent() {
                 planetLines={planetLines}
                 onCityQuickAsk={handleCityQuickAsk}
                 onAskOther={handleAskOther}
+                onRequireLogin={() => setShowSignModal(true)}
+                maxCompareCities={user ? 4 : 2}
+                cityToolsUserState={user ? 'signed_in' : 'anonymous'}
               />
             </div>
 
@@ -577,6 +588,7 @@ export default function ChartContent() {
           autoSendQuestionKey={autoSendQuestionKey}
           askOtherPrefillText={askOtherPrefillText}
           askOtherPrefillKey={askOtherPrefillKey}
+          askOtherRequestType={askOtherRequestType}
           chartData={{
             birthData: {
               date: birthData.date,

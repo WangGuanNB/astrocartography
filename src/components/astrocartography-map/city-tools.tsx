@@ -13,16 +13,25 @@ import { useTranslations } from "next-intl";
 import {
   BarChart3,
   ArrowRight,
+  Coins,
+  Download,
   GitCompareArrows,
+  Lock,
   MapPin,
   Plus,
   Search,
   Sparkles,
   Trash2,
+  ChevronDown,
+  ChevronUp,
   X,
 } from "lucide-react";
 import { LocationAutocomplete } from "@/components/ui/location-autocomplete";
-import { cityToolEvents } from "@/lib/analytics";
+import { cityToolEvents, paymentEvents } from "@/lib/analytics";
+import { MAJOR_CITIES } from "@/lib/cities";
+import PricingModal from "@/components/pricing/pricing-modal";
+import { Pricing as PricingType } from "@/types/blocks/pricing";
+import { useParams } from "next/navigation";
 
 type PlanetLine = {
   planet: string;
@@ -39,9 +48,23 @@ export type MapCity = {
 };
 
 type CityToolsProps = {
+  birthData: {
+    date: string;
+    time: string;
+    location: string;
+    latitude?: number;
+    longitude?: number;
+    timezone?: string;
+  };
   planetLines: PlanetLine[];
   onFocusCity: (city: MapCity) => void;
-  onAskOther?: (prefillText: string) => void;
+  onAskOther?: (
+    prefillText: string,
+    options?: { requestType?: "city_comparison_report" }
+  ) => void;
+  onRequireLogin?: () => void;
+  maxCompareCities?: number;
+  userState?: "anonymous" | "signed_in";
 };
 
 type ToolMode = "check" | "compare" | null;
@@ -51,6 +74,7 @@ type ComparisonGoal =
   | "relationships"
   | "home"
   | "travel";
+type ReportStatus = "idle" | "loading" | "success" | "error";
 
 export type CityToolsHandle = {
   openCheckCity: () => void;
@@ -77,6 +101,23 @@ const comparisonGoals: ComparisonGoal[] = [
   "home",
   "travel",
 ];
+
+const CITY_COMPARISON_REPORT_CREDITS = 50;
+
+function extractTextFromAIDataStreamLines(lines: string[]) {
+  return lines
+    .map((line) => {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith("0:")) return "";
+      try {
+        return JSON.parse(trimmed.slice(2));
+      } catch {
+        return "";
+      }
+    })
+    .filter(Boolean)
+    .join("");
+}
 
 function toRadians(value: number) {
   return (value * Math.PI) / 180;
@@ -136,6 +177,17 @@ function strengthKey(distanceKm: number) {
   if (distanceKm <= 200) return "strong";
   if (distanceKm <= 450) return "moderate";
   return "subtle";
+}
+
+function fitScoreFromRawScore(rawScore: number, evidenceCount: number) {
+  if (evidenceCount === 0) return 32;
+  return Math.round(Math.max(24, Math.min(96, 55 + rawScore * 13)));
+}
+
+function scoreStatus(score: number) {
+  if (score >= 72) return "support";
+  if (score >= 50) return "mixed";
+  return "caution";
 }
 
 function getLineMeaning(
@@ -245,6 +297,57 @@ function comparisonScore(
   return { evidence, score };
 }
 
+function isNearBirthPlace(
+  city: MapCity,
+  birthData: CityToolsProps["birthData"]
+) {
+  if (
+    birthData.latitude === undefined ||
+    birthData.longitude === undefined
+  ) {
+    return false;
+  }
+  return (
+    Math.abs(city.lat - birthData.latitude) < 0.1 &&
+    Math.abs(city.lng - birthData.longitude) < 0.1
+  );
+}
+
+/** Quick picks: major cities closest to the user's planetary lines. */
+function getSuggestedCompareCities(
+  planetLines: PlanetLine[],
+  birthData: CityToolsProps["birthData"],
+  selectedCities: MapCity[],
+  limit = 6
+): MapCity[] {
+  if (!planetLines.length) return [];
+
+  const selectedKeys = new Set(selectedCities.map(cityKey));
+  const ranked = MAJOR_CITIES.filter(
+    (city) =>
+      !isNearBirthPlace(city, birthData) && !selectedKeys.has(cityKey(city))
+  )
+    .map((city) => {
+      const evidence = analyzeCity(city, planetLines);
+      const closestKm = evidence[0]?.distanceKm ?? Infinity;
+      return {
+        city,
+        closestKm,
+        evidenceCount: evidence.length,
+      };
+    })
+    .sort(
+      (a, b) =>
+        a.closestKm - b.closestKm || b.evidenceCount - a.evidenceCount
+    );
+
+  const nearLines = ranked.filter(
+    (item) => item.evidenceCount > 0 && item.closestKm <= 550
+  );
+  const pool = nearLines.length >= 4 ? nearLines : ranked;
+  return pool.slice(0, limit).map((item) => item.city);
+}
+
 function CityLineResults({
   city,
   planetLines,
@@ -338,13 +441,19 @@ function CityLineResults({
 
 const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools(
   {
+    birthData,
     planetLines,
     onFocusCity,
     onAskOther,
+    onRequireLogin,
+    maxCompareCities = 4,
+    userState = "signed_in",
   },
   ref
 ) {
   const t = useTranslations("astrocartographyMap.cityTools");
+  const params = useParams();
+  const locale = (params.locale as string) || "en";
   const translate = (
     key: string,
     values?: Record<string, string | number>
@@ -359,8 +468,17 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   const [comparisonGoal, setComparisonGoal] =
     useState<ComparisonGoal>("overall");
   const [comparisonReady, setComparisonReady] = useState(false);
+  const [reportStatus, setReportStatus] = useState<ReportStatus>("idle");
+  const [reportText, setReportText] = useState("");
+  const [reportError, setReportError] = useState("");
+  const [expandedResultKeys, setExpandedResultKeys] = useState<Set<string>>(
+    () => new Set()
+  );
+  const [showPricingModal, setShowPricingModal] = useState(false);
+  const [pricingData, setPricingData] = useState<PricingType | null>(null);
   const [mounted, setMounted] = useState(false);
   const comparisonResultsRef = useRef<HTMLDivElement>(null);
+  const fullReportRef = useRef<HTMLDivElement>(null);
   const comparisonResults = useMemo(
     () =>
       [...compareCities]
@@ -371,6 +489,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
         .sort((a, b) => b.score - a.score),
     [compareCities, comparisonGoal, planetLines]
   );
+  const hasReachedCompareLimit = compareCities.length >= maxCompareCities;
 
   useEffect(() => {
     setMounted(true);
@@ -384,6 +503,60 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
       document.body.style.overflow = previousOverflow;
     };
   }, [mode]);
+
+  useEffect(() => {
+    setReportStatus("idle");
+    setReportText("");
+    setReportError("");
+  }, [compareCities, comparisonGoal]);
+
+  useEffect(() => {
+    setExpandedResultKeys(new Set());
+  }, [compareCities, comparisonGoal, comparisonReady]);
+
+  const toggleResultExpanded = (key: string) => {
+    setExpandedResultKeys((current) => {
+      const next = new Set(current);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  };
+
+  const unlockButtonLabel =
+    reportStatus === "loading"
+      ? t("fullReport.generatingCTA")
+      : userState === "anonymous"
+        ? t("fullReport.signInCTA")
+        : t("fullReport.unlockCTA", {
+            credits: CITY_COMPARISON_REPORT_CREDITS,
+          });
+
+  const scrollToFullReport = () => {
+    fullReportRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const openPricingForCredits = async () => {
+    try {
+      if (!pricingData) {
+        const response = await fetch(`/api/get-pricing?locale=${locale}`);
+        const data = await response.json();
+        if (data.success && data.pricing) {
+          setPricingData(data.pricing);
+        } else {
+          throw new Error("pricing unavailable");
+        }
+      }
+      setShowPricingModal(true);
+      paymentEvents.pricingModalOpened("insufficient_credits");
+    } catch {
+      setReportError(t("fullReport.genericError"));
+      setReportStatus("error");
+    }
+  };
 
   useImperativeHandle(ref, () => ({
     openCheckCity() {
@@ -436,28 +609,34 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     setPendingCompareCity(city);
   };
 
-  const commitCompareCity = () => {
-    if (!pendingCompareCity) return;
-    setCompareCities((current) => {
-      if (
-        current.some(
-          (item) => cityKey(item) === cityKey(pendingCompareCity)
-        )
-      ) {
-        return current;
-      }
-      if (current.length >= 4) return current;
-      return [...current, pendingCompareCity];
-    });
+  const suggestedCompareCities = useMemo(
+    () =>
+      getSuggestedCompareCities(planetLines, birthData, compareCities, 6),
+    [planetLines, birthData, compareCities]
+  );
+
+  const appendCompareCity = (city: MapCity) => {
+    if (
+      compareCities.some((item) => cityKey(item) === cityKey(city))
+    ) {
+      return;
+    }
+    if (compareCities.length >= maxCompareCities || hasReachedCompareLimit) {
+      cityToolEvents.limitReached(maxCompareCities, userState);
+      return;
+    }
+
+    setCompareCities((current) => [...current, city]);
     setCompareQuery("");
     setPendingCompareCity(null);
     setComparisonReady(false);
-    onFocusCity(pendingCompareCity);
-    cityToolEvents.citySelected(
-      "compare_cities",
-      pendingCompareCity.name,
-      pendingCompareCity.country
-    );
+    onFocusCity(city);
+    cityToolEvents.citySelected("compare_cities", city.name, city.country);
+  };
+
+  const commitCompareCity = () => {
+    if (!pendingCompareCity) return;
+    appendCompareCity(pendingCompareCity);
   };
 
   const askAboutCity = () => {
@@ -485,6 +664,15 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
 
   const runComparison = () => {
     if (compareCities.length < 2) return;
+    const topResult = comparisonResults[0];
+    cityToolEvents.comparisonRun(
+      comparisonGoal,
+      compareCities.length,
+      topResult?.city.name,
+      topResult
+        ? fitScoreFromRawScore(topResult.score, topResult.evidence.length)
+        : undefined
+    );
     setComparisonReady(true);
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
@@ -527,9 +715,176 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     setMode(null);
   };
 
-  if (!mounted || !mode) return null;
+  const unlockFullComparisonReport = async () => {
+    if (comparisonResults.length < 2) return;
+    if (userState === "anonymous") {
+      onRequireLogin?.();
+      return;
+    }
+    if (reportStatus === "loading") return;
+
+    const evidence = comparisonResults
+      .map(({ city, evidence, score }, index) => {
+        const fitScore = fitScoreFromRawScore(score, evidence.length);
+        const status = scoreStatus(fitScore);
+        const lines = evidence.length
+          ? evidence
+              .slice(0, 8)
+              .map(({ line, distanceKm }) => {
+                const meaning = getLineMeaning(
+                  line.planet,
+                  line.type,
+                  translate
+                );
+                return `- ${meaning.planetName} ${lineTypeLabel(line.type)}: ${Math.round(distanceKm)} km, ${meaning.themes}`;
+              })
+              .join("\n")
+          : `- ${t("noEvidence")}`;
+
+        return `${index + 1}. ${city.name}, ${city.country}
+Fit score: ${fitScore}/100
+Status: ${t(status)}
+Evidence:
+${lines}`;
+      })
+      .join("\n\n");
+
+    const prompt = t("fullReport.prompt", {
+        goal: t(`goals.${comparisonGoal}.title` as never),
+        evidence,
+      });
+
+    setReportStatus("loading");
+    setReportText("");
+    setReportError("");
+
+    try {
+      const response = await fetch("/api/astro-chat/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "same-origin",
+        body: JSON.stringify({
+          messages: [{ role: "user", content: prompt }],
+          chartData: {
+            birthData,
+            planetLines,
+          },
+          requestType: "city_comparison_report",
+        }),
+      });
+
+      if (!response.ok) {
+        const errorPayload = await response.json().catch(() => null);
+        if (response.status === 401 || errorPayload?.type === "auth_required") {
+          onRequireLogin?.();
+          setReportStatus("idle");
+          return;
+        }
+        if (
+          response.status === 402 ||
+          errorPayload?.type === "insufficient_credits"
+        ) {
+          setReportStatus("idle");
+          setReportError("");
+          await openPricingForCredits();
+          return;
+        }
+        throw new Error(
+          errorPayload?.message || t("fullReport.genericError")
+        );
+      }
+
+      const reader = response.body?.getReader();
+      if (!reader) {
+        throw new Error(t("fullReport.genericError"));
+      }
+
+      const decoder = new TextDecoder();
+      let streamBuffer = "";
+      let nextReportText = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        streamBuffer += decoder.decode(value, { stream: true });
+        const lines = streamBuffer.split("\n");
+        streamBuffer = lines.pop() || "";
+        const textChunk = extractTextFromAIDataStreamLines(lines);
+        if (textChunk) {
+          nextReportText += textChunk;
+          setReportText(nextReportText);
+        }
+      }
+      const finalTextChunk = extractTextFromAIDataStreamLines([streamBuffer]);
+      if (finalTextChunk) {
+        nextReportText += finalTextChunk;
+        setReportText(nextReportText);
+      }
+
+      if (!nextReportText.trim()) {
+        throw new Error(t("fullReport.genericError"));
+      }
+
+      setReportStatus("success");
+      requestAnimationFrame(() => {
+        fullReportRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+      cityToolEvents.reportUnlocked(
+        "city_comparison_report",
+        CITY_COMPARISON_REPORT_CREDITS
+      );
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : t("fullReport.genericError");
+      if (
+        message.includes("insufficient_credits") ||
+        message.includes("Insufficient credits")
+      ) {
+        setReportStatus("idle");
+        setReportError("");
+        await openPricingForCredits();
+        return;
+      }
+      setReportStatus("error");
+      setReportError(message);
+    }
+  };
+
+  const downloadFullComparisonReport = () => {
+    if (!reportText.trim()) return;
+
+    const cityPart = comparisonResults
+      .map(({ city }) => city.name)
+      .join("-vs-")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 80);
+    const datePart = new Date().toISOString().slice(0, 10);
+    const filename = `astrocartography-city-comparison-${cityPart || comparisonGoal}-${datePart}.txt`;
+    const content = `${t("fullReport.title")}\n\n${reportText}`;
+    const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  if (!mounted) return null;
+  if (!mode && !showPricingModal) return null;
 
   return createPortal(
+    <>
+      {mode ? (
+        <>
         <div
           className="fixed inset-0 z-[1800] overflow-y-auto bg-black/65 p-3 backdrop-blur-sm"
           onClick={() => setMode(null)}
@@ -641,21 +996,35 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
             ) : (
               <div className="grid gap-3 overflow-visible p-3 md:grid-cols-[352px_minmax(0,1fr)] md:gap-5 md:p-5">
                 <div className="rounded-2xl border border-amber-200/20 bg-black/20 p-3 md:p-4">
-                  <div className="hidden items-start gap-3 md:flex">
-                    <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-amber-200/10 text-amber-200">
-                      <BarChart3 className="size-4" />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-bold text-white">
-                        {t("compareTitle")}
-                      </h3>
-                      <p className="mt-1 text-xs leading-relaxed text-white/65">
-                        {t("compareDescription")}
+                  {suggestedCompareCities.length > 0 && (
+                    <div className="mb-3">
+                      <div className="text-[11px] font-semibold uppercase tracking-wide text-amber-200/85">
+                        {t("suggestedNearTitle")}
+                      </div>
+                      <p className="mt-1 text-[11px] leading-relaxed text-white/55">
+                        {t("suggestedNearHint")}
                       </p>
+                      <div className="mt-2.5 flex flex-wrap gap-2">
+                        {suggestedCompareCities.map((city) => {
+                          const disabled = hasReachedCompareLimit;
+                          return (
+                            <button
+                              key={cityKey(city)}
+                              type="button"
+                              disabled={disabled}
+                              onClick={() => appendCompareCity(city)}
+                              className="inline-flex items-center gap-1.5 rounded-full border border-amber-200/25 bg-amber-200/10 px-3 py-1.5 text-xs font-semibold text-amber-50 transition hover:border-amber-200/50 hover:bg-amber-200/20 disabled:cursor-not-allowed disabled:opacity-40"
+                            >
+                              <Plus className="size-3.5 opacity-80" />
+                              {city.name}
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
-                  <div className="flex gap-2 md:mt-4">
+                  <div className="flex gap-2">
                     <div className="min-w-0 flex-1">
                       <LocationAutocomplete
                         value={compareQuery}
@@ -665,14 +1034,14 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
                         }}
                         onSelect={addCompareCity}
                         placeholder={t("searchPlaceholder")}
-                        disabled={compareCities.length >= 4}
+                        disabled={hasReachedCompareLimit}
                         className="h-10 rounded-full border-white/15 bg-black/35 px-4 text-xs text-white placeholder:text-white/35"
                       />
                     </div>
                     <button
                       type="button"
                       disabled={
-                        !pendingCompareCity || compareCities.length >= 4
+                        !pendingCompareCity || hasReachedCompareLimit
                       }
                       onClick={commitCompareCity}
                       className="flex h-10 shrink-0 items-center gap-1.5 rounded-full bg-amber-200/70 px-4 text-xs font-bold text-[#1a1420] hover:bg-amber-200 disabled:cursor-not-allowed disabled:opacity-35"
@@ -681,6 +1050,26 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
                       {t("addCity")}
                     </button>
                   </div>
+                  <div className="mt-2 rounded-xl border border-white/10 bg-white/[0.035] px-3 py-2 text-[11px] leading-relaxed text-white/50">
+                    {t("limitNote", { count: maxCompareCities })}
+                    {userState === "anonymous" && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          cityToolEvents.limitReached(maxCompareCities, userState);
+                          onRequireLogin?.();
+                        }}
+                        className="ml-1 font-semibold text-amber-200 underline decoration-amber-200/40 underline-offset-2 hover:text-amber-100"
+                      >
+                        {t("signInForMore")}
+                      </button>
+                    )}
+                  </div>
+                  {hasReachedCompareLimit && (
+                    <div className="mt-2 rounded-xl border border-amber-200/20 bg-amber-200/10 px-3 py-2 text-[11px] font-medium text-amber-100">
+                      {t("limitReached", { count: maxCompareCities })}
+                    </div>
+                  )}
 
                   {compareCities.length > 0 && (
                     <div className="mt-3 flex flex-wrap gap-2">
@@ -694,6 +1083,10 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
                             type="button"
                             aria-label={t("removeCity", { city: city.name })}
                             onClick={() => {
+                              cityToolEvents.cityRemoved(
+                                city.name,
+                                Math.max(0, compareCities.length - 1)
+                              );
                               setCompareCities((current) =>
                                 current.filter(
                                   (item) =>
@@ -722,6 +1115,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
                         onClick={() => {
                           setComparisonGoal(goal);
                           setComparisonReady(false);
+                          cityToolEvents.goalChanged(goal);
                         }}
                         className={`w-full rounded-xl border px-3 py-2.5 text-left transition-colors ${
                           comparisonGoal === goal
@@ -767,7 +1161,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
                   ) : (
                     <div
                       ref={comparisonResultsRef}
-                      className="scroll-mt-4 pb-20 md:pb-0"
+                      className="scroll-mt-4 pb-28 md:pb-0"
                     >
                       <div className="text-xs font-bold uppercase tracking-[0.16em] text-amber-200">
                         {t("resultsTitle")}
@@ -796,15 +1190,23 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
                                   translate
                                 )
                               : null;
-                            const status =
-                              score >= 2
-                                ? "support"
-                                : score >= 0
-                                  ? "mixed"
-                                  : "caution";
+                            const fitScore = fitScoreFromRawScore(
+                              score,
+                              evidence.length
+                            );
+                            const status = scoreStatus(fitScore);
+                            const resultKey = cityKey(city);
+                            const isExpanded =
+                              expandedResultKeys.has(resultKey);
+                            const bestForText = primaryMeaning
+                              ? t("bestForValue", {
+                                  themes: primaryMeaning.themes,
+                                })
+                              : t(`bestFor.${comparisonGoal}` as never);
+
                             return (
                             <div
-                              key={cityKey(city)}
+                              key={resultKey}
                               className="rounded-xl border border-white/10 bg-black/25 p-4"
                             >
                               <div className="flex items-start justify-between gap-3">
@@ -816,16 +1218,63 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
                                     {city.country}
                                   </div>
                                 </div>
-                                <div
-                                  className={`rounded-full px-2 py-1 text-[10px] font-bold ${
-                                    score >= 2
-                                      ? "bg-emerald-400/15 text-emerald-300"
-                                      : score >= 0
-                                        ? "bg-amber-300/15 text-amber-200"
-                                        : "bg-rose-400/15 text-rose-300"
-                                  }`}
-                                >
-                                  {t(status)}
+                                <div className="shrink-0 text-right">
+                                  <div
+                                    className={`rounded-full px-2 py-1 text-[10px] font-bold ${
+                                      status === "support"
+                                        ? "bg-emerald-400/15 text-emerald-300"
+                                        : status === "mixed"
+                                          ? "bg-amber-300/15 text-amber-200"
+                                          : "bg-rose-400/15 text-rose-300"
+                                    }`}
+                                  >
+                                    {t(status)}
+                                  </div>
+                                  <div className="mt-1 text-[10px] font-semibold text-white/45">
+                                    {fitScore}/100
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Mobile collapsed summary */}
+                              <div
+                                className={`mt-3 rounded-xl border border-white/10 bg-white/[0.035] px-3 py-2.5 md:hidden ${
+                                  isExpanded ? "hidden" : "block"
+                                }`}
+                              >
+                                <div className="text-[9px] font-bold uppercase tracking-wider text-white/35">
+                                  {t("bestForLabel")}
+                                </div>
+                                <div className="mt-1 text-xs font-semibold leading-snug text-white/80">
+                                  {bestForText}
+                                </div>
+                              </div>
+
+                              {/* Full details: always on desktop, expanded on mobile */}
+                              <div
+                                className={
+                                  isExpanded ? "block" : "hidden md:block"
+                                }
+                              >
+                              <div className="mt-3 grid grid-cols-2 gap-2">
+                                <div className="rounded-xl border border-white/10 bg-white/[0.035] p-3">
+                                  <div className="text-[9px] font-bold uppercase tracking-wider text-white/35">
+                                    {t("scoreLabel")}
+                                  </div>
+                                  <div className="mt-1 text-lg font-black text-white">
+                                    {fitScore}
+                                    <span className="text-xs font-semibold text-white/35">
+                                      /100
+                                    </span>
+                                  </div>
+                                </div>
+                                <div className="rounded-xl border border-white/10 bg-white/[0.035] p-3">
+                                  <div className="text-[9px] font-bold uppercase tracking-wider text-white/35">
+                                    {t("bestForLabel")}
+                                  </div>
+                                  <div className="mt-1 text-xs font-semibold leading-snug text-white/80">
+                                    {bestForText}
+                                  </div>
                                 </div>
                               </div>
                               {primary && primaryMeaning ? (
@@ -869,26 +1318,138 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
                                   </span>
                                 )}
                               </div>
+                              <div className="mt-3 grid gap-2">
+                                <div className="rounded-xl border border-amber-200/15 bg-amber-200/[0.055] p-3">
+                                  <div className="text-[10px] font-bold uppercase tracking-wider text-amber-200/80">
+                                    {t("watchOutLabel")}
+                                  </div>
+                                  <p className="mt-1 text-[11px] leading-relaxed text-white/58">
+                                    {t(`watchOut.${status}` as never)}
+                                  </p>
+                                </div>
+                                <div className="rounded-xl border border-purple-300/15 bg-purple-400/[0.055] p-3">
+                                  <div className="text-[10px] font-bold uppercase tracking-wider text-purple-200/80">
+                                    {t("recommendationLabel")}
+                                  </div>
+                                  <p className="mt-1 text-[11px] leading-relaxed text-white/62">
+                                    {t(`recommendations.${status}` as never)}
+                                  </p>
+                                </div>
+                              </div>
+                              </div>
+
+                              <button
+                                type="button"
+                                onClick={() => toggleResultExpanded(resultKey)}
+                                className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/[0.08] hover:text-white md:hidden"
+                              >
+                                {isExpanded ? (
+                                  <>
+                                    <ChevronUp className="size-3.5" />
+                                    {t("hideDetails")}
+                                  </>
+                                ) : (
+                                  <>
+                                    <ChevronDown className="size-3.5" />
+                                    {t("showDetails")}
+                                  </>
+                                )}
+                              </button>
                             </div>
                             );
                           }
                         )}
                       </div>
 
-                      <div className="mt-4 rounded-2xl border border-purple-300/15 bg-purple-400/[0.045] p-4">
+                      <div
+                        ref={fullReportRef}
+                        id="city-comparison-full-report"
+                        className="mt-4 scroll-mt-4 rounded-2xl border border-purple-300/15 bg-purple-400/[0.045] p-4"
+                      >
                         <div className="flex items-start gap-3">
                           <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-purple-400/10 text-purple-300">
-                            <Sparkles className="size-4" />
+                            <Lock className="size-4" />
                           </div>
-                          <div>
-                            <div className="text-sm font-bold text-white">
-                              {t("lockedTitle")}
+                          <div className="min-w-0 flex-1">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <div className="text-sm font-bold text-white">
+                                {t("fullReport.title")}
+                              </div>
+                              <span className="inline-flex items-center gap-1 rounded-full border border-amber-200/20 bg-amber-200/10 px-2 py-0.5 text-[10px] font-bold text-amber-100">
+                                <Coins className="size-3" />
+                                {t("fullReport.creditBadge", {
+                                  credits: CITY_COMPARISON_REPORT_CREDITS,
+                                })}
+                              </span>
                             </div>
                             <p className="mt-1 text-xs leading-relaxed text-white/50">
-                              {t("lockedDescription")}
+                              {t("fullReport.description")}
                             </p>
                           </div>
                         </div>
+                        <div className="relative mt-4 overflow-hidden rounded-xl border border-white/10 bg-black/25 p-3">
+                          {reportStatus === "success" ? (
+                            <div className="space-y-3">
+                              <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-emerald-200">
+                                {t("fullReport.readyTitle")}
+                              </div>
+                              <div className="max-h-[420px] overflow-y-auto whitespace-pre-wrap pr-2 text-xs leading-relaxed text-white/72">
+                                {reportText}
+                              </div>
+                            </div>
+                          ) : (
+                            <>
+                              <div className="space-y-2 text-[11px] leading-relaxed text-white/65">
+                                <p className="font-semibold text-white">
+                                  {t("fullReport.previewIntro")}
+                                </p>
+                                <ul className="space-y-1">
+                                  <li>{t("fullReport.previewItems.ranking")}</li>
+                                  <li>{t("fullReport.previewItems.tradeoffs")}</li>
+                                  <li>{t("fullReport.previewItems.lifeAreas")}</li>
+                                </ul>
+                              </div>
+                              <div
+                                className={`pointer-events-none mt-3 space-y-2 ${
+                                  reportStatus === "loading" ? "animate-pulse" : "blur-[2px]"
+                                }`}
+                              >
+                                <div className="h-2 rounded-full bg-white/20" />
+                                <div className="h-2 w-5/6 rounded-full bg-white/15" />
+                                <div className="h-2 w-3/4 rounded-full bg-white/10" />
+                              </div>
+                              {reportStatus === "error" && (
+                                <p className="mt-3 rounded-lg border border-rose-300/20 bg-rose-500/10 px-3 py-2 text-[11px] leading-relaxed text-rose-100">
+                                  {reportError || t("fullReport.genericError")}
+                                </p>
+                              )}
+                            </>
+                          )}
+                        </div>
+                        {reportStatus === "success" ? (
+                          <button
+                            type="button"
+                            onClick={downloadFullComparisonReport}
+                            className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-300 via-cyan-300 to-purple-400 px-4 py-3 text-sm font-bold text-[#0d1320] shadow-lg hover:opacity-95"
+                          >
+                            <Download className="size-4" />
+                            {t("fullReport.downloadCTA")}
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={unlockFullComparisonReport}
+                            disabled={reportStatus === "loading"}
+                            className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-300 via-pink-500 to-purple-600 px-4 py-3 text-sm font-bold text-[#180d1e] shadow-lg hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-70"
+                          >
+                            <Sparkles
+                              className={`size-4 ${
+                                reportStatus === "loading" ? "animate-spin" : ""
+                              }`}
+                            />
+                            {unlockButtonLabel}
+                          </button>
+                        )}
                       </div>
 
                       <div className="mt-4 space-y-2">
@@ -934,7 +1495,53 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
             )}
 
           </div>
-        </div>,
+        </div>
+
+        {mode === "compare" && comparisonReady && (
+          <div className="fixed inset-x-0 bottom-0 z-[1900] border-t border-white/10 bg-[#100c18]/95 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_-8px_30px_rgba(0,0,0,0.45)] backdrop-blur-md md:hidden">
+            {reportStatus === "success" ? (
+              <div className="mx-auto flex max-w-lg gap-2">
+                <button
+                  type="button"
+                  onClick={scrollToFullReport}
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-sm font-bold text-white"
+                >
+                  {t("fullReport.viewReadyCTA")}
+                </button>
+                <button
+                  type="button"
+                  onClick={downloadFullComparisonReport}
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-300 via-cyan-300 to-purple-400 px-3 py-3 text-sm font-bold text-[#0d1320]"
+                >
+                  <Download className="size-4" />
+                  {t("fullReport.downloadCTA")}
+                </button>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={scrollToFullReport}
+                className="mx-auto flex w-full max-w-lg items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-300 via-pink-500 to-purple-600 px-4 py-3.5 text-sm font-bold text-[#180d1e] shadow-lg"
+              >
+                <ArrowRight className="size-4 rotate-90" />
+                {reportStatus === "loading"
+                  ? t("fullReport.generatingCTA")
+                  : t("fullReport.stickyViewCTA")}
+              </button>
+            )}
+          </div>
+        )}
+        </>
+      ) : null}
+        {pricingData && (
+          <PricingModal
+            open={showPricingModal}
+            onOpenChange={setShowPricingModal}
+            pricing={pricingData}
+            preferredProductId="professional"
+          />
+        )}
+    </>,
     document.body
   );
 });

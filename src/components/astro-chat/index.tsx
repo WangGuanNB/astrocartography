@@ -28,6 +28,7 @@ interface AstroChatProps {
   // Ask Other：仅覆盖输入框，不自动发送
   askOtherPrefillText?: string | null;
   askOtherPrefillKey?: number;
+  askOtherRequestType?: 'city_comparison_report';
   chartData: {
     birthData: {
       date: string;
@@ -51,6 +52,7 @@ interface AstroChatProps {
 }
 
 const FREE_QUESTIONS_LIMIT = 1; // 免费问题数量限制
+const CITY_COMPARISON_REPORT_CREDIT_COST = 50;
 
 export default function AstroChat({
   open,
@@ -59,6 +61,7 @@ export default function AstroChat({
   autoSendQuestionKey = 0,
   askOtherPrefillText,
   askOtherPrefillKey = 0,
+  askOtherRequestType,
   chartData,
   synastryData,
   user,
@@ -71,6 +74,8 @@ export default function AstroChat({
   const lastAskOtherKeyRef = useRef<number>(0);
   const [showSuggestions, setShowSuggestions] = useState(true);
   const [creditCost, setCreditCost] = useState<number>(10); // 默认 10 积分
+  const [pendingRequestType, setPendingRequestType] = useState<'standard' | 'city_comparison_report'>('standard');
+  const requestTypeRef = useRef<'standard' | 'city_comparison_report'>('standard');
   const [userCredits, setUserCredits] = useState<number | null>(null); // 用户积分余额
   const [lastCredits, setLastCredits] = useState<number | null>(null); // 上次积分值，用于检测变化
   const [showPricingModal, setShowPricingModal] = useState(false);
@@ -93,6 +98,11 @@ export default function AstroChat({
     () => `${chartData.birthData.location}|${synastryData ? 'syn' : 'map'}`,
     [chartData.birthData.location, synastryData]
   );
+
+  const effectiveCreditCost =
+    pendingRequestType === 'city_comparison_report'
+      ? CITY_COMPARISON_REPORT_CREDIT_COST
+      : creditCost;
   const sessionIdRef = useRef(
     typeof crypto !== 'undefined' ? crypto.randomUUID() : `session-${Date.now()}`
   );
@@ -216,8 +226,8 @@ export default function AstroChat({
     // 显示积分不足提示框
     setShowInsufficientCreditsDialog(true);
     // 📊 埋点：积分不足（使用刷新后的积分值）
-    askAIEvents.insufficientCredits(currentCredits || 0, creditCost);
-  }, [user, userCredits, creditCost, fetchUserCredits]);
+    askAIEvents.insufficientCredits(currentCredits || 0, effectiveCreditCost);
+  }, [user, userCredits, effectiveCreditCost, fetchUserCredits]);
 
   // 🔥 自定义 fetch 函数：在发送请求前修改 body，确保 chartData 被正确传递
   // 🔥 修复类型错误：使用标准的 fetch 类型签名 (RequestInfo | URL, RequestInit?) => Promise<Response>
@@ -285,6 +295,7 @@ export default function AstroChat({
       questionCount: currentUserMessageCount,
       remainingFreeQuestions: currentRemainingFreeQuestions,
       userLocale: locale, // 🔥 新增：传递用户语言环境
+      requestType: requestTypeRef.current,
     };
     
     // 创建新的请求选项，使用修改后的 body
@@ -380,6 +391,8 @@ export default function AstroChat({
         }
         
         // 注意：追问建议的生成已移至 useEffect，确保 messages 更新后再生成
+        setPendingRequestType('standard');
+        requestTypeRef.current = 'standard';
       }
     },
     onError: async (error: any) => {
@@ -512,7 +525,7 @@ export default function AstroChat({
     if (!entitlements?.canExportCurrentChat) {
       toast.error(t('export_requires_paid'));
       await fetchPricingData();
-      setPricingPreferredProductId(undefined);
+      setPricingPreferredProductId('professional');
       setShowPricingModal(true);
       paymentEvents.pricingModalOpened('other');
       return;
@@ -853,10 +866,10 @@ export default function AstroChat({
       }
       
       // 如果获取到积分且积分不足，显示提示框
-      if (currentCredits !== null && currentCredits < creditCost) {
+      if (currentCredits !== null && currentCredits < effectiveCreditCost) {
         setShowInsufficientCreditsDialog(true);
         // 📊 埋点：积分不足
-        askAIEvents.insufficientCredits(currentCredits, creditCost);
+        askAIEvents.insufficientCredits(currentCredits, effectiveCreditCost);
         return;
       }
       
@@ -874,6 +887,7 @@ export default function AstroChat({
       user ? 'logged_in' : 'guest'
     );
     
+    requestTypeRef.current = pendingRequestType;
     handleSubmit(e);
     // 清空输入框后重新聚焦
     setTimeout(() => {
@@ -923,6 +937,8 @@ export default function AstroChat({
       user ? 'logged_in' : 'guest'
     );
     
+    requestTypeRef.current = 'standard';
+    setPendingRequestType('standard');
     append({
       role: 'user',
       content: question,
@@ -957,6 +973,7 @@ export default function AstroChat({
     };
 
     handleInputChange(syntheticEvent as any);
+    setPendingRequestType(askOtherRequestType || 'standard');
 
     // 移动端 focus 可能触发浏览器自动滚动到输入框附近，导致欢迎区/建议区高度看起来变窄
     // 这里尝试用 preventScroll 保持当前滚动位置不被打断。
@@ -969,7 +986,7 @@ export default function AstroChat({
         el.focus();
       }
     }, 0);
-  }, [open, askOtherPrefillText, askOtherPrefillKey, handleInputChange]);
+  }, [open, askOtherPrefillText, askOtherPrefillKey, askOtherRequestType, handleInputChange]);
 
   // 聊天内容组件（复用）
   const chatContent = (
@@ -1164,9 +1181,9 @@ export default function AstroChat({
                 {userCredits !== null && (
                   <span className="font-semibold">Credits: {userCredits} | </span>
                 )}
-                {creditCost === 1 
-                  ? t('credit_cost_notice_singular', { credits: creditCost })
-                  : t('credit_cost_notice', { credits: creditCost })
+                {effectiveCreditCost === 1 
+                  ? t('credit_cost_notice_singular', { credits: effectiveCreditCost })
+                  : t('credit_cost_notice', { credits: effectiveCreditCost })
                 }
               </span>
             </div>
@@ -1364,8 +1381,8 @@ export default function AstroChat({
                   if (!pricingData) {
                     await fetchPricingData();
                   }
-                  // 打开价格弹窗
-                  setPricingPreferredProductId(undefined);
+                  // 打开价格弹窗，默认定位到 Professional（$18.9）
+                  setPricingPreferredProductId('professional');
                   setShowPricingModal(true);
                   // 📊 埋点：打开价格弹窗（由积分不足触发）
                   paymentEvents.pricingModalOpened('insufficient_credits');
@@ -1539,8 +1556,8 @@ export default function AstroChat({
                 if (!pricingData) {
                   await fetchPricingData();
                 }
-                // 打开价格弹窗
-                  setPricingPreferredProductId(undefined);
+                // 打开价格弹窗，默认定位到 Professional（$18.9）
+                setPricingPreferredProductId('professional');
                 setShowPricingModal(true);
                 // 📊 埋点：打开价格弹窗（由积分不足触发）
                 paymentEvents.pricingModalOpened('insufficient_credits');

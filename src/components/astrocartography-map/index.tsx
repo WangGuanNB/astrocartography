@@ -45,7 +45,13 @@ interface AstrocartographyMapProps {
   // 城市快捷提问：由父组件接管“打开 Ask AI 并自动发送”的行为
   onCityQuickAsk?: (question: string) => void;
   // Ask Other：仅预填输入框，不自动发送
-  onAskOther?: (prefillText: string) => void;
+  onAskOther?: (
+    prefillText: string,
+    options?: { requestType?: "city_comparison_report" }
+  ) => void;
+  onRequireLogin?: () => void;
+  maxCompareCities?: number;
+  cityToolsUserState?: "anonymous" | "signed_in";
   defaultPanelOpen?: boolean;
   showInitialGuide?: boolean;
   embedded?: boolean;
@@ -173,7 +179,10 @@ function LinePopupCard({
   t: ReturnType<typeof useTranslations>;
   closeLinePopup: () => void;
   selectedLineQuestions: string[];
-  onAskOther?: (text: string) => void;
+  onAskOther?: (
+    text: string,
+    options?: { requestType?: "city_comparison_report" }
+  ) => void;
 }) {
   return (
     <div className="w-[300px] max-w-[85vw] rounded-xl overflow-hidden border border-white/15 bg-black/85 shadow-2xl backdrop-blur-sm">
@@ -241,6 +250,9 @@ const AstrocartographyMap = forwardRef<
     birthData,
     planetLines = [],
     onAskOther,
+    onRequireLogin,
+    maxCompareCities = 4,
+    cityToolsUserState = "signed_in",
     defaultPanelOpen,
     showInitialGuide = true,
     embedded = false,
@@ -847,9 +859,13 @@ const AstrocartographyMap = forwardRef<
       {planetLines.length > 0 && (
         <CityTools
           ref={cityToolsRef}
+          birthData={birthData}
           planetLines={planetLines}
           onFocusCity={focusCity}
           onAskOther={onAskOther}
+          onRequireLogin={onRequireLogin}
+          maxCompareCities={maxCompareCities}
+          userState={cityToolsUserState}
         />
       )}
 

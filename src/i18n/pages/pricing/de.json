@@ -51,18 +51,18 @@
       },
       {
         "title": "Standard-Tarif",
-        "description": "Ideal für Nutzer mit ernsthaften Umzugsentscheidungen",
+        "description": "Ideal zum Städtevergleich und für Umzugsentscheidungen",
         "group": "one-time",
         "label": "Am beliebtesten",
         "features_title": "Premium-Funktionen",
         "features": [
-          "1000 Credits (100 KI-Fragen)",
-          "Relocation-Chart-Analyse",
-          "Country-Explorer-Zugang",
-          "KI-Chat als TXT exportieren & Karten herunterladen (lebenslanger Zugang; Site-Credit auf Bildern)",
-          "Werbefrei",
-          "Unbegrenzt gültig, kein Zeitlimit",
-          "Einmalzahlung, keine automatische Verlängerung"
+          "1000 Credits — etwa 100 AI-Chats oder ~20 vollständige Städtevergleichsberichte",
+          "Vollständige KI-Städtevergleichsberichte (je 50 Credits)",
+          "Relokationshoroskop-Analyse",
+          "Zugang zum Länder-Explorer",
+          "AI-Chat exportieren (TXT) & Karten herunterladen",
+          "Werbefreie Nutzung",
+          "Für immer gültig — einmalige Zahlung, keine Auto-Verlängerung"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -72,7 +72,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "100 Fragen, für immer — besserer Wert als 2 Monate Plus",
+        "tip": "Chats + Städtevergleichsberichte, für immer — günstiger als 2 Monate Plus",
         "switch_group": "subscription",
         "switch_group_label": "Ab $6.9/Monat →",
         "button": {
@@ -87,19 +87,18 @@
       },
       {
         "title": "Profi-Tarif",
-        "description": "Ideal für tiefe Recherche in mehreren Städten und Profi-Nutzer",
+        "description": "Ideal für tiefe Multi-City-Recherche und wiederholte Entscheidungschecks",
         "group": "one-time",
         "label": "Bester Wert",
         "features_title": "Alle Standard-Funktionen, plus",
         "features": [
-          "3000 Credits (300 KI-Fragen)",
-          "Permanenter Chat-Verlauf — ansehen, durchsuchen & exportieren im Konto (nicht im Abonnement)",
-          "Alle Standard-Funktionen",
-          "Priorisierte KI-Antwort (2× schneller)",
-          "Erweiterte Planetenlinien (Chiron, Lilith usw.)",
-          "E-Mail-Support (Antwort innerhalb 48 h)",
-          "Unbegrenzt gültig, kein Zeitlimit",
-          "Einmalzahlung, keine automatische Verlängerung"
+          "3000 Credits — etwa 300 AI-Chats oder ~60 vollständige Städtevergleichsberichte",
+          "Alle Funktionen des Standard-Plans",
+          "Permanenter Chat-Verlauf — ansehen, prüfen & im Konto exportieren",
+          "Priorisierte AI-Antwort (2x schneller)",
+          "Erweiterte Planetenlinien-Analyse (Chiron, Lilith usw.)",
+          "E-Mail-Support (Antwort innerhalb von 48 Stunden)",
+          "Für immer gültig — einmalige Zahlung, keine Auto-Verlängerung"
         ],
         "interval": "one-time",
         "amount": 1890,
@@ -109,7 +108,7 @@
         "original_price": "$24.9",
         "unit": "",
         "is_featured": false,
-        "tip": "Permanenter Chat-Verlauf exklusiv — nur $0,063 pro Frage",
+        "tip": "Mehr Vergleichsberichte + permanenter Verlauf — etwa $0.063 pro Chat",
         "button": {
           "title": "Jetzt kaufen",
           "url": "/#pricing",
@@ -127,7 +126,7 @@
         "label": "Flexibel",
         "features_title": "Enthalten",
         "features": [
-          "500 Credits (50 KI-Fragen) pro Monat",
+          "500 Credits/Monat — etwa 50 AI-Chats oder ~10 Städtevergleichsberichte",
           "Unbegrenzte Astrocartography-Karten",
           "PNG-Karten-Download & TXT-Chat-Export",
           "Monatliche Verlängerung — jederzeit kündbar"
@@ -158,7 +157,7 @@
         "label": "~29 % sparen",
         "features_title": "Enthalten",
         "features": [
-          "500 Credits (50 KI-Fragen) pro Monat",
+          "500 Credits/Monat — etwa 50 AI-Chats oder ~10 Städtevergleichsberichte",
           "Unbegrenzte Astrocartography-Karten",
           "PNG-Karten-Download & TXT-Chat-Export",
           "Jährliche Verlängerung — jederzeit kündbar"

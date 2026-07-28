@@ -23,6 +23,7 @@ function PricingPlanCard({
   onCheckout,
   onSwitchGroup,
   showSubscriptionLink,
+  isPreferred,
 }: {
   item: PricingItem;
   isLoading: boolean;
@@ -30,13 +31,16 @@ function PricingPlanCard({
   onCheckout: (item: PricingItem) => void;
   onSwitchGroup?: (groupName: string) => void;
   showSubscriptionLink?: boolean;
+  isPreferred?: boolean;
 }) {
   usePricingItemTracking(item);
 
   return (
     <div
+      data-product-id={item.product_id}
+      data-preferred-plan={isPreferred ? "true" : undefined}
       className={`rounded-lg p-4 md:p-5 ${
-        item.is_featured
+        item.is_featured || isPreferred
           ? "border-primary border-2 bg-card text-card-foreground"
           : "border-muted border"
       }`}
@@ -222,6 +226,29 @@ export default function Pricing({
     [pricing.groups, pricing.items]
   );
 
+  // When a preferred plan is set (e.g. Professional $18.9), bring it into view
+  // inside the modal/drawer scroll container — especially important on mobile.
+  useEffect(() => {
+    if (!preferredProductId || !isInModal) return;
+
+    const preferredGroup = pricing.items?.find(
+      (item) => item.product_id === preferredProductId
+    )?.group;
+    if (preferredGroup && preferredGroup !== group) {
+      setGroup(preferredGroup);
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      const el = document.querySelector(
+        `[data-product-id="${preferredProductId}"]`
+      ) as HTMLElement | null;
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 120);
+
+    return () => window.clearTimeout(timer);
+  }, [preferredProductId, isInModal, group, pricing.items, visibleItems.length]);
+
   const gridColsClass =
     visibleItems.length >= 3
       ? "md:grid-cols-3"
@@ -350,6 +377,7 @@ export default function Pricing({
                 onCheckout={(plan) => handleCheckout(plan)}
                 onSwitchGroup={setGroup}
                 showSubscriptionLink={showSubscriptionLink}
+                isPreferred={item.product_id === preferredProductId}
               />
             ))}
           </div>

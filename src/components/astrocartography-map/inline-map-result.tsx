@@ -68,9 +68,13 @@ export default function InlineMapResult({
     null
   );
   const [askOtherPrefillKey, setAskOtherPrefillKey] = useState(0);
+  const [askOtherRequestType, setAskOtherRequestType] = useState<
+    "city_comparison_report" | undefined
+  >(undefined);
 
   const openAskAI = () => {
     setAskOtherPrefillText(null);
+    setAskOtherRequestType(undefined);
     setChatOpen(true);
     askAIEvents.dialogOpened("manual");
     homeInlineMapEvents.askAIClicked();
@@ -86,8 +90,12 @@ export default function InlineMapResult({
     homeInlineMapEvents.compareCitiesClicked();
   };
 
-  const handleAskOther = (prefillText: string) => {
+  const handleAskOther = (
+    prefillText: string,
+    options?: { requestType?: "city_comparison_report" }
+  ) => {
     setAskOtherPrefillText(prefillText);
+    setAskOtherRequestType(options?.requestType);
     setAskOtherPrefillKey((prev) => prev + 1);
     setChatOpen(true);
     askAIEvents.dialogOpened("manual");
@@ -137,6 +145,9 @@ export default function InlineMapResult({
                 onAskOther={handleAskOther}
                 defaultPanelOpen={false}
                 showInitialGuide={false}
+                onRequireLogin={onRequireLogin}
+                maxCompareCities={user ? 4 : 2}
+                cityToolsUserState={user ? "signed_in" : "anonymous"}
                 embedded
               />
 
@@ -158,30 +169,52 @@ export default function InlineMapResult({
               >
                 {t("inlineResult.mobileFullMapHint")}
               </Link>
-              <Button
+              <button
+                type="button"
                 onClick={openAskAI}
-                className="h-12 w-full rounded-2xl bg-gradient-to-r from-amber-300 via-pink-400 to-purple-600 text-sm font-bold text-[#160e1d] shadow-lg hover:opacity-95"
+                className="flex w-full items-center gap-3 rounded-2xl bg-gradient-to-r from-amber-300 via-pink-400 to-purple-600 px-4 py-3 text-left text-[#160e1d] shadow-lg transition hover:opacity-95"
               >
-                <Sparkles className="mr-2 size-4" />
-                {t("messages.buttons.askAI")}
-              </Button>
-              <div className="mt-2 grid grid-cols-2 gap-2">
-                <Button
-                  variant="outline"
+                <Sparkles className="size-4 shrink-0" />
+                <span className="min-w-0">
+                  <span className="block text-sm font-bold">
+                    {t("messages.buttons.askAI")}
+                  </span>
+                  <span className="mt-0.5 block text-xs font-medium leading-snug text-[#160e1d]/70">
+                    {t("inlineResult.askAIDescription")}
+                  </span>
+                </span>
+              </button>
+              <div className="mt-2 grid gap-2">
+                <button
+                  type="button"
                   onClick={openCheckCity}
-                  className="h-11 rounded-2xl border-white/10 bg-white/[0.08] px-2 text-xs font-bold text-white hover:bg-white/15"
+                  className="flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-3 text-left text-white transition hover:bg-white/15"
                 >
-                  <Search className="mr-1.5 size-4 text-purple-300" />
-                  {t("messages.buttons.checkCity")}
-                </Button>
-                <Button
-                  variant="outline"
+                  <Search className="size-4 shrink-0 text-purple-300" />
+                  <span className="min-w-0">
+                    <span className="block text-sm font-bold">
+                      {t("messages.buttons.checkCity")}
+                    </span>
+                    <span className="mt-0.5 block text-xs leading-snug text-white/55">
+                      {t("inlineResult.checkCityDescription")}
+                    </span>
+                  </span>
+                </button>
+                <button
+                  type="button"
                   onClick={openCompareCities}
-                  className="h-11 rounded-2xl border-white/10 bg-white/[0.08] px-2 text-xs font-bold text-white hover:bg-white/15"
+                  className="flex w-full items-center gap-3 rounded-2xl border border-amber-200/15 bg-amber-200/[0.07] px-4 py-3 text-left text-white transition hover:bg-amber-200/[0.12]"
                 >
-                  <GitCompareArrows className="mr-1.5 size-4 text-amber-300" />
-                  {t("messages.buttons.compareCities")}
-                </Button>
+                  <GitCompareArrows className="size-4 shrink-0 text-amber-300" />
+                  <span className="min-w-0">
+                    <span className="block text-sm font-bold">
+                      {t("messages.buttons.compareCities")}
+                    </span>
+                    <span className="mt-0.5 block text-xs leading-snug text-white/55">
+                      {t("inlineResult.compareCitiesDescription")}
+                    </span>
+                  </span>
+                </button>
               </div>
             </div>
           </div>
@@ -203,29 +236,51 @@ export default function InlineMapResult({
           </div>
 
           <div className="mt-6 grid gap-3">
-            <Button
+            <button
+              type="button"
               onClick={openAskAI}
-              className="h-12 rounded-full bg-gradient-to-r from-amber-300 via-pink-400 to-purple-600 text-sm font-bold text-[#160e1d] shadow-lg hover:opacity-95"
+              className="flex w-full items-center gap-3 rounded-2xl bg-gradient-to-r from-amber-300 via-pink-400 to-purple-600 px-4 py-3 text-left text-[#160e1d] shadow-lg transition hover:opacity-95"
             >
-              <Sparkles className="mr-2 size-4" />
-              {t("messages.buttons.askAI")}
-            </Button>
-            <Button
-              variant="outline"
+              <Sparkles className="size-4 shrink-0" />
+              <span className="min-w-0">
+                <span className="block text-sm font-bold">
+                  {t("messages.buttons.askAI")}
+                </span>
+                <span className="mt-0.5 block text-xs font-medium leading-snug text-[#160e1d]/70">
+                  {t("inlineResult.askAIDescription")}
+                </span>
+              </span>
+            </button>
+            <button
+              type="button"
               onClick={openCheckCity}
-              className="h-12 justify-center rounded-2xl border-white/10 bg-white/[0.035] text-white hover:bg-white/10"
+              className="flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-left text-white transition hover:bg-white/10"
             >
-              <Search className="mr-2 size-4 text-purple-300" />
-              {t("messages.buttons.checkCity")}
-            </Button>
-            <Button
-              variant="outline"
+              <Search className="size-4 shrink-0 text-purple-300" />
+              <span className="min-w-0">
+                <span className="block text-sm font-bold">
+                  {t("messages.buttons.checkCity")}
+                </span>
+                <span className="mt-0.5 block text-xs leading-snug text-white/55">
+                  {t("inlineResult.checkCityDescription")}
+                </span>
+              </span>
+            </button>
+            <button
+              type="button"
               onClick={openCompareCities}
-              className="h-12 justify-center rounded-2xl border-white/10 bg-white/[0.035] text-white hover:bg-white/10"
+              className="flex w-full items-center gap-3 rounded-2xl border border-amber-200/15 bg-amber-200/[0.055] px-4 py-3 text-left text-white transition hover:bg-amber-200/[0.1]"
             >
-              <GitCompareArrows className="mr-2 size-4 text-amber-300" />
-              {t("messages.buttons.compareCities")}
-            </Button>
+              <GitCompareArrows className="size-4 shrink-0 text-amber-300" />
+              <span className="min-w-0">
+                <span className="block text-sm font-bold">
+                  {t("messages.buttons.compareCities")}
+                </span>
+                <span className="mt-0.5 block text-xs leading-snug text-white/55">
+                  {t("inlineResult.compareCitiesDescription")}
+                </span>
+              </span>
+            </button>
           </div>
 
           <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.035] p-4">
@@ -241,9 +296,15 @@ export default function InlineMapResult({
 
       <AstroChat
         open={chatOpen}
-        onOpenChange={setChatOpen}
+        onOpenChange={(open) => {
+          setChatOpen(open);
+          if (!open) {
+            setAskOtherRequestType(undefined);
+          }
+        }}
         askOtherPrefillText={askOtherPrefillText}
         askOtherPrefillKey={askOtherPrefillKey}
+        askOtherRequestType={askOtherRequestType}
         chartData={{
           birthData: {
             date: birthData.date,

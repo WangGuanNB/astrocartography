@@ -16,6 +16,7 @@ import { getUserCredits, decreaseCredits, increaseCredits, CreditsTransType } fr
 import { getAIChatCreditCost } from "@/services/config";
 
 const ASTRO_CHAT_MODEL = process.env.DEEPSEEK_ASTRO_CHAT_MODEL || "deepseek-v4-flash";
+const CITY_COMPARISON_REPORT_CREDIT_COST = 50;
 
 // 检测用户问题的语言
 function detectUserLanguage(text: string): string {
@@ -76,12 +77,13 @@ interface ChatRequest {
   questionCount?: number; // 当前是第几个问题
   remainingFreeQuestions?: number; // 剩余免费问题数量
   userLocale?: string; // 🔥 新增：用户语言环境（用于优化 AI 回答）
+  requestType?: 'standard' | 'city_comparison_report';
 }
 
 export async function POST(req: Request) {
   try {
     const body: ChatRequest = await req.json();
-    const { messages, chartData, synastryData, questionCount, remainingFreeQuestions, userLocale } = body;
+    const { messages, chartData, synastryData, questionCount, remainingFreeQuestions, userLocale, requestType = 'standard' } = body;
 
     // 🔥 调试：记录接收到的数据
     console.log('📥 [API] 接收到的请求数据:', {
@@ -92,6 +94,7 @@ export async function POST(req: Request) {
       hasPlanetLines: !!chartData?.planetLines,
       planetLinesLength: chartData?.planetLines?.length || 0,
       birthDataKeys: chartData?.birthData ? Object.keys(chartData.birthData) : [],
+      requestType,
     });
 
     // 验证必需参数
@@ -191,8 +194,11 @@ export async function POST(req: Request) {
       );
     }
 
-    // 🔥 获取 AI 聊天消耗的积分数量（从配置读取）
-    const creditCost = getAIChatCreditCost();
+    // 🔥 获取 AI 消耗的积分数量：普通聊天读取配置，城市对比完整报告固定 50 credits
+    const creditCost =
+      requestType === 'city_comparison_report'
+        ? CITY_COMPARISON_REPORT_CREDIT_COST
+        : getAIChatCreditCost();
     
     // 🔥 检查用户积分余额
     const userCredits = await getUserCredits(user_uuid);
@@ -220,7 +226,7 @@ export async function POST(req: Request) {
         trans_type: CreditsTransType.AIChat,
         credits: creditCost,
       });
-      console.log(`✅ [Astro Chat] 用户 ${user_uuid} 消耗 ${creditCost} 积分进行 AI 聊天`);
+      console.log(`✅ [Astro Chat] 用户 ${user_uuid} 消耗 ${creditCost} 积分进行 ${requestType}`);
     } catch (creditError: any) {
       console.error("❌ [Astro Chat] 消耗积分失败:", creditError);
       return new Response(
@@ -267,7 +273,11 @@ export async function POST(req: Request) {
       
       const systemMessage = {
         role: 'system' as const,
-        content: `${systemPrompt}\n\n${chartDataIntro}\n\n${chartContext}`,
+        content: `${systemPrompt}\n\n${
+          requestType === 'city_comparison_report'
+            ? 'The user is requesting a paid full city comparison report. Provide a structured, complete report with clear sections, but only interpret the supplied astrocartography evidence. Do not invent cities, exact predictions, or guarantees.'
+            : ''
+        }\n\n${chartDataIntro}\n\n${chartContext}`,
       };
 
       // 🔥 修复：构建完整的对话上下文（系统消息 + 所有用户消息，包括当前问题）
@@ -281,7 +291,7 @@ export async function POST(req: Request) {
       const result = await streamText({
         model: textModel,
         messages: conversationMessages,
-        maxTokens: 1800,
+        maxTokens: requestType === 'city_comparison_report' ? 2800 : 1800,
         temperature: 0.5, // 🔥 优化：降低 temperature 提高准确性和一致性（从 0.7 降至 0.5）
       });
 

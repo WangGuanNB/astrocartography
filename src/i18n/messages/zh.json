@@ -381,6 +381,9 @@
       "mobileFullMapHint": "想查看完整地图？打开全屏地图 →",
       "interpretTitle": "解读这张地图",
       "interpretDescription": "先从生成的地图开始。你可以检查一个城市、对比多个地点，然后基于地图证据询问 AI。",
+      "askAIDescription": "根据你生成的地图获得个人解读。",
+      "checkCityDescription": "查看附近的行星线、距离和强度。",
+      "compareCitiesDescription": "不确定哪个城市更适合你？并排对比多个选择。",
       "nextStepTitle": "下一步做什么",
       "nextStepDescription": "用 Ask AI 获取解读，用检查城市查看具体地点，或在多个城市之间做对比。"
     },
@@ -450,16 +453,19 @@
     "inlineResult": {
       "eyebrow": "页面内结果", "title": "你的占星地图", "download": "下载", "openFullMap": "打开完整地图",
       "calculating": "正在计算你的行星线……", "calculationError": "地图计算失败，请重试。", "downloadError": "地图下载失败，请重试。",
-      "interpretTitle": "解读这张地图", "interpretDescription": "检查城市、对比地点，然后根据地图证据向 AI 提问。", "askAI": "询问 AI",
+      "interpretTitle": "解读这张地图", "interpretDescription": "检查城市、对比地点，然后根据地图证据向 AI 提问。", "askAI": "询问 AI", "askAIDescription": "根据你生成的地图获得个人解读。",
       "checkCity": "检查城市", "checkCityDescription": "查看附近的行星线、距离和强度。",
-      "compareCities": "对比城市", "compareCitiesDescription": "添加 2–4 个城市，选择目标并对比证据。",
+      "compareCities": "对比城市", "compareCitiesDescription": "不确定哪个城市更适合你？并排对比多个选择。",
       "quickQuestionsTitle": "快捷问题", "viewMore": "查看更多问题", "showFewer": "收起更多问题",
       "quickQuestions": ["我应该搬家还是留下？哪些地方更适合我？", "哪些城市更支持我的事业、财富和认可？", "为了爱情、友谊和归属感，我应该搬到哪里？", "将我当前的城市与更适合居住和身心健康的地方进行比较。"]
     },
     "cityTools": {
       "checkEyebrow": "城市检查", "checkTitle": "根据你的地图检查城市",
       "checkDescription": "输入真实城市，查看附近行星线、近似距离、强度与地图证据。",
-      "compareTitle": "对比城市", "compareDescription": "添加 2–4 个地点，选择目标，并排比较支持、谨慎因素与取舍。",
+      "compareTitle": "对比城市", "compareDescription": "添加 2–4 个地点，选择目标，并排比较支持、谨慎因素与取舍。", "suggestedNearTitle": "靠近你行星线的城市", "suggestedNearHint": "点选即可加入。若要其他城市，可在下方搜索。", "showDetails": "展开详情", "hideDetails": "收起详情",
+      "limitNote": "本次可对比最多 {count} 个城市。",
+      "signInForMore": "登录后可对比更多。",
+      "limitReached": "你已达到本次 {count} 个城市的对比上限。",
       "searchPlaceholder": "例如：伦敦、悉尼、东京……", "addCity": "添加", "nearbyLines": "附近行星线",
       "noNearbyLines": "在附近阈值内没有检测到行星线。", "runCheck": "检查城市", "askAI": "让 AI 深入分析这些城市证据",
       "distanceNotice": "距离为近似值，用于表示该城市与计算所得行星线的接近程度。",
@@ -476,6 +482,28 @@
       "rankingDisclaimer": "这是针对当前目标的信号排序，并不代表某个城市在所有生活方面都绝对最好。",
       "keySignal": "免费关键证据",
       "moreSignals": "另有 {count} 条重要信号待解读",
+      "scoreLabel": "适配分",
+      "bestForLabel": "最适合",
+      "bestForValue": "{themes}",
+      "watchOutLabel": "注意",
+      "recommendationLabel": "建议",
+      "bestFor": {
+        "overall": "整体迁居判断",
+        "career": "事业、曝光与机会",
+        "relationships": "爱情、关系与社交",
+        "home": "家庭、稳定与归属",
+        "travel": "短住、旅行与探索"
+      },
+      "watchOut": {
+        "support": "信号相对更明确，但仍需要结合现实条件判断。",
+        "mixed": "支持和挑战同时出现，细节需要进一步看。",
+        "caution": "针对当前目标，地图上的支持信号较少。"
+      },
+      "recommendations": {
+        "support": "可以先放入候选清单，再继续比较现实因素。",
+        "mixed": "建议让 AI 拆解取舍后，再判断是否作为重点候选。",
+        "caution": "更适合作为深入复核的提示，不建议直接当作最终结论。"
+      },
       "statusHints": {
         "support": "与当前目标的匹配信号较明确",
         "mixed": "支持因素与现实取舍同时存在",
@@ -483,6 +511,26 @@
       },
       "lockedTitle": "AI 深度对比分析",
       "lockedDescription": "进一步了解排名形成的原因、城市之间的主要取舍，以及哪个选择更符合当前目标。",
+      "fullReport": {
+        "title": "AI 城市对比完整报告",
+        "creditBadge": "{credits} 积分",
+        "description": "解锁针对当前城市组合和目标的结构化 AI 报告，包含排名原因、城市取舍、谨慎信号和下一步建议。",
+        "previewIntro": "完整报告包含：",
+        "previewItems": {
+          "ranking": "为什么排名第一的城市更符合当前目标",
+          "tradeoffs": "每个城市之间的关键取舍",
+          "lifeAreas": "事业、感情、家庭、旅行和长期定居分项分析"
+        },
+        "signInCTA": "登录后解锁报告",
+        "unlockCTA": "解锁完整报告（{credits} 积分）",
+        "stickyViewCTA": "查看解读报告",
+        "generatingCTA": "正在生成你的报告……",
+        "readyTitle": "报告已生成",
+        "viewReadyCTA": "查看报告",
+        "downloadCTA": "下载报告",
+        "genericError": "报告生成失败，请重试。",
+        "prompt": "请根据我选择的目标生成一份完整的 Astrocartography 城市对比报告。目标：{goal}。\n\n只能使用下面的计算证据，不要编造额外城市、精确结果、保证性结论或改变人生的承诺。\n\n报告结构必须包含：\n1. 执行摘要：优先研究哪个城市，以及原因。\n2. 城市排名：解释每个城市的分数和最强证据。\n3. 并排取舍：每个城市支持什么、需要谨慎什么。\n4. 生活领域分析：事业、感情/关系、家庭/情绪稳定、旅行/探索、长期定居。\n5. 搬迁前需要核实的现实因素。\n6. 最终建议，并说明不确定性和出生时间准确度的影响。\n\n计算证据：\n{evidence}"
+      },
       "askHooksTitle": "值得进一步了解",
       "askHooks": {
         "whyFirst": "为什么 {city} 在我的目标中排名第一？",
