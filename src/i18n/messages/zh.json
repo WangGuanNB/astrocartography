@@ -329,7 +329,15 @@
         "useCityName": "使用城市名称"
       },
       "timezone": {
-        "label": "时区"
+        "label": "时区",
+        "placeholder": "搜索时区，例如 America/New_York",
+        "auto": "已根据 {location} 自动匹配",
+        "manual": "已手动选择时区",
+        "reset": "使用出生地时区",
+        "change": "修改时区",
+        "waiting": "请选择出生地点以自动匹配时区",
+        "invalid": "请从建议列表中选择时区",
+        "no_results": "没有匹配的时区"
       },
       "buttons": {
         "generate": "✨ 生成你的地图 ✨",

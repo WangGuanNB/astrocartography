@@ -317,7 +317,15 @@
         "useCityName": "Stadtname"
       },
       "timezone": {
-        "label": "Zeitzone"
+        "label": "Zeitzone",
+        "placeholder": "Zeitzone suchen, z. B. America/New_York",
+        "auto": "Automatisch für {location} erkannt",
+        "manual": "Zeitzone manuell ausgewählt",
+        "reset": "Zeitzone des Geburtsorts verwenden",
+        "change": "Zeitzone ändern",
+        "waiting": "Wähle einen Geburtsort, um die Zeitzone zu erkennen",
+        "invalid": "Wähle eine Zeitzone aus der Vorschlagsliste",
+        "no_results": "Keine passenden Zeitzonen"
       },
       "buttons": {
         "generate": "✨ Karte erstellen ✨",

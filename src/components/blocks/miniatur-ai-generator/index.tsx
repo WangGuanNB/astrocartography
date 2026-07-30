@@ -1,19 +1,25 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { useParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Calendar, Clock, MapPin, Globe, Sparkles } from 'lucide-react';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Calendar, Check, ChevronDown, Clock, MapPin, Globe, Search, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 import { LocationAutocomplete } from '@/components/ui/location-autocomplete';
 import { DatePicker } from '@/components/ui/date-picker';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useAppContext } from '@/contexts/app';
 import { homeInlineMapEvents } from '@/lib/analytics';
+import {
+  getSupportedTimeZones,
+  getTimezoneForCoordinates,
+  getTimezoneOffsetLabel,
+  isIanaTimeZone,
+} from '@/lib/timezone';
 
 const InlineMapResult = dynamic(
   () => import('@/components/astrocartography-map/inline-map-result'),
@@ -68,6 +74,29 @@ function parseCoordinateInput(value: string) {
   return { latitude, longitude };
 }
 
+function getTimezoneCityLabel(timeZone: string) {
+  const city = timeZone.split('/').at(-1)?.replaceAll('_', ' ') || timeZone;
+  return city
+    .replace('Calcutta', 'Kolkata')
+    .replace('Katmandu', 'Kathmandu')
+    .replace('Kiev', 'Kyiv');
+}
+
+const COMMON_TIMEZONES = [
+  'UTC',
+  'America/New_York',
+  'America/Chicago',
+  'America/Denver',
+  'America/Los_Angeles',
+  'Europe/London',
+  'Europe/Paris',
+  'Europe/Rome',
+  'Asia/Shanghai',
+  'Asia/Tokyo',
+  'Asia/Calcutta',
+  'Australia/Sydney',
+];
+
 export default function MiniaturaAIGenerator() {
   const t = useTranslations('astrocartographyGenerator');
   const params = useParams();
@@ -79,7 +108,10 @@ export default function MiniaturaAIGenerator() {
   const [birthDate, setBirthDate] = useState('');
   const [birthTime, setBirthTime] = useState('');
   const [birthLocation, setBirthLocation] = useState('');
-  const [timezone, setTimezone] = useState('UTC (London, Dublin)');
+  const [timezone, setTimezone] = useState('UTC');
+  const [isTimezoneManual, setIsTimezoneManual] = useState(false);
+  const [isTimezoneEditorOpen, setIsTimezoneEditorOpen] = useState(false);
+  const [timezoneSearch, setTimezoneSearch] = useState('');
   const [useCoordinates, setUseCoordinates] = useState(false);
   const [selectedLocationCoords, setSelectedLocationCoords] = useState<{
     latitude: number;
@@ -101,6 +133,35 @@ export default function MiniaturaAIGenerator() {
   } | null>(null);
   const inlineResultRef = useRef<HTMLDivElement | null>(null);
   const shouldScrollToResultRef = useRef(false);
+  const timeZoneOptions = useMemo(() => getSupportedTimeZones(), []);
+  const detectedTimezone = useMemo(() => {
+    const coordinates = useCoordinates
+      ? parseCoordinateInput(birthLocation)
+      : selectedLocationCoords;
+
+    return coordinates
+      ? getTimezoneForCoordinates(coordinates.latitude, coordinates.longitude)
+      : null;
+  }, [birthLocation, selectedLocationCoords, useCoordinates]);
+  const filteredTimeZones = useMemo(() => {
+    const query = timezoneSearch.trim().toLowerCase();
+    if (!query) {
+      const initialOptions = [detectedTimezone, timezone, ...COMMON_TIMEZONES].filter(
+        (timeZone): timeZone is string => timeZone !== null
+      );
+      return Array.from(new Set(initialOptions)).filter((timeZone) => timeZoneOptions.includes(timeZone));
+    }
+
+    return timeZoneOptions.filter((timeZone) =>
+      `${timeZone} ${getTimezoneCityLabel(timeZone)}`.toLowerCase().includes(query)
+    );
+  }, [detectedTimezone, timeZoneOptions, timezone, timezoneSearch]);
+
+  const applyDetectedTimezone = useCallback((coordinates: { latitude: number; longitude: number }) => {
+    if (!isTimezoneManual) {
+      setTimezone(getTimezoneForCoordinates(coordinates.latitude, coordinates.longitude));
+    }
+  }, [isTimezoneManual]);
 
   // 检查使用限制
   const checkUsageLimit = useCallback(async () => {
@@ -136,8 +197,12 @@ export default function MiniaturaAIGenerator() {
       toast.error(t('messages.error.birthLocationRequired'));
       return false;
     }
+    if (!isIanaTimeZone(timezone)) {
+      toast.error(t('form.timezone.invalid'));
+      return false;
+    }
     return true;
-  }, [birthDate, birthTime, birthLocation, t]);
+  }, [birthDate, birthTime, birthLocation, timezone, t]);
 
   const handleGenerate = useCallback(async () => {
     // 验证出生数据
@@ -151,11 +216,20 @@ export default function MiniaturaAIGenerator() {
     const resolvedCoordinates =
       manualCoordinates || (!useCoordinates ? selectedLocationCoords : null);
 
+    const resolvedTimezone =
+      !isTimezoneManual && resolvedCoordinates
+        ? getTimezoneForCoordinates(
+            resolvedCoordinates.latitude,
+            resolvedCoordinates.longitude
+          )
+        : timezone;
+
     const requestData = {
       birthDate,
       birthTime,
       birthLocation,
-      timezone,
+      timezone: resolvedTimezone,
+      timezoneMode: isTimezoneManual ? 'manual' : 'auto',
       // 如果用户从自动完成列表选择了地点，或手动输入了坐标，使用明确坐标
       ...(resolvedCoordinates && {
         latitude: resolvedCoordinates.latitude,
@@ -168,7 +242,7 @@ export default function MiniaturaAIGenerator() {
       birthDate,
       birthTime,
       birthLocation,
-      timezone,
+      timezone: resolvedTimezone,
       useCoordinates: useCoordinates.toString(),
       ...(resolvedCoordinates && {
         latitude: resolvedCoordinates.latitude.toString(),
@@ -209,7 +283,11 @@ export default function MiniaturaAIGenerator() {
         throw new Error(result.error || t('messages.errorGeneral.calculationFailed'));
       }
 
-      setInlineChartData({ birthDate, birthTime, birthLocation, timezone });
+      const calculatedTimezone = result.data.birthData.timezone || resolvedTimezone;
+      if (!isTimezoneManual) {
+        setTimezone(calculatedTimezone);
+      }
+      setInlineChartData({ birthDate, birthTime, birthLocation, timezone: calculatedTimezone });
       setInlineBirthData(result.data.birthData);
       setInlinePlanetLines(result.data.planetLines || []);
       shouldScrollToResultRef.current = true;
@@ -227,7 +305,7 @@ export default function MiniaturaAIGenerator() {
     } finally {
       setIsGenerating(false);
     }
-  }, [birthDate, birthTime, birthLocation, timezone, useCoordinates, selectedLocationCoords, validateBirthData, locale, t]);
+  }, [birthDate, birthTime, birthLocation, timezone, isTimezoneManual, useCoordinates, selectedLocationCoords, validateBirthData, locale, t]);
 
   useEffect(() => {
     if (
@@ -359,7 +437,11 @@ export default function MiniaturaAIGenerator() {
                       value={birthLocation}
                       onChange={(e) => {
                         setBirthLocation(e.target.value);
-                        setSelectedLocationCoords(null); // 清除坐标，因为用户手动输入了坐标
+                        setSelectedLocationCoords(null);
+                        const coordinates = parseCoordinateInput(e.target.value);
+                        if (coordinates) {
+                          applyDetectedTimezone(coordinates);
+                        }
                       }}
                       className="h-10 text-sm bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-500 focus:ring-purple-500"
                       placeholder={t('form.birthLocation.placeholderCoordinates')}
@@ -370,14 +452,12 @@ export default function MiniaturaAIGenerator() {
                       value={birthLocation}
                       onChange={(value) => {
                         setBirthLocation(value);
-                        // 如果用户清空了输入，清除坐标
-                        if (!value) {
-                          setSelectedLocationCoords(null);
-                        }
+                        // Typing after a selection must not submit the old place's coordinates.
+                        setSelectedLocationCoords(null);
                       }}
                       onSelect={(result) => {
-                        // 用户从列表选择了地点，保存坐标
                         setSelectedLocationCoords(result.coordinates);
+                        applyDetectedTimezone(result.coordinates);
                       }}
                       placeholder={t('form.birthLocation.placeholder')}
                       className="h-10 text-sm bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-500 focus:ring-purple-500"
@@ -387,36 +467,123 @@ export default function MiniaturaAIGenerator() {
 
                 {/* 时区 */}
                 <div className="space-y-1.5">
-                  <Label htmlFor="timezone" className="flex items-center gap-2 text-sm font-semibold text-purple-300">
-                    <Globe className="size-4 text-purple-400" />
-                    {t('form.timezone.label')}
-                  </Label>
-                  <Select value={timezone} onValueChange={setTimezone}>
-                    <SelectTrigger
-                      className="w-full h-10 px-3 text-sm rounded-md bg-white/10 border border-white/20 text-white focus:border-purple-500 focus:ring-purple-500 focus:outline-none focus:ring-2"
-                      aria-label="Timezone"
+                  <div className="flex items-center justify-between gap-3">
+                    <Label htmlFor={isTimezoneEditorOpen ? 'timezone' : undefined} className="flex items-center gap-2 text-sm font-semibold text-purple-300">
+                      <Globe className="size-4 text-purple-400" />
+                      {t('form.timezone.label')}
+                    </Label>
+                    {isTimezoneManual && detectedTimezone ? (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setTimezone(detectedTimezone);
+                          setIsTimezoneManual(false);
+                          setIsTimezoneEditorOpen(false);
+                          setTimezoneSearch('');
+                        }}
+                        className="shrink-0 text-xs text-purple-400 underline underline-offset-2 hover:text-purple-300"
+                      >
+                        {t('form.timezone.reset')}
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsTimezoneEditorOpen(true);
+                          setTimezoneSearch('');
+                        }}
+                        className="shrink-0 text-xs text-purple-400 underline underline-offset-2 hover:text-purple-300"
+                      >
+                        {t('form.timezone.change')}
+                      </button>
+                    )}
+                  </div>
+                  <Popover
+                    open={isTimezoneEditorOpen}
+                    onOpenChange={(open) => {
+                      setIsTimezoneEditorOpen(open);
+                      if (!open) {
+                        setTimezoneSearch('');
+                      }
+                    }}
+                  >
+                    <PopoverTrigger asChild>
+                      <button
+                        id="timezone"
+                        type="button"
+                        className="flex h-10 w-full items-center justify-between rounded-md border border-white/20 bg-white/10 px-3 text-left text-sm text-white transition-colors hover:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        aria-describedby="timezone-help"
+                      >
+                        <span className="truncate">{timezone}</span>
+                        <ChevronDown className="ml-2 size-4 shrink-0 text-gray-300" aria-hidden="true" />
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent
+                      align="start"
+                      className="w-[var(--radix-popover-trigger-width)] border-white/15 bg-[#15111e] p-2 text-white shadow-2xl"
                     >
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent className="bg-gray-900 border border-white/10 text-white">
-                      <SelectItem value="UTC (London, Dublin)">UTC (London, Dublin)</SelectItem>
-                      <SelectItem value="EST (New York)">EST (New York)</SelectItem>
-                      <SelectItem value="PST (Los Angeles)">PST (Los Angeles)</SelectItem>
-                      <SelectItem value="CST (Chicago)">CST (Chicago)</SelectItem>
-                      <SelectItem value="MST (Denver)">MST (Denver)</SelectItem>
-                      <SelectItem value="CET (Paris, Berlin)">CET (Paris, Berlin)</SelectItem>
-                      <SelectItem value="CST (Mexico City)">CST (Mexico City)</SelectItem>
-                      <SelectItem value="COT (Bogotá)">COT (Bogotá)</SelectItem>
-                      <SelectItem value="PET (Lima)">PET (Lima)</SelectItem>
-                      <SelectItem value="CLT (Santiago)">CLT (Santiago)</SelectItem>
-                      <SelectItem value="ART (Buenos Aires)">ART (Buenos Aires)</SelectItem>
-                      <SelectItem value="BRT (São Paulo)">BRT (São Paulo)</SelectItem>
-                      <SelectItem value="JST (Tokyo)">JST (Tokyo)</SelectItem>
-                      <SelectItem value="AEST (Sydney)">AEST (Sydney)</SelectItem>
-                      <SelectItem value="IST (Mumbai)">IST (Mumbai)</SelectItem>
-                      <SelectItem value="CST (Beijing)">CST (Beijing)</SelectItem>
-                    </SelectContent>
-                  </Select>
+                      <div className="relative mb-2">
+                        <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+                        <Input
+                          value={timezoneSearch}
+                          onChange={(event) => setTimezoneSearch(event.target.value)}
+                          className="h-9 border-white/15 bg-white/5 pl-9 text-sm text-white placeholder:text-gray-400 focus:border-purple-500 focus:ring-purple-500"
+                          placeholder={t('form.timezone.placeholder')}
+                          autoFocus
+                        />
+                      </div>
+                      <div className="max-h-56 overflow-y-auto pr-1" role="listbox" aria-label={t('form.timezone.label')}>
+                        {filteredTimeZones.map((timeZone) => {
+                          const isSelected = timeZone === timezone;
+                          return (
+                            <button
+                              key={timeZone}
+                              type="button"
+                              role="option"
+                              aria-selected={isSelected}
+                              onClick={() => {
+                                setTimezone(timeZone);
+                                setIsTimezoneManual(true);
+                                setTimezoneSearch('');
+                                setIsTimezoneEditorOpen(false);
+                              }}
+                              className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-left hover:bg-white/10 focus:bg-white/10 focus:outline-none"
+                            >
+                              <span className="min-w-0 flex-1">
+                                <span className="block truncate text-sm font-medium text-white">
+                                  {getTimezoneCityLabel(timeZone)}
+                                </span>
+                                <span className="block truncate text-xs text-gray-400">
+                                  {timeZone} · {getTimezoneOffsetLabel(birthDate || '2000-01-01', birthTime || '12:00', timeZone)}
+                                </span>
+                              </span>
+                              {isSelected && <Check className="size-4 shrink-0 text-purple-300" aria-label="Selected" />}
+                            </button>
+                          );
+                        })}
+                        {filteredTimeZones.length === 0 && (
+                          <p className="px-2 py-6 text-center text-sm text-gray-400">
+                            {t('form.timezone.no_results')}
+                          </p>
+                        )}
+                      </div>
+                    </PopoverContent>
+                  </Popover>
+                  <div id="timezone-help" className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-gray-400">
+                    <span>
+                      {isTimezoneManual
+                        ? t('form.timezone.manual')
+                        : detectedTimezone
+                          ? t('form.timezone.auto', { location: birthLocation })
+                          : t('form.timezone.waiting')}
+                    </span>
+                    {(isTimezoneManual || detectedTimezone) && (
+                      <>
+                        <span aria-hidden="true">·</span>
+                        <span>{getTimezoneOffsetLabel(birthDate || '2000-01-01', birthTime || '12:00', timezone)}</span>
+                      </>
+                    )}
+                  </div>
                 </div>
 
                 {/* 生成按钮 */}

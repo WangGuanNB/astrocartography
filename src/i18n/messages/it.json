@@ -364,7 +364,15 @@
         "useCityName": "Usa nome città"
       },
       "timezone": {
-        "label": "Fuso Orario"
+        "label": "Fuso Orario",
+        "placeholder": "Cerca un fuso, ad esempio America/New_York",
+        "auto": "Rilevato automaticamente per {location}",
+        "manual": "Fuso orario selezionato manualmente",
+        "reset": "Usa il fuso del luogo di nascita",
+        "change": "Cambia fuso orario",
+        "waiting": "Seleziona il luogo di nascita per rilevare il fuso",
+        "invalid": "Scegli un fuso dall'elenco dei suggerimenti",
+        "no_results": "Nessun fuso orario corrispondente"
       },
       "buttons": {
         "generate": "✨ Genera la Tua Carta ✨",

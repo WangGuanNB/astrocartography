@@ -364,7 +364,15 @@
         "useCityName": "Usar nombre de ciudad"
       },
       "timezone": {
-        "label": "Zona Horaria"
+        "label": "Zona Horaria",
+        "placeholder": "Busca una zona, por ejemplo America/New_York",
+        "auto": "Detectada automáticamente para {location}",
+        "manual": "Zona horaria seleccionada manualmente",
+        "reset": "Usar la zona del lugar de nacimiento",
+        "change": "Cambiar zona horaria",
+        "waiting": "Selecciona tu lugar de nacimiento para detectar la zona",
+        "invalid": "Elige una zona de la lista de sugerencias",
+        "no_results": "No hay zonas horarias coincidentes"
       },
       "buttons": {
         "generate": "✨ Genera tu Carta ✨",

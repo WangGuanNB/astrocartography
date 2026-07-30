@@ -1,6 +1,7 @@
 import { unstable_cache } from 'next/cache';
 import { NextRequest, NextResponse } from 'next/server';
 import * as Astronomy from 'astronomy-engine';
+import { getTimezoneForCoordinates, localDateTimeToUtc } from '@/lib/timezone';
 
 export const revalidate = 3600; // 1 小时，与业务 TTL 一致
 export const maxDuration = 30; // 避免复杂计算被过早终止
@@ -23,7 +24,8 @@ interface BirthData {
   birthDate: string;
   birthTime: string;
   birthLocation: string;
-  timezone: string;
+  timezone?: string;
+  timezoneMode?: 'auto' | 'manual';
   latitude?: number;
   longitude?: number;
 }
@@ -45,7 +47,10 @@ function getCacheKey(birthData: BirthData): string {
  * 使用 unstable_cache 包装计算函数，实现 Vercel 持久化缓存
  * 这样可以在多个实例间共享缓存，大幅提升缓存命中率
  */
-async function getCachedCalculation(cacheKey: string, birthData: BirthData & { latitude: number; longitude: number }) {
+async function getCachedCalculation(
+  cacheKey: string,
+  birthData: BirthData & { latitude: number; longitude: number; timezone: string }
+) {
   // 使用 unstable_cache，将 cacheKey 作为 keyParts 的一部分
   // 这样相同参数的请求会命中同一个缓存
   return await unstable_cache(
@@ -60,6 +65,7 @@ async function getCachedCalculation(cacheKey: string, birthData: BirthData & { l
             location: birthData.birthLocation,
             latitude: birthData.latitude,
             longitude: birthData.longitude,
+            timezone: birthData.timezone,
           },
           planetLines,
         },
@@ -71,43 +77,6 @@ async function getCachedCalculation(cacheKey: string, birthData: BirthData & { l
       tags: ['astrocartography'], // 用于手动清除缓存
     }
   )();
-}
-
-/**
- * 将时区字符串转换为 UTC 偏移量（小时）
- */
-function parseTimezoneOffset(timezone: string): number {
-  // 提取时区偏移量
-  const timezoneMap: Record<string, number> = {
-    'UTC': 0,
-    'EST': -5,  // 东部标准时间
-    'PST': -8,  // 太平洋标准时间
-    'CST': -6,  // 中部标准时间（美国）或 +8（中国）
-    'MST': -7,  // 山地标准时间
-    'CET': 1,   // 中欧时间
-    'COT': -5,  // 哥伦比亚时间（Bogotá）
-    'PET': -5,  // 秘鲁时间（Lima）
-    'CLT': -4,  // 智利时间（Santiago）
-    'ART': -3,  // 阿根廷时间（Buenos Aires）
-    'BRT': -3,  // 巴西时间（São Paulo）
-    'JST': 9,   // 日本标准时间
-    'AEST': 10, // 澳大利亚东部标准时间
-    'IST': 5.5, // 印度标准时间
-  };
-
-  // 尝试匹配时区缩写
-  for (const [tz, offset] of Object.entries(timezoneMap)) {
-    if (timezone.toUpperCase().includes(tz)) {
-      // 特殊处理：CST 可能是中国标准时间（+8）或美国中部时间（-6）
-      if (tz === 'CST' && (timezone.includes('Beijing') || timezone.includes('China'))) {
-        return 8;
-      }
-      return offset;
-    }
-  }
-
-  // 默认返回 UTC
-  return 0;
 }
 
 /**
@@ -245,18 +214,13 @@ function calculateICLine(
 /**
  * 使用 astronomy-engine 计算真实的行星位置和行星线
  */
-function calculatePlanetaryLines(birthData: BirthData) {
+function calculatePlanetaryLines(birthData: BirthData & { timezone: string }) {
   const lines = [];
-  
-  // 解析时区偏移
-  const timezoneOffset = parseTimezoneOffset(birthData.timezone);
-  
-  // 解析出生日期和时间，并转换为 UTC
-  const [hours, minutes] = birthData.birthTime.split(':').map(Number);
-  const localTime = new Date(`${birthData.birthDate}T${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:00`);
-  
-  // 转换为 UTC（减去时区偏移）
-  const utcTime = new Date(localTime.getTime() - timezoneOffset * 60 * 60 * 1000);
+  const utcTime = localDateTimeToUtc(
+    birthData.birthDate,
+    birthData.birthTime,
+    birthData.timezone
+  );
   
   // 主要行星（包括外行星）
   const planetNames: Astronomy.Body[] = [
@@ -456,7 +420,7 @@ export async function POST(request: NextRequest) {
     let latitude = body.latitude;
     let longitude = body.longitude;
     
-    if (!latitude || !longitude) {
+    if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
       console.log('Geocoding location:', birthLocation);
       const coords = await geocodeLocation(birthLocation);
       if (coords) {
@@ -474,16 +438,25 @@ export async function POST(request: NextRequest) {
         );
       }
     }
+
+    const resolvedTimezone =
+      body.timezoneMode === 'auto' || !timezone
+        ? getTimezoneForCoordinates(latitude!, longitude!)
+        : timezone;
+
+    const resolvedBirthData: BirthData & {
+      latitude: number;
+      longitude: number;
+      timezone: string;
+    } = {
+      ...body,
+      timezone: resolvedTimezone,
+      latitude: latitude!,
+      longitude: longitude!,
+    };
     
     // 生成缓存键
-    const cacheKey = getCacheKey({
-      birthDate,
-      birthTime,
-      birthLocation,
-      timezone,
-      latitude: latitude!,
-      longitude: longitude!
-    });
+    const cacheKey = getCacheKey(resolvedBirthData);
     
     // L1 缓存：检查内存缓存（快速，但仅限单实例）
     const cached = calculationCache.get(cacheKey);
@@ -494,14 +467,7 @@ export async function POST(request: NextRequest) {
 
     // L2 缓存：使用 unstable_cache（持久化，跨实例共享，Vercel 自动管理）
     console.log('🔍 Checking L2 (unstable_cache) for:', cacheKey);
-    const result = await getCachedCalculation(cacheKey, {
-      birthDate,
-      birthTime,
-      birthLocation,
-      timezone,
-      latitude: latitude!,
-      longitude: longitude!
-    });
+    const result = await getCachedCalculation(cacheKey, resolvedBirthData);
     
     console.log('✅ Calculation complete. Lines generated:', result.data.planetLines.length);
     

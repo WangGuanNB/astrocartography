@@ -1,4 +1,5 @@
 import * as Astronomy from "astronomy-engine";
+import { getLegacyTimezoneOffset, localDateTimeToUtc } from "@/lib/timezone";
 
 export type PlanetName =
   | "Sun"
@@ -65,32 +66,7 @@ function radToDeg(rad: number): number {
 }
 
 export function parseTimezoneOffset(timezone: string): number {
-  const timezoneMap: Record<string, number> = {
-    UTC: 0,
-    EST: -5,
-    PST: -8,
-    CST: -6,
-    MST: -7,
-    CET: 1,
-    COT: -5,
-    PET: -5,
-    CLT: -4,
-    ART: -3,
-    BRT: -3,
-    JST: 9,
-    AEST: 10,
-    IST: 5.5,
-  };
-
-  for (const [tz, offset] of Object.entries(timezoneMap)) {
-    if (timezone.toUpperCase().includes(tz)) {
-      if (tz === "CST" && (timezone.includes("Beijing") || timezone.includes("China"))) {
-        return 8;
-      }
-      return offset;
-    }
-  }
-  return 0;
+  return getLegacyTimezoneOffset(timezone);
 }
 
 export function getLocalSiderealTime(dateUtc: Date, longitude: number): number {
@@ -143,13 +119,7 @@ export function localBirthTimeToUtc(
   birthTime: string,
   timezone: string
 ): Date {
-  const timezoneOffset = parseTimezoneOffset(timezone);
-  const [year, month, day] = birthDate.split(/[-/]/).map(Number);
-  const [hours, minutes] = birthTime.split(":").map(Number);
-  // Build from UTC components so host timezone cannot skew the civil clock time.
-  // Then subtract the zone offset: local 18:42 PET (-5) → 23:42 UTC.
-  const asUtcMs = Date.UTC(year, month - 1, day, hours, minutes, 0);
-  return new Date(asUtcMs - timezoneOffset * 60 * 60 * 1000);
+  return localDateTimeToUtc(birthDate, birthTime, timezone);
 }
 
 export type PlanetRow = {

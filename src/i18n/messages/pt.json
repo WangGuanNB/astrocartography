@@ -291,7 +291,15 @@
         "useCityName": "Usar nome da cidade"
       },
       "timezone": {
-        "label": "Fuso Horário"
+        "label": "Fuso Horário",
+        "placeholder": "Pesquise um fuso, por exemplo America/New_York",
+        "auto": "Detectado automaticamente para {location}",
+        "manual": "Fuso horário selecionado manualmente",
+        "reset": "Usar o fuso do local de nascimento",
+        "change": "Alterar fuso horário",
+        "waiting": "Selecione o local de nascimento para detectar o fuso",
+        "invalid": "Escolha um fuso na lista de sugestões",
+        "no_results": "Nenhum fuso horário correspondente"
       },
       "buttons": {
         "generate": "✨ Gere seu Mapa ✨",

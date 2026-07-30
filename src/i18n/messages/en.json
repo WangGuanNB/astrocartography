@@ -329,7 +329,15 @@
         "useCityName": "Use city name"
       },
       "timezone": {
-        "label": "Timezone"
+        "label": "Timezone",
+        "placeholder": "Search a timezone, e.g. America/New_York",
+        "auto": "Auto-detected for {location}",
+        "manual": "Manually selected timezone",
+        "reset": "Use birthplace timezone",
+        "change": "Change timezone",
+        "waiting": "Select a birth location to detect its timezone",
+        "invalid": "Choose a timezone from the suggested list",
+        "no_results": "No matching timezones"
       },
       "buttons": {
         "generate": "✨ Generate Your Chart ✨",
