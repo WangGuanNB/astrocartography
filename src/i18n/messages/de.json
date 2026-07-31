@@ -409,6 +409,12 @@
     "welcome_title": "Willkommen! Bereit, Ihren Planeten-Blueprint zu erkunden?",
     "welcome_subtitle": "Entdecken Sie die Geschichten in Ihren Sternen und Planetenlinien",
     "disclaimer": "💡 Die KI analysiert nur Städte in Ihrem Chart. Nur zur Orientierung.",
+    "analysis_status_reading": "Ich lese die Planetenlinien in deiner Karte...",
+    "analysis_status_connecting": "Ich verbinde deine Frage mit den stärksten Signalen der Karte...",
+    "analysis_status_comparing": "Ich vergleiche die unterschiedlichen Tendenzen in deiner Karte...",
+    "analysis_status_preparing": "Ich bereite eine klare, persönliche Deutung vor...",
+    "analysis_wait_note": "Das dauert einen Moment, weil die Antwort auf deiner persönlichen Karte basiert, nicht auf einem allgemeinen Horoskop.",
+    "follow_up_title": "Als Nächstes erkunden",
     "suggested_questions": [
       "Wohin sollte ich ziehen für Liebe und Erfolg?",
       "Was sind meine Top-3-Städte für Karriere?",

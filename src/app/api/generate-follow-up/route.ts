@@ -1,15 +1,98 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateText, LanguageModelV1 } from 'ai';
-import { deepseek } from '@ai-sdk/deepseek';
+import { generateText } from 'ai';
+import { createDeepSeek } from '@ai-sdk/deepseek';
 import { detectLanguage } from '@/lib/astro-format';
 
 const FOLLOW_UP_MODEL = process.env.DEEPSEEK_FOLLOW_UP_MODEL || 'deepseek-v4-flash';
+const FOLLOW_UP_MAX_TOKENS = 200;
+const FOLLOW_UP_TIMEOUT_MS = 30_000;
+
+type FollowUpAnswer = {
+  text: string;
+  provider: 'deepseek' | 'kie';
+  model: string;
+};
+
+function getErrorSummary(error: unknown) {
+  if (error instanceof Error) {
+    return `${error.name}: ${error.message}`.slice(0, 500);
+  }
+
+  return String(error).slice(0, 500);
+}
+
+function logFollowUpEvent(traceId: string, startedAt: number, event: string, fields: Record<string, unknown> = {}) {
+  console.info('[Astro Follow-up]', JSON.stringify({
+    event,
+    traceId,
+    elapsedMs: Date.now() - startedAt,
+    ...fields,
+  }));
+}
+
+function withTimeoutSignal(timeoutMs: number) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+
+  return {
+    signal: controller.signal,
+    dispose: () => clearTimeout(timeout),
+  };
+}
+
+function extractTextValue(value: unknown): string {
+  if (typeof value === 'string') {
+    return value.trim();
+  }
+
+  if (Array.isArray(value)) {
+    return value
+      .map((part) => {
+        if (typeof part === 'string') return part;
+        if (part && typeof part === 'object') {
+          const record = part as { text?: unknown; content?: unknown };
+          return extractTextValue(record.text) || extractTextValue(record.content);
+        }
+        return '';
+      })
+      .join('')
+      .trim();
+  }
+
+  return '';
+}
+
+const followUpDeepSeek = createDeepSeek({
+  // Suggestions only reorganize the completed interpretation into useful next
+  // questions. They must not spend a second reasoning pass on the chart.
+  fetch: async (input, init) => {
+    if (typeof init?.body !== 'string') {
+      return fetch(input, init);
+    }
+
+    try {
+      const requestBody = JSON.parse(init.body) as Record<string, unknown>;
+      return fetch(input, {
+        ...init,
+        body: JSON.stringify({
+          ...requestBody,
+          thinking: { type: 'disabled' },
+        }),
+      });
+    } catch {
+      return fetch(input, init);
+    }
+  },
+});
 
 /**
  * 生成追问建议的 API 路由
  * 基于用户问题和 AI 回答，使用 AI 生成 3 个相关的追问建议
  */
 export async function POST(req: NextRequest) {
+  const traceId = crypto.randomUUID();
+  const startedAt = Date.now();
+
   try {
     const body = await req.json();
     const { userQuestion, aiResponse, language } = body;
@@ -28,40 +111,225 @@ export async function POST(req: NextRequest) {
     // 根据语言生成对应的提示词模板
     const followUpPrompt = getFollowUpPrompt(userQuestion, aiResponse, detectedLanguage);
 
-    // 检查 DeepSeek API Key
-    const apiKey = process.env.DEEPSEEK_API_KEY;
-    if (!apiKey) {
-      console.error("DEEPSEEK_API_KEY not configured");
-      return NextResponse.json(
-        { success: false, error: 'AI service not configured: DEEPSEEK_API_KEY environment variable is not set' },
-        { status: 500 }
-      );
-    }
-
-    // 追问建议用轻量模型，速度更快成本更低。deepseek-chat 已于 2026-07-24 弃用。
-    const textModel: LanguageModelV1 = deepseek(FOLLOW_UP_MODEL);
-
-    // 调用 AI 生成追问建议（使用 generateText 而非 streamText，因为追问建议很短）
-    const result = await generateText({
-      model: textModel,
-      prompt: followUpPrompt,
-      maxTokens: 200, // 追问建议较短，不需要太多 tokens
-      temperature: 0.3, // 较低的 temperature 确保格式一致性
-    });
+    const answer = await generateReliableFollowUp(
+      followUpPrompt,
+      traceId,
+      startedAt,
+      userQuestion.length,
+      aiResponse.length,
+    );
 
     // 返回 JSON 响应（包含生成的追问建议）
     return NextResponse.json({
       success: true,
-      text: result.text,
+      text: answer.text,
+      provider: answer.provider,
+      model: answer.model,
     });
 
   } catch (err) {
-    console.error('generate-follow-up error:', err);
-    const errorMessage = err instanceof Error ? err.message : 'Failed to generate follow-up suggestions';
+    logFollowUpEvent(traceId, startedAt, 'request_failed', {
+      error: getErrorSummary(err),
+    });
     return NextResponse.json(
-      { success: false, error: errorMessage },
+      { success: false, error: 'Follow-up suggestions are temporarily unavailable', traceId },
       { status: 500 }
     );
+  }
+}
+
+async function generateWithDeepSeek(
+  prompt: string,
+  traceId: string,
+  requestStartedAt: number,
+  userQuestionCharacters: number,
+  responseCharacters: number,
+): Promise<FollowUpAnswer> {
+  if (!process.env.DEEPSEEK_API_KEY) {
+    throw new Error('DEEPSEEK_API_KEY not configured');
+  }
+
+  const startedAt = Date.now();
+  const timeout = withTimeoutSignal(FOLLOW_UP_TIMEOUT_MS);
+
+  try {
+    logFollowUpEvent(traceId, requestStartedAt, 'provider_started', {
+      provider: 'deepseek',
+      model: FOLLOW_UP_MODEL,
+      thinking: 'disabled',
+      maxTokens: FOLLOW_UP_MAX_TOKENS,
+      userQuestionCharacters,
+      responseCharacters,
+    });
+
+    const result = await generateText({
+      model: followUpDeepSeek(FOLLOW_UP_MODEL),
+      prompt,
+      maxTokens: FOLLOW_UP_MAX_TOKENS,
+      temperature: 0.3,
+      maxRetries: 0,
+      abortSignal: timeout.signal,
+    });
+    const text = result.text.trim();
+
+    if (!text) {
+      throw new Error('DeepSeek returned an empty follow-up response');
+    }
+
+    logFollowUpEvent(traceId, requestStartedAt, 'provider_completed', {
+      provider: 'deepseek',
+      model: FOLLOW_UP_MODEL,
+      thinking: 'disabled',
+      latencyMs: Date.now() - startedAt,
+      textCharacters: text.length,
+      totalTokens: result.usage.totalTokens,
+    });
+
+    return { text, provider: 'deepseek', model: FOLLOW_UP_MODEL };
+  } catch (error) {
+    logFollowUpEvent(traceId, requestStartedAt, 'provider_failed', {
+      provider: 'deepseek',
+      model: FOLLOW_UP_MODEL,
+      latencyMs: Date.now() - startedAt,
+      error: getErrorSummary(error),
+    });
+    throw error;
+  } finally {
+    timeout.dispose();
+  }
+}
+
+async function generateWithKie(prompt: string, traceId: string, requestStartedAt: number): Promise<FollowUpAnswer> {
+  const apiKey = process.env.KIE_AI_API_KEY;
+  if (!apiKey || process.env.KIE_AI_FALLBACK_ENABLED === 'false') {
+    throw new Error('Kie fallback is not configured');
+  }
+
+  const configuredModel = process.env.KIE_AI_FALLBACK_MODEL || 'gemini-2.5-flash';
+  const models = process.env.KIE_AI_FALLBACK_URL
+    ? [configuredModel]
+    : [...new Set([configuredModel, 'gemini-2.5-flash'])];
+  let lastError: unknown;
+
+  for (const model of models) {
+    const startedAt = Date.now();
+    const timeout = withTimeoutSignal(FOLLOW_UP_TIMEOUT_MS);
+
+    try {
+      logFollowUpEvent(traceId, requestStartedAt, 'provider_started', {
+        provider: 'kie',
+        model,
+        maxTokens: FOLLOW_UP_MAX_TOKENS,
+      });
+
+      const endpoint = process.env.KIE_AI_FALLBACK_URL || `https://api.kie.ai/${model}/v1/chat/completions`;
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        signal: timeout.signal,
+        body: JSON.stringify({
+          model,
+          messages: [{ role: 'user', content: prompt }],
+          max_tokens: FOLLOW_UP_MAX_TOKENS,
+          temperature: 0.3,
+          stream: false,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Kie fallback request failed with status ${response.status}`);
+      }
+
+      const rawPayload = await response.text();
+      let payload: {
+        code?: number;
+        msg?: string;
+        choices?: Array<{ message?: { content?: unknown }; delta?: { content?: unknown }; text?: unknown }>;
+        output_text?: unknown;
+        data?: { choices?: Array<{ message?: { content?: unknown } }> };
+      } | null = null;
+
+      try {
+        payload = JSON.parse(rawPayload);
+      } catch {
+        payload = null;
+      }
+
+      if (payload?.code && payload.code >= 400) {
+        throw new Error(`Kie rejected ${model}: ${payload.msg || `code ${payload.code}`}`);
+      }
+
+      const choice = payload?.choices?.[0];
+      const text =
+        extractTextValue(choice?.message?.content) ||
+        extractTextValue(choice?.delta?.content) ||
+        extractTextValue(choice?.text) ||
+        extractTextValue(payload?.output_text) ||
+        extractTextValue(payload?.data?.choices?.[0]?.message?.content) ||
+        (!payload ? rawPayload.trim() : '');
+
+      if (!text) {
+        throw new Error(`Kie ${model} returned an empty follow-up response`);
+      }
+
+      logFollowUpEvent(traceId, requestStartedAt, 'provider_completed', {
+        provider: 'kie',
+        model,
+        latencyMs: Date.now() - startedAt,
+        textCharacters: text.length,
+      });
+
+      return { text, provider: 'kie', model };
+    } catch (error) {
+      lastError = error;
+      logFollowUpEvent(traceId, requestStartedAt, 'provider_failed', {
+        provider: 'kie',
+        model,
+        latencyMs: Date.now() - startedAt,
+        error: getErrorSummary(error),
+      });
+    } finally {
+      timeout.dispose();
+    }
+  }
+
+  throw lastError instanceof Error ? lastError : new Error('Kie fallback failed');
+}
+
+async function generateReliableFollowUp(
+  prompt: string,
+  traceId: string,
+  startedAt: number,
+  userQuestionCharacters: number,
+  responseCharacters: number,
+): Promise<FollowUpAnswer> {
+  try {
+    return await generateWithDeepSeek(prompt, traceId, startedAt, userQuestionCharacters, responseCharacters);
+  } catch (error) {
+    logFollowUpEvent(traceId, startedAt, 'fallback_started', {
+      primaryProvider: 'deepseek',
+      fallbackProvider: 'kie',
+      error: getErrorSummary(error),
+    });
+  }
+
+  try {
+    const answer = await generateWithKie(prompt, traceId, startedAt);
+    logFollowUpEvent(traceId, startedAt, 'fallback_recovered', {
+      provider: answer.provider,
+      model: answer.model,
+      textCharacters: answer.text.length,
+    });
+    return answer;
+  } catch (error) {
+    logFollowUpEvent(traceId, startedAt, 'fallback_failed', {
+      provider: 'kie',
+      error: getErrorSummary(error),
+    });
+    throw error;
   }
 }
 
@@ -84,6 +352,7 @@ function getFollowUpPrompt(userQuestion: string, aiResponse: string, language: s
 6. 每个问题应该在 5-15 个字之间
 7. 三个问题应分别覆盖：更深层原因、具体行动建议、替代城市/时间/区域
 8. 保持正向好奇，不要制造焦虑或恐惧
+9. 严格限定在 AI 回答里已经出现的星盘、城市或行星线证据。不得建议旅行行程、街区游览、酒店、交通、安全、签证，或星盘数据无法支持的现实事实。
 
 用户的原始问题：${userQuestion}
 
@@ -110,6 +379,7 @@ REQUIREMENTS (CRITICAL):
 6. Each question should be 5-15 words
 7. The three questions should cover: deeper reasoning, practical next steps, and alternative cities/timing/areas
 8. Keep them positively curious; never use fear or anxiety as the hook
+9. Stay strictly within astrocartography evidence already named in the AI response. Do not suggest travel itineraries, neighbourhood visits, hotels, transport, safety, visas, or any real-world fact the chart data cannot support.
 
 User's original question: ${userQuestion}
 
@@ -136,6 +406,7 @@ REQUISITOS (CRÍTICO):
 6. Cada pregunta debe tener 5-15 palabras
 7. Las tres preguntas deben cubrir: razón más profunda, próximos pasos prácticos y ciudades/tiempos/zonas alternativas
 8. Mantén una curiosidad positiva; nunca uses miedo o ansiedad como gancho
+9. Limítate estrictamente a la evidencia de astrocartografía ya mencionada en la respuesta. No sugieras itinerarios, visitas a barrios, hoteles, transporte, seguridad, visados ni hechos reales que los datos de la carta no puedan respaldar.
 
 Pregunta original del usuario: ${userQuestion}
 
@@ -162,6 +433,7 @@ REQUISITI (CRITICI):
 6. Ogni domanda dovrebbe avere 5-15 parole
 7. Le tre domande devono coprire: ragione più profonda, prossimi passi pratici e città/tempi/aree alternative
 8. Mantieni una curiosità positiva; non usare mai paura o ansia come gancio
+9. Attieniti rigorosamente alle evidenze di astrocartografia già citate nella risposta. Non suggerire itinerari, visite ai quartieri, hotel, trasporti, sicurezza, visti o fatti reali che i dati della carta non possano supportare.
 
 Domanda originale dell'utente: ${userQuestion}
 
@@ -188,6 +460,7 @@ REQUISITOS (CRÍTICO):
 6. Cada pergunta deve ter 5-15 palavras
 7. As três perguntas devem cobrir: razão mais profunda, próximos passos práticos e cidades/tempos/áreas alternativas
 8. Mantenha uma curiosidade positiva; nunca use medo ou ansiedade como gancho
+9. Limite-se estritamente às evidências de astrocartografia já citadas na resposta. Não sugira roteiros, visitas a bairros, hotéis, transporte, segurança, vistos ou fatos reais que os dados do mapa não possam sustentar.
 
 Pergunta original do usuário: ${userQuestion}
 

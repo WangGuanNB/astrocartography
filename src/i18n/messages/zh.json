@@ -423,6 +423,12 @@
     "welcome_title": "欢迎！准备好探索你的行星蓝图了吗？",
     "welcome_subtitle": "发现写在你的星星和行星线中的故事",
     "disclaimer": "💡 AI 仅分析您星盘中的城市，仅供参考。",
+    "analysis_status_reading": "正在阅读你星盘中的行星线...",
+    "analysis_status_connecting": "正在将你的问题与盘面中的关键信号联系起来...",
+    "analysis_status_comparing": "正在比较你星盘中的不同取向...",
+    "analysis_status_preparing": "正在整理一份清晰的个性化解读...",
+    "analysis_wait_note": "这需要一点时间，因为回答基于你的专属星盘，而不是通用星座文案。",
+    "follow_up_title": "接下来可以探索",
     "suggested_questions": [
       "我应该搬到哪里寻找爱情和成功？",
       "最适合我事业发展的3个城市是？",

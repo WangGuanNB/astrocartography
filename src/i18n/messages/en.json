@@ -423,6 +423,12 @@
     "welcome_title": "Welcome! Ready to explore your planetary blueprint?",
     "welcome_subtitle": "Discover the stories written in your stars and planetary lines",
     "disclaimer": "💡 AI analyzes only cities in your chart. For reference only.",
+    "analysis_status_reading": "Reading the planetary lines in your chart...",
+    "analysis_status_connecting": "Connecting your question with the strongest map signals...",
+    "analysis_status_comparing": "Comparing the trade-offs in your chart...",
+    "analysis_status_preparing": "Preparing a clear, personalized interpretation...",
+    "analysis_wait_note": "This takes a moment because your answer is based on your specific chart, not a generic horoscope.",
+    "follow_up_title": "Explore this next",
     "suggested_questions": [
       "Where should I move to find love and success?",
       "What are my top 3 cities for career growth?",

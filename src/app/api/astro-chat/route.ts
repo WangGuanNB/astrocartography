@@ -1,8 +1,7 @@
 import {
-  LanguageModelV1,
   streamText,
 } from "ai";
-import { deepseek } from "@ai-sdk/deepseek";
+import { createDeepSeek } from "@ai-sdk/deepseek";
 import { respErr } from "@/lib/resp";
 import {
   formatChartContext,
@@ -12,11 +11,399 @@ import {
   type SynastryPayloadForAI,
 } from "@/lib/astro-format";
 import { getUserUuid } from "@/services/user";
-import { getUserCredits, decreaseCredits, increaseCredits, CreditsTransType } from "@/services/credit";
+import { getUserCredits, decreaseCredits, CreditsTransType } from "@/services/credit";
 import { getAIChatCreditCost } from "@/services/config";
 
-const ASTRO_CHAT_MODEL = process.env.DEEPSEEK_ASTRO_CHAT_MODEL || "deepseek-v4-flash";
+const ASTRO_CHAT_MODEL =
+  process.env.DEEPSEEK_ASTRO_CHAT_MODEL ||
+  process.env.ASTRO_CHAT_MODEL ||
+  "deepseek-v4-flash";
 const CITY_COMPARISON_REPORT_CREDIT_COST = 50;
+const AI_ATTEMPT_TIMEOUT_MS = 75_000;
+const STANDARD_CHAT_MAX_TOKENS = 3_200;
+const CITY_COMPARISON_REPORT_MAX_TOKENS = 5_200;
+const DEEPSEEK_THINKING_ATTEMPT_ORDER = ["enabled", "disabled"] as const;
+type DeepSeekThinkingMode = (typeof DEEPSEEK_THINKING_ATTEMPT_ORDER)[number];
+
+function createDeepSeekForThinking(thinkingMode: DeepSeekThinkingMode) {
+  return createDeepSeek({
+    // DeepSeek V4 defaults to thinking. The SDK adapter does not expose this
+    // vendor option, so pass it through its HTTP transport for each attempt.
+    fetch: async (input, init) => {
+      if (typeof init?.body !== "string") {
+        return fetch(input, init);
+      }
+
+      try {
+        const requestBody = JSON.parse(init.body) as Record<string, unknown>;
+        return fetch(input, {
+          ...init,
+          body: JSON.stringify({
+            ...requestBody,
+            thinking: { type: thinkingMode },
+          }),
+        });
+      } catch {
+        return fetch(input, init);
+      }
+    },
+  });
+}
+
+const deepseekWithThinking = createDeepSeekForThinking("enabled");
+const deepseekWithoutThinking = createDeepSeekForThinking("disabled");
+
+type ChatMessage = {
+  role: "system" | "user" | "assistant";
+  content: string;
+};
+
+type GeneratedAnswer = {
+  text: string;
+  provider: "deepseek" | "kie";
+  model: string;
+};
+
+type ChatTrace = {
+  id: string;
+  requestType: "standard" | "city_comparison_report" | "unknown";
+  startedAt: number;
+};
+
+function logChatEvent(trace: ChatTrace, event: string, fields: Record<string, unknown> = {}) {
+  console.info("[Astro Chat]", JSON.stringify({
+    event,
+    traceId: trace.id,
+    requestType: trace.requestType,
+    elapsedMs: Date.now() - trace.startedAt,
+    ...fields,
+  }));
+}
+
+function getErrorSummary(error: unknown) {
+  if (error instanceof Error) {
+    return `${error.name}: ${error.message}`.slice(0, 500);
+  }
+
+  return String(error).slice(0, 500);
+}
+
+function withTimeoutSignal(timeoutMs: number) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+
+  return {
+    signal: controller.signal,
+    dispose: () => clearTimeout(timeout),
+  };
+}
+
+async function generateWithDeepSeek(
+  messages: ChatMessage[],
+  maxTokens: number,
+  trace: ChatTrace,
+  attempt: number,
+  thinkingMode: DeepSeekThinkingMode,
+) {
+  if (!process.env.DEEPSEEK_API_KEY) {
+    throw new Error("DEEPSEEK_API_KEY not configured");
+  }
+
+  const timeout = withTimeoutSignal(AI_ATTEMPT_TIMEOUT_MS);
+  const startedAt = Date.now();
+  let firstTextAt: number | null = null;
+  let reasoningCharacters = 0;
+  let finishReason: string | null = null;
+
+  try {
+    logChatEvent(trace, "provider_started", {
+      provider: "deepseek",
+      model: ASTRO_CHAT_MODEL,
+      attempt,
+      thinking: thinkingMode,
+      maxTokens,
+    });
+
+    const result = streamText({
+      model: (thinkingMode === "enabled" ? deepseekWithThinking : deepseekWithoutThinking)(ASTRO_CHAT_MODEL),
+      messages,
+      maxTokens,
+      // DeepSeek ignores temperature in thinking mode. Only send it for the
+      // deterministic recovery attempt where the setting is supported.
+      ...(thinkingMode === "disabled" ? { temperature: 0.5 } : {}),
+      maxRetries: 0,
+      abortSignal: timeout.signal,
+    });
+    let text = "";
+
+    for await (const part of result.fullStream) {
+      if (part.type === "text-delta") {
+        if (firstTextAt === null) {
+          firstTextAt = Date.now();
+        }
+        text += part.textDelta;
+      } else if (part.type === "reasoning") {
+        reasoningCharacters += part.textDelta.length;
+      } else if (part.type === "step-finish" || part.type === "finish") {
+        finishReason = part.finishReason;
+      } else if (part.type === "error") {
+        throw part.error;
+      }
+    }
+
+    const [usage, response, warnings] = await Promise.all([
+      result.usage,
+      result.response,
+      result.warnings,
+    ]);
+
+    logChatEvent(trace, text.trim() ? "provider_completed" : "provider_empty", {
+      provider: "deepseek",
+      model: response.modelId || ASTRO_CHAT_MODEL,
+      providerResponseId: response.id,
+      attempt,
+      thinking: thinkingMode,
+      finishReason,
+      latencyMs: Date.now() - startedAt,
+      firstTextLatencyMs: firstTextAt === null ? null : firstTextAt - startedAt,
+      textCharacters: text.length,
+      reasoningCharacters,
+      promptTokens: usage.promptTokens,
+      completionTokens: usage.completionTokens,
+      totalTokens: usage.totalTokens,
+      warningCount: warnings?.length || 0,
+    });
+
+    if (!text.trim()) {
+      throw new Error(`DeepSeek returned an empty response (finish_reason=${finishReason || "unknown"})`);
+    }
+
+    return text;
+  } catch (error) {
+    logChatEvent(trace, "provider_failed", {
+      provider: "deepseek",
+      model: ASTRO_CHAT_MODEL,
+      attempt,
+      thinking: thinkingMode,
+      latencyMs: Date.now() - startedAt,
+      error: getErrorSummary(error),
+    });
+    throw error;
+  } finally {
+    timeout.dispose();
+  }
+}
+
+function extractTextValue(value: unknown): string {
+  if (typeof value === "string") {
+    return value.trim();
+  }
+
+  if (Array.isArray(value)) {
+    return value
+      .map((part) => {
+        if (typeof part === "string") {
+          return part;
+        }
+        if (part && typeof part === "object") {
+          const record = part as { text?: unknown; content?: unknown };
+          return extractTextValue(record.text) || extractTextValue(record.content);
+        }
+        return "";
+      })
+      .join("")
+      .trim();
+  }
+
+  return "";
+}
+
+async function generateWithKie(messages: ChatMessage[], maxTokens: number, trace: ChatTrace) {
+  const apiKey = process.env.KIE_AI_API_KEY;
+  if (!apiKey || process.env.KIE_AI_FALLBACK_ENABLED === "false") {
+    return null;
+  }
+
+  const configuredModel = process.env.KIE_AI_FALLBACK_MODEL || "gemini-2.5-flash";
+  // Gemini 2.5 Flash is verified against this Kie account. Retain an explicit
+  // configured model as the first choice, then fail over if Kie rejects it.
+  const models = process.env.KIE_AI_FALLBACK_URL
+    ? [configuredModel]
+    : [...new Set([configuredModel, "gemini-2.5-flash"])];
+  let lastError: unknown;
+
+  for (const model of models) {
+    const endpoint =
+      process.env.KIE_AI_FALLBACK_URL ||
+      `https://api.kie.ai/${model}/v1/chat/completions`;
+    const timeout = withTimeoutSignal(AI_ATTEMPT_TIMEOUT_MS);
+    const startedAt = Date.now();
+
+    try {
+      logChatEvent(trace, "provider_started", {
+        provider: "kie",
+        model,
+        maxTokens,
+      });
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        signal: timeout.signal,
+        body: JSON.stringify({
+          model,
+          messages,
+          max_tokens: maxTokens,
+          temperature: 0.5,
+          stream: false,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Kie fallback request failed with status ${response.status}`);
+      }
+
+      const rawPayload = await response.text();
+      let payload: {
+        code?: number;
+        msg?: string;
+        choices?: Array<{
+          message?: { content?: unknown };
+          delta?: { content?: unknown };
+          text?: unknown;
+        }>;
+        output_text?: unknown;
+        data?: { choices?: Array<{ message?: { content?: unknown } }> };
+      } | null = null;
+
+      try {
+        payload = JSON.parse(rawPayload);
+      } catch {
+        // Some compatible endpoints return plain text for non-streaming requests.
+        payload = null;
+      }
+
+      if (payload?.code && payload.code >= 400) {
+        throw new Error(`Kie rejected ${model}: ${payload.msg || `code ${payload.code}`}`);
+      }
+
+      const choice = payload?.choices?.[0];
+      const text =
+        extractTextValue(choice?.message?.content) ||
+        extractTextValue(choice?.delta?.content) ||
+        extractTextValue(choice?.text) ||
+        extractTextValue(payload?.output_text) ||
+        extractTextValue(payload?.data?.choices?.[0]?.message?.content) ||
+        (!payload ? rawPayload.trim() : "");
+
+      if (!text) {
+        throw new Error(`Kie ${model} returned an empty response`);
+      }
+
+      logChatEvent(trace, "provider_completed", {
+        provider: "kie",
+        model,
+        latencyMs: Date.now() - startedAt,
+        textCharacters: text.length,
+      });
+
+      return { text, model };
+    } catch (error) {
+      lastError = error;
+      logChatEvent(trace, "provider_failed", {
+        provider: "kie",
+        model,
+        latencyMs: Date.now() - startedAt,
+        error: getErrorSummary(error),
+      });
+    } finally {
+      timeout.dispose();
+    }
+  }
+
+  throw lastError instanceof Error ? lastError : new Error("Kie fallback failed");
+}
+
+async function generateReliableAnswer(
+  messages: ChatMessage[],
+  maxTokens: number,
+  trace: ChatTrace,
+): Promise<GeneratedAnswer> {
+  let lastError: unknown;
+
+  for (const [index, thinkingMode] of DEEPSEEK_THINKING_ATTEMPT_ORDER.entries()) {
+    const attempt = index + 1;
+    try {
+      const text = await generateWithDeepSeek(messages, maxTokens, trace, attempt, thinkingMode);
+      return { text, provider: "deepseek", model: ASTRO_CHAT_MODEL };
+    } catch (error) {
+      lastError = error;
+      if (attempt < DEEPSEEK_THINKING_ATTEMPT_ORDER.length) {
+        logChatEvent(trace, "provider_retry_scheduled", {
+          provider: "deepseek",
+          nextAttempt: attempt + 1,
+          maxAttempts: DEEPSEEK_THINKING_ATTEMPT_ORDER.length,
+          previousThinking: thinkingMode,
+          nextThinking: DEEPSEEK_THINKING_ATTEMPT_ORDER[attempt],
+          error: getErrorSummary(error),
+        });
+      }
+    }
+  }
+
+  try {
+    logChatEvent(trace, "fallback_started", {
+      primaryProvider: "deepseek",
+      fallbackProvider: "kie",
+    });
+    const fallback = await generateWithKie(messages, maxTokens, trace);
+    if (fallback) {
+      logChatEvent(trace, "fallback_recovered", {
+        provider: "kie",
+        model: fallback.model,
+        textCharacters: fallback.text.length,
+      });
+      return { text: fallback.text, provider: "kie", model: fallback.model };
+    }
+  } catch (error) {
+    lastError = error;
+    logChatEvent(trace, "fallback_failed", {
+      provider: "kie",
+      error: getErrorSummary(error),
+    });
+  }
+
+  throw lastError instanceof Error
+    ? lastError
+    : new Error("No AI provider produced a response");
+}
+
+function createDataStreamResponse(answer: GeneratedAnswer, trace: ChatTrace) {
+  const encoder = new TextEncoder();
+  const chunks = answer.text.match(/[\s\S]{1,180}/g) || [answer.text];
+  const stream = new ReadableStream<Uint8Array>({
+    start(controller) {
+      for (const chunk of chunks) {
+        // AI SDK data-stream text frame: preserves the existing useChat client contract.
+        controller.enqueue(encoder.encode(`0:${JSON.stringify(chunk)}\n`));
+      }
+      controller.close();
+    },
+  });
+
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "X-Vercel-AI-Data-Stream": "v1",
+      "X-Astro-Chat-Provider": answer.provider,
+      "X-Astro-Chat-Model": answer.model,
+      "X-Astro-Chat-Trace-Id": trace.id,
+    },
+  });
+}
 
 // 检测用户问题的语言
 function detectUserLanguage(text: string): string {
@@ -81,20 +468,23 @@ interface ChatRequest {
 }
 
 export async function POST(req: Request) {
+  const trace: ChatTrace = {
+    id: crypto.randomUUID(),
+    requestType: "unknown",
+    startedAt: Date.now(),
+  };
+
   try {
     const body: ChatRequest = await req.json();
     const { messages, chartData, synastryData, questionCount, remainingFreeQuestions, userLocale, requestType = 'standard' } = body;
+    trace.requestType = requestType;
 
-    // 🔥 调试：记录接收到的数据
-    console.log('📥 [API] 接收到的请求数据:', {
-      hasMessages: !!messages,
-      messagesLength: messages?.length || 0,
-      hasChartData: !!chartData,
-      hasBirthData: !!chartData?.birthData,
-      hasPlanetLines: !!chartData?.planetLines,
-      planetLinesLength: chartData?.planetLines?.length || 0,
-      birthDataKeys: chartData?.birthData ? Object.keys(chartData.birthData) : [],
-      requestType,
+    logChatEvent(trace, "request_received", {
+      messageCount: messages?.length || 0,
+      lastMessageCharacters: messages?.[messages.length - 1]?.content?.length || 0,
+      hasChartData: Boolean(chartData),
+      hasSynastryData: Boolean(synastryData),
+      planetLineCount: chartData?.planetLines?.length || 0,
     });
 
     // 验证必需参数
@@ -110,7 +500,7 @@ export async function POST(req: Request) {
 
     // 🔥 详细检查 chartData / synastryData
     if (!chartData) {
-      console.error('❌ [API] chartData 为空');
+      logChatEvent(trace, "request_rejected", { reason: "chart_data_missing" });
       return respErr("Chart data is incomplete");
     }
 
@@ -126,63 +516,56 @@ export async function POST(req: Request) {
       if (!a.date || !a.time || !a.location || !b.date || !b.time || !b.location) {
         return respErr("Synastry birth data is incomplete");
       }
-      console.log("✅ [API] synastryData 验证通过");
+      logChatEvent(trace, "request_validated", { contextType: "synastry" });
     } else {
       if (!chartData.birthData) {
-        console.error('❌ [API] chartData.birthData 为空');
+        logChatEvent(trace, "request_rejected", { reason: "birth_data_missing" });
         return respErr("Chart data is incomplete");
       }
 
       if (!chartData.planetLines) {
-        console.error('❌ [API] chartData.planetLines 为空');
+        logChatEvent(trace, "request_rejected", { reason: "planet_lines_missing" });
         return respErr("Chart data is incomplete");
       }
 
       if (!chartData.birthData.date || !chartData.birthData.time || !chartData.birthData.location) {
-        console.error('❌ [API] birthData 缺少必需字段:', {
+        logChatEvent(trace, "request_rejected", {
+          reason: "birth_data_incomplete",
           hasDate: !!chartData.birthData.date,
           hasTime: !!chartData.birthData.time,
           hasLocation: !!chartData.birthData.location,
-          birthData: chartData.birthData,
-          allKeys: Object.keys(chartData.birthData),
         });
         return respErr("Chart data is incomplete");
       }
 
       if (!Array.isArray(chartData.planetLines) || chartData.planetLines.length === 0) {
-        console.error('❌ [API] planetLines 是空数组或不是数组:', {
+        logChatEvent(trace, "request_rejected", {
+          reason: "planet_lines_empty",
           isArray: Array.isArray(chartData.planetLines),
           length: chartData.planetLines?.length || 0,
-          planetLines: chartData.planetLines,
         });
         return respErr("Chart data is incomplete");
       }
 
       const firstLine = chartData.planetLines[0];
       if (!firstLine || !firstLine.type) {
-        console.error('❌ [API] planetLines[0] 缺少 type 字段或为空:', {
-          firstLine,
+        logChatEvent(trace, "request_rejected", {
+          reason: "planet_line_type_missing",
           hasType: !!firstLine?.type,
-          allKeys: firstLine ? Object.keys(firstLine) : [],
-          planetLinesSample: chartData.planetLines.slice(0, 3),
         });
         return respErr("Chart data is incomplete");
       }
 
-      console.log('✅ [API] chartData 验证通过:', {
-        birthData: {
-          date: chartData.birthData.date,
-          time: chartData.birthData.time,
-          location: chartData.birthData.location,
-        },
-        planetLinesCount: chartData.planetLines.length,
-        firstLineType: chartData.planetLines[0].type,
+      logChatEvent(trace, "request_validated", {
+        contextType: "astrocartography",
+        planetLineCount: chartData.planetLines.length,
       });
     }
 
     // 🔥 检查用户是否登录
     const user_uuid = await getUserUuid();
     if (!user_uuid) {
+      logChatEvent(trace, "request_rejected", { reason: "auth_required" });
       // 返回 401 状态码，添加 type 字段标识为需要登录
       return new Response(
         JSON.stringify({ 
@@ -203,6 +586,10 @@ export async function POST(req: Request) {
     // 🔥 检查用户积分余额
     const userCredits = await getUserCredits(user_uuid);
     if (userCredits.left_credits < creditCost) {
+      logChatEvent(trace, "request_rejected", {
+        reason: "insufficient_credits",
+        creditCost,
+      });
       // 返回 402 状态码，添加 type 字段标识为积分不足
       return new Response(
         JSON.stringify({
@@ -219,33 +606,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // 🔥 消耗积分（在调用 AI 之前）
     try {
-      await decreaseCredits({
-        user_uuid,
-        trans_type: CreditsTransType.AIChat,
-        credits: creditCost,
-      });
-      console.log(`✅ [Astro Chat] 用户 ${user_uuid} 消耗 ${creditCost} 积分进行 ${requestType}`);
-    } catch (creditError: any) {
-      console.error("❌ [Astro Chat] 消耗积分失败:", creditError);
-      return new Response(
-        JSON.stringify({ code: 500, message: "Failed to deduct credits, please try again later" }),
-        { status: 500, headers: { 'Content-Type': 'application/json' } }
-      );
-    }
-
-    // 检查 DeepSeek API Key
-    const apiKey = process.env.DEEPSEEK_API_KEY;
-    if (!apiKey) {
-      console.error("DEEPSEEK_API_KEY not configured");
-      return respErr("AI service not configured: DEEPSEEK_API_KEY environment variable is not set");
-    }
-
-    try {
-      // 初始化 DeepSeek V4 模型。deepseek-reasoner 已于 2026-07-24 弃用。
-      const textModel: LanguageModelV1 = deepseek(ASTRO_CHAT_MODEL);
-
       // 检测用户问题的语言
       const userLanguage = detectUserLanguage(lastMessage.content);
       
@@ -287,36 +648,79 @@ export async function POST(req: Request) {
         ...messages, // ✅ 包含所有消息，包括当前用户问题（最后一条）
       ];
 
-      // 调用 AI 生成流式响应
-      const result = await streamText({
-        model: textModel,
-        messages: conversationMessages,
-        maxTokens: requestType === 'city_comparison_report' ? 2800 : 1800,
-        temperature: 0.5, // 🔥 优化：降低 temperature 提高准确性和一致性（从 0.7 降至 0.5）
+      const maxTokens = requestType === "city_comparison_report"
+        ? CITY_COMPARISON_REPORT_MAX_TOKENS
+        : STANDARD_CHAT_MAX_TOKENS;
+
+      logChatEvent(trace, "model_request_prepared", {
+        messageCount: conversationMessages.length,
+        systemContextCharacters: systemMessage.content.length,
+        maxTokens,
+        thinkingAttemptOrder: DEEPSEEK_THINKING_ATTEMPT_ORDER,
       });
 
-      // 返回流式响应
-      // 注意：追问建议由前端在 onFinish 回调中生成，不需要在这里追加
-      return result.toDataStreamResponse({
-        sendReasoning: false, // 不向前端传输推理内容，用户直接看到最终答案
-      });
-    } catch (aiError) {
-      console.error("❌ [Astro Chat] AI 调用失败，退回已扣积分:", aiError);
+      // Do not settle credits until an AI provider has returned a complete, non-empty answer.
+      // This prevents a failed or empty stream from charging the user.
+      const answer = await generateReliableAnswer(
+        conversationMessages,
+        maxTokens,
+        trace,
+      );
+
       try {
-        await increaseCredits({
+        await decreaseCredits({
           user_uuid,
-          trans_type: CreditsTransType.SystemAdd,
+          trans_type: CreditsTransType.AIChat,
           credits: creditCost,
         });
-        console.log(`✅ [Astro Chat] 已退回用户 ${user_uuid} 的 ${creditCost} 积分`);
-      } catch (refundError) {
-        console.error("❌ [Astro Chat] 退回积分失败:", refundError);
+        logChatEvent(trace, "credits_settled", {
+          creditCost,
+          provider: answer.provider,
+          model: answer.model,
+          textCharacters: answer.text.length,
+        });
+      } catch (creditError) {
+        logChatEvent(trace, "credit_settlement_failed", {
+          creditCost,
+          provider: answer.provider,
+          model: answer.model,
+          error: getErrorSummary(creditError),
+        });
+        return new Response(
+          JSON.stringify({ code: 500, message: "Could not confirm credits. Please try again." }),
+          { status: 500, headers: { "Content-Type": "application/json" } },
+        );
       }
-      throw aiError;
+
+      logChatEvent(trace, "request_completed", {
+        provider: answer.provider,
+        model: answer.model,
+        textCharacters: answer.text.length,
+      });
+      return createDataStreamResponse(answer, trace);
+    } catch (aiError) {
+      logChatEvent(trace, "request_failed_no_charge", {
+        error: getErrorSummary(aiError),
+      });
+      return new Response(
+        JSON.stringify({
+          code: 503,
+          type: "ai_temporarily_unavailable",
+          message: "AI is temporarily unavailable. No credits were used; please try again shortly.",
+          traceId: trace.id,
+        }),
+        {
+          status: 503,
+          headers: {
+            "Content-Type": "application/json",
+            "X-Astro-Chat-Trace-Id": trace.id,
+          },
+        },
+      );
     }
 
   } catch (err) {
-    console.error("astro-chat error:", err);
+    logChatEvent(trace, "request_error", { error: getErrorSummary(err) });
     const errorMessage = err instanceof Error ? err.message : "AI chat service error";
     return respErr(errorMessage);
   }

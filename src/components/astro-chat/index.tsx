@@ -70,6 +70,7 @@ export default function AstroChat({
   const isDesktop = useMediaQuery('(min-width: 768px)');
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const submissionInFlightRef = useRef(false);
   const lastAutoSentKeyRef = useRef<number>(0);
   const lastAskOtherKeyRef = useRef<number>(0);
   const [showSuggestions, setShowSuggestions] = useState(true);
@@ -86,6 +87,8 @@ export default function AstroChat({
   const [entitlements, setEntitlements] = useState<UserEntitlements | null>(null);
   const [followUpSuggestions, setFollowUpSuggestions] = useState<Record<string, string[]>>({}); // 存储每个消息的追问建议
   const [generatingFollowUp, setGeneratingFollowUp] = useState<Record<string, boolean>>({}); // 标记正在生成的追问建议
+  const followUpAttemptedRef = useRef(new Set<string>());
+  const [analysisElapsedSeconds, setAnalysisElapsedSeconds] = useState(0);
   const t = useTranslations('astro_chat');
   const tHistory = useTranslations('ai_chat_history_page');
   const params = useParams();
@@ -120,6 +123,13 @@ export default function AstroChat({
     }
     return (t.raw('suggested_questions') as string[]) || [];
   }, [synastryData, t]);
+
+  const analysisStatusKey = useMemo(() => {
+    if (analysisElapsedSeconds >= 22) return 'analysis_status_preparing';
+    if (analysisElapsedSeconds >= 13) return 'analysis_status_comparing';
+    if (analysisElapsedSeconds >= 6) return 'analysis_status_connecting';
+    return 'analysis_status_reading';
+  }, [analysisElapsedSeconds]);
 
   // 🔍 调试日志：检查翻译是否正确获取
   useEffect(() => {
@@ -368,6 +378,7 @@ export default function AstroChat({
     fetch: customFetch,
     // 不在这里设置 body，而是在 customFetch 中动态添加
     onFinish: async (message) => {
+      submissionInFlightRef.current = false;
       // 当 AI 回答完成后，进行质量检查
       if (message.role === 'assistant') {
         // 🔥 回答质量检查：检查回答长度
@@ -396,6 +407,7 @@ export default function AstroChat({
       }
     },
     onError: async (error: any) => {
+      submissionInFlightRef.current = false;
       console.error('🚨 [AstroChat] onError 被触发:', error);
       
       // 🔥 优先检查 error.data（来自自定义 fetch 的错误数据）
@@ -504,6 +516,21 @@ export default function AstroChat({
       }
     },
   });
+
+  useEffect(() => {
+    if (!isLoading) {
+      setAnalysisElapsedSeconds(0);
+      return;
+    }
+
+    const startedAt = Date.now();
+    setAnalysisElapsedSeconds(0);
+    const interval = window.setInterval(() => {
+      setAnalysisElapsedSeconds(Math.floor((Date.now() - startedAt) / 1000));
+    }, 1_000);
+
+    return () => window.clearInterval(interval);
+  }, [isLoading]);
 
   // 计算用户消息数量（只统计 role 为 'user' 的消息）
   const userMessageCount = useMemo(() => {
@@ -625,10 +652,13 @@ export default function AstroChat({
 
   // 🔥 使用 AI 生成追问建议（异步，多语言支持）
   const generateFollowUpWithAI = useCallback(async (userQuestion: string, aiResponse: string, messageId: string) => {
-    // 如果正在生成或已存在，跳过
-    if (generatingFollowUp[messageId] || followUpSuggestions[messageId]) {
+    // A failed follow-up is optional; remember the attempt so a re-render never
+    // turns one provider outage into an unbounded request loop.
+    if (followUpAttemptedRef.current.has(messageId) || generatingFollowUp[messageId] || followUpSuggestions[messageId]) {
       return;
     }
+
+    followUpAttemptedRef.current.add(messageId);
 
     // 标记为正在生成
     setGeneratingFollowUp(prev => ({ ...prev, [messageId]: true }));
@@ -846,9 +876,17 @@ export default function AstroChat({
   // 处理表单提交
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // The UI state update for useChat is asynchronous. Keep an immediate ref
+    // guard so Enter plus a click cannot create two charged requests.
+    if (isLoading || submissionInFlightRef.current) {
+      return;
+    }
+    submissionInFlightRef.current = true;
     
     // 检查是否可以提问
     if (!canAskQuestion) {
+      submissionInFlightRef.current = false;
       // 需要登录才能继续提问
       if (onRequireLogin) {
         onRequireLogin();
@@ -867,6 +905,7 @@ export default function AstroChat({
       
       // 如果获取到积分且积分不足，显示提示框
       if (currentCredits !== null && currentCredits < effectiveCreditCost) {
+        submissionInFlightRef.current = false;
         setShowInsufficientCreditsDialog(true);
         // 📊 埋点：积分不足
         askAIEvents.insufficientCredits(currentCredits, effectiveCreditCost);
@@ -888,7 +927,12 @@ export default function AstroChat({
     );
     
     requestTypeRef.current = pendingRequestType;
-    handleSubmit(e);
+    try {
+      handleSubmit(e);
+    } catch (submitError) {
+      submissionInFlightRef.current = false;
+      throw submitError;
+    }
     // 清空输入框后重新聚焦
     setTimeout(() => {
       textareaRef.current?.focus();
@@ -897,8 +941,14 @@ export default function AstroChat({
 
   // 处理预设问题点击
   const handleSuggestedQuestionClick = async (question: string) => {
+    if (isLoading || submissionInFlightRef.current) {
+      return;
+    }
+    submissionInFlightRef.current = true;
+
     // 检查是否可以提问
     if (!canAskQuestion) {
+      submissionInFlightRef.current = false;
       // 需要登录才能继续提问
       if (onRequireLogin) {
         onRequireLogin();
@@ -917,6 +967,7 @@ export default function AstroChat({
       
       // 如果获取到积分且积分不足，显示提示框
       if (currentCredits !== null && currentCredits < creditCost) {
+        submissionInFlightRef.current = false;
         setShowInsufficientCreditsDialog(true);
         // 📊 埋点：积分不足
         askAIEvents.insufficientCredits(currentCredits, creditCost);
@@ -939,9 +990,12 @@ export default function AstroChat({
     
     requestTypeRef.current = 'standard';
     setPendingRequestType('standard');
-    append({
+    void append({
       role: 'user',
       content: question,
+    }).catch((appendError) => {
+      submissionInFlightRef.current = false;
+      console.error('🚨 [AstroChat] 引导问题发送失败:', appendError);
     });
   };
 
@@ -1064,29 +1118,33 @@ export default function AstroChat({
                   
                   {/* 追问建议按钮 - 只在 AI 回答后显示 */}
                   {message.role === 'assistant' && suggestions.length > 0 && !isLoading && (
-                    <div className="flex flex-wrap gap-2 mt-3 ml-11">
-                      {suggestions.map((suggestion, index) => (
-                        <Button
-                          key={index}
-                          variant="outline"
-                          size="sm"
-                          onClick={() => {
-                            append({
-                              role: 'user',
-                              content: suggestion,
-                            });
-                            // 清除该消息的追问建议，避免重复显示
-                            setFollowUpSuggestions(prev => {
-                              const next = { ...prev };
-                              delete next[message.id];
-                              return next;
-                            });
-                          }}
-                          className="text-xs bg-white/5 hover:bg-white/10 border-white/20 text-gray-200 hover:text-white"
-                        >
-                          {suggestion}
-                        </Button>
-                      ))}
+                    <div className="mt-4 w-full min-w-0 sm:ml-11 sm:w-auto">
+                      <div className="mb-2 px-1">
+                        <p className="text-[10px] font-semibold uppercase tracking-wide text-purple-300">
+                          {t('follow_up_title')}
+                        </p>
+                      </div>
+                      <div className="flex w-full min-w-0 flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap">
+                        {suggestions.map((suggestion, index) => (
+                          <Button
+                            key={index}
+                            variant="outline"
+                            size="sm"
+                            onClick={() => {
+                              void handleSuggestedQuestionClick(suggestion);
+                              // 清除该消息的追问建议，避免重复显示
+                              setFollowUpSuggestions(prev => {
+                                const next = { ...prev };
+                                delete next[message.id];
+                                return next;
+                              });
+                            }}
+                            className="h-auto min-h-9 w-full min-w-0 whitespace-normal break-words border-white/20 bg-white/5 px-3 py-2 text-left text-xs leading-5 text-gray-200 hover:bg-white/10 hover:text-white sm:h-8 sm:w-auto sm:whitespace-nowrap sm:py-1.5 sm:text-center sm:leading-normal"
+                          >
+                            {suggestion}
+                          </Button>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -1099,12 +1157,15 @@ export default function AstroChat({
                 <div className="size-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
                   <Sparkles className="size-4 text-white" />
                 </div>
-                <div className="bg-white/10 text-gray-100 border border-white/10 rounded-2xl px-4 py-3">
-                  <div className="flex flex-col gap-2">
-                    <p className="text-xs text-purple-300 font-medium animate-pulse">
-                      ✨ Analyzing your birth chart...
+                <div className="min-w-0 max-w-[calc(100%-2.75rem)] rounded-2xl border border-white/10 bg-white/10 px-3.5 py-3 sm:px-4">
+                  <div className="flex flex-col gap-1.5">
+                    <p className="text-xs font-medium leading-5 text-purple-200 animate-pulse">
+                      {t(analysisStatusKey)}
                     </p>
-                    <div className="flex gap-1">
+                    <p className="text-[11px] leading-4 text-gray-400">
+                      {t('analysis_wait_note')}
+                    </p>
+                    <div className="mt-0.5 flex gap-1" aria-label={t(analysisStatusKey)}>
                       <div className="size-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: '0ms' }} />
                       <div className="size-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: '150ms' }} />
                       <div className="size-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: '300ms' }} />

@@ -456,6 +456,12 @@
     "welcome_title": "Benvenuto! Pronto a esplorare la tua mappa planetaria?",
     "welcome_subtitle": "Scopri le storie scritte nelle tue stelle e linee planetarie",
     "disclaimer": "💡 L'IA analizza solo le città nella tua carta. Solo per riferimento.",
+    "analysis_status_reading": "Sto leggendo le linee planetarie nella tua carta...",
+    "analysis_status_connecting": "Sto collegando la tua domanda ai segnali più forti della mappa...",
+    "analysis_status_comparing": "Sto confrontando le diverse sfumature nella tua carta...",
+    "analysis_status_preparing": "Sto preparando un'interpretazione chiara e personalizzata...",
+    "analysis_wait_note": "Ci vuole un momento perché la risposta si basa sulla tua carta specifica, non su un oroscopo generico.",
+    "follow_up_title": "Approfondisci ora",
     "suggested_questions": [
       "Dove dovrei trasferirmi per trovare amore e successo?",
       "Quali sono le mie 3 città principali per la crescita professionale?",
