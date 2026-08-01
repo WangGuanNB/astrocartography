@@ -21,6 +21,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "Veja como os planetas atuais aspectam o seu mapa astral.",
+        "linkText": "Calculadora de Trânsitos",
+        "url": "/transit-chart-calculator"
+      },
+      {
         "text": "Prefere tutoriais e exemplos?",
         "linkText": "Leia o Blog",
         "url": "/posts"

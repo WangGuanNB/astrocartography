@@ -21,6 +21,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "See how current planets aspect your birth chart.",
+        "linkText": "Transit Chart Calculator",
+        "url": "/transit-chart-calculator"
+      },
+      {
         "text": "Prefer tutorials & examples?",
         "linkText": "Read the Blog",
         "url": "/posts"

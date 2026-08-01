@@ -21,6 +21,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "Sehen Sie, wie aktuelle Planeten Ihr Geburtshoroskop aspektieren.",
+        "linkText": "Transit-Horoskop Rechner",
+        "url": "/transit-chart-calculator"
+      },
+      {
         "text": "Tutorials und Beispiele?",
         "linkText": "Blog lesen",
         "url": "/posts"

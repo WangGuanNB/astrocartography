@@ -21,6 +21,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "Scopri come i pianeti attuali aspettiano la tua carta natale.",
+        "linkText": "Calcolatore Transiti",
+        "url": "/transit-chart-calculator"
+      },
+      {
         "text": "Preferisci tutorial e esempi?",
         "linkText": "Leggi il Blog",
         "url": "/posts"

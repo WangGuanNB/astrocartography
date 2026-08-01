@@ -21,6 +21,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "看看当前行星如何与你的本命盘形成相位。",
+        "linkText": "行运盘计算器（Transit Chart）",
+        "url": "/transit-chart-calculator"
+      },
+      {
         "text": "想看更多教程与示例？",
         "linkText": "阅读博客",
         "url": "/posts"
