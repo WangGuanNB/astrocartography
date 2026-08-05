@@ -22,7 +22,10 @@ const CITY_COMPARISON_REPORT_CREDIT_COST = 50;
 const AI_ATTEMPT_TIMEOUT_MS = 75_000;
 const STANDARD_CHAT_MAX_TOKENS = 3_200;
 const CITY_COMPARISON_REPORT_MAX_TOKENS = 5_200;
-const DEEPSEEK_THINKING_ATTEMPT_ORDER = ["enabled", "disabled"] as const;
+// Standard chat is the product's first impression. Do not silently trade
+// reasoning quality for availability when a thinking response is empty.
+// A second thinking attempt is allowed before the independent Kie fallback.
+const DEEPSEEK_THINKING_ATTEMPT_ORDER = ["enabled", "enabled"] as const;
 type DeepSeekThinkingMode = (typeof DEEPSEEK_THINKING_ATTEMPT_ORDER)[number];
 
 function createDeepSeekForThinking(thinkingMode: DeepSeekThinkingMode) {
@@ -51,7 +54,6 @@ function createDeepSeekForThinking(thinkingMode: DeepSeekThinkingMode) {
 }
 
 const deepseekWithThinking = createDeepSeekForThinking("enabled");
-const deepseekWithoutThinking = createDeepSeekForThinking("disabled");
 
 type ChatMessage = {
   role: "system" | "user" | "assistant";
@@ -125,12 +127,9 @@ async function generateWithDeepSeek(
     });
 
     const result = streamText({
-      model: (thinkingMode === "enabled" ? deepseekWithThinking : deepseekWithoutThinking)(ASTRO_CHAT_MODEL),
+      model: deepseekWithThinking(ASTRO_CHAT_MODEL),
       messages,
       maxTokens,
-      // DeepSeek ignores temperature in thinking mode. Only send it for the
-      // deterministic recovery attempt where the setting is supported.
-      ...(thinkingMode === "disabled" ? { temperature: 0.5 } : {}),
       maxRetries: 0,
       abortSignal: timeout.signal,
     });
