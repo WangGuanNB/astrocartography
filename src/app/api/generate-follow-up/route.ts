@@ -350,9 +350,9 @@ function getFollowUpPrompt(userQuestion: string, aiResponse: string, language: s
 4. 问题必须具体且可操作（不要问开放式问题）
 5. 基于 AI 回答中提到的城市、行星线等内容生成相关问题
 6. 每个问题应该在 5-15 个字之间
-7. 三个问题应分别覆盖：更深层原因、具体行动建议、替代城市/时间/区域
+7. 三个问题应分别覆盖：更深层原因、基于地图线的城市比较、替代城市或行星线
 8. 保持正向好奇，不要制造焦虑或恐惧
-9. 严格限定在 AI 回答里已经出现的星盘、城市或行星线证据。不得建议旅行行程、街区游览、酒店、交通、安全、签证，或星盘数据无法支持的现实事实。
+9. 严格限定在 AI 回答里已经出现的星盘、城市或行星线证据。不得建议具体时间窗口、旅行行程、街区游览、酒店、交通、安全、签证，或星盘数据无法支持的现实事实。
 
 用户的原始问题：${userQuestion}
 
@@ -361,7 +361,7 @@ ${aiResponse.substring(0, 500)}${aiResponse.length > 500 ? '...' : ''}
 
 现在生成 3 个追问建议，格式：A. [问题1] B. [问题2] C. [问题3]`,
       examples: `好的示例：
-A. 这些城市哪个区域最适合我？ B. 什么时候去这些城市最好？ C. 还有其他适合的城市吗？
+A. 这些城市的关系线有什么不同？ B. 哪条线最影响这次选择？ C. 还有哪些城市值得比较？
 
 不好的示例（太模糊）：
 A. 告诉我更多 B. 还有什么？ C. 有趣`,
@@ -377,9 +377,9 @@ REQUIREMENTS (CRITICAL):
 4. Questions must be SPECIFIC and ACTIONABLE (not open-ended)
 5. Base questions on cities, planetary lines, or other details mentioned in the AI response
 6. Each question should be 5-15 words
-7. The three questions should cover: deeper reasoning, practical next steps, and alternative cities/timing/areas
+7. The three questions should cover: deeper reasoning, a map-based city comparison, and alternative cities or planetary lines
 8. Keep them positively curious; never use fear or anxiety as the hook
-9. Stay strictly within astrocartography evidence already named in the AI response. Do not suggest travel itineraries, neighbourhood visits, hotels, transport, safety, visas, or any real-world fact the chart data cannot support.
+9. Stay strictly within astrocartography evidence already named in the AI response. Do not suggest timing windows, travel itineraries, neighbourhood visits, hotels, transport, safety, visas, or any real-world fact the chart data cannot support.
 
 User's original question: ${userQuestion}
 
@@ -388,7 +388,7 @@ ${aiResponse.substring(0, 500)}${aiResponse.length > 500 ? '...' : ''}
 
 Now generate 3 follow-up suggestions in format: A. [question1] B. [question2] C. [question3]`,
       examples: `Good examples:
-A. Which area in these cities is best for me? B. When is the best time to visit these cities? C. Are there other suitable cities?
+A. How do these cities differ for my goal? B. Which line matters most here? C. Which other cities are worth comparing?
 
 Bad examples (too vague):
 A. Tell me more B. What else? C. Interesting`,
@@ -404,9 +404,9 @@ REQUISITOS (CRÍTICO):
 4. Las preguntas deben ser ESPECÍFICAS y ACCIONABLES (no abiertas)
 5. Basa las preguntas en ciudades, líneas planetarias u otros detalles mencionados en la respuesta de la IA
 6. Cada pregunta debe tener 5-15 palabras
-7. Las tres preguntas deben cubrir: razón más profunda, próximos pasos prácticos y ciudades/tiempos/zonas alternativas
+7. Las tres preguntas deben cubrir: razón más profunda, comparación de ciudades basada en el mapa y ciudades o líneas planetarias alternativas
 8. Mantén una curiosidad positiva; nunca uses miedo o ansiedad como gancho
-9. Limítate estrictamente a la evidencia de astrocartografía ya mencionada en la respuesta. No sugieras itinerarios, visitas a barrios, hoteles, transporte, seguridad, visados ni hechos reales que los datos de la carta no puedan respaldar.
+9. Limítate estrictamente a la evidencia de astrocartografía ya mencionada en la respuesta. No sugieras ventanas de tiempo, itinerarios, visitas a barrios, hoteles, transporte, seguridad, visados ni hechos reales que los datos de la carta no puedan respaldar.
 
 Pregunta original del usuario: ${userQuestion}
 
@@ -415,7 +415,7 @@ ${aiResponse.substring(0, 500)}${aiResponse.length > 500 ? '...' : ''}
 
 Ahora genera 3 sugerencias de seguimiento en formato: A. [pregunta1] B. [pregunta2] C. [pregunta3]`,
       examples: `Buenos ejemplos:
-A. ¿Qué área en estas ciudades es mejor para mí? B. ¿Cuándo es el mejor momento para visitar estas ciudades? C. ¿Hay otras ciudades adecuadas?
+A. ¿Cómo difieren estas ciudades para mi objetivo? B. ¿Qué línea importa más aquí? C. ¿Qué otras ciudades vale la pena comparar?
 
 Malos ejemplos (demasiado vagos):
 A. Dime más B. ¿Qué más? C. Interesante`,
@@ -431,9 +431,9 @@ REQUISITI (CRITICI):
 4. Le domande devono essere SPECIFICHE e AZIONABILI (non aperte)
 5. Basa le domande su città, linee planetarie o altri dettagli menzionati nella risposta dell'IA
 6. Ogni domanda dovrebbe avere 5-15 parole
-7. Le tre domande devono coprire: ragione più profonda, prossimi passi pratici e città/tempi/aree alternative
+7. Le tre domande devono coprire: ragione più profonda, confronto tra città basato sulla mappa e città o linee planetarie alternative
 8. Mantieni una curiosità positiva; non usare mai paura o ansia come gancio
-9. Attieniti rigorosamente alle evidenze di astrocartografia già citate nella risposta. Non suggerire itinerari, visite ai quartieri, hotel, trasporti, sicurezza, visti o fatti reali che i dati della carta non possano supportare.
+9. Attieniti rigorosamente alle evidenze di astrocartografia già citate nella risposta. Non suggerire finestre temporali, itinerari, visite ai quartieri, hotel, trasporti, sicurezza, visti o fatti reali che i dati della carta non possano supportare.
 
 Domanda originale dell'utente: ${userQuestion}
 
@@ -442,7 +442,7 @@ ${aiResponse.substring(0, 500)}${aiResponse.length > 500 ? '...' : ''}
 
 Ora genera 3 suggerimenti di follow-up nel formato: A. [domanda1] B. [domanda2] C. [domanda3]`,
       examples: `Buoni esempi:
-A. Quale area in queste città è migliore per me? B. Quando è il momento migliore per visitare queste città? C. Ci sono altre città adatte?
+A. In cosa differiscono queste città per il mio obiettivo? B. Quale linea conta di più qui? C. Quali altre città vale la pena confrontare?
 
 Cattivi esempi (troppo vaghi):
 A. Dimmi di più B. Cos'altro? C. Interessante`,
@@ -458,9 +458,9 @@ REQUISITOS (CRÍTICO):
 4. As perguntas devem ser ESPECÍFICAS e ACIONÁVEIS (não abertas)
 5. Baseie as perguntas em cidades, linhas planetárias ou outros detalhes mencionados na resposta da IA
 6. Cada pergunta deve ter 5-15 palavras
-7. As três perguntas devem cobrir: razão mais profunda, próximos passos práticos e cidades/tempos/áreas alternativas
+7. As três perguntas devem cobrir: razão mais profunda, comparação de cidades baseada no mapa e cidades ou linhas planetárias alternativas
 8. Mantenha uma curiosidade positiva; nunca use medo ou ansiedade como gancho
-9. Limite-se estritamente às evidências de astrocartografia já citadas na resposta. Não sugira roteiros, visitas a bairros, hotéis, transporte, segurança, vistos ou fatos reais que os dados do mapa não possam sustentar.
+9. Limite-se estritamente às evidências de astrocartografia já citadas na resposta. Não sugira janelas de tempo, roteiros, visitas a bairros, hotéis, transporte, segurança, vistos ou fatos reais que os dados do mapa não possam sustentar.
 
 Pergunta original do usuário: ${userQuestion}
 
@@ -469,7 +469,7 @@ ${aiResponse.substring(0, 500)}${aiResponse.length > 500 ? '...' : ''}
 
 Agora gere 3 sugestões de acompanhamento no formato: A. [pergunta1] B. [pergunta2] C. [pergunta3]`,
       examples: `Bons exemplos:
-A. Qual área nessas cidades é melhor para mim? B. Quando é o melhor momento para visitar essas cidades? C. Existem outras cidades adequadas?
+A. Como essas cidades diferem para meu objetivo? B. Qual linha importa mais aqui? C. Quais outras cidades vale a pena comparar?
 
 Maus exemplos (muito vagos):
 A. Me diga mais B. O que mais? C. Interessante`,

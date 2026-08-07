@@ -13,19 +13,22 @@ import {
 import { getUserUuid } from "@/services/user";
 import { getUserCredits, decreaseCredits, CreditsTransType } from "@/services/credit";
 import { getAIChatCreditCost } from "@/services/config";
+import { recordAiChatEvent } from "@/models/ai-chat-event";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 const ASTRO_CHAT_MODEL =
   process.env.DEEPSEEK_ASTRO_CHAT_MODEL ||
   process.env.ASTRO_CHAT_MODEL ||
   "deepseek-v4-flash";
 const CITY_COMPARISON_REPORT_CREDIT_COST = 50;
-// A standard answer should have enough room for reasoning and a visible reply.
-// When thinking consumes the entire budget, retry once without thinking instead
-// of making the visitor wait through a second identical attempt.
+// Paid city-comparison reports can justify a longer reasoning pass. Standard
+// chat must produce visible text promptly, so it uses the streaming path below.
 const THINKING_ATTEMPT_TIMEOUT_MS = 45_000;
 const RECOVERY_ATTEMPT_TIMEOUT_MS = 20_000;
 const STANDARD_CHAT_MAX_TOKENS = 4_800;
 const STANDARD_CHAT_RECOVERY_MAX_TOKENS = 1_600;
+const STANDARD_CHAT_STREAM_MAX_TOKENS = 2_200;
+const STANDARD_CHAT_FIRST_TEXT_TIMEOUT_MS = 18_000;
 const CITY_COMPARISON_REPORT_MAX_TOKENS = 5_200;
 const CITY_COMPARISON_REPORT_RECOVERY_MAX_TOKENS = 2_400;
 // The first answer keeps DeepSeek thinking enabled for quality. A failed or
@@ -73,20 +76,95 @@ type GeneratedAnswer = {
   model: string;
 };
 
+type AIStreamPart = {
+  type: string;
+  textDelta?: string;
+  finishReason?: string;
+  error?: unknown;
+};
+
+type StartedDeepSeekStream = {
+  firstText: string;
+  iterator: AsyncIterator<AIStreamPart>;
+  result: ReturnType<typeof streamText>;
+  timeout: ReturnType<typeof withTimeoutSignal>;
+  startedAt: number;
+  firstTextAt: number;
+  trace: ChatTrace;
+};
+
 type ChatTrace = {
   id: string;
   requestType: "standard" | "city_comparison_report" | "unknown";
   startedAt: number;
+  userUuid?: string;
 };
 
+function getErrorKind(error: unknown) {
+  const message = String(error || "").toLowerCase();
+  if (message.includes("abort") || message.includes("timeout")) return "timeout";
+  if (message.includes("auth") || message.includes("api key") || message.includes("unauthorized")) {
+    return "authentication";
+  }
+  if (message.includes("empty response") || message.includes("without final text")) {
+    return "empty_response";
+  }
+  if (message.includes("network") || message.includes("fetch failed")) return "network";
+  return "provider_error";
+}
+
+function asTelemetryNumber(value: unknown) {
+  return typeof value === "number" && Number.isFinite(value) ? value : undefined;
+}
+
+function scheduleAiChatTelemetry(
+  trace: ChatTrace,
+  event: string,
+  fields: Record<string, unknown>,
+) {
+  const task = recordAiChatEvent({
+    traceId: trace.id,
+    userUuid: trace.userUuid,
+    requestType: trace.requestType,
+    event,
+    provider: typeof fields.provider === "string" ? fields.provider : undefined,
+    model: typeof fields.model === "string" ? fields.model : undefined,
+    thinking: typeof fields.thinking === "string" ? fields.thinking : undefined,
+    delivery: typeof fields.delivery === "string" ? fields.delivery : undefined,
+    attempt: asTelemetryNumber(fields.attempt),
+    creditCost: asTelemetryNumber(fields.creditCost),
+    elapsedMs: Date.now() - trace.startedAt,
+    firstTextLatencyMs: asTelemetryNumber(fields.firstTextLatencyMs),
+    providerLatencyMs: asTelemetryNumber(fields.latencyMs),
+    promptTokens: asTelemetryNumber(fields.promptTokens),
+    completionTokens: asTelemetryNumber(fields.completionTokens),
+    totalTokens: asTelemetryNumber(fields.totalTokens),
+    textCharacters: asTelemetryNumber(fields.textCharacters),
+    errorKind: fields.error ? getErrorKind(fields.error) : undefined,
+  }).catch((error) => {
+    // Telemetry must never make the paid chat path unavailable.
+    console.warn("[Astro Chat] telemetry write skipped", getErrorSummary(error));
+  });
+
+  try {
+    // Keep telemetry outside the response critical path in Workers. The same
+    // promise still runs normally in local Next.js development.
+    getCloudflareContext().ctx.waitUntil(task);
+  } catch {
+    void task;
+  }
+}
+
 function logChatEvent(trace: ChatTrace, event: string, fields: Record<string, unknown> = {}) {
+  const elapsedMs = Date.now() - trace.startedAt;
   console.info("[Astro Chat]", JSON.stringify({
     event,
     traceId: trace.id,
     requestType: trace.requestType,
-    elapsedMs: Date.now() - trace.startedAt,
+    elapsedMs,
     ...fields,
   }));
+  scheduleAiChatTelemetry(trace, event, fields);
 }
 
 function getErrorSummary(error: unknown) {
@@ -95,6 +173,34 @@ function getErrorSummary(error: unknown) {
   }
 
   return String(error).slice(0, 500);
+}
+
+function normalizeModelText(value: string, options: { trim?: boolean } = {}) {
+  const shouldTrim = options.trim !== false;
+  const original = shouldTrim ? value.trim() : value;
+  const hadHtml = /<\/?[a-z][^>]*>/i.test(original);
+
+  if (!hadHtml) {
+    return { text: original, hadHtml: false };
+  }
+
+  // Model output is displayed as text, not HTML. Normalize the occasional
+  // HTML-formatted provider response before it reaches the chat or history.
+  const text = original
+    .replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, "")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/(?:p|div|section|article|h[1-6]|li|blockquote)>/gi, "\n")
+    .replace(/<li[^>]*>/gi, "- ")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/\n{3,}/g, "\n\n");
+
+  return { text: shouldTrim ? text.trim() : text, hadHtml: true };
 }
 
 function withTimeoutSignal(timeoutMs: number) {
@@ -168,7 +274,9 @@ async function generateWithDeepSeek(
       result.warnings,
     ]);
 
-    logChatEvent(trace, text.trim() ? "provider_completed" : "provider_empty", {
+    const normalized = normalizeModelText(text);
+
+    logChatEvent(trace, normalized.text ? "provider_completed" : "provider_empty", {
       provider: "deepseek",
       model: response.modelId || ASTRO_CHAT_MODEL,
       providerResponseId: response.id,
@@ -178,7 +286,8 @@ async function generateWithDeepSeek(
       finishReason,
       latencyMs: Date.now() - startedAt,
       firstTextLatencyMs: firstTextAt === null ? null : firstTextAt - startedAt,
-      textCharacters: text.length,
+      textCharacters: normalized.text.length,
+      htmlNormalized: normalized.hadHtml,
       reasoningCharacters,
       promptTokens: usage.promptTokens,
       completionTokens: usage.completionTokens,
@@ -186,11 +295,11 @@ async function generateWithDeepSeek(
       warningCount: warnings?.length || 0,
     });
 
-    if (!text.trim()) {
+    if (!normalized.text) {
       throw new Error(`DeepSeek returned an empty response (finish_reason=${finishReason || "unknown"})`);
     }
 
-    return text;
+    return normalized.text;
   } catch (error) {
     logChatEvent(trace, "provider_failed", {
       provider: "deepseek",
@@ -205,6 +314,214 @@ async function generateWithDeepSeek(
   } finally {
     timeout.dispose();
   }
+}
+
+/**
+ * Starts a standard chat response and waits only until DeepSeek has produced
+ * the first final-text delta. Reasoning is deliberately disabled for this
+ * path: it is not user-visible and can otherwise keep the chat blank for a
+ * long time. Nothing is charged until the streamed answer finishes.
+ */
+async function startStandardDeepSeekStream(
+  messages: ChatMessage[],
+  trace: ChatTrace,
+): Promise<StartedDeepSeekStream> {
+  if (!process.env.DEEPSEEK_API_KEY) {
+    throw new Error("DEEPSEEK_API_KEY not configured");
+  }
+
+  const timeout = withTimeoutSignal(STANDARD_CHAT_FIRST_TEXT_TIMEOUT_MS);
+  const startedAt = Date.now();
+
+  try {
+    logChatEvent(trace, "provider_started", {
+      provider: "deepseek",
+      model: ASTRO_CHAT_MODEL,
+      attempt: 1,
+      thinking: "disabled",
+      maxTokens: STANDARD_CHAT_STREAM_MAX_TOKENS,
+      timeoutMs: STANDARD_CHAT_FIRST_TEXT_TIMEOUT_MS,
+      delivery: "streaming",
+    });
+
+    const result = streamText({
+      model: deepseekWithoutThinking(ASTRO_CHAT_MODEL),
+      messages,
+      maxTokens: STANDARD_CHAT_STREAM_MAX_TOKENS,
+      temperature: 0.5,
+      maxRetries: 0,
+      abortSignal: timeout.signal,
+    });
+    const iterator = result.fullStream[Symbol.asyncIterator]() as AsyncIterator<AIStreamPart>;
+
+    while (true) {
+      const next = await iterator.next();
+      if (next.done) {
+        throw new Error("DeepSeek completed without final text");
+      }
+
+      const part = next.value;
+      if (part.type === "error") {
+        throw part.error || new Error("DeepSeek streaming request failed");
+      }
+
+      if (part.type === "text-delta" && part.textDelta) {
+        const normalized = normalizeModelText(part.textDelta, { trim: false });
+        if (normalized.text.trim()) {
+          const firstTextAt = Date.now();
+          logChatEvent(trace, "first_text_ready", {
+            provider: "deepseek",
+            model: ASTRO_CHAT_MODEL,
+            thinking: "disabled",
+            firstTextLatencyMs: firstTextAt - startedAt,
+            textCharacters: normalized.text.length,
+          });
+          return {
+            firstText: normalized.text,
+            iterator,
+            result,
+            timeout,
+            startedAt,
+            firstTextAt,
+            trace,
+          };
+        }
+      }
+    }
+  } catch (error) {
+    timeout.dispose();
+    logChatEvent(trace, "provider_failed", {
+      provider: "deepseek",
+      model: ASTRO_CHAT_MODEL,
+      attempt: 1,
+      thinking: "disabled",
+      timeoutMs: STANDARD_CHAT_FIRST_TEXT_TIMEOUT_MS,
+      latencyMs: Date.now() - startedAt,
+      error: getErrorSummary(error),
+    });
+    throw error;
+  }
+}
+
+function createStandardStreamResponse(
+  started: StartedDeepSeekStream,
+  userUuid: string,
+  creditCost: number,
+) {
+  const encoder = new TextEncoder();
+  let cancelled = false;
+
+  const stream = new ReadableStream<Uint8Array>({
+    start(controller) {
+      const sendText = (text: string) => {
+        const normalized = normalizeModelText(text, { trim: false });
+        if (normalized.text) {
+          controller.enqueue(encoder.encode(`0:${JSON.stringify(normalized.text)}\n`));
+          return normalized.text.length;
+        }
+        return 0;
+      };
+
+      void (async () => {
+        let textCharacters = sendText(started.firstText);
+        let reasoningCharacters = 0;
+        let finishReason: string | null = null;
+
+        try {
+          while (true) {
+            const next = await started.iterator.next();
+            if (next.done) break;
+
+            const part = next.value;
+            if (part.type === "error") {
+              throw part.error || new Error("DeepSeek streaming request failed");
+            }
+            if (part.type === "text-delta" && part.textDelta) {
+              textCharacters += sendText(part.textDelta);
+            } else if (part.type === "reasoning" && part.textDelta) {
+              reasoningCharacters += part.textDelta.length;
+            } else if (part.type === "step-finish" || part.type === "finish") {
+              finishReason = part.finishReason || finishReason;
+            }
+          }
+
+          const [usage, response, warnings] = await Promise.all([
+            started.result.usage,
+            started.result.response,
+            started.result.warnings,
+          ]);
+
+          // A complete response is the only point at which a standard-chat
+          // credit is settled. An interrupted stream remains free to the user.
+          await decreaseCredits({
+            user_uuid: userUuid,
+            trans_type: CreditsTransType.AIChat,
+            credits: creditCost,
+          });
+
+          logChatEvent(started.trace, "provider_completed", {
+            provider: "deepseek",
+            model: response.modelId || ASTRO_CHAT_MODEL,
+            thinking: "disabled",
+            finishReason,
+            latencyMs: Date.now() - started.startedAt,
+            firstTextLatencyMs: started.firstTextAt - started.startedAt,
+            textCharacters,
+            reasoningCharacters,
+            promptTokens: usage.promptTokens,
+            completionTokens: usage.completionTokens,
+            totalTokens: usage.totalTokens,
+            warningCount: warnings?.length || 0,
+          });
+          logChatEvent(started.trace, "credits_settled", {
+            creditCost,
+            provider: "deepseek",
+            model: response.modelId || ASTRO_CHAT_MODEL,
+            textCharacters,
+          });
+          logChatEvent(started.trace, "request_completed", {
+            provider: "deepseek",
+            model: response.modelId || ASTRO_CHAT_MODEL,
+            textCharacters,
+            delivery: "streaming",
+          });
+          controller.close();
+        } catch (error) {
+          logChatEvent(started.trace, "stream_failed_no_charge", {
+            provider: "deepseek",
+            model: ASTRO_CHAT_MODEL,
+            latencyMs: Date.now() - started.startedAt,
+            textCharacters,
+            cancelled,
+            error: getErrorSummary(error),
+          });
+          controller.error(error);
+        } finally {
+          started.timeout.dispose();
+        }
+      })();
+    },
+    async cancel(reason) {
+      cancelled = true;
+      started.timeout.dispose();
+      await started.iterator.return?.(reason);
+      logChatEvent(started.trace, "stream_cancelled_no_charge", {
+        provider: "deepseek",
+        model: ASTRO_CHAT_MODEL,
+        reason: String(reason || "client_cancelled").slice(0, 200),
+      });
+    },
+  });
+
+  return new Response(stream, {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "X-Vercel-AI-Data-Stream": "v1",
+      "X-Astro-Chat-Provider": "deepseek",
+      "X-Astro-Chat-Model": ASTRO_CHAT_MODEL,
+      "X-Astro-Chat-Trace-Id": started.trace.id,
+    },
+  });
 }
 
 function extractTextValue(value: unknown): string {
@@ -308,7 +625,7 @@ async function generateWithKie(messages: ChatMessage[], maxTokens: number, trace
       }
 
       const choice = payload?.choices?.[0];
-      const text =
+      const rawText =
         extractTextValue(choice?.message?.content) ||
         extractTextValue(choice?.delta?.content) ||
         extractTextValue(choice?.text) ||
@@ -316,7 +633,9 @@ async function generateWithKie(messages: ChatMessage[], maxTokens: number, trace
         extractTextValue(payload?.data?.choices?.[0]?.message?.content) ||
         (!payload ? rawPayload.trim() : "");
 
-      if (!text) {
+      const normalized = normalizeModelText(rawText);
+
+      if (!normalized.text) {
         throw new Error(`Kie ${model} returned an empty response`);
       }
 
@@ -325,10 +644,11 @@ async function generateWithKie(messages: ChatMessage[], maxTokens: number, trace
         model,
         timeoutMs,
         latencyMs: Date.now() - startedAt,
-        textCharacters: text.length,
+        textCharacters: normalized.text.length,
+        htmlNormalized: normalized.hadHtml,
       });
 
-      return { text, model };
+      return { text: normalized.text, model };
     } catch (error) {
       lastError = error;
       logChatEvent(trace, "provider_failed", {
@@ -449,6 +769,25 @@ function createDataStreamResponse(answer: GeneratedAnswer, trace: ChatTrace) {
       "X-Astro-Chat-Model": answer.model,
       "X-Astro-Chat-Trace-Id": trace.id,
     },
+  });
+}
+
+async function settleChatCredits(
+  userUuid: string,
+  creditCost: number,
+  answer: GeneratedAnswer,
+  trace: ChatTrace,
+) {
+  await decreaseCredits({
+    user_uuid: userUuid,
+    trans_type: CreditsTransType.AIChat,
+    credits: creditCost,
+  });
+  logChatEvent(trace, "credits_settled", {
+    creditCost,
+    provider: answer.provider,
+    model: answer.model,
+    textCharacters: answer.text.length,
   });
 }
 
@@ -623,6 +962,7 @@ export async function POST(req: Request) {
         { status: 401, headers: { 'Content-Type': 'application/json' } }
       );
     }
+    trace.userUuid = user_uuid;
 
     // 🔥 获取 AI 消耗的积分数量：普通聊天读取配置，城市对比完整报告固定 50 credits
     const creditCost =
@@ -706,43 +1046,61 @@ export async function POST(req: Request) {
         thinkingAttemptOrder: DEEPSEEK_THINKING_ATTEMPT_ORDER,
       });
 
-      // Do not settle credits until an AI provider has returned a complete, non-empty answer.
-      // This prevents a failed or empty stream from charging the user.
-      const answer = await generateReliableAnswer(
-        conversationMessages,
-        maxTokens,
-        trace,
-      );
+      if (requestType === "standard") {
+        try {
+          const started = await startStandardDeepSeekStream(conversationMessages, trace);
+          return createStandardStreamResponse(started, user_uuid, creditCost);
+        } catch (primaryError) {
+          // A fallback is only attempted before any text reached the visitor.
+          // Once a response is streaming, changing provider could show two
+          // incompatible answers to one question.
+          logChatEvent(trace, "fallback_started", {
+            primaryProvider: "deepseek",
+            fallbackProvider: "kie",
+            reason: getErrorSummary(primaryError),
+            fallbackMaxTokens: STANDARD_CHAT_RECOVERY_MAX_TOKENS,
+          });
+          const fallback = await generateWithKie(
+            conversationMessages,
+            STANDARD_CHAT_RECOVERY_MAX_TOKENS,
+            trace,
+          );
 
-      try {
-        await decreaseCredits({
-          user_uuid,
-          trans_type: CreditsTransType.AIChat,
-          credits: creditCost,
-        });
-        logChatEvent(trace, "credits_settled", {
-          creditCost,
-          provider: answer.provider,
-          model: answer.model,
-          textCharacters: answer.text.length,
-        });
-      } catch (creditError) {
-        logChatEvent(trace, "credit_settlement_failed", {
-          creditCost,
-          provider: answer.provider,
-          model: answer.model,
-          error: getErrorSummary(creditError),
-        });
-        return new Response(
-          JSON.stringify({ code: 500, message: "Could not confirm credits. Please try again." }),
-          { status: 500, headers: { "Content-Type": "application/json" } },
-        );
+          if (!fallback) {
+            throw primaryError;
+          }
+
+          const answer: GeneratedAnswer = {
+            text: fallback.text,
+            provider: "kie",
+            model: fallback.model,
+          };
+          await settleChatCredits(user_uuid, creditCost, answer, trace);
+          logChatEvent(trace, "fallback_recovered", {
+            provider: "kie",
+            model: fallback.model,
+            textCharacters: fallback.text.length,
+          });
+          logChatEvent(trace, "request_completed", {
+            provider: "kie",
+            model: fallback.model,
+            textCharacters: fallback.text.length,
+            delivery: "buffered_fallback",
+          });
+          return createDataStreamResponse(answer, trace);
+        }
       }
 
+      // City-comparison reports remain on their existing complete-response
+      // path. They use a different price and longer reasoning budget, so they
+      // are intentionally isolated from the standard chat streaming change.
+      const answer = await generateReliableAnswer(conversationMessages, maxTokens, trace);
+      await settleChatCredits(user_uuid, creditCost, answer, trace);
       logChatEvent(trace, "request_completed", {
         provider: answer.provider,
         model: answer.model,
         textCharacters: answer.text.length,
+        delivery: "buffered_report",
       });
       return createDataStreamResponse(answer, trace);
     } catch (aiError) {

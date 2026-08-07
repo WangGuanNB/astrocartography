@@ -140,6 +140,39 @@ export const aiChatSessions = sqliteTable(
   (table) => [index("ai_chat_sessions_user_uuid_idx").on(table.user_uuid)]
 );
 
+// Request-level telemetry for Astro Chat. Conversation content remains in R2;
+// this table only keeps the operational fields needed to monitor reliability.
+export const aiChatEvents = sqliteTable(
+  "ai_chat_events_astrocarto",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    created_at: integer("created_at", { mode: "timestamp" }).notNull(),
+    trace_id: text("trace_id").notNull(),
+    user_uuid: text("user_uuid"),
+    request_type: text("request_type").notNull(),
+    event: text("event").notNull(),
+    provider: text("provider"),
+    model: text("model"),
+    thinking: text("thinking"),
+    delivery: text("delivery"),
+    attempt: integer("attempt"),
+    credit_cost: integer("credit_cost"),
+    elapsed_ms: integer("elapsed_ms"),
+    first_text_latency_ms: integer("first_text_latency_ms"),
+    provider_latency_ms: integer("provider_latency_ms"),
+    prompt_tokens: integer("prompt_tokens"),
+    completion_tokens: integer("completion_tokens"),
+    total_tokens: integer("total_tokens"),
+    text_characters: integer("text_characters"),
+    error_kind: text("error_kind"),
+  },
+  (table) => [
+    index("ai_chat_events_created_at_idx").on(table.created_at),
+    index("ai_chat_events_trace_id_idx").on(table.trace_id),
+    index("ai_chat_events_user_uuid_idx").on(table.user_uuid),
+  ]
+);
+
 // Feedbacks table
 export const feedbacks = sqliteTable("feedbacks_astrocarto", {
   id: integer("id").primaryKey({ autoIncrement: true }),

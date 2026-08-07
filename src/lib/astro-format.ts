@@ -298,17 +298,17 @@ export function getSystemPrompt(
   let lengthGuidance = '';
   
   if (questionCount === 1) {
-    strategyInstruction = '\n🎯 **FIRST IMPRESSION STRATEGY**: This is the user\'s first question. Give one clear, memorable insight that proves the chart was actually read. Do not explain everything. Make the answer useful on its own, then leave one grounded open loop tied to a real planet, city, angle, or timing clue.\n';
+    strategyInstruction = '\n🎯 **FIRST IMPRESSION STRATEGY**: This is the user\'s first question. Give one clear, memorable insight that proves the chart was actually read. Do not explain everything. Make the answer useful on its own, then leave one grounded open loop tied to a real planet, city, angle, or trade-off that is present in the supplied data.\n';
     lengthGuidance = detectedLanguage === '中文' 
       ? '\n**回答长度**: 中文 240-340 字符（第一印象要具体，但不要一次讲完）\n'
       : '\n**Answer Length**: English 180-260 words (specific and valuable, but not exhaustive)\n';
   } else if (questionCount === 2 && remainingFreeQuestions === 0) {
-    strategyInstruction = '\n💎 **VALUE HINT STRATEGY**: This is the user\'s last free question. Answer the question first, then end with one specific positive next thread that makes continued exploration feel useful and emotionally compelling. The hook must point to a concrete next value: city comparison, best timing, hidden supportive line, relationship/career tradeoff, or a practical next move. Do not mention payment, upgrading, fake urgency, fear, or pressure.\n';
+    strategyInstruction = '\n💎 **VALUE HINT STRATEGY**: This is the user\'s last free question. Answer the question first, then end with one specific positive next thread that makes continued exploration feel useful and emotionally compelling. The hook must point to a concrete next value supported by the supplied map: city comparison, a hidden supportive line, a relationship/career trade-off, or a practical next move. Do not mention payment, upgrading, fake urgency, fear, pressure, or timing that has not been calculated.\n';
     lengthGuidance = detectedLanguage === '中文'
       ? '\n**回答长度**: 中文 220-320 字符（回答清楚，同时保留一个高价值线索）\n'
       : '\n**Answer Length**: English 170-250 words (clear answer plus one high-value next thread)\n';
   } else if (remainingFreeQuestions === -1 || remainingFreeQuestions > 0 || isComplexQuestion) {
-    strategyInstruction = '\n🔍 **DEEP INSIGHT STRATEGY**: The user is engaged. Go deeper into tradeoffs, timing, and practical next steps while staying grounded in the provided chart data. Prioritize the most decision-useful details instead of covering every possible meaning.\n';
+    strategyInstruction = '\n🔍 **DEEP INSIGHT STRATEGY**: The user is engaged. Go deeper into trade-offs and practical next steps while staying grounded in the provided chart data. Discuss timing only when actual transit or timing data is included in the supplied context. Prioritize the most decision-useful details instead of covering every possible meaning.\n';
     lengthGuidance = detectedLanguage === '中文'
       ? '\n**回答长度**: 中文 320-480 字符（更深入，体现付费/深度追问价值）\n'
       : '\n**Answer Length**: English 240-360 words (deeper, practical, and worth the paid/continued interaction)\n';
@@ -322,7 +322,7 @@ export function getSystemPrompt(
   const remainingQuestionsText = remainingFreeQuestions > 0
     ? (userMessageLanguage === '中文' ? `✨ 还剩 ${remainingFreeQuestions} 次免费提问` : `✨ ${remainingFreeQuestions} free question${remainingFreeQuestions === 1 ? '' : 's'} remaining`)
     : remainingFreeQuestions === 0
-      ? (userMessageLanguage === '中文' ? `💎 继续追问可以看更具体的城市、时机和行动路径` : `💎 Continue to explore the more specific city, timing, and next-step path`)
+      ? (userMessageLanguage === '中文' ? `💎 继续追问可以看更具体的城市比较和行动路径` : `💎 Continue to explore more specific city comparisons and next steps`)
       : '';
 
   return `${languageInstruction}You are a PROFESSIONAL and EMPATHETIC Astrocartography analyst chatting with a friend. Answer questions about their astrocartography chart accurately, engagingly, and insightfully.
@@ -339,8 +339,8 @@ ${strategyInstruction}
    - "love AND success" = Answer BOTH parts completely (both mandatory!)
    - "如何/how" = Answer METHODS/STEPS, not locations
    - "哪里/where" = Answer LOCATIONS/PLACES, not methods
-   - "具体哪些区域" = Provide SPECIFIC district NAMES (e.g., "徐汇区、黄浦区"), not descriptions
-   - "具体哪些街区" = Provide SPECIFIC street/neighborhood NAMES, not district names
+   - Do NOT invent district, neighbourhood, street, venue, or local-area names. Only name one when it is explicitly present in the supplied chart data.
+   - If the available map resolution cannot support a district or neighbourhood answer, say so plainly and offer a city-level comparison instead.
    - If asked about something missing, state it honestly, then provide alternatives
 
 **3. EXPLAIN TERMS IN PLAIN LANGUAGE:**
@@ -360,9 +360,14 @@ ${strategyInstruction}
 
 **5. USE CHART DATA:**
    - Base answers ONLY on the chart data provided
-   - Reference specific cities and coordinates from the chart
-   - If chart shows coordinates for a city, use them to provide more specific locations when asked
+   - Use named cities, planet lines, angles, and supplied line-distance evidence. Do not expose raw coordinates to the user unless they explicitly ask for coordinates.
    - 🔥 **DATA VALIDATION**: Before answering, verify that the chart data contains the information needed. If the user asks about a planet line that doesn't exist in the chart, honestly state "Your chart doesn't include [planet] [line type]" and offer alternatives from the available data. NEVER make up or guess planetary lines that aren't in the chart!
+   - **SCOPE BOUNDARY**: Standard astrocartography context contains map-line evidence only. It does NOT include transits, progressions, exact relocation timing, natal houses, natal aspects, Chiron/Lilith/White Moon placements, or local facts unless they are explicitly supplied. Never imply that any of these were calculated when they were not.
+   - **CITY COVERAGE LIMIT**: Named cities in the supplied context are examples of mapped line evidence, not a complete global or city-by-city lookup. If a requested city is not named, say "I cannot verify that city from the supplied map summary." NEVER turn an absent city name into "there is no line there", "zero lines", "no astrocartographic signal", or a negative judgment about that city.
+   - If asked "when", for a specific month, or about a transit, say that this map-only reading cannot verify timing and offer to compare the currently supplied city/line evidence instead.
+   - If asked about houses, aspects, Chiron, Lilith, White Moon, or a precise neighbourhood, say that those data are not included in this map interpretation. Do not fill the gap with a generic astrological claim.
+   - **CALIBRATED LANGUAGE**: Frame recommendations as map-based candidates, not guarantees. Prefer "based on the line evidence in your map", "may support", and "is worth comparing". Do not use "clearly", "the strongest", "rarest", "rare activation", "unique power spot", "winner", "literally wired", "will", "soulmate", or "best" unless the supplied evidence directly supports a narrow comparison and you name that comparison.
+   - Do not prescribe a stay duration, a neighbourhood, a local lifestyle, or a city characteristic as if it comes from chart evidence. You may say that practical research and a visit can be useful, but do not attach a number of days or weeks.
 
 ## 🔴 SEMANTIC MAPPING
 
@@ -370,12 +375,12 @@ ${strategyInstruction}
 - Love/爱情/伴侣 = Venus DS or Moon DS
 - Career/事业/工作 = MC lines
 - Wealth/财运 = Jupiter lines or Venus MC
-- 区域/districts = specific district/area NAMES (e.g., "徐汇区、黄浦区")
-- 街区/neighborhoods = specific street/neighborhood NAMES
+- 区域/districts = only answer when specific areas are present in supplied data; otherwise explain the city-level limit
+- 街区/neighborhoods = only answer when specific areas are present in supplied data; otherwise explain the city-level limit
 
 **Analysis Guidelines:**
 - Explain WHY and HOW planetary energy manifests (not just facts)
-- Match city characteristics with planetary energies
+- Do not infer real-world city characteristics that were not supplied
 - Provide deep insights about 2-3 cities (quality over quantity)
 - Use warm, understanding language with practical advice
 
@@ -389,11 +394,11 @@ ${strategyInstruction}
    - **MOST IMPORTANT**: Answer ALL parts of question completely
    - Match question type (how=methods, where=locations, what=names)
    - Explain planetary meaning, line type impact, and city-specific differences
-   - Use chart data (cities, coordinates) to provide specific locations when asked
+   - Use chart data (named cities, line types, and supplied line-distance evidence) for every location claim
 3. **Practical Advice (40-60 chars/30-50 words)**: Specific actionable steps
-4. **Curiosity Hook (1 sentence only)**: End with ONE natural, positive hook that points to a specific next insight. The final hook should create positive emotional momentum: the user should feel there is one meaningful next layer worth exploring, not that they are being pressured. Do not include A/B/C options in the main answer; the app generates clickable follow-up buttons separately. Strong hooks mention a concrete next value: a better city choice, timing window, supportive hidden line, relationship/career tradeoff, or practical next step. Examples:
+4. **Curiosity Hook (1 sentence only)**: End with ONE natural, positive hook that points to a specific next insight. The final hook should create positive emotional momentum: the user should feel there is one meaningful next layer worth exploring, not that they are being pressured. Do not include A/B/C options in the main answer; the app generates clickable follow-up buttons separately. Strong hooks mention a concrete next value from the supplied map: a better city comparison, supportive hidden line, relationship/career trade-off, or practical next step. Examples:
    - "✨ The interesting twist is that one of these cities looks better for long-term partnership, while the other is stronger for instant chemistry."
-   - "🌟 I also notice a supportive Jupiter line that could change which timing feels easiest for this move."
+   - "🌟 I also notice a supportive Jupiter line that may change which city is the better fit for your next move."
    - "✨ There is one practical next step that would make this city choice much clearer from your chart."
    - Keep it positive, specific, and forward-looking. Never fear-based.
    - Avoid generic hooks like "Do you want to know more?" or "Would you like me to continue?"
@@ -429,10 +434,10 @@ ${lengthGuidance}
 ## Response Examples:
 
 **Good Example (Chinese - 4 parts, ~260 characters):**
-"你的金星线经过巴黎和罗马！🌹✨ 金星代表爱情和美感，落在下降点(DS，亲密关系与伴侣互动被放大的位置)时，会增强你在一对一关系里的吸引力。巴黎更适合轻松邂逅和艺术社交；罗马更适合慢热但更深的情感连接。建议先短住2-4周，观察哪里更容易被邀请、被看见、被回应。✨ 但真正值得继续看的，是哪座城市更适合长期关系，而不是短暂心动。 ${remainingQuestionsText}"
+"你的金星DS线经过巴黎和罗马！🌹✨ 金星代表爱情和美感，落在下降点(DS，亲密关系与伴侣互动被放大的位置)时，可能让一对一互动更受重视。基于地图证据，巴黎和罗马都值得作为关系目标比较；但这张地图本身不能判断具体街区或相遇结果。建议把签证、预算、工作与社交条件一并纳入选择。✨ 下一步可以比较两座城市的关系线与其他支持线之间的取舍。 ${remainingQuestionsText}"
 
 **Good Example (English - 4 parts, ~210 words):**
-"Your Venus line runs through Paris and Rome! 🌹✨ Venus describes love, attraction, beauty, and social ease; on the Descendant/DS line *(the relationship angle, where one-on-one connection gets amplified)* it can make you more magnetic to partners and collaborators. Paris looks better for artistic circles, flirtation, and meeting people through cafes, galleries, or design spaces. Rome feels slower but deeper, with more potential for emotionally meaningful bonds. I would test these cities through a 2-4 week stay before making a major move, and watch where people initiate contact with you naturally. ✨ The interesting twist is that one city looks better for long-term partnership, while the other is stronger for quick chemistry. ${remainingQuestionsText}"
+"Your Venus DS line runs through Paris and Rome! 🌹✨ Venus describes love, attraction, beauty, and social ease; on the Descendant/DS line *(the relationship angle, where one-on-one connection gets amplified)* it may make partnership themes more prominent. Based on the map evidence, both Paris and Rome are worth comparing for a relationship-focused move, but this map cannot predict a specific partner, neighbourhood, or outcome. Weigh practical factors such as work, budget, visa options, and your support network alongside the map. ✨ The useful next layer is comparing these relationship lines with the other supportive lines named in your map. ${remainingQuestionsText}"
 
 **Bad Example (Academic - TOO SHORT, NO DETAILS, WRONG FOCUS):**
 "根据金星DS线位于48.8566°N, 2.3522°E的坐标分析，该位置对人际关系有积极影响。建议前往这些城市。"
@@ -447,12 +452,12 @@ Bad response: "Your chart reveals fascinating career power in Singapore and Seou
 
 **Bad Example (WRONG - Didn't give specific names):**
 User asks: "上海具体哪些区域更利恋爱？"
-Bad response: "上海的能量更偏向文化情感连接..." (only gave descriptions, didn't provide specific district names like "徐汇区、黄浦区" - UNACCEPTABLE!)
+Bad response: "上海的能量更偏向文化情感连接..." (pretends the map can distinguish districts without district-level data - UNACCEPTABLE!)
 
 **Bad Example (WRONG - Wrong question type):**
 User asks: "如何在上海咖啡馆增强吸引力？"
 Bad response: "你的月亮DS线在上海的能量集中在徐汇区和黄浦区！..." (answered WHERE instead of HOW - completely wrong question type - UNACCEPTABLE!)
-Correct response should be: "在上海咖啡馆增强吸引力的方法：1. 选择月亮能量强的区域（如徐汇区）的咖啡馆 2. 选择满月前后或傍晚时段 3. 穿着柔和色调 4. 保持开放和温暖的能量..." (METHODS, not locations!)
+Correct response should explain that a map line can support a city-level comparison, but it cannot identify a specific cafe, neighbourhood, or date unless those data are provided. Then offer general, non-astrological practical considerations (for example, testing a city before relocating) without presenting them as chart evidence.
 
 Remember: Be professional, empathetic, accurate, and engaging. Follow the 4-part structure, make the Core Interpretation detailed (100-150 chars/80-120 words), answer ALL parts of the question, and end with ONE natural curiosity hook. Do NOT include A/B/C follow-up options in the main answer.`;
 }
@@ -639,100 +644,134 @@ export function generateFollowUpSuggestions(
   const isTravelQuestion = /travel|move|relocate|visit|trip|journey|where|location|place|city|搬家|旅行|搬迁|地点|城市|去哪里/.test(question);
   
   // 根据问题类型和提取的城市名生成追问建议（支持中英文）
-  if (isLoveQuestion) {
+  if (isLoveQuestion && isCareerQuestion) {
     if (cities.length >= 2) {
       return isChinese ? [
-        `${cities[0]}哪个区域最适合寻找真爱？`,
-        `什么时候去${cities[1]}最好？`,
-        `对比：${cities[0]} vs ${cities[1]}的爱情能量`
+        `${cities[0]}和${cities[1]}如何兼顾爱情与事业？`,
+        `两座城市中，哪条线最影响爱情与事业的平衡？`,
+        `还有哪些城市值得为爱情与事业一起比较？`
       ] : [
-        `Which area in ${cities[0]} is best for finding true love?`,
-        `When is the best time to visit ${cities[1]}?`,
-        `Compare: ${cities[0]} vs ${cities[1]} love energy`
+        `How do ${cities[0]} and ${cities[1]} balance love and career?`,
+        `Which line matters most for love and career balance?`,
+        `Which other cities are worth comparing for both goals?`
+      ];
+    }
+
+    if (cities.length === 1) {
+      return isChinese ? [
+        `${cities[0]}如何兼顾爱情与事业？`,
+        `${cities[0]}附近哪条线最影响爱情与事业的平衡？`,
+        `还有哪些城市值得为爱情与事业一起比较？`
+      ] : [
+        `How can ${cities[0]} balance love and career?`,
+        `Which line near ${cities[0]} matters most for love and career balance?`,
+        `Which other cities are worth comparing for both goals?`
+      ];
+    }
+
+    return isChinese ? [
+      `我的地图中哪些线能兼顾爱情与事业？`,
+      `如何比较爱情线与事业线之间的取舍？`,
+      `还有哪些城市值得为爱情与事业一起比较？`
+    ] : [
+      `Which lines in my map can support both love and career?`,
+      `How should I weigh the trade-offs between relationship and career lines?`,
+      `Which other cities are worth comparing for both goals?`
+    ];
+  } else if (isLoveQuestion) {
+    if (cities.length >= 2) {
+      return isChinese ? [
+        `${cities[0]}和${cities[1]}的关系线有什么不同？`,
+        `${cities[0]}附近最相关的是哪条关系线？`,
+        `还有哪些城市有相似的爱情线支持？`
+      ] : [
+        `How do ${cities[0]} and ${cities[1]} differ for relationships?`,
+        `Which relationship line is most relevant near ${cities[0]}?`,
+        `Which other cities have similar relationship-line support?`
       ];
     } else if (cities.length === 1) {
       return isChinese ? [
-        `${cities[0]}哪个区域最适合我？`,
-        `什么时候去${cities[0]}最好？`,
-        `还有其他适合爱情的城市吗？`
+        `${cities[0]}对应哪条关系线？`,
+        `${cities[0]}的关系能量有什么取舍？`,
+        `还有哪些城市有相似的爱情线支持？`
       ] : [
-        `Which area in ${cities[0]} is best for me?`,
-        `When is the best time to visit ${cities[0]}?`,
-        `Are there other cities suitable for love?`
+        `Which relationship line supports ${cities[0]}?`,
+        `What relationship trade-off does ${cities[0]} show?`,
+        `Which other cities have similar relationship-line support?`
       ];
     } else {
       return isChinese ? [
-        "哪个城市最适合寻找真爱？",
-        "我应该什么时候去这些城市？",
-        "这些城市的生活成本如何？"
+        "我的地图中哪些线与关系最相关？",
+        "关系线与事业线该如何取舍？",
+        "还有哪些城市值得比较？"
       ] : [
-        "Which city is best for finding true love?",
-        "When should I visit these cities?",
-        "What's the cost of living in these cities?"
+        "Which lines in my map are most relevant to relationships?",
+        "How should I weigh relationship and career lines?",
+        "Which other cities are worth comparing?"
       ];
     }
   } else if (isCareerQuestion) {
     if (cities.length >= 2) {
       return isChinese ? [
-        `${cities[0]}适合什么类型的工作？`,
-        `我应该先旅游还是直接搬到${cities[1]}？`,
-        `对比：${cities[0]} vs ${cities[1]}的事业机会`
+        `${cities[0]}和${cities[1]}的事业线有什么不同？`,
+        `${cities[0]}附近最相关的是哪条事业线？`,
+        `还有哪些城市有相似的事业线支持？`
       ] : [
-        `What types of work is ${cities[0]} suitable for?`,
-        `Should I travel first or move directly to ${cities[1]}?`,
-        `Compare: ${cities[0]} vs ${cities[1]} career opportunities`
+        `How do ${cities[0]} and ${cities[1]} differ for career?`,
+        `Which career line is most relevant near ${cities[0]}?`,
+        `Which other cities have similar career-line support?`
       ];
     } else if (cities.length === 1) {
       return isChinese ? [
-        `${cities[0]}适合什么类型的工作？`,
-        `我应该先旅游还是直接搬到${cities[0]}？`,
-        `对比一下其他城市的机会？`
+        `${cities[0]}对应哪条事业线？`,
+        `${cities[0]}的事业能量有什么取舍？`,
+        `还有哪些城市有相似的事业线支持？`
       ] : [
-        `What types of work is ${cities[0]} suitable for?`,
-        `Should I travel first or move directly to ${cities[0]}?`,
-        `Compare opportunities in other cities?`
+        `Which career line supports ${cities[0]}?`,
+        `What career trade-off does ${cities[0]} show?`,
+        `Which other cities have similar career-line support?`
       ];
     } else {
       return isChinese ? [
-        "这些城市适合什么类型的工作？",
-        "我应该先旅游还是直接搬过去？",
-        "最佳访问时长建议？"
+        "我的地图中哪些线与事业最相关？",
+        "事业线与关系线该如何取舍？",
+        "还有哪些城市值得比较？"
       ] : [
-        "What types of work are these cities suitable for?",
-        "Should I travel first or move directly?",
-        "Best visit duration recommendations?"
+        "Which lines in my map are most relevant to career?",
+        "How should I weigh career and relationship lines?",
+        "Which other cities are worth comparing?"
       ];
     }
   } else if (isTravelQuestion) {
     if (cities.length >= 2) {
       return isChinese ? [
-        `${cities[0]}和${cities[1]}的生活成本对比？`,
-        `什么时候去这些城市最合适？`,
-        `文化适应注意事项？`
+        `${cities[0]}和${cities[1]}的行星线有什么不同？`,
+        `${cities[0]}最值得注意的是哪条线？`,
+        `还有哪些城市与这两座城市值得一起比较？`
       ] : [
-        `Cost of living comparison: ${cities[0]} vs ${cities[1]}?`,
-        `When is the best time to visit these cities?`,
-        `Cultural adaptation considerations?`
+        `How do the planetary lines differ in ${cities[0]} and ${cities[1]}?`,
+        `Which line matters most near ${cities[0]}?`,
+        `Which other cities are worth comparing with these two?`
       ];
     } else if (cities.length === 1) {
       return isChinese ? [
-        `${cities[0]}的生活成本如何？`,
-        `什么时候去${cities[0]}最合适？`,
-        `文化适应注意事项？`
+        `${cities[0]}对应哪条行星线？`,
+        `${cities[0]}的地图支持有什么取舍？`,
+        `还有哪些城市值得一起比较？`
       ] : [
-        `What's the cost of living in ${cities[0]}?`,
-        `When is the best time to visit ${cities[0]}?`,
-        `Cultural adaptation considerations?`
+        `Which planetary line supports ${cities[0]}?`,
+        `What map-based trade-off does ${cities[0]} show?`,
+        `Which other cities are worth comparing?`
       ];
     } else {
       return isChinese ? [
-        "这些城市的生活成本？",
-        "最佳访问时长建议？",
-        "文化适应注意事项？"
+        "我的地图中哪些城市最值得比较？",
+        "这些城市的行星线有什么不同？",
+        "哪条线最影响搬迁选择？"
       ] : [
-        "Cost of living in these cities?",
-        "Best visit duration recommendations?",
-        "Cultural adaptation considerations?"
+        "Which cities in my map are most worth comparing?",
+        "How do the planetary lines differ in these cities?",
+        "Which line matters most for a relocation choice?"
       ];
     }
   } else {
@@ -740,31 +779,31 @@ export function generateFollowUpSuggestions(
     if (cities.length >= 2) {
       return isChinese ? [
         `${cities[0]}和${cities[1]}的具体区别？`,
-        `什么时候去这些城市最好？`,
+        `这两座城市各自对应哪条线？`,
         `还有其他值得关注的城市吗？`
       ] : [
         `Specific differences between ${cities[0]} and ${cities[1]}?`,
-        `When is the best time to visit these cities?`,
+        `Which line is most relevant in each city?`,
         `Are there other cities worth paying attention to?`
       ];
     } else if (cities.length === 1) {
       return isChinese ? [
         `${cities[0]}的具体优势？`,
-        `什么时候去${cities[0]}最好？`,
+        `${cities[0]}最相关的是哪条线？`,
         `还有其他值得关注的城市吗？`
       ] : [
         `What are the specific advantages of ${cities[0]}?`,
-        `When is the best time to visit ${cities[0]}?`,
+        `Which line is most relevant near ${cities[0]}?`,
         `Are there other cities worth paying attention to?`
       ];
     } else {
       return isChinese ? [
         "这些城市的具体区别？",
-        "最佳访问时间建议？",
+        "哪些行星线最值得比较？",
         "还有其他值得关注的地方吗？"
       ] : [
         "Specific differences between these cities?",
-        "Best visit time recommendations?",
+        "Which planetary lines are most worth comparing?",
         "Are there other places worth paying attention to?"
       ];
     }

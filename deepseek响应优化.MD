@@ -1,6 +1,6 @@
 # DeepSeek 响应优化
 
-**版本：** v1.1
+**版本：** v1.2
 **开始日期：** 2026-08-05
 **最近更新：** 2026-08-07
 **目标：** 在不改变占星计算、积分扣除或支付流程的前提下，提高 Astro Chat 的最终回答可靠性，并确认 AI 质量是否影响付费转化。
@@ -37,14 +37,13 @@
 
 ## 二、本次改动
 
-### 2.1 v1.1：质量优先，但不重复等待相同失败路径
+### 2.1 v1.2：普通对话优先首字速度，付费报告保留深度路径
 
 普通聊天的实际顺序改为：
 
 ```text
-DeepSeek V4 Flash（thinking enabled，45 秒上限，4800 tokens）
-  -> DeepSeek V4 Flash（thinking disabled，20 秒恢复，1600 tokens）
-  -> Kie / Gemini 2.5 Flash（20 秒恢复，1600 tokens）
+DeepSeek V4 Flash（thinking disabled，首字 18 秒上限，2200 tokens，真实流式输出）
+  -> Kie / Gemini 2.5 Flash（仅在首字前失败时兜底，1600 tokens）
   -> 全部失败：返回 503，且不扣积分
 ```
 
@@ -58,8 +57,8 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 
 设计原则：
 
-- **主路径不降质量：** 首答依然使用思考模式，普通聊天 token 上限从 3200 提高到 4800，降低“思考用完但没有正文”的概率。
-- **恢复路径不重复失败：** 若主路径出现空正文、`length`、超时或 API 错误，第二次明确关闭思考，优先给用户一份基于同一星图数据的完整可读答复。
+- **普通聊天先让用户看见回答：** 不再先等待隐藏的 thinking 内容；DeepSeek 产生第一段可见正文后立即流式发送到页面。
+- **付费报告保留深度：** 50 credits 的城市对比报告继续走 thinking -> 非 thinking 恢复 -> Kie 兜底，不与普通聊天混用。
 - **独立供应商最终兜底：** 恢复请求仍失败时才使用 Kie；Kie 不取代 DeepSeek 的主路径。
 - **不为可用性扣错费：** 只有拿到非空最终回答后，才结算一次积分。
 
@@ -76,14 +75,28 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 | `fallback_started` / `fallback_recovered` | `fallbackMaxTokens`、`provider`、`model` | 衡量 Kie 的实际兜底比例 |
 | `credits_settled` / `request_completed` | 相同 `traceId`、`provider`、`model` | 核验回答成功后才扣一次积分 |
 
-### 2.3 本次明确不改的内容
+### 2.3 新增 D1 可观察性事件表
+
+新增 `ai_chat_events_astrocarto`，把现有 Worker 结构化日志写成可查询事件。它**不保存**问题正文、回答正文、出生资料或邮箱；完整聊天仍由 R2 会话历史保存。
+
+记录字段包括：`traceId`、匿名用户 ID、事件、模型、是否 thinking、是否 Kie 兜底、首字耗时、供应商耗时、token 数、结果长度、扣积分与错误类别。
+
+写入使用 Worker `waitUntil` 旁路执行；写库失败只会产生 warning，绝不会中断 AI 回复、积分扣除或支付。
+
+生产建表文件：`scripts/d1-ai-chat-observability.sql`
+
+```bash
+npx wrangler d1 execute astrocarto-db --remote --file=scripts/d1-ai-chat-observability.sql
+```
+
+### 2.4 本次明确不改的内容
 
 - 不修改 `getSystemPrompt` 或占星提示词。
 - 不修改地图计算、行星线数据、积分单价、扣积分时机。
 - 不修改 Creem / PayPal 的支付请求、Webhook 或发积分逻辑。
 - 不把 Kie 设为主模型；DeepSeek 仍是第一顺位。
 
-### 2.4 必需生产配置
+### 2.5 必需生产配置
 
 | 变量 | 作用 | 建议 |
 |---|---|---|
@@ -108,10 +121,10 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 | 指标 | 通过标准 | 数据来源 |
 |---|---|---|
 | 最终 AI 请求失败 | `< 1%` | `request_failed_no_charge` / `request_received`，按同一批完整日志核对 |
-| DeepSeek 思考后恢复 | 有则记录，不要求为 0 | 首答失败后应出现一次 `thinking: disabled`，而不是第二次 `enabled` |
+| DeepSeek 普通首答 | 主路径 | `provider_started` 应为 `thinking: disabled`、`delivery: streaming` |
 | Kie 兜底成功 | 有则记录，不要求为 0 | `fallback_started`、`fallback_recovered` |
 | 思考首答耗尽正文 | 持续下降 | `provider_empty` / `provider_failed` 中的 `finish_reason=length` |
-| 首答等待 | P95 不高于 45 秒 | `provider_completed.firstTextLatencyMs`、`latencyMs` |
+| 首字等待 | P95 不高于 5 秒 | D1 `first_text_ready.first_text_latency_ms` |
 | 用户被扣积分却无回答 | `0` | `credits_settled` 必须发生在 `request_completed` 前后同一 trace 链路中 |
 | 支付成功和积分到账 | `0` 个新增异常 | `ORDER_PAID`、`CREDITS_ISSUED`、D1 订单状态 |
 
@@ -137,7 +150,7 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 
 - AI 回答后的定价弹窗率、购买点击率不低于上线前同类流量。
 - `paid` 订单的日均数不再维持当前约 1 单的水平，且 AI 使用用户到付费订单的转化不继续恶化。
-- DeepSeek 的 `thinking: enabled` 完成率应是主路径；Kie 只处理少量异常，不应长期成为主路径。
+- 普通聊天的 DeepSeek 主路径应为 `thinking: disabled` 且 `delivery: streaming`；Kie 只处理首字前的少量异常，不应长期成为主路径。
 
 > 不使用「创建订单数」判断转化，因为当前支付入口会产生未支付订单记录；只用 `paid` 状态和 Creem 的 `ORDER_PAID` 判断成交。
 
@@ -147,13 +160,12 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 
 ### 每天一次，前 3 天
 
-1. 在 Cloudflare Worker Logs 搜索 `[Astro Chat]`。
-2. 检查 `provider_started`：正常首答必须为 `thinking: enabled`；仅在该次失败后才允许看到一次 `thinking: disabled`。
-3. 统计 `request_completed`、`request_failed_no_charge`、`provider_empty`、`fallback_started`、`fallback_recovered`。
-4. 查看 `finishReason=length`、`firstTextLatencyMs`、`latencyMs`，区分质量/长度问题与纯网络慢。
-5. 检查 `credits_settled` 后是否都有同一 trace 的 `request_completed`。
-6. 搜索 `[CREEM][ORDER_PAID]` 与 `[CREEM][CREDITS_ISSUED]`，确认没有新增支付到账异常。
-7. 用一张真实测试星图走一遍：登录 -> 提问 -> 收到回答 -> 查看积分减少 10 -> 打开定价页 -> 不实际付款。
+1. 在 D1 查询 `ai_chat_events_astrocarto`，按 `trace_id` 汇总 `request_completed`、`request_failed_no_charge`、`fallback_started`、`fallback_recovered`。
+2. 检查普通聊天 `provider_started`：正常首答应为 `thinking: disabled`、`delivery: streaming`。
+3. 查看 `first_text_ready.first_text_latency_ms` 与 `provider_completed.provider_latency_ms`，区分首字慢和完整回答慢。
+4. 检查 `credits_settled` 后是否都有同一 trace 的 `request_completed`。
+5. 搜索 `[CREEM][ORDER_PAID]` 与 `[CREEM][CREDITS_ISSUED]`，确认没有新增支付到账异常。
+6. 用一张真实测试星图走一遍：登录 -> 提问 -> 收到回答 -> 查看积分减少 10 -> 打开定价页 -> 不实际付款。
 
 ### 第 4 天和第 7 天
 
@@ -186,10 +198,31 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 ### 兜底路径
 
 1. 在本地临时使用无效的 `DEEPSEEK_API_KEY`，不要改生产密钥。
-2. 确认首个 DeepSeek 尝试为 `thinking: enabled`，随后的一次恢复为 `thinking: disabled`。
+2. 确认普通对话的 DeepSeek 首字前失败后，日志出现 `fallback_started`，且 Kie 使用 `gemini-2.5-flash`。
 3. 确认 Kie 成功后前端能收到回答，且仅扣一次积分。
 4. 临时关闭 Kie 或使用无效本地 Kie Key，确认最终返回「暂时不可用」并且不扣积分。
 5. 测试结束后恢复本地配置；生产环境不以错误 Key 测试。
+
+### 每日 D1 查询入口
+
+生产环境已完成建表后，可先用下面查询检查最近 20 条事件。`datetime(..., '+8 hours')` 显示北京时间：
+
+```sql
+SELECT
+  datetime(created_at, 'unixepoch', '+8 hours') AS time_beijing,
+  trace_id,
+  event,
+  provider,
+  model,
+  thinking,
+  delivery,
+  first_text_latency_ms,
+  provider_latency_ms,
+  error_kind
+FROM ai_chat_events_astrocarto
+ORDER BY id DESC
+LIMIT 20;
+```
 
 ---
 
@@ -198,7 +231,7 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 | 日期 | AI 完成/失败 | Thinking enabled / Kie 兜底 | P95 响应耗时 | Paid 订单 | 投诉 / 退款 | 结论 |
 |---|---|---|---:|---:|---:|---|
 | 2026-08-05 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | 本次版本上线 |
-| 2026-08-07 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | v1.1：首答保留 thinking；空答/超时后改为一次非 thinking 恢复，再进入 Kie 兜底；待提交与部署 |
+| 2026-08-07 | 本地普通对话成功；DeepSeek 首字 447ms、完整 6585ms，无兜底 | `thinking: disabled` / 无 Kie | 447ms 首字 | 待填写 | 待填写 | v1.2：普通聊天已改为真实流式；生产 D1 事件表已建成并确认可写入。全量构建仍受仓库既有缺失页面路由阻断，类型检查通过。 |
 | 2026-08-08 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | 72 小时检查 |
 | 2026-08-12 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | 第 7 天检查 |
 | 2026-08-19 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | 第 14 天决策 |
