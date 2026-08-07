@@ -19,13 +19,19 @@ const ASTRO_CHAT_MODEL =
   process.env.ASTRO_CHAT_MODEL ||
   "deepseek-v4-flash";
 const CITY_COMPARISON_REPORT_CREDIT_COST = 50;
-const AI_ATTEMPT_TIMEOUT_MS = 75_000;
-const STANDARD_CHAT_MAX_TOKENS = 3_200;
+// A standard answer should have enough room for reasoning and a visible reply.
+// When thinking consumes the entire budget, retry once without thinking instead
+// of making the visitor wait through a second identical attempt.
+const THINKING_ATTEMPT_TIMEOUT_MS = 45_000;
+const RECOVERY_ATTEMPT_TIMEOUT_MS = 20_000;
+const STANDARD_CHAT_MAX_TOKENS = 4_800;
+const STANDARD_CHAT_RECOVERY_MAX_TOKENS = 1_600;
 const CITY_COMPARISON_REPORT_MAX_TOKENS = 5_200;
-// Standard chat is the product's first impression. Do not silently trade
-// reasoning quality for availability when a thinking response is empty.
-// A second thinking attempt is allowed before the independent Kie fallback.
-const DEEPSEEK_THINKING_ATTEMPT_ORDER = ["enabled", "enabled"] as const;
+const CITY_COMPARISON_REPORT_RECOVERY_MAX_TOKENS = 2_400;
+// The first answer keeps DeepSeek thinking enabled for quality. A failed or
+// empty thinking attempt recovers with a concise non-thinking answer before
+// moving to the independent Kie provider.
+const DEEPSEEK_THINKING_ATTEMPT_ORDER = ["enabled", "disabled"] as const;
 type DeepSeekThinkingMode = (typeof DEEPSEEK_THINKING_ATTEMPT_ORDER)[number];
 
 function createDeepSeekForThinking(thinkingMode: DeepSeekThinkingMode) {
@@ -54,6 +60,7 @@ function createDeepSeekForThinking(thinkingMode: DeepSeekThinkingMode) {
 }
 
 const deepseekWithThinking = createDeepSeekForThinking("enabled");
+const deepseekWithoutThinking = createDeepSeekForThinking("disabled");
 
 type ChatMessage = {
   role: "system" | "user" | "assistant";
@@ -103,6 +110,7 @@ function withTimeoutSignal(timeoutMs: number) {
 async function generateWithDeepSeek(
   messages: ChatMessage[],
   maxTokens: number,
+  timeoutMs: number,
   trace: ChatTrace,
   attempt: number,
   thinkingMode: DeepSeekThinkingMode,
@@ -111,7 +119,7 @@ async function generateWithDeepSeek(
     throw new Error("DEEPSEEK_API_KEY not configured");
   }
 
-  const timeout = withTimeoutSignal(AI_ATTEMPT_TIMEOUT_MS);
+  const timeout = withTimeoutSignal(timeoutMs);
   const startedAt = Date.now();
   let firstTextAt: number | null = null;
   let reasoningCharacters = 0;
@@ -124,12 +132,16 @@ async function generateWithDeepSeek(
       attempt,
       thinking: thinkingMode,
       maxTokens,
+      timeoutMs,
     });
 
     const result = streamText({
-      model: deepseekWithThinking(ASTRO_CHAT_MODEL),
+      model: (thinkingMode === "enabled" ? deepseekWithThinking : deepseekWithoutThinking)(ASTRO_CHAT_MODEL),
       messages,
       maxTokens,
+      // DeepSeek ignores temperature in thinking mode. Set it only for the
+      // concise recovery request where the option is supported.
+      ...(thinkingMode === "disabled" ? { temperature: 0.5 } : {}),
       maxRetries: 0,
       abortSignal: timeout.signal,
     });
@@ -162,6 +174,7 @@ async function generateWithDeepSeek(
       providerResponseId: response.id,
       attempt,
       thinking: thinkingMode,
+      timeoutMs,
       finishReason,
       latencyMs: Date.now() - startedAt,
       firstTextLatencyMs: firstTextAt === null ? null : firstTextAt - startedAt,
@@ -184,6 +197,7 @@ async function generateWithDeepSeek(
       model: ASTRO_CHAT_MODEL,
       attempt,
       thinking: thinkingMode,
+      timeoutMs,
       latencyMs: Date.now() - startedAt,
       error: getErrorSummary(error),
     });
@@ -235,7 +249,10 @@ async function generateWithKie(messages: ChatMessage[], maxTokens: number, trace
     const endpoint =
       process.env.KIE_AI_FALLBACK_URL ||
       `https://api.kie.ai/${model}/v1/chat/completions`;
-    const timeout = withTimeoutSignal(AI_ATTEMPT_TIMEOUT_MS);
+    const timeoutMs = maxTokens === CITY_COMPARISON_REPORT_RECOVERY_MAX_TOKENS
+      ? THINKING_ATTEMPT_TIMEOUT_MS
+      : RECOVERY_ATTEMPT_TIMEOUT_MS;
+    const timeout = withTimeoutSignal(timeoutMs);
     const startedAt = Date.now();
 
     try {
@@ -243,6 +260,7 @@ async function generateWithKie(messages: ChatMessage[], maxTokens: number, trace
         provider: "kie",
         model,
         maxTokens,
+        timeoutMs,
       });
 
       const response = await fetch(endpoint, {
@@ -305,6 +323,7 @@ async function generateWithKie(messages: ChatMessage[], maxTokens: number, trace
       logChatEvent(trace, "provider_completed", {
         provider: "kie",
         model,
+        timeoutMs,
         latencyMs: Date.now() - startedAt,
         textCharacters: text.length,
       });
@@ -315,6 +334,7 @@ async function generateWithKie(messages: ChatMessage[], maxTokens: number, trace
       logChatEvent(trace, "provider_failed", {
         provider: "kie",
         model,
+        timeoutMs,
         latencyMs: Date.now() - startedAt,
         error: getErrorSummary(error),
       });
@@ -332,11 +352,28 @@ async function generateReliableAnswer(
   trace: ChatTrace,
 ): Promise<GeneratedAnswer> {
   let lastError: unknown;
+  const isCityComparisonReport = maxTokens === CITY_COMPARISON_REPORT_MAX_TOKENS;
 
   for (const [index, thinkingMode] of DEEPSEEK_THINKING_ATTEMPT_ORDER.entries()) {
     const attempt = index + 1;
+    const isRecoveryAttempt = thinkingMode === "disabled";
+    const attemptMaxTokens = isRecoveryAttempt
+      ? (isCityComparisonReport
+        ? CITY_COMPARISON_REPORT_RECOVERY_MAX_TOKENS
+        : STANDARD_CHAT_RECOVERY_MAX_TOKENS)
+      : maxTokens;
+    const attemptTimeoutMs = isRecoveryAttempt
+      ? RECOVERY_ATTEMPT_TIMEOUT_MS
+      : THINKING_ATTEMPT_TIMEOUT_MS;
     try {
-      const text = await generateWithDeepSeek(messages, maxTokens, trace, attempt, thinkingMode);
+      const text = await generateWithDeepSeek(
+        messages,
+        attemptMaxTokens,
+        attemptTimeoutMs,
+        trace,
+        attempt,
+        thinkingMode,
+      );
       return { text, provider: "deepseek", model: ASTRO_CHAT_MODEL };
     } catch (error) {
       lastError = error;
@@ -347,6 +384,11 @@ async function generateReliableAnswer(
           maxAttempts: DEEPSEEK_THINKING_ATTEMPT_ORDER.length,
           previousThinking: thinkingMode,
           nextThinking: DEEPSEEK_THINKING_ATTEMPT_ORDER[attempt],
+          nextMaxTokens: DEEPSEEK_THINKING_ATTEMPT_ORDER[attempt] === "disabled"
+            ? (isCityComparisonReport
+              ? CITY_COMPARISON_REPORT_RECOVERY_MAX_TOKENS
+              : STANDARD_CHAT_RECOVERY_MAX_TOKENS)
+            : maxTokens,
           error: getErrorSummary(error),
         });
       }
@@ -357,8 +399,14 @@ async function generateReliableAnswer(
     logChatEvent(trace, "fallback_started", {
       primaryProvider: "deepseek",
       fallbackProvider: "kie",
+      fallbackMaxTokens: isCityComparisonReport
+        ? CITY_COMPARISON_REPORT_RECOVERY_MAX_TOKENS
+        : STANDARD_CHAT_RECOVERY_MAX_TOKENS,
     });
-    const fallback = await generateWithKie(messages, maxTokens, trace);
+    const fallbackMaxTokens = isCityComparisonReport
+      ? CITY_COMPARISON_REPORT_RECOVERY_MAX_TOKENS
+      : STANDARD_CHAT_RECOVERY_MAX_TOKENS;
+    const fallback = await generateWithKie(messages, fallbackMaxTokens, trace);
     if (fallback) {
       logChatEvent(trace, "fallback_recovered", {
         provider: "kie",
