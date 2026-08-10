@@ -369,6 +369,9 @@ async function startStandardDeepSeekStream(
         const normalized = normalizeModelText(part.textDelta, { trim: false });
         if (normalized.text.trim()) {
           const firstTextAt = Date.now();
+          // This timer protects the wait for the first visible token only.
+          // Keeping it active would abort an otherwise healthy stream at 18s.
+          timeout.dispose();
           logChatEvent(trace, "first_text_ready", {
             provider: "deepseek",
             model: ASTRO_CHAT_MODEL,

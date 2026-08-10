@@ -1,8 +1,8 @@
 # DeepSeek 响应优化
 
-**版本：** v1.2
+**版本：** v1.3
 **开始日期：** 2026-08-05
-**最近更新：** 2026-08-07
+**最近更新：** 2026-08-10
 **目标：** 在不改变占星计算、积分扣除或支付流程的前提下，提高 Astro Chat 的最终回答可靠性，并确认 AI 质量是否影响付费转化。
 
 > **阅读说明：** 前两部分是决策和观察口径；后面的「执行流程」用于每次上线后照着检查，避免凭感觉判断。
@@ -62,7 +62,26 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 - **独立供应商最终兜底：** 恢复请求仍失败时才使用 Kie；Kie 不取代 DeepSeek 的主路径。
 - **不为可用性扣错费：** 只有拿到非空最终回答后，才结算一次积分。
 
-### 2.2 本次新增日志口径
+### 2.2 v1.3：首字超时只保护首字前，不中断已开始的流式回答
+
+2026-08-10 对生产 D1 事件链路复核发现：有 6 次 DeepSeek 普通对话已成功产生首字，但都在约 18 秒时以 `stream_failed_no_charge` 结束。原因是首字 18 秒的 `AbortController` 在收到首个可见文本后仍保持运行，导致一段健康但较长的流式回答被同一个计时器中断。
+
+本次修复仅调整超时清理时机：
+
+```text
+首字前：保留 18 秒超时和 Kie 兜底
+收到第一段可见文本：立即清除首字计时器
+首字后：允许当前流正常完成；仍保留客户端取消、供应商异常和“不扣未完成回答积分”的原有处理
+```
+
+明确不变的行为：
+
+- DeepSeek 在 18 秒内没有首字时，仍按原逻辑进入 Kie 兜底。
+- 已开始输出但随后失败的回答，仍不会结算积分。
+- 不修改系统提示词、回答内容、模型顺序、支付、地图计算或积分价格。
+- `dispose()` 支持重复调用，因此流结束、客户端断开和异常清理仍可安全执行。
+
+### 2.3 本次新增日志口径
 
 每个 `traceId` 会记录以下关键字段：
 
@@ -75,7 +94,7 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 | `fallback_started` / `fallback_recovered` | `fallbackMaxTokens`、`provider`、`model` | 衡量 Kie 的实际兜底比例 |
 | `credits_settled` / `request_completed` | 相同 `traceId`、`provider`、`model` | 核验回答成功后才扣一次积分 |
 
-### 2.3 新增 D1 可观察性事件表
+### 2.4 新增 D1 可观察性事件表
 
 新增 `ai_chat_events_astrocarto`，把现有 Worker 结构化日志写成可查询事件。它**不保存**问题正文、回答正文、出生资料或邮箱；完整聊天仍由 R2 会话历史保存。
 
@@ -89,14 +108,14 @@ DeepSeek V4 Flash（thinking enabled，45 秒上限，5200 tokens）
 npx wrangler d1 execute astrocarto-db --remote --file=scripts/d1-ai-chat-observability.sql
 ```
 
-### 2.4 本次明确不改的内容
+### 2.5 本次明确不改的内容
 
 - 不修改 `getSystemPrompt` 或占星提示词。
 - 不修改地图计算、行星线数据、积分单价、扣积分时机。
 - 不修改 Creem / PayPal 的支付请求、Webhook 或发积分逻辑。
 - 不把 Kie 设为主模型；DeepSeek 仍是第一顺位。
 
-### 2.5 必需生产配置
+### 2.6 必需生产配置
 
 | 变量 | 作用 | 建议 |
 |---|---|---|
@@ -114,7 +133,7 @@ npx wrangler d1 execute astrocarto-db --remote --file=scripts/d1-ai-chat-observa
 
 ### 第一段：技术稳定性，72 小时
 
-上线后连续观察 **3 天**。每天检查 Worker 日志和 D1 的 `paid` 订单。
+v1.3 发布后重新开始连续观察 **3 天**。每天检查 Worker 日志和 D1 的 `paid` 订单；此前已开始输出后被 18 秒中断的数据不计入本轮通过结果。
 
 必须满足：
 
@@ -125,6 +144,7 @@ npx wrangler d1 execute astrocarto-db --remote --file=scripts/d1-ai-chat-observa
 | Kie 兜底成功 | 有则记录，不要求为 0 | `fallback_started`、`fallback_recovered` |
 | 思考首答耗尽正文 | 持续下降 | `provider_empty` / `provider_failed` 中的 `finish_reason=length` |
 | 首字等待 | P95 不高于 5 秒 | D1 `first_text_ready.first_text_latency_ms` |
+| 首字后的流中断 | `stream_failed_no_charge` 不再集中在约 18 秒 | 同一 trace 的 `first_text_ready`、`stream_failed_no_charge`、耗时 |
 | 用户被扣积分却无回答 | `0` | `credits_settled` 必须发生在 `request_completed` 前后同一 trace 链路中 |
 | 支付成功和积分到账 | `0` 个新增异常 | `ORDER_PAID`、`CREDITS_ISSUED`、D1 订单状态 |
 
@@ -163,9 +183,10 @@ npx wrangler d1 execute astrocarto-db --remote --file=scripts/d1-ai-chat-observa
 1. 在 D1 查询 `ai_chat_events_astrocarto`，按 `trace_id` 汇总 `request_completed`、`request_failed_no_charge`、`fallback_started`、`fallback_recovered`。
 2. 检查普通聊天 `provider_started`：正常首答应为 `thinking: disabled`、`delivery: streaming`。
 3. 查看 `first_text_ready.first_text_latency_ms` 与 `provider_completed.provider_latency_ms`，区分首字慢和完整回答慢。
-4. 检查 `credits_settled` 后是否都有同一 trace 的 `request_completed`。
-5. 搜索 `[CREEM][ORDER_PAID]` 与 `[CREEM][CREDITS_ISSUED]`，确认没有新增支付到账异常。
-6. 用一张真实测试星图走一遍：登录 -> 提问 -> 收到回答 -> 查看积分减少 10 -> 打开定价页 -> 不实际付款。
+4. 专门筛查：是否存在同一 trace 先有 `first_text_ready`，后出现 `stream_failed_no_charge`；若有，记录失败时间是否仍接近 18 秒。
+5. 检查 `credits_settled` 后是否都有同一 trace 的 `request_completed`。
+6. 搜索 `[CREEM][ORDER_PAID]` 与 `[CREEM][CREDITS_ISSUED]`，确认没有新增支付到账异常。
+7. 用一张真实测试星图走一遍：登录 -> 提问 -> 收到回答 -> 查看积分减少 10 -> 打开定价页 -> 不实际付款。
 
 ### 第 4 天和第 7 天
 
@@ -231,7 +252,8 @@ LIMIT 20;
 | 日期 | AI 完成/失败 | Thinking enabled / Kie 兜底 | P95 响应耗时 | Paid 订单 | 投诉 / 退款 | 结论 |
 |---|---|---|---:|---:|---:|---|
 | 2026-08-05 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | 本次版本上线 |
-| 2026-08-07 | 本地普通对话成功；DeepSeek 首字 447ms、完整 6585ms，无兜底 | `thinking: disabled` / 无 Kie | 447ms 首字 | 待填写 | 待填写 | v1.2：普通聊天已改为真实流式；生产 D1 事件表已建成并确认可写入。全量构建仍受仓库既有缺失页面路由阻断，类型检查通过。 |
+| 2026-08-07 | 本地普通对话成功；DeepSeek 首字 447ms、完整 6585ms，无兜底 | `thinking: disabled` / 无 Kie | 447ms 首字 | 待填写 | 待填写 | v1.2：普通聊天已改为真实流式；生产 D1 事件表已建成并确认可写入。类型检查和生产构建均通过。 |
+| 2026-08-10 | 生产日志显示 331 次已发起模型请求中，325 次完成；6 次首字前失败均由 Kie 恢复；另有 6 次首字后在约 18 秒中断且未扣费 | DeepSeek 为主；6 次 Kie 恢复 | 已完成请求的平均首字约 1.0 秒 | 2 单（截至当日查询时） | 待填写 | 已定位首字计时器未在首字后清理的问题；v1.3 修复后需重新开始 72 小时稳定性观察。 |
 | 2026-08-08 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | 72 小时检查 |
 | 2026-08-12 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | 第 7 天检查 |
 | 2026-08-19 | 待填写 | 待填写 | 待填写 | 待填写 | 待填写 | 第 14 天决策 |
