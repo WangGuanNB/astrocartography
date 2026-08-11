@@ -1,0 +1,26 @@
+{
+  "key": "asteroids", "slug": "asteroid-calculator", "toolType": "asteroids",
+  "metadata": { "title": "Asteroides no mapa astral: Ceres, Pallas, Juno e Vesta", "description": "Calcule Ceres, Pallas, Juno e Vesta no seu mapa astral: signo, grau, casa de signo inteiro e movimento retrógrado a partir dos seus dados de nascimento.", "keywords": "asteroides no mapa astral, Juno no mapa astral, Ceres no mapa astral, Ceres Pallas Juno Vesta, calcular Juno no mapa astral" },
+  "hero": { "eyebrow": "Calculadora dos quatro asteroides principais", "title": "Asteroides no mapa astral: Ceres, Pallas, Juno e Vesta", "subtitle": "Use seus dados de nascimento para encontrar signo, grau, casa e retrogradação dos quatro asteroides mais usados na astrologia natal moderna." },
+  "form": { "submit": "Calcular meus quatro asteroides" }, "result": { "title": "Seus quatro asteroides no mapa astral", "cta": "Abrir o mapa e explorar seu mapa astral completo" },
+  "sections": [
+    { "title": "O que os asteroides no mapa astral mostram", "body": ["Esta ferramenta calcula Ceres, Pallas, Juno e Vesta no zodíaco tropical para o seu momento de nascimento. O resultado mostra signo, grau, casa de signo inteiro e se o corpo estava retrógrado. Esses quatro asteroides acrescentam detalhes ao mapa astral, mas não substituem Sol, Lua, ascendente ou planetas.", "O cálculo usa uma efeméride geocêntrica de longitude eclíptica. Hora e local de nascimento são usados para a casa; por isso uma hora precisa é especialmente útil para esse contexto."] },
+    { "title": "Ceres no mapa astral: cuidado e reciprocidade", "body": ["Ceres costuma ser associada a cuidado, nutrição, apego e às formas de oferecer ou receber apoio. O signo pode indicar o estilo de cuidado; a casa mostra onde esse tema aparece com mais força. Não é um veredito sobre família ou relações, mas um convite para observar conforto, recursos e apoio mútuo."] },
+    { "title": "Pallas: estratégia e percepção de padrões", "body": ["Pallas é frequentemente ligada à estratégia, inteligência criativa, percepção de padrões e solução de problemas. A posição pode ajudar a nomear como você organiza ideias ou defende uma solução. Leia Pallas junto de Mercúrio, Urano e do mapa astral inteiro, e não como uma previsão isolada."] },
+    { "title": "Juno no mapa astral: compromisso e acordos", "body": ["Juno é usada para explorar compromisso, parceria de longo prazo, equilíbrio e acordos em relações próximas. Ela não identifica uma pessoa destinada nem promete casamento. A leitura é mais útil ao lado de Vênus, Lua, sétima casa e experiência vivida."] },
+    { "title": "Vesta: dedicação, foco e limites", "body": ["Vesta costuma se relacionar a dedicação, concentração, limites e ao trabalho que merece atenção constante. Signo e casa podem indicar onde você protege tempo ou direciona energia. Uma leitura equilibrada apoia foco significativo, sem justificar exaustão ou isolamento."] },
+    { "title": "Como usar os quatro asteroides com responsabilidade", "body": ["Comece pelo resultado e compare-o ao seu mapa completo e à sua experiência. Retrogradação é uma nuance interpretativa normal, não um problema. Para decisões de mudança, combine astrocartografia com trabalho, segurança, finanças, relações, vistos e outros fatores concretos. Astrologia oferece contexto simbólico, não certeza."] }
+  ],
+  "faqs": [
+    { "question": "Quais asteroides a calculadora inclui?", "answer": "Ceres, Pallas, Juno e Vesta, conhecidos como os quatro asteroides principais na astrologia moderna." },
+    { "question": "Preciso saber a hora exata de nascimento?", "answer": "A hora é importante para a casa de signo inteiro. O signo do asteroide costuma mudar mais lentamente, mas hora e local precisos oferecem melhor contexto." },
+    { "question": "O que significa um asteroide retrógrado?", "answer": "É o movimento aparente geocêntrico no momento do nascimento. Trata-se de uma condição astronômica normal e de uma nuance, não de algo negativo." },
+    { "question": "Este é um mapa completo de asteroides?", "answer": "Não. A ferramenta cobre os quatro principais como ponto de partida, e não todos os asteroides nomeados." },
+    { "question": "Os asteroides podem decidir onde devo morar?", "answer": "Não. Eles acrescentam contexto simbólico; compare lugares com o mapa, pesquisa prática e suas circunstâncias pessoais." }
+  ],
+  "schemaName": "Asteroides no mapa astral", "relatedLinks": [
+    { "text": "Quer ver o mapa astral completo?", "linkText": "Gerador de mapa astral", "url": "/tools/birth-chart-generator" },
+    { "text": "Está pensando em compromisso?", "linkText": "Calculadora de sinastria", "url": "/synastry-chart-calculator" },
+    { "text": "Considerando uma mudança?", "linkText": "Mapa de astrocartografia", "url": "/" }
+  ]
+}

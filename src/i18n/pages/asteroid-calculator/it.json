@@ -1,0 +1,26 @@
+{
+  "key": "asteroids", "slug": "asteroid-calculator", "toolType": "asteroids",
+  "metadata": { "title": "Asteroidi nel tema natale: Cerere, Pallade, Giunone e Vesta", "description": "Calcola Cerere, Pallade, Giunone e Vesta nel tema natale: segno, grado, casa a segni interi e moto retrogrado dai tuoi dati di nascita.", "keywords": "asteroidi nel tema natale, Cerere nel tema natale, Giunone nel tema natale, Pallade nel tema natale, Vesta nel tema natale" },
+  "hero": { "eyebrow": "Calcolatore dei quattro asteroidi principali", "title": "Asteroidi nel tema natale: Cerere, Pallade, Giunone e Vesta", "subtitle": "Inserisci i tuoi dati di nascita per vedere segno, grado, casa e retrogradazione dei quattro asteroidi più usati nell'astrologia natale moderna." },
+  "form": { "submit": "Calcola i miei quattro asteroidi" }, "result": { "title": "I tuoi quattro asteroidi nel tema natale", "cta": "Apri la mappa ed esplora il tema natale completo" },
+  "sections": [
+    { "title": "Cosa mostrano gli asteroidi nel tema natale", "body": ["Questo strumento calcola Cerere, Pallade, Giunone e Vesta nello zodiaco tropicale per il momento della tua nascita. Mostra segno, grado, casa a segni interi e retrogradazione. Questi quattro asteroidi aggiungono sfumature al tema natale, ma non sostituiscono Sole, Luna, ascendente o pianeti.", "Il calcolo usa un'efemeride geocentrica di longitudine eclittica. L'ora e il luogo di nascita servono per la casa, quindi un orario preciso è particolarmente utile per quel contesto."] },
+    { "title": "Cerere nel tema natale: cura e reciprocità", "body": ["Cerere viene spesso letta attraverso cura, nutrimento, attaccamento e il modo in cui si offre o si riceve sostegno. Il segno può descrivere lo stile della cura; la casa indica dove il tema è più evidente. Non è un verdetto sulla famiglia o sulle relazioni, ma uno spunto per osservare bisogni, risorse e reciprocità."] },
+    { "title": "Pallade: strategia e riconoscimento dei modelli", "body": ["Pallade è spesso associata a strategia, intelligenza creativa, riconoscimento di modelli e risoluzione dei problemi. La posizione può aiutare a dare un nome al modo in cui organizzi idee o sostieni una soluzione. Leggila insieme a Mercurio, Urano e all'intero tema natale."] },
+    { "title": "Giunone nel tema natale: impegno e accordi", "body": ["Giunone è usata per esplorare impegno, partnership duratura, equità e accordi nei legami stretti. Non identifica un partner predestinato né promette matrimonio. È più utile quando viene letta insieme a Venere, Luna, settima casa e esperienza concreta."] },
+    { "title": "Vesta: devozione, concentrazione e confini", "body": ["Vesta è collegata a devozione, concentrazione, confini e al lavoro che merita attenzione costante. Segno e casa possono suggerire dove proteggi il tempo o dirigi energia. Una lettura equilibrata sostiene un focus significativo, senza giustificare esaurimento o isolamento."] },
+    { "title": "Come usare i quattro asteroidi con responsabilità", "body": ["Parti dal risultato e confrontalo con il tuo tema completo e la tua esperienza. La retrogradazione è una normale sfumatura interpretativa, non un problema. Per decidere un trasferimento, unisci l'astrocartografia a lavoro, sicurezza, finanze, relazioni, visti e altri fattori reali. L'astrologia offre contesto simbolico, non certezze."] }
+  ],
+  "faqs": [
+    { "question": "Quali asteroidi include il calcolatore?", "answer": "Cerere, Pallade, Giunone e Vesta, spesso chiamati i quattro asteroidi principali nell'astrologia moderna." },
+    { "question": "Serve un'ora di nascita esatta?", "answer": "L'ora è importante per la casa a segni interi. Il segno dell'asteroide cambia in genere più lentamente, ma ora e luogo precisi danno un contesto migliore." },
+    { "question": "Cosa significa asteroide retrogrado?", "answer": "Descrive il moto apparente geocentrico al momento della nascita. È una condizione astronomica normale e una sfumatura, non un segnale negativo." },
+    { "question": "È un tema completo degli asteroidi?", "answer": "No. Lo strumento copre i quattro principali come punto di partenza pratico, non tutti gli asteroidi denominati." },
+    { "question": "Gli asteroidi possono scegliere dove dovrei vivere?", "answer": "No. Aggiungono contesto simbolico; confronta i luoghi con la mappa, ricerca pratica e circostanze personali." }
+  ],
+  "schemaName": "Asteroidi nel tema natale", "relatedLinks": [
+    { "text": "Vuoi vedere il tema natale completo?", "linkText": "Generatore del tema natale", "url": "/tools/birth-chart-generator" },
+    { "text": "Stai valutando una relazione importante?", "linkText": "Calcolatore di sinastria", "url": "/synastry-chart-calculator" },
+    { "text": "Stai pensando a un trasferimento?", "linkText": "Mappa di astrocartografia", "url": "/" }
+  ]
+}

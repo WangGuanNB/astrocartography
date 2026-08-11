@@ -77,6 +77,13 @@
               "url": "/chiron-placement-calculator",
               "target": "_self",
               "icon": "RiFirstAidKitLine"
+            },
+            {
+              "title": "Asteroiden im Geburtshoroskop",
+              "description": "Ceres, Pallas, Juno und Vesta berechnen",
+              "url": "/asteroid-calculator",
+              "target": "_self",
+              "icon": "RiMeteorLine"
             }
           ]
         },

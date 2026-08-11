@@ -12,6 +12,48 @@
   </url>
   
   <url>
+    <loc>https://astrocarto.org/asteroid-calculator/</loc>
+    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/zh/asteroid-calculator/</loc>
+    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/es/asteroid-calculator/</loc>
+    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/pt/asteroid-calculator/</loc>
+    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/de/asteroid-calculator/</loc>
+    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/it/asteroid-calculator/</loc>
+    <lastmod>2026-08-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://astrocarto.org/es/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>

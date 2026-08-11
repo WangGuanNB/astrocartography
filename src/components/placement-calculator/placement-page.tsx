@@ -19,6 +19,34 @@ const FEATURE_ICONS = [
   "RiArrowRightLine",
 ];
 
+const ASTEROID_INTRO_IMAGES = [
+  {
+    src: "/imgs/features/asteroid-calculator-care-and-context.webp",
+    alt: "A small asteroid in a calm orbital field with a subtle symbol of nourishment.",
+  },
+  {
+    src: "/imgs/features/asteroid-calculator-pallas-strategy.webp",
+    alt: "A faceted asteroid with a clear geometric constellation pattern representing strategy.",
+  },
+  {
+    src: "/imgs/features/asteroid-calculator-juno-commitment.webp",
+    alt: "Two small celestial bodies in a balanced orbit around an asteroid.",
+  },
+  {
+    src: "/imgs/features/asteroid-calculator-vesta-focus.webp",
+    alt: "A bright asteroid within a quiet halo representing sustained focus.",
+  },
+  {
+    src: "/imgs/features/asteroid-calculator-care-and-context.webp",
+    alt: "A small asteroid in a calm orbital field with a subtle symbol of nourishment.",
+  },
+];
+
+const ASTEROID_BENEFIT_IMAGE = {
+  src: "/imgs/features/asteroid-calculator-big-four-overview-v2.webp",
+  alt: "Four small asteroids following balanced orbital paths in deep space.",
+};
+
 function getH1Title(title: string): string {
   const idx = title.search(/\s[—–]\s|\s-\s/);
   const base = idx >= 0 ? title.slice(0, idx).trim() : title.trim();
@@ -52,15 +80,22 @@ function buildIntro(page: PlacementPageContent, ui: PlacementPageUiContent) {
       src: "/imgs/features/hero-web.webp",
       alt: `${page.hero.title} astrology tool`,
     },
-    items: rest.map((section, index) => ({
-      title: section.title,
-      description: toText(section),
-      icon: FEATURE_ICONS[index % FEATURE_ICONS.length],
-      image: {
-        src: `/imgs/features/${(index % 4) + 1}.webp`,
-        alt: `${section.title} explanation`,
-      },
-    })),
+    items: rest.map((section, index) => {
+      const image =
+        page.key === "asteroids"
+          ? ASTEROID_INTRO_IMAGES[index]
+          : {
+              src: `/imgs/features/${(index % 4) + 1}.webp`,
+              alt: `${section.title} explanation`,
+            };
+
+      return {
+        title: section.title,
+        description: toText(section),
+        icon: FEATURE_ICONS[index % FEATURE_ICONS.length],
+        image,
+      };
+    }),
   };
 }
 
@@ -75,10 +110,13 @@ function buildBenefit(page: PlacementPageContent, h1Title: string, ui: Placement
       title: section.title,
       description: shortText(toText(section), 230),
       icon: FEATURE_ICONS[index % FEATURE_ICONS.length],
-      image: {
-        src: "/imgs/features/hero-web.webp",
-        alt: `${section.title} visual explanation`,
-      },
+      image:
+        page.key === "asteroids"
+          ? ASTEROID_BENEFIT_IMAGE
+          : {
+              src: "/imgs/features/hero-web.webp",
+              alt: `${section.title} visual explanation`,
+            },
     })),
   };
 }

@@ -77,6 +77,13 @@
               "url": "/chiron-placement-calculator",
               "target": "_self",
               "icon": "RiFirstAidKitLine"
+            },
+            {
+              "title": "小行星星盘查询",
+              "description": "查询谷神星、智神星、婚神星与灶神星",
+              "url": "/asteroid-calculator",
+              "target": "_self",
+              "icon": "RiMeteorLine"
             }
           ]
         },

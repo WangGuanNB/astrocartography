@@ -77,6 +77,13 @@
               "url": "/chiron-placement-calculator",
               "target": "_self",
               "icon": "RiFirstAidKitLine"
+            },
+            {
+              "title": "Asteroides en la carta natal",
+              "description": "Consulta Ceres, Palas, Juno y Vesta",
+              "url": "/asteroid-calculator",
+              "target": "_self",
+              "icon": "RiMeteorLine"
             }
           ]
         },

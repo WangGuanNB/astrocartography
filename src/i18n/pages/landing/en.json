@@ -77,6 +77,13 @@
               "url": "/chiron-placement-calculator",
               "target": "_self",
               "icon": "RiFirstAidKitLine"
+            },
+            {
+              "title": "Asteroid Calculator",
+              "description": "Find your Ceres, Pallas, Juno, and Vesta placements",
+              "url": "/asteroid-calculator",
+              "target": "_self",
+              "icon": "RiMeteorLine"
             }
           ]
         },

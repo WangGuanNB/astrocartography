@@ -8,11 +8,12 @@ import {
   signIndexFromLongitude,
 } from "@/lib/natal-chart-core";
 import { getChironPlacement } from "@/lib/chiron-ephemeris";
+import { getBigFourAsteroidPlacements } from "@/lib/asteroid-ephemeris";
 
 export const revalidate = 3600;
 export const maxDuration = 30;
 
-type PlacementType = "venus" | "lunar-nodes" | "chiron";
+type PlacementType = "venus" | "lunar-nodes" | "chiron" | "asteroids";
 
 interface PlacementRequest {
   type: PlacementType;
@@ -139,6 +140,23 @@ export async function POST(request: NextRequest) {
             { label: "South Node", glyph: "☋", ...south, house: wholeSignHouse(southLon, chart.ascendant.longitude) },
           ],
           note: "This tool uses the mean lunar node for a stable natal reading. True node calculations may vary slightly.",
+        },
+      });
+    }
+
+    if (type === "asteroids") {
+      const asteroids = getBigFourAsteroidPlacements(utcTime);
+      return NextResponse.json({
+        success: true,
+        data: {
+          type,
+          birthData: { date: birthDate, time: birthTime, location: birthLocation, latitude, longitude, timezone },
+          placements: asteroids.map((asteroid) => ({
+            ...asteroid,
+            house: wholeSignHouse(asteroid.longitude, chart.ascendant.longitude),
+          })),
+          note:
+            "Ceres, Pallas, Juno, and Vesta are calculated from a static NASA/JPL Horizons geocentric ecliptic longitude ephemeris and shown with whole-sign house placement.",
         },
       });
     }

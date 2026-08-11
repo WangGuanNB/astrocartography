@@ -77,6 +77,13 @@
               "url": "/chiron-placement-calculator",
               "target": "_self",
               "icon": "RiFirstAidKitLine"
+            },
+            {
+              "title": "Asteroidi nel tema natale",
+              "description": "Scopri Cerere, Pallade, Giunone e Vesta",
+              "url": "/asteroid-calculator",
+              "target": "_self",
+              "icon": "RiMeteorLine"
             }
           ]
         },

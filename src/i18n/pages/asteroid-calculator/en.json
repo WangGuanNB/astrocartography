@@ -1,0 +1,101 @@
+{
+  "key": "asteroids",
+  "slug": "asteroid-calculator",
+  "toolType": "asteroids",
+  "metadata": {
+    "title": "Asteroid Calculator: Find Your Ceres, Pallas, Juno & Vesta",
+    "description": "Use this asteroid calculator to find your Ceres, Pallas, Juno, and Vesta signs, degrees, retrograde status, and whole-sign houses from your birth details.",
+    "keywords": "asteroid calculator, Ceres calculator, Pallas calculator, Juno calculator, Vesta calculator, asteroid sign calculator"
+  },
+  "hero": {
+    "eyebrow": "Big Four asteroid calculator",
+    "title": "Asteroid Calculator: Ceres, Pallas, Juno & Vesta",
+    "subtitle": "Find the four most-used asteroids in modern natal astrology. Enter your birth details to see each sign, degree, whole-sign house, and retrograde status in one clear result."
+  },
+  "form": {
+    "submit": "Calculate My Big Four Asteroids"
+  },
+  "result": {
+    "title": "Your Big Four Asteroid Placements",
+    "cta": "Open your map and explore your wider chart"
+  },
+  "sections": [
+    {
+      "title": "What This Asteroid Calculator Shows",
+      "body": [
+        "This asteroid calculator finds the positions of Ceres, Pallas, Juno, and Vesta for your birth moment. These four bodies are often called the Big Four asteroids in modern astrology. The result shows each asteroid's tropical sign, degree, whole-sign house, and whether it was retrograde. They add detail to a natal chart, but they do not replace the Sun, Moon, rising sign, planets, or practical judgment.",
+        "The calculation uses a static NASA/JPL Horizons geocentric ecliptic longitude ephemeris. Birth time and location are used to calculate the whole-sign house. That means an exact birth time matters most for the house context, while the sign is usually more stable across a single day."
+      ]
+    },
+    {
+      "title": "Ceres: Care, Nourishment, and Reciprocity",
+      "body": [
+        "Ceres is commonly read through caregiving, nourishment, attachment, and the ways people give and receive support. Its sign can describe the style of care that feels natural or necessary; its house can show where those themes are especially visible. A Ceres placement is not a verdict about family or relationships. It is a focused prompt for noticing patterns around comfort, resources, and mutual support."
+      ]
+    },
+    {
+      "title": "Pallas: Pattern Recognition and Strategy",
+      "body": [
+        "Pallas is often associated with strategy, creative intelligence, pattern recognition, and principled problem-solving. Its placement can be useful when you want language for how you organize ideas, notice systems, or advocate for a solution. Read Pallas alongside Mercury, Uranus, and the rest of the natal chart rather than as a standalone prediction."
+      ]
+    },
+    {
+      "title": "Juno: Commitment and Partnership Agreements",
+      "body": [
+        "Juno is frequently used in astrology to explore commitment, long-term partnership, fairness, and the agreements people need in close relationships. It does not identify a destined partner or promise marriage. Instead, it can help you ask what loyalty, equality, and reliability look like for you when read alongside Venus, the Moon, the seventh house, and lived experience."
+      ]
+    },
+    {
+      "title": "Vesta: Devotion, Focus, and Sacred Work",
+      "body": [
+        "Vesta is often connected with devotion, concentration, boundaries, and the work that deserves sustained attention. Its sign and house can offer a useful lens on where you protect time, direct energy, or feel called to dedicate yourself. Balance is important: a Vesta reading should support meaningful focus, not justify burnout or isolation."
+      ]
+    },
+    {
+      "title": "How to Use the Big Four Responsibly",
+      "body": [
+        "Start with the placement result, then compare it with your broader birth chart and personal experience. If an asteroid is retrograde, treat that as an interpretive nuance rather than a problem. For relocation questions, use your astrocartography map to explore places, but keep real-world factors such as work, safety, finances, relationships, and visas in the decision. Astrology is symbolic context, not certainty."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which asteroids does this calculator include?",
+      "answer": "This first version calculates Ceres, Pallas, Juno, and Vesta, commonly called the Big Four asteroids in modern astrology."
+    },
+    {
+      "question": "Do I need an exact birth time?",
+      "answer": "Birth time is important for the whole-sign house. The asteroid sign usually changes more slowly, but exact time and location still give the most useful chart context."
+    },
+    {
+      "question": "Why does an asteroid show as retrograde?",
+      "answer": "Retrograde describes apparent geocentric motion at your birth moment. It is a normal astronomical condition and should be treated as a nuance, not a negative result."
+    },
+    {
+      "question": "Is this a complete asteroid chart?",
+      "answer": "No. This tool intentionally covers the Big Four only. It is a practical starting point rather than a calculator for every named asteroid."
+    },
+    {
+      "question": "Can asteroid placements choose where I should live?",
+      "answer": "No. They can add symbolic context to your natal chart. Use astrocartography alongside practical research and personal circumstances when comparing locations."
+    }
+  ],
+  "schemaName": "Big Four Asteroid Calculator",
+  "relatedLinks": [
+    {
+      "text": "Want to see your wider chart?",
+      "linkText": "Birth Chart Generator",
+      "url": "/tools/birth-chart-generator"
+    },
+    {
+      "text": "Looking at long-term relationships?",
+      "linkText": "Synastry Chart Calculator",
+      "url": "/synastry-chart-calculator"
+    },
+    {
+      "text": "Considering a move?",
+      "linkText": "Astrocartography Map",
+      "url": "/"
+    }
+  ]
+}

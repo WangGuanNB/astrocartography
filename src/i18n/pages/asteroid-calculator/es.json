@@ -1,0 +1,29 @@
+{
+  "key": "asteroids",
+  "slug": "asteroid-calculator",
+  "toolType": "asteroids",
+  "metadata": { "title": "Asteroides en la carta natal: Ceres, Palas, Juno y Vesta", "description": "Calcula Ceres, Palas, Juno y Vesta en tu carta natal: signo, grado, casa de signo completo y movimiento retrógrado con tus datos de nacimiento.", "keywords": "asteroides en la carta natal, calculadora de Juno, Juno carta natal, calculadora de Ceres, Ceres carta natal, Palas, Vesta" },
+  "hero": { "eyebrow": "Calculadora de los cuatro asteroides principales", "title": "Asteroides en la carta natal: Ceres, Palas, Juno y Vesta", "subtitle": "Introduce tus datos de nacimiento para ver signo, grado, casa y retrogradación de los cuatro asteroides más usados en astrología natal moderna." },
+  "form": { "submit": "Calcular mis cuatro asteroides" },
+  "result": { "title": "Tus posiciones de los cuatro asteroides", "cta": "Abrir el mapa y explorar tu carta completa" },
+  "sections": [
+    { "title": "Qué muestran los asteroides en la carta natal", "body": ["Esta calculadora ubica Ceres, Palas, Juno y Vesta en el zodiaco tropical para tu momento de nacimiento. Muestra signo, grado, casa de signo completo y si el cuerpo estaba retrógrado. Estos cuatro asteroides añaden matices a la carta natal; no sustituyen al Sol, la Luna, el ascendente ni los planetas.", "Se usa una efeméride geocéntrica de longitud eclíptica. La hora y el lugar de nacimiento se utilizan para calcular la casa, por eso una hora precisa es especialmente útil para el contexto de casas."] },
+    { "title": "Ceres en la carta natal: cuidado y reciprocidad", "body": ["Ceres se asocia con cuidado, nutrición, apego y la forma de dar o recibir apoyo. Su signo puede describir el estilo de cuidado que resulta natural; su casa muestra dónde se vuelve más visible. No dicta tu historia familiar ni tu relación: ofrece preguntas más precisas sobre comodidad, recursos y apoyo mutuo."] },
+    { "title": "Palas: estrategia y reconocimiento de patrones", "body": ["Palas suele relacionarse con estrategia, inteligencia creativa, patrones y resolución de problemas. Puede servir para nombrar cómo organizas ideas o defiendes una solución. Léela junto a Mercurio, Urano y el resto de la carta en vez de convertirla en una predicción aislada."] },
+    { "title": "Juno en la carta natal: compromiso y acuerdos", "body": ["Juno se usa con frecuencia para explorar compromiso, pareja duradera, equidad y acuerdos en vínculos cercanos. No identifica una pareja destinada ni promete matrimonio. Aporta una conversación útil sobre lealtad y fiabilidad cuando se lee junto a Venus, la Luna, la casa siete y la experiencia real."] },
+    { "title": "Vesta: dedicación, enfoque y límites", "body": ["Vesta se vincula con dedicación, concentración, límites y el trabajo que merece atención sostenida. Su posición puede sugerir dónde proteges tu tiempo o diriges energía. Una lectura equilibrada apoya un enfoque significativo, sin justificar agotamiento o aislamiento."] },
+    { "title": "Cómo usar estos resultados con criterio", "body": ["Empieza por la posición y compárala con tu carta natal y tu experiencia. La retrogradación es un matiz interpretativo normal, no un problema. Para decisiones de mudanza, combina la astrocartografía con trabajo, seguridad, finanzas, relaciones, visados y otras condiciones reales. La astrología ofrece contexto simbólico, no certezas."] }
+  ],
+  "faqs": [
+    { "question": "Qué asteroides incluye la calculadora?", "answer": "Incluye Ceres, Palas, Juno y Vesta, conocidos como los cuatro asteroides principales en astrología moderna." },
+    { "question": "Necesito la hora exacta de nacimiento?", "answer": "La hora es importante para la casa de signo completo. El signo del asteroide suele cambiar lentamente, pero hora y lugar precisos dan mejor contexto." },
+    { "question": "Qué significa que un asteroide esté retrógrado?", "answer": "Describe el movimiento aparente geocéntrico en tu nacimiento. Es una condición astronómica normal y un matiz, no una señal negativa." },
+    { "question": "Es una carta completa de asteroides?", "answer": "No. La herramienta cubre los cuatro principales como punto de partida práctico, no todos los asteroides nombrados." },
+    { "question": "Los asteroides pueden decidir dónde vivir?", "answer": "No. Aportan contexto simbólico; para comparar lugares combina el mapa, investigación práctica y tus circunstancias." }
+  ],
+  "schemaName": "Asteroides en la carta natal", "relatedLinks": [
+    { "text": "Quieres ver tu carta completa?", "linkText": "Generador de carta natal", "url": "/tools/birth-chart-generator" },
+    { "text": "Exploras una relación seria?", "linkText": "Calculadora de sinastría", "url": "/synastry-chart-calculator" },
+    { "text": "Estás pensando en mudarte?", "linkText": "Mapa de astrocartografía", "url": "/" }
+  ]
+}

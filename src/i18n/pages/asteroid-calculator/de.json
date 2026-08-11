@@ -1,0 +1,26 @@
+{
+  "key": "asteroids", "slug": "asteroid-calculator", "toolType": "asteroids",
+  "metadata": { "title": "Asteroiden im Geburtshoroskop: Ceres, Pallas, Juno und Vesta", "description": "Berechne Ceres, Pallas, Juno und Vesta im Geburtshoroskop mit Zeichen, Grad, Ganzzeichen-Haus und Rückläufigkeit anhand deiner Geburtsdaten.", "keywords": "Asteroiden im Geburtshoroskop, Juno berechnen, Juno Rechner, Ceres Rechner, Ceres im Geburtshoroskop, Pallas, Vesta" },
+  "hero": { "eyebrow": "Rechner für die vier wichtigsten Asteroiden", "title": "Asteroiden im Geburtshoroskop: Ceres, Pallas, Juno und Vesta", "subtitle": "Gib deine Geburtsdaten ein und sieh Zeichen, Grad, Haus und Rückläufigkeit von vier häufig verwendeten Asteroiden der modernen Geburtsastrologie." },
+  "form": { "submit": "Meine vier Asteroiden berechnen" }, "result": { "title": "Deine vier Asteroiden im Geburtshoroskop", "cta": "Karte öffnen und das ganze Horoskop erkunden" },
+  "sections": [
+    { "title": "Was Asteroiden im Geburtshoroskop zeigen", "body": ["Der Rechner bestimmt Ceres, Pallas, Juno und Vesta im tropischen Tierkreis für deinen Geburtsmoment. Er zeigt Zeichen, Grad, Ganzzeichen-Haus und Rückläufigkeit. Diese vier Asteroiden ergänzen ein Geburtshoroskop, ersetzen aber weder Sonne, Mond, Aszendent noch Planeten.", "Verwendet wird eine geozentrische Ephemeride der ekliptikalen Länge. Geburtszeit und Geburtsort dienen der Hausberechnung; eine genaue Zeit ist deshalb besonders für die Häuser hilfreich."] },
+    { "title": "Ceres: Fürsorge, Nahrung und Gegenseitigkeit", "body": ["Ceres wird oft mit Fürsorge, Ernährung, Bindung und dem Geben und Annehmen von Unterstützung verbunden. Das Zeichen kann den Stil von Fürsorge beschreiben, das Haus den Lebensbereich, in dem das Thema sichtbar wird. Es ist kein Urteil über Familie oder Beziehungen, sondern ein Anlass, über Bedürfnisse und Gegenseitigkeit nachzudenken."] },
+    { "title": "Pallas: Strategie und Mustererkennung", "body": ["Pallas steht häufig für Strategie, kreative Intelligenz, Mustererkennung und prinzipienorientiertes Problemlösen. Die Stellung kann helfen, die eigene Art zu ordnen, Systeme zu sehen oder Lösungen zu vertreten. Lies sie zusammen mit Merkur, Uranus und dem gesamten Geburtshoroskop."] },
+    { "title": "Juno berechnen: Bindung und Vereinbarungen", "body": ["Juno wird in der Astrologie für langfristige Partnerschaft, Fairness, Verpflichtung und Vereinbarungen in nahen Beziehungen genutzt. Sie zeigt weder einen vorherbestimmten Partner noch verspricht sie Ehe. Sinnvoll wird sie im Zusammenhang mit Venus, Mond, siebtem Haus und gelebter Erfahrung."] },
+    { "title": "Vesta: Hingabe, Fokus und Grenzen", "body": ["Vesta wird mit Hingabe, Konzentration, Grenzen und einer Aufgabe verbunden, die anhaltende Aufmerksamkeit verdient. Zeichen und Haus können zeigen, wo du Zeit schützt oder Energie bündelst. Eine gute Deutung unterstützt sinnvollen Fokus und rechtfertigt weder Überlastung noch Rückzug."] },
+    { "title": "Die vier Asteroiden verantwortungsvoll lesen", "body": ["Vergleiche das Ergebnis mit deinem gesamten Horoskop und deiner Erfahrung. Rückläufigkeit ist eine normale astronomische Nuance, kein negatives Urteil. Bei Umzugsfragen verbinde Astrocartography mit Arbeit, Sicherheit, Finanzen, Beziehungen, Visa und anderen realen Faktoren. Astrologie liefert symbolischen Kontext, keine Gewissheit."] }
+  ],
+  "faqs": [
+    { "question": "Welche Asteroiden berechnet der Rechner?", "answer": "Ceres, Pallas, Juno und Vesta, die in der modernen Astrologie oft als die vier wichtigsten Asteroiden bezeichnet werden." },
+    { "question": "Brauche ich eine genaue Geburtszeit?", "answer": "Für das Ganzzeichen-Haus ist sie wichtig. Das Zeichen ändert sich meist langsamer, doch genaue Zeit und Ort geben besseren Horoskop-Kontext." },
+    { "question": "Was bedeutet rückläufig bei einem Asteroiden?", "answer": "Es beschreibt die geozentrisch beobachtete scheinbare Bewegung im Geburtsmoment. Das ist normal und ein Deutungsdetail, keine negative Aussage." },
+    { "question": "Ist dies ein vollständiges Asteroidenhoroskop?", "answer": "Nein. Der Rechner konzentriert sich bewusst auf die vier wichtigsten Asteroiden als praktischen Einstieg." },
+    { "question": "Können Asteroiden entscheiden, wo ich leben soll?", "answer": "Nein. Sie ergänzen symbolischen Kontext. Vergleiche Orte immer auch mit realer Recherche und persönlichen Umständen." }
+  ],
+  "schemaName": "Asteroiden im Geburtshoroskop", "relatedLinks": [
+    { "text": "Möchtest du das ganze Horoskop sehen?", "linkText": "Geburtshoroskop erstellen", "url": "/tools/birth-chart-generator" },
+    { "text": "Denkst du über eine feste Beziehung nach?", "linkText": "Synastrie-Rechner", "url": "/synastry-chart-calculator" },
+    { "text": "Planst du einen Umzug?", "linkText": "Astrocartography-Karte", "url": "/" }
+  ]
+}
