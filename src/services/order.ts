@@ -19,6 +19,7 @@ import Stripe from "stripe";
 import { updateAffiliateForOrder } from "./affiliate";
 import { Order } from "@/types/order";
 import { sendOrderConfirmationEmail } from "./email";
+import { getGaClientIdFromOrderDetail, reportPurchase } from "@/lib/ga4-server-events";
 
 /**
  * Creem 支付数据接口
@@ -71,6 +72,15 @@ export async function handleOrderSession(session: Stripe.Checkout.Session) {
       paid_email,
       paid_detail
     );
+    void reportPurchase({
+      provider: "stripe",
+      transactionId: order.order_no,
+      amount: order.amount,
+      currency: order.currency,
+      productId: order.product_id,
+      productName: order.product_name,
+      gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+    });
 
     if (order.user_uuid) {
       if (order.credits > 0) {
@@ -287,6 +297,15 @@ export async function handleCreemOrder(data: CreemPaymentData) {
                 paid_email,
                 paid_detail
               );
+              void reportPurchase({
+                provider: "creem",
+                transactionId: matchedOrder.order_no,
+                amount: matchedOrder.amount,
+                currency: matchedOrder.currency,
+                productId: matchedOrder.product_id,
+                productName: matchedOrder.product_name,
+                gaClientId: getGaClientIdFromOrderDetail(matchedOrder.order_detail),
+              });
 
               // 发放积分
               if (matchedOrder.user_uuid) {
@@ -423,6 +442,15 @@ export async function handleCreemOrder(data: CreemPaymentData) {
       paid_email,
       paid_detail
     );
+      void reportPurchase({
+      provider: "creem",
+      transactionId: order.order_no,
+      amount: order.amount,
+      currency: order.currency,
+      productId: order.product_id,
+      productName: order.product_name,
+      gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+    });
 
     // 发放积分
     if (order.user_uuid) {
@@ -557,6 +585,15 @@ export async function handlePayPalOrder(data: any, eventType: string) {
       paid_email,
       paid_detail
     );
+      void reportPurchase({
+      provider: "paypal",
+      transactionId: order.order_no,
+      amount: order.amount,
+      currency: order.currency,
+      productId: order.product_id,
+      productName: order.product_name,
+      gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+    });
 
     // 发放积分
     if (order.user_uuid) {

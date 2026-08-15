@@ -4,6 +4,7 @@ import { updateAffiliateForOrder } from "@/services/affiliate";
 import { sendOrderConfirmationEmail } from "@/services/email";
 import { getIsoTimestr } from "@/lib/time";
 import { Order } from "@/types/order";
+import { getGaClientIdFromOrderDetail, reportPurchase } from "@/lib/ga4-server-events";
 import PaymentSuccess from "@/components/payment/payment-success";
 import { logCreemEvent, logCreemError } from "@/lib/paypal-logger";
 
@@ -104,6 +105,15 @@ export default async function ({
           paid_email,
           paid_detail
         );
+        void reportPurchase({
+          provider: "creem",
+          transactionId: order.order_no,
+          amount: order.amount,
+          currency: order.currency,
+          productId: order.product_id,
+          productName: order.product_name,
+          gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+        });
         console.log("✅ [Creem Pay Success] 订单状态已更新为 Paid:", order_no);
 
         // 发放积分
@@ -194,4 +204,3 @@ export default async function ({
     }
   }
 }
-

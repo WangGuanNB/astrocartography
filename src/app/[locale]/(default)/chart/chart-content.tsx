@@ -20,7 +20,7 @@ import dynamic from 'next/dynamic';
 import AstroChat from '@/components/astro-chat';
 import { useAppContext } from '@/contexts/app';
 import SignModal from '@/components/sign/modal';
-import { askAIEvents, pageEvents, paymentEvents } from '@/lib/analytics';
+import { askAIEvents, paymentEvents } from '@/lib/analytics';
 import { useIsMobile } from '@/hooks/use-mobile';
 import type { AstrocartographyMapHandle } from '@/components/astrocartography-map';
 import { toast } from 'sonner';
@@ -113,8 +113,6 @@ export default function ChartContent() {
       setChartData(data);
       calculateChart(data);
       
-      // 📊 埋点：访问地图页面
-      pageEvents.chartPageViewed();
     } else {
       setError(t('messages.errorGeneral.missingInfo'));
       setIsLoading(false);

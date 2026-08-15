@@ -16,6 +16,7 @@ import moment from "moment";
 import useOneTapLogin from "@/hooks/useOneTapLogin";
 import { useSession } from "next-auth/react";
 import { isAuthEnabled, isGoogleOneTapEnabled } from "@/lib/auth";
+import { authEvents } from "@/lib/analytics";
 
 const AppContext = createContext({} as ContextValue);
 
@@ -55,6 +56,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
 
       setUser(data);
       updateInvite(data);
+      authEvents.completeFromIntent(data?.created_at);
     } catch (e: any) {
       // 只在开发环境或出错时记录
       if (process.env.NODE_ENV === 'development') {

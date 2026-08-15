@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { useAppContext } from "@/contexts/app";
 import { usePayment } from "@/hooks/usePayment";
-import { paymentEvents } from "@/lib/analytics";
+import { authEvents, paymentEvents } from "@/lib/analytics";
 import { usePricingItemTracking } from "./pricing-item-card";
 import { PaymentMethodSelector } from "@/components/payment/PaymentMethodSelector";
 
@@ -107,11 +107,6 @@ function PricingPlanCard({
               onClick={() => {
                 if (isLoading) return;
                 paymentEvents.buyButtonClicked(
-                  item.title || "Unknown Plan",
-                  item.amount / 100,
-                  item.product_id
-                );
-                paymentEvents.paymentInitiated(
                   item.title || "Unknown Plan",
                   item.amount / 100,
                   item.product_id
@@ -241,6 +236,7 @@ export default function Pricing({
     try {
       // 检查用户登录状态
       if (!user) {
+        authEvents.gateShown("pricing");
         setShowSignModal(true);
         return;
       }
@@ -249,6 +245,7 @@ export default function Pricing({
       const result = await handlePaymentCheckout(item, cn_pay);
 
       if (result?.needAuth) {
+        authEvents.gateShown("pricing");
         setShowSignModal(true);
         return;
       }

@@ -20,6 +20,7 @@ import {
   isPlusProductId,
   isSubscriptionInterval,
 } from "@/services/subscription";
+import { getGaClientIdFromOrderDetail, reportPurchase } from "@/lib/ga4-server-events";
 
 function periodEndIso(sub_period_end: number): string {
   return new Date(sub_period_end * 1000).toISOString();
@@ -30,7 +31,7 @@ async function markOrderPaidIfNeeded(
   paid_email: string,
   paid_detail: string
 ) {
-  if (order.status === OrderStatus.Paid) return;
+  if (order.status === OrderStatus.Paid) return false;
 
   const paid_at = getIsoTimestr();
   await updateOrderStatus(
@@ -40,6 +41,16 @@ async function markOrderPaidIfNeeded(
     paid_email,
     paid_detail
   );
+  void reportPurchase({
+    provider: "creem",
+    transactionId: order.order_no,
+    amount: order.amount,
+    currency: order.currency,
+    productId: order.product_id,
+    productName: order.product_name,
+    gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+  });
+  return true;
 }
 
 async function syncSubscriptionFields(

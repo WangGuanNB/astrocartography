@@ -16,6 +16,10 @@ import { PricingItem } from "@/types/blocks/pricing";
 import { orders } from "@/db/schema";
 import Stripe from "stripe";
 import { createPayPalOrder } from "@/services/paypal";
+import {
+  getGaClientIdFromRequest,
+  reportCheckoutCreated,
+} from "@/lib/ga4-server-events";
 
 /**
  * 通用订单验证和创建逻辑
@@ -175,8 +179,9 @@ async function handleStripeCheckout(params: {
   credits?: number;
   locale: string;
   cancel_url: string;
+  ga_client_id?: string;
 }) {
-  const { order_no, user_uuid, user_email, product_name, amount, currency, interval, is_subscription, credits, locale, cancel_url } = params;
+  const { order_no, user_uuid, user_email, product_name, amount, currency, interval, is_subscription, credits, locale, cancel_url, ga_client_id } = params;
 
   if (!process.env.STRIPE_PRIVATE_KEY) {
     throw new Error("STRIPE_PRIVATE_KEY is not configured");
@@ -237,10 +242,18 @@ async function handleStripeCheckout(params: {
     };
   }
 
-  const order_detail = JSON.stringify(options);
+  const order_detail = JSON.stringify({ ...options, ga_client_id });
   const session = await stripe.checkout.sessions.create(options);
   const stripe_session_id = session.id;
   await updateOrderSession(order_no, stripe_session_id, order_detail);
+  void reportCheckoutCreated({
+    provider: "stripe",
+    transactionId: order_no,
+    amount,
+    currency,
+    productName: product_name,
+    gaClientId: ga_client_id,
+  });
 
   return {
     public_key: process.env.STRIPE_PUBLIC_KEY,
@@ -264,8 +277,9 @@ async function handlePayPalCheckout(params: {
   product_id: string;
   locale: string;
   cancel_url: string;
+  ga_client_id?: string;
 }) {
-  const { order_no, user_uuid, user_email, product_name, amount, currency, credits, product_id, locale, cancel_url } = params;
+  const { order_no, user_uuid, user_email, product_name, amount, currency, credits, product_id, locale, cancel_url, ga_client_id } = params;
 
   const success_url = `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}/pay-success/paypal?order_no=${encodeURIComponent(order_no)}`;
   const amountInCents = Math.round(amount);
@@ -316,9 +330,19 @@ async function handlePayPalCheckout(params: {
     user_email: user_email,
     amount: amountInCents,
     currency: currency,
+    ga_client_id,
   });
 
   await updateOrderSession(order_no, paypalOrder.order_id, order_detail);
+  void reportCheckoutCreated({
+    provider: "paypal",
+    transactionId: order_no,
+    amount: amountInCents,
+    currency,
+    productId: product_id,
+    productName: product_name,
+    gaClientId: ga_client_id,
+  });
 
   return {
     approval_url: paypalOrder.approval_url,
@@ -330,6 +354,7 @@ async function handlePayPalCheckout(params: {
 
 export async function POST(req: Request) {
   try {
+    const ga_client_id = getGaClientIdFromRequest(req);
     // 1. 解析请求参数
     let {
       credits,
@@ -401,6 +426,7 @@ export async function POST(req: Request) {
           credits: credits,
           locale: locale,
           cancel_url: cancel_url,
+          ga_client_id,
         });
         break;
 
@@ -429,6 +455,7 @@ export async function POST(req: Request) {
           product_id: product_id,
           locale: locale,
           cancel_url: cancel_url,
+          ga_client_id,
         });
         break;
 

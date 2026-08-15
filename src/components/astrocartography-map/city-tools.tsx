@@ -27,7 +27,7 @@ import {
   X,
 } from "lucide-react";
 import { LocationAutocomplete } from "@/components/ui/location-autocomplete";
-import { cityToolEvents, paymentEvents } from "@/lib/analytics";
+import { authEvents, cityToolEvents, paymentEvents } from "@/lib/analytics";
 import { MAJOR_CITIES } from "@/lib/cities";
 import PricingModal from "@/components/pricing/pricing-modal";
 import { Pricing as PricingType } from "@/types/blocks/pricing";
@@ -454,6 +454,10 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   const t = useTranslations("astrocartographyMap.cityTools");
   const params = useParams();
   const locale = (params.locale as string) || "en";
+  const requestLogin = () => {
+    authEvents.gateShown("city_tools");
+    onRequireLogin?.();
+  };
   const translate = (
     key: string,
     values?: Record<string, string | number>
@@ -587,11 +591,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     if (!pendingCheckCity) return;
     setCheckedCity(pendingCheckCity);
     onFocusCity(pendingCheckCity);
-    cityToolEvents.citySelected(
-      "check_city",
-      pendingCheckCity.name,
-      pendingCheckCity.country
-    );
+    cityToolEvents.citySelected("check_city");
   };
 
   const addCompareCity = (result: {
@@ -631,7 +631,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     setPendingCompareCity(null);
     setComparisonReady(false);
     onFocusCity(city);
-    cityToolEvents.citySelected("compare_cities", city.name, city.country);
+    cityToolEvents.citySelected("compare_cities");
   };
 
   const commitCompareCity = () => {
@@ -668,7 +668,6 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     cityToolEvents.comparisonRun(
       comparisonGoal,
       compareCities.length,
-      topResult?.city.name,
       topResult
         ? fitScoreFromRawScore(topResult.score, topResult.evidence.length)
         : undefined
@@ -718,7 +717,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   const unlockFullComparisonReport = async () => {
     if (comparisonResults.length < 2) return;
     if (userState === "anonymous") {
-      onRequireLogin?.();
+      requestLogin();
       return;
     }
     if (reportStatus === "loading") return;
@@ -778,7 +777,7 @@ ${lines}`;
       if (!response.ok) {
         const errorPayload = await response.json().catch(() => null);
         if (response.status === 401 || errorPayload?.type === "auth_required") {
-          onRequireLogin?.();
+          requestLogin();
           setReportStatus("idle");
           return;
         }
@@ -1057,7 +1056,7 @@ ${lines}`;
                         type="button"
                         onClick={() => {
                           cityToolEvents.limitReached(maxCompareCities, userState);
-                          onRequireLogin?.();
+                          requestLogin();
                         }}
                         className="ml-1 font-semibold text-amber-200 underline decoration-amber-200/40 underline-offset-2 hover:text-amber-100"
                       >
@@ -1084,7 +1083,6 @@ ${lines}`;
                             aria-label={t("removeCity", { city: city.name })}
                             onClick={() => {
                               cityToolEvents.cityRemoved(
-                                city.name,
                                 Math.max(0, compareCities.length - 1)
                               );
                               setCompareCities((current) =>

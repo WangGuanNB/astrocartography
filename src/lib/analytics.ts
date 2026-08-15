@@ -106,6 +106,75 @@ export function trackEvent(
     });
 }
 
+const AUTH_INTENT_STORAGE_KEY = "astro_auth_tracking_intent";
+const AUTH_INTENT_MAX_AGE_MS = 10 * 60 * 1000;
+
+type AuthProvider = "google" | "github" | "google_one_tap";
+
+function getAuthIntent() {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const raw = window.localStorage.getItem(AUTH_INTENT_STORAGE_KEY);
+    if (!raw) return null;
+    const intent = JSON.parse(raw) as { provider: AuthProvider; startedAt: number };
+    if (!intent.provider || Date.now() - intent.startedAt > AUTH_INTENT_MAX_AGE_MS) {
+      window.localStorage.removeItem(AUTH_INTENT_STORAGE_KEY);
+      return null;
+    }
+    return intent;
+  } catch {
+    return null;
+  }
+}
+
+/** Authentication events are only sent after an explicit auth action. */
+export const authEvents = {
+  gateShown: (surface: "ai_chat" | "city_tools" | "pricing") => {
+    trackEvent("auth_gate_shown", {
+      surface,
+      event_category: "Authentication",
+    });
+  },
+
+  signInStarted: (provider: AuthProvider) => {
+    if (typeof window !== "undefined") {
+      try {
+        window.localStorage.setItem(
+          AUTH_INTENT_STORAGE_KEY,
+          JSON.stringify({ provider, startedAt: Date.now() })
+        );
+      } catch {
+        // Analytics must never block sign-in if storage is unavailable.
+      }
+    }
+    trackEvent("login_started", {
+      provider,
+      event_category: "Authentication",
+    });
+  },
+
+  completeFromIntent: (createdAt?: string | Date | null) => {
+    const intent = getAuthIntent();
+    if (!intent) return;
+
+    try {
+      window.localStorage.removeItem(AUTH_INTENT_STORAGE_KEY);
+    } catch {
+      // The event remains best-effort.
+    }
+
+    const createdAtMs = createdAt ? new Date(createdAt).getTime() : NaN;
+    const isNewAccount =
+      Number.isFinite(createdAtMs) && Math.abs(Date.now() - createdAtMs) < AUTH_INTENT_MAX_AGE_MS;
+
+    trackEvent(isNewAccount ? "sign_up" : "login", {
+      method: intent.provider,
+      event_category: "Authentication",
+    });
+  },
+};
+
 /**
  * Ask AI 相关事件
  */
@@ -193,25 +262,15 @@ export const cityToolEvents = {
     });
   },
 
-  citySelected: (
-    tool: 'check_city' | 'compare_cities',
-    cityName: string,
-    country: string
-  ) => {
+  citySelected: (tool: 'check_city' | 'compare_cities') => {
     trackEvent('city_tool_city_selected', {
       tool,
-      city_name: cityName,
-      country,
       event_category: 'City Tools',
     });
   },
 
-  cityRemoved: (
-    cityName: string,
-    cityCount: number
-  ) => {
+  cityRemoved: (cityCount: number) => {
     trackEvent('city_tool_city_removed', {
-      city_name: cityName,
       city_count: cityCount,
       event_category: 'City Tools',
     });
@@ -227,13 +286,11 @@ export const cityToolEvents = {
   comparisonRun: (
     goal: string,
     cityCount: number,
-    topCity?: string,
     topScore?: number
   ) => {
     trackEvent('city_tool_comparison_run', {
       goal,
       city_count: cityCount,
-      top_city: topCity || '',
       top_score: topScore ?? 0,
       event_category: 'City Tools',
     });
@@ -283,9 +340,9 @@ export const homeInlineMapEvents = {
     });
   },
 
-  generationFailed: (reason?: string) => {
+  generationFailed: () => {
     trackEvent('home_inline_generation_failed', {
-      reason: reason || 'unknown',
+      error_type: 'generation_failed',
       event_category: 'Home Inline Map',
     });
   },

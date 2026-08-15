@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { isAuthEnabled, isGoogleOneTapEnabled } from "@/lib/auth";
+import { authEvents } from "@/lib/analytics";
 
 export default function () {
   // ⚠️ 重要：React Hooks 必须在组件顶层无条件调用
@@ -35,6 +36,7 @@ export default function () {
   };
 
   const handleLogin = async function (credentials: string) {
+    authEvents.signInStarted("google_one_tap");
     const res = await signIn("google-one-tap", {
       credential: credentials,
       redirect: false,

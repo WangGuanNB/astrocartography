@@ -17,6 +17,7 @@ import {
   handleCreemSubscriptionPaid,
   handleCreemSubscriptionEnded,
 } from "@/services/creem-subscription";
+import { getGaClientIdFromOrderDetail, reportPurchase } from "@/lib/ga4-server-events";
 
 export async function POST(req: Request) {
   try {
@@ -224,6 +225,15 @@ async function handleCreemPaymentSuccess(data: any) {
       paid_email,
       paid_detail
     );
+    void reportPurchase({
+      provider: "creem",
+      transactionId: order.order_no,
+      amount: order.amount,
+      currency: order.currency,
+      productId: order.product_id,
+      productName: order.product_name,
+      gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+    });
     logCreemEvent("ORDER_PAID", { order_no, user_email: paid_email, amount: order.amount ?? undefined, currency: order.currency ?? undefined, credits: order.credits ?? undefined });
     console.log("✅ [Creem Webhook] 订单状态已更新为 Paid:", order_no);
 
@@ -269,7 +279,5 @@ async function handleCreemPaymentSuccess(data: any) {
     // 不抛出错误，避免 Creem 重复发送 webhook
   }
 }
-
-
 
 

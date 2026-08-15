@@ -14,9 +14,14 @@ import { getPricingPage } from "@/services/page";
 import { PricingItem } from "@/types/blocks/pricing";
 import { orders } from "@/db/schema";
 import { createCreemCheckoutSession } from "@/services/creem";
+import {
+  getGaClientIdFromRequest,
+  reportCheckoutCreated,
+} from "@/lib/ga4-server-events";
 
 export async function POST(req: Request) {
   try {
+    const ga_client_id = getGaClientIdFromRequest(req);
     let {
       credits,
       currency,
@@ -254,9 +259,19 @@ export async function POST(req: Request) {
       order_no: order_no, // 保存订单号，方便 webhook 匹配
       user_email: user_email, // 保存邮箱，方便匹配
       amount: amountInCents, // 保存金额，方便匹配
+      ga_client_id,
     });
 
     await updateOrderSession(order_no, session_id, order_detail);
+    void reportCheckoutCreated({
+      provider: "creem",
+      transactionId: order_no,
+      amount: amountInCents,
+      currency,
+      productId: product_id,
+      productName: product_name,
+      gaClientId: ga_client_id,
+    });
 
     return respData({
       checkout_url: checkout_url,
@@ -268,7 +283,5 @@ export async function POST(req: Request) {
     return respErr("creem checkout failed: " + e.message);
   }
 }
-
-
 
 

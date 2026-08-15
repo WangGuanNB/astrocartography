@@ -15,7 +15,7 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import PricingModal from '@/components/pricing/pricing-modal';
 import { Pricing as PricingType } from '@/types/blocks/pricing';
-import { askAIEvents, paymentEvents } from '@/lib/analytics';
+import { askAIEvents, authEvents, paymentEvents } from '@/lib/analytics';
 import { toast } from 'sonner';
 import { detectLanguage, type SynastryPayloadForAI } from '@/lib/astro-format';
 
@@ -96,6 +96,10 @@ export default function AstroChat({
   // 🔥 修复：使用 useParams() 获取 locale，与 locale/toggle.tsx 保持一致
   // 获取当前语言，如果没有locale参数则说明是默认语言（英文）
   const locale = (params.locale as string) || 'en';
+  const requestLogin = useCallback(() => {
+    authEvents.gateShown('ai_chat');
+    onRequireLogin?.();
+  }, [onRequireLogin]);
   
   const chartSessionKey = useMemo(
     () => `${chartData.birthData.location}|${synastryData ? 'syn' : 'map'}`,
@@ -196,7 +200,7 @@ export default function AstroChat({
 
   const handleHistoryClick = useCallback(async () => {
     if (!user) {
-      onRequireLogin?.();
+      requestLogin();
       return;
     }
 
@@ -224,7 +228,7 @@ export default function AstroChat({
     }
 
     setShowHistoryUpgradeDialog(true);
-  }, [user, entitlements, onRequireLogin, router]);
+  }, [user, entitlements, requestLogin, router]);
 
   // 处理积分不足的情况（显示提示框而不是直接打开价格弹窗）
   const handleInsufficientCredits = useCallback(async () => {
@@ -417,9 +421,7 @@ export default function AstroChat({
         
         // 401: 需要登录
         if (errorData.code === 401 && errorData.type === 'auth_required') {
-          if (onRequireLogin) {
-            onRequireLogin();
-          }
+          requestLogin();
           return;
         }
         
@@ -450,9 +452,7 @@ export default function AstroChat({
             
             // 401: 需要登录
             if (errorData.code === 401 && errorData.type === 'auth_required') {
-              if (onRequireLogin) {
-                onRequireLogin();
-              }
+              requestLogin();
               return;
             }
             
@@ -472,9 +472,7 @@ export default function AstroChat({
           try {
             const errorData = JSON.parse(fullJsonMatch[0]);
             if (errorData.code === 401 && errorData.type === 'auth_required') {
-              if (onRequireLogin) {
-                onRequireLogin();
-              }
+              requestLogin();
               return;
             }
             if (errorData.code === 402 && errorData.type === 'insufficient_credits') {
@@ -495,9 +493,7 @@ export default function AstroChat({
           errorMessage.includes('sign in first') ||
           errorMessage.includes('"code":401') ||
           errorMessage.includes('"code": 401')) {
-        if (onRequireLogin) {
-          onRequireLogin();
-        }
+        requestLogin();
         return;
       }
       
@@ -545,7 +541,7 @@ export default function AstroChat({
     }
 
     if (!user) {
-      onRequireLogin?.();
+      requestLogin();
       return;
     }
 
@@ -614,7 +610,7 @@ export default function AstroChat({
     t,
     user,
     entitlements?.canExportCurrentChat,
-    onRequireLogin,
+    requestLogin,
   ]);
 
   // 📊 埋点：收到 AI 回复（监听消息变化）
@@ -888,9 +884,7 @@ export default function AstroChat({
     if (!canAskQuestion) {
       submissionInFlightRef.current = false;
       // 需要登录才能继续提问
-      if (onRequireLogin) {
-        onRequireLogin();
-      }
+      requestLogin();
       return;
     }
     
@@ -950,9 +944,7 @@ export default function AstroChat({
     if (!canAskQuestion) {
       submissionInFlightRef.current = false;
       // 需要登录才能继续提问
-      if (onRequireLogin) {
-        onRequireLogin();
-      }
+      requestLogin();
       return;
     }
     
@@ -1211,9 +1203,7 @@ export default function AstroChat({
                     </p>
                     <Button
                       onClick={() => {
-                        if (onRequireLogin) {
-                          onRequireLogin();
-                        }
+                        requestLogin();
                       }}
                       className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white text-xs"
                     >

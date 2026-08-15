@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { authEvents } from "@/lib/analytics";
 
 export default function SignForm({
   className,
@@ -55,7 +56,10 @@ export default function SignForm({
                 <Button
                   variant="outline"
                   className="w-full"
-                  onClick={() => signIn("google")}
+                  onClick={() => {
+                    authEvents.signInStarted("google");
+                    signIn("google");
+                  }}
                 >
                   <SiGoogle className="w-4 h-4" />
                   {t("sign_modal.google_sign_in")}
@@ -66,7 +70,10 @@ export default function SignForm({
                 <Button
                   variant="outline"
                   className="w-full"
-                  onClick={() => signIn("github")}
+                  onClick={() => {
+                    authEvents.signInStarted("github");
+                    signIn("github");
+                  }}
                 >
                   <SiGithub className="w-4 h-4" />
                   {t("sign_modal.github_sign_in")}

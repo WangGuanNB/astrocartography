@@ -293,12 +293,8 @@ export default function MiniaturaAIGenerator() {
       shouldScrollToResultRef.current = true;
       homeInlineMapEvents.generated();
     } catch (error) {
-      const message =
-        error instanceof Error
-          ? error.message
-          : t('messages.errorGeneral.generationFailed');
       console.error('Failed to generate inline astrocartography map:', error);
-      homeInlineMapEvents.generationFailed(message);
+      homeInlineMapEvents.generationFailed();
       toast.error(t('messages.errorGeneral.generationFailed'));
       // 兜底：保持原主流程，避免用户卡死在首页
       window.location.href = chartPath;

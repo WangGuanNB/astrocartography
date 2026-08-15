@@ -28,6 +28,7 @@ import { signIn } from "next-auth/react";
 import { useAppContext } from "@/contexts/app";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useTranslations } from "next-intl";
+import { authEvents } from "@/lib/analytics";
 
 export default function SignModal() {
   const t = useTranslations();
@@ -109,6 +110,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
           variant="outline"
           className="w-full flex items-center gap-2"
           onClick={() => {
+            authEvents.signInStarted("google");
             signIn("google");
           }}
         >
@@ -123,6 +125,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
           variant="outline"
           className="w-full flex items-center gap-2"
           onClick={() => {
+            authEvents.signInStarted("github");
             signIn("github");
           }}
         >
