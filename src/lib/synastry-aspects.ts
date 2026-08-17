@@ -71,3 +71,22 @@ export function computeSynastryAspects(planetsA: PlanetLon[], planetsB: PlanetLo
   }
   return out.sort((x, y) => x.orb - y.orb);
 }
+
+/** Major aspects among planets in one sky snapshot (unique pairs). */
+export function computeCurrentSkyAspects(planets: PlanetLon[]): SynastryAspectRow[] {
+  const out: SynastryAspectRow[] = [];
+  for (let i = 0; i < planets.length; i++) {
+    for (let j = i + 1; j < planets.length; j++) {
+      const found = findSynastryAspect(planets[i].longitude, planets[j].longitude);
+      if (found) {
+        out.push({
+          planetA: planets[i].name,
+          planetB: planets[j].name,
+          aspect: found.aspect,
+          orb: found.orb,
+        });
+      }
+    }
+  }
+  return out.sort((x, y) => x.orb - y.orb);
+}

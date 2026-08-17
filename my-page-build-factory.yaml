@@ -26,6 +26,11 @@ analytics:
     - https://astrocarto.org/it/rising-sign-calculator/
     - https://astrocarto.org/transit-chart-calculator/
 
+  ga4:
+    property_id: "513310501"
+    measurement_id: "G-322DZP4F8E"
+    domain: "astrocarto.org"
+
 site:
   # 网站/产品名称
   name: "AstroCarto"
@@ -102,7 +107,7 @@ seo:
     - "https://www.alabe.com"
 
   # 已有内容提醒：避免新页面和已有页面抢同一个关键词
-  existing_content_notes: "Core existing SEO pages include `/`, `/astrocartography-calculator`, `/astrocartography-lines`, `/sun-line-astrocartography`, `/moon-line-astrocartography`, `/mercury-line-astrocartography`, `/venus-line-astrocartography`, `/mars-line-astrocartography`, `/jupiter-line-astrocartography`, `/saturn-line-astrocartography`, `/uranus-line-astrocartography`, `/tools/birth-chart-generator`, `/chart/natal-chart`, `/rising-sign-calculator`, `/venus-sign-calculator`, `/lunar-nodes-calculator`, `/chiron-placement-calculator`, `/relocation-chart-calculator`, `/solar-return-chart-calculator`, `/synastry-chart-calculator`, `/composite-chart-calculator`, and `/transit-chart-calculator`. Avoid creating near-duplicate pages for these exact intents. `/chart` and user/account pages are functional and should not be treated as SEO landing pages. `/color` and `/converter` are unrelated utility pages and should not guide future astrology SEO unless intentionally retained."
+  existing_content_notes: "Core existing SEO pages include `/`, `/astrocartography-calculator`, `/astrocartography-lines`, `/sun-line-astrocartography`, `/moon-line-astrocartography`, `/mercury-line-astrocartography`, `/venus-line-astrocartography`, `/mars-line-astrocartography`, `/jupiter-line-astrocartography`, `/saturn-line-astrocartography`, `/uranus-line-astrocartography`, `/tools/birth-chart-generator`, `/chart/natal-chart`, `/rising-sign-calculator`, `/venus-sign-calculator`, `/lunar-nodes-calculator`, `/chiron-placement-calculator`, `/relocation-chart-calculator`, `/solar-return-chart-calculator`, `/synastry-chart-calculator`, `/composite-chart-calculator`, `/transit-chart-calculator`, and `/planetary-positions-today`. Avoid creating near-duplicate pages for these exact intents. `/chart` and user/account pages are functional and should not be treated as SEO landing pages. `/color` and `/converter` are unrelated utility pages and should not guide future astrology SEO unless intentionally retained."
 
   # 当前比较值得继续评估的 SEO 缺口
   priority_gaps:
@@ -131,6 +136,16 @@ content_inventory:
       locale: "en"
       topic_cluster: "relocation astrology"
       differentiation_notes: "Decision workflow for where-to-live intent; distinct from the generic calculator, astrocartography lines hub, and relocation chart calculator."
+    - path: "/planetary-positions-today"
+      primary_keyword: "planetary positions today"
+      secondary_keywords:
+        - "planet positions today"
+        - "current planetary positions"
+        - "planets retrograde today"
+      page_type: "tool"
+      locale: "en"
+      topic_cluster: "current sky / transits"
+      differentiation_notes: "No-birth-data live tropical positions. Distinct from /transit-chart-calculator which overlays transits on a natal chart."
 
 page_strategy:
   # 允许智能体选择的页面类型。不要随便改这些英文枚举值

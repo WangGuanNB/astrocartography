@@ -16,6 +16,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "只想看当前天空，不需要本命盘？",
+        "linkText": "今日行星位置",
+        "url": "/planetary-positions-today"
+      },
+      {
         "text": "探索你的星盘在全球何处更易发挥。",
         "linkText": "星盘地图计算器",
         "url": "/"

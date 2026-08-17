@@ -135,6 +135,16 @@ export interface CalculatorPage {
   feature?: Section;
   faq?: Section;
   cta?: Section;
+  methodology?: {
+    label?: string;
+    title: string;
+    description?: string;
+    highlights?: Array<{ label: string; url?: string }>;
+    items: Array<{ title: string; description: string }>;
+    disclaimer: string;
+    lastUpdated?: string;
+    lastUpdatedLabel?: string;
+  };
 }
 
 // Export the new page types

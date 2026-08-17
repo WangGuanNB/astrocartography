@@ -16,6 +16,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "Quer só o céu de hoje, sem mapa natal?",
+        "linkText": "Posição dos Planetas Hoje",
+        "url": "/planetary-positions-today"
+      },
+      {
         "text": "Descubra onde sua carta prospera no mundo.",
         "linkText": "Calculadora Astrocartography",
         "url": "/"

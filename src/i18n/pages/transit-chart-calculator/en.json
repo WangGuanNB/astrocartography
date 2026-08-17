@@ -16,6 +16,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "Just want today’s sky, no birth chart?",
+        "linkText": "Planetary Positions Today",
+        "url": "/planetary-positions-today"
+      },
+      {
         "text": "Discover where your chart thrives globally.",
         "linkText": "Astrocartography Calculator",
         "url": "/"

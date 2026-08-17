@@ -100,6 +100,13 @@
               "icon": "RiPieChartLine"
             },
             {
+              "title": "Planetenpositionen Heute",
+              "description": "Aktuelle tropische Zeichen, Grade und Retrogradationen — ohne Geburtsdaten",
+              "url": "/planetary-positions-today",
+              "target": "_self",
+              "icon": "RiTimeLine"
+            },
+            {
               "title": "Transit Chart Rechner",
               "description": "So sehen Sie, wie Transite Ihre Geburtskarte aspectieren",
               "url": "/transit-chart-calculator",

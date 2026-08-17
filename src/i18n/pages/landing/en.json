@@ -100,6 +100,13 @@
               "icon": "RiPieChartLine"
             },
             {
+              "title": "Planetary Positions Today",
+              "description": "Current tropical signs, degrees, and retrogrades — no birth data",
+              "url": "/planetary-positions-today",
+              "target": "_self",
+              "icon": "RiTimeLine"
+            },
+            {
               "title": "Transit Chart Calculator",
               "description": "See how transiting planets aspect your birth chart",
               "url": "/transit-chart-calculator",

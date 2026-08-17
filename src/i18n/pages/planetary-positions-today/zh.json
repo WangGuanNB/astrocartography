@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "title": "今日行星位置 — 免费查看星座与度数 | AstroCarto",
+    "description": "免费查看今日行星位置：热带地心黄道上的星座、度数与逆行状态，无需出生资料。再进入过运盘，看当前天空如何与本命盘形成相位。",
+    "keywords": "今日行星位置, 当前行星位置, 行星位置查询, 今天行星在哪个星座, 行星逆行, 免费行星位置"
+  },
+  "intentAnchor": {
+    "text": "在找今日行星位置？本页首屏直接显示当前热带天空——无需出生日期、时间或地点。查看每颗行星的星座、度数与顺逆行，若要把这些位置叠在本命盘上，可继续使用过运盘计算器。"
+  },
+  "internalLinks": {
+    "title": "相关工具",
+    "items": [
+      {
+        "text": "想把今日天空叠在本命盘上？",
+        "linkText": "过运盘计算器",
+        "url": "/transit-chart-calculator"
+      },
+      {
+        "text": "需要出生时刻的完整星盘？",
+        "linkText": "Natal Chart 本命盘",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "想要简单的轮盘生成？",
+        "linkText": "本命盘生成器",
+        "url": "/tools/birth-chart-generator"
+      }
+    ]
+  },
+  "methodology": {
+    "label": "计算方法",
+    "title": "我们如何计算当前行星位置",
+    "description": "下表按照下方说明的方法生成。",
+    "highlights": [
+      { "label": "astronomy-engine", "url": "https://github.com/cosinekitty/astronomy" },
+      { "label": "热带 · 地心" },
+      { "label": "UTC" },
+      { "label": "服务端 API" }
+    ],
+    "items": [
+      {
+        "title": "计算引擎",
+        "description": "行星黄经使用开源 astronomy-engine 库（见上方官方项目链接）：地心位置矢量转换为热带黄道经度——与本站其他星盘计算器同一套核心算法。"
+      },
+      {
+        "title": "处理位置",
+        "description": "打开或刷新页面时，浏览器会请求 /api/calculate-planetary-positions。服务器在指定 UTC 时刻计算太阳至冥王星并返回 JSON。本表不需要出生资料，仅可能发送可选日期时间。"
+      },
+      {
+        "title": "坐标系与时间",
+        "description": "结果为热带地心坐标（西方黄道以春分点为 0° 白羊，非恒星黄道）。显示时间为 UTC。若选择本地日期时间，客户端会先转为 UTC 再请求 API。"
+      },
+      {
+        "title": "星座、度数与逆行",
+        "description": "黄经拆分为星座与星座内度数（0°–29°）。界面度数四舍五入到分。若未来 24 小时热带黄经递减则标为逆行（℞）；太阳与月亮始终视为顺行。"
+      },
+      {
+        "title": "当前天空相位与边界",
+        "description": "表下相位为今日行星之间的天空对天空接触，容许度与过运工具一致——不针对你的本命盘。宫位与上升点需出生地点，故未显示；个人解读请用过运盘或本命盘工具。"
+      }
+    ],
+    "disclaimer": "本页占星内容仅供一般信息与探索，不构成医疗、财务、法律或其他专业建议，也不保证任何结果。重要决定请自行判断。",
+    "lastUpdated": "2026-08-17",
+    "lastUpdatedLabel": "最后更新"
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "什么是今日行星位置",
+    "label": "介绍",
+    "description": "今日行星位置指此刻（或你选择的任意时刻）太阳、月亮与行星的地心热带黄经。西方占星把这些经度读成星座与度数：太阳在狮子座、月亮在天秤座、土星在白羊座逆行等。这是天空本身，不是你的本命盘。回答「今天行星在哪里」不需要出生时间。宫位与上升点需要地点；本工具刻意省略，以便首屏结果符合搜索意图。",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "今日行星位置表：当前星座与度数"
+    },
+    "items": [
+      {
+        "title": "此刻的天空，不是本命盘",
+        "description": "本命盘冻结出生时的天空。当前行星位置持续变化：月亮每天约移动 13°，太阳约 1°，外行星更慢。想查当下星座与逆行时用本表；想看出生快照用本命盘；想看今日天空如何打本命盘用过运盘。",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp", "alt": "当前天空与本命盘对比" }
+      },
+      {
+        "title": "如何读星座、度数与逆行",
+        "description": "每颗行星占据十二个 30° 星座之一。星座内度数（0°–29°）表示它已进入该星座多远。日运动是 24 小时内黄经的变化；若为负值，则为逆行（℞）——从地球视角看的视逆行。太阳与月亮不逆行。交界日仍只有一个热带经度；同一时刻行星只落在一个星座。",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp", "alt": "读行星位置：星座度数与逆行" }
+      },
+      {
+        "title": "从今日天空到时机与地点",
+        "description": "看清当前天空后，常见下一步是个人与地理问题：用过运盘计算器把同一天空叠在本命盘上；若还没有本命轮盘先生成本命盘。星盘地理图画的是本命角点在全球的投射，不会随行运实时重画。地图回答本命能量在何处更响；本页回答天空此刻在做什么。",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp", "alt": "从今日行星位置到过运盘" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "为什么用这张当前天空表",
+    "label": "核心优势",
+    "description": "免费、免注册查看当前行星位置，计算方式与本站其他星盘工具一致的热带地心方法。适合快速看天，再清晰进入过运与本命工作。",
+    "items": [
+      {
+        "title": "无需出生资料",
+        "description": "多数「今天行星在哪」的搜索不应先要出生证。本计算器自动加载当前 UTC 时刻。只有查过去或未来时刻才需选日期时间。出生时间留在本命、上升与过运页——那里才会改变结果。",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "无需出生资料的当前天空表" }
+      },
+      {
+        "title": "按钟表时刻，不是正午星历",
+        "description": "印刷星历常用 00:00 或 12:00 UTC。对慢行星尚可，对月亮则易误导——午夜到正午可差约 6°。默认表用真实计算时刻，让月亮度数对应「现在」，而非正午表。",
+        "icon": "RiTimeLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "实时行星位置而非正午星历" }
+      },
+      {
+        "title": "诚实边界，清晰下一步",
+        "description": "结果为热带地心坐标，非恒星黄道、非日心，也非每日太阳星座运势。宫位需在有地点的星盘工具中才出现。读完表后，可打开过运盘查看这些位置如何与本命行星形成相位。",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "热带地心行星位置与说明" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "如何使用当前天空表",
+    "label": "使用说明",
+    "description": "表格应在打开页面时即出现。可选日期时间用于查看其他时刻，而不会把本页变成本命计算器。",
+    "items": [
+      {
+        "title": "阅读实时表",
+        "description": "页面加载时会请求「现在」的行星位置。每行列出行星、热带星座、星座内度数及顺行或逆行。标题下的时间戳为计算所用的 UTC 时刻。",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "可选其他时刻",
+        "description": "若要看昨天、未来某日或特定钟点，使用日期与时间字段后重新计算。「现在」按钮回到当前时刻，避免停留在旧日期。",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "浏览当前天空相位",
+        "description": "表下方列出今日行星之间的主要相位（合、冲、刑、拱、六合），容许度与过运工具一致。这是天空对天空的接触，不是打本命盘。描述的是此刻的「天气」，不是你的个人过运。",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "继续进入你的星盘",
+        "description": "若问题是「这对我意味着什么？」，请打开过运盘计算器并输入出生资料。若还需要出生快照，先生成本命盘。星盘地理用于本命线的地理意义，不是今日行运的实时地图。",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "本计算器包含什么",
+    "label": "功能",
+    "description": "紧凑的当前天空工具：热带黄经、逆行标记、可选日期时间，并连接个人星盘计算器。",
+    "items": [
+      {
+        "title": "太阳至冥王星",
+        "description": "表格涵盖西方星盘常用的十个天体：太阳、月亮、水星、金星、火星、木星、土星、天王星、海王星、冥王星。位置为地心黄经，换算为星座与度数，与本站本命与过运计算器同一坐标系。",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "由日运动判定逆行",
+        "description": "若未来 24 小时黄经递减，则标为逆行（℞），与常见星历 Rx 一致。水星逆行最受关注；外行星也会长时间逆行。太阳与月亮始终顺行。",
+        "icon": "RiRefreshLine"
+      },
+      {
+        "title": "可选日期与时间",
+        "description": "无需注册即可查看其他公历日期时间。客户端将本地时间转为 UTC 再计算。若只要「现在的天空」，保持默认即可。",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "连接过运与本命工具",
+        "description": "结果下方的按钮指向过运盘计算器与本命盘页面。本 URL 专注当前天空，同时接入星盘工具集群。",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "常见问题",
+    "title": "今日行星位置 — 常见问题",
+    "description": "关于当前行星位置、逆行、热带与恒星黄道，以及本表与过运盘区别的常见问题。",
+    "items": [
+      {
+        "title": "查看当前行星位置需要出生时间吗？",
+        "description": "不需要。当前行星位置是某一时刻天空的属性。出生时间对上升、宫位及本命/过运盘上精确的月亮很重要。本页有意跳过出生资料。"
+      },
+      {
+        "title": "这是热带还是恒星黄道？",
+        "description": "热带地心。热带黄道以春分点对齐，为本站大多数西方本命、过运与星盘地理工具所用。恒星黄道（如许多印度占星）因岁差不同，通常差约一个星座以上。本页不切换体系。"
+      },
+      {
+        "title": "今天哪些行星逆行？",
+        "description": "以实时表中显示 ℞ 的行为准。逆行由热带黄经是否递减计算。外行星可长期逆行；水星、金星周期更短。若页面打开已久，请刷新或点「现在」更新。"
+      },
+      {
+        "title": "这与过运盘有何不同？",
+        "description": "本表只列天空。过运盘把天空相对你的本命行星列出，通常需要出生日期、时间与地点。若只问「火星今天在哪」，留在此页；若问「行运火星是否刑本命太阳」，请用过运盘计算器。"
+      },
+      {
+        "title": "行星位置多久变一次？",
+        "description": "持续变化，速度差异很大。月亮约两三天换星座；太阳约一月；水、金、火按周至月；木至冥可占星座数月或数年。因此实时时间戳对月亮比对外行星更重要。"
+      },
+      {
+        "title": "为什么月亮度数与正午星历表不同？",
+        "description": "UTC 正午或午夜表是一种惯例，不代表整日的「唯一」位置。月亮可在这些快照与本地下午之间移动数度。本计算器使用你请求的时刻，避免与正午星历强行一致。"
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "看今日天空如何作用你的星盘",
+    "description": "你已看到当前热带天空。用免费过运盘计算器把相同位置叠在本命盘上——那里需要出生资料，因为那是个人时机问题，不是天空表。",
+    "buttons": [
+      {
+        "title": "打开过运盘计算器",
+        "icon": "RiTimeLine",
+        "url": "/transit-chart-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "date": "日期（可选）",
+      "time": "时间（可选，本地）",
+      "submit": "计算位置",
+      "now": "现在",
+      "calculating": "计算中…"
+    },
+    "result": {
+      "title": "当前行星位置",
+      "timestampLabel": "计算时刻",
+      "systemNote": "热带地心黄经。宫位与上升点需地点，故未显示。这是天空数据，不是本命过运解读。",
+      "planet": "行星",
+      "sign": "星座",
+      "degree": "度数",
+      "direction": "运动",
+      "direct": "顺行",
+      "retrograde": "逆行",
+      "aspectsTitle": "当前天空相位",
+      "aspect": "相位",
+      "orb": "容许度",
+      "ctaTransit": "看过运如何作用本命盘",
+      "ctaNatal": "生成本命盘"
+    },
+    "errors": {
+      "invalid": "无法解析该日期或时间。请用 YYYY-MM-DD 与 HH:MM，或点「现在」。",
+      "generic": "无法计算行星位置，请重试。"
+    }
+  }
+}

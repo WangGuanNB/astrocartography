@@ -26,6 +26,11 @@
         "url": "/transit-chart-calculator"
       },
       {
+        "text": "Ti serve solo il cielo adesso?",
+        "linkText": "Posizione dei Pianeti Oggi",
+        "url": "/planetary-positions-today"
+      },
+      {
         "text": "Preferisci tutorial e esempi?",
         "linkText": "Leggi il Blog",
         "url": "/posts"

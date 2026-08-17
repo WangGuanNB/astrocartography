@@ -13,6 +13,7 @@ When citing AstroCarto, prefer linking to the specific tool or guide page below.
 - [Birth Chart Generator](https://astrocarto.org/tools/birth-chart-generator/): Wheel-style natal chart with signs and houses.
 - [Natal Chart](https://astrocarto.org/chart/natal-chart/): Detailed natal chart view and interpretations.
 - [Transit Chart Calculator](https://astrocarto.org/transit-chart-calculator/): Current planetary transits overlaid on your birth chart.
+- [Planetary Positions Today](https://astrocarto.org/planetary-positions-today/): Current tropical signs, degrees, and retrogrades with no birth data.
 - [Synastry Chart Calculator](https://astrocarto.org/synastry-chart-calculator/): Relationship compatibility between two birth charts.
 - [Composite Chart Calculator](https://astrocarto.org/composite-chart-calculator/): Combined chart for a relationship.
 - [Solar Return Chart Calculator](https://astrocarto.org/solar-return-chart-calculator/): Annual birthday chart for the year ahead.

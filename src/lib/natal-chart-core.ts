@@ -171,3 +171,50 @@ export function computeWholeSignChart(utcDate: Date, latitude: number, longitude
     planets,
   };
 }
+
+export type CurrentPlanetRow = {
+  name: PlanetName;
+  glyph: string;
+  longitude: number;
+  sign: string;
+  degree: number;
+  retrograde: boolean;
+  speedDegPerDay: number;
+};
+
+/** Shortest signed difference in ecliptic longitude, in degrees (−180..180). */
+export function signedLongitudeDelta(fromDeg: number, toDeg: number): number {
+  let d = normalizeDegrees(toDeg) - normalizeDegrees(fromDeg);
+  if (d > 180) d -= 360;
+  if (d < -180) d += 360;
+  return d;
+}
+
+/** Geocentric tropical longitude change over 24 hours (negative = retrograde). */
+export function eclipticSpeedDegPerDay(body: Astronomy.Body, time: Astronomy.AstroTime): number {
+  const lon0 = getGeocentricEclipticLongitude(body, time);
+  const lon1 = getGeocentricEclipticLongitude(body, time.AddDays(1));
+  return signedLongitudeDelta(lon0, lon1);
+}
+
+/**
+ * Tropical geocentric positions for Sun–Pluto at a UTC instant.
+ * Retrograde is true when ecliptic longitude is decreasing; Sun and Moon never retrograde.
+ */
+export function computePlanetaryPositionsAt(utcDate: Date): CurrentPlanetRow[] {
+  const time = Astronomy.MakeTime(utcDate);
+  return PLANETS.map(({ body, name, glyph }) => {
+    const lon = getGeocentricEclipticLongitude(body, time);
+    const speed = Math.round(eclipticSpeedDegPerDay(body, time) * 1000) / 1000;
+    const neverRx = body === Astronomy.Body.Sun || body === Astronomy.Body.Moon;
+    return {
+      name,
+      glyph,
+      longitude: Math.round(lon * 1000) / 1000,
+      sign: SIGNS[signIndexFromLongitude(lon)],
+      degree: Math.round(degreeInSign(lon) * 1000) / 1000,
+      retrograde: neverRx ? false : speed < 0,
+      speedDegPerDay: speed,
+    };
+  });
+}

@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "title": "Posiciones Planetarias Hoy — Signos y Grados Gratis | AstroCarto",
+    "description": "Consulta gratis las posiciones planetarias hoy: signos tropicales, grados y retrogradaciones en el zodiaco geocéntrico, sin datos de nacimiento. Luego abre el tránsito para ver cómo el cielo actual aspecta tu carta natal.",
+    "keywords": "posiciones planetarias hoy, posición planetaria actual, planetas hoy signo, retrogradación planetaria, posiciones planetarias gratis"
+  },
+  "intentAnchor": {
+    "text": "¿Buscas posiciones planetarias hoy? Esta página muestra el cielo tropical actual al instante — sin fecha, hora ni lugar de nacimiento. Consulta signo, grado y movimiento directo o retrógrado de cada planeta; para superponer el cielo de hoy sobre tu carta natal, usa la calculadora de tránsitos."
+  },
+  "internalLinks": {
+    "title": "Herramientas relacionadas",
+    "items": [
+      {
+        "text": "¿Quieres el cielo de hoy sobre tu carta natal?",
+        "linkText": "Calculadora de Tránsitos",
+        "url": "/transit-chart-calculator"
+      },
+      {
+        "text": "¿Necesitas la carta completa con hora de nacimiento?",
+        "linkText": "Carta Natal",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "¿Prefieres generar una rueda simple?",
+        "linkText": "Generador de Carta Natal",
+        "url": "/tools/birth-chart-generator"
+      }
+    ]
+  },
+  "methodology": {
+    "label": "METODOLOGÍA",
+    "title": "Cómo calculamos las posiciones planetarias actuales",
+    "description": "Esta tabla se genera con el método explicado a continuación.",
+    "highlights": [
+      { "label": "astronomy-engine", "url": "https://github.com/cosinekitty/astronomy" },
+      { "label": "Tropical · Geocéntrico" },
+      { "label": "UTC" },
+      { "label": "API del servidor" }
+    ],
+    "items": [
+      {
+        "title": "Motor de cálculo",
+        "description": "Las longitudes planetarias usan la biblioteca open-source astronomy-engine (proyecto oficial enlazado arriba): vectores geocéntricos convertidos a longitud eclíptica tropical — la misma familia de cálculo que otros calculadores de carta en AstroCarto."
+      },
+      {
+        "title": "Dónde se procesa",
+        "description": "Al abrir o actualizar la página, el navegador llama a /api/calculate-planetary-positions. El servidor calcula Sol–Plutón en el instante UTC solicitado y devuelve JSON. Esta tabla no pide datos de nacimiento; solo puede enviarse fecha/hora opcional."
+      },
+      {
+        "title": "Sistema de coordenadas y tiempo",
+        "description": "Resultados tropicales y geocéntricos (zodiaco occidental anclado al equinoccio vernal, no sideral). La marca temporal es UTC. Si eliges fecha y hora local, el cliente las convierte a UTC antes de la API."
+      },
+      {
+        "title": "Signo, grado y retrógrado",
+        "description": "Cada longitud se divide en signo y grado dentro del signo (0°–29°). La UI muestra grados redondeados a minutos de arco. Retrógrado (℞) si la longitud tropical baja en 24 h; Sol y Luna siempre directos."
+      },
+      {
+        "title": "Aspectos del cielo y límites",
+        "description": "Los aspectos bajo la tabla son contactos cielo–cielo entre planetas de hoy, con los mismos orbes que la herramienta de tránsitos — no aspectan tu carta natal. Casas y Ascendente requieren lugar de nacimiento; usa carta natal o tránsitos para lo personal."
+      }
+    ],
+    "disclaimer": "El contenido astrológico de esta página es solo informativo y exploratorio. No es consejo médico, financiero, legal ni profesional, ni garantiza resultados. Usa tu criterio en decisiones importantes.",
+    "lastUpdated": "2026-08-17",
+    "lastUpdatedLabel": "Última actualización"
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Qué son las posiciones planetarias hoy",
+    "label": "Introducción",
+    "description": "Las posiciones planetarias hoy son las longitudes eclípticas geocéntricas tropicales del Sol, la Luna y los planetas en este momento (o en la fecha que elijas). La astrología occidental las lee como signo y grado: el Sol en Leo, la Luna en Libra, Saturno retrógrado en Aries, etc. Es el cielo mismo, no tu carta natal. Responder «dónde están los planetas hoy» no requiere hora de nacimiento. Casas y Ascendente sí necesitan lugar; esta herramienta los omite a propósito para que el resultado encaje con la intención de búsqueda.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Tabla de posiciones planetarias hoy con signos y grados"
+    },
+    "items": [
+      {
+        "title": "El cielo de ahora, no tu carta natal",
+        "description": "La carta natal congela el cielo del nacimiento. Las posiciones planetarias actuales cambian sin parar: la Luna avanza unos 13° al día, el Sol unos 1°, los planetas exteriores más despacio. Usa esta tabla para signos y retrogradaciones al instante; la carta natal para el instante del nacimiento; el tránsito para ver cómo el cielo de hoy aspecta tu natal.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp", "alt": "Cielo actual frente a carta natal" }
+      },
+      {
+        "title": "Cómo leer signo, grado y retrógrado",
+        "description": "Cada planeta ocupa uno de los doce signos de 30°. El grado dentro del signo (0°–29°) indica cuánto ha entrado en él. El movimiento diario es el cambio de longitud en 24 horas; si es negativo, el planeta está retrógrado (℞) — movimiento aparente desde la Tierra. Sol y Luna nunca retrogradan. En días de cambio de signo sigue habiendo una sola longitud tropical; un planeta solo puede estar en un signo a la vez.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp", "alt": "Leer posiciones: signo, grado y retrógrado" }
+      },
+      {
+        "title": "Del cielo de hoy al timing y al lugar",
+        "description": "Tras ver el cielo actual, el siguiente paso suele ser personal y geográfico: superponer el mismo cielo con la calculadora de tránsitos, o generar la carta natal si aún no la tienes. La astrocartografía traza líneas natales en el mapa; no redibuja el cielo en tiempo real. El mapa responde dónde resuena tu energía natal; esta página responde qué hace el cielo ahora.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp", "alt": "De posiciones planetarias hoy al tránsito" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Por qué usar esta tabla del cielo actual",
+    "label": "Ventajas",
+    "description": "Posiciones planetarias gratis, sin registro, con el mismo método geocéntrico tropical que el resto de herramientas del sitio. Ideal para una consulta rápida del cielo y luego pasar con claridad al tránsito y a la carta natal.",
+    "items": [
+      {
+        "title": "Sin datos de nacimiento",
+        "description": "Muchas búsquedas de «planetas hoy» no deberían pedir el acta de nacimiento. Esta calculadora carga la hora UTC actual al abrir. Solo hace falta fecha y hora si consultas otro momento. La hora de nacimiento queda en las páginas de natal, Ascendente y tránsito — ahí sí cambia el resultado.",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Tabla del cielo sin datos de nacimiento" }
+      },
+      {
+        "title": "Hora real, no efemérides de mediodía",
+        "description": "Las efemérides impresas suelen usar 00:00 o 12:00 UTC. Para planetas lentos basta; para la Luna engaña — de medianoche a mediodía puede moverse unos 6°. Esta tabla usa el instante calculado para que la Luna coincida con «ahora», no con una tabla de mediodía.",
+        "icon": "RiTimeLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Posiciones en tiempo real, no efemérides de mediodía" }
+      },
+      {
+        "title": "Límites claros, siguiente paso obvio",
+        "description": "Resultados geocéntricos tropicales, no siderales, heliocéntricos ni horóscopo diario por signo solar. Las casas aparecen en herramientas con lugar de nacimiento. Tras la tabla, abre el tránsito para ver cómo estas posiciones aspectan tus planetas natales.",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Posiciones tropicales geocéntricas con contexto" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo usar la tabla del cielo actual",
+    "label": "Instrucciones",
+    "description": "La tabla debería aparecer al cargar la página. La fecha y hora opcionales sirven para otro instante, sin convertir esta página en calculadora natal.",
+    "items": [
+      {
+        "title": "Leer la tabla en vivo",
+        "description": "Al cargar, la página pide las posiciones de «ahora». Cada fila muestra planeta, signo tropical, grado en el signo y movimiento directo o retrógrado. La marca de tiempo bajo el título es la hora UTC usada en el cálculo.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Elegir otro instante (opcional)",
+        "description": "Para ayer, una fecha futura o una hora concreta, usa los campos de fecha y hora y vuelve a calcular. El botón «Ahora» vuelve al instante actual y evita quedarte en una fecha antigua.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Explorar aspectos del cielo actual",
+        "description": "Debajo de la tabla verás aspectos mayores entre planetas de hoy (conjunción, oposición, cuadratura, trígono, sextil) con el mismo orbe que en tránsitos. Es cielo contra cielo, no contra tu carta natal. Describe el «clima» del momento, no tu tránsito personal.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Seguir con tu carta",
+        "description": "Si la pregunta es «¿qué significa para mí?», abre la calculadora de tránsitos con tus datos de nacimiento. Si aún necesitas la instantánea natal, genera la carta natal. La astrocartografía sirve para líneas natales en el mapa, no como mapa en vivo de tránsitos de hoy.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Qué incluye esta calculadora",
+    "label": "Funciones",
+    "description": "Herramienta compacta del cielo actual: longitudes tropicales, marcas de retrógrado, fecha y hora opcionales, y enlaces a calculadoras personales.",
+    "items": [
+      {
+        "title": "Del Sol a Plutón",
+        "description": "La tabla cubre los diez cuerpos habituales en cartas occidentales: Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano, Neptuno y Plutón. Posiciones geocéntricas en signo y grado, mismo sistema que natal y tránsitos en AstroCarto.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Retrógrado por movimiento diario",
+        "description": "Si la longitud tropical baja en 24 horas, se marca retrógrado (℞), como en efemérides Rx. Mercurio retrógrado es el más buscado; los exteriores también retrogradan meses. Sol y Luna siempre van directos.",
+        "icon": "RiRefreshLine"
+      },
+      {
+        "title": "Fecha y hora opcionales",
+        "description": "Consulta otra fecha y hora del calendario gregoriano sin registrarte. El cliente convierte tu hora local a UTC antes de calcular. Para «el cielo de ahora», deja los valores por defecto.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Enlace a tránsito y natal",
+        "description": "Botones bajo el resultado llevan a la calculadora de tránsitos y a la carta natal. Esta URL se centra en el cielo actual dentro del cluster de herramientas de carta.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Preguntas frecuentes",
+    "title": "Posiciones planetarias hoy — FAQ",
+    "description": "Preguntas sobre posiciones actuales, retrógrados, tropical vs sideral y diferencia con la carta de tránsito.",
+    "items": [
+      {
+        "title": "¿Necesito hora de nacimiento para ver las posiciones actuales?",
+        "description": "No. Las posiciones planetarias de un instante son propiedad del cielo en ese momento. La hora de nacimiento importa para Ascendente, casas y Luna precisa en cartas natal y de tránsito. Esta página omite esos datos a propósito."
+      },
+      {
+        "title": "¿Es zodiaco tropical o sideral?",
+        "description": "Tropical geocéntrico. El zodiaco tropical alinea con el equinoccio vernal y es el que usan la mayoría de herramientas occidentales de natal, tránsito y astrocartografía en este sitio. El sideral (p. ej. mucha astrología india) difiere por precesión, a menudo más de un signo. Esta página no cambia de sistema."
+      },
+      {
+        "title": "¿Qué planetas están retrógrados hoy?",
+        "description": "Mira la tabla en vivo: los que muestran ℞. El retrógrado se calcula si la longitud tropical disminuye. Los exteriores pueden estar meses retrógrados; Mercurio y Venus en ciclos más cortos. Si la página lleva mucho abierta, actualiza o pulsa «Ahora»."
+      },
+      {
+        "title": "¿En qué se diferencia de una carta de tránsito?",
+        "description": "Esta tabla solo lista el cielo. El tránsito coloca ese cielo frente a tus planetas natales y suele pedir fecha, hora y lugar de nacimiento. Si preguntas «¿dónde está Marte hoy?», quédate aquí; si «¿el Marte tránsito cuadra mi Sol natal?», usa la calculadora de tránsitos."
+      },
+      {
+        "title": "¿Con qué frecuencia cambian las posiciones?",
+        "description": "Siempre, a ritmos distintos. La Luna cambia de signo cada pocos días; el Sol, aproximadamente cada mes; Mercurio, Venus y Marte en semanas o meses; Júpiter a Plutón pueden ocupar un signo meses o años. Por eso la marca de tiempo importa más para la Luna que para los exteriores."
+      },
+      {
+        "title": "¿Por qué la Luna no coincide con una efeméride de mediodía?",
+        "description": "Las tablas a 00:00 o 12:00 UTC son convención, no la única posición «del día». La Luna puede mover varios grados entre ese snapshot y tu tarde local. Esta calculadora usa el instante que pides, sin forzar coincidencia con mediodía."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Mira cómo el cielo de hoy actúa sobre tu carta",
+    "description": "Ya viste el cielo tropical actual. Superpón esas mismas posiciones en tu carta natal con la calculadora de tránsitos gratuita — ahí sí hacen falta datos de nacimiento, porque es timing personal, no una tabla del cielo.",
+    "buttons": [
+      {
+        "title": "Abrir calculadora de tránsitos",
+        "icon": "RiTimeLine",
+        "url": "/transit-chart-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "date": "Fecha (opcional)",
+      "time": "Hora (opcional, local)",
+      "submit": "Calcular posiciones",
+      "now": "Ahora",
+      "calculating": "Calculando…"
+    },
+    "result": {
+      "title": "Posiciones planetarias actuales",
+      "timestampLabel": "Calculado para",
+      "systemNote": "Longitudes eclípticas geocéntricas tropicales. Casas y Ascendente requieren lugar, por eso no se muestran. Son datos del cielo, no interpretación de tránsito personal.",
+      "planet": "Planeta",
+      "sign": "Signo",
+      "degree": "Grado",
+      "direction": "Movimiento",
+      "direct": "Directo",
+      "retrograde": "Retrógrado",
+      "aspectsTitle": "Aspectos del cielo actual",
+      "aspect": "Aspecto",
+      "orb": "Orbe",
+      "ctaTransit": "Ver tránsitos sobre tu carta natal",
+      "ctaNatal": "Generar carta natal"
+    },
+    "errors": {
+      "invalid": "No se pudo interpretar la fecha u hora. Usa AAAA-MM-DD y HH:MM, o pulsa «Ahora».",
+      "generic": "No se pudieron calcular las posiciones. Inténtalo de nuevo."
+    }
+  }
+}

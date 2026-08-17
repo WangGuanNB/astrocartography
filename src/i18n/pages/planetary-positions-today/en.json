@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "title": "Planetary Positions Today — Signs & Degrees | AstroCarto",
+    "description": "Free planetary positions today: see each planet’s tropical sign, degree, and retrograde. No birth data needed. Then check how today’s sky aspects your natal chart.",
+    "keywords": "planetary positions today, planet positions today, current planetary positions, where are the planets today, planets retrograde today, free planetary positions"
+  },
+  "intentAnchor": {
+    "text": "Looking for planetary positions today? This page loads the current tropical sky first—no birth date, time, or place. See each planet’s sign, degree, and retrograde, then continue to a transit chart if you want those positions against your natal chart."
+  },
+  "internalLinks": {
+    "title": "Related Tools",
+    "items": [
+      {
+        "text": "Want today’s sky on your birth chart?",
+        "linkText": "Transit Chart Calculator",
+        "url": "/transit-chart-calculator"
+      },
+      {
+        "text": "Need the chart of your birth moment?",
+        "linkText": "Natal Chart",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "Prefer a simple wheel from birth data?",
+        "linkText": "Birth Chart Generator",
+        "url": "/tools/birth-chart-generator"
+      }
+    ]
+  },
+  "methodology": {
+    "label": "METHODOLOGY",
+    "title": "How We Calculate Current Planetary Positions",
+    "description": "This table is generated using the method explained below.",
+    "highlights": [
+      { "label": "astronomy-engine", "url": "https://github.com/cosinekitty/astronomy" },
+      { "label": "Tropical · Geocentric" },
+      { "label": "UTC" },
+      { "label": "Server API" }
+    ],
+    "items": [
+      {
+        "title": "Calculation engine",
+        "description": "Planetary longitudes use the open-source astronomy-engine library (official project linked above): geocentric position vectors converted to tropical ecliptic longitude—the same core math family used across AstroCarto chart calculators on this site."
+      },
+      {
+        "title": "Where processing runs",
+        "description": "When you open or refresh this page, the browser calls our /api/calculate-planetary-positions route. The server computes Sun–Pluto at the requested UTC instant and returns JSON. This sky table does not ask for birth data; only an optional date/time may be sent."
+      },
+      {
+        "title": "Coordinate system and time",
+        "description": "Results are tropical and geocentric (western zodiac tied to the vernal equinox, not sidereal). The timestamp shown is UTC. If you pick a local date and time, the client converts it to UTC before the API call."
+      },
+      {
+        "title": "Sign, degree, and retrograde",
+        "description": "Each longitude is split into a sign and a degree within that sign (0°–29°). The UI displays degrees rounded to arcminutes. Retrograde (℞) is marked when tropical longitude decreases over the next 24 hours; the Sun and Moon are always treated as direct."
+      },
+      {
+        "title": "Current-sky aspects and limits",
+        "description": "Aspects listed below the table are sky-to-sky contacts among today’s planets, using the same major orbs as our transit tool—they do not aspect your natal chart. Houses and the Ascendant are omitted because they require a birth location; use the Natal Chart or Transit Chart tools for personal charts."
+      }
+    ],
+    "disclaimer": "Astrology content on this page is for general information and exploration only. It is not medical, financial, legal, or other professional advice, and it does not guarantee outcomes. Use your own judgment for important decisions.",
+    "lastUpdated": "2026-08-17",
+    "lastUpdatedLabel": "Last updated"
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What Planetary Positions Today Means",
+    "label": "INTRODUCTION",
+    "description": "Planetary positions today are the geocentric tropical longitudes of the Sun, Moon, and planets at this moment (or any moment you choose). Western astrology reads those longitudes as signs and degrees: the Sun in Leo, the Moon in Libra, Saturn retrograde in Aries, and so on. This is the sky itself—not your birth chart. You do not need a birth time to answer “where are the planets today?” Houses and the Ascendant do need a location; this tool leaves them out on purpose so the first result matches the search job.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Current planet positions table showing signs and degrees"
+    },
+    "items": [
+      {
+        "title": "The Sky Right Now, Not Your Natal Chart",
+        "description": "A natal chart freezes the sky at your birth. Current planet positions change continuously: the Moon moves about 13° per day, the Sun about 1°, and the outer planets far more slowly. Use this table when you want current signs and retrogrades. Use a natal chart when you want the snapshot of your birth. Use a transit chart when you want today’s sky as aspects to that natal snapshot.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp", "alt": "Moving planets on a live ecliptic arc beside a faint fixed birth-chart outline." }
+      },
+      {
+        "title": "How to Read Sign, Degree, and Retrograde",
+        "description": "Each planet occupies one of twelve 30° signs. The degree in sign (0°–29°) tells you how far it has traveled through that sign. Daily motion is the change in ecliptic longitude over 24 hours; when that value is negative, the planet is retrograde (℞)—an apparent backward motion from Earth’s perspective. The Sun and Moon do not retrograde. Cusp days still have one tropical longitude; a planet is in one sign at a time even if you feel both neighboring themes.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp", "alt": "A planet on a zodiac band with forward and backward motion arcs showing retrograde." }
+      },
+      {
+        "title": "From Today’s Sky to Timing and Place",
+        "description": "Once you can see the current sky, the useful next questions are personal and geographic. Overlay the same sky on your birth chart with the Transit Chart Calculator. Generate a natal wheel if you do not have one yet. Astrocartography maps natal angles onto Earth—it does not redraw lines as today’s transits move. The map answers where natal energies are loud; this page answers what the sky is doing now.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp", "alt": "Sky light trails connecting current planets to a personal chart and distant map horizon." }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Why Use This Current Sky Table",
+    "label": "Core Benefits",
+    "description": "Get a free, no-signup view of current planetary positions with the same tropical geocentric method used in our chart tools. The table is built for a quick sky check, then a clear handoff into transits and natal work.",
+    "items": [
+      {
+        "title": "No Birth Data Required",
+        "description": "Most “where are the planets today” searches should not ask for a birth certificate. This calculator loads the current UTC instant automatically. Add a date and time only if you want a past or future moment. Birth time stays on natal, rising, and transit pages where it actually changes the result.",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Current sky table without birth data" }
+      },
+      {
+        "title": "Clock Time, Not a Noon Snapshot",
+        "description": "Printed ephemerides often list 00:00 or 12:00 UTC. That is fine for slow planets and misleading for the Moon, which can move 6° between midnight and noon. The default table uses the actual calculation instant so the Moon’s degree matches “right now,” not a noon table.",
+        "icon": "RiTimeLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Live planetary positions instead of noon ephemeris" }
+      },
+      {
+        "title": "Honest Limits, Clear Next Step",
+        "description": "Results are tropical and geocentric. They are not sidereal, not heliocentric, and not a daily sun-sign horoscope. Houses are omitted until you add a location on a chart tool. After you read the table, open the transit chart to see how these positions aspect your natal planets.",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Tropical geocentric planetary positions with disclosed limits" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Use This Current Sky Table",
+    "label": "HOW TO USE",
+    "description": "The table is meant to appear immediately. Optional date and time let you inspect another moment without turning this into a natal calculator.",
+    "items": [
+      {
+        "title": "Read the Live Table",
+        "description": "When the page loads, it requests planetary positions for now. Each row lists the planet, tropical sign, degree in that sign, and whether it is direct or retrograde. The timestamp under the heading is the UTC instant used for the calculation.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Optionally Pick Another Moment",
+        "description": "Use the date and time fields if you want yesterday’s sky, a future date, or a specific clock time. Calculate again to refresh the table. The Now button returns to the current instant so you are not stuck on a leftover date.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Scan Current Sky Aspects",
+        "description": "Below the table, major aspects among today’s planets (conjunction, opposition, square, trine, sextile) use the same orbs as our transit tool. These are sky-to-sky contacts, not hits to your natal chart. They describe the weather of the moment, not your personal transits.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Continue to Your Chart",
+        "description": "If the question is “how does this touch me?”, open the Transit Chart Calculator and enter birth data. If you still need the birth snapshot itself, generate a natal chart first. Keep astrocartography for natal line geography—not as a live map of today’s transits.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "What This Calculator Includes",
+    "label": "FEATURES",
+    "description": "A compact current-sky tool: tropical longitudes, retrograde flags, optional datetime, and a bridge into personal chart calculators.",
+    "items": [
+      {
+        "title": "Sun Through Pluto",
+        "description": "The table covers the ten bodies used in standard Western chart work: Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, and Pluto. Positions are geocentric ecliptic longitudes converted into sign and degree. That is the same coordinate family our natal and transit calculators use.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Retrograde From Daily Motion",
+        "description": "A planet is marked retrograde when its ecliptic longitude decreases over the next 24 hours. That matches the usual ephemeris “Rx” flag. Mercury retrogrades get the headlines; slower planets also station. The Sun and Moon stay direct.",
+        "icon": "RiRefreshLine"
+      },
+      {
+        "title": "Optional Date and Time",
+        "description": "You can inspect another civil datetime without creating an account. The client converts your local date and time to UTC before calculation. Leave the fields alone if you only wanted the sky as it is now.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Handoff to Transit and Natal Tools",
+        "description": "Buttons under the result go to the Transit Chart Calculator and Natal Chart pages. That keeps this URL focused on the current sky while still connecting to the rest of the chart cluster.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Planetary Positions Today — Frequently Asked Questions",
+    "description": "Common questions about current planetary positions, retrogrades, tropical vs sidereal, and how this table differs from a transit chart.",
+    "items": [
+      {
+        "title": "Do I need my birth time for current planet positions?",
+        "description": "No. Current planetary positions are a property of the sky at a chosen instant. Birth time matters for the Ascendant, houses, and a precise Moon on natal or transit charts. This page intentionally skips birth data."
+      },
+      {
+        "title": "Are these tropical or sidereal positions?",
+        "description": "Tropical geocentric. The tropical zodiac is aligned to the equinoxes, which is the system used in most Western natal, transit, and astrocartography tools on this site. Sidereal zodiacs (used in many Jyotish charts) will differ by roughly a sign-plus depending on ayanamsha. We do not switch systems on this page."
+      },
+      {
+        "title": "Which planets are retrograde today?",
+        "description": "Whatever rows show ℞ in the live table. Retrograde is computed from whether tropical longitude is decreasing. Outer planets spend long stretches retrograde; Mercury and Venus cycle faster. Reload or press Now if you opened the page hours ago and want a fresh flag."
+      },
+      {
+        "title": "How is this different from a transit chart?",
+        "description": "This table lists the sky. A transit chart lists the sky relative to your natal planets and usually needs birth date, time, and place. If you only wanted “where is Mars today?”, stay here. If you wanted “is transiting Mars squaring my natal Sun?”, use the Transit Chart Calculator."
+      },
+      {
+        "title": "How often do planetary positions change?",
+        "description": "Continuously, at very different speeds. The Moon changes sign every two to three days. The Sun changes sign about monthly. Mercury, Venus, and Mars move on weekly-to-monthly timescales. Jupiter through Pluto may hold a sign for months or years. That is why a live timestamp matters more for the Moon than for Pluto."
+      },
+      {
+        "title": "Why is the Moon’s degree different from a noon ephemeris?",
+        "description": "Noon or midnight UTC tables are a convention, not “the” position for the calendar day. The Moon can move several degrees between those snapshots and your local afternoon. This calculator uses the instant you requested so the Moon stays honest instead of matching a noon ephemeris."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "See How Today’s Sky Aspects Your Chart",
+    "description": "You now have the current tropical sky. Overlay the same positions on your natal chart with the free Transit Chart Calculator—birth data required there, because that is a personal timing question, not a sky table.",
+    "buttons": [
+      {
+        "title": "Open Transit Chart Calculator",
+        "icon": "RiTimeLine",
+        "url": "/transit-chart-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "date": "Date (optional)",
+      "time": "Time (optional, local)",
+      "submit": "Calculate positions",
+      "now": "Now",
+      "calculating": "Calculating…"
+    },
+    "result": {
+      "title": "Current Planetary Positions",
+      "timestampLabel": "Calculated for",
+      "systemNote": "Tropical geocentric ecliptic longitudes. Houses and Ascendant are omitted because they need a location. This is the sky, not a natal transit reading.",
+      "planet": "Planet",
+      "sign": "Sign",
+      "degree": "Degree",
+      "direction": "Motion",
+      "direct": "Direct",
+      "retrograde": "Retrograde",
+      "aspectsTitle": "Current sky aspects",
+      "aspect": "Aspect",
+      "orb": "orb",
+      "ctaTransit": "See how today aspects your natal chart",
+      "ctaNatal": "Generate your natal chart"
+    },
+    "errors": {
+      "invalid": "That date or time could not be parsed. Try YYYY-MM-DD and HH:MM, or use Now.",
+      "generic": "Could not calculate planetary positions. Please try again."
+    }
+  }
+}

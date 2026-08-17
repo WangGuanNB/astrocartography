@@ -100,6 +100,13 @@
               "icon": "RiPieChartLine"
             },
             {
+              "title": "Posiciones Planetarias Hoy",
+              "description": "Signos tropicales actuales, grados y retrogradaciones — sin datos de nacimiento",
+              "url": "/planetary-positions-today",
+              "target": "_self",
+              "icon": "RiTimeLine"
+            },
+            {
               "title": "Calculadora de Tránsitos",
               "description": "Ver cómo los planetas en tránsito aspectan tu carta natal",
               "url": "/transit-chart-calculator",

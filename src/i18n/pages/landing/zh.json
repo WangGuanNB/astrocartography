@@ -100,6 +100,13 @@
               "icon": "RiPieChartLine"
             },
             {
+              "title": "今日行星位置",
+              "description": "当前热带星座、度数与逆行 — 无需出生资料",
+              "url": "/planetary-positions-today",
+              "target": "_self",
+              "icon": "RiTimeLine"
+            },
+            {
               "title": "过运盘计算器",
               "description": "查看行运行星如何与本命盘形成相位",
               "url": "/transit-chart-calculator",

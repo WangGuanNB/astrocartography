@@ -26,6 +26,11 @@
         "url": "/transit-chart-calculator"
       },
       {
+        "text": "只想看此刻的天空？",
+        "linkText": "今日行星位置",
+        "url": "/planetary-positions-today"
+      },
+      {
         "text": "想看更多教程与示例？",
         "linkText": "阅读博客",
         "url": "/posts"

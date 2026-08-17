@@ -78,6 +78,14 @@ Allow: /pt/midheaven-calculator
 Allow: /it/midheaven-calculator
 Allow: /de/midheaven-calculator
 
+# Planetary Positions Today
+Allow: /planetary-positions-today
+Allow: /zh/planetary-positions-today
+Allow: /es/planetary-positions-today
+Allow: /pt/planetary-positions-today
+Allow: /it/planetary-positions-today
+Allow: /de/planetary-positions-today
+
 Allow: /transit-chart-calculator
 Allow: /zh/transit-chart-calculator
 Allow: /es/transit-chart-calculator

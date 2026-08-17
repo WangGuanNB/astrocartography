@@ -16,6 +16,11 @@
           "url": "/tools/birth-chart-generator"
         },
         {
+          "text": "Nur den aktuellen Himmel, ohne Radix?",
+          "linkText": "Planetenpositionen Heute",
+          "url": "/planetary-positions-today"
+        },
+        {
           "text": "Wo Ihr Chart global gedeiht.",
           "linkText": "Astrokartografie Rechner",
           "url": "/"

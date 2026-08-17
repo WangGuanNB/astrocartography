@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "title": "Planetenpositionen Heute — Zeichen & Grade Kostenlos | AstroCarto",
+    "description": "Sieh kostenlos die Planetenpositionen heute: tropische Zeichen, Grade und Retrogradationen im geozentrischen Tierkreis — ohne Geburtsdaten. Öffne danach das Transit-Tool, um zu sehen, wie der aktuelle Himmel dein Radix aspektiert.",
+    "keywords": "Planetenpositionen heute, aktuelle Planetenposition, Planeten heute Zeichen, Planeten rückläufig, Planetenpositionen kostenlos"
+  },
+  "intentAnchor": {
+    "text": "Suchst du Planetenpositionen heute? Diese Seite zeigt sofort den aktuellen tropischen Himmel — ohne Geburtsdatum, -zeit oder -ort. Prüfe Zeichen, Grad und direkte oder rückläufige Bewegung jedes Planeten; um den Himmel von heute auf dein Radix zu legen, nutze den Transit-Rechner."
+  },
+  "internalLinks": {
+    "title": "Verwandte Tools",
+    "items": [
+      {
+        "text": "Den Himmel von heute auf dein Radix legen?",
+        "linkText": "Transit-Rechner",
+        "url": "/transit-chart-calculator"
+      },
+      {
+        "text": "Brauchst du das vollständige Horoskop mit Geburtszeit?",
+        "linkText": "Radix / Natal Chart",
+        "url": "/chart/natal-chart"
+      },
+      {
+        "text": "Lieber ein einfaches Rad generieren?",
+        "linkText": "Geburtshoroskop-Generator",
+        "url": "/tools/birth-chart-generator"
+      }
+    ]
+  },
+  "methodology": {
+    "label": "METHODIK",
+    "title": "So berechnen wir aktuelle Planetenpositionen",
+    "description": "Diese Tabelle wird mit der unten erläuterten Methode erzeugt.",
+    "highlights": [
+      { "label": "astronomy-engine", "url": "https://github.com/cosinekitty/astronomy" },
+      { "label": "Tropisch · Geozentrisch" },
+      { "label": "UTC" },
+      { "label": "Server-API" }
+    ],
+    "items": [
+      {
+        "title": "Rechen-Engine",
+        "description": "Planetenlängen nutzen die Open-Source-Bibliothek astronomy-engine (offizielles Projekt oben verlinkt): geozentrische Vektoren in tropische ekliptische Länge umgerechnet — dieselbe Rechenfamilie wie andere Chart-Rechner auf AstroCarto."
+      },
+      {
+        "title": "Wo die Verarbeitung läuft",
+        "description": "Beim Öffnen oder Aktualisieren ruft der Browser /api/calculate-planetary-positions auf. Der Server berechnet Sonne–Pluto zum angeforderten UTC-Zeitpunkt und liefert JSON. Diese Tabelle verlangt keine Geburtsdaten; optional nur Datum/Uhrzeit."
+      },
+      {
+        "title": "Koordinatensystem und Zeit",
+        "description": "Ergebnisse sind tropisch und geozentrisch (westlicher Tierkreis am Frühlingspunkt, nicht siderisch). Der angezeigte Zeitstempel ist UTC. Bei lokaler Datum/Uhrzeit wandelt der Client vor dem API-Aufruf in UTC um."
+      },
+      {
+        "title": "Zeichen, Grad und Rückläufigkeit",
+        "description": "Jede Länge wird in Zeichen und Grad im Zeichen (0°–29°) aufgeteilt. Die UI rundet auf Bogenminuten. Rückläufig (℞), wenn die tropische Länge in 24 h sinkt; Sonne und Mond immer direkt."
+      },
+      {
+        "title": "Himmelsaspekte und Grenzen",
+        "description": "Aspekte unter der Tabelle sind Himmel-zu-Himmel-Kontakte der heutigen Planeten mit denselben Orben wie im Transit-Tool — nicht zu Ihrem Radix. Häuser und Aszendent brauchen Geburtsort; für persönliche Charts Radix- oder Transit-Rechner nutzen."
+      }
+    ],
+    "disclaimer": "Astrologische Inhalte auf dieser Seite dienen nur der Information und Exploration. Sie sind keine medizinische, finanzielle, rechtliche oder sonstige Fachberatung und garantieren keine Ergebnisse. Wichtige Entscheidungen treffen Sie eigenverantwortlich.",
+    "lastUpdated": "2026-08-17",
+    "lastUpdatedLabel": "Zuletzt aktualisiert"
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Was sind Planetenpositionen heute",
+    "label": "Einführung",
+    "description": "Planetenpositionen heute sind die geozentrischen tropischen ekliptischen Längen von Sonne, Mond und Planeten in diesem Moment (oder zum gewählten Datum). Die westliche Astrologie liest sie als Zeichen und Grad: Sonne im Löwen, Mond in Waage, Saturn rückläufig im Widder usw. Das ist der Himmel selbst, nicht dein Radix. Die Frage «wo stehen die Planeten heute» braucht keine Geburtszeit. Häuser und Aszendent brauchen einen Ort; dieses Tool lässt sie bewusst weg, damit das Ergebnis zur Suchintention passt.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Tabelle Planetenpositionen heute mit Zeichen und Graden"
+    },
+    "items": [
+      {
+        "title": "Der Himmel jetzt, nicht dein Radix",
+        "description": "Das Radix friert den Himmel der Geburt ein. Aktuelle Planetenpositionen ändern sich ständig: der Mond etwa 13° pro Tag, die Sonne etwa 1°, die äußeren Planeten langsamer. Nutze diese Tabelle für sofortige Zeichen und Retrogradationen; das Radix für den Geburtsmoment; Transite, um zu sehen, wie der Himmel von heute dein Radix aspektiert.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp", "alt": "Aktueller Himmel versus Radix" }
+      },
+      {
+        "title": "Zeichen, Grad und Rückläufigkeit lesen",
+        "description": "Jeder Planet steht in einem der zwölf 30°-Zeichen. Der Grad im Zeichen (0°–29°) zeigt, wie weit er eingetreten ist. Die Tagesbewegung ist die Längenänderung in 24 Stunden; ist sie negativ, ist der Planet rückläufig (℞) — scheinbare Bewegung von der Erde aus. Sonne und Mond sind nie rückläufig. An Zeichenwechseltagen gibt es trotzdem nur eine tropische Länge; ein Planet kann nur in einem Zeichen stehen.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp", "alt": "Positionen lesen: Zeichen, Grad, Retrograd" }
+      },
+      {
+        "title": "Vom Himmel heute zu Timing und Ort",
+        "description": "Nach dem aktuellen Himmel folgt oft die persönliche und geografische Frage: denselben Himmel mit dem Transit-Rechner überlagern oder das Radix erzeugen, falls noch nicht vorhanden. Astrocartographie zeichnet Radix-Linien auf der Karte; sie zeichnet den Himmel nicht live neu. Die Karte beantwortet, wo deine Radix-Energie mitschwingt; diese Seite beantwortet, was der Himmel jetzt tut.",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp", "alt": "Von Planetenpositionen heute zu Transiten" }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Warum diese Tabelle des aktuellen Himmels",
+    "label": "Vorteile",
+    "description": "Kostenlose Planetenpositionen ohne Anmeldung, mit derselben geozentrischen tropischen Methode wie andere Chart-Tools auf der Seite. Ideal für einen schnellen Himmelsblick und dann klar weiter zu Transit und Radix.",
+    "items": [
+      {
+        "title": "Ohne Geburtsdaten",
+        "description": "Viele Suchen nach «Planeten heute» sollten keine Geburtsurkunde verlangen. Dieser Rechner lädt beim Öffnen die aktuelle UTC-Zeit. Datum und Uhrzeit brauchst du nur für einen anderen Zeitpunkt. Geburtszeit bleibt auf Radix-, Aszendent- und Transit-Seiten — dort ändert sie das Ergebnis.",
+        "icon": "RiGiftLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Himmelstabelle ohne Geburtsdaten" }
+      },
+      {
+        "title": "Echte Uhrzeit, keine Mittagsephemeriden",
+        "description": "Gedruckte Ephemeriden nutzen oft 00:00 oder 12:00 UTC. Für langsame Planeten reicht das; für den Mond täuscht es — von Mitternacht bis Mittag kann er sich um etwa 6° bewegen. Diese Tabelle nutzt den berechneten Zeitpunkt, damit der Mond zu «jetzt» passt, nicht zu einer Mittagstabelle.",
+        "icon": "RiTimeLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Echtzeit-Positionen statt Mittagsephemeride" }
+      },
+      {
+        "title": "Klare Grenzen, klarer nächster Schritt",
+        "description": "Geozentrische tropische Ergebnisse, nicht siderisch, heliozentrisch oder Tageshoroskop nach Sonnenzeichen. Häuser erscheinen in Tools mit Geburtsort. Nach der Tabelle öffne Transite, um zu sehen, wie diese Positionen deine Radix-Planeten aspektieren.",
+        "icon": "RiShieldCheckLine",
+        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Geozentrische tropische Positionen mit Kontext" }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "So nutzt du die Tabelle des aktuellen Himmels",
+    "label": "Anleitung",
+    "description": "Die Tabelle sollte beim Laden erscheinen. Optionales Datum und Uhrzeit dienen einem anderen Zeitpunkt, ohne diese Seite in einen Radix-Rechner zu verwandeln.",
+    "items": [
+      {
+        "title": "Live-Tabelle lesen",
+        "description": "Beim Laden fordert die Seite die Positionen für «jetzt» an. Jede Zeile zeigt Planet, tropisches Zeichen, Grad im Zeichen und direkte oder rückläufige Bewegung. Der Zeitstempel unter dem Titel ist die für die Berechnung genutzte UTC-Zeit.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Anderen Zeitpunkt wählen (optional)",
+        "description": "Für gestern, ein künftiges Datum oder eine bestimmte Uhrzeit nutze Datums- und Zeitfelder und berechne neu. «Jetzt» springt zum aktuellen Moment zurück und verhindert, auf einem alten Datum hängen zu bleiben.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Aspekte des aktuellen Himmels erkunden",
+        "description": "Unter der Tabelle siehst du Hauptaspekte zwischen den Planeten von heute (Konjunktion, Opposition, Quadrat, Trigon, Sextil) mit dem gleichen Orbis wie bei Transiten. Das ist Himmel zu Himmel, nicht zu deinem Radix. Es beschreibt das «Wetter» des Moments, nicht dein persönliches Transit.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Mit deinem Horoskop weitermachen",
+        "description": "Lautet die Frage «was bedeutet das für mich?», öffne den Transit-Rechner mit deinen Geburtsdaten. Brauchst du noch die Radix-Momentaufnahme, erzeuge das Natal Chart. Astrocartographie dient Radix-Linien auf der Karte, nicht als Live-Karte heutiger Transite.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Was dieser Rechner enthält",
+    "label": "Funktionen",
+    "description": "Kompaktes Tool für den aktuellen Himmel: tropische Längen, Retrograd-Markierung, optionales Datum und Uhrzeit, Verknüpfung zu persönlichen Chart-Rechnern.",
+    "items": [
+      {
+        "title": "Sonne bis Pluto",
+        "description": "Die Tabelle umfasst die zehn üblichen Körper westlicher Horoskope: Sonne, Mond, Merkur, Venus, Mars, Jupiter, Saturn, Uranus, Neptun und Pluto. Geozentrische Positionen in Zeichen und Grad, dasselbe System wie Radix und Transite bei AstroCarto.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Retrograd aus Tagesbewegung",
+        "description": "Sinkt die tropische Länge in 24 Stunden, wird rückläufig (℞) markiert — wie in Rx-Ephemeriden. Merkur rückläufig ist am meisten gesucht; äußere Planeten retrogradieren auch monatelang. Sonne und Mond laufen immer direkt.",
+        "icon": "RiRefreshLine"
+      },
+      {
+        "title": "Optionales Datum und Uhrzeit",
+        "description": "Abfrage eines anderen gregorianischen Datums und einer Uhrzeit ohne Registrierung. Der Client wandelt deine Ortszeit vor der Berechnung in UTC um. Für «den Himmel jetzt» die Standardwerte lassen.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Verknüpfung zu Transit und Radix",
+        "description": "Buttons unter dem Ergebnis führen zum Transit-Rechner und zur Natal-Chart-Seite. Diese URL fokussiert den aktuellen Himmel innerhalb des Chart-Tool-Clusters.",
+        "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Häufige Fragen",
+    "title": "Planetenpositionen heute — FAQ",
+    "description": "Fragen zu aktuellen Positionen, Retrogradation, tropisch vs. siderisch und Unterschied zum Transit-Horoskop.",
+    "items": [
+      {
+        "title": "Brauche ich die Geburtszeit für aktuelle Planetenpositionen?",
+        "description": "Nein. Planetenpositionen eines Zeitpunkts gehören zum Himmel in diesem Moment. Geburtszeit zählt für Aszendent, Häuser und präzisen Mond in Radix- und Transit-Horoskopen. Diese Seite lässt diese Daten bewusst weg."
+      },
+      {
+        "title": "Ist das tropischer oder siderischer Tierkreis?",
+        "description": "Tropisch geozentrisch. Der tropische Tierkreis richtet sich am Frühlingspunkt aus und wird von den meisten westlichen Radix-, Transit- und Astrocartographie-Tools auf dieser Seite genutzt. Siderisch (z. B. viel indische Astrologie) weicht durch Präzession ab, oft um mehr als ein Zeichen. Diese Seite wechselt das System nicht."
+      },
+      {
+        "title": "Welche Planeten sind heute rückläufig?",
+        "description": "Sieh in der Live-Tabelle nach ℞. Retrograd wird berechnet, wenn die tropische Länge abnimmt. Äußere Planeten können monatelang rückläufig sein; Merkur und Venus in kürzeren Zyklen. Wenn die Seite lange offen war, aktualisieren oder «Jetzt» klicken."
+      },
+      {
+        "title": "Worin unterscheidet sich das vom Transit-Horoskop?",
+        "description": "Diese Tabelle listet nur den Himmel. Transite legen diesen Himmel gegen deine Radix-Planeten und verlangen meist Geburtsdatum, -zeit und -ort. Fragst du «wo steht Mars heute?», bleib hier; bei «aspektiert Transit-Mars meine Radix-Sonne im Quadrat?», nutze den Transit-Rechner."
+      },
+      {
+        "title": "Wie oft ändern sich die Positionen?",
+        "description": "Ständig, in unterschiedlichem Tempo. Der Mond wechselt alle paar Tage das Zeichen; die Sonne etwa monatlich; Merkur, Venus und Mars in Wochen oder Monaten; Jupiter bis Pluto können ein Zeichen monate- oder jahrelang halten. Deshalb ist der Zeitstempel für den Mond wichtiger als für die äußeren Planeten."
+      },
+      {
+        "title": "Warum stimmt der Mond nicht mit einer Mittagsephemeride überein?",
+        "description": "Tabellen um 00:00 oder 12:00 UTC sind Konvention, nicht die einzige Position «des Tages». Der Mond kann zwischen diesem Snapshot und deinem lokalen Nachmittag mehrere Grad wandern. Dieser Rechner nutzt den von dir angeforderten Zeitpunkt, ohne Mittag zu erzwingen."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Sieh, wie der Himmel von heute auf dein Horoskop wirkt",
+    "description": "Du hast den aktuellen tropischen Himmel gesehen. Lege dieselben Positionen mit dem kostenlosen Transit-Rechner auf dein Radix — dort brauchst du Geburtsdaten, weil es persönliches Timing ist, keine Himmelstabelle.",
+    "buttons": [
+      {
+        "title": "Transit-Rechner öffnen",
+        "icon": "RiTimeLine",
+        "url": "/transit-chart-calculator",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  },
+  "tool": {
+    "form": {
+      "date": "Datum (optional)",
+      "time": "Uhrzeit (optional, lokal)",
+      "submit": "Positionen berechnen",
+      "now": "Jetzt",
+      "calculating": "Berechne…"
+    },
+    "result": {
+      "title": "Aktuelle Planetenpositionen",
+      "timestampLabel": "Berechnet für",
+      "systemNote": "Geozentrische tropische ekliptische Längen. Häuser und Aszendent brauchen einen Ort und werden deshalb nicht angezeigt. Das sind Himmelsdaten, keine persönliche Transit-Deutung.",
+      "planet": "Planet",
+      "sign": "Zeichen",
+      "degree": "Grad",
+      "direction": "Bewegung",
+      "direct": "Direkt",
+      "retrograde": "Rückläufig",
+      "aspectsTitle": "Aspekte des aktuellen Himmels",
+      "aspect": "Aspekt",
+      "orb": "Orbis",
+      "ctaTransit": "Transite auf Radix ansehen",
+      "ctaNatal": "Radix erzeugen"
+    },
+    "errors": {
+      "invalid": "Datum oder Uhrzeit konnte nicht gelesen werden. Nutze JJJJ-MM-TT und HH:MM oder klicke «Jetzt».",
+      "generic": "Positionen konnten nicht berechnet werden. Bitte erneut versuchen."
+    }
+  }
+}
