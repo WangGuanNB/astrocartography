@@ -33,8 +33,8 @@ import { useLocale } from 'next-intl';
 import { loadStripe } from '@stripe/stripe-js';
 import { toast } from 'sonner';
 import { PricingItem } from '@/types/blocks/pricing';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { PaymentMethod } from '@/components/payment/PaymentMethodSelector';
+import { paymentEvents } from '@/lib/analytics';
 
 /**
  * 支付处理 Hook
@@ -49,7 +49,6 @@ import { PaymentMethod } from '@/components/payment/PaymentMethodSelector';
 export function usePayment() {
   const { user, setShowSignModal } = useAppContext();
   const locale = useLocale();
-  const isMobile = useIsMobile();
   const [isLoading, setIsLoading] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
   const [showPaymentSelector, setShowPaymentSelector] = useState(false);
@@ -222,18 +221,21 @@ export function usePayment() {
 
       // 根据支付方式处理跳转
       if (paymentMethod === "creem" || data.payment_method === "creem") {
-        // Creem 支付：移动端直接跳转，桌面端新标签页打开
+        // Creem: always same-tab redirect so checkout is not eaten by popup blockers.
         const { checkout_url } = data;
 
         // 如果返回 redirect_to_creem，说明需要调用 creem API
         if (data.redirect_to_creem) {
-          // 调用 creem API
+          // Reuse the order already created by /api/checkout — do not insert a second row.
           const creemResponse = await fetch("/api/checkout/creem", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(params),
+            body: JSON.stringify({
+              ...params,
+              existing_order_no: data.order_no,
+            }),
           });
 
           const creemData = await creemResponse.json();
@@ -244,22 +246,24 @@ export function usePayment() {
 
           const creemCheckoutUrl = creemData.data.checkout_url;
           if (creemCheckoutUrl) {
-            if (isMobile) {
-              window.location.href = creemCheckoutUrl;
-            } else {
-              window.open(creemCheckoutUrl, '_blank', 'noopener,noreferrer');
-            }
+            paymentEvents.paymentInitiated(
+              item.product_name || item.title || item.product_id,
+              (item.amount || 0) / 100,
+              item.product_id
+            );
+            window.location.href = creemCheckoutUrl;
             return { success: true };
           } else {
             toast.error("Failed to get Creem checkout URL");
             return { success: false, message: "Failed to get Creem checkout URL" };
           }
         } else if (checkout_url) {
-          if (isMobile) {
-            window.location.href = checkout_url;
-          } else {
-            window.open(checkout_url, '_blank', 'noopener,noreferrer');
-          }
+          paymentEvents.paymentInitiated(
+            item.product_name || item.title || item.product_id,
+            (item.amount || 0) / 100,
+            item.product_id
+          );
+          window.location.href = checkout_url;
           return { success: true };
         } else {
           toast.error("Failed to get checkout URL");
@@ -269,6 +273,11 @@ export function usePayment() {
         // PayPal 支付：跳转到 PayPal 支付页面
         const { approval_url } = data;
         if (approval_url) {
+          paymentEvents.paymentInitiated(
+            item.product_name || item.title || item.product_id,
+            (item.amount || 0) / 100,
+            item.product_id
+          );
           window.location.href = approval_url;
           return { success: true };
         } else {
@@ -289,6 +298,12 @@ export function usePayment() {
           toast.error("checkout failed");
           return { success: false };
         }
+
+        paymentEvents.paymentInitiated(
+          item.product_name || item.title || item.product_id,
+          (item.amount || 0) / 100,
+          item.product_id
+        );
 
         // 跳转到Stripe支付页面
         const result = await stripe.redirectToCheckout({

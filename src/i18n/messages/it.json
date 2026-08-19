@@ -246,6 +246,17 @@
       "stripe_payment": "Pagamento Stripe",
       "creem_payment": "Pagamento Creem"
     },
+    "checkout": {
+      "title": "Pagamento sicuro",
+      "subtitle": "Crittografia SSL a 256 bit · Annulla quando vuoi",
+      "card_name": "Carta di credito / debito",
+      "card_description": "Visa · Mastercard · Apple Pay · Google Pay",
+      "paypal_name": "PayPal",
+      "paypal_description": "Paga con il saldo PayPal o una carta collegata",
+      "recommended": "Consigliato",
+      "or_continue": "oppure continua con",
+      "come_back": "Non sei pronto? Nessun problema — torna quando vuoi."
+    },
     "test": {
       "basic": {
         "title": "Piano Base",
@@ -444,10 +455,12 @@
   "astro_chat": {
     "credit_cost_notice": "Ogni conversazione consuma {credits} crediti",
     "credit_cost_notice_singular": "Ogni conversazione consuma {credits} credito",
-    "insufficient_credits_title": "Crediti Insufficienti",
-    "insufficient_credits_message": "La tua prova gratuita è terminata. Per sbloccare più conversazioni, usa le nostre funzionalità a pagamento.",
+    "insufficient_credits_title": "Crediti insufficienti",
+    "insufficient_credits_message": "La tua prova gratuita è terminata. Sblocca più conversazioni con un piano a pagamento.",
     "insufficient_credits_close": "Chiudi",
-    "insufficient_credits_upgrade": "Aggiorna",
+    "insufficient_credits_upgrade": "Vedi i piani",
+    "header_subtitle": "La storia del tuo cielo",
+    "credits_label": "Crediti: {credits}",
     "download_chat": "Scarica Chat",
     "view_history": "Cronologia",
     "download_success": "Chat scaricata con successo",

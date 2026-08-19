@@ -208,8 +208,13 @@ export default function Pricing({
 
   const visibleItems = useMemo(
     () =>
-      sortedItems.filter((item) => !item.group || item.group === group),
-    [sortedItems, group]
+      sortedItems.filter((item) => {
+        if (item.group && item.group !== group) return false;
+        // Paywall users already used the free trial; keep the free card off the modal.
+        if (isInModal && (!item.amount || item.amount <= 0)) return false;
+        return true;
+      }),
+    [sortedItems, group, isInModal]
   );
 
   const showSubscriptionLink = useMemo(

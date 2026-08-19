@@ -258,6 +258,17 @@
       "stripe_payment": "Stripe 支付",
       "creem_payment": "Creem 支付"
     },
+    "checkout": {
+      "title": "安全结账",
+      "subtitle": "256 位 SSL 加密 · 可随时取消",
+      "card_name": "信用卡 / 借记卡",
+      "card_description": "Visa · Mastercard · Apple Pay · Google Pay",
+      "paypal_name": "PayPal",
+      "paypal_description": "使用 PayPal 余额或绑定的银行卡支付",
+      "recommended": "推荐",
+      "or_continue": "或使用",
+      "come_back": "还没准备好？没关系，随时可以回来。"
+    },
     "test": {
       "basic": {
         "title": "基础套餐",
@@ -414,6 +425,8 @@
     "insufficient_credits_message": "您的免费体验次数已用完，解锁更多对话次数，请使用我们的付费功能",
     "insufficient_credits_close": "关闭",
     "insufficient_credits_upgrade": "去付费",
+    "header_subtitle": "解读你的行星故事",
+    "credits_label": "积分：{credits}",
     "download_chat": "下载对话",
     "export_requires_paid": "导出对话需标准包或专业包，请升级后保存本次会话。",
     "view_history": "历史记录",

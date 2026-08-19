@@ -246,6 +246,17 @@
       "stripe_payment": "Pago con Stripe",
       "creem_payment": "Pago Creem"
     },
+    "checkout": {
+      "title": "Pago seguro",
+      "subtitle": "Cifrado SSL de 256 bits · Cancela cuando quieras",
+      "card_name": "Tarjeta de crédito / débito",
+      "card_description": "Visa · Mastercard · Apple Pay · Google Pay",
+      "paypal_name": "PayPal",
+      "paypal_description": "Paga con tu saldo de PayPal o una tarjeta vinculada",
+      "recommended": "Recomendado",
+      "or_continue": "o continúa con",
+      "come_back": "¿Aún no? No hay problema, puedes volver cuando quieras."
+    },
     "test": {
       "basic": {
         "title": "Plan Básico",
@@ -444,10 +455,12 @@
   "astro_chat": {
     "credit_cost_notice": "Cada conversación consume {credits} créditos",
     "credit_cost_notice_singular": "Cada conversación consume {credits} crédito",
-    "insufficient_credits_title": "Créditos Insuficientes",
-    "insufficient_credits_message": "Tu prueba gratuita se ha agotado. Para desbloquear más conversaciones, usa nuestras funciones de pago.",
+    "insufficient_credits_title": "Créditos insuficientes",
+    "insufficient_credits_message": "Tu prueba gratuita se acabó. Desbloquea más conversaciones con un plan de pago.",
     "insufficient_credits_close": "Cerrar",
-    "insufficient_credits_upgrade": "Actualizar",
+    "insufficient_credits_upgrade": "Ver planes",
+    "header_subtitle": "Revelando la historia de tus planetas",
+    "credits_label": "Créditos: {credits}",
     "download_chat": "Descargar Chat",
     "view_history": "Historial",
     "download_success": "Chat descargado exitosamente",

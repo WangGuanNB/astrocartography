@@ -227,6 +227,17 @@
       "stripe_payment": "Pagamento Stripe",
       "creem_payment": "Pagamento Creem"
     },
+    "checkout": {
+      "title": "Pagamento seguro",
+      "subtitle": "Criptografia SSL de 256 bits · Cancele quando quiser",
+      "card_name": "Cartão de crédito / débito",
+      "card_description": "Visa · Mastercard · Apple Pay · Google Pay",
+      "paypal_name": "PayPal",
+      "paypal_description": "Pague com seu saldo PayPal ou um cartão vinculado",
+      "recommended": "Recomendado",
+      "or_continue": "ou continue com",
+      "come_back": "Ainda não está pronto? Sem problema — volte quando quiser."
+    },
     "test": {
       "basic": {
         "title": "Plano Básico",
@@ -371,10 +382,12 @@
   "astro_chat": {
     "credit_cost_notice": "Cada conversa consome {credits} créditos",
     "credit_cost_notice_singular": "Cada conversa consome {credits} crédito",
-    "insufficient_credits_title": "Créditos Insuficientes",
-    "insufficient_credits_message": "Sua experiência gratuita foi esgotada. Para desbloquear mais conversas, use nossos recursos pagos.",
+    "insufficient_credits_title": "Créditos insuficientes",
+    "insufficient_credits_message": "Sua experiência gratuita acabou. Desbloqueie mais conversas com um plano pago.",
     "insufficient_credits_close": "Fechar",
-    "insufficient_credits_upgrade": "Fazer Upgrade",
+    "insufficient_credits_upgrade": "Ver planos",
+    "header_subtitle": "Revelando a história do seu mapa",
+    "credits_label": "Créditos: {credits}",
     "download_chat": "Baixar Conversa",
     "view_history": "Histórico",
     "download_success": "Conversa baixada com sucesso",

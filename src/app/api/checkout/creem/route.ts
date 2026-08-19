@@ -4,7 +4,7 @@
  */
 
 import { getUserEmail, getUserUuid } from "@/services/user";
-import { insertOrder, updateOrderSession } from "@/models/order";
+import { findOrderByOrderNo, insertOrder, updateOrderSession } from "@/models/order";
 import { respData, respErr } from "@/lib/resp";
 
 import { Order } from "@/types/order";
@@ -33,6 +33,7 @@ export async function POST(req: Request) {
       cancel_url,
       locale,
       creem_product_id, // Creem 产品 ID（可选，如果提供则直接使用）
+      existing_order_no,
     } = await req.json();
 
     if (!cancel_url) {
@@ -131,51 +132,65 @@ export async function POST(req: Request) {
       return respErr("invalid user");
     }
 
-    // 创建订单
-    const order_no = getSnowId();
-    const currentDate = new Date();
-    const created_at = currentDate.toISOString();
+    let order_no = typeof existing_order_no === "string" ? existing_order_no : "";
 
-    let expired_at = "";
-
-    const timePeriod = new Date(currentDate);
-
-    // 🔥 特殊处理：永久有效的套餐（valid_months === 0 且 one-time）
-    if (valid_months === 0 && interval === "one-time") {
-      // 永久有效：设置为 2099-12-31 23:59:59
-      timePeriod.setFullYear(2099, 11, 31); // 11 = 12月（0-based）
-      timePeriod.setHours(23, 59, 59, 999);
-    } else if (product_id === "premium-2weeks" && valid_months === 0) {
-      // 特殊处理 2 周通行证
-      timePeriod.setDate(currentDate.getDate() + 14);
+    if (order_no) {
+      const existing = await findOrderByOrderNo(order_no);
+      if (
+        !existing ||
+        existing.user_uuid !== user_uuid ||
+        existing.status !== "created" ||
+        existing.product_id !== product_id
+      ) {
+        return respErr("invalid existing order");
+      }
     } else {
-      // 正常处理：按月计算
-      timePeriod.setMonth(currentDate.getMonth() + valid_months);
+      // 创建订单
+      order_no = getSnowId();
+      const currentDate = new Date();
+      const created_at = currentDate.toISOString();
+
+      let expired_at = "";
+
+      const timePeriod = new Date(currentDate);
+
+      // 🔥 特殊处理：永久有效的套餐（valid_months === 0 且 one-time）
+      if (valid_months === 0 && interval === "one-time") {
+        // 永久有效：设置为 2099-12-31 23:59:59
+        timePeriod.setFullYear(2099, 11, 31); // 11 = 12月（0-based）
+        timePeriod.setHours(23, 59, 59, 999);
+      } else if (product_id === "premium-2weeks" && valid_months === 0) {
+        // 特殊处理 2 周通行证
+        timePeriod.setDate(currentDate.getDate() + 14);
+      } else {
+        // 正常处理：按月计算
+        timePeriod.setMonth(currentDate.getMonth() + valid_months);
+      }
+
+      const timePeriodMillis = timePeriod.getTime();
+      // 订阅订单支付成功后立即开始计算有效期，不再延迟
+      const newDate = new Date(timePeriodMillis);
+
+      expired_at = newDate.toISOString();
+
+      const order = {
+        order_no: order_no,
+        created_at: new Date(created_at),
+        user_uuid: user_uuid,
+        user_email: user_email,
+        amount: amount,
+        interval: interval,
+        expired_at: new Date(expired_at),
+        status: "created",
+        credits: credits,
+        currency: currency,
+        product_id: product_id,
+        product_name: product_name,
+        valid_months: valid_months,
+        pay_type: "creem",
+      };
+      await insertOrder(order as typeof orders.$inferInsert);
     }
-
-    const timePeriodMillis = timePeriod.getTime();
-    // 订阅订单支付成功后立即开始计算有效期，不再延迟
-    const newDate = new Date(timePeriodMillis);
-
-    expired_at = newDate.toISOString();
-
-    const order = {
-      order_no: order_no,
-      created_at: new Date(created_at),
-      user_uuid: user_uuid,
-      user_email: user_email,
-      amount: amount,
-      interval: interval,
-      expired_at: new Date(expired_at),
-      status: "created",
-      credits: credits,
-      currency: currency,
-      product_id: product_id,
-      product_name: product_name,
-      valid_months: valid_months,
-      pay_type: "creem",
-    };
-    await insertOrder(order as typeof orders.$inferInsert);
 
     // 构建成功和取消 URL
     // 🔥 根据 Creem 文档：支付成功后会重定向到 success_url，并带有查询参数

@@ -548,7 +548,7 @@ export default function AstroChat({
     if (!entitlements?.canExportCurrentChat) {
       toast.error(t('export_requires_paid'));
       await fetchPricingData();
-      setPricingPreferredProductId('professional');
+      setPricingPreferredProductId('standard');
       setShowPricingModal(true);
       paymentEvents.pricingModalOpened('other');
       return;
@@ -1230,7 +1230,7 @@ export default function AstroChat({
               <Coins className="size-3.5" />
               <span>
                 {userCredits !== null && (
-                  <span className="font-semibold">Credits: {userCredits} | </span>
+                  <span className="font-semibold">{t('credits_label', { credits: userCredits })} | </span>
                 )}
                 {effectiveCreditCost === 1 
                   ? t('credit_cost_notice_singular', { credits: effectiveCreditCost })
@@ -1291,7 +1291,7 @@ export default function AstroChat({
                       Astro Chat
                     </DialogTitle>
                     <DialogDescription className="text-sm text-gray-400">
-                      Revealing your planetary story
+                      {t('header_subtitle')}
                     </DialogDescription>
                   </div>
                 </div>
@@ -1329,7 +1329,7 @@ export default function AstroChat({
                 <div className="flex items-center gap-3">
                   {user && userCredits !== null && (
                     <div className="text-xs text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full border border-blue-400/20">
-                      Credits: {userCredits}
+                      {t('credits_label', { credits: userCredits })}
                     </div>
                   )}
                   {/* 暂时隐藏使用次数提醒 */}
@@ -1432,8 +1432,8 @@ export default function AstroChat({
                   if (!pricingData) {
                     await fetchPricingData();
                   }
-                  // 打开价格弹窗，默认定位到 Professional（$18.9）
-                  setPricingPreferredProductId('professional');
+                  // 打开价格弹窗，默认定位到 Standard（$9.9）
+                  setPricingPreferredProductId('standard');
                   setShowPricingModal(true);
                   // 📊 埋点：打开价格弹窗（由积分不足触发）
                   paymentEvents.pricingModalOpened('insufficient_credits');
@@ -1461,11 +1461,11 @@ export default function AstroChat({
                   <Sparkles className="size-4 text-white" />
                 </div>
                 <div>
-                  <DrawerTitle className="text-lg font-bold text-white">
+                    <DrawerTitle className="text-lg font-bold text-white">
                     Astro Chat
                   </DrawerTitle>
                   <p className="text-xs text-gray-400">
-                    Revealing your planetary story
+                    {t('header_subtitle')}
                   </p>
                 </div>
               </div>
@@ -1503,7 +1503,7 @@ export default function AstroChat({
               <div className="flex items-center gap-2">
                 {user && userCredits !== null && (
                   <div className="text-xs text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-full border border-blue-400/20">
-                    Credits: {userCredits}
+                    {t('credits_label', { credits: userCredits })}
                   </div>
                 )}
                 {/* 暂时隐藏使用次数提醒 */}
@@ -1607,8 +1607,8 @@ export default function AstroChat({
                 if (!pricingData) {
                   await fetchPricingData();
                 }
-                // 打开价格弹窗，默认定位到 Professional（$18.9）
-                setPricingPreferredProductId('professional');
+                // 打开价格弹窗，默认定位到 Standard（$9.9）
+                setPricingPreferredProductId('standard');
                 setShowPricingModal(true);
                 // 📊 埋点：打开价格弹窗（由积分不足触发）
                 paymentEvents.pricingModalOpened('insufficient_credits');

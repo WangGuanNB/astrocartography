@@ -1536,7 +1536,7 @@ ${lines}`;
             open={showPricingModal}
             onOpenChange={setShowPricingModal}
             pricing={pricingData}
-            preferredProductId="professional"
+            preferredProductId="standard"
           />
         )}
     </>,

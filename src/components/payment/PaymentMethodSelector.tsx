@@ -7,6 +7,7 @@
 "use client";
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import {
   Dialog,
   DialogContent,
@@ -81,12 +82,14 @@ interface PaymentMethodSelectorProps {
  * 获取可用的支付方式列表（优先级：Creem > PayPal > Stripe）
  * 现阶段 Creem 为生产主力，PayPal 为试水补充，待 PayPal 生产稳定后可调换顺序
  */
-const getAvailablePaymentMethods = (): PaymentMethodConfig[] => {
+const getAvailablePaymentMethods = (
+  t: ReturnType<typeof useTranslations>
+): PaymentMethodConfig[] => {
   const methods: PaymentMethodConfig[] = [
     {
       id: 'creem',
-      name: 'Credit / Debit Card',
-      description: 'Visa · Mastercard · Apple Pay · Google Pay',
+      name: t('card_name'),
+      description: t('card_description'),
       icon: (
         <div className="flex items-center gap-1">
           <VisaLogo />
@@ -98,8 +101,8 @@ const getAvailablePaymentMethods = (): PaymentMethodConfig[] => {
     },
     {
       id: 'stripe',
-      name: 'Credit / Debit Card',
-      description: 'Visa · Mastercard · Apple Pay · Google Pay',
+      name: t('card_name'),
+      description: t('card_description'),
       icon: (
         <div className="flex items-center gap-1">
           <VisaLogo />
@@ -111,8 +114,8 @@ const getAvailablePaymentMethods = (): PaymentMethodConfig[] => {
     },
     {
       id: 'paypal',
-      name: 'PayPal',
-      description: 'Pay with your PayPal balance or linked card',
+      name: t('paypal_name'),
+      description: t('paypal_description'),
       icon: <PayPalLogo />,
       enabled: process.env.NEXT_PUBLIC_PAYMENT_PAYPAL_ENABLED === 'true',
     },
@@ -130,7 +133,8 @@ export function PaymentMethodSelector({
   onOpenChange,
   onSelect,
 }: PaymentMethodSelectorProps) {
-  const availableMethods = getAvailablePaymentMethods();
+  const t = useTranslations('payment.checkout');
+  const availableMethods = getAvailablePaymentMethods(t);
 
   if (availableMethods.length === 0) {
     return null;
@@ -155,11 +159,11 @@ export function PaymentMethodSelector({
           <div className="flex items-center gap-1.5">
             <Lock className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />
             <DialogTitle className="text-base font-semibold">
-              Secure Checkout
+              {t('title')}
             </DialogTitle>
           </div>
           <DialogDescription className="text-xs text-muted-foreground">
-            256-bit SSL encrypted · Cancel anytime
+            {t('subtitle')}
           </DialogDescription>
         </DialogHeader>
 
@@ -177,7 +181,7 @@ export function PaymentMethodSelector({
               <div className="flex items-center gap-1.5 flex-wrap">
                 <span className="font-semibold text-sm leading-tight">{primary.name}</span>
                 <Badge variant="default" className="text-[10px] px-1.5 py-0 h-4 leading-none">
-                  Recommended
+                  {t('recommended')}
                 </Badge>
               </div>
               <ChevronRight className="w-4 h-4 text-primary flex-shrink-0" />
@@ -188,7 +192,7 @@ export function PaymentMethodSelector({
                 {primary.icon}
               </div>
               <div className="text-[11px] text-muted-foreground leading-tight">
-                {primary.description}
+                {primary.id === 'paypal' ? t('paypal_description') : t('card_description')}
               </div>
             </div>
           </button>
@@ -197,7 +201,7 @@ export function PaymentMethodSelector({
           {alternatives.length > 0 && (
             <div className="flex items-center gap-2">
               <div className="flex-1 border-t border-border/40" />
-              <span className="text-[11px] text-muted-foreground whitespace-nowrap">or continue with</span>
+              <span className="text-[11px] text-muted-foreground whitespace-nowrap">{t('or_continue')}</span>
               <div className="flex-1 border-t border-border/40" />
             </div>
           )}
@@ -216,9 +220,11 @@ export function PaymentMethodSelector({
                 {method.icon}
               </div>
               <div className="flex-1 text-left min-w-0">
-                <div className="font-medium text-sm leading-tight">{method.name}</div>
+                <div className="font-medium text-sm leading-tight">
+                  {method.id === 'paypal' ? t('paypal_name') : t('card_name')}
+                </div>
                 <div className="text-[11px] text-muted-foreground mt-0.5 leading-tight">
-                  {method.description}
+                  {method.id === 'paypal' ? t('paypal_description') : t('card_description')}
                 </div>
               </div>
               <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground flex-shrink-0 transition-colors" />
@@ -227,7 +233,7 @@ export function PaymentMethodSelector({
 
           {/* 底部轻松文案，降低用户压力 */}
           <p className="text-center text-[11px] text-muted-foreground/70 pt-0.5">
-            Not ready? No worries — come back anytime.
+            {t('come_back')}
           </p>
         </div>
       </DialogContent>

@@ -245,6 +245,17 @@
       "stripe_payment": "Pembayaran Stripe",
       "creem_payment": "Pembayaran Creem"
     },
+    "checkout": {
+      "title": "Pembayaran selamat",
+      "subtitle": "Penyulitan SSL 256-bit · Batal bila-bila masa",
+      "card_name": "Kad kredit / debit",
+      "card_description": "Visa · Mastercard · Apple Pay · Google Pay",
+      "paypal_name": "PayPal",
+      "paypal_description": "Bayar dengan baki PayPal atau kad yang dipautkan",
+      "recommended": "Disyorkan",
+      "or_continue": "atau teruskan dengan",
+      "come_back": "Belum bersedia? Tidak mengapa — datang semula bila-bila masa."
+    },
     "test": {
       "basic": {
         "title": "Pelan Asas",
@@ -294,6 +305,8 @@
     "insufficient_credits_message": "Percubaan percuma anda telah habis. Untuk membuka lebih banyak perbualan, sila gunakan fungsi berbayar kami.",
     "insufficient_credits_close": "Tutup",
     "insufficient_credits_upgrade": "Naik Taraf",
+    "header_subtitle": "Mendedahkan cerita planet anda",
+    "credits_label": "Kredit: {credits}",
     "download_chat": "Muat Turun Sembang",
     "view_history": "Sejarah",
     "download_success": "Sembang berjaya dimuat turun",

@@ -258,6 +258,17 @@
       "stripe_payment": "Stripe Payment",
       "creem_payment": "Creem Payment"
     },
+    "checkout": {
+      "title": "Secure Checkout",
+      "subtitle": "256-bit SSL encrypted · Cancel anytime",
+      "card_name": "Credit / Debit Card",
+      "card_description": "Visa · Mastercard · Apple Pay · Google Pay",
+      "paypal_name": "PayPal",
+      "paypal_description": "Pay with your PayPal balance or linked card",
+      "recommended": "Recommended",
+      "or_continue": "or continue with",
+      "come_back": "Not ready? No worries — come back anytime."
+    },
     "test": {
       "basic": {
         "title": "Basic Plan",
@@ -414,6 +425,8 @@
     "insufficient_credits_message": "Your free trial has been used up. To unlock more conversations, please upgrade to our premium plan.",
     "insufficient_credits_close": "Close",
     "insufficient_credits_upgrade": "Upgrade",
+    "header_subtitle": "Revealing your planetary story",
+    "credits_label": "Credits: {credits}",
     "download_chat": "Download Chat",
     "export_requires_paid": "Export is available on Standard or Professional plans. Upgrade to save this conversation.",
     "view_history": "History",

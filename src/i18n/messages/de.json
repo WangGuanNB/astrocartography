@@ -246,6 +246,17 @@
       "stripe_payment": "Stripe",
       "creem_payment": "Creem"
     },
+    "checkout": {
+      "title": "Sichere Zahlung",
+      "subtitle": "256-Bit-SSL-Verschlüsselung · Jederzeit kündbar",
+      "card_name": "Kredit- / Debitkarte",
+      "card_description": "Visa · Mastercard · Apple Pay · Google Pay",
+      "paypal_name": "PayPal",
+      "paypal_description": "Mit PayPal-Guthaben oder verknüpfter Karte bezahlen",
+      "recommended": "Empfohlen",
+      "or_continue": "oder weiter mit",
+      "come_back": "Noch nicht soweit? Kein Problem — komm jederzeit wieder."
+    },
     "test": {
       "basic": {
         "title": "Basic-Tarif",
@@ -401,6 +412,8 @@
     "insufficient_credits_message": "Ihre kostenlose Testversion ist aufgebraucht. Für weitere Gespräche bitte auf den Premium-Tarif upgraden.",
     "insufficient_credits_close": "Schließen",
     "insufficient_credits_upgrade": "Upgraden",
+    "header_subtitle": "Deine planetare Geschichte",
+    "credits_label": "Credits: {credits}",
     "download_chat": "Chat herunterladen",
     "view_history": "Verlauf",
     "download_success": "Chat erfolgreich heruntergeladen",
