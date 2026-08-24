@@ -60,7 +60,17 @@ export async function handleOrderSession(session: Stripe.Checkout.Session) {
     const paid_detail = JSON.stringify(session);
 
     const order = await findOrderByOrderNo(order_no);
-    if (!order || order.status !== OrderStatus.Created) {
+    if (!order) {
+      throw new Error("invalid order");
+    }
+
+    // Webhook often fulfills first; pay-success then runs the same handler.
+    if (order.status === OrderStatus.Paid) {
+      console.log("handle order session already paid, skip: ", order_no);
+      return;
+    }
+
+    if (order.status !== OrderStatus.Created) {
       throw new Error("invalid order");
     }
 

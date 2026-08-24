@@ -1,6 +1,6 @@
-import Stripe from "stripe";
 import { handleOrderSession } from "@/services/order";
 import { redirect } from "@/i18n/navigation";
+import { getStripeClient } from "@/lib/stripe";
 
 export default async function ({
   params,
@@ -15,7 +15,7 @@ export default async function ({
       redirectLocale = locale;
     }
 
-    const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY || "");
+    const stripe = getStripeClient();
     const session = await stripe.checkout.sessions.retrieve(session_id);
 
     await handleOrderSession(session);

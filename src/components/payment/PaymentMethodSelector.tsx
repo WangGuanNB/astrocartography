@@ -79,26 +79,12 @@ interface PaymentMethodSelectorProps {
 }
 
 /**
- * 获取可用的支付方式列表（优先级：Creem > PayPal > Stripe）
- * 现阶段 Creem 为生产主力，PayPal 为试水补充，待 PayPal 生产稳定后可调换顺序
+ * 获取可用的支付方式列表（优先级：Stripe > PayPal > Creem）
  */
 const getAvailablePaymentMethods = (
   t: ReturnType<typeof useTranslations>
 ): PaymentMethodConfig[] => {
   const methods: PaymentMethodConfig[] = [
-    {
-      id: 'creem',
-      name: t('card_name'),
-      description: t('card_description'),
-      icon: (
-        <div className="flex items-center gap-1">
-          <VisaLogo />
-          <MastercardLogo />
-          <ApplePayLogo />
-        </div>
-      ),
-      enabled: process.env.NEXT_PUBLIC_PAYMENT_CREEM_ENABLED === 'true',
-    },
     {
       id: 'stripe',
       name: t('card_name'),
@@ -118,6 +104,19 @@ const getAvailablePaymentMethods = (
       description: t('paypal_description'),
       icon: <PayPalLogo />,
       enabled: process.env.NEXT_PUBLIC_PAYMENT_PAYPAL_ENABLED === 'true',
+    },
+    {
+      id: 'creem',
+      name: t('card_name'),
+      description: t('card_description'),
+      icon: (
+        <div className="flex items-center gap-1">
+          <VisaLogo />
+          <MastercardLogo />
+          <ApplePayLogo />
+        </div>
+      ),
+      enabled: process.env.NEXT_PUBLIC_PAYMENT_CREEM_ENABLED === 'true',
     },
   ];
 

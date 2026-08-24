@@ -2,7 +2,7 @@
  * @fileoverview 统一支付 Checkout API
  * @description 支持多支付方式（Stripe/PayPal/Creem），根据配置自动选择或手动指定
  *
- * ⚠️ 重要：保持向后兼容，不影响现有的 Creem 支付
+ * ⚠️ 当前生产：一次性走 Stripe / PayPal；Creem 与 Plus 订阅暂时关闭
  */
 
 import { getUserEmail, getUserUuid } from "@/services/user";
@@ -16,6 +16,8 @@ import { PricingItem } from "@/types/blocks/pricing";
 import { orders } from "@/db/schema";
 import Stripe from "stripe";
 import { createPayPalOrder } from "@/services/paypal";
+import { getStripeClient } from "@/lib/stripe";
+import { isSubscriptionEnabled, isPlusProductId } from "@/services/subscription";
 import {
   getGaClientIdFromRequest,
   reportCheckoutCreated,
@@ -77,6 +79,13 @@ async function validateAndCreateOrder(params: {
   }
 
   const is_subscription = interval === "month" || interval === "year";
+
+  if (
+    (is_subscription || isPlusProductId(product_id)) &&
+    !isSubscriptionEnabled()
+  ) {
+    throw new Error("subscription plans are temporarily unavailable");
+  }
 
   if (interval === "year" && valid_months !== 12) {
     throw new Error("invalid valid_months");
@@ -187,7 +196,7 @@ async function handleStripeCheckout(params: {
     throw new Error("STRIPE_PRIVATE_KEY is not configured");
   }
 
-  const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY);
+  const stripe = getStripeClient();
 
   let options: Stripe.Checkout.SessionCreateParams = {
     payment_method_types: ["card"],
@@ -369,20 +378,20 @@ export async function POST(req: Request) {
       payment_method, // 新增：用户选择的支付方式
     } = await req.json();
 
-    // 2. 确定支付方式：优先使用用户选择的，否则自动选择
-    // ⚠️ 向后兼容：如果没有指定 payment_method，默认使用 creem（保持现有行为）
+    // Prefer the method the client sent; otherwise pick Stripe > PayPal > Creem.
     let paymentMethod = payment_method;
     if (!paymentMethod) {
-      // 检查是否配置了 Creem（向后兼容）
-      if (process.env.CREEM_API_KEY || process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID) {
-        paymentMethod = "creem";
-      } else {
-        // 如果没有配置 Creem，使用自动选择
-        paymentMethod = selectPaymentMethod();
-        if (!paymentMethod) {
-          return respErr("No payment method available. Please configure at least one payment gateway.");
-        }
+      paymentMethod = selectPaymentMethod();
+      if (!paymentMethod) {
+        return respErr("No payment method available. Please configure at least one payment gateway.");
       }
+    }
+
+    if (
+      paymentMethod === "creem" &&
+      process.env.NEXT_PUBLIC_PAYMENT_CREEM_ENABLED !== "true"
+    ) {
+      return respErr("This payment method is temporarily unavailable.");
     }
 
     // 3. 处理 cancel_url

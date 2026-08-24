@@ -1,6 +1,6 @@
-import Stripe from "stripe";
 import { handleOrderSession } from "@/services/order";
 import { respOk } from "@/lib/resp";
+import { getStripeClient } from "@/lib/stripe";
 
 export async function POST(req: Request) {
   try {
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
       throw new Error("invalid stripe config");
     }
 
-    const stripe = new Stripe(stripePrivateKey);
+    const stripe = getStripeClient(stripePrivateKey);
 
     const sign = req.headers.get("stripe-signature") as string;
     const body = await req.text();

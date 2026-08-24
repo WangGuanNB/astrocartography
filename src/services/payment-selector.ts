@@ -9,18 +9,19 @@
  * @returns 支付方式名称或 null
  */
 export function selectPaymentMethod(): string | null {
-  // 优先 Stripe
-  if (process.env.STRIPE_PRIVATE_KEY) {
+  const stripeOn = process.env.NEXT_PUBLIC_PAYMENT_STRIPE_ENABLED !== "false";
+  const paypalOn = process.env.NEXT_PUBLIC_PAYMENT_PAYPAL_ENABLED !== "false";
+  const creemOn = process.env.NEXT_PUBLIC_PAYMENT_CREEM_ENABLED === "true";
+
+  if (stripeOn && process.env.STRIPE_PRIVATE_KEY) {
     return "stripe";
   }
 
-  // 其次 PayPal
-  if (process.env.PAYPAL_CLIENT_ID && process.env.PAYPAL_CLIENT_SECRET) {
+  if (paypalOn && process.env.PAYPAL_CLIENT_ID && process.env.PAYPAL_CLIENT_SECRET) {
     return "paypal";
   }
 
-  // 最后 Creem
-  if (process.env.CREEM_API_KEY || process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID) {
+  if (creemOn && (process.env.CREEM_API_KEY || process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID)) {
     return "creem";
   }
 
@@ -33,11 +34,20 @@ export function selectPaymentMethod(): string | null {
 export function isPaymentMethodAvailable(method: string): boolean {
   switch (method) {
     case "stripe":
-      return !!process.env.STRIPE_PRIVATE_KEY;
+      return (
+        process.env.NEXT_PUBLIC_PAYMENT_STRIPE_ENABLED !== "false" &&
+        !!process.env.STRIPE_PRIVATE_KEY
+      );
     case "paypal":
-      return !!(process.env.PAYPAL_CLIENT_ID && process.env.PAYPAL_CLIENT_SECRET);
+      return (
+        process.env.NEXT_PUBLIC_PAYMENT_PAYPAL_ENABLED !== "false" &&
+        !!(process.env.PAYPAL_CLIENT_ID && process.env.PAYPAL_CLIENT_SECRET)
+      );
     case "creem":
-      return !!(process.env.CREEM_API_KEY || process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID);
+      return (
+        process.env.NEXT_PUBLIC_PAYMENT_CREEM_ENABLED === "true" &&
+        !!(process.env.CREEM_API_KEY || process.env.NEXT_PUBLIC_CREEM_PRODUCT_ID)
+      );
     default:
       return false;
   }
