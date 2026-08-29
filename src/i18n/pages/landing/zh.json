@@ -51,6 +51,13 @@
               "icon": "RiCompass3Line"
             },
             {
+              "title": "月亮星座计算器",
+              "description": "查询月亮星座，了解情绪需求与舒适模式",
+              "url": "/moon-sign-calculator",
+              "target": "_self",
+              "icon": "RiMoonLine"
+            },
+            {
               "title": "中天计算器",
               "description": "计算中天（MC）：事业轴与公众形象",
               "url": "/midheaven-calculator",

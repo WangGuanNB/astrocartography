@@ -13,7 +13,7 @@ import { getBigFourAsteroidPlacements } from "@/lib/asteroid-ephemeris";
 export const revalidate = 3600;
 export const maxDuration = 30;
 
-type PlacementType = "venus" | "lunar-nodes" | "chiron" | "asteroids";
+type PlacementType = "venus" | "moon" | "lunar-nodes" | "chiron" | "asteroids";
 
 interface PlacementRequest {
   type: PlacementType;
@@ -121,6 +121,20 @@ export async function POST(request: NextRequest) {
           birthData: { date: birthDate, time: birthTime, location: birthLocation, latitude, longitude, timezone },
           placements: venus ? [{ ...venus, label: "Venus" }] : [],
           note: "Venus is calculated from geocentric ecliptic longitude and shown with whole-sign house placement.",
+        },
+      });
+    }
+
+    if (type === "moon") {
+      const moon = chart.planets.find((p) => p.name === "Moon");
+      return NextResponse.json({
+        success: true,
+        data: {
+          type,
+          birthData: { date: birthDate, time: birthTime, location: birthLocation, latitude, longitude, timezone },
+          placements: moon ? [{ ...moon, label: "Moon" }] : [],
+          note:
+            "Moon is calculated from geocentric ecliptic longitude (astronomy-engine) in the tropical zodiac and shown with whole-sign house placement. The Moon changes signs about every 2.5 days—exact birth time matters most on sign-boundary days.",
         },
       });
     }

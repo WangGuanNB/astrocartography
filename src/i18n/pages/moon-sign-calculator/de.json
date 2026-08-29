@@ -1,0 +1,115 @@
+{
+  "key": "moon",
+  "slug": "moon-sign-calculator",
+  "toolType": "moon",
+  "metadata": {
+    "title": "Mondzeichen-Rechner — Kostenlos nach Datum, Uhrzeit & Ort | AstroCarto",
+    "description": "Berechne dein Mondzeichen mit Geburtsdatum, -zeit und -ort. Sieh Zeichen, Grad, Haus und emotionalen Stil. Kostenloser tropischer Rechner.",
+    "keywords": "Mondzeichen-Rechner, Mondzeichen berechnen, welches Mondzeichen habe ich, Mondzeichen kostenlos, Mondzeichen Bedeutung, Mondzeichen Rechner"
+  },
+  "hero": {
+    "eyebrow": "Kostenloses Astrologie-Tool",
+    "title": "Mondzeichen-Rechner",
+    "subtitle": "Finde dein Mondzeichen und verstehe, wie dein Horoskop emotionale Bedürfnisse, Instinkte, Komfortmuster und Orte beschreibt, an denen Mondenergie natürlicher wirken kann."
+  },
+  "form": {
+    "submit": "Mein Mondzeichen berechnen"
+  },
+  "result": {
+    "title": "Deine Mondposition",
+    "cta": "Sieh, wo deine Mondlinie am stärksten ist"
+  },
+  "sections": [
+    {
+      "title": "Was ein Mondzeichen-Rechner zeigt",
+      "body": [
+        "Ein Mondzeichen-Rechner ermittelt das Tierkreiszeichen, in dem der Mond im exakten Moment deiner Geburt stand. In der westlichen tropischen Astrologie beschreibt der Mond emotionale Bedürfnisse, instinktive Reaktionen, was Sicherheit gibt und wie du Stress verarbeitest, bevor du nachdenkst. Dein Mondzeichen ist kein vollständiges Persönlichkeitslabel, aber einer der besten Einstiege für Bindung, emotionales Tempo und Zuhause-Bedürfnisse.",
+        "Dieser Mondzeichen-Rechner nutzt Geburtsdatum, -zeit und -ort, um deine Mondposition und das Haus im Whole-Sign-System zu berechnen. Das Zeichen beschreibt den emotionalen Stil: schützend in Krebs, beständig in Stier, unruhig in Zwillinge, ausdrucksvoll in Löwe, unterscheidend in Jungfrau, beziehungsorientiert in Waage, intensiv in Skorpion, abenteuerlich in Schütze, zurückhaltend in Steinbock, unabhängig in Wassermann und aufnehmend in Fische. Das Haus ergänzt den Kontext, indem es zeigt, wo lunare Themen im Alltag am sichtbarsten werden. Da der Mond etwa zwölf bis dreizehn Grad pro Tag zurücklegt und ungefähr alle zwei bis zweieinhalb Tage das Zeichen wechselt, zählt die genaue Uhrzeit besonders an Tagen, an denen der Mond eine Zeichengrenze überschritt."
+      ]
+    },
+    {
+      "title": "Warum die Geburtszeit für das Mondzeichen wichtig ist",
+      "body": [
+        "Viele suchen einen Mondzeichen-Rechner, weil sie eine persönlichere Antwort wollen als ein Sonnenzeichen-Horoskop. Das Sonnenzeichen braucht nur das Geburtsdatum. Das Mondzeichen braucht meist auch die Uhrzeit, besonders wenn du an einem Tag geboren wurdest, an dem der Mond das Zeichen wechselte. Ohne genaue Zeit kann ein Mittagswert funktionieren, wenn der Mond den ganzen Tag im gleichen Zeichen blieb, aber falsch sein, wenn er mittags wechselte. Deshalb fragt dieses Tool nach Datum, Uhrzeit, Ort und Zeitzone zusammen.",
+        "Bei AstroCarto verbindet sich das Mondzeichen auch mit Astrokartografie. Sobald du deine natale Mondposition kennst, lautet die nächste Frage oft: Wo fühlt sich dieser emotionale Stil leichter an? Deine Mondlinie auf der Karte kann Orte hervorheben, an denen Zugehörigkeit, Familie, Privatleben oder emotionales Klima stärker spürbar werden. Der Mondzeichen-Rechner liefert die natale Mondsignatur; die Mondlinien-Karte zeigt, wo diese Signatur geografisch verstärkt werden kann."
+      ]
+    },
+    {
+      "title": "Mondzeichen vs Sonnenzeichen vs Aszendent",
+      "body": [
+        "Das Sonnenzeichen beschreibt Kernidentität und bewusste Richtung. Das Mondzeichen beschreibt emotionale Bedürfnisse und Instinkte. Der Aszendent beschreibt den ersten Eindruck und legt den Hausraster fest. Viele teilen dasselbe Sonnenzeichen und fühlen sich dennoch sehr unterschiedlich, weil Mond und Aszendent abweichen. Diese Seite beantwortet Mondzeichen-Fragen. Nutze den Tierkreis-Rechner für das Sonnenzeichen nur mit Geburtsdatum und den Aszendenten-Rechner, wenn du den natalen Horizont mit exakter Zeit und Ort brauchst.",
+        "Wenn du das volle Rad willst —Sonne, Mond, Aszendent, Planeten und Häuser— gehe mit denselben Daten zum Geburtshoroskop-Generator. Getrennte Tools vermeiden Keyword-Kannibalisierung: Sonnenzeichen-Seiten beantworten Identitätsfragen nur mit Datum; Aszendent-Seiten den Horizont; dieser Mondzeichen-Rechner die emotionale Mondfrage."
+      ]
+    },
+    {
+      "title": "So nutzt du dein Mondzeichen-Ergebnis",
+      "body": [
+        "Beginne mit dem Zeichen, lies das Haus und vergleiche das Ergebnis mit dem Alltag. Mond in Krebs braucht vielleicht emotionale Sicherheit und vertraute Routinen; Mond in Wassermann Raum, Ehrlichkeit und intellektuelle Zugehörigkeit; Mond in Steinbock klare Struktur und Verantwortung. Keine Position garantiert eine feste Stimmung, aber sie gibt Sprache dafür, was dich beruhigt, was dich erschöpft und welche Umgebung dir Erholung gibt.",
+        "Nach der Berechnung deines Mondzeichens nutze dieselben Geburtsdaten auf der Astrokartografie-Karte. Achte auf Moon ASC, DSC, MC und IC. Moon IC hängt oft mit Zuhause, Privatsphäre und emotionalen Wurzeln zusammen. Moon ASC kann Gefühle im ersten Eindruck sichtbarer machen. Moon MC kann den öffentlichen emotionalen Ton oder Fürsorgerollen färben. Am nützlichsten ist die Kombination aus natalem Mondzeichen und ortsbasierten Mondlinien — und dann die Frage: Wo will ich ruhen, dazugehören oder mich emotional weniger verschließen?"
+      ]
+    },
+    {
+      "title": "Mondzeichen-Bedeutung nach Element",
+      "body": [
+        "Ein praktischer Weg, dein Mondzeichen zu lesen, ist über das Element. Feuer-Mondzeichen —Widder, Löwe und Schütze— brauchen oft Wärme, Bewegung und Lebendigkeit. Sie verarbeiten Gefühle durch Handlung, Kreativität oder ehrliche Intensität. Erde-Mondzeichen —Stier, Jungfrau und Steinbock— schätzen Beständigkeit, körperlichen Komfort, Routinen und praktische Fürsorge. Sie fühlen sich oft sicherer, wenn das Leben greifbar und verlässlich ist.",
+        "Luft-Mondzeichen —Zwillinge, Waage und Wassermann— brauchen Gespräch, mentale Klarheit, Fairness und sozialen Raum. Sie verarbeiten Emotion, indem sie sie benennen, diskutieren oder mit Vertrauten teilen. Wasser-Mondzeichen —Krebs, Skorpion und Fische— verlangen meist Tiefe, Intuition, Privatsphäre und das Gefühl, wirklich aufgenommen zu werden. Beim Mondzeichen-Rechner liefert das Element die erste Schicht. Zeichen, Grad, Haus, Aspekte und Mondlinien verfeinern die Geschichte, ohne dich auf ein einziges Keyword zu reduzieren."
+      ]
+    },
+    {
+      "title": "Was dieser Rechner kann und nicht kann",
+      "body": [
+        "Dieser Mondzeichen-Rechner nutzt geozentrische ekliptische Länge von astronomy-engine im tropischen Tierkreis und setzt den Mond in ein Whole-Sign-Haus. Er liefert verlässliche Sprache für deine natale Mondposition, verspricht aber nicht, dass eine einzige Position dein ganzes emotionales Leben erklärt. Der Mond wirkt mit Sonne, Aszendent, Venus, Mars, Aspekten, Transiten und realen Entscheidungen zusammen. Der beste Gebrauch des Ergebnisses ist konkret: beobachte, was dich beruhigt, was dich auslöst und wie die Umgebung diese Muster stützt oder belastet.",
+        "Wenn du diese Seite vor einer Reise oder einem Umzug nutzt, behandle das Ergebnis als Entscheidungshilfe, nicht als Gewissheit. Ein starker Mond-Ort kann helfen, sich verwurzelter, privater oder emotional offener zu fühlen, hängt aber weiter von Timing, Kultur, Beziehungen und persönlicher Bereitschaft ab. Astrologie ist am nützlichsten, wenn sie Aufmerksamkeit schärft statt Urteil zu ersetzen. Für geografische Mondthemen gehe nach der Bestätigung deines natalen Mondzeichens zur Mondlinien-Seite."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Ist dieser Mondzeichen-Rechner kostenlos?",
+      "answer": "Ja. Mit Geburtsdatum, -zeit und -ort berechnest du kostenlos Mondzeichen, Grad und Haus im Whole-Sign-System, wenn genügend Geburtsdaten vorliegen."
+    },
+    {
+      "question": "Brauche ich die genaue Geburtszeit, um mein Mondzeichen zu finden?",
+      "answer": "Oft ja, besonders wenn der Mond an deinem Geburtstag das Zeichen wechselte. Der Mond bleibt etwa zwei bis zweieinhalb Tage in einem Zeichen. Bleib er den ganzen Tag im gleichen Zeichen, kann eine Näherungszeit reichen. Überschritt er an diesem Tag die Grenze, entscheidet die exakte Uhrzeit über dein Mondzeichen."
+    },
+    {
+      "question": "Worin unterscheidet sich mein Mondzeichen vom Sonnenzeichen?",
+      "answer": "Dein Sonnenzeichen beschreibt Kernidentität und bewusste Richtung aus der Sonnenposition am Geburtstag. Dein Mondzeichen beschreibt emotionale Bedürfnisse und Instinkte aus der Mondposition bei der Geburt. Viele mit demselben Sonnenzeichen fühlen sich unterschiedlich, weil ihr Mondzeichen abweicht."
+    },
+    {
+      "question": "Worin unterscheidet sich das Mondzeichen von einer Mondlinie in der Astrokartografie?",
+      "answer": "Dein Mondzeichen beschreibt, wie der Mond in deinem Geburtshoroskop wirkt. Eine Mondlinie in der Astrokartografie zeigt, wo diese lunare Energie geografisch aktiver werden kann. Nutze diesen Mondzeichen-Rechner für die natale Position und die Mondlinien-Seite für Orts-Themen."
+    },
+    {
+      "question": "Ist das tropisch oder siderisch?",
+      "answer": "Dieses Tool nutzt den westlichen tropischen Tierkreis. Siderische (vedische) Systeme haben andere Grenzen, daher kann das siderische Mondzeichen abweichen. Wir nutzen tropisch, weil es zu den meisten westlichen Tools und zur Suchintention für Mondzeichen-Rechner passt."
+    },
+    {
+      "question": "Kann ein Mondzeichen-Rechner mir sagen, wo ich wohnen soll?",
+      "answer": "Kein Rechner wählt eine Stadt für dich. Dein Mondzeichen kann emotionale Bedürfnisse und Komfortmuster klären. Mondlinien in der Astrokartografie helfen zu erkunden, wo diese Themen stärker werden können, aber ein Umzug hängt weiter von praktischen Grenzen und persönlichem Urteil ab."
+    }
+  ],
+  "schemaName": "Mondzeichen-Rechner",
+  "relatedLinks": [
+    {
+      "text": "Weltkarten-Version gewünscht?",
+      "linkText": "Astrocartographie testen",
+      "url": "/"
+    },
+    {
+      "text": "Mond nach Ort erkunden.",
+      "linkText": "Mondlinie",
+      "url": "/moon-line-astrocartography"
+    },
+    {
+      "text": "Volles Horoskop nötig?",
+      "linkText": "Geburtshoroskop-Generator",
+      "url": "/tools/birth-chart-generator"
+    },
+    {
+      "text": "Mit Aszendent vergleichen.",
+      "linkText": "Aszendenten-Rechner",
+      "url": "/rising-sign-calculator"
+    }
+  ]
+}

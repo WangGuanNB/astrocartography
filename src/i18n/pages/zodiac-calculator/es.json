@@ -16,6 +16,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "¿Buscas tu signo lunar?",
+        "linkText": "Calculadora de Signo Lunar",
+        "url": "/moon-sign-calculator"
+      },
+      {
         "text": "¿Conoces tu hora de nacimiento?",
         "linkText": "Calculadora del Signo Ascendente",
         "url": "/rising-sign-calculator"

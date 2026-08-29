@@ -1,4 +1,5 @@
 :root {
+  --font-inter: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --background: oklch(0.9940 0 0);
   --foreground: oklch(0 0 0);
   --card: oklch(0.9940 0 0);
@@ -54,6 +55,7 @@
 }
 
 .dark {
+  --font-inter: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --background: oklch(0.1647 0.0234 271.39);
   --foreground: oklch(0.9551 0 0);
   --card: oklch(0.1747 0.0234 271.39);

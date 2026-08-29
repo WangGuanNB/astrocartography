@@ -2,15 +2,7 @@ import "@/app/globals.css";
 
 import type { Metadata } from "next";
 import { getLocale, setRequestLocale } from "next-intl/server";
-import { cn } from "@/lib/utils";
 import Script from "next/script";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL((process.env.NEXT_PUBLIC_WEB_URL || "https://astrocarto.org").replace(/\/$/, "")),
@@ -35,8 +27,14 @@ export default async function RootLayout({
         )}
 
         <link rel="icon" href="/logo.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body className={cn("min-h-screen overflow-x-hidden", inter.variable)} suppressHydrationWarning>
+      <body className="min-h-screen overflow-x-hidden" suppressHydrationWarning>
         {children}
         {googleAdsenseCode ? (
           <Script

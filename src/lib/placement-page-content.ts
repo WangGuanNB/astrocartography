@@ -1,9 +1,9 @@
-export type PlacementPageKey = "venus" | "lunarNodes" | "chiron" | "asteroids";
+export type PlacementPageKey = "venus" | "moon" | "lunarNodes" | "chiron" | "asteroids";
 
 export type PlacementPageContent = {
   key: PlacementPageKey;
   slug: string;
-  toolType: "venus" | "lunar-nodes" | "chiron" | "asteroids";
+  toolType: "venus" | "moon" | "lunar-nodes" | "chiron" | "asteroids";
   metadata: {
     title: string;
     description: string;

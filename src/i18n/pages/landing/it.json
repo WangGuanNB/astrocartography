@@ -51,6 +51,13 @@
               "icon": "RiCompass3Line"
             },
             {
+              "title": "Calcolatore del Segno Lunare",
+              "description": "Trova il segno lunare: bisogni emotivi e comfort",
+              "url": "/moon-sign-calculator",
+              "target": "_self",
+              "icon": "RiMoonLine"
+            },
+            {
               "title": "Calcolo del Medio Cielo",
               "description": "Calcola il MC: asse di carriera e vita pubblica",
               "url": "/midheaven-calculator",

@@ -51,6 +51,13 @@
               "icon": "RiCompass3Line"
             },
             {
+              "title": "Calculadora de Signo Lunar",
+              "description": "Descubra seu signo lunar: necessidades emocionais e conforto",
+              "url": "/moon-sign-calculator",
+              "target": "_self",
+              "icon": "RiMoonLine"
+            },
+            {
               "title": "Calculadora de Meio do Céu",
               "description": "Calcule seu MC: eixo de carreira e vida pública",
               "url": "/midheaven-calculator",

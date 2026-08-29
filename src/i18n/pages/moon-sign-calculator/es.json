@@ -1,0 +1,115 @@
+{
+  "key": "moon",
+  "slug": "moon-sign-calculator",
+  "toolType": "moon",
+  "metadata": {
+    "title": "Calculadora de Signo Lunar Gratis — Fecha, Hora y Lugar | AstroCarto",
+    "description": "Calcula tu signo lunar con fecha, hora y lugar de nacimiento. Ve signo, grado, casa y estilo emocional. Calculadora tropical gratuita.",
+    "keywords": "calculadora de signo lunar, cuál es mi signo lunar, signo lunar gratis, calcular signo lunar, signo lunar significado, calculadora signo lunar"
+  },
+  "hero": {
+    "eyebrow": "Herramienta astrológica gratis",
+    "title": "Calculadora de Signo Lunar",
+    "subtitle": "Descubre tu signo lunar y entiende cómo tu carta describe necesidades emocionales, reacciones instintivas, patrones de confort y lugares donde la energía lunar puede sentirse más natural."
+  },
+  "form": {
+    "submit": "Calcular mi signo lunar"
+  },
+  "result": {
+    "title": "Tu posición lunar",
+    "cta": "Ver dónde tu línea lunar es más fuerte"
+  },
+  "sections": [
+    {
+      "title": "Qué revela una calculadora de signo lunar",
+      "body": [
+        "Una calculadora de signo lunar identifica el signo zodiacal que ocupaba la Luna en el momento exacto de tu nacimiento. En astrología tropical occidental, la Luna describe necesidades emocionales, reacciones instintivas, qué te hace sentir seguro y cómo procesas el estrés antes de pensar. Tu signo lunar no es una etiqueta completa de personalidad, pero es uno de los mejores puntos de partida para entender apego, ritmo emocional y prioridades de hogar.",
+        "Esta calculadora de signo lunar usa fecha, hora y lugar de nacimiento para calcular tu posición lunar y la casa en sistema de casas enteras. El signo describe el estilo emocional: protector en Cáncer, estable en Tauro, inquieto en Géminis, expresivo en Leo, discerniente en Virgo, relacional en Libra, intenso en Escorpio, aventurero en Sagitario, reservado en Capricornio, independiente en Acuario y absorbente en Piscis. La casa añade contexto al mostrar dónde los temas lunares se vuelven más visibles en la vida diaria. Como la Luna avanza unos doce o trece grados al día y cambia de signo cada dos o dos días y medio, la hora exacta importa especialmente en los días en que la Luna cruzó el límite entre signos."
+      ]
+    },
+    {
+      "title": "Por qué importa la hora de nacimiento para el signo lunar",
+      "body": [
+        "Muchas personas buscan una calculadora de signo lunar porque quieren una respuesta más personal que el horóscopo solar. El signo solar solo necesita fecha de nacimiento. El signo lunar suele requerir también la hora, sobre todo si naciste el día en que la Luna cambió de signo. Sin hora exacta, un valor por defecto al mediodía puede funcionar si la Luna estuvo todo el día en un signo, pero fallar si cambió a mitad del día. Por eso esta herramienta pide fecha, hora, lugar y zona horaria juntos.",
+        "En AstroCarto, el signo lunar también conecta con astrocartografía. Una vez que conoces tu Luna natal, la pregunta siguiente suele ser: ¿dónde se siente más fácil vivir ese estilo emocional? Tu línea lunar en el mapa puede resaltar lugares donde la pertenencia, la familia, la vida privada o el ambiente emocional se notan más. La calculadora de signo lunar te da la firma lunar natal; el mapa de línea lunar muestra dónde esa firma puede amplificarse geográficamente."
+      ]
+    },
+    {
+      "title": "Signo lunar vs signo solar vs ascendente",
+      "body": [
+        "El signo solar describe identidad central y dirección consciente. El signo lunar describe necesidades emocionales e instintos. El ascendente describe la primera impresión y define el marco de casas. Muchas personas comparten signo solar y se sienten muy distintas porque su Luna y su ascendente divergen. Esta página responde al trabajo del signo lunar. Usa la calculadora zodiacal para el signo solar solo con fecha de nacimiento, y la calculadora de ascendente cuando necesites el horizonte natal con hora y lugar exactos.",
+        "Si quieres la rueda completa —Sol, Luna, ascendente, planetas y casas— continúa al generador de carta natal con los mismos datos. Separar herramientas reduce confusión: las páginas solares responden preguntas de identidad con solo fecha; las de ascendente responden al horizonte; esta calculadora de signo lunar responde a la pregunta emocional de la Luna."
+      ]
+    },
+    {
+      "title": "Cómo usar tu resultado de signo lunar",
+      "body": [
+        "Empieza por el signo, lee la casa y compara el resultado con tu experiencia real. Luna en Cáncer puede necesitar seguridad emocional y rutinas familiares; Luna en Acuario espacio, honestidad y pertenencia intelectual; Luna en Capricornio estructura y responsabilidad claras. Ninguna posición garantiza un estado de ánimo fijo, pero sí da lenguaje para lo que te calma, lo que te agota y el entorno que te ayuda a recuperarte.",
+        "Después de calcular tu signo lunar, reutiliza los mismos datos en el mapa de astrocartografía. Busca líneas Moon ASC, DSC, MC e IC. Moon IC suele relacionarse con hogar, privacidad y raíces emocionales. Moon ASC puede hacer las emociones más visibles en la primera impresión. Moon MC puede colorear el tono emocional público o roles de cuidado. La lectura más útil combina signo lunar natal con líneas lunares por ubicación, y luego pregunta: ¿dónde quiero descansar, pertenecer o sentirme menos a la defensiva emocionalmente?"
+      ]
+    },
+    {
+      "title": "Significado del signo lunar por elemento",
+      "body": [
+        "Una forma práctica de leer tu signo lunar es por elemento. Lunas de fuego —Aries, Leo y Sagitario— suelen necesitar calor, movimiento y vitalidad. Pueden procesar emociones mediante acción, creatividad o intensidad honesta. Lunas de tierra —Tauro, Virgo y Capricornio— valoran estabilidad, confort físico, rutinas y cuidado práctico. Pueden sentirse más seguras cuando la vida es tangible y predecible.",
+        "Lunas de aire —Géminis, Libra y Acuario— necesitan conversación, claridad mental, equidad y espacio social. Pueden procesar emoción nombrándola, debatiéndola o compartiéndola con personas de confianza. Lunas de agua —Cáncer, Escorpio y Piscis— suelen pedir profundidad, intuición, privacidad y sentirse realmente recibidas. Al usar una calculadora de signo lunar, el elemento da la primera capa. Signo, grado, casa, aspectos y líneas lunares refinan la historia sin reducirte a una sola palabra clave."
+      ]
+    },
+    {
+      "title": "Qué puede y qué no puede prometer esta calculadora",
+      "body": [
+        "Esta calculadora de signo lunar usa longitud eclíptica geocéntrica de astronomy-engine en zodiaco tropical y coloca la Luna en una casa entera. Puede dar lenguaje preciso para tu posición lunar natal, pero no debe prometer que una sola posición explique toda tu vida emocional. La Luna trabaja con el Sol, el ascendente, Venus, Marte, aspectos, tránsitos y tus decisiones reales. El mejor uso del resultado es concreto: observa qué te calma, qué te activa y cómo el entorno apoya o tensiona esos patrones.",
+        "Si usas esta página antes de un viaje o mudanza, trata el resultado como apoyo a la decisión, no como certeza. Un lugar lunar fuerte puede ayudarte a sentirte más arraigado, privado o emocionalmente abierto, pero depende del momento, la cultura, las relaciones y tu preparación personal. La astrología es más útil cuando afila la atención en lugar de sustituir el juicio. Para temas lunares geográficos, continúa a la guía de línea lunar después de confirmar aquí tu signo lunar natal."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Esta calculadora de signo lunar es gratis?",
+      "answer": "Sí. Puedes calcular tu signo lunar gratis introduciendo fecha, hora y lugar de nacimiento. El resultado muestra signo, grado y casa en casas enteras cuando hay datos suficientes."
+    },
+    {
+      "question": "¿Necesito la hora exacta de nacimiento para saber mi signo lunar?",
+      "answer": "A menudo sí, especialmente si la Luna cambió de signo en tu cumpleaños. La Luna permanece en un signo unos dos o dos días y medio. Si estuvo todo el día en un signo, una hora aproximada puede bastar. Si cruzó el límite ese día, la hora exacta decide cuál es tu signo lunar."
+    },
+    {
+      "question": "¿En qué se diferencia mi signo lunar del signo solar?",
+      "answer": "Tu signo solar describe identidad central y dirección consciente según la posición del Sol en tu fecha de nacimiento. Tu signo lunar describe necesidades emocionales e instintos según la posición de la Luna al nacer. Muchas personas con el mismo signo solar se sienten distintas porque su signo lunar difiere."
+    },
+    {
+      "question": "¿En qué se diferencia el signo lunar de una línea lunar en astrocartografía?",
+      "answer": "Tu signo lunar describe cómo funciona la Luna en tu carta natal. Una línea lunar en astrocartografía muestra dónde esa energía lunar puede activarse más geográficamente. Usa esta calculadora de signo lunar para la posición natal y luego abre la página de línea lunar para explorar temas por ubicación."
+    },
+    {
+      "question": "¿Es astrología tropical o sideral?",
+      "answer": "Esta herramienta usa el zodiaco tropical occidental. Los sistemas siderales (vérdicos) tienen límites distintos, por lo que el signo lunar sideral puede diferir. Usamos tropical porque coincide con la mayoría de herramientas occidentales y con la intención de búsqueda de calculadora de signo lunar."
+    },
+    {
+      "question": "¿Puede una calculadora de signo lunar decirme dónde debo vivir?",
+      "answer": "Ninguna calculadora elige una ciudad por ti. Tu signo lunar puede aclarar necesidades emocionales y patrones de confort. Las líneas lunares en astrocartografía ayudan a explorar dónde esos temas pueden sentirse más fuertes, pero la mudanza sigue dependiendo de limitaciones prácticas y criterio personal."
+    }
+  ],
+  "schemaName": "Calculadora de Signo Lunar",
+  "relatedLinks": [
+    {
+      "text": "¿Quieres la versión en mapa mundial?",
+      "linkText": "Probar astrocartografía",
+      "url": "/"
+    },
+    {
+      "text": "Explora la Luna por ubicación.",
+      "linkText": "Línea lunar",
+      "url": "/moon-line-astrocartography"
+    },
+    {
+      "text": "¿Necesitas la carta completa?",
+      "linkText": "Generador de carta natal",
+      "url": "/tools/birth-chart-generator"
+    },
+    {
+      "text": "Compara con ascendente.",
+      "linkText": "Calculadora de ascendente",
+      "url": "/rising-sign-calculator"
+    }
+  ]
+}

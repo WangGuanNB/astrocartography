@@ -16,6 +16,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "想找月亮星座？",
+        "linkText": "月亮星座计算器",
+        "url": "/moon-sign-calculator"
+      },
+      {
         "text": "知道出生时间？",
         "linkText": "上升星座计算器",
         "url": "/rising-sign-calculator"

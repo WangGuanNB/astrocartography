@@ -51,6 +51,13 @@
               "icon": "RiCompass3Line"
             },
             {
+              "title": "Mondzeichen-Rechner",
+              "description": "Finde dein Mondzeichen: emotionale Bedürfnisse und Komfort",
+              "url": "/moon-sign-calculator",
+              "target": "_self",
+              "icon": "RiMoonLine"
+            },
+            {
               "title": "Medium Coeli Rechner",
               "description": "MC berechnen: Karriereachse und öffentliches Leben",
               "url": "/midheaven-calculator",

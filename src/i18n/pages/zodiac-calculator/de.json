@@ -16,6 +16,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "Ihr Mondzeichen gesucht?",
+        "linkText": "Mondzeichen-Rechner",
+        "url": "/moon-sign-calculator"
+      },
+      {
         "text": "Geburtszeit bekannt?",
         "linkText": "Aszendent Rechner",
         "url": "/rising-sign-calculator"

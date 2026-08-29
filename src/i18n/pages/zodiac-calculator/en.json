@@ -16,6 +16,11 @@
         "url": "/tools/birth-chart-generator"
       },
       {
+        "text": "Looking for your lunar sign?",
+        "linkText": "Moon Sign Calculator",
+        "url": "/moon-sign-calculator"
+      },
+      {
         "text": "Know your birth time?",
         "linkText": "Rising Sign Calculator",
         "url": "/rising-sign-calculator"
@@ -164,7 +169,7 @@
     "items": [
       {
         "title": "What is my zodiac sign?",
-        "description": "Your zodiac sign in Western tropical astrology usually means your sun sign—the sign the Sun occupied on your birth date. Enter your birth date in the calculator above to find it instantly. For moon sign or rising sign, you need additional birth data and should use our Birth Chart Generator or Rising Sign Calculator."
+        "description": "Your zodiac sign in Western tropical astrology usually means your sun sign—the sign the Sun occupied on your birth date. Enter your birth date in the calculator above to find it instantly. For moon sign, use our Moon Sign Calculator with birth time and location. For rising sign, use the Rising Sign Calculator."
       },
       {
         "title": "Is this zodiac calculator free?",
@@ -184,7 +189,7 @@
       },
       {
         "title": "Do I need birth time for my zodiac sign?",
-        "description": "No—for sun sign, birth date alone is enough. Birth time becomes important for rising sign, house placements, and exact moon sign on days when the Moon changes sign. After this zodiac sign calculator, add birth time in the Birth Chart Generator for a complete natal picture."
+        "description": "No—for sun sign, birth date alone is enough. Birth time becomes important for rising sign, house placements, and exact moon sign on days when the Moon changes sign. After this zodiac sign calculator, use the Moon Sign Calculator or Birth Chart Generator with your exact birth time when available."
       },
       {
         "title": "How accurate is a zodiac sign calculator?",
@@ -192,7 +197,7 @@
       },
       {
         "title": "What should I do after finding my zodiac sign?",
-        "description": "Explore your full Birth Chart Generator result for moon, rising, Venus, and houses. Then open the Astrocartography map to see where your Sun line and other planetary lines cross countries and cities—useful for travel, relocation, or understanding how place amplifies chart themes."
+        "description": "Explore the Moon Sign Calculator and Rising Sign Calculator for the rest of your Big Three, then open the Birth Chart Generator for houses and aspects. Use the Astrocartography map to see where your Sun line and other planetary lines cross countries and cities—useful for travel, relocation, or understanding how place amplifies chart themes."
       }
     ]
   },

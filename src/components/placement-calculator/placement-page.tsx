@@ -47,6 +47,35 @@ const ASTEROID_BENEFIT_IMAGE = {
   alt: "Four small asteroids following balanced orbital paths in deep space.",
 };
 
+const MOON_INTRO_IMAGES = [
+  {
+    src: "/imgs/moon-sign-calculator/moon-sign-calculator-birth-time.webp",
+    alt: "Crescent Moon crossing a zodiac boundary beside a clock, showing why birth time matters for moon sign.",
+  },
+  {
+    src: "/imgs/moon-sign-calculator/moon-sign-calculator-moon-sun-rising.webp",
+    alt: "Sun, Moon, and horizon glow on separate paths illustrating moon sign versus sun sign and rising sign.",
+  },
+  {
+    src: "/imgs/moon-sign-calculator/moon-sign-calculator-result-to-map.webp",
+    alt: "Moon symbol connected by light trails to a world map arc, linking natal moon sign to geographic Moon lines.",
+  },
+  {
+    src: "/imgs/moon-sign-calculator/moon-sign-calculator-element-meaning.webp",
+    alt: "Crescent Moon surrounded by four subtle elemental atmospheres representing fire, earth, air, and water moon styles.",
+  },
+  {
+    src: "/imgs/moon-sign-calculator/moon-sign-calculator-methodology-limits.webp",
+    alt: "Moon within a partial ephemeris arc, representing accurate but bounded moon sign calculation.",
+  },
+];
+
+const MOON_BENEFIT_IMAGES = [
+  MOON_INTRO_IMAGES[0],
+  MOON_INTRO_IMAGES[1],
+  MOON_INTRO_IMAGES[2],
+];
+
 function getH1Title(title: string): string {
   const idx = title.search(/\s[—–]\s|\s-\s/);
   const base = idx >= 0 ? title.slice(0, idx).trim() : title.trim();
@@ -84,10 +113,12 @@ function buildIntro(page: PlacementPageContent, ui: PlacementPageUiContent) {
       const image =
         page.key === "asteroids"
           ? ASTEROID_INTRO_IMAGES[index]
-          : {
-              src: `/imgs/features/${(index % 4) + 1}.webp`,
-              alt: `${section.title} explanation`,
-            };
+          : page.key === "moon"
+            ? MOON_INTRO_IMAGES[index]
+            : {
+                src: `/imgs/features/${(index % 4) + 1}.webp`,
+                alt: `${section.title} explanation`,
+              };
 
       return {
         title: section.title,
@@ -113,10 +144,12 @@ function buildBenefit(page: PlacementPageContent, h1Title: string, ui: Placement
       image:
         page.key === "asteroids"
           ? ASTEROID_BENEFIT_IMAGE
-          : {
-              src: "/imgs/features/hero-web.webp",
-              alt: `${section.title} visual explanation`,
-            },
+          : page.key === "moon"
+            ? MOON_BENEFIT_IMAGES[index]
+            : {
+                src: "/imgs/features/hero-web.webp",
+                alt: `${section.title} visual explanation`,
+              },
     })),
   };
 }

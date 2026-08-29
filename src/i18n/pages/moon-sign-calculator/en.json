@@ -1,0 +1,115 @@
+{
+  "key": "moon",
+  "slug": "moon-sign-calculator",
+  "toolType": "moon",
+  "metadata": {
+    "title": "Moon Sign Calculator — Free Moon Sign by Birth Date & Time | AstroCarto",
+    "description": "Calculate your moon sign from birth date, time, and location. See lunar sign, degree, house, and emotional style. Free tropical calculator.",
+    "keywords": "moon sign calculator, what is my moon sign, moon sign meaning, lunar sign calculator, calculate moon sign, free moon sign calculator"
+  },
+  "hero": {
+    "eyebrow": "Free astrology tool",
+    "title": "Moon Sign Calculator",
+    "subtitle": "Find your moon sign and understand how your chart describes emotional needs, instinctive reactions, comfort patterns, and the places where those lunar themes may feel easier to live."
+  },
+  "form": {
+    "submit": "Calculate My Moon Sign"
+  },
+  "result": {
+    "title": "Your Moon Placement",
+    "cta": "See where your Moon line is strongest"
+  },
+  "sections": [
+    {
+      "title": "What a Moon Sign Calculator Reveals",
+      "body": [
+        "A moon sign calculator identifies the zodiac sign the Moon occupied at the exact moment you were born. In Western tropical astrology, the Moon describes emotional needs, instinctive reactions, what helps you feel safe, and how you process stress before you have time to think it through. Your moon sign is not a full personality label, but it is one of the most useful starting points for understanding comfort, attachment style, mood rhythms, and home-life priorities.",
+        "This moon sign calculator uses your birth date, birth time, and birth location to calculate your Moon placement and whole-sign house. The sign describes emotional style: protective in Cancer, steady in Taurus, restless in Gemini, dramatic in Leo, discerning in Virgo, relational in Libra, intense in Scorpio, adventurous in Sagittarius, reserved in Capricorn, independent in Aquarius, and absorptive in Pisces. The house adds context by showing where lunar themes tend to become most visible in daily life. Because the Moon moves about twelve to thirteen degrees a day and changes signs roughly every two and a half days, precise birth time is especially important on days when the Moon crossed a sign boundary."
+      ]
+    },
+    {
+      "title": "Why Birth Time Matters for Moon Sign",
+      "body": [
+        "People search for a moon sign calculator because they want a personal answer that sun-sign horoscopes cannot give. Sun sign needs only a birth date. Moon sign usually needs birth time as well, especially if you were born on a day the Moon changed signs. Without an exact time, a noon default can still be correct when the Moon stayed in one sign all day, but it can be wrong when the Moon shifted mid-day. That is why this tool asks for date, time, location, and timezone together.",
+        "On AstroCarto, moon sign also connects to location astrology. Once you know your moon sign, the next question often becomes: where does that emotional style feel easier to inhabit? Your Moon line in astrocartography can highlight places where belonging, family themes, private life, or emotional atmosphere may feel more noticeable. A moon sign calculator tells you the natal lunar signature; a Moon line map shows where that signature may be amplified geographically."
+      ]
+    },
+    {
+      "title": "Moon Sign vs Sun Sign vs Rising Sign",
+      "body": [
+        "Sun sign describes core identity and conscious direction. Moon sign describes emotional needs and instinctive responses. Rising sign (ascendant) describes first impressions and sets the chart’s house framework. Many people share a sun sign yet feel very different because their Moon and Rising placements diverge. This page owns the moon sign job. Use the Zodiac Sign Calculator for sun sign by birth date only, and the Rising Sign Calculator when you need ascendant from exact birth time and place.",
+        "If you want the full wheel—Sun, Moon, Rising, planets, and houses together—continue to the Natal Chart or Birth Chart Generator with the same birth data. Keeping these tools separate reduces keyword confusion: sun-sign pages answer date-only identity questions; rising pages answer horizon questions; this moon sign calculator answers the lunar emotional placement question."
+      ]
+    },
+    {
+      "title": "How to Use Your Moon Sign Result",
+      "body": [
+        "Start with the sign, then read the house, then compare the result with lived experience. Moon in Cancer may need emotional safety and familiar routines; Moon in Aquarius may need space, honesty, and intellectual belonging; Moon in Capricorn may feel safer when responsibility and structure are clear. None of these placements guarantee a fixed mood. They give language for what soothes you, what drains you, and what kind of environment helps you recover.",
+        "After calculating your moon sign, reuse the same birth data on the astrocartography map. Look for Moon ASC, DSC, MC, and IC lines. Moon IC often relates to home, privacy, and emotional roots. Moon ASC can make feelings more visible in first impressions. Moon MC may color public emotional tone or caregiving roles. The most useful insight comes from combining natal moon sign with location-based Moon lines, then asking practical questions about where you want to rest, belong, or feel less emotionally guarded."
+      ]
+    },
+    {
+      "title": "Moon Sign Meaning by Element",
+      "body": [
+        "A practical way to read your moon sign is by element. Fire Moon signs—Aries, Leo, and Sagittarius—often need warmth, movement, and a sense of aliveness. They may process feelings through action, creativity, or honest intensity. Earth Moon signs—Taurus, Virgo, and Capricorn—tend to value steadiness, physical comfort, routines, and practical care. They may feel most secure when life is tangible and reliable rather than constantly improvisational.",
+        "Air Moon signs—Gemini, Libra, and Aquarius—often need conversation, mental clarity, fairness, and social breathing room. They may process emotion by naming it, debating it, or sharing it with trusted people. Water Moon signs—Cancer, Scorpio, and Pisces—usually need emotional depth, intuition, privacy, and a feeling of being truly received. When you use a moon sign calculator, the element gives the first layer. Sign, degree, house, aspects, and Moon lines refine the story without reducing you to a single keyword."
+      ]
+    },
+    {
+      "title": "What This Calculator Can and Cannot Promise",
+      "body": [
+        "This moon sign calculator uses geocentric ecliptic longitude from astronomy-engine in the tropical zodiac and places the Moon in a whole-sign house. It can give accurate chart language for your lunar placement, but it should not promise that one placement explains your entire emotional life. The Moon works with the Sun, Rising, Venus, Mars, aspects, transits, and your lived choices. The best use of the result is specific: notice what calms you, what triggers you, and where environment supports or strains those patterns.",
+        "If you are using this page before a trip or relocation, treat the result as decision support rather than certainty. A strong Moon place may help you feel more rooted, private, or emotionally open, but it still depends on timing, culture, relationships, and personal readiness. Astrology becomes most useful when it sharpens attention instead of replacing judgment. For geographic Moon themes, continue to the Moon line astrocartography guide after you confirm your natal moon sign here."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this moon sign calculator free?",
+      "answer": "Yes. You can calculate your moon sign for free by entering your birth date, birth time, and birth location. The result shows your Moon sign, degree, and whole-sign house when enough birth information is provided."
+    },
+    {
+      "question": "Do I need my exact birth time to find my moon sign?",
+      "answer": "Often yes, especially if the Moon changed signs on your birthday. The Moon stays in a sign for about two to two and a half days. If it stayed in one sign all day, an approximate time may still be correct. If it crossed a sign boundary that day, exact birth time decides which moon sign is yours."
+    },
+    {
+      "question": "How is my moon sign different from my sun sign?",
+      "answer": "Your sun sign describes core identity and conscious direction from the Sun’s position on your birth date. Your moon sign describes emotional needs and instinctive reactions from the Moon’s position at birth. Many people with the same sun sign feel different because their moon signs differ."
+    },
+    {
+      "question": "How is my moon sign different from a Moon line in astrocartography?",
+      "answer": "Your moon sign describes how the Moon works in your birth chart. A Moon line in astrocartography shows where that lunar energy may become more active geographically. Use this moon sign calculator for natal placement, then open the Moon line page to explore location themes."
+    },
+    {
+      "question": "Is this tropical or sidereal astrology?",
+      "answer": "This tool uses the tropical Western zodiac. Sidereal (Vedic) systems use different sign boundaries, so a sidereal moon sign can differ. We use tropical because it matches most Western birth chart tools and English search intent for moon sign calculator."
+    },
+    {
+      "question": "Can a moon sign calculator tell me where I should live?",
+      "answer": "No calculator can choose a city for you. Your moon sign can clarify emotional needs and comfort patterns. Astrocartography Moon lines can then help you explore where those themes may feel stronger, but relocation still depends on practical constraints and personal judgment."
+    }
+  ],
+  "schemaName": "Moon Sign Calculator",
+  "relatedLinks": [
+    {
+      "text": "Want the world-map version?",
+      "linkText": "Try Astrocartography",
+      "url": "/"
+    },
+    {
+      "text": "Explore Moon by location.",
+      "linkText": "Moon Line",
+      "url": "/moon-line-astrocartography"
+    },
+    {
+      "text": "Need your full chart first?",
+      "linkText": "Birth Chart Generator",
+      "url": "/tools/birth-chart-generator"
+    },
+    {
+      "text": "Compare with rising sign.",
+      "linkText": "Rising Sign Calculator",
+      "url": "/rising-sign-calculator"
+    }
+  ]
+}
