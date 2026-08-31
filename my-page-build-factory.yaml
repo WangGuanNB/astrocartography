@@ -25,6 +25,7 @@ analytics:
     - https://astrocarto.org/it/chart/natal-chart/
     - https://astrocarto.org/it/rising-sign-calculator/
     - https://astrocarto.org/transit-chart-calculator/
+    - https://astrocarto.org/de/chart/natal-chart/
 
   ga4:
     property_id: "513310501"

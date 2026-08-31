@@ -307,13 +307,46 @@ export const cityToolEvents = {
     });
   },
 
-  reportUnlocked: (
+  reportUnlockClicked: (
     reportType: 'city_comparison_report',
     creditsRequired: number
   ) => {
     trackEvent('city_tool_report_unlock_clicked', {
       report_type: reportType,
       credits_required: creditsRequired,
+      event_category: 'City Tools',
+    });
+  },
+
+  reportLoginGate: (reportType: 'city_comparison_report') => {
+    trackEvent('city_tool_report_login_gate', {
+      report_type: reportType,
+      event_category: 'City Tools',
+    });
+  },
+
+  reportSuccess: (
+    reportType: 'city_comparison_report',
+    creditsRequired: number
+  ) => {
+    trackEvent('city_tool_report_success', {
+      report_type: reportType,
+      credits_required: creditsRequired,
+      event_category: 'City Tools',
+    });
+  },
+
+  reportFailed: (
+    reportType: 'city_comparison_report',
+    reason:
+      | 'insufficient_credits'
+      | 'auth_required'
+      | 'generation_error'
+      | 'empty_response'
+  ) => {
+    trackEvent('city_tool_report_failed', {
+      report_type: reportType,
+      failure_reason: reason,
       event_category: 'City Tools',
     });
   },

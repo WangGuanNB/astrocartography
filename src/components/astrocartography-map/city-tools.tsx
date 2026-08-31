@@ -717,10 +717,16 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   const unlockFullComparisonReport = async () => {
     if (comparisonResults.length < 2) return;
     if (userState === "anonymous") {
+      cityToolEvents.reportLoginGate("city_comparison_report");
       requestLogin();
       return;
     }
     if (reportStatus === "loading") return;
+
+    cityToolEvents.reportUnlockClicked(
+      "city_comparison_report",
+      CITY_COMPARISON_REPORT_CREDITS
+    );
 
     const evidence = comparisonResults
       .map(({ city, evidence, score }, index) => {
@@ -777,6 +783,7 @@ ${lines}`;
       if (!response.ok) {
         const errorPayload = await response.json().catch(() => null);
         if (response.status === 401 || errorPayload?.type === "auth_required") {
+          cityToolEvents.reportFailed("city_comparison_report", "auth_required");
           requestLogin();
           setReportStatus("idle");
           return;
@@ -785,14 +792,19 @@ ${lines}`;
           response.status === 402 ||
           errorPayload?.type === "insufficient_credits"
         ) {
+          cityToolEvents.reportFailed(
+            "city_comparison_report",
+            "insufficient_credits"
+          );
           setReportStatus("idle");
           setReportError("");
           await openPricingForCredits();
           return;
         }
-        throw new Error(
-          errorPayload?.message || t("fullReport.genericError")
-        );
+        cityToolEvents.reportFailed("city_comparison_report", "generation_error");
+        setReportStatus("error");
+        setReportError(errorPayload?.message || t("fullReport.genericError"));
+        return;
       }
 
       const reader = response.body?.getReader();
@@ -822,7 +834,10 @@ ${lines}`;
       }
 
       if (!nextReportText.trim()) {
-        throw new Error(t("fullReport.genericError"));
+        cityToolEvents.reportFailed("city_comparison_report", "empty_response");
+        setReportStatus("error");
+        setReportError(t("fullReport.genericError"));
+        return;
       }
 
       setReportStatus("success");
@@ -832,7 +847,7 @@ ${lines}`;
           block: "start",
         });
       });
-      cityToolEvents.reportUnlocked(
+      cityToolEvents.reportSuccess(
         "city_comparison_report",
         CITY_COMPARISON_REPORT_CREDITS
       );
@@ -843,11 +858,16 @@ ${lines}`;
         message.includes("insufficient_credits") ||
         message.includes("Insufficient credits")
       ) {
+        cityToolEvents.reportFailed(
+          "city_comparison_report",
+          "insufficient_credits"
+        );
         setReportStatus("idle");
         setReportError("");
         await openPricingForCredits();
         return;
       }
+      cityToolEvents.reportFailed("city_comparison_report", "generation_error");
       setReportStatus("error");
       setReportError(message);
     }
@@ -1316,23 +1336,10 @@ ${lines}`;
                                   </span>
                                 )}
                               </div>
-                              <div className="mt-3 grid gap-2">
-                                <div className="rounded-xl border border-amber-200/15 bg-amber-200/[0.055] p-3">
-                                  <div className="text-[10px] font-bold uppercase tracking-wider text-amber-200/80">
-                                    {t("watchOutLabel")}
-                                  </div>
-                                  <p className="mt-1 text-[11px] leading-relaxed text-white/58">
-                                    {t(`watchOut.${status}` as never)}
-                                  </p>
-                                </div>
-                                <div className="rounded-xl border border-purple-300/15 bg-purple-400/[0.055] p-3">
-                                  <div className="text-[10px] font-bold uppercase tracking-wider text-purple-200/80">
-                                    {t("recommendationLabel")}
-                                  </div>
-                                  <p className="mt-1 text-[11px] leading-relaxed text-white/62">
-                                    {t(`recommendations.${status}` as never)}
-                                  </p>
-                                </div>
+                              <div className="mt-3 rounded-xl border border-purple-300/15 bg-purple-400/[0.055] p-3">
+                                <p className="text-[11px] leading-relaxed text-white/58">
+                                  {t(`deepInsightTeaser.${status}` as never)}
+                                </p>
                               </div>
                               </div>
 
@@ -1382,6 +1389,9 @@ ${lines}`;
                             </div>
                             <p className="mt-1 text-xs leading-relaxed text-white/50">
                               {t("fullReport.description")}
+                            </p>
+                            <p className="mt-1.5 text-[11px] leading-relaxed text-amber-100/70">
+                              {t("fullReport.vsChatHint")}
                             </p>
                           </div>
                         </div>
@@ -1518,13 +1528,20 @@ ${lines}`;
             ) : (
               <button
                 type="button"
-                onClick={scrollToFullReport}
-                className="mx-auto flex w-full max-w-lg items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-300 via-pink-500 to-purple-600 px-4 py-3.5 text-sm font-bold text-[#180d1e] shadow-lg"
+                onClick={
+                  reportStatus === "loading"
+                    ? scrollToFullReport
+                    : unlockFullComparisonReport
+                }
+                disabled={reportStatus === "loading"}
+                className="mx-auto flex w-full max-w-lg items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-300 via-pink-500 to-purple-600 px-4 py-3.5 text-sm font-bold text-[#180d1e] shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
               >
-                <ArrowRight className="size-4 rotate-90" />
-                {reportStatus === "loading"
-                  ? t("fullReport.generatingCTA")
-                  : t("fullReport.stickyViewCTA")}
+                <Sparkles
+                  className={`size-4 ${
+                    reportStatus === "loading" ? "animate-spin" : ""
+                  }`}
+                />
+                {unlockButtonLabel}
               </button>
             )}
           </div>

@@ -536,12 +536,18 @@
         "mixed": "支持因素与现实取舍同时存在",
         "caution": "做决定前需要进一步分析"
       },
+      "deepInsightTeaser": {
+        "support": "该城市的谨慎点与下一步建议见下方完整 AI 报告。",
+        "mixed": "该城市的取舍与谨慎点见下方完整 AI 报告。",
+        "caution": "该城市为何需要更审慎评估——完整谨慎分析与建议见下方报告。"
+      },
       "lockedTitle": "AI 深度对比分析",
       "lockedDescription": "进一步了解排名形成的原因、城市之间的主要取舍，以及哪个选择更符合当前目标。",
       "fullReport": {
         "title": "AI 城市对比完整报告",
         "creditBadge": "{credits} 积分",
         "description": "解锁针对当前城市组合和目标的结构化 AI 报告，包含排名原因、城市取舍、谨慎信号和下一步建议。",
+        "vsChatHint": "比单次 AI 追问更完整——含排名、取舍、谨慎点与生活领域分项分析。",
         "previewIntro": "完整报告包含：",
         "previewItems": {
           "ranking": "为什么排名第一的城市更符合当前目标",

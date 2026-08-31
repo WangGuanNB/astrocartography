@@ -573,12 +573,18 @@
         "mixed": "Support and trade-offs appear together",
         "caution": "Needs closer review before deciding"
       },
+      "deepInsightTeaser": {
+        "support": "Cautions and next-step guidance for this city are in the Full AI Report below.",
+        "mixed": "Trade-offs and cautions for this city are in the Full AI Report below.",
+        "caution": "Why this city needs closer review — full cautions and recommendations are in the report below."
+      },
       "lockedTitle": "AI deeper comparison",
       "lockedDescription": "Explore why the ranking formed, the main trade-offs between cities, and which option better fits your selected goal.",
       "fullReport": {
         "title": "Full AI City Comparison Report",
         "creditBadge": "{credits} credits",
         "description": "Unlock a structured AI report for this exact city set and goal. The report explains the ranking, trade-offs, cautions, and next steps.",
+        "vsChatHint": "More structured than a single AI question — includes ranking, trade-offs, cautions, and life-area breakdown.",
         "previewIntro": "The full report includes:",
         "previewItems": {
           "ranking": "Why the top city ranks first for your selected goal",
