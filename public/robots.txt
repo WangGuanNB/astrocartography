@@ -109,6 +109,131 @@ Allow: /pt/chart/natal-chart
 Allow: /it/chart/natal-chart
 Allow: /de/chart/natal-chart
 
+# Venus Sign Calculator
+Allow: /venus-sign-calculator
+Allow: /zh/venus-sign-calculator
+Allow: /es/venus-sign-calculator
+Allow: /pt/venus-sign-calculator
+Allow: /it/venus-sign-calculator
+Allow: /de/venus-sign-calculator
+
+# Moon Sign Calculator
+Allow: /moon-sign-calculator
+Allow: /zh/moon-sign-calculator
+Allow: /es/moon-sign-calculator
+Allow: /pt/moon-sign-calculator
+Allow: /it/moon-sign-calculator
+Allow: /de/moon-sign-calculator
+
+# Lunar Nodes Calculator
+Allow: /lunar-nodes-calculator
+Allow: /zh/lunar-nodes-calculator
+Allow: /es/lunar-nodes-calculator
+Allow: /pt/lunar-nodes-calculator
+Allow: /it/lunar-nodes-calculator
+Allow: /de/lunar-nodes-calculator
+
+# Chiron Placement Calculator
+Allow: /chiron-placement-calculator
+Allow: /zh/chiron-placement-calculator
+Allow: /es/chiron-placement-calculator
+Allow: /pt/chiron-placement-calculator
+Allow: /it/chiron-placement-calculator
+Allow: /de/chiron-placement-calculator
+
+# Zodiac Calculator
+Allow: /zodiac-calculator
+Allow: /zh/zodiac-calculator
+Allow: /es/zodiac-calculator
+Allow: /pt/zodiac-calculator
+Allow: /it/zodiac-calculator
+Allow: /de/zodiac-calculator
+
+# Asteroid Calculator
+Allow: /asteroid-calculator
+Allow: /zh/asteroid-calculator
+Allow: /es/asteroid-calculator
+Allow: /pt/asteroid-calculator
+Allow: /it/asteroid-calculator
+Allow: /de/asteroid-calculator
+
+# Synastry Chart Calculator
+Allow: /synastry-chart-calculator
+Allow: /zh/synastry-chart-calculator
+Allow: /es/synastry-chart-calculator
+Allow: /pt/synastry-chart-calculator
+Allow: /it/synastry-chart-calculator
+Allow: /de/synastry-chart-calculator
+
+# Composite Chart Calculator
+Allow: /composite-chart-calculator
+Allow: /zh/composite-chart-calculator
+Allow: /es/composite-chart-calculator
+Allow: /pt/composite-chart-calculator
+Allow: /it/composite-chart-calculator
+Allow: /de/composite-chart-calculator
+
+# Solar Return Chart Calculator
+Allow: /solar-return-chart-calculator
+Allow: /zh/solar-return-chart-calculator
+Allow: /es/solar-return-chart-calculator
+Allow: /pt/solar-return-chart-calculator
+Allow: /it/solar-return-chart-calculator
+Allow: /de/solar-return-chart-calculator
+
+# Astrocartography Where to Live
+Allow: /astrocartography-where-to-live
+Allow: /zh/astrocartography-where-to-live
+Allow: /es/astrocartography-where-to-live
+Allow: /pt/astrocartography-where-to-live
+Allow: /it/astrocartography-where-to-live
+Allow: /de/astrocartography-where-to-live
+
+# Uranus Line Astrocartography
+Allow: /uranus-line-astrocartography
+Allow: /zh/uranus-line-astrocartography
+Allow: /es/uranus-line-astrocartography
+Allow: /pt/uranus-line-astrocartography
+Allow: /it/uranus-line-astrocartography
+Allow: /de/uranus-line-astrocartography
+
+# Astrocartography Lines（多语言版本）
+Allow: /zh/sun-line-astrocartography
+Allow: /es/sun-line-astrocartography
+Allow: /pt/sun-line-astrocartography
+Allow: /it/sun-line-astrocartography
+Allow: /de/sun-line-astrocartography
+Allow: /zh/moon-line-astrocartography
+Allow: /es/moon-line-astrocartography
+Allow: /pt/moon-line-astrocartography
+Allow: /it/moon-line-astrocartography
+Allow: /de/moon-line-astrocartography
+Allow: /zh/venus-line-astrocartography
+Allow: /es/venus-line-astrocartography
+Allow: /pt/venus-line-astrocartography
+Allow: /it/venus-line-astrocartography
+Allow: /de/venus-line-astrocartography
+Allow: /zh/mars-line-astrocartography
+Allow: /es/mars-line-astrocartography
+Allow: /pt/mars-line-astrocartography
+Allow: /it/mars-line-astrocartography
+Allow: /de/mars-line-astrocartography
+Allow: /zh/jupiter-line-astrocartography
+Allow: /es/jupiter-line-astrocartography
+Allow: /pt/jupiter-line-astrocartography
+Allow: /it/jupiter-line-astrocartography
+Allow: /de/jupiter-line-astrocartography
+Allow: /zh/saturn-line-astrocartography
+Allow: /es/saturn-line-astrocartography
+Allow: /pt/saturn-line-astrocartography
+Allow: /it/saturn-line-astrocartography
+Allow: /de/saturn-line-astrocartography
+Allow: /zh/mercury-line-astrocartography
+Allow: /es/mercury-line-astrocartography
+Allow: /pt/mercury-line-astrocartography
+Allow: /it/mercury-line-astrocartography
+Allow: /de/mercury-line-astrocartography
+
 # 阻止所有其他页面
 Disallow: /ms
 Disallow: /en
