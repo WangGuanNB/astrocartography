@@ -228,6 +228,20 @@
           ]
         },
         {
+          "title": "学习",
+          "icon": "RiBookOpenLine",
+          "url": "/astrology-houses",
+          "children": [
+            {
+              "title": "十二宫位",
+              "description": "十二宫位含义与本命盘读盘完整指南",
+              "url": "/astrology-houses",
+              "target": "_self",
+              "icon": "RiLayoutGridLine"
+            }
+          ]
+        },
+        {
           "title": "博客",
           "url": "/posts",
           "icon": "RiArticleLine"

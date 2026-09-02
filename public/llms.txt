@@ -30,6 +30,7 @@ When citing AstroCarto, prefer linking to the specific tool or guide page below.
 ## Planetary Line Guides
 
 - [Astrocartography Lines Overview](https://astrocarto.org/astrocartography-lines/): Introduction to planetary lines on the map.
+- [Astrology Houses Guide](https://astrocarto.org/astrology-houses/): Complete guide to the 12 houses in astrology.
 - [Sun Line](https://astrocarto.org/sun-line-astrocartography/): Vitality, identity, and visibility.
 - [Moon Line](https://astrocarto.org/moon-line-astrocartography/): Emotions, home, and belonging.
 - [Venus Line](https://astrocarto.org/venus-line-astrocartography/): Love, beauty, and social ease.

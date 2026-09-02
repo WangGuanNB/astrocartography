@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "title": "Astrology Houses — Complete Guide to the 12 Houses",
+    "description": "Learn what astrology houses mean and how the 12 houses shape career, love, home, and identity in your birth chart. Beginner-friendly guide with Whole Sign context and links to your free birth chart.",
+    "keywords": "astrology houses, 12 houses astrology, houses in astrology meaning, astrology houses explained, birth chart houses, first house astrology, what are the houses in astrology, 10th house astrology, 7th house meaning, whole sign houses"
+  },
+  "intentAnchor": {
+    "text": "If you are searching for astrology houses (not just a generic horoscope), this page explains all 12 houses in plain language—what each house governs, how houses differ from zodiac signs, and how to find them in your birth chart using AstroCarto's free tools."
+  },
+  "internalLinks": {
+    "title": "Quick Navigation",
+    "items": [
+      {
+        "text": "Ready to see your houses?",
+        "linkText": "Birth Chart Generator",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "Need your Ascendant (1st house cusp)?",
+        "linkText": "Rising Sign Calculator",
+        "url": "/rising-sign-calculator"
+      },
+      {
+        "text": "Career axis (10th house)?",
+        "linkText": "Midheaven Calculator",
+        "url": "/midheaven-calculator"
+      },
+      {
+        "text": "Full natal chart guide:",
+        "linkText": "Natal Chart",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "hubHero": {
+    "badge": "Astrology Learn Hub",
+    "primaryCta": { "title": "See Your Houses in Your Chart", "url": "/tools/birth-chart-generator" },
+    "secondaryCta": { "title": "Natal Chart Guide", "url": "/chart/natal-chart" },
+    "sidebarLabel": "12 life areas",
+    "sidebarTags": ["Identity", "Career", "Home", "Love"],
+    "sidebarTitle": "Learn houses, then read your chart",
+    "sidebarDescription": "Browse all 12 houses, then generate your birth chart to see your placements."
+  },
+  "navPills": [
+    { "title": "Start Here", "href": "#start-here", "icon": "RiSparklingLine" },
+    { "title": "12 Houses", "href": "#twelve-houses", "icon": "RiLayoutGridLine" },
+    { "title": "House Types", "href": "#house-types", "icon": "RiFocus3Line" },
+    { "title": "Find Yours", "href": "#usage", "icon": "RiSearchLine" },
+    { "title": "Guide", "href": "#introduce", "icon": "RiBookOpenLine" }
+  ],
+  "hubLinkLabels": {
+    "openTool": "Open tool",
+    "readMeaning": "Read meaning",
+    "learnMore": "Learn more"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "Start here",
+      "title": "Find your astrology houses in your birth chart",
+      "description": "Most visitors want one of three paths: generate a chart with house placements, confirm the Ascendant that starts the 1st house, or learn how houses fit into a full natal chart reading.",
+      "columns": "lg:grid-cols-3",
+      "items": [
+        {
+          "title": "Birth Chart Generator",
+          "description": "Generate your chart wheel and see every planet by sign, degree, and house.",
+          "href": "/tools/birth-chart-generator",
+          "icon": "RiPieChartLine"
+        },
+        {
+          "title": "Rising Sign Calculator",
+          "description": "Find your Ascendant—the sign that starts your 1st house.",
+          "href": "/rising-sign-calculator",
+          "icon": "RiUserLine"
+        },
+        {
+          "title": "Natal Chart Guide",
+          "description": "Learn how to read your full natal chart after you know your houses.",
+          "href": "/chart/natal-chart",
+          "icon": "RiCompassLine"
+        }
+      ]
+    },
+    "twelveHouses": {
+      "id": "twelve-houses",
+      "eyebrow": "All 12 houses",
+      "title": "Every astrology house and what it governs",
+      "description": "Use this directory to jump to any of the 12 houses in astrology. Each section below explains the life area, natural sign association, and how to read planets inside that house.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        { "title": "1st House", "description": "Self, identity, appearance, and vitality.", "href": "#house-1", "icon": "RiUserLine", "group": "Angular" },
+        { "title": "2nd House", "description": "Money, values, possessions, and self-worth.", "href": "#house-2", "icon": "RiWalletLine", "group": "Succedent" },
+        { "title": "3rd House", "description": "Communication, siblings, and local environment.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Cadent" },
+        { "title": "4th House", "description": "Home, family, roots, and emotional foundations.", "href": "#house-4", "icon": "RiHome4Line", "group": "Angular" },
+        { "title": "5th House", "description": "Creativity, romance, joy, and children.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Succedent" },
+        { "title": "6th House", "description": "Daily work, health, routines, and service.", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "Cadent" },
+        { "title": "7th House", "description": "Partnerships, marriage, and one-on-one bonds.", "href": "#house-7", "icon": "RiHeartLine", "group": "Angular" },
+        { "title": "8th House", "description": "Transformation, intimacy, and shared resources.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedent" },
+        { "title": "9th House", "description": "Travel, philosophy, and higher learning.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadent" },
+        { "title": "10th House", "description": "Career, reputation, and public life.", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "Angular" },
+        { "title": "11th House", "description": "Friends, community, and long-term hopes.", "href": "#house-11", "icon": "RiGroupLine", "group": "Succedent" },
+        { "title": "12th House", "description": "Subconscious, solitude, endings, and spirituality.", "href": "#house-12", "icon": "RiMoonLine", "group": "Cadent" }
+      ]
+    },
+    "houseTypes": {
+      "id": "house-types",
+      "eyebrow": "House groups",
+      "title": "Angular, succedent, and cadent houses",
+      "description": "The twelve astrology houses divide into three groups of four. Angular houses (1st, 4th, 7th, and 10th) carry the most visible weight in chart interpretation.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Angular (1st, 4th, 7th, 10th)",
+          "description": "Identity, home, partnerships, and public career—the chart's four pivots.",
+          "href": "#house-types",
+          "icon": "RiFocus3Line"
+        },
+        {
+          "title": "Succedent (2nd, 5th, 8th, 11th)",
+          "description": "Resources, creativity, shared assets, and community—the stabilizing houses.",
+          "href": "#house-types",
+          "icon": "RiStackLine"
+        },
+        {
+          "title": "Cadent (3rd, 6th, 9th, 12th)",
+          "description": "Communication, daily work, travel, and the subconscious—the adaptive houses.",
+          "href": "#house-types",
+          "icon": "RiBookOpenLine"
+        },
+        {
+          "title": "Midheaven (10th House)",
+          "description": "Career, reputation, and public direction—link to the MC calculator.",
+          "href": "/midheaven-calculator",
+          "icon": "RiBriefcaseLine"
+        }
+      ]
+    },
+    "houseGuide": {
+      "eyebrow": "House-by-house guide",
+      "title": "The 12 astrology houses explained",
+      "description": "Below is a complete reference for each house in astrology—what it rules, its natural sign correspondence, and how to begin reading placements in your birth chart.",
+      "disclaimer": "Natural sign associations (for example, Aries for the 1st house) are traditional teaching references—they do not mean that sign sits on your house cusp in your personal chart.",
+      "naturalSignLabel": "Natural sign:"
+    }
+  },
+  "houseDetails": [
+    {
+      "id": "house-1",
+      "number": 1,
+      "title": "1st House — Self, Identity & Appearance",
+      "naturalSign": "Aries",
+      "group": "Angular",
+      "keywords": "Ascendant, rising sign, vitality, first impressions",
+      "description": "The 1st house is the only house that represents you directly. It begins at the Ascendant (rising sign) and describes physical presence, temperament, and how you instinctively meet the world. Planets here color your default mode of self-expression. A Mars in the 1st house may come across as direct and energetic; Venus in the 1st often reads as approachable and aesthetically aware. Because the 1st house sets the entire house wheel, birth time accuracy is essential—the Ascendant changes roughly every two hours."
+    },
+    {
+      "id": "house-2",
+      "number": 2,
+      "title": "2nd House — Money, Values & Possessions",
+      "naturalSign": "Taurus",
+      "group": "Succedent",
+      "keywords": "Income, assets, self-worth, material security",
+      "description": "The 2nd house governs what you earn, own, and value—including how you measure self-worth beyond a paycheck. It describes spending habits, talents you can monetize, and attitudes toward material stability. Venus or Jupiter in the 2nd often correlates with ease around resources; Saturn may emphasize discipline and long-term building. This house is practical: it answers how you support yourself and what you consider worth investing in."
+    },
+    {
+      "id": "house-3",
+      "number": 3,
+      "title": "3rd House — Communication & Daily Learning",
+      "naturalSign": "Gemini",
+      "group": "Cadent",
+      "keywords": "Siblings, writing, short trips, neighborhood",
+      "description": "The 3rd house covers everyday communication: conversations, emails, social media, early education, and relationships with siblings or close neighbors. It also rules short-distance travel and how you process information in daily life. Mercury in the 3rd strengthens verbal and written agility; the Moon here may emphasize emotional storytelling. For many searches about astrology houses, the 3rd is the bridge between private inner life (4th house) and public visibility (10th house)."
+    },
+    {
+      "id": "house-4",
+      "number": 4,
+      "title": "4th House — Home, Family & Roots",
+      "naturalSign": "Cancer",
+      "group": "Angular",
+      "keywords": "IC, parents, private life, emotional foundations",
+      "description": "The 4th house sits at the bottom of the chart at the IC (Imum Coeli). It describes home, family of origin, private emotional life, and the sense of belonging you carry inside. Planets here often show where you retreat to recharge and what 'home' means beyond an address. Moon in the 4th intensifies domestic and ancestral themes. In relocation astrology, the 4th house connects naturally to questions about where you feel rooted—often explored alongside Moon IC astrocartography lines."
+    },
+    {
+      "id": "house-5",
+      "number": 5,
+      "title": "5th House — Creativity, Romance & Joy",
+      "naturalSign": "Leo",
+      "group": "Succedent",
+      "keywords": "Dating, children, hobbies, self-expression",
+      "description": "The 5th house is the playground of the chart: romance, creative projects, hobbies, performance, and children (biological or metaphorical). It describes what you do for pleasure and where you take personal risks. Sun or Venus in the 5th often amplifies charisma and artistic flair. Unlike the 7th house's committed partnership focus, the 5th emphasizes attraction, fun, and authentic self-expression without the weight of long-term contract."
+    },
+    {
+      "id": "house-6",
+      "number": 6,
+      "title": "6th House — Work, Health & Daily Routines",
+      "naturalSign": "Virgo",
+      "group": "Cadent",
+      "keywords": "Employment, habits, wellness, service",
+      "description": "The 6th house governs daily work rhythms, health maintenance, and habits—not necessarily your public career title (that's the 10th), but how you show up in everyday tasks. It covers pets, service roles, and the systems that keep life running. Mars in the 6th can drive a strong work ethic; Neptune may blur boundaries between work and rest. When reading astrology houses for wellness themes, start with the 6th and any planets aspecting it."
+    },
+    {
+      "id": "house-7",
+      "number": 7,
+      "title": "7th House — Partnerships & Marriage",
+      "naturalSign": "Libra",
+      "group": "Angular",
+      "keywords": "Descendant, committed relationships, contracts",
+      "description": "The 7th house begins at the Descendant—the sign opposite your Ascendant. It rules committed one-on-one partnerships: marriage, business partners, and significant one-on-one relationships. Planets here describe what you seek in a partner and how you negotiate equality. Venus in the 7th emphasizes harmony in relationships; Uranus may prefer unconventional or freedom-oriented bonds. The 7th is the mirror house: it often shows traits you project or attract in others."
+    },
+    {
+      "id": "house-8",
+      "number": 8,
+      "title": "8th House — Transformation & Shared Resources",
+      "naturalSign": "Scorpio",
+      "group": "Succedent",
+      "keywords": "Intimacy, inheritance, debt, psychological depth",
+      "description": "The 8th house covers what you share with others—money, secrets, power, and emotional depth. It rules inheritance, taxes, loans, and the psychology of intimacy. Planets here often correlate with periods of profound change rather than surface-level events. Pluto or Mars in the 8th intensifies themes of control, surrender, and regeneration. This house asks where you merge with another person or system versus where you maintain autonomy."
+    },
+    {
+      "id": "house-9",
+      "number": 9,
+      "title": "9th House — Travel, Philosophy & Higher Learning",
+      "naturalSign": "Sagittarius",
+      "group": "Cadent",
+      "keywords": "Long-distance travel, religion, publishing, worldview",
+      "description": "The 9th house expands perspective: foreign travel, university education, spiritual or philosophical frameworks, and publishing. It describes the beliefs that orient your life and how you search for meaning beyond daily routine. Jupiter in the 9th is classically strong—curiosity, teaching, and cross-cultural connection come naturally. For relocation questions, 9th house themes often appear when someone moves abroad for study, faith, or adventure rather than career alone."
+    },
+    {
+      "id": "house-10",
+      "number": 10,
+      "title": "10th House — Career, Reputation & Public Life",
+      "naturalSign": "Capricorn",
+      "group": "Angular",
+      "keywords": "Midheaven, MC, vocation, legacy, authority",
+      "description": "The 10th house sits at the Midheaven (MC)—the most visible point of the chart. It governs career direction, public reputation, and the legacy you build in the world. Planets here broadcast through professional identity: Saturn in the 10th may emphasize slow mastery; Sun in the 10th seeks recognition. When people ask which astrology house rules career, the answer is the 10th. Use the Midheaven Calculator to find your MC sign, then explore Sun MC or Jupiter MC astrocartography lines for location-based career themes."
+    },
+    {
+      "id": "house-11",
+      "number": 11,
+      "title": "11th House — Friends, Community & Hopes",
+      "naturalSign": "Aquarius",
+      "group": "Succedent",
+      "keywords": "Groups, networks, social causes, future vision",
+      "description": "The 11th house describes friendship circles, communities, and the hopes you hold for the future. It covers teamwork, social media networks, and alignment with collective movements. Uranus or Saturn in the 11th shapes how you relate to groups—whether as innovator, organizer, or independent contributor. This house answers who your people are and what shared vision you are working toward over the long term."
+    },
+    {
+      "id": "house-12",
+      "number": 12,
+      "title": "12th House — Subconscious, Solitude & Endings",
+      "naturalSign": "Pisces",
+      "group": "Cadent",
+      "keywords": "Hidden life, spirituality, rest, closure, institutions",
+      "description": "The 12th house is the most inward-facing sector: dreams, solitude, spirituality, and what operates below conscious awareness. It also connects to endings, retreat, and institutions where life slows down (hospitals, monasteries, creative isolation). Planets here may express subtly or require privacy to develop fully. Neptune in the 12th amplifies imagination and sensitivity; Saturn may emphasize disciplined spiritual practice. The 12th completes the house cycle before returning to the 1st house of fresh identity."
+    }
+  ],
+  "introduce": {
+    "name": "introduce",
+    "title": "What Are Astrology Houses?",
+    "label": "FOUNDATION",
+    "description": "Astrology houses are the twelve life-area segments of a birth chart. While zodiac signs describe how planetary energy expresses itself, houses show where that energy plays out—in identity, money, relationships, career, home, and every other domain of daily life.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Birth chart wheel showing the 12 astrology houses"
+    },
+    "items": [
+      {
+        "title": "Houses vs Zodiac Signs vs Planets",
+        "description": "Planets are the actors. Zodiac signs are the style or costume each actor wears. Astrology houses are the stage where the scene happens. Your Sun in Leo (sign) in the 10th house (stage) reads differently from Sun in Leo in the 5th house: same solar identity, but one emphasizes public career and reputation while the other emphasizes creative self-expression and romance. Understanding astrology houses is what turns a list of placements into a readable life map.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-vs-signs.webp",
+          "alt": "Diagram showing planets, zodiac signs, and astrology houses as three layers of a birth chart"
+        }
+      },
+      {
+        "title": "How the 12 Houses Are Numbered",
+        "description": "The 1st house begins at the Ascendant—the zodiac sign rising on the eastern horizon at your birth moment. Houses are numbered counter-clockwise around the wheel from 1 through 12. The 4th house sits at the bottom (IC / Imum Coeli), the 7th house at the western horizon (Descendant), and the 10th house at the top (Midheaven / MC). On a chart wheel, imagine a clock: the Ascendant is typically at the 9 o'clock position, the Midheaven at 12 o'clock, the Descendant at 3 o'clock, and the IC at 6 o'clock.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-numbered.webp",
+          "alt": "Birth chart wheel diagram showing 12 numbered astrology houses with Ascendant and Midheaven marked"
+        }
+      },
+      {
+        "title": "Whole Sign Houses on AstroCarto",
+        "description": "Different astrologers use different house systems. Placidus is common in modern Western astrology; Whole Sign assigns each zodiac sign to one full house, with the rising sign as the entire 1st house. AstroCarto's Birth Chart Generator uses Whole Sign Houses for clarity and beginner-friendly reading—the rising sign becomes the 1st house, then houses follow in zodiac order. Planet sign placements stay the same across systems; house assignments can shift, especially near sign boundaries, which is why birth time accuracy matters for houses.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-whole-sign.webp",
+          "alt": "Whole Sign house system diagram showing each zodiac sign as one full astrology house"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Angular, Succedent, and Cadent Houses",
+    "label": "HOUSE GROUPS",
+    "description": "The twelve astrology houses sort into three groups of four. Angular houses carry the most visible weight; succedent houses stabilize what the angles begin; cadent houses extend, adapt, and connect.",
+    "items": [
+      {
+        "title": "Angular Houses (1st, 4th, 7th, 10th) — Action and Visibility",
+        "description": "The 1st, 4th, 7th, and 10th houses sit on the chart's four pivots: Ascendant, IC, Descendant, and Midheaven. Planets here tend to broadcast loudly through identity (1st), home and roots (4th), one-on-one relationships (7th), and public career (10th). These are the most consequential houses in astrology for questions like 'Who am I?', 'Where do I belong?', 'Who do I partner with?', and 'What am I known for?'",
+        "icon": "RiFocus3Line",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-angular.webp",
+          "alt": "Astrology chart diagram highlighting angular houses 1st, 4th, 7th, and 10th at the four chart angles"
+        }
+      },
+      {
+        "title": "Succedent Houses (2nd, 5th, 8th, 11th) — Stability and Resources",
+        "description": "The 2nd, 5th, 8th, and 11th houses follow the angular houses and describe what you build, hold, and share: personal resources and values (2nd), creative joy and romance (5th), shared assets and deep transformation (8th), and community plus long-term hopes (11th). Planets in succedent houses often describe slower-burn themes that ripen after the angular houses set the direction.",
+        "icon": "RiStackLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-succedent.webp",
+          "alt": "Astrology chart diagram highlighting succedent houses 2nd, 5th, 8th, and 11th"
+        }
+      },
+      {
+        "title": "Cadent Houses (3rd, 6th, 9th, 12th) — Learning and Adaptation",
+        "description": "The 3rd, 6th, 9th, and 12th houses sit away from the chart angles and emphasize movement, skill-building, and perspective: daily communication (3rd), work routines and health (6th), travel and philosophy (9th), and solitude plus the subconscious (12th). Cadent house planets often describe how you learn, adjust, and integrate experience rather than dominate the headline of your chart.",
+        "icon": "RiBookOpenLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-cadent.webp",
+          "alt": "Astrology chart diagram highlighting cadent houses 3rd, 6th, 9th, and 12th"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Find Your Astrology Houses",
+    "label": "PRACTICAL GUIDE",
+    "description": "You need three pieces of birth data to locate your astrology houses reliably: birth date, birth time, and birth place. Here is a step-by-step path using AstroCarto's free tools.",
+    "items": [
+      {
+        "title": "Generate your birth chart",
+        "description": "Open the Birth Chart Generator, enter your birth date, exact time (to the minute if possible), and location. Click generate to see your chart wheel and placements table. The table lists each planet with its zodiac sign, degree, and house number—this is the fastest way to answer 'Which house is my Venus in?' or 'What house is my Moon in?'",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Start with the Ascendant (1st house)",
+        "description": "Your rising sign marks the 1st house cusp—the starting point of the house wheel. In Whole Sign, the entire sign on the Ascendant is your 1st house; the next sign is the 2nd house, and so on. If you only need your Ascendant, use the Rising Sign Calculator. The 1st house describes self-presentation, vitality, and how you meet the world.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Read planets by house theme",
+        "description": "After you know your house cusps, scan which planets fall in which houses. A planet in the 10th house emphasizes career and public reputation; in the 7th, partnerships; in the 4th, home and family. You do not need planets in every house—empty houses are normal and are read through the ruler of the sign on that house cusp.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Connect houses to location astrology",
+        "description": "The 4th house (home, roots) and 10th house (career, public direction) are especially relevant when exploring where to live. After reading your house themes, use Astrocartography to see where planetary lines activate those life areas geographically—useful for relocation astrology and travel planning.",
+        "icon": "RiMapPinLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Reading Astrology Houses in Your Chart",
+    "label": "CHART READING",
+    "description": "Once you know what each of the 12 astrology houses means, these reading habits help you interpret placements without getting lost in jargon.",
+    "items": [
+      {
+        "title": "Empty houses are not 'missing' areas",
+        "description": "An empty house does not mean that life area is inactive. Every house has a sign on its cusp, and that sign's ruling planet becomes the house lord—its placement elsewhere in the chart describes how that house theme unfolds. For example, an empty 7th house with Libra on the cusp is read through Venus's sign and house placement.",
+        "icon": "RiInformationLine"
+      },
+      {
+        "title": "House + sign + planet together",
+        "description": "Always read the three layers together: the house (life area), the sign on the cusp or the planet's sign (style), and any planets inside the house (active actors). Mars in the 6th house in Virgo emphasizes disciplined daily work and health routines; Mars in the 6th in Aries emphasizes urgent, independent action in the same life area.",
+        "icon": "RiLayersLine"
+      },
+      {
+        "title": "Birth time accuracy matters most for houses",
+        "description": "Sun and Moon sign positions are stable across a birth day, but the Ascendant and house cusps can change within minutes. If your birth time is approximate, treat house placements—especially angles like the 1st and 10th—as provisional. Regenerate your chart when you find a more precise time.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Use Whole Sign as a learning frame",
+        "description": "AstroCarto uses Whole Sign Houses so beginners can learn house meanings without debating cusp math. As you advance, you may compare Whole Sign with Placidus or other systems—but sign placements and planetary aspects remain the stable foundation regardless of house system.",
+        "icon": "RiGraduationCapLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Astrology Houses — Frequently Asked Questions",
+    "description": "Answers to common questions about the 12 houses in astrology and how to read them in your birth chart.",
+    "items": [
+      {
+        "title": "What are astrology houses?",
+        "description": "Astrology houses are the twelve segments of a birth chart, each representing a distinct life area—from identity and money to relationships, career, and spirituality. Planets inside a house describe where their energy tends to show up in your lived experience."
+      },
+      {
+        "title": "How are houses different from zodiac signs?",
+        "description": "Zodiac signs describe style, temperament, and how energy expresses itself. Houses describe where in life that energy manifests. The same planet in the same sign reads differently depending on which house it occupies."
+      },
+      {
+        "title": "Do I need my birth time to know my houses?",
+        "description": "Yes, for accurate house cusps—especially the Ascendant (1st house) and Midheaven (10th house). Without birth time, you can still learn general house meanings and read planet-by-sign placements, but your personal house layout will be unreliable."
+      },
+      {
+        "title": "What are empty houses in astrology?",
+        "description": "An empty house has no planets inside it. This is normal. The house is interpreted through the sign on its cusp and the planet that rules that sign. Empty does not mean inactive—it means the theme is expressed indirectly."
+      },
+      {
+        "title": "Which house system does AstroCarto use?",
+        "description": "AstroCarto's Birth Chart Generator uses Whole Sign Houses: the rising sign becomes the entire 1st house, and each following sign occupies the next house in order. This keeps the chart readable for beginners while still showing meaningful house themes."
+      },
+      {
+        "title": "Which astrology house rules career?",
+        "description": "The 10th house governs career, public reputation, and life direction. The Midheaven (MC) sits on the 10th house cusp. The 6th house also relates to daily work and routines, while the 2nd house relates to income and personal resources."
+      },
+      {
+        "title": "Which house rules love and relationships?",
+        "description": "The 7th house is the primary house for committed partnerships and one-on-one relationships. The 5th house covers romance, dating, and creative attraction; the 8th house covers intimacy, shared resources, and deep bonding."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "See Your Astrology Houses in Your Birth Chart",
+    "description": "Generate your free birth chart wheel and placements table to see which planets fall in each of the 12 houses—then explore how those themes connect to locations on your Astrocartography map.",
+    "buttons": [
+      {
+        "title": "Birth Chart Generator",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Free Astrocartography Map",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

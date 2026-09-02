@@ -228,6 +228,20 @@
           ]
         },
         {
+          "title": "Lernen",
+          "icon": "RiBookOpenLine",
+          "url": "/astrology-houses",
+          "children": [
+            {
+              "title": "12 Häuser Geburtshoroskop",
+              "description": "Vollständiger Leitfaden zu den 12 Häusern in der Astrologie und Geburtshoroskop-Deutung",
+              "url": "/astrology-houses",
+              "target": "_self",
+              "icon": "RiLayoutGridLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"

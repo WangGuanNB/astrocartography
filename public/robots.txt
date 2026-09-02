@@ -38,6 +38,12 @@ Allow: /posts/
 
 # 允许 Astrocartography Lines 内页
 Allow: /astrocartography-lines
+Allow: /astrology-houses
+Allow: /zh/astrology-houses
+Allow: /es/astrology-houses
+Allow: /pt/astrology-houses
+Allow: /it/astrology-houses
+Allow: /de/astrology-houses
 Allow: /sun-line-astrocartography
 Allow: /moon-line-astrocartography
 Allow: /venus-line-astrocartography

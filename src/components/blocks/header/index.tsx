@@ -54,12 +54,12 @@ export default function Header({ header }: { header: HeaderType }) {
               "bg-background/50 rounded-2xl border border-border/30 backdrop-blur-lg"
           )}
         >
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:flex-nowrap lg:gap-3 lg:py-4 xl:gap-6">
             {/* 左侧：Logo + 导航菜单 */}
-            <div className="flex w-full items-center justify-between lg:w-auto lg:justify-start lg:gap-6">
+            <div className="flex w-full min-w-0 items-center justify-between lg:w-auto lg:min-w-0 lg:flex-1 lg:justify-start lg:gap-3 xl:gap-6">
               <Link
                 href={(header.brand?.url as any) || "/"}
-                className="flex items-center gap-2"
+                className="flex min-w-0 shrink-0 items-center gap-2"
                 aria-label="home"
                 onClick={() => setMenuState(false)}
               >
@@ -67,11 +67,14 @@ export default function Header({ header }: { header: HeaderType }) {
                   <img
                     src={header.brand.logo.src}
                     alt={header.brand.logo.alt || header.brand.title}
-                    className="w-6"
+                    className="size-6 shrink-0"
                   />
                 )}
                 {header.brand?.title && (
-                  <span className="text-lg font-semibold text-foreground">
+                  <span
+                    className="truncate text-base font-semibold text-foreground lg:max-w-[9.5rem] xl:max-w-[12rem] 2xl:max-w-none 2xl:whitespace-normal"
+                    title={header.brand.title}
+                  >
                     {header.brand?.title || ""}
                   </span>
                 )}
@@ -86,13 +89,13 @@ export default function Header({ header }: { header: HeaderType }) {
                 <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
               </button>
               {/* 桌面端导航菜单 - 靠左，紧跟在 Logo 后面 */}
-              <div className="hidden lg:block">
+              <div className="hidden min-w-0 lg:block">
                 <DesktopNav header={header} />
               </div>
             </div>
 
             {/* 右侧控制按钮 - 桌面端 */}
-            <div className="hidden w-full flex-wrap items-center justify-end gap-2 lg:flex lg:w-fit">
+            <div className="hidden shrink-0 flex-nowrap items-center justify-end gap-1 lg:flex lg:w-auto xl:gap-2">
               {header.show_locale && <LocaleToggle />}
               {header.show_theme && <ThemeToggle />}
               {header.buttons?.map((item, i) => {

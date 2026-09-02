@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "title": "Casas Astrológicas — Guía Completa de las 12 Casas",
+    "description": "Descubre qué significan las casas astrológicas y cómo las 12 casas influyen en tu carrera, amor, hogar e identidad en la carta natal. Guía para principiantes con contexto de casas de signo completo y enlaces a tu carta natal gratis.",
+    "keywords": "casas astrológicas, 12 casas astrología, significado casas astrología, casas astrología explicadas, casas carta natal, primera casa astrología, qué son las casas en astrología, décima casa astrología, significado séptima casa, casas signo completo"
+  },
+  "intentAnchor": {
+    "text": "Si buscas casas astrológicas (no solo un horóscopo genérico), esta página explica las 12 casas en lenguaje claro: qué rige cada casa, en qué se diferencian de los signos del zodiaco y cómo localizarlas en tu carta natal con las herramientas gratuitas de AstroCarto."
+  },
+  "internalLinks": {
+    "title": "Navegación rápida",
+    "items": [
+      {
+        "text": "¿Listo para ver tus casas?",
+        "linkText": "Generador de Carta Natal",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "¿Necesitas tu Ascendente (cúspide de la 1.ª casa)?",
+        "linkText": "Calculadora del Signo Ascendente",
+        "url": "/rising-sign-calculator"
+      },
+      {
+        "text": "¿Eje de carrera (10.ª casa)?",
+        "linkText": "Calculadora del Medio Cielo",
+        "url": "/midheaven-calculator"
+      },
+      {
+        "text": "Guía completa de carta natal:",
+        "linkText": "Carta Natal",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "hubHero": {
+    "badge": "Centro de aprendizaje astrológico",
+    "primaryCta": { "title": "Ver tus casas en tu carta", "url": "/tools/birth-chart-generator" },
+    "secondaryCta": { "title": "Guía de carta natal", "url": "/chart/natal-chart" },
+    "sidebarLabel": "12 áreas de vida",
+    "sidebarTags": ["Identidad", "Carrera", "Hogar", "Amor"],
+    "sidebarTitle": "Aprende las casas y lee tu carta",
+    "sidebarDescription": "Explora las 12 casas astrológicas y genera tu carta natal para ver tus posiciones."
+  },
+  "navPills": [
+    { "title": "Empieza aquí", "href": "#start-here", "icon": "RiSparklingLine" },
+    { "title": "12 Casas", "href": "#twelve-houses", "icon": "RiLayoutGridLine" },
+    { "title": "Tipos de casas", "href": "#house-types", "icon": "RiFocus3Line" },
+    { "title": "Encuentra las tuyas", "href": "#usage", "icon": "RiSearchLine" },
+    { "title": "Guía", "href": "#introduce", "icon": "RiBookOpenLine" }
+  ],
+  "hubLinkLabels": {
+    "openTool": "Abrir herramienta",
+    "readMeaning": "Leer significado",
+    "learnMore": "Saber más"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "Empieza aquí",
+      "title": "Encuentra tus casas astrológicas en tu carta natal",
+      "description": "La mayoría de visitantes buscan uno de tres caminos: generar una carta con posiciones por casa, confirmar el Ascendente que inicia la 1.ª casa, o aprender cómo encajan las casas en una lectura completa de carta natal.",
+      "columns": "lg:grid-cols-3",
+      "items": [
+        {
+          "title": "Generador de Carta Natal",
+          "description": "Genera tu rueda de carta y consulta cada planeta por signo, grado y casa.",
+          "href": "/tools/birth-chart-generator",
+          "icon": "RiPieChartLine"
+        },
+        {
+          "title": "Calculadora del Signo Ascendente",
+          "description": "Encuentra tu Ascendente: el signo que inicia tu 1.ª casa.",
+          "href": "/rising-sign-calculator",
+          "icon": "RiUserLine"
+        },
+        {
+          "title": "Guía de Carta Natal",
+          "description": "Aprende a leer tu carta natal completa después de conocer tus casas.",
+          "href": "/chart/natal-chart",
+          "icon": "RiCompassLine"
+        }
+      ]
+    },
+    "twelveHouses": {
+      "id": "twelve-houses",
+      "eyebrow": "Las 12 casas",
+      "title": "Cada casa astrológica y lo que rige",
+      "description": "Usa este directorio para ir a cualquiera de las 12 casas en astrología. Cada sección explica el área de vida, la asociación con el signo natural y cómo leer los planetas dentro de esa casa.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        { "title": "1.ª Casa", "description": "Yo, identidad, apariencia y vitalidad.", "href": "#house-1", "icon": "RiUserLine", "group": "Angular" },
+        { "title": "2.ª Casa", "description": "Dinero, valores, posesiones y autoestima.", "href": "#house-2", "icon": "RiWalletLine", "group": "Sucedente" },
+        { "title": "3.ª Casa", "description": "Comunicación, hermanos y entorno cercano.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Cadente" },
+        { "title": "4.ª Casa", "description": "Hogar, familia, raíces y bases emocionales.", "href": "#house-4", "icon": "RiHome4Line", "group": "Angular" },
+        { "title": "5.ª Casa", "description": "Creatividad, romance, alegría e hijos.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Sucedente" },
+        { "title": "6.ª Casa", "description": "Trabajo diario, salud, rutinas y servicio.", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "Cadente" },
+        { "title": "7.ª Casa", "description": "Parejas, matrimonio y vínculos uno a uno.", "href": "#house-7", "icon": "RiHeartLine", "group": "Angular" },
+        { "title": "8.ª Casa", "description": "Transformación, intimidad y recursos compartidos.", "href": "#house-8", "icon": "RiShieldLine", "group": "Sucedente" },
+        { "title": "9.ª Casa", "description": "Viajes, filosofía y estudios superiores.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadente" },
+        { "title": "10.ª Casa", "description": "Carrera, reputación y vida pública.", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "Angular" },
+        { "title": "11.ª Casa", "description": "Amigos, comunidad y esperanzas a largo plazo.", "href": "#house-11", "icon": "RiGroupLine", "group": "Sucedente" },
+        { "title": "12.ª Casa", "description": "Subconsciente, soledad, cierres y espiritualidad.", "href": "#house-12", "icon": "RiMoonLine", "group": "Cadente" }
+      ]
+    },
+    "houseTypes": {
+      "id": "house-types",
+      "eyebrow": "Grupos de casas",
+      "title": "Casas angulares, sucedentes y cadentes",
+      "description": "Las doce casas astrológicas se dividen en tres grupos de cuatro. Las casas angulares (1.ª, 4.ª, 7.ª y 10.ª) tienen el mayor peso visible en la interpretación de la carta.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Angulares (1.ª, 4.ª, 7.ª, 10.ª)",
+          "description": "Identidad, hogar, parejas y carrera pública: los cuatro ejes de la carta.",
+          "href": "#house-types",
+          "icon": "RiFocus3Line"
+        },
+        {
+          "title": "Sucedentes (2.ª, 5.ª, 8.ª, 11.ª)",
+          "description": "Recursos, creatividad, bienes compartidos y comunidad: las casas que estabilizan.",
+          "href": "#house-types",
+          "icon": "RiStackLine"
+        },
+        {
+          "title": "Cadentes (3.ª, 6.ª, 9.ª, 12.ª)",
+          "description": "Comunicación, trabajo diario, viajes y subconsciente: las casas adaptativas.",
+          "href": "#house-types",
+          "icon": "RiBookOpenLine"
+        },
+        {
+          "title": "Medio Cielo (10.ª Casa)",
+          "description": "Carrera, reputación y dirección pública: enlace a la calculadora del MC.",
+          "href": "/midheaven-calculator",
+          "icon": "RiBriefcaseLine"
+        }
+      ]
+    },
+    "houseGuide": {
+      "eyebrow": "Guía casa por casa",
+      "title": "Las 12 casas astrológicas explicadas",
+      "description": "A continuación, una referencia completa de cada casa en astrología: qué rige, su correspondencia con el signo natural y cómo empezar a leer posiciones en tu carta natal.",
+      "disclaimer": "Las asociaciones con signos naturales (por ejemplo, Aries para la 1.ª casa) son referencias tradicionales de enseñanza: no significan que ese signo ocupe la cúspide de tu casa en tu carta personal.",
+      "naturalSignLabel": "Signo natural:"
+    }
+  },
+  "houseDetails": [
+    {
+      "id": "house-1",
+      "number": 1,
+      "title": "1.ª Casa — Yo, Identidad y Apariencia",
+      "naturalSign": "Aries",
+      "group": "Angular",
+      "keywords": "Ascendente, signo ascendente, vitalidad, primeras impresiones",
+      "description": "La 1.ª casa es la única que te representa directamente. Comienza en el Ascendente (signo ascendente) y describe la presencia física, el temperamento y cómo te enfrentas instintivamente al mundo. Los planetas aquí colorean tu modo habitual de autoexpresión. Marte en la 1.ª casa puede percibirse como directo y enérgico; Venus en la 1.ª suele leerse como accesible y con sensibilidad estética. Como la 1.ª casa fija toda la rueda de casas, la precisión de la hora de nacimiento es esencial: el Ascendente cambia aproximadamente cada dos horas."
+    },
+    {
+      "id": "house-2",
+      "number": 2,
+      "title": "2.ª Casa — Dinero, Valores y Posesiones",
+      "naturalSign": "Tauro",
+      "group": "Sucedente",
+      "keywords": "Ingresos, bienes, autoestima, seguridad material",
+      "description": "La 2.ª casa rige lo que ganas, posees y valoras, incluido cómo mides tu autoestima más allá del sueldo. Describe hábitos de gasto, talentos que puedes monetizar y actitudes hacia la estabilidad material. Venus o Júpiter en la 2.ª suelen correlacionarse con facilidad en torno a los recursos; Saturno puede enfatizar la disciplina y la construcción a largo plazo. Esta casa es práctica: responde a cómo te sustentas y qué consideras digno de invertir."
+    },
+    {
+      "id": "house-3",
+      "number": 3,
+      "title": "3.ª Casa — Comunicación y Aprendizaje Cotidiano",
+      "naturalSign": "Géminis",
+      "group": "Cadente",
+      "keywords": "Hermanos, escritura, viajes cortos, barrio",
+      "description": "La 3.ª casa abarca la comunicación cotidiana: conversaciones, correos, redes sociales, educación temprana y relaciones con hermanos o vecinos cercanos. También rige los viajes de corta distancia y cómo procesas la información en la vida diaria. Mercurio en la 3.ª refuerza la agilidad verbal y escrita; la Luna aquí puede enfatizar la narrativa emocional. En muchas búsquedas sobre casas astrológicas, la 3.ª es el puente entre la vida interior privada (4.ª casa) y la visibilidad pública (10.ª casa)."
+    },
+    {
+      "id": "house-4",
+      "number": 4,
+      "title": "4.ª Casa — Hogar, Familia y Raíces",
+      "naturalSign": "Cáncer",
+      "group": "Angular",
+      "keywords": "IC, padres, vida privada, bases emocionales",
+      "description": "La 4.ª casa se sitúa en la base de la carta, en el IC (Imum Coeli). Describe el hogar, la familia de origen, la vida emocional privada y el sentido de pertenencia que llevas dentro. Los planetas aquí suelen mostrar dónde te retiras a recargarte y qué significa «hogar» más allá de una dirección. La Luna en la 4.ª intensifica los temas domésticos y ancestrales. En astrología de reubicación, la 4.ª casa se conecta naturalmente con preguntas sobre dónde te sientes arraigado, a menudo exploradas junto a las líneas de astrocartografía de Luna IC."
+    },
+    {
+      "id": "house-5",
+      "number": 5,
+      "title": "5.ª Casa — Creatividad, Romance y Alegría",
+      "naturalSign": "Leo",
+      "group": "Sucedente",
+      "keywords": "Citas, hijos, aficiones, autoexpresión",
+      "description": "La 5.ª casa es el patio de recreo de la carta: romance, proyectos creativos, aficiones, actuación e hijos (biológicos o metafóricos). Describe lo que haces por placer y dónde asumes riesgos personales. El Sol o Venus en la 5.ª suelen amplificar el carisma y el talento artístico. A diferencia del enfoque de pareja comprometida de la 7.ª casa, la 5.ª enfatiza la atracción, la diversión y la autoexpresión auténtica sin el peso de un compromiso a largo plazo."
+    },
+    {
+      "id": "house-6",
+      "number": 6,
+      "title": "6.ª Casa — Trabajo, Salud y Rutinas Diarias",
+      "naturalSign": "Virgo",
+      "group": "Cadente",
+      "keywords": "Empleo, hábitos, bienestar, servicio",
+      "description": "La 6.ª casa rige los ritmos del trabajo diario, el cuidado de la salud y los hábitos, no necesariamente tu título profesional público (eso es la 10.ª), sino cómo te presentas en las tareas cotidianas. Abarca mascotas, roles de servicio y los sistemas que mantienen la vida en marcha. Marte en la 6.ª puede impulsar una fuerte ética de trabajo; Neptuno puede difuminar los límites entre trabajo y descanso. Al leer casas astrológicas con temas de bienestar, empieza por la 6.ª y los planetas que la aspectan."
+    },
+    {
+      "id": "house-7",
+      "number": 7,
+      "title": "7.ª Casa — Parejas y Matrimonio",
+      "naturalSign": "Libra",
+      "group": "Angular",
+      "keywords": "Descendente, relaciones comprometidas, contratos",
+      "description": "La 7.ª casa comienza en el Descendente, el signo opuesto a tu Ascendente. Rige las parejas uno a uno comprometidas: matrimonio, socios de negocio y relaciones significativas de a dos. Los planetas aquí describen lo que buscas en una pareja y cómo negocias la igualdad. Venus en la 7.ª enfatiza la armonía en las relaciones; Urano puede preferir vínculos poco convencionales o orientados a la libertad. La 7.ª es la casa espejo: a menudo muestra rasgos que proyectas o atraes en los demás."
+    },
+    {
+      "id": "house-8",
+      "number": 8,
+      "title": "8.ª Casa — Transformación y Recursos Compartidos",
+      "naturalSign": "Escorpio",
+      "group": "Sucedente",
+      "keywords": "Intimidad, herencia, deudas, profundidad psicológica",
+      "description": "La 8.ª casa abarca lo que compartes con otros: dinero, secretos, poder y profundidad emocional. Rige herencias, impuestos, préstamos y la psicología de la intimidad. Los planetas aquí suelen correlacionarse con periodos de cambio profundo más que con eventos superficiales. Plutón o Marte en la 8.ª intensifican temas de control, entrega y regeneración. Esta casa pregunta dónde te fusionas con otra persona o sistema frente a dónde mantienes la autonomía."
+    },
+    {
+      "id": "house-9",
+      "number": 9,
+      "title": "9.ª Casa — Viajes, Filosofía y Estudios Superiores",
+      "naturalSign": "Sagitario",
+      "group": "Cadente",
+      "keywords": "Viajes de larga distancia, religión, publicación, cosmovisión",
+      "description": "La 9.ª casa amplía la perspectiva: viajes al extranjero, educación universitaria, marcos espirituales o filosóficos y publicación. Describe las creencias que orientan tu vida y cómo buscas sentido más allá de la rutina diaria. Júpiter en la 9.ª es clásicamente fuerte: la curiosidad, la enseñanza y la conexión intercultural llegan con naturalidad. En preguntas de reubicación, los temas de la 9.ª casa suelen aparecer cuando alguien se muda al extranjero por estudios, fe o aventura, no solo por carrera."
+    },
+    {
+      "id": "house-10",
+      "number": 10,
+      "title": "10.ª Casa — Carrera, Reputación y Vida Pública",
+      "naturalSign": "Capricornio",
+      "group": "Angular",
+      "keywords": "Medio Cielo, MC, vocación, legado, autoridad",
+      "description": "La 10.ª casa se sitúa en el Medio Cielo (MC), el punto más visible de la carta. Rige la dirección profesional, la reputación pública y el legado que construyes en el mundo. Los planetas aquí se proyectan a través de la identidad profesional: Saturno en la 10.ª puede enfatizar el dominio lento; el Sol en la 10.ª busca reconocimiento. Cuando preguntan qué casa astrológica rige la carrera, la respuesta es la 10.ª. Usa la Calculadora del Medio Cielo para encontrar tu signo del MC y explora las líneas de astrocartografía de Sol MC o Júpiter MC para temas de carrera según la ubicación."
+    },
+    {
+      "id": "house-11",
+      "number": 11,
+      "title": "11.ª Casa — Amigos, Comunidad y Esperanzas",
+      "naturalSign": "Acuario",
+      "group": "Sucedente",
+      "keywords": "Grupos, redes, causas sociales, visión de futuro",
+      "description": "La 11.ª casa describe círculos de amistad, comunidades y las esperanzas que guardas para el futuro. Abarca el trabajo en equipo, las redes en redes sociales y la alineación con movimientos colectivos. Urano o Saturno en la 11.ª moldean cómo te relacionas con los grupos, ya sea como innovador, organizador o colaborador independiente. Esta casa responde a quiénes son «tu gente» y hacia qué visión compartida trabajas a largo plazo."
+    },
+    {
+      "id": "house-12",
+      "number": 12,
+      "title": "12.ª Casa — Subconsciente, Soledad y Cierres",
+      "naturalSign": "Piscis",
+      "group": "Cadente",
+      "keywords": "Vida oculta, espiritualidad, descanso, cierre, instituciones",
+      "description": "La 12.ª casa es el sector más orientado hacia dentro: sueños, soledad, espiritualidad y lo que opera por debajo de la conciencia. También se conecta con cierres, retiro e instituciones donde la vida se ralentiza (hospitales, monasterios, aislamiento creativo). Los planetas aquí pueden expresarse con sutileza o necesitar privacidad para desarrollarse por completo. Neptuno en la 12.ª amplifica la imaginación y la sensibilidad; Saturno puede enfatizar la práctica espiritual disciplinada. La 12.ª completa el ciclo de casas antes de volver a la 1.ª casa de identidad renovada."
+    }
+  ],
+  "introduce": {
+    "name": "introduce",
+    "title": "¿Qué son las casas astrológicas?",
+    "label": "FUNDAMENTOS",
+    "description": "Las casas astrológicas son los doce segmentos de áreas de vida de una carta natal. Mientras que los signos del zodiaco describen cómo se expresa la energía planetaria, las casas muestran dónde se manifiesta esa energía: en identidad, dinero, relaciones, carrera, hogar y en cada otro dominio de la vida cotidiana.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Rueda de carta natal mostrando las 12 casas astrológicas"
+    },
+    "items": [
+      {
+        "title": "Casas vs signos del zodiaco vs planetas",
+        "description": "Los planetas son los actores. Los signos del zodiaco son el estilo o el disfraz de cada actor. Las casas astrológicas son el escenario donde ocurre la escena. Tu Sol en Leo (signo) en la 10.ª casa (escenario) se lee distinto que el Sol en Leo en la 5.ª casa: la misma identidad solar, pero una enfatiza la carrera pública y la reputación mientras la otra enfatiza la autoexpresión creativa y el romance. Entender las casas astrológicas es lo que convierte una lista de posiciones en un mapa de vida legible.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-vs-signs.webp",
+          "alt": "Diagrama que muestra planetas, signos del zodiaco y casas astrológicas como tres capas de una carta natal"
+        }
+      },
+      {
+        "title": "Cómo se numeran las 12 casas",
+        "description": "La 1.ª casa comienza en el Ascendente: el signo del zodiaco que ascendía en el horizonte oriental en el momento de tu nacimiento. Las casas se numeran en sentido contrario a las agujas del reloj alrededor de la rueda, del 1 al 12. La 4.ª casa está en la base (IC / Imum Coeli), la 7.ª en el horizonte occidental (Descendente) y la 10.ª en la cima (Medio Cielo / MC). En una rueda de carta, imagina un reloj: el Ascendente suele estar en la posición de las 9 en punto, el Medio Cielo a las 12, el Descendente a las 3 y el IC a las 6.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-numbered.webp",
+          "alt": "Diagrama de rueda de carta natal con las 12 casas astrológicas numeradas y Ascendente y Medio Cielo marcados"
+        }
+      },
+      {
+        "title": "Casas de signo completo en AstroCarto",
+        "description": "Distintos astrólogos usan distintos sistemas de casas. Placidus es común en la astrología occidental moderna; el signo completo (Whole Sign) asigna cada signo del zodiaco a una casa entera, con el signo ascendente como toda la 1.ª casa. El Generador de Carta Natal de AstroCarto usa casas de signo completo para mayor claridad y lectura amigable para principiantes: el signo ascendente se convierte en la 1.ª casa y las casas siguen en orden zodiacal. Las posiciones planetarias por signo se mantienen iguales en todos los sistemas; las asignaciones de casas pueden cambiar, especialmente cerca de los límites de signo, por eso la precisión de la hora de nacimiento importa para las casas.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-whole-sign.webp",
+          "alt": "Diagrama del sistema de casas de signo completo mostrando cada signo del zodiaco como una casa astrológica entera"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Casas angulares, sucedentes y cadentes",
+    "label": "GRUPOS DE CASAS",
+    "description": "Las doce casas astrológicas se ordenan en tres grupos de cuatro. Las casas angulares tienen el mayor peso visible; las casas sucedentes estabilizan lo que inician los ángulos; las casas cadentes extienden, adaptan y conectan.",
+    "items": [
+      {
+        "title": "Casas angulares (1.ª, 4.ª, 7.ª, 10.ª) — Acción y visibilidad",
+        "description": "Las casas 1.ª, 4.ª, 7.ª y 10.ª se sitúan en los cuatro ejes de la carta: Ascendente, IC, Descendente y Medio Cielo. Los planetas aquí tienden a proyectarse con fuerza a través de la identidad (1.ª), el hogar y las raíces (4.ª), las relaciones uno a uno (7.ª) y la carrera pública (10.ª). Son las casas más decisivas en astrología para preguntas como «¿Quién soy?», «¿Dónde pertenezco?», «¿Con quién me asocio?» y «¿Por qué me conocen?»",
+        "icon": "RiFocus3Line",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-angular.webp",
+          "alt": "Diagrama de carta astrológica resaltando las casas angulares 1.ª, 4.ª, 7.ª y 10.ª en los cuatro ángulos"
+        }
+      },
+      {
+        "title": "Casas sucedentes (2.ª, 5.ª, 8.ª, 11.ª) — Estabilidad y recursos",
+        "description": "Las casas 2.ª, 5.ª, 8.ª y 11.ª siguen a las casas angulares y describen lo que construyes, retienes y compartes: recursos personales y valores (2.ª), alegría creativa y romance (5.ª), bienes compartidos y transformación profunda (8.ª), y comunidad más esperanzas a largo plazo (11.ª). Los planetas en casas sucedentes suelen describir temas de maduración lenta que se desarrollan después de que las casas angulares marcan la dirección.",
+        "icon": "RiStackLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-succedent.webp",
+          "alt": "Diagrama de carta astrológica resaltando las casas sucedentes 2.ª, 5.ª, 8.ª y 11.ª"
+        }
+      },
+      {
+        "title": "Casas cadentes (3.ª, 6.ª, 9.ª, 12.ª) — Aprendizaje y adaptación",
+        "description": "Las casas 3.ª, 6.ª, 9.ª y 12.ª se sitúan alejadas de los ángulos de la carta y enfatizan el movimiento, el desarrollo de habilidades y la perspectiva: comunicación cotidiana (3.ª), rutinas de trabajo y salud (6.ª), viajes y filosofía (9.ª), y soledad más subconsciente (12.ª). Los planetas en casas cadentes suelen describir cómo aprendes, te adaptas e integras la experiencia, más que dominar el titular de tu carta.",
+        "icon": "RiBookOpenLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-cadent.webp",
+          "alt": "Diagrama de carta astrológica resaltando las casas cadentes 3.ª, 6.ª, 9.ª y 12.ª"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo encontrar tus casas astrológicas",
+    "label": "GUÍA PRÁCTICA",
+    "description": "Necesitas tres datos de nacimiento para localizar tus casas astrológicas con fiabilidad: fecha, hora y lugar de nacimiento. Aquí tienes un camino paso a paso con las herramientas gratuitas de AstroCarto.",
+    "items": [
+      {
+        "title": "Genera tu carta natal",
+        "description": "Abre el Generador de Carta Natal, introduce tu fecha de nacimiento, hora exacta (a ser posible al minuto) y lugar. Pulsa generar para ver tu rueda de carta y la tabla de posiciones. La tabla lista cada planeta con su signo del zodiaco, grado y número de casa: es la forma más rápida de responder «¿En qué casa está mi Venus?» o «¿En qué casa está mi Luna?»",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Empieza por el Ascendente (1.ª casa)",
+        "description": "Tu signo ascendente marca la cúspide de la 1.ª casa, el punto de partida de la rueda de casas. En signo completo, todo el signo del Ascendente es tu 1.ª casa; el siguiente signo es la 2.ª casa, y así sucesivamente. Si solo necesitas tu Ascendente, usa la Calculadora del Signo Ascendente. La 1.ª casa describe la presentación personal, la vitalidad y cómo te enfrentas al mundo.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Lee los planetas por tema de casa",
+        "description": "Una vez que conoces las cúspides de tus casas, revisa en qué casas caen los planetas. Un planeta en la 10.ª casa enfatiza la carrera y la reputación pública; en la 7.ª, las parejas; en la 4.ª, el hogar y la familia. No necesitas planetas en cada casa: las casas vacías son normales y se leen a través del regente del signo en la cúspide de esa casa.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Conecta las casas con la astrología de ubicación",
+        "description": "La 4.ª casa (hogar, raíces) y la 10.ª casa (carrera, dirección pública) son especialmente relevantes al explorar dónde vivir. Después de leer los temas de tus casas, usa la astrocartografía para ver dónde las líneas planetarias activan esas áreas de vida geográficamente, útil para astrología de reubicación y planificación de viajes.",
+        "icon": "RiMapPinLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Leer las casas astrológicas en tu carta",
+    "label": "LECTURA DE CARTA",
+    "description": "Una vez que sabes qué significa cada una de las 12 casas astrológicas, estos hábitos de lectura te ayudan a interpretar posiciones sin perderte en la jerga.",
+    "items": [
+      {
+        "title": "Las casas vacías no son áreas «ausentes»",
+        "description": "Una casa vacía no significa que esa área de vida esté inactiva. Cada casa tiene un signo en su cúspide, y el planeta regente de ese signo se convierte en el señor de la casa: su posición en otra parte de la carta describe cómo se desarrolla ese tema. Por ejemplo, una 7.ª casa vacía con Libra en la cúspide se lee a través del signo y la casa donde esté Venus.",
+        "icon": "RiInformationLine"
+      },
+      {
+        "title": "Casa + signo + planeta juntos",
+        "description": "Lee siempre las tres capas juntas: la casa (área de vida), el signo en la cúspide o el signo del planeta (estilo) y cualquier planeta dentro de la casa (actores activos). Marte en la 6.ª casa en Virgo enfatiza rutinas diarias de trabajo y salud disciplinadas; Marte en la 6.ª en Aries enfatiza acción urgente e independiente en la misma área de vida.",
+        "icon": "RiLayersLine"
+      },
+      {
+        "title": "La precisión de la hora de nacimiento importa más para las casas",
+        "description": "Las posiciones del Sol y la Luna por signo son estables a lo largo de un día de nacimiento, pero el Ascendente y las cúspides de las casas pueden cambiar en minutos. Si tu hora de nacimiento es aproximada, trata las posiciones por casa, especialmente los ángulos como la 1.ª y la 10.ª, como provisionales. Regenera tu carta cuando encuentres una hora más precisa.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Usa el signo completo como marco de aprendizaje",
+        "description": "AstroCarto usa casas de signo completo para que los principiantes aprendan los significados de las casas sin debatir el cálculo de cúspides. A medida que avances, puedes comparar signo completo con Placidus u otros sistemas, pero las posiciones por signo y los aspectos planetarios siguen siendo la base estable con cualquier sistema de casas.",
+        "icon": "RiGraduationCapLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Preguntas frecuentes",
+    "title": "Casas astrológicas — Preguntas frecuentes",
+    "description": "Respuestas a preguntas habituales sobre las 12 casas en astrología y cómo leerlas en tu carta natal.",
+    "items": [
+      {
+        "title": "¿Qué son las casas astrológicas?",
+        "description": "Las casas astrológicas son los doce segmentos de una carta natal, cada uno representando un área de vida distinta: desde identidad y dinero hasta relaciones, carrera y espiritualidad. Los planetas dentro de una casa describen dónde tiende a manifestarse su energía en tu experiencia vivida."
+      },
+      {
+        "title": "¿En qué se diferencian las casas de los signos del zodiaco?",
+        "description": "Los signos del zodiaco describen el estilo, el temperamento y cómo se expresa la energía. Las casas describen dónde en la vida se manifiesta esa energía. El mismo planeta en el mismo signo se lee de forma distinta según la casa que ocupe."
+      },
+      {
+        "title": "¿Necesito mi hora de nacimiento para conocer mis casas?",
+        "description": "Sí, para cúspides de casas precisas, especialmente el Ascendente (1.ª casa) y el Medio Cielo (10.ª casa). Sin hora de nacimiento, aún puedes aprender los significados generales de las casas y leer posiciones por signo, pero la distribución personal de casas será poco fiable."
+      },
+      {
+        "title": "¿Qué son las casas vacías en astrología?",
+        "description": "Una casa vacía no tiene planetas dentro. Es normal. La casa se interpreta a través del signo en su cúspide y el planeta que rige ese signo. Vacía no significa inactiva: significa que el tema se expresa de forma indirecta."
+      },
+      {
+        "title": "¿Qué sistema de casas usa AstroCarto?",
+        "description": "El Generador de Carta Natal de AstroCarto usa casas de signo completo (Whole Sign): el signo ascendente se convierte en toda la 1.ª casa y cada signo siguiente ocupa la siguiente casa en orden. Así la carta se mantiene legible para principiantes y sigue mostrando temas de casas significativos."
+      },
+      {
+        "title": "¿Qué casa astrológica rige la carrera?",
+        "description": "La 10.ª casa rige la carrera, la reputación pública y la dirección de vida. El Medio Cielo (MC) se sitúa en la cúspide de la 10.ª casa. La 6.ª casa también se relaciona con el trabajo diario y las rutinas, mientras que la 2.ª casa se relaciona con ingresos y recursos personales."
+      },
+      {
+        "title": "¿Qué casa rige el amor y las relaciones?",
+        "description": "La 7.ª casa es la casa principal de parejas comprometidas y relaciones uno a uno. La 5.ª casa abarca romance, citas y atracción creativa; la 8.ª casa abarca intimidad, recursos compartidos y vínculos profundos."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Ve tus casas astrológicas en tu carta natal",
+    "description": "Genera gratis tu rueda de carta natal y tabla de posiciones para ver qué planetas caen en cada una de las 12 casas, y explora cómo esos temas se conectan con ubicaciones en tu mapa de astrocartografía.",
+    "buttons": [
+      {
+        "title": "Generador de Carta Natal",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Mapa de Astrocartografía Gratis",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

@@ -159,6 +159,18 @@ content_inventory:
       locale: "en"
       topic_cluster: "current sky / transits"
       differentiation_notes: "No-birth-data live tropical positions. Distinct from /transit-chart-calculator which overlays transits on a natal chart."
+    - path: "/astrology-houses"
+      primary_keyword: "astrology houses"
+      secondary_keywords:
+        - "12 houses astrology"
+        - "houses in astrology meaning"
+        - "astrology houses explained"
+        - "birth chart houses"
+        - "first house astrology"
+      page_type: "hub"
+      locale: "en"
+      topic_cluster: "astrology education / chart reading"
+      differentiation_notes: "Educational hub for all 12 houses; distinct from birth-chart-generator (tool) and natal-chart (cluster page). Phase 2 may add per-house child pages."
 
 page_strategy:
   # 允许智能体选择的页面类型。不要随便改这些英文枚举值
@@ -275,6 +287,36 @@ localization:
     - "es"
     - "it"
     - "de"
+
+assets:
+  provider: "kie.ai"
+  product_slug: astrocartography
+  default_model: "nano-banana-2"
+  resolution: "2K"
+  output_format: "webp"
+  skip_hero: true
+  budget:
+    max_images_per_page: 6
+    require_confirm: true
+  persist:
+    mode: public
+    public_dir: imgs
+    layout: flat
+  tool_pages:
+    shared_placeholder_path_prefixes:
+      - "/imgs/generated-landscape/"
+      - "/imgs/features/"
+    default_persist_layout: flat
+    max_images_per_page: 6
+  style_brief: |
+    Calm editorial astrology learning imagery on deep navy and soft gold tones.
+    Clean diagram or symbolic illustration style suitable for birth chart education.
+    Readable at thumbnail size; professional, not purple-neon AI cliché.
+  negative_prompt: |
+    watermark, other brand logos, unreadable gibberish text, fake UI chrome,
+    fake awards, fake user photos, medical diagnostic imagery, gore, NSFW,
+    purple neon glow cliché, crowded collage, tiny unreadable chart numbers,
+    misspelled house labels, horror imagery
 
 quality_gates:
   seo:

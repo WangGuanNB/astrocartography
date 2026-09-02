@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "title": "12 Häuser Geburtshoroskop — Bedeutung aller astrologischen Häuser",
+    "description": "Erfahren Sie, was die 12 Häuser im Geburtshoroskop bedeuten und wie sie Karriere, Liebe, Zuhause und Identität prägen. Einsteigerfreundlicher Leitfaden mit Ganzzeichen-Kontext und Links zu Ihrem kostenlosen Geburtshoroskop.",
+    "keywords": "12 Häuser Geburtshoroskop, astrologische Häuser, Häuser Astrologie Bedeutung, Geburtshoroskop Häuser, erstes Haus Astrologie, was sind die Häuser in der Astrologie, zehntes Haus Astrologie, siebtes Haus Bedeutung, Ganzzeichen-Häuser, Häuser erklärt"
+  },
+  "intentAnchor": {
+    "text": "Wenn Sie nach den 12 Häusern im Geburtshoroskop suchen (und nicht nur nach einem allgemeinen Horoskop), erklärt diese Seite alle 12 astrologischen Häuser in verständlicher Sprache — was jedes Haus regiert, wie sich Häuser von Tierkreiszeichen unterscheiden und wie Sie sie in Ihrem Geburtshoroskop mit den kostenlosen Tools von AstroCarto finden."
+  },
+  "internalLinks": {
+    "title": "Schnellnavigation",
+    "items": [
+      {
+        "text": "Bereit, Ihre Häuser zu sehen?",
+        "linkText": "Geburtshoroskop Generator",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "Brauchen Sie Ihren Aszendenten (1.-Haus-Spitze)?",
+        "linkText": "Aszendent Rechner",
+        "url": "/rising-sign-calculator"
+      },
+      {
+        "text": "Karriereachse (10. Haus)?",
+        "linkText": "Medium Coeli Rechner",
+        "url": "/midheaven-calculator"
+      },
+      {
+        "text": "Vollständiger Geburtshoroskop-Leitfaden:",
+        "linkText": "Geburtshoroskop",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "hubHero": {
+    "badge": "Astrologie Lern-Hub",
+    "primaryCta": { "title": "Ihre Häuser im Geburtshoroskop sehen", "url": "/tools/birth-chart-generator" },
+    "secondaryCta": { "title": "Geburtshoroskop-Leitfaden", "url": "/chart/natal-chart" },
+    "sidebarLabel": "12 Lebensbereiche",
+    "sidebarTags": ["Identität", "Karriere", "Zuhause", "Liebe"],
+    "sidebarTitle": "Häuser lernen, dann Horoskop lesen",
+    "sidebarDescription": "Alle 12 astrologischen Häuser durchstöbern, dann Ihr Geburtshoroskop erstellen und Ihre Stellungen sehen."
+  },
+  "navPills": [
+    { "title": "Start", "href": "#start-here", "icon": "RiSparklingLine" },
+    { "title": "12 Häuser", "href": "#twelve-houses", "icon": "RiLayoutGridLine" },
+    { "title": "Haustypen", "href": "#house-types", "icon": "RiFocus3Line" },
+    { "title": "Ihre finden", "href": "#usage", "icon": "RiSearchLine" },
+    { "title": "Leitfaden", "href": "#introduce", "icon": "RiBookOpenLine" }
+  ],
+  "hubLinkLabels": {
+    "openTool": "Tool öffnen",
+    "readMeaning": "Bedeutung lesen",
+    "learnMore": "Mehr erfahren"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "Hier starten",
+      "title": "Ihre astrologischen Häuser im Geburtshoroskop finden",
+      "description": "Die meisten Besucher wünschen einen von drei Wegen: ein Horoskop mit Hausstellungen erstellen, den Aszendenten bestätigen, der das 1. Haus eröffnet, oder verstehen, wie Häuser in eine vollständige Geburtshoroskop-Deutung passen.",
+      "columns": "lg:grid-cols-3",
+      "items": [
+        {
+          "title": "Geburtshoroskop Generator",
+          "description": "Erstellen Sie Ihr Horoskoprad und sehen Sie jeden Planeten nach Zeichen, Grad und Haus.",
+          "href": "/tools/birth-chart-generator",
+          "icon": "RiPieChartLine"
+        },
+        {
+          "title": "Aszendent Rechner",
+          "description": "Finden Sie Ihren Aszendenten — das Zeichen, das Ihr 1. Haus eröffnet.",
+          "href": "/rising-sign-calculator",
+          "icon": "RiUserLine"
+        },
+        {
+          "title": "Geburtshoroskop-Leitfaden",
+          "description": "Lernen Sie, Ihr vollständiges Geburtshoroskop zu lesen, nachdem Sie die Häuser kennen.",
+          "href": "/chart/natal-chart",
+          "icon": "RiCompassLine"
+        }
+      ]
+    },
+    "twelveHouses": {
+      "id": "twelve-houses",
+      "eyebrow": "Alle 12 Häuser",
+      "title": "Jedes astrologische Haus und was es regiert",
+      "description": "Nutzen Sie dieses Verzeichnis, um zu einem der 12 Häuser im Geburtshoroskop zu springen. Jeder Abschnitt erklärt den Lebensbereich, die natürliche Zeichenzuordnung und wie man Planeten in diesem Haus liest.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        { "title": "1. Haus", "description": "Selbst, Identität, Erscheinung und Vitalität.", "href": "#house-1", "icon": "RiUserLine", "group": "Winkelhaus" },
+        { "title": "2. Haus", "description": "Geld, Werte, Besitz und Selbstwert.", "href": "#house-2", "icon": "RiWalletLine", "group": "Succedent" },
+        { "title": "3. Haus", "description": "Kommunikation, Geschwister und lokales Umfeld.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Kadent" },
+        { "title": "4. Haus", "description": "Zuhause, Familie, Wurzeln und emotionale Grundlagen.", "href": "#house-4", "icon": "RiHome4Line", "group": "Winkelhaus" },
+        { "title": "5. Haus", "description": "Kreativität, Romantik, Freude und Kinder.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Succedent" },
+        { "title": "6. Haus", "description": "Alltagsarbeit, Gesundheit, Routinen und Dienst.", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "Kadent" },
+        { "title": "7. Haus", "description": "Partnerschaften, Ehe und Eins-zu-Eins-Bindungen.", "href": "#house-7", "icon": "RiHeartLine", "group": "Winkelhaus" },
+        { "title": "8. Haus", "description": "Transformation, Intimität und gemeinsame Ressourcen.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedent" },
+        { "title": "9. Haus", "description": "Reisen, Philosophie und höhere Bildung.", "href": "#house-9", "icon": "RiCompassLine", "group": "Kadent" },
+        { "title": "10. Haus", "description": "Karriere, Reputation und öffentliches Leben.", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "Winkelhaus" },
+        { "title": "11. Haus", "description": "Freunde, Gemeinschaft und langfristige Hoffnungen.", "href": "#house-11", "icon": "RiGroupLine", "group": "Succedent" },
+        { "title": "12. Haus", "description": "Unterbewusstsein, Einsamkeit, Abschlüsse und Spiritualität.", "href": "#house-12", "icon": "RiMoonLine", "group": "Kadent" }
+      ]
+    },
+    "houseTypes": {
+      "id": "house-types",
+      "eyebrow": "Hausgruppen",
+      "title": "Winkelhäuser, Succedenten und kadente Häuser",
+      "description": "Die zwölf astrologischen Häuser teilen sich in drei Gruppen zu je vier. Winkelhäuser (1., 4., 7. und 10.) haben das größte sichtbare Gewicht in der Horoskopdeutung.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Winkelhäuser (1., 4., 7., 10.)",
+          "description": "Identität, Zuhause, Partnerschaften und öffentliche Karriere — die vier Achsen des Horoskops.",
+          "href": "#house-types",
+          "icon": "RiFocus3Line"
+        },
+        {
+          "title": "Succedenten (2., 5., 8., 11.)",
+          "description": "Ressourcen, Kreativität, gemeinsame Güter und Gemeinschaft — die stabilisierenden Häuser.",
+          "href": "#house-types",
+          "icon": "RiStackLine"
+        },
+        {
+          "title": "Kadente Häuser (3., 6., 9., 12.)",
+          "description": "Kommunikation, Alltagsarbeit, Reisen und Unterbewusstsein — die anpassungsfähigen Häuser.",
+          "href": "#house-types",
+          "icon": "RiBookOpenLine"
+        },
+        {
+          "title": "Medium Coeli (10. Haus)",
+          "description": "Karriere, Reputation und öffentliche Richtung — Link zum MC-Rechner.",
+          "href": "/midheaven-calculator",
+          "icon": "RiBriefcaseLine"
+        }
+      ]
+    },
+    "houseGuide": {
+      "eyebrow": "Haus-für-Haus-Leitfaden",
+      "title": "Die 12 astrologischen Häuser erklärt",
+      "description": "Unten finden Sie eine vollständige Referenz für jedes Haus in der Astrologie — was es regiert, seine natürliche Zeichenentsprechung und wie Sie Stellungen in Ihrem Geburtshoroskop zu lesen beginnen.",
+      "disclaimer": "Natürliche Zeichenzuordnungen (z. B. Widder für das 1. Haus) sind traditionelle Lehrreferenzen — sie bedeuten nicht, dass dieses Zeichen auf Ihrer persönlichen Hausspitze steht.",
+      "naturalSignLabel": "Natürliches Zeichen:"
+    }
+  },
+  "houseDetails": [
+    {
+      "id": "house-1",
+      "number": 1,
+      "title": "1. Haus — Selbst, Identität & Erscheinung",
+      "naturalSign": "Aries",
+      "group": "Winkelhaus",
+      "keywords": "Aszendent, aufsteigendes Zeichen, Vitalität, erster Eindruck",
+      "description": "Das 1. Haus ist das einzige Haus, das Sie direkt repräsentiert. Es beginnt am Aszendenten (aufsteigendes Zeichen) und beschreibt körperliche Präsenz, Temperament und wie Sie instinktiv auf die Welt treffen. Planeten hier färben Ihren Standardmodus der Selbstdarstellung. Mars im 1. Haus wirkt oft direkt und energisch; Venus im 1. Haus erscheint häufig zugänglich und ästhetisch sensibel. Da das 1. Haus das gesamte Haus-Rad setzt, ist die Genauigkeit der Geburtszeit entscheidend — der Aszendent wechselt etwa alle zwei Stunden."
+    },
+    {
+      "id": "house-2",
+      "number": 2,
+      "title": "2. Haus — Geld, Werte & Besitz",
+      "naturalSign": "Taurus",
+      "group": "Succedent",
+      "keywords": "Einkommen, Vermögen, Selbstwert, materielle Sicherheit",
+      "description": "Das 2. Haus regiert, was Sie verdienen, besitzen und schätzen — einschließlich wie Sie Selbstwert jenseits des Gehalts messen. Es beschreibt Ausgabegewohnheiten, Talente, die Sie monetarisieren können, und Ihre Haltung zu materieller Stabilität. Venus oder Jupiter im 2. Haus korrelieren oft mit Leichtigkeit bei Ressourcen; Saturn kann Disziplin und langfristigen Aufbau betonen. Dieses Haus ist praktisch: Es beantwortet, wie Sie sich selbst tragen und worin Sie zu investieren lohnt."
+    },
+    {
+      "id": "house-3",
+      "number": 3,
+      "title": "3. Haus — Kommunikation & Alltagslernen",
+      "naturalSign": "Gemini",
+      "group": "Kadent",
+      "keywords": "Geschwister, Schreiben, Kurzreisen, Nachbarschaft",
+      "description": "Das 3. Haus umfasst alltägliche Kommunikation: Gespräche, E-Mails, Social Media, frühe Bildung und Beziehungen zu Geschwistern oder nahen Nachbarn. Es regiert auch Kurzstreckenreisen und wie Sie Informationen im Alltag verarbeiten. Merkur im 3. Haus stärkt verbale und schriftliche Gewandtheit; der Mond hier kann emotionales Erzählen betonen. Bei vielen Suchen zu astrologischen Häusern ist das 3. Haus die Brücke zwischen privatem Innenleben (4. Haus) und öffentlicher Sichtbarkeit (10. Haus)."
+    },
+    {
+      "id": "house-4",
+      "number": 4,
+      "title": "4. Haus — Zuhause, Familie & Wurzeln",
+      "naturalSign": "Cancer",
+      "group": "Winkelhaus",
+      "keywords": "IC, Eltern, Privatleben, emotionale Grundlagen",
+      "description": "Das 4. Haus sitzt am unteren Punkt des Horoskops am IC (Imum Coeli). Es beschreibt Zuhause, Herkunftsfamilie, privates emotionales Leben und das Zugehörigkeitsgefühl, das Sie in sich tragen. Planeten hier zeigen oft, wohin Sie sich zurückziehen, um aufzutanken, und was „Zuhause“ jenseits einer Adresse bedeutet. Mond im 4. Haus verstärkt häusliche und ancestrale Themen. In der Umzugsastrologie verbindet sich das 4. Haus natürlich mit Fragen, wo Sie verwurzelt sind — oft erkundet zusammen mit Mond-IC-Astrokartografie-Linien."
+    },
+    {
+      "id": "house-5",
+      "number": 5,
+      "title": "5. Haus — Kreativität, Romantik & Freude",
+      "naturalSign": "Leo",
+      "group": "Succedent",
+      "keywords": "Dating, Kinder, Hobbys, Selbstausdruck",
+      "description": "Das 5. Haus ist der Spielplatz des Horoskops: Romantik, kreative Projekte, Hobbys, Performance und Kinder (biologisch oder metaphorisch). Es beschreibt, was Sie zum Vergnügen tun und wo Sie persönliche Risiken eingehen. Sonne oder Venus im 5. Haus verstärken oft Charisma und künstlerisches Flair. Anders als der Fokus auf feste Partnerschaft im 7. Haus betont das 5. Haus Anziehung, Spaß und authentischen Selbstausdruck ohne das Gewicht langfristiger Verpflichtung."
+    },
+    {
+      "id": "house-6",
+      "number": 6,
+      "title": "6. Haus — Arbeit, Gesundheit & Alltagsroutinen",
+      "naturalSign": "Virgo",
+      "group": "Kadent",
+      "keywords": "Beschäftigung, Gewohnheiten, Wellness, Dienst",
+      "description": "Das 6. Haus regiert Alltagsarbeitsrhythmen, Gesundheitspflege und Gewohnheiten — nicht unbedingt Ihren öffentlichen Karrieretitel (das ist das 10. Haus), sondern wie Sie in täglichen Aufgaben auftreten. Es umfasst Haustiere, Dienstrollen und die Systeme, die das Leben am Laufen halten. Mars im 6. Haus kann eine starke Arbeitsethik antreiben; Neptun kann Grenzen zwischen Arbeit und Ruhe verwischen. Wenn Sie astrologische Häuser für Wellness-Themen lesen, beginnen Sie mit dem 6. Haus und allen Planeten, die es aspektieren."
+    },
+    {
+      "id": "house-7",
+      "number": 7,
+      "title": "7. Haus — Partnerschaften & Ehe",
+      "naturalSign": "Libra",
+      "group": "Winkelhaus",
+      "keywords": "Deszendent, feste Beziehungen, Verträge",
+      "description": "Das 7. Haus beginnt am Deszendenten — dem Zeichen gegenüber Ihrem Aszendenten. Es regiert feste Eins-zu-Eins-Partnerschaften: Ehe, Geschäftspartner und bedeutende individuelle Beziehungen. Planeten hier beschreiben, was Sie in einem Partner suchen und wie Sie Gleichheit aushandeln. Venus im 7. Haus betont Harmonie in Beziehungen; Uranus bevorzugt vielleicht unkonventionelle oder freiheitsorientierte Bindungen. Das 7. Haus ist das Spiegelhaus: Es zeigt oft Eigenschaften, die Sie projizieren oder in anderen anziehen."
+    },
+    {
+      "id": "house-8",
+      "number": 8,
+      "title": "8. Haus — Transformation & gemeinsame Ressourcen",
+      "naturalSign": "Scorpio",
+      "group": "Succedent",
+      "keywords": "Intimität, Erbschaft, Schulden, psychologische Tiefe",
+      "description": "Das 8. Haus umfasst, was Sie mit anderen teilen — Geld, Geheimnisse, Macht und emotionale Tiefe. Es regiert Erbschaft, Steuern, Kredite und die Psychologie der Intimität. Planeten hier korrelieren oft mit Phasen tiefgreifender Veränderung statt oberflächlicher Ereignisse. Pluto oder Mars im 8. Haus verstärken Themen von Kontrolle, Hingabe und Regeneration. Dieses Haus fragt, wo Sie sich mit einer anderen Person oder einem System verschmelzen und wo Sie Autonomie bewahren."
+    },
+    {
+      "id": "house-9",
+      "number": 9,
+      "title": "9. Haus — Reisen, Philosophie & höhere Bildung",
+      "naturalSign": "Sagittarius",
+      "group": "Kadent",
+      "keywords": "Fernreisen, Religion, Veröffentlichungen, Weltbild",
+      "description": "Das 9. Haus erweitert die Perspektive: Auslandsreisen, Universitätsbildung, spirituelle oder philosophische Rahmen und Veröffentlichungen. Es beschreibt die Überzeugungen, die Ihr Leben orientieren, und wie Sie über den Alltag hinaus nach Sinn suchen. Jupiter im 9. Haus ist klassisch stark — Neugier, Lehren und interkulturelle Verbindung kommen natürlich. Bei Umzugsfragen erscheinen 9.-Haus-Themen oft, wenn jemand ins Ausland zieht für Studium, Glauben oder Abenteuer, nicht nur für Karriere."
+    },
+    {
+      "id": "house-10",
+      "number": 10,
+      "title": "10. Haus — Karriere, Reputation & öffentliches Leben",
+      "naturalSign": "Capricorn",
+      "group": "Winkelhaus",
+      "keywords": "Medium Coeli, MC, Berufung, Vermächtnis, Autorität",
+      "description": "Das 10. Haus sitzt am Medium Coeli (MC) — dem sichtbarsten Punkt des Horoskops. Es regiert Karriererichtung, öffentliche Reputation und das Vermächtnis, das Sie in der Welt aufbauen. Planeten hier strahlen durch die berufliche Identität: Saturn im 10. Haus kann langsames Meistern betonen; Sonne im 10. Haus sucht Anerkennung. Wenn gefragt wird, welches astrologische Haus die Karriere regiert, ist die Antwort das 10. Haus. Nutzen Sie den Medium Coeli Rechner, um Ihr MC-Zeichen zu finden, und erkunden Sie dann Sonnen-MC- oder Jupiter-MC-Astrokartografie-Linien für standortbezogene Karrierethemen."
+    },
+    {
+      "id": "house-11",
+      "number": 11,
+      "title": "11. Haus — Freunde, Gemeinschaft & Hoffnungen",
+      "naturalSign": "Aquarius",
+      "group": "Succedent",
+      "keywords": "Gruppen, Netzwerke, soziale Anliegen, Zukunftsvision",
+      "description": "Das 11. Haus beschreibt Freundeskreise, Gemeinschaften und die Hoffnungen, die Sie für die Zukunft hegen. Es umfasst Teamarbeit, Social-Media-Netzwerke und die Ausrichtung auf kollektive Bewegungen. Uranus oder Saturn im 11. Haus prägen, wie Sie zu Gruppen stehen — ob als Innovator, Organisator oder unabhängiger Beitragender. Dieses Haus beantwortet, wer Ihre Menschen sind und welcher gemeinsamen Vision Sie langfristig zuarbeiten."
+    },
+    {
+      "id": "house-12",
+      "number": 12,
+      "title": "12. Haus — Unterbewusstsein, Einsamkeit & Abschlüsse",
+      "naturalSign": "Pisces",
+      "group": "Kadent",
+      "keywords": "Verborgenes Leben, Spiritualität, Ruhe, Abschluss, Institutionen",
+      "description": "Das 12. Haus ist der am stärksten nach innen gerichtete Sektor: Träume, Einsamkeit, Spiritualität und was unter dem Bewusstsein wirkt. Es verbindet sich auch mit Abschlüssen, Rückzug und Institutionen, wo das Leben langsamer wird (Krankenhäuser, Klöster, kreative Isolation). Planeten hier können sich subtil ausdrücken oder Privatsphäre brauchen, um sich voll zu entfalten. Neptun im 12. Haus verstärkt Vorstellungskraft und Sensibilität; Saturn kann disziplinierte spirituelle Praxis betonen. Das 12. Haus schließt den Hauszyklus ab, bevor es zum 1. Haus frischer Identität zurückkehrt."
+    }
+  ],
+  "introduce": {
+    "name": "introduce",
+    "title": "Was sind astrologische Häuser?",
+    "label": "GRUNDLAGEN",
+    "description": "Astrologische Häuser sind die zwölf Lebensbereichs-Segmente eines Geburtshoroskops. Während Tierkreiszeichen beschreiben, wie sich planetarische Energie ausdrückt, zeigen Häuser, wo diese Energie wirkt — in Identität, Geld, Beziehungen, Karriere, Zuhause und jedem anderen Bereich des Alltags.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Geburtshoroskop-Rad mit den 12 astrologischen Häusern"
+    },
+    "items": [
+      {
+        "title": "Häuser vs. Tierkreiszeichen vs. Planeten",
+        "description": "Planeten sind die Akteure. Tierkreiszeichen sind der Stil oder das Kostüm jedes Akteurs. Astrologische Häuser sind die Bühne, auf der die Szene spielt. Sonne im Löwen (Zeichen) im 10. Haus (Bühne) liest sich anders als Sonne im Löwen im 5. Haus: dieselbe solare Identität, aber eines betont öffentliche Karriere und Reputation, das andere kreativen Selbstausdruck und Romantik. Astrologische Häuser zu verstehen verwandelt eine Liste von Stellungen in eine lesbare Lebenskarte.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-vs-signs.webp",
+          "alt": "Diagramm, das Planeten, Tierkreiszeichen und astrologische Häuser als drei Schichten eines Geburtshoroskops zeigt"
+        }
+      },
+      {
+        "title": "Wie die 12 Häuser nummeriert sind",
+        "description": "Das 1. Haus beginnt am Aszendenten — dem Tierkreiszeichen, das am östlichen Horizont in Ihrem Geburtsmoment aufsteigt. Häuser werden gegen den Uhrzeigersinn um das Rad von 1 bis 12 nummeriert. Das 4. Haus sitzt unten (IC / Imum Coeli), das 7. Haus am westlichen Horizont (Deszendent) und das 10. Haus oben (Medium Coeli / MC). Stellen Sie sich auf einem Horoskoprad eine Uhr vor: Der Aszendent ist typischerweise bei 9 Uhr, das Medium Coeli bei 12 Uhr, der Deszendent bei 3 Uhr und das IC bei 6 Uhr.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-numbered.webp",
+          "alt": "Geburtshoroskop-Rad-Diagramm mit 12 nummerierten astrologischen Häusern, Aszendent und Medium Coeli markiert"
+        }
+      },
+      {
+        "title": "Ganzzeichen-Häuser bei AstroCarto",
+        "description": "Verschiedene Astrologen nutzen verschiedene Häusersysteme. Placidus ist in der modernen westlichen Astrologie verbreitet; Ganzzeichen weist jedem Tierkreiszeichen ein volles Haus zu, wobei das aufsteigende Zeichen das gesamte 1. Haus ist. AstroCartos Geburtshoroskop Generator nutzt Ganzzeichen-Häuser für Klarheit und einsteigerfreundliches Lesen — das aufsteigende Zeichen wird zum 1. Haus, dann folgen die Häuser in Zeichenreihenfolge. Planeten-Zeichen-Stellungen bleiben über Systeme hinweg gleich; Hauszuordnungen können sich verschieben, besonders nahe Zeichengrenzen — deshalb ist die Geburtszeitgenauigkeit für Häuser wichtig.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-whole-sign.webp",
+          "alt": "Ganzzeichen-Häusersystem-Diagramm, das jedes Tierkreiszeichen als volles astrologisches Haus zeigt"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Winkelhäuser, Succedenten und kadente Häuser",
+    "label": "HAUSGRUPPEN",
+    "description": "Die zwölf astrologischen Häuser sortieren sich in drei Gruppen zu je vier. Winkelhäuser tragen das sichtbarste Gewicht; Succedenten stabilisieren, was die Winkel beginnen; kadente Häuser erweitern, passen an und verbinden.",
+    "items": [
+      {
+        "title": "Winkelhäuser (1., 4., 7., 10.) — Handlung und Sichtbarkeit",
+        "description": "Die Häuser 1, 4, 7 und 10 sitzen auf den vier Achsen des Horoskops: Aszendent, IC, Deszendent und Medium Coeli. Planeten hier strahlen oft laut durch Identität (1.), Zuhause und Wurzeln (4.), Eins-zu-Eins-Beziehungen (7.) und öffentliche Karriere (10.). Das sind die folgenreichsten Häuser in der Astrologie für Fragen wie „Wer bin ich?“, „Wo gehöre ich hin?“, „Mit wem gehe ich Partnerschaften ein?“ und „Wofür bin ich bekannt?“",
+        "icon": "RiFocus3Line",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-angular.webp",
+          "alt": "Astrologie-Horoskop-Diagramm mit hervorgehobenen Winkelhäusern 1., 4., 7. und 10. an den vier Achsen"
+        }
+      },
+      {
+        "title": "Succedenten (2., 5., 8., 11.) — Stabilität und Ressourcen",
+        "description": "Die Häuser 2, 5, 8 und 11 folgen den Winkelhäusern und beschreiben, was Sie aufbauen, halten und teilen: persönliche Ressourcen und Werte (2.), kreative Freude und Romantik (5.), gemeinsame Güter und tiefe Transformation (8.) sowie Gemeinschaft und langfristige Hoffnungen (11.). Planeten in Succedenten beschreiben oft langsam reifende Themen, die nach den Winkelhäusern ihre Richtung setzen.",
+        "icon": "RiStackLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-succedent.webp",
+          "alt": "Astrologie-Horoskop-Diagramm mit hervorgehobenen Succedenten 2., 5., 8. und 11."
+        }
+      },
+      {
+        "title": "Kadente Häuser (3., 6., 9., 12.) — Lernen und Anpassung",
+        "description": "Die Häuser 3, 6, 9 und 12 sitzen abseits der Horoskopachsen und betonen Bewegung, Kompetenzaufbau und Perspektive: Alltagskommunikation (3.), Arbeitsroutinen und Gesundheit (6.), Reisen und Philosophie (9.) sowie Einsamkeit und Unterbewusstsein (12.). Planeten in kadenten Häusern beschreiben oft, wie Sie lernen, sich anpassen und Erfahrung integrieren, statt die Schlagzeile Ihres Horoskops zu dominieren.",
+        "icon": "RiBookOpenLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-cadent.webp",
+          "alt": "Astrologie-Horoskop-Diagramm mit hervorgehobenen kadenten Häusern 3., 6., 9. und 12."
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "So finden Sie Ihre astrologischen Häuser",
+    "label": "PRAKTISCHER LEITFADEN",
+    "description": "Sie brauchen drei Geburtsdaten, um Ihre astrologischen Häuser zuverlässig zu bestimmen: Geburtsdatum, Geburtszeit und Geburtsort. Hier ist ein Schritt-für-Schritt-Weg mit den kostenlosen Tools von AstroCarto.",
+    "items": [
+      {
+        "title": "Geburtshoroskop erstellen",
+        "description": "Öffnen Sie den Geburtshoroskop Generator, geben Sie Geburtsdatum, exakte Zeit (wenn möglich auf die Minute) und Ort ein. Klicken Sie auf Erstellen, um Ihr Horoskoprad und Ihre Stellungstabelle zu sehen. Die Tabelle listet jeden Planeten mit Tierkreiszeichen, Grad und Hausnummer — das ist der schnellste Weg, „In welchem Haus steht meine Venus?“ oder „In welchem Haus steht mein Mond?“ zu beantworten.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Mit dem Aszendenten beginnen (1. Haus)",
+        "description": "Ihr aufsteigendes Zeichen markiert die Spitze des 1. Hauses — den Startpunkt des Haus-Rads. Bei Ganzzeichen ist das gesamte Zeichen am Aszendenten Ihr 1. Haus; das nächste Zeichen ist das 2. Haus usw. Wenn Sie nur den Aszendenten brauchen, nutzen Sie den Aszendent Rechner. Das 1. Haus beschreibt Selbstdarstellung, Vitalität und wie Sie auf die Welt treffen.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Planeten nach Hausthema lesen",
+        "description": "Nachdem Sie Ihre Hausspitzen kennen, prüfen Sie, welche Planeten in welchen Häusern stehen. Ein Planet im 10. Haus betont Karriere und öffentliche Reputation; im 7. Haus Partnerschaften; im 4. Haus Zuhause und Familie. Sie brauchen nicht in jedem Haus Planeten — leere Häuser sind normal und werden über den Herrscher des Zeichens auf der Hausspitze gelesen.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Häuser mit Standortastrologie verbinden",
+        "description": "Das 4. Haus (Zuhause, Wurzeln) und das 10. Haus (Karriere, öffentliche Richtung) sind besonders relevant, wenn Sie erkunden, wo Sie leben möchten. Nach dem Lesen Ihrer Hausthemen nutzen Sie Astrokartografie, um zu sehen, wo Planetenlinien diese Lebensbereiche geografisch aktivieren — nützlich für Umzugsastrologie und Reiseplanung.",
+        "icon": "RiMapPinLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Astrologische Häuser in Ihrem Geburtshoroskop lesen",
+    "label": "HOROSKOP-DEUTUNG",
+    "description": "Sobald Sie wissen, was jedes der 12 astrologischen Häuser bedeutet, helfen diese Lesegewohnheiten, Stellungen zu interpretieren, ohne im Fachjargon unterzugehen.",
+    "items": [
+      {
+        "title": "Leere Häuser sind keine „fehlenden“ Bereiche",
+        "description": "Ein leeres Haus bedeutet nicht, dass dieser Lebensbereich inaktiv ist. Jedes Haus hat ein Zeichen auf seiner Spitze, und der Herrscher dieses Zeichens wird zum Hausherrscher — seine Stellung anderswo im Horoskop beschreibt, wie sich das Hausthema entfaltet. Zum Beispiel wird ein leeres 7. Haus mit Waage auf der Spitze über Venus' Zeichen und Hausstellung gelesen.",
+        "icon": "RiInformationLine"
+      },
+      {
+        "title": "Haus + Zeichen + Planet zusammen",
+        "description": "Lesen Sie immer alle drei Schichten zusammen: das Haus (Lebensbereich), das Zeichen auf der Spitze oder das Zeichen des Planeten (Stil) und alle Planeten im Haus (aktive Akteure). Mars im 6. Haus in Jungfrau betont disziplinierte Alltagsarbeit und Gesundheitsroutinen; Mars im 6. Haus in Widder betont dringliches, unabhängiges Handeln im selben Lebensbereich.",
+        "icon": "RiLayersLine"
+      },
+      {
+        "title": "Geburtszeitgenauigkeit ist für Häuser am wichtigsten",
+        "description": "Sonnen- und Mond-Zeichenstellungen bleiben über einen Geburtstag stabil, aber Aszendent und Hausspitzen können sich innerhalb von Minuten ändern. Wenn Ihre Geburtszeit ungefähr ist, behandeln Sie Hausstellungen — besonders Achsen wie 1. und 10. Haus — als vorläufig. Erstellen Sie Ihr Horoskop neu, wenn Sie eine genauere Zeit finden.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Ganzzeichen als Lernrahmen nutzen",
+        "description": "AstroCarto nutzt Ganzzeichen-Häuser, damit Einsteiger Hausbedeutungen lernen können, ohne über Spitzenrechnungen zu debattieren. Wenn Sie weiterkommen, können Sie Ganzzeichen mit Placidus oder anderen Systemen vergleichen — aber Zeichenstellungen und Planetenaspekte bleiben die stabile Grundlage unabhängig vom Häusersystem.",
+        "icon": "RiGraduationCapLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "12 Häuser Geburtshoroskop — Häufig gestellte Fragen",
+    "description": "Antworten auf häufige Fragen zu den 12 astrologischen Häusern und wie Sie sie in Ihrem Geburtshoroskop lesen.",
+    "items": [
+      {
+        "title": "Was sind astrologische Häuser?",
+        "description": "Astrologische Häuser sind die zwölf Segmente eines Geburtshoroskops, jedes für einen eigenen Lebensbereich — von Identität und Geld über Beziehungen, Karriere bis Spiritualität. Planeten in einem Haus beschreiben, wo sich ihre Energie in Ihrer gelebten Erfahrung zeigt."
+      },
+      {
+        "title": "Wie unterscheiden sich Häuser von Tierkreiszeichen?",
+        "description": "Tierkreiszeichen beschreiben Stil, Temperament und wie sich Energie ausdrückt. Häuser beschreiben, wo im Leben sich diese Energie manifestiert. Derselbe Planet im selben Zeichen liest sich anders, je nachdem, welches Haus er belegt."
+      },
+      {
+        "title": "Brauche ich meine Geburtszeit, um meine Häuser zu kennen?",
+        "description": "Ja, für genaue Hausspitzen — besonders Aszendent (1. Haus) und Medium Coeli (10. Haus). Ohne Geburtszeit können Sie dennoch allgemeine Hausbedeutungen lernen und Planeten-nach-Zeichen-Stellungen lesen, aber Ihre persönliche Hausanordnung ist unzuverlässig."
+      },
+      {
+        "title": "Was sind leere Häuser in der Astrologie?",
+        "description": "Ein leeres Haus enthält keine Planeten. Das ist normal. Das Haus wird über das Zeichen auf seiner Spitze und den Planeten gelesen, der dieses Zeichen regiert. Leer bedeutet nicht inaktiv — es bedeutet, dass sich das Thema indirekt ausdrückt."
+      },
+      {
+        "title": "Welches Häusersystem nutzt AstroCarto?",
+        "description": "AstroCartos Geburtshoroskop Generator nutzt Ganzzeichen-Häuser: Das aufsteigende Zeichen wird zum gesamten 1. Haus, und jedes folgende Zeichen belegt das nächste Haus in Reihenfolge. So bleibt das Horoskop für Einsteiger lesbar und zeigt dennoch bedeutsame Hausthemen."
+      },
+      {
+        "title": "Welches astrologische Haus regiert die Karriere?",
+        "description": "Das 10. Haus regiert Karriere, öffentliche Reputation und Lebensrichtung. Das Medium Coeli (MC) sitzt auf der Spitze des 10. Hauses. Das 6. Haus betrifft auch Alltagsarbeit und Routinen, während das 2. Haus Einkommen und persönliche Ressourcen betrifft."
+      },
+      {
+        "title": "Welches Haus regiert Liebe und Beziehungen?",
+        "description": "Das 7. Haus ist das Haupt-Haus für feste Partnerschaften und Eins-zu-Eins-Beziehungen. Das 5. Haus umfasst Romantik, Dating und kreative Anziehung; das 8. Haus umfasst Intimität, gemeinsame Ressourcen und tiefe Bindung."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Ihre astrologischen Häuser im Geburtshoroskop sehen",
+    "description": "Erstellen Sie kostenlos Ihr Geburtshoroskop-Rad und Ihre Stellungstabelle, um zu sehen, welche Planeten in jedem der 12 Häuser stehen — und erkunden Sie dann, wie diese Themen mit Orten auf Ihrer Astrokartografie-Karte zusammenhängen.",
+    "buttons": [
+      {
+        "title": "Geburtshoroskop Generator",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Kostenlose Astrokartografie-Karte",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

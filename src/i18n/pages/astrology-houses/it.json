@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "title": "Case Astrologiche — Guida Completa alle 12 Case",
+    "description": "Scopri cosa significano le case astrologiche e come le 12 case plasmano carriera, amore, casa e identità nel tuo tema natale. Guida per principianti con contesto Segno Intero e link alla tua carta natale gratuita.",
+    "keywords": "case astrologiche, 12 case astrologia, significato case astrologiche, case nel tema natale, prima casa astrologia, cosa sono le case in astrologia, decima casa astrologia, significato settima casa, case a segno intero, carta natale case"
+  },
+  "intentAnchor": {
+    "text": "Se stai cercando le case astrologiche (e non un semplice oroscopo generico), questa pagina spiega tutte e 12 le case in linguaggio chiaro: cosa governa ogni casa, come differiscono dai segni zodiacali e come trovarle nel tuo tema natale con gli strumenti gratuiti di AstroCarto."
+  },
+  "internalLinks": {
+    "title": "Navigazione rapida",
+    "items": [
+      {
+        "text": "Pronto a vedere le tue case?",
+        "linkText": "Generatore Carta Natale",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "Ti serve l'Ascendente (cuspide della 1ª casa)?",
+        "linkText": "Calcolatore Segno Ascendente",
+        "url": "/rising-sign-calculator"
+      },
+      {
+        "text": "Asse di carriera (10ª casa)?",
+        "linkText": "Calcolatore Medio Cielo",
+        "url": "/midheaven-calculator"
+      },
+      {
+        "text": "Guida completa al tema natale:",
+        "linkText": "Tema Natale",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "hubHero": {
+    "badge": "Hub Astrologia",
+    "primaryCta": { "title": "Vedi le tue case nel tema natale", "url": "/tools/birth-chart-generator" },
+    "secondaryCta": { "title": "Guida al tema natale", "url": "/chart/natal-chart" },
+    "sidebarLabel": "12 aree di vita",
+    "sidebarTags": ["Identità", "Carriera", "Casa", "Amore"],
+    "sidebarTitle": "Impara le case, poi leggi la carta",
+    "sidebarDescription": "Esplora tutte e 12 le case astrologiche, poi genera il tuo tema natale per vedere i tuoi posizionamenti."
+  },
+  "navPills": [
+    { "title": "Inizia qui", "href": "#start-here", "icon": "RiSparklingLine" },
+    { "title": "12 Case", "href": "#twelve-houses", "icon": "RiLayoutGridLine" },
+    { "title": "Tipi di case", "href": "#house-types", "icon": "RiFocus3Line" },
+    { "title": "Trova le tue", "href": "#usage", "icon": "RiSearchLine" },
+    { "title": "Guida", "href": "#introduce", "icon": "RiBookOpenLine" }
+  ],
+  "hubLinkLabels": {
+    "openTool": "Apri strumento",
+    "readMeaning": "Leggi significato",
+    "learnMore": "Scopri di più"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "Inizia qui",
+      "title": "Trova le tue case astrologiche nel tema natale",
+      "description": "La maggior parte dei visitatori cerca uno di tre percorsi: generare una carta con i posizionamenti nelle case, confermare l'Ascendente che apre la 1ª casa, o capire come le case si inseriscono in una lettura completa del tema natale.",
+      "columns": "lg:grid-cols-3",
+      "items": [
+        {
+          "title": "Generatore Carta Natale",
+          "description": "Genera la ruota del tema natale e vedi ogni pianeta per segno, grado e casa.",
+          "href": "/tools/birth-chart-generator",
+          "icon": "RiPieChartLine"
+        },
+        {
+          "title": "Calcolatore Segno Ascendente",
+          "description": "Scopri il tuo Ascendente — il segno che apre la tua 1ª casa.",
+          "href": "/rising-sign-calculator",
+          "icon": "RiUserLine"
+        },
+        {
+          "title": "Guida al Tema Natale",
+          "description": "Impara a leggere l'intero tema natale dopo aver compreso le case.",
+          "href": "/chart/natal-chart",
+          "icon": "RiCompassLine"
+        }
+      ]
+    },
+    "twelveHouses": {
+      "id": "twelve-houses",
+      "eyebrow": "Tutte e 12 le case",
+      "title": "Ogni casa astrologica e cosa governa",
+      "description": "Usa questa directory per saltare a una qualsiasi delle 12 case astrologiche. Ogni sezione spiega l'area di vita, l'associazione naturale con il segno e come leggere i pianeti in quella casa.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        { "title": "1ª Casa", "description": "Sé, identità, aspetto e vitalità.", "href": "#house-1", "icon": "RiUserLine", "group": "Angolare" },
+        { "title": "2ª Casa", "description": "Denaro, valori, beni e autostima.", "href": "#house-2", "icon": "RiWalletLine", "group": "Succedente" },
+        { "title": "3ª Casa", "description": "Comunicazione, fratelli e ambiente locale.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Cadente" },
+        { "title": "4ª Casa", "description": "Casa, famiglia, radici e fondamenta emotive.", "href": "#house-4", "icon": "RiHome4Line", "group": "Angolare" },
+        { "title": "5ª Casa", "description": "Creatività, romanticismo, gioia e figli.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Succedente" },
+        { "title": "6ª Casa", "description": "Lavoro quotidiano, salute, routine e servizio.", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "Cadente" },
+        { "title": "7ª Casa", "description": "Partenariati, matrimonio e legami uno a uno.", "href": "#house-7", "icon": "RiHeartLine", "group": "Angolare" },
+        { "title": "8ª Casa", "description": "Trasformazione, intimità e risorse condivise.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedente" },
+        { "title": "9ª Casa", "description": "Viaggi, filosofia e istruzione superiore.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadente" },
+        { "title": "10ª Casa", "description": "Carriera, reputazione e vita pubblica.", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "Angolare" },
+        { "title": "11ª Casa", "description": "Amici, comunità e speranze a lungo termine.", "href": "#house-11", "icon": "RiGroupLine", "group": "Succedente" },
+        { "title": "12ª Casa", "description": "Subconscio, solitudine, conclusioni e spiritualità.", "href": "#house-12", "icon": "RiMoonLine", "group": "Cadente" }
+      ]
+    },
+    "houseTypes": {
+      "id": "house-types",
+      "eyebrow": "Gruppi di case",
+      "title": "Case angolari, succedenti e cadenti",
+      "description": "Le dodici case astrologiche si dividono in tre gruppi da quattro. Le case angolari (1ª, 4ª, 7ª e 10ª) hanno il peso più visibile nell'interpretazione del tema natale.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Angolari (1ª, 4ª, 7ª, 10ª)",
+          "description": "Identità, casa, partenariati e carriera pubblica — i quattro assi del tema natale.",
+          "href": "#house-types",
+          "icon": "RiFocus3Line"
+        },
+        {
+          "title": "Succedenti (2ª, 5ª, 8ª, 11ª)",
+          "description": "Risorse, creatività, beni condivisi e comunità — le case che stabilizzano.",
+          "href": "#house-types",
+          "icon": "RiStackLine"
+        },
+        {
+          "title": "Cadenti (3ª, 6ª, 9ª, 12ª)",
+          "description": "Comunicazione, lavoro quotidiano, viaggi e subconscio — le case adattive.",
+          "href": "#house-types",
+          "icon": "RiBookOpenLine"
+        },
+        {
+          "title": "Medio Cielo (10ª Casa)",
+          "description": "Carriera, reputazione e direzione pubblica — collegamento al calcolatore MC.",
+          "href": "/midheaven-calculator",
+          "icon": "RiBriefcaseLine"
+        }
+      ]
+    },
+    "houseGuide": {
+      "eyebrow": "Guida casa per casa",
+      "title": "Le 12 case astrologiche spiegate",
+      "description": "Di seguito una referenza completa per ogni casa in astrologia — cosa governa, la corrispondenza naturale con il segno e come iniziare a leggere i posizionamenti nel tuo tema natale.",
+      "disclaimer": "Le associazioni naturali con i segni (ad esempio, Ariete per la 1ª casa) sono riferimenti tradizionali didattici — non significano che quel segno si trovi sulla cuspide della casa nel tuo tema personale.",
+      "naturalSignLabel": "Segno naturale:"
+    }
+  },
+  "houseDetails": [
+    {
+      "id": "house-1",
+      "number": 1,
+      "title": "1ª Casa — Sé, Identità e Aspetto",
+      "naturalSign": "Aries",
+      "group": "Angolare",
+      "keywords": "Ascendente, segno ascendente, vitalità, prime impressioni",
+      "description": "La 1ª casa è l'unica che rappresenta te direttamente. Inizia all'Ascendente (segno ascendente) e descrive presenza fisica, temperamento e come incontri istintivamente il mondo. I pianeti qui colorano la tua modalità predefinita di espressione personale. Marte in 1ª casa può apparire diretto ed energico; Venere in 1ª spesso risulta accessibile e attenta all'estetica. Poiché la 1ª casa imposta l'intera ruota delle case, la precisione dell'ora di nascita è essenziale — l'Ascendente cambia circa ogni due ore."
+    },
+    {
+      "id": "house-2",
+      "number": 2,
+      "title": "2ª Casa — Denaro, Valori e Possessi",
+      "naturalSign": "Taurus",
+      "group": "Succedente",
+      "keywords": "Reddito, beni, autostima, sicurezza materiale",
+      "description": "La 2ª casa governa ciò che guadagni, possiedi e valorizzi — incluso come misuri l'autostima oltre lo stipendio. Descrive abitudini di spesa, talenti che puoi monetizzare e atteggiamento verso la stabilità materiale. Venere o Giove in 2ª casa spesso correlano con facilità nelle risorse; Saturno può enfatizzare disciplina e costruzione a lungo termine. Questa casa è pratica: risponde a come ti sostieni e a cosa consideri degno di investimento."
+    },
+    {
+      "id": "house-3",
+      "number": 3,
+      "title": "3ª Casa — Comunicazione e Apprendimento Quotidiano",
+      "naturalSign": "Gemini",
+      "group": "Cadente",
+      "keywords": "Fratelli, scrittura, viaggi brevi, quartiere",
+      "description": "La 3ª casa copre la comunicazione quotidiana: conversazioni, email, social media, istruzione iniziale e rapporti con fratelli o vicini stretti. Regola anche i viaggi a breve distanza e come elabori le informazioni nella vita di tutti i giorni. Mercurio in 3ª casa rafforza l'agilità verbale e scritta; la Luna qui può enfatizzare la narrazione emotiva. Per molte ricerche sulle case astrologiche, la 3ª è il ponte tra la vita interiore privata (4ª casa) e la visibilità pubblica (10ª casa)."
+    },
+    {
+      "id": "house-4",
+      "number": 4,
+      "title": "4ª Casa — Casa, Famiglia e Radici",
+      "naturalSign": "Cancer",
+      "group": "Angolare",
+      "keywords": "IC, genitori, vita privata, fondamenta emotive",
+      "description": "La 4ª casa si trova alla base del tema natale, all'IC (Imum Coeli). Descrive casa, famiglia d'origine, vita emotiva privata e il senso di appartenenza che porti dentro. I pianeti qui mostrano spesso dove ti ritiri per ricaricarti e cosa significa «casa» oltre un indirizzo. La Luna in 4ª casa intensifica i temi domestici e ancestrali. Nell'astrologia delle relocation, la 4ª casa si collega naturalmente alle domande su dove ti senti radicato — spesso esplorato insieme alle linee di astrocartografia Luna IC."
+    },
+    {
+      "id": "house-5",
+      "number": 5,
+      "title": "5ª Casa — Creatività, Romanticismo e Gioia",
+      "naturalSign": "Leo",
+      "group": "Succedente",
+      "keywords": "Appuntamenti, figli, hobby, espressione personale",
+      "description": "La 5ª casa è il parco giochi del tema natale: romanticismo, progetti creativi, hobby, performance e figli (biologici o metaforici). Descrive ciò che fai per piacere e dove assumi rischi personali. Sole o Venere in 5ª casa spesso amplificano carisma e talento artistico. A differenza del focus sulla partnership impegnata della 7ª casa, la 5ª enfatizza attrazione, divertimento ed espressione autentica senza il peso di un impegno a lungo termine."
+    },
+    {
+      "id": "house-6",
+      "number": 6,
+      "title": "6ª Casa — Lavoro, Salute e Routine Quotidiane",
+      "naturalSign": "Virgo",
+      "group": "Cadente",
+      "keywords": "Impiego, abitudini, benessere, servizio",
+      "description": "La 6ª casa governa i ritmi del lavoro quotidiano, la cura della salute e le abitudini — non necessariamente il titolo di carriera pubblico (quello è la 10ª casa), ma come ti presenti nei compiti di ogni giorno. Copre animali domestici, ruoli di servizio e i sistemi che tengono in piedi la vita. Marte in 6ª casa può alimentare una forte etica lavorativa; Nettuno può sfumare i confini tra lavoro e riposo. Quando leggi le case astrologiche per temi di benessere, inizia dalla 6ª casa e da eventuali pianeti che la aspettano."
+    },
+    {
+      "id": "house-7",
+      "number": 7,
+      "title": "7ª Casa — Partenariati e Matrimonio",
+      "naturalSign": "Libra",
+      "group": "Angolare",
+      "keywords": "Discendente, relazioni impegnate, contratti",
+      "description": "La 7ª casa inizia al Discendente — il segno opposto al tuo Ascendente. Regola le partnership uno a uno impegnate: matrimonio, soci in affari e relazioni significative individuali. I pianeti qui descrivono ciò che cerchi in un partner e come negozi l'equilibrio. Venere in 7ª casa enfatizza l'armonia nelle relazioni; Urano può preferire legami non convenzionali o orientati alla libertà. La 7ª è la casa specchio: mostra spesso tratti che proietti o attrai negli altri."
+    },
+    {
+      "id": "house-8",
+      "number": 8,
+      "title": "8ª Casa — Trasformazione e Risorse Condivise",
+      "naturalSign": "Scorpio",
+      "group": "Succedente",
+      "keywords": "Intimità, eredità, debiti, profondità psicologica",
+      "description": "La 8ª casa copre ciò che condividi con gli altri — denaro, segreti, potere e profondità emotiva. Regola eredità, tasse, prestiti e la psicologia dell'intimità. I pianeti qui correlano spesso con periodi di cambiamento profondo piuttosto che con eventi superficiali. Plutone o Marte in 8ª casa intensificano i temi di controllo, resa e rigenerazione. Questa casa chiede dove ti fondi con un'altra persona o un sistema rispetto a dove mantieni l'autonomia."
+    },
+    {
+      "id": "house-9",
+      "number": 9,
+      "title": "9ª Casa — Viaggi, Filosofia e Istruzione Superiore",
+      "naturalSign": "Sagittarius",
+      "group": "Cadente",
+      "keywords": "Viaggi a lunga distanza, religione, editoria, visione del mondo",
+      "description": "La 9ª casa amplia la prospettiva: viaggi all'estero, istruzione universitaria, framework spirituali o filosofici e editoria. Descrive le credenze che orientano la tua vita e come cerchi significato oltre la routine quotidiana. Giove in 9ª casa è classicamente forte — curiosità, insegnamento e connessione interculturale arrivano naturalmente. Per domande di relocation, i temi della 9ª casa compaiono spesso quando qualcuno si trasferisce all'estero per studio, fede o avventura, non solo per carriera."
+    },
+    {
+      "id": "house-10",
+      "number": 10,
+      "title": "10ª Casa — Carriera, Reputazione e Vita Pubblica",
+      "naturalSign": "Capricorn",
+      "group": "Angolare",
+      "keywords": "Medio Cielo, MC, vocazione, eredità, autorità",
+      "description": "La 10ª casa si trova al Medio Cielo (MC) — il punto più visibile del tema natale. Governa direzione di carriera, reputazione pubblica e l'eredità che costruisci nel mondo. I pianeti qui si manifestano attraverso l'identità professionale: Saturno in 10ª casa può enfatizzare una maestria lenta; Sole in 10ª casa cerca riconoscimento. Quando si chiede quale casa astrologica governa la carriera, la risposta è la 10ª. Usa il Calcolatore del Medio Cielo per trovare il segno del tuo MC, poi esplora le linee di astrocartografia Sole MC o Giove MC per temi di carriera legati alla posizione geografica."
+    },
+    {
+      "id": "house-11",
+      "number": 11,
+      "title": "11ª Casa — Amici, Comunità e Speranze",
+      "naturalSign": "Aquarius",
+      "group": "Succedente",
+      "keywords": "Gruppi, reti, cause sociali, visione del futuro",
+      "description": "La 11ª casa descrive circoli di amicizia, comunità e le speranze che nutri per il futuro. Copre lavoro di squadra, reti sui social media e allineamento con movimenti collettivi. Urano o Saturno in 11ª casa modellano il tuo rapporto con i gruppi — che tu sia innovatore, organizzatore o contributore indipendente. Questa casa risponde a chi sono le tue persone e verso quale visione condivisa stai lavorando a lungo termine."
+    },
+    {
+      "id": "house-12",
+      "number": 12,
+      "title": "12ª Casa — Subconscio, Solitudine e Conclusioni",
+      "naturalSign": "Pisces",
+      "group": "Cadente",
+      "keywords": "Vita nascosta, spiritualità, riposo, chiusura, istituzioni",
+      "description": "La 12ª casa è il settore più introspettivo: sogni, solitudine, spiritualità e ciò che opera sotto la consapevolezza. Si collega anche a conclusioni, ritiro e istituzioni dove la vita rallenta (ospedali, monasteri, isolamento creativo). I pianeti qui possono esprimersi in modo sottile o richiedere privacy per svilupparsi pienamente. Nettuno in 12ª casa amplifica immaginazione e sensibilità; Saturno può enfatizzare una pratica spirituale disciplinata. La 12ª casa completa il ciclo delle case prima di tornare alla 1ª casa di identità rinnovata."
+    }
+  ],
+  "introduce": {
+    "name": "introduce",
+    "title": "Cosa Sono le Case Astrologiche?",
+    "label": "FONDAMENTI",
+    "description": "Le case astrologiche sono i dodici segmenti di area di vita di un tema natale. Mentre i segni zodiacali descrivono come l'energia planetaria si esprime, le case mostrano dove quell'energia si manifesta — in identità, denaro, relazioni, carriera, casa e ogni altro dominio della vita quotidiana.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Ruota del tema natale che mostra le 12 case astrologiche"
+    },
+    "items": [
+      {
+        "title": "Case vs Segni Zodiacali vs Pianeti",
+        "description": "I pianeti sono gli attori. I segni zodiacali sono lo stile o il costume di ogni attore. Le case astrologiche sono il palco dove si svolge la scena. Sole in Leone (segno) in 10ª casa (palco) si legge diversamente da Sole in Leone in 5ª casa: la stessa identità solare, ma l'una enfatizza carriera pubblica e reputazione mentre l'altra enfatizza espressione creativa e romanticismo. Capire le case astrologiche è ciò che trasforma un elenco di posizionamenti in una mappa di vita leggibile.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-vs-signs.webp",
+          "alt": "Diagramma che mostra pianeti, segni zodiacali e case astrologiche come tre strati di un tema natale"
+        }
+      },
+      {
+        "title": "Come Sono Numerate le 12 Case",
+        "description": "La 1ª casa inizia all'Ascendente — il segno zodiacale che sorge sull'orizzonte orientale nel momento della tua nascita. Le case sono numerate in senso antiorario attorno alla ruota da 1 a 12. La 4ª casa si trova in basso (IC / Imum Coeli), la 7ª casa all'orizzonte occidentale (Discendente) e la 10ª casa in alto (Medio Cielo / MC). Su una ruota del tema natale, immagina un orologio: l'Ascendente è tipicamente alla posizione delle 9, il Medio Cielo alle 12, il Discendente alle 3 e l'IC alle 6.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-numbered.webp",
+          "alt": "Diagramma della ruota del tema natale con le 12 case astrologiche numerate, Ascendente e Medio Cielo indicati"
+        }
+      },
+      {
+        "title": "Case a Segno Intero su AstroCarto",
+        "description": "Astrologi diversi usano sistemi di case diversi. Placidus è comune nell'astrologia occidentale moderna; il Segno Intero assegna ogni segno zodiacale a un'intera casa, con il segno ascendente come 1ª casa completa. Il Generatore Carta Natale di AstroCarto usa le Case a Segno Intero per chiarezza e lettura accessibile ai principianti — il segno ascendente diventa la 1ª casa, poi le case seguono l'ordine zodiacale. I posizionamenti planetari per segno restano gli stessi tra i sistemi; le assegnazioni di casa possono cambiare, soprattutto vicino ai confini tra segni, ed è per questo che la precisione dell'ora di nascita conta per le case.",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-whole-sign.webp",
+          "alt": "Diagramma del sistema Case a Segno Intero che mostra ogni segno zodiacale come intera casa astrologica"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Case Angolari, Succedenti e Cadenti",
+    "label": "GRUPPI DI CASE",
+    "description": "Le dodici case astrologiche si dividono in tre gruppi da quattro. Le case angolari hanno il peso più visibile; le case succedenti stabilizzano ciò che le angolari avviano; le case cadenti estendono, adattano e collegano.",
+    "items": [
+      {
+        "title": "Case Angolari (1ª, 4ª, 7ª, 10ª) — Azione e Visibilità",
+        "description": "Le case 1ª, 4ª, 7ª e 10ª si trovano sui quattro assi del tema natale: Ascendente, IC, Discendente e Medio Cielo. I pianeti qui tendono a manifestarsi con forza attraverso identità (1ª), casa e radici (4ª), relazioni uno a uno (7ª) e carriera pubblica (10ª). Sono le case più consequenziali in astrologia per domande come «Chi sono?», «Dove appartengo?», «Con chi mi unisco?» e «Per cosa sono conosciuto?»",
+        "icon": "RiFocus3Line",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-angular.webp",
+          "alt": "Diagramma del tema natale che evidenzia le case angolari 1ª, 4ª, 7ª e 10ª sui quattro assi"
+        }
+      },
+      {
+        "title": "Case Succedenti (2ª, 5ª, 8ª, 11ª) — Stabilità e Risorse",
+        "description": "Le case 2ª, 5ª, 8ª e 11ª seguono le case angolari e descrivono ciò che costruisci, possiedi e condividi: risorse personali e valori (2ª), gioia creativa e romanticismo (5ª), beni condivisi e trasformazione profonda (8ª), e comunità più speranze a lungo termine (11ª). I pianeti nelle case succedenti descrivono spesso temi a combustione lenta che maturano dopo che le case angolari hanno dato la direzione.",
+        "icon": "RiStackLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-succedent.webp",
+          "alt": "Diagramma del tema natale che evidenzia le case succedenti 2ª, 5ª, 8ª e 11ª"
+        }
+      },
+      {
+        "title": "Case Cadenti (3ª, 6ª, 9ª, 12ª) — Apprendimento e Adattamento",
+        "description": "Le case 3ª, 6ª, 9ª e 12ª si trovano lontano dagli assi del tema natale e enfatizzano movimento, sviluppo di competenze e prospettiva: comunicazione quotidiana (3ª), routine lavorative e salute (6ª), viaggi e filosofia (9ª), e solitudine più subconscio (12ª). I pianeti nelle case cadenti descrivono spesso come impari, ti adatti e integri l'esperienza piuttosto che dominare il titolo principale del tema natale.",
+        "icon": "RiBookOpenLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-cadent.webp",
+          "alt": "Diagramma del tema natale che evidenzia le case cadenti 3ª, 6ª, 9ª e 12ª"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Come Trovare le Tue Case Astrologiche",
+    "label": "GUIDA PRATICA",
+    "description": "Servono tre dati di nascita per individuare le case astrologiche in modo affidabile: data, ora e luogo di nascita. Ecco un percorso passo passo con gli strumenti gratuiti di AstroCarto.",
+    "items": [
+      {
+        "title": "Genera il tuo tema natale",
+        "description": "Apri il Generatore Carta Natale, inserisci data di nascita, ora esatta (al minuto se possibile) e luogo. Clicca genera per vedere la ruota del tema natale e la tabella dei posizionamenti. La tabella elenca ogni pianeta con segno zodiacale, grado e numero di casa — è il modo più rapido per rispondere a «In quale casa è la mia Venere?» o «In quale casa è la mia Luna?»",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Inizia dall'Ascendente (1ª casa)",
+        "description": "Il tuo segno ascendente segna la cuspide della 1ª casa — il punto di partenza della ruota delle case. Nel Segno Intero, l'intero segno sull'Ascendente è la tua 1ª casa; il segno successivo è la 2ª casa, e così via. Se ti serve solo l'Ascendente, usa il Calcolatore Segno Ascendente. La 1ª casa descrive presentazione di sé, vitalità e come incontri il mondo.",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "Leggi i pianeti per tema di casa",
+        "description": "Dopo aver individuato le cuspidi delle case, scansiona quali pianeti cadono in quali case. Un pianeta in 10ª casa enfatizza carriera e reputazione pubblica; in 7ª casa, partenariati; in 4ª casa, casa e famiglia. Non servono pianeti in ogni casa — le case vuote sono normali e si leggono attraverso il reggente del segno sulla cuspide di quella casa.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Collega le case all'astrologia dei luoghi",
+        "description": "La 4ª casa (casa, radici) e la 10ª casa (carriera, direzione pubblica) sono particolarmente rilevanti quando esplori dove vivere. Dopo aver letto i temi delle tue case, usa l'Astrocartography per vedere dove le linee planetarie attivano quelle aree di vita geograficamente — utile per l'astrologia delle relocation e la pianificazione dei viaggi.",
+        "icon": "RiMapPinLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Leggere le Case Astrologiche nel Tuo Tema Natale",
+    "label": "LETTURA DEL TEMA",
+    "description": "Una volta che sai cosa significa ciascuna delle 12 case astrologiche, queste abitudini di lettura ti aiutano a interpretare i posizionamenti senza perderti nel gergo.",
+    "items": [
+      {
+        "title": "Le case vuote non sono aree «mancanti»",
+        "description": "Una casa vuota non significa che quell'area di vita sia inattiva. Ogni casa ha un segno sulla cuspide, e il pianeta reggente di quel segno diventa il signore della casa — il suo posizionamento altrove nel tema natale descrive come si sviluppa il tema di quella casa. Ad esempio, una 7ª casa vuota con Bilancia sulla cuspide si legge attraverso il segno e la casa in cui si trova Venere.",
+        "icon": "RiInformationLine"
+      },
+      {
+        "title": "Casa + segno + pianeta insieme",
+        "description": "Leggi sempre i tre strati insieme: la casa (area di vita), il segno sulla cuspide o il segno del pianeta (stile) e qualsiasi pianeta dentro la casa (attori attivi). Marte in 6ª casa in Vergine enfatizza routine lavorative quotidiane e abitudini di salute disciplinate; Marte in 6ª casa in Ariete enfatizza azione urgente e indipendente nella stessa area di vita.",
+        "icon": "RiLayersLine"
+      },
+      {
+        "title": "La precisione dell'ora di nascita conta soprattutto per le case",
+        "description": "Le posizioni di Sole e Luna per segno restano stabili durante un giorno di nascita, ma l'Ascendente e le cuspidi delle case possono cambiare in pochi minuti. Se l'ora di nascita è approssimativa, considera i posizionamenti nelle case — soprattutto gli assi come 1ª e 10ª casa — come provvisori. Rigenera il tema natale quando trovi un'ora più precisa.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Usa il Segno Intero come cornice di apprendimento",
+        "description": "AstroCarto usa le Case a Segno Intero così i principianti possono imparare i significati delle case senza dibattere i calcoli delle cuspidi. Man mano che avanzi, puoi confrontare il Segno Intero con Placidus o altri sistemi — ma i posizionamenti per segno e gli aspetti planetari restano la base stabile indipendentemente dal sistema di case.",
+        "icon": "RiGraduationCapLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Case Astrologiche — Domande Frequenti",
+    "description": "Risposte alle domande più comuni sulle 12 case in astrologia e su come leggerle nel tuo tema natale.",
+    "items": [
+      {
+        "title": "Cosa sono le case astrologiche?",
+        "description": "Le case astrologiche sono i dodici segmenti di un tema natale, ciascuno rappresentante un'area di vita distinta — dall'identità e dal denaro alle relazioni, carriera e spiritualità. I pianeti dentro una casa descrivono dove la loro energia tende a manifestarsi nella tua esperienza vissuta."
+      },
+      {
+        "title": "In cosa differiscono le case dai segni zodiacali?",
+        "description": "I segni zodiacali descrivono stile, temperamento e come l'energia si esprime. Le case descrivono dove nella vita quell'energia si manifesta. Lo stesso pianeta nello stesso segno si legge diversamente a seconda della casa che occupa."
+      },
+      {
+        "title": "Mi serve l'ora di nascita per conoscere le mie case?",
+        "description": "Sì, per cuspidi delle case accurate — soprattutto l'Ascendente (1ª casa) e il Medio Cielo (10ª casa). Senza l'ora di nascita puoi comunque imparare i significati generali delle case e leggere i posizionamenti per segno, ma la disposizione personale delle case sarà inaffidabile."
+      },
+      {
+        "title": "Cosa sono le case vuote in astrologia?",
+        "description": "Una casa vuota non contiene pianeti al suo interno. È normale. La casa si interpreta attraverso il segno sulla cuspide e il pianeta che governa quel segno. Vuota non significa inattiva — significa che il tema si esprime indirettamente."
+      },
+      {
+        "title": "Quale sistema di case usa AstroCarto?",
+        "description": "Il Generatore Carta Natale di AstroCarto usa le Case a Segno Intero: il segno ascendente diventa l'intera 1ª casa e ogni segno successivo occupa la casa seguente in ordine. Questo mantiene il tema natale leggibile per i principianti mostrando comunque temi di casa significativi."
+      },
+      {
+        "title": "Quale casa astrologica governa la carriera?",
+        "description": "La 10ª casa governa carriera, reputazione pubblica e direzione di vita. Il Medio Cielo (MC) si trova sulla cuspide della 10ª casa. La 6ª casa riguarda anche il lavoro quotidiano e le routine, mentre la 2ª casa riguarda reddito e risorse personali."
+      },
+      {
+        "title": "Quale casa governa amore e relazioni?",
+        "description": "La 7ª casa è la casa principale per partenariati impegnati e relazioni uno a uno. La 5ª casa copre romanticismo, appuntamenti e attrazione creativa; la 8ª casa copre intimità, risorse condivise e legami profondi."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Vedi le Tue Case Astrologiche nel Tema Natale",
+    "description": "Genera gratuitamente la ruota del tema natale e la tabella dei posizionamenti per vedere quali pianeti cadono in ciascuna delle 12 case — poi esplora come quei temi si collegano ai luoghi sulla tua mappa di Astrocartography.",
+    "buttons": [
+      {
+        "title": "Generatore Carta Natale",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Mappa Astrocartography Gratuita",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

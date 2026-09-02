@@ -228,6 +228,20 @@
           ]
         },
         {
+          "title": "Guida",
+          "icon": "RiBookOpenLine",
+          "url": "/astrology-houses",
+          "children": [
+            {
+              "title": "Case Astrologiche",
+              "description": "Guida completa alle 12 case in astrologia e lettura del tema natale",
+              "url": "/astrology-houses",
+              "target": "_self",
+              "icon": "RiLayoutGridLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"

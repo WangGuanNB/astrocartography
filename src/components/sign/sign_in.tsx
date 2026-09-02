@@ -11,8 +11,9 @@ export default function SignIn() {
   return (
     <Button
       variant="default"
+      size="sm"
       onClick={() => setShowSignModal(true)}
-      className="cursor-pointer"
+      className="cursor-pointer whitespace-nowrap"
     >
       {t("user.sign_in")}
     </Button>

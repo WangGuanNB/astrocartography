@@ -55,10 +55,10 @@ export default function ({ isIcon = false }: { isIcon?: boolean }) {
       value={locale || "en"} 
       onValueChange={handleSwitchLanguage}
     >
-      <SelectTrigger className="flex items-center gap-2 border-none text-muted-foreground outline-hidden hover:bg-transparent focus:ring-0 focus:ring-offset-0">
+      <SelectTrigger className="flex h-9 items-center gap-1 border-none px-2 text-muted-foreground outline-hidden hover:bg-transparent focus:ring-0 focus:ring-offset-0 xl:h-10">
         <MdLanguage className="text-xl" />
         {!isIcon && (
-          <span className="hidden md:block">{localeNames[locale]}</span>
+          <span className="hidden xl:block">{localeNames[locale]}</span>
         )}
       </SelectTrigger>
       <SelectContent className="z-50 bg-background">

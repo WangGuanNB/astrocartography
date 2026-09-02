@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "title": "十二宫位 — 星盘宫位完整指南",
+    "description": "了解十二宫位代表什么，以及 12 个宫位如何在本命盘中影响事业、爱情、家庭与自我认同。新手友好指南，含 Whole Sign 整宫制说明，并链接至免费 Birth Chart Generator。",
+    "keywords": "十二宫位, 星盘宫位, 宫位含义, 本命盘宫位, 第一宫位, 第十宫位, 第七宫位, Whole Sign 整宫制, astrology houses, birth chart houses"
+  },
+  "intentAnchor": {
+    "text": "如果你在找的是十二宫位（而不只是泛泛的星座运势），本页会用通俗语言讲解全部 12 个宫位——每个宫位掌管什么、宫位与黄道星座有何不同，以及如何用 AstroCarto 的免费工具在本命盘中找到它们。"
+  },
+  "internalLinks": {
+    "title": "快速导航",
+    "items": [
+      {
+        "text": "想直接查看你的宫位落点？",
+        "linkText": "Birth Chart Generator",
+        "url": "/tools/birth-chart-generator"
+      },
+      {
+        "text": "需要确认 Ascendant（第 1 宫位宫头）？",
+        "linkText": "上升星座计算器（Rising Sign Calculator）",
+        "url": "/rising-sign-calculator"
+      },
+      {
+        "text": "事业轴线（第 10 宫位）？",
+        "linkText": "中天计算器（Midheaven Calculator）",
+        "url": "/midheaven-calculator"
+      },
+      {
+        "text": "完整本命盘解读指南：",
+        "linkText": "Natal Chart 本命盘",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "hubHero": {
+    "badge": "占星学习中心",
+    "primaryCta": { "title": "在本命盘中查看你的宫位", "url": "/tools/birth-chart-generator" },
+    "secondaryCta": { "title": "Natal Chart 本命盘指南", "url": "/chart/natal-chart" },
+    "sidebarLabel": "12 个人生领域",
+    "sidebarTags": ["自我认同", "事业", "家庭", "爱情"],
+    "sidebarTitle": "先学宫位，再读星盘",
+    "sidebarDescription": "浏览全部 12 个宫位，然后生成本命盘查看你的行星落点。"
+  },
+  "navPills": [
+    { "title": "从这里开始", "href": "#start-here", "icon": "RiSparklingLine" },
+    { "title": "12 宫位", "href": "#twelve-houses", "icon": "RiLayoutGridLine" },
+    { "title": "宫位类型", "href": "#house-types", "icon": "RiFocus3Line" },
+    { "title": "查找你的宫位", "href": "#usage", "icon": "RiSearchLine" },
+    { "title": "指南", "href": "#introduce", "icon": "RiBookOpenLine" }
+  ],
+  "hubLinkLabels": {
+    "openTool": "打开工具",
+    "readMeaning": "阅读含义",
+    "learnMore": "了解更多"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "从这里开始",
+      "title": "在本命盘中找到你的十二宫位",
+      "description": "大多数访客需要三条路径之一：生成带宫位落点的星盘、确认开启第 1 宫位的 Ascendant，或学习宫位如何融入完整的本命盘解读。",
+      "columns": "lg:grid-cols-3",
+      "items": [
+        {
+          "title": "Birth Chart Generator",
+          "description": "生成星盘轮盘，查看每颗行星所在的星座、度数与宫位。",
+          "href": "/tools/birth-chart-generator",
+          "icon": "RiPieChartLine"
+        },
+        {
+          "title": "Rising Sign Calculator",
+          "description": "查找你的 Ascendant——开启第 1 宫位的星座。",
+          "href": "/rising-sign-calculator",
+          "icon": "RiUserLine"
+        },
+        {
+          "title": "Natal Chart 本命盘指南",
+          "description": "了解宫位之后，学习如何阅读完整本命盘。",
+          "href": "/chart/natal-chart",
+          "icon": "RiCompassLine"
+        }
+      ]
+    },
+    "twelveHouses": {
+      "id": "twelve-houses",
+      "eyebrow": "全部 12 宫位",
+      "title": "每个星盘宫位及其掌管领域",
+      "description": "使用本目录跳转到任意一个占星宫位。下方各节说明对应的人生领域、自然星座关联，以及如何解读该宫位内的行星落点。",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        { "title": "第 1 宫位", "description": "自我、身份认同、外貌与生命力。", "href": "#house-1", "icon": "RiUserLine", "group": "角宫" },
+        { "title": "第 2 宫位", "description": "金钱、价值观、物质与自我价值。", "href": "#house-2", "icon": "RiWalletLine", "group": "续宫" },
+        { "title": "第 3 宫位", "description": "沟通、兄弟姐妹与日常环境。", "href": "#house-3", "icon": "RiMessage3Line", "group": "果宫" },
+        { "title": "第 4 宫位", "description": "家庭、根基与情感基础。", "href": "#house-4", "icon": "RiHome4Line", "group": "角宫" },
+        { "title": "第 5 宫位", "description": "创造力、浪漫、快乐与子女。", "href": "#house-5", "icon": "RiPaletteLine", "group": "续宫" },
+        { "title": "第 6 宫位", "description": "日常工作、健康、习惯与服务。", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "果宫" },
+        { "title": "第 7 宫位", "description": "伴侣关系、婚姻与一对一联结。", "href": "#house-7", "icon": "RiHeartLine", "group": "角宫" },
+        { "title": "第 8 宫位", "description": "转化、亲密与共享资源。", "href": "#house-8", "icon": "RiShieldLine", "group": "续宫" },
+        { "title": "第 9 宫位", "description": "旅行、哲学与高等教育。", "href": "#house-9", "icon": "RiCompassLine", "group": "果宫" },
+        { "title": "第 10 宫位", "description": "事业、声誉与公众生活。", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "角宫" },
+        { "title": "第 11 宫位", "description": "朋友、社群与长远希望。", "href": "#house-11", "icon": "RiGroupLine", "group": "续宫" },
+        { "title": "第 12 宫位", "description": "潜意识、独处、终结与灵性。", "href": "#house-12", "icon": "RiMoonLine", "group": "果宫" }
+      ]
+    },
+    "houseTypes": {
+      "id": "house-types",
+      "eyebrow": "宫位分组",
+      "title": "角宫、续宫与果宫",
+      "description": "十二宫位分为三组，每组四个。角宫（第 1、4、7、10 宫位）在星盘解读中通常承载最可见的分量。",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "角宫（第 1、4、7、10 宫位）",
+          "description": "身份、家庭、伴侣与公众事业——星盘四个轴点。",
+          "href": "#house-types",
+          "icon": "RiFocus3Line"
+        },
+        {
+          "title": "续宫（第 2、5、8、11 宫位）",
+          "description": "资源、创造力、共享资产与社群——稳定与积累的宫位。",
+          "href": "#house-types",
+          "icon": "RiStackLine"
+        },
+        {
+          "title": "果宫（第 3、6、9、12 宫位）",
+          "description": "沟通、日常工作、旅行与潜意识——适应与延伸的宫位。",
+          "href": "#house-types",
+          "icon": "RiBookOpenLine"
+        },
+        {
+          "title": "Midheaven（第 10 宫位）",
+          "description": "事业、声誉与公众方向——链接至 MC 计算器。",
+          "href": "/midheaven-calculator",
+          "icon": "RiBriefcaseLine"
+        }
+      ]
+    },
+    "houseGuide": {
+      "eyebrow": "逐宫解读指南",
+      "title": "十二宫位完整说明",
+      "description": "以下是每个占星宫位的完整参考——掌管领域、自然星座对应关系，以及如何开始在本命盘中阅读行星落点。",
+      "disclaimer": "自然星座关联（例如第 1 宫位对应白羊座）是传统教学参考——并不意味着该星座一定落在你个人星盘的宫位宫头上。",
+      "naturalSignLabel": "自然星座："
+    }
+  },
+  "houseDetails": [
+    {
+      "id": "house-1",
+      "number": 1,
+      "title": "第 1 宫位 — 自我、身份与外貌",
+      "naturalSign": "白羊座",
+      "group": "角宫",
+      "keywords": "Ascendant、上升星座、生命力、第一印象",
+      "description": "第 1 宫位是唯一直接代表你本人的宫位。它从 Ascendant（上升星座）开始，描述外在形象、气质，以及你本能地如何与世界相遇。落在此处的行星会为你的默认自我表达方式着色。火星在第 1 宫位可能显得直接而有活力；金星在第 1 宫位往往给人亲切、有审美意识的感觉。由于第 1 宫位决定了整个宫位轮盘的起点，出生时间的准确性至关重要——Ascendant 大约每两小时变化一次。"
+    },
+    {
+      "id": "house-2",
+      "number": 2,
+      "title": "第 2 宫位 — 金钱、价值观与物质",
+      "naturalSign": "金牛座",
+      "group": "续宫",
+      "keywords": "收入、资产、自我价值、物质安全感",
+      "description": "第 2 宫位掌管你赚取、拥有与珍视的事物——包括你如何衡量超越薪水的自我价值。它描述消费习惯、可变现的才能，以及对物质稳定的态度。金星或木星在第 2 宫位常与资源方面的顺遂相关；土星则可能强调纪律与长期积累。这个宫位很务实：它回答你如何养活自己，以及你认为什么值得投资。"
+    },
+    {
+      "id": "house-3",
+      "number": 3,
+      "title": "第 3 宫位 — 沟通与日常学习",
+      "naturalSign": "双子座",
+      "group": "果宫",
+      "keywords": "兄弟姐妹、写作、短途出行、邻里",
+      "description": "第 3 宫位涵盖日常沟通：对话、邮件、社交媒体、早期教育，以及与兄弟姐妹或近邻的关系。它也掌管短途旅行，以及你在日常生活中如何处理信息。水星在第 3 宫位会强化口头与书面表达能力；月亮在此可能强调情感化的叙事方式。对许多搜索十二宫位的用户来说，第 3 宫位是私人内在生活（第 4 宫位）与公众可见度（第 10 宫位）之间的桥梁。"
+    },
+    {
+      "id": "house-4",
+      "number": 4,
+      "title": "第 4 宫位 — 家庭、根基与归属",
+      "naturalSign": "巨蟹座",
+      "group": "角宫",
+      "keywords": "IC、父母、私人生活、情感基础",
+      "description": "第 4 宫位位于星盘底部，对应 IC（Imum Coeli）。它描述家庭、原生家庭、私人情感生活，以及你内心携带的归属感。落在此处的行星往往显示你退守充电的地方，以及超越地址本身的「家」意味着什么。月亮在第 4 宫位会强化家庭与祖先主题。在搬迁占星中，第 4 宫位自然关联「你在哪里感到扎根」——常与 Moon IC 的 Astrocartography 线一并探索。"
+    },
+    {
+      "id": "house-5",
+      "number": 5,
+      "title": "第 5 宫位 — 创造力、浪漫与快乐",
+      "naturalSign": "狮子座",
+      "group": "续宫",
+      "keywords": "约会、子女、爱好、自我表达",
+      "description": "第 5 宫位是星盘中的游乐场：浪漫、创意项目、爱好、表演，以及子女（生物学意义上的或象征意义上的）。它描述你为快乐而做的事，以及你在哪些地方愿意承担个人风险。太阳或金星在第 5 宫位常放大魅力与艺术气质。与第 7 宫位聚焦承诺型伴侣不同，第 5 宫位强调吸引力、乐趣与真实的自我表达，而不带长期契约的分量。"
+    },
+    {
+      "id": "house-6",
+      "number": 6,
+      "title": "第 6 宫位 — 工作、健康与日常习惯",
+      "naturalSign": "处女座",
+      "group": "果宫",
+      "keywords": "就业、习惯、健康、服务",
+      "description": "第 6 宫位掌管日常工作节奏、健康维护与习惯——不一定是你的公众职业头衔（那是第 10 宫位的事），而是你在日常任务中如何呈现自己。它涵盖宠物、服务角色，以及维持生活运转的系统。火星在第 6 宫位可能驱动强烈的工作投入；海王星可能模糊工作与休息的边界。阅读十二宫位中的健康主题时，从第 6 宫位及其相位行星入手。"
+    },
+    {
+      "id": "house-7",
+      "number": 7,
+      "title": "第 7 宫位 — 伴侣关系与婚姻",
+      "naturalSign": "天秤座",
+      "group": "角宫",
+      "keywords": "Descendant、承诺关系、契约",
+      "description": "第 7 宫位从 Descendant 开始——与 Ascendant 相对的星座。它掌管承诺型的一对一关系：婚姻、商业伙伴，以及重要的一对一联结。落在此处的行星描述你在伴侣身上寻求什么，以及你如何协商平等。金星在第 7 宫位强调关系中的和谐；天王星可能偏好非传统或重视自由的联结。第 7 宫位是镜像宫位：它往往显示你投射或吸引到的他人特质。"
+    },
+    {
+      "id": "house-8",
+      "number": 8,
+      "title": "第 8 宫位 — 转化与共享资源",
+      "naturalSign": "天蝎座",
+      "group": "续宫",
+      "keywords": "亲密、继承、债务、心理深度",
+      "description": "第 8 宫位涵盖你与他人共享的事物——金钱、秘密、权力与情感深度。它掌管继承、税务、贷款，以及亲密关系的心理学。落在此处的行星常与深刻转变期相关，而非表面事件。冥王星或火星在第 8 宫位会强化控制、放手与再生的主题。这个宫位追问：你在哪里与他人或系统融合，又在哪里保持自主。"
+    },
+    {
+      "id": "house-9",
+      "number": 9,
+      "title": "第 9 宫位 — 旅行、哲学与高等教育",
+      "naturalSign": "射手座",
+      "group": "果宫",
+      "keywords": "长途旅行、宗教、出版、世界观",
+      "description": "第 9 宫位拓展视野：海外旅行、大学教育、精神或哲学框架，以及出版。它描述指引你人生的信念，以及你如何在日常节奏之外寻找意义。木星在第 9 宫位是经典强势配置——好奇心、教学与跨文化联结来得自然。对于搬迁问题，当人们为学习、信仰或冒险（而非仅为事业）移居海外时，第 9 宫位主题常常浮现。"
+    },
+    {
+      "id": "house-10",
+      "number": 10,
+      "title": "第 10 宫位 — 事业、声誉与公众生活",
+      "naturalSign": "摩羯座",
+      "group": "角宫",
+      "keywords": "Midheaven、MC、职业、遗产、权威",
+      "description": "第 10 宫位位于 Midheaven（MC）——星盘中最可见的点。它掌管事业方向、公众声誉，以及你在世界上建立的遗产。落在此处的行星通过职业身份向外广播：土星在第 10 宫位可能强调缓慢精进；太阳在第 10 宫位寻求认可。当人们问哪个占星宫位掌管事业时，答案是第 10 宫位。使用 Midheaven Calculator 查找你的 MC 星座，然后探索 Sun MC 或 Jupiter MC 的 Astrocartography 线，了解与地点相关的事业主题。"
+    },
+    {
+      "id": "house-11",
+      "number": 11,
+      "title": "第 11 宫位 — 朋友、社群与希望",
+      "naturalSign": "水瓶座",
+      "group": "续宫",
+      "keywords": "团体、网络、社会议题、未来愿景",
+      "description": "第 11 宫位描述朋友圈、社群，以及你对未来怀抱的希望。它涵盖团队合作、社交网络，以及与集体运动的共鸣。天王星或土星在第 11 宫位塑造你如何看待群体——是作为创新者、组织者，还是独立贡献者。这个宫位回答：你的「同类」是谁，以及你们共同朝着什么长远愿景努力。"
+    },
+    {
+      "id": "house-12",
+      "number": 12,
+      "title": "第 12 宫位 — 潜意识、独处与终结",
+      "naturalSign": "双鱼座",
+      "group": "果宫",
+      "keywords": "隐藏生活、灵性、休息、收尾、机构",
+      "description": "第 12 宫位是最向内看的领域：梦境、独处、灵性，以及意识层面以下的运作。它也与终结、退隐，以及生活节奏放缓的机构相关（医院、修道院、创作隔离）。落在此处的行星可能表达微妙，或需要隐私才能充分发展。海王星在第 12 宫位放大想象力与敏感度；土星可能强调有纪律的灵性修行。第 12 宫位完成宫位循环，然后回到第 1 宫位开启崭新的身份认同。"
+    }
+  ],
+  "introduce": {
+    "name": "introduce",
+    "title": "什么是十二宫位？",
+    "label": "基础",
+    "description": "十二宫位是本命盘中划分人生领域的十二个区块。黄道星座描述行星能量如何表达，而宫位则显示能量在哪里发挥作用——在身份、金钱、关系、事业、家庭，以及日常生活的每一个领域。",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "显示 12 个占星宫位的本命盘轮盘"
+    },
+    "items": [
+      {
+        "title": "宫位 vs 黄道星座 vs 行星",
+        "description": "行星是演员。黄道星座是每位演员的风格或戏服。十二宫位是场景发生的舞台。太阳在狮子座（星座）且落在第 10 宫位（舞台），与太阳在狮子座且落在第 5 宫位的读法不同：同样的太阳身份，一个强调公众事业与声誉，另一个强调创意自我表达与浪漫。理解十二宫位，才能把一串落点变成可读的人生地图。",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-vs-signs.webp",
+          "alt": "示意图：行星、黄道星座与占星宫位作为本命盘的三层结构"
+        }
+      },
+      {
+        "title": "12 个宫位如何编号",
+        "description": "第 1 宫位从 Ascendant 开始——你出生时刻东方地平线上升起的黄道星座。宫位从 1 到 12 逆时针编号。第 4 宫位在底部（IC / Imum Coeli），第 7 宫位在西方地平线（Descendant），第 10 宫位在顶部（Midheaven / MC）。在星盘轮盘上，可以把它想象成时钟：Ascendant 通常在 9 点钟位置，Midheaven 在 12 点，Descendant 在 3 点，IC 在 6 点。",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-houses-numbered.webp",
+          "alt": "本命盘轮盘示意图，标注 12 个编号宫位及 Ascendant 与 Midheaven"
+        }
+      },
+      {
+        "title": "AstroCarto 上的 Whole Sign 整宫制",
+        "description": "不同占星师使用不同宫位制。Placidus 在现代西方占星中很常见；Whole Sign 整宫制将每个黄道星座对应一整宫，上升星座即为完整的第 1 宫位。AstroCarto 的 Birth Chart Generator 采用 Whole Sign 整宫制，便于清晰阅读与新手学习——上升星座成为第 1 宫位，随后宫位按星座顺序排列。行星星座落点在各宫位制中保持一致；宫位分配可能变化，尤其在星座边界附近，因此出生时间准确性对宫位至关重要。",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-introduce-whole-sign.webp",
+          "alt": "Whole Sign 整宫制示意图，每个黄道星座对应一整宫"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "角宫、续宫与果宫",
+    "label": "宫位分组",
+    "description": "十二宫位分为三组，每组四个。角宫承载最可见的分量；续宫稳定角宫开启的主题；果宫延伸、适应与联结。",
+    "items": [
+      {
+        "title": "角宫（第 1、4、7、10 宫位）— 行动与可见度",
+        "description": "第 1、4、7、10 宫位位于星盘四个轴点：Ascendant、IC、Descendant 与 Midheaven。落在此处的行星往往通过身份（第 1 宫位）、家庭与根基（第 4 宫位）、一对一关系（第 7 宫位）与公众事业（第 10 宫位）大声广播。对于「我是谁？」「我属于哪里？」「我与谁结伴？」「我以什么闻名？」这类问题，它们是最关键的占星宫位。",
+        "icon": "RiFocus3Line",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-angular.webp",
+          "alt": "星盘示意图，高亮第 1、4、7、10 角宫位于四个轴点"
+        }
+      },
+      {
+        "title": "续宫（第 2、5、8、11 宫位）— 稳定与资源",
+        "description": "第 2、5、8、11 宫位紧随角宫，描述你建立、持有与共享的事物：个人资源与价值观（第 2 宫位）、创意快乐与浪漫（第 5 宫位）、共享资产与深度转化（第 8 宫位），以及社群与长远希望（第 11 宫位）。续宫内的行星往往描述较慢成熟、在角宫定下方向后才充分显现的主题。",
+        "icon": "RiStackLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-succedent.webp",
+          "alt": "星盘示意图，高亮第 2、5、8、11 续宫"
+        }
+      },
+      {
+        "title": "果宫（第 3、6、9、12 宫位）— 学习与适应",
+        "description": "第 3、6、9、12 宫位远离星盘轴点，强调流动、技能积累与视野拓展：日常沟通（第 3 宫位）、工作习惯与健康（第 6 宫位）、旅行与哲学（第 9 宫位），以及独处与潜意识（第 12 宫位）。果宫内的行星往往描述你如何学习、调整与整合经验，而非占据星盘的头版头条。",
+        "icon": "RiBookOpenLine",
+        "image": {
+          "src": "/imgs/astrology-houses/astrology-houses-benefit-cadent.webp",
+          "alt": "星盘示意图，高亮第 3、6、9、12 果宫"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "如何查找你的十二宫位",
+    "label": "实用指南",
+    "description": "要可靠定位十二宫位，你需要三项出生数据：出生日期、出生时间与出生地点。以下是使用 AstroCarto 免费工具的逐步路径。",
+    "items": [
+      {
+        "title": "生成本命盘",
+        "description": "打开 Birth Chart Generator，输入出生日期、尽量精确到分钟的出生时间，以及出生地点。点击生成，查看星盘轮盘与落点表。表格列出每颗行星的黄道星座、度数与宫位编号——这是最快回答「我的金星在哪个宫位？」或「我的月亮在哪个宫位？」的方式。",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "从 Ascendant（第 1 宫位）开始",
+        "description": "你的上升星座标记第 1 宫位宫头——宫位轮盘的起点。在 Whole Sign 整宫制中，Ascendant 所在的整个星座即为第 1 宫位；下一个星座是第 2 宫位，依此类推。若你只需要 Ascendant，可使用 Rising Sign Calculator。第 1 宫位描述自我呈现、生命力，以及你如何与世界相遇。",
+        "icon": "RiUserLine"
+      },
+      {
+        "title": "按宫位主题阅读行星",
+        "description": "了解宫位宫头之后，扫描哪些行星落在哪些宫位。行星在第 10 宫位强调事业与公众声誉；在第 7 宫位强调伴侣关系；在第 4 宫位强调家庭与归属。并非每个宫位都需要有行星——空宫很正常，可通过该宫位宫头星座的宫主星来解读。",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "将宫位与地点占星联结",
+        "description": "第 4 宫位（家庭、根基）与第 10 宫位（事业、公众方向）在探索居住地点时尤其相关。阅读宫位主题之后，使用 Astrocartography 查看行星线在地理上如何激活这些人生领域——对搬迁占星与旅行规划很有用。",
+        "icon": "RiMapPinLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "在本命盘中阅读十二宫位",
+    "label": "星盘解读",
+    "description": "了解 12 个占星宫位的含义之后，以下阅读习惯可帮助你在不迷失于术语的情况下解读落点。",
+    "items": [
+      {
+        "title": "空宫并非「缺失」的领域",
+        "description": "空宫并不意味着该人生领域不活跃。每个宫位宫头都有星座，该星座的宫主星成为宫位主星——它在星盘其他位置的落点描述该宫位主题如何展开。例如，第 7 宫位宫头为天秤座且无行星，则通过金星的星座与宫位落点来解读。",
+        "icon": "RiInformationLine"
+      },
+      {
+        "title": "宫位 + 星座 + 行星一起读",
+        "description": "始终将三层一起阅读：宫位（人生领域）、宫头星座或行星所在星座（风格），以及宫位内的行星（活跃角色）。火星在第 6 宫位且落在处女座，强调有纪律的日常工作与健康习惯；火星在第 6 宫位且落在白羊座，则在同一人生领域强调紧迫、独立的行动。",
+        "icon": "RiLayersLine"
+      },
+      {
+        "title": "出生时间对宫位最为关键",
+        "description": "太阳与月亮星座在出生当天相对稳定，但 Ascendant 与宫位宫头可能在几分钟内变化。若出生时间只是近似值，请将宫位落点——尤其是第 1 与第 10 等轴点——视为暂定。找到更精确的时间后，请重新生成星盘。",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "以 Whole Sign 整宫制作为学习框架",
+        "description": "AstroCarto 采用 Whole Sign 整宫制，让新手在不纠结宫头数学的情况下学习宫位含义。随着进阶，你可以比较 Whole Sign 与 Placidus 或其他宫位制——但无论采用哪种宫位制，星座落点与行星相位始终是稳定的基础。",
+        "icon": "RiGraduationCapLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "常见问题",
+    "title": "十二宫位 — 常见问题",
+    "description": "关于 12 个占星宫位及其在本命盘中如何阅读的常见问题解答。",
+    "items": [
+      {
+        "title": "什么是十二宫位？",
+        "description": "十二宫位是本命盘的十二个区块，每个代表不同的人生领域——从身份与金钱，到关系、事业与灵性。宫位内的行星描述其能量倾向于在你实际生活中何处显现。"
+      },
+      {
+        "title": "宫位与黄道星座有何不同？",
+        "description": "黄道星座描述风格、气质与能量如何表达。宫位描述能量在生活的哪个领域显现。同一行星落在同一星座，因所在宫位不同而读法不同。"
+      },
+      {
+        "title": "我需要出生时间才能知道宫位吗？",
+        "description": "是的，要准确确定宫位宫头——尤其是 Ascendant（第 1 宫位）与 Midheaven（第 10 宫位）。没有出生时间，你仍可学习宫位的一般含义并阅读行星星座落点，但个人宫位布局将不可靠。"
+      },
+      {
+        "title": "占星中的空宫是什么？",
+        "description": "空宫是内部没有行星的宫位。这很正常。宫位通过宫头星座与该星座的宫主星来解读。空并不意味着不活跃——意味着主题以间接方式表达。"
+      },
+      {
+        "title": "AstroCarto 使用哪种宫位制？",
+        "description": "AstroCarto 的 Birth Chart Generator 采用 Whole Sign 整宫制：上升星座成为完整的第 1 宫位，随后每个星座按顺序占据下一宫。这让星盘对新手可读，同时仍能呈现有意义的宫位主题。"
+      },
+      {
+        "title": "哪个占星宫位掌管事业？",
+        "description": "第 10 宫位掌管事业、公众声誉与人生方向。Midheaven（MC）位于第 10 宫位宫头。第 6 宫位也与日常工作与习惯相关，第 2 宫位与收入及个人资源相关。"
+      },
+      {
+        "title": "哪个宫位掌管爱情与关系？",
+        "description": "第 7 宫位是承诺型伴侣与一对一关系的主要宫位。第 5 宫位涵盖浪漫、约会与创意吸引力；第 8 宫位涵盖亲密、共享资源与深度联结。"
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "在本命盘中查看你的十二宫位",
+    "description": "生成免费本命盘轮盘与落点表，查看哪些行星落在 12 个宫位中的哪一个——然后探索这些主题如何与你的 Astrocartography 地图上的地点相连。",
+    "buttons": [
+      {
+        "title": "Birth Chart Generator",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "免费 Astrocartography 地图",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

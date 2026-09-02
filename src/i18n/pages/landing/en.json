@@ -228,6 +228,20 @@
           ]
         },
         {
+          "title": "Learn",
+          "icon": "RiBookOpenLine",
+          "url": "/astrology-houses",
+          "children": [
+            {
+              "title": "Astrology Houses",
+              "description": "Complete guide to the 12 houses in astrology and birth chart reading",
+              "url": "/astrology-houses",
+              "target": "_self",
+              "icon": "RiLayoutGridLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"

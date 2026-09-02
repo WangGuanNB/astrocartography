@@ -145,6 +145,57 @@ export interface CalculatorPage {
     lastUpdated?: string;
     lastUpdatedLabel?: string;
   };
+  hubHero?: {
+    badge: string;
+    primaryCta: { title: string; url: string };
+    secondaryCta: { title: string; url: string };
+    sidebarLabel: string;
+    sidebarTags: string[];
+    sidebarTitle: string;
+    sidebarDescription: string;
+  };
+  navPills?: Array<{ title: string; href: string; icon: string }>;
+  hubSections?: {
+    startHere: HubSectionContent;
+    twelveHouses: HubSectionContent;
+    houseTypes: HubSectionContent;
+    houseGuide: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      disclaimer: string;
+      naturalSignLabel: string;
+    };
+  };
+  houseDetails?: Array<{
+    id: string;
+    number: number;
+    title: string;
+    naturalSign: string;
+    group: string;
+    keywords: string;
+    description: string;
+  }>;
+  hubLinkLabels?: {
+    openTool: string;
+    readMeaning: string;
+    learnMore: string;
+  };
+}
+
+export interface HubSectionContent {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  columns: string;
+  items: Array<{
+    title: string;
+    description: string;
+    href: string;
+    icon: string;
+    group?: string;
+  }>;
 }
 
 // Export the new page types

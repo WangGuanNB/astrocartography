@@ -228,6 +228,20 @@
           ]
         },
         {
+          "title": "Guia",
+          "icon": "RiBookOpenLine",
+          "url": "/astrology-houses",
+          "children": [
+            {
+              "title": "Casas Astrológicas",
+              "description": "Guia completo das 12 casas em astrologia e leitura de mapa natal",
+              "url": "/astrology-houses",
+              "target": "_self",
+              "icon": "RiLayoutGridLine"
+            }
+          ]
+        },
+        {
           "title": "Blog",
           "url": "/posts",
           "icon": "RiArticleLine"
