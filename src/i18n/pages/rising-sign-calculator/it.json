@@ -21,6 +21,11 @@
         "url": "/midheaven-calculator"
       },
       {
+        "text": "Vuoi solo il cielo adesso, senza nascita?",
+        "linkText": "Posizione dei Pianeti Oggi",
+        "url": "/planetary-positions-today"
+      },
+      {
         "text": "Ti serve la carta natale completa?",
         "linkText": "Generatore Tema Natale",
         "url": "/tools/birth-chart-generator"
