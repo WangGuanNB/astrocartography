@@ -98,7 +98,7 @@
         { "title": "第 8 宫位", "description": "转化、亲密与共享资源。", "href": "#house-8", "icon": "RiShieldLine", "group": "续宫" },
         { "title": "第 9 宫位", "description": "旅行、哲学与高等教育。", "href": "#house-9", "icon": "RiCompassLine", "group": "果宫" },
         { "title": "第 10 宫位", "description": "事业、声誉与公众生活。", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "角宫" },
-        { "title": "第 11 宫位", "description": "朋友、社群与长远希望。", "href": "#house-11", "icon": "RiGroupLine", "group": "续宫" },
+        { "title": "第 11 宫位", "description": "朋友、社群与长远希望。", "href": "/astrology-houses/11th-house", "icon": "RiGroupLine", "group": "续宫" },
         { "title": "第 12 宫位", "description": "潜意识、独处、终结与灵性。", "href": "#house-12", "icon": "RiMoonLine", "group": "果宫" }
       ]
     },

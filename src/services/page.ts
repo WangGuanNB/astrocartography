@@ -1,4 +1,5 @@
 import { LandingPage, PricingPage, ShowcasePage, ConverterPage, ColorPage, AboutPage, ContactPage, CalculatorPage } from "@/types/pages/landing";
+import type { HouseGuidePage } from "@/types/pages/house-guide";
 import { replaceSocialMediaUrls } from "@/lib/utils";
 
 export async function getLandingPage(locale: string): Promise<LandingPage> {
@@ -86,6 +87,10 @@ export async function getAstrocartographyLinesPage(locale: string): Promise<Calc
 
 export async function getAstrologyHousesPage(locale: string): Promise<CalculatorPage> {
   return (await getPage("astrology-houses", locale)) as CalculatorPage;
+}
+
+export async function getAstrologyHouses11thHousePage(locale: string): Promise<HouseGuidePage> {
+  return (await getPage("astrology-houses-11th-house", locale)) as HouseGuidePage;
 }
 
 export async function getAstrocartographyWhereToLivePage(locale: string): Promise<CalculatorPage> {

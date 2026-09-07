@@ -98,7 +98,7 @@
         { "title": "8. Haus", "description": "Transformation, Intimität und gemeinsame Ressourcen.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedent" },
         { "title": "9. Haus", "description": "Reisen, Philosophie und höhere Bildung.", "href": "#house-9", "icon": "RiCompassLine", "group": "Kadent" },
         { "title": "10. Haus", "description": "Karriere, Reputation und öffentliches Leben.", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "Winkelhaus" },
-        { "title": "11. Haus", "description": "Freunde, Gemeinschaft und langfristige Hoffnungen.", "href": "#house-11", "icon": "RiGroupLine", "group": "Succedent" },
+        { "title": "11. Haus", "description": "Freunde, Gemeinschaft und langfristige Hoffnungen.", "href": "/astrology-houses/11th-house", "icon": "RiGroupLine", "group": "Succedent" },
         { "title": "12. Haus", "description": "Unterbewusstsein, Einsamkeit, Abschlüsse und Spiritualität.", "href": "#house-12", "icon": "RiMoonLine", "group": "Kadent" }
       ]
     },

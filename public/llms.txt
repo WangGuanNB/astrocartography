@@ -31,6 +31,12 @@ When citing AstroCarto, prefer linking to the specific tool or guide page below.
 
 - [Astrocartography Lines Overview](https://astrocarto.org/astrocartography-lines/): Introduction to planetary lines on the map.
 - [Astrology Houses Guide](https://astrocarto.org/astrology-houses/): Complete guide to the 12 houses in astrology.
+- [11th House Astrology](https://astrocarto.org/astrology-houses/11th-house/): Friendship, community, and long-term hopes in the eleventh house.
+- [第十一宫占星](https://astrocarto.org/zh/astrology-houses/11th-house/): 朋友、社群与长远愿望。
+- [Casa 11 Astrologia](https://astrocarto.org/pt/astrology-houses/11th-house/): Amizades, grupos e sonhos no mapa astral.
+- [Casa 11 Astrología](https://astrocarto.org/es/astrology-houses/11th-house/): Amistades, grupos y esperanzas.
+- [Undicesima Casa](https://astrocarto.org/it/astrology-houses/11th-house/): Amicizie, gruppi e speranze.
+- [11. Haus Astrologie](https://astrocarto.org/de/astrology-houses/11th-house/): Freunde, Gruppen und Wünsche.
 - [Sun Line](https://astrocarto.org/sun-line-astrocartography/): Vitality, identity, and visibility.
 - [Moon Line](https://astrocarto.org/moon-line-astrocartography/): Emotions, home, and belonging.
 - [Venus Line](https://astrocarto.org/venus-line-astrocartography/): Love, beauty, and social ease.

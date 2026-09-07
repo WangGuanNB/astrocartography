@@ -30,6 +30,8 @@ export type GuideHeroProps = {
   overviewItems: OverviewItem[];
   actions?: HeroAction[];
   links?: HeroLink[];
+  /** Tighten top spacing when a breadcrumb sits above the hero */
+  compactTop?: boolean;
 };
 
 export default function GuideHero({
@@ -43,10 +45,15 @@ export default function GuideHero({
   overviewItems,
   actions = [],
   links,
+  compactTop = false,
 }: GuideHeroProps) {
   return (
     <section className="border-b border-white/10 bg-background">
-      <div className="container max-w-6xl px-4 pb-20 pt-16 lg:pb-20 lg:pt-28">
+      <div
+        className={`container max-w-6xl px-4 pb-16 lg:pb-20 ${
+          compactTop ? "pt-6 lg:pt-8" : "pt-16 lg:pt-28"
+        }`}
+      >
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_390px] lg:items-end">
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">

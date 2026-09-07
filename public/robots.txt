@@ -44,6 +44,12 @@ Allow: /es/astrology-houses
 Allow: /pt/astrology-houses
 Allow: /it/astrology-houses
 Allow: /de/astrology-houses
+Allow: /astrology-houses/11th-house
+Allow: /zh/astrology-houses/11th-house
+Allow: /pt/astrology-houses/11th-house
+Allow: /es/astrology-houses/11th-house
+Allow: /it/astrology-houses/11th-house
+Allow: /de/astrology-houses/11th-house
 Allow: /sun-line-astrocartography
 Allow: /moon-line-astrocartography
 Allow: /venus-line-astrocartography

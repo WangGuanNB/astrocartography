@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "title": "11. Haus Astrologie — Freunde & Wünsche",
+    "description": "Was das 11. Haus bedeutet: Freunde, Gruppen, Netzwerke und Hoffnungen. Finden Sie Ihre Planeten im 11. Haus mit einem kostenlosen Geburtshoroskop auf AstroCarto.",
+    "keywords": "11. Haus Astrologie, 11. Haus Bedeutung, elftes Haus Astrologie, 11. Haus Freundschaft, Planeten im 11. Haus, leeres 11. Haus, 11. Haus vs 7. Haus",
+    "ogImage": "/imgs/astrology-houses-11th-house/astrology-houses-11th-house-og.webp"
+  },
+  "breadcrumb": {
+    "home": "Start",
+    "hub": "Astrologische Häuser",
+    "current": "11. Haus"
+  },
+  "guideHero": {
+    "badge": "Leitfaden zum 11. Haus",
+    "badgeIcon": "RiGroupLine",
+    "description": "Das 11. Haus beschreibt die Menschen, die Sie wählen, und die Zukunft, die Sie mit ihnen gestalten—Freundschaften, Gemeinschaften, Netzwerke, Anliegen und langfristige Hoffnungen—anders als Familie (4.) oder Eins-zu-eins-Partner (7.).",
+    "overviewTitle": "Auf einen Blick",
+    "overviewEyebrow": "Haus-Fakten",
+    "overviewIcon": "RiGroupLine",
+    "overviewItems": [
+      {
+        "label": "Regiert",
+        "value": "Freunde, Gruppen, Netzwerke, Hoffnungen"
+      },
+      {
+        "label": "Klasse",
+        "value": "Folgehaus (nach dem 10.)"
+      },
+      {
+        "label": "Natürliche Verbindung",
+        "value": "Wassermann (nur Lernhilfe)"
+      },
+      {
+        "label": "Geburtszeit?",
+        "value": "Ja — Häuser brauchen genaue Zeit"
+      }
+    ],
+    "actions": [
+      {
+        "title": "Hub Astrologische Häuser",
+        "url": "/astrology-houses",
+        "icon": "RiLayoutGridLine",
+        "variant": "secondary"
+      }
+    ],
+    "links": [
+      {
+        "text": "Alle zwölf Häuser in einem Leitfaden sehen.",
+        "linkText": "Astrologische Häuser",
+        "url": "/astrology-houses"
+      },
+      {
+        "text": "Vollständiger Leseweg zum Geburtshoroskop.",
+        "linkText": "Geburtshoroskop-Leitfaden",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "toc": {
+    "label": "Auf dieser Seite",
+    "items": [
+      {
+        "id": "meaning",
+        "label": "Was es bedeutet"
+      },
+      {
+        "id": "rules",
+        "label": "Was es regiert"
+      },
+      {
+        "id": "comparison",
+        "label": "11. vs 7."
+      },
+      {
+        "id": "planets",
+        "label": "Planeten im 11."
+      },
+      {
+        "id": "howto",
+        "label": "So finden Sie Ihres"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      }
+    ]
+  },
+  "meaning": {
+    "id": "meaning",
+    "label": "Bedeutung",
+    "title": "Was Ist das 11. Haus in der Astrologie?",
+    "paragraphs": [
+      "In der 11. Haus Astrologie beschreibt dieser Sektor des Geburtshoroskops die gewählte Zugehörigkeit—nicht die Familie, in die Sie geboren wurden, und nicht den Partner, den Sie heiraten. Es umfasst Freundschaften, die Sie wählen, Gruppen, die sich wie ein Stamm anfühlen, berufliche und soziale Netzwerke, Anliegen, die Ihnen wichtig sind, und langfristige Hoffnungen, die Ihre Entscheidungen leise steuern.",
+      "Klassische Astrologen nannten es das Haus des Guten Geistes und verbanden Hoffnungen mit Freunden aus einem praktischen Grund: Ein Wunsch, der in einem Netzwerk ausgesprochen wird, wird zum Plan mit Helfern. Der Freund, der eine Stellennotiz weiterleitet, die Community, die ein Projekt finanziert, der Gruppenchat, der drei Jobs überdauert—das sind Geschichten des 11. Hauses.",
+      "Das 11. ist ein Folgehaus. Es folgt dem Eckhaus 10. von Karriere und öffentlichem Leben. Wo das 10. fragt, wofür man bekannt ist, fragt das 11., wer nach dem Rampenlicht mitgeht—Peers, Kollaborateure, Publikum und Gemeinschaften, die den öffentlichen Weg stabilisieren. Bei AstroCarto-Horoskopen (Ganzzeichen) wird das Zeichen nach dem Medium Coeli zum vollständigen 11. Haus—das erleichtert Anfänger-Deutungen."
+    ],
+    "image": {
+      "src": "/imgs/astrology-houses-11th-house/astrology-houses-11th-house-meaning.webp",
+      "alt": "Geburtshoroskop-Diagramm mit Fokus auf das 11. Haus: Freunde, Gemeinschaft und Wünsche"
+    }
+  },
+  "rules": {
+    "id": "rules",
+    "label": "Themen",
+    "title": "Was das 11. Haus Regiert (und Was Nicht)",
+    "description": "Klare Grenzen helfen beim Lesen der 11. Haus Astrologie. Das elfte Haus ist sozial und zukunftsgerichtet—aber nicht jeder Beziehungstyp im Horoskop.",
+    "doesLabel": "Regiert",
+    "doesNotLabel": "Regiert nicht",
+    "does": [
+      {
+        "title": "Freunde, Gruppen und Netzwerke",
+        "description": "Enge Freunde, Clubs, Teams, Aktivistenkreise, Online-Communities und berufliche Netzwerke. Wenn die Frage lautet, wo Sie jenseits von Familie und Romantik gehören, beginnen Sie hier."
+      },
+      {
+        "title": "Anliegen und kollektive Projekte",
+        "description": "Humanitäre oder technologiebezogene Anliegen, Organisationen und Bewegungen. Soziale Netzwerke erscheinen hier in der modernen Praxis oft als erweiterte Stammesräume."
+      },
+      {
+        "title": "Langfristige Hoffnungen und gemeinsame Vision",
+        "description": "Keine vagen Tagträume—Ziele, die Sie benennen und mit anderen verfolgen können. Mentoren, Kollaborateure und „schwache Bindungen“, die Türen öffnen, leben oft in dieser Geschichte."
+      }
+    ],
+    "does_not": [
+      {
+        "title": "Ehe und Eins-zu-eins-Verträge",
+        "description": "Verpflichtete Partner und formale Verträge gehören vor allem zum 7. Haus. 7. und 11. zu vermischen ist ein häufiger Anfängerfehler."
+      },
+      {
+        "title": "Casual Romance und Dating-Spaß",
+        "description": "Flirt, Dating und kreatives Spiel sitzen natürlicher im 5. Haus—auch wenn Freunde Sie jemandem vorstellen."
+      },
+      {
+        "title": "Familie und häusliche Wurzeln",
+        "description": "Eltern, Kindheitsheim und emotionale Grundlagen gehören zum 4. Haus—nicht zum gewählten Stamm des 11."
+      }
+    ]
+  },
+  "comparison": {
+    "id": "comparison",
+    "label": "Vergleich",
+    "title": "11. Haus vs 7. Haus",
+    "description": "Beide Häuser beschreiben Beziehungen, beantworten aber unterschiedliche Horoskop-Fragen. Nutzen Sie diese Tabelle, wenn eine Freundschaft wie eine Partnerschaft wirkt—oder ein Partner wie der beste Freund.",
+    "columns": [
+      "Thema",
+      "11. Haus",
+      "7. Haus"
+    ],
+    "rows": [
+      [
+        "Bindungstyp",
+        "Freunde, Gruppen, Netzwerke",
+        "Eins-zu-eins-Partner & Verträge"
+      ],
+      [
+        "Kernfrage",
+        "Wer sind meine Leute?",
+        "Wer ist mein Gegenüber?"
+      ],
+      [
+        "Maßstab",
+        "Kollektiv / viele",
+        "Dyade / zwei"
+      ],
+      [
+        "Zukunftston",
+        "Geteilte Hoffnungen & Anliegen",
+        "Vereinbarungen & Verpflichtung"
+      ],
+      [
+        "Häufige Verwechslung",
+        "Ehepartner als „Freundes-Haus“-Thema lesen",
+        "Gruppenkonflikt als Ehe-Thema lesen"
+      ]
+    ]
+  },
+  "planets": {
+    "id": "planets",
+    "label": "Deutungsleitfaden",
+    "title": "Planeten im 11. Haus",
+    "intro": "Planeten im 11. färben, wie Sie Freundschaft, Networking und langfristige Hoffnungen leben. Lesen Sie sie mit Zeichen und Aspekten—eine Stellung erzählt nie die ganze Geschichte. Ein leeres 11. Haus steht in den FAQ unten.",
+    "items": [
+      {
+        "planet": "Sun",
+        "title": "Sonne im 11. Haus",
+        "description": "Identität bindet sich an Gruppen und Anliegen. Sie fühlen sich vielleicht am meisten „selbst“, wenn Sie zu einem Team, Publikum oder einer gemeinsamen Mission beitragen. Sichtbarkeit kommt oft über die Community, nicht über den Solo-Scheinwerfer."
+      },
+      {
+        "planet": "Moon",
+        "title": "Mond im 11. Haus",
+        "description": "Emotionale Sicherheit verbindet sich mit Freundschaft und Zugehörigkeit. Stimmungen können Gruppendynamiken folgen; die gewählte Familie kann so regulierend wirken wie eine private Basis, wenn der Rest des Horoskops das stützt."
+      },
+      {
+        "planet": "Mercury",
+        "title": "Merkur im 11. Haus",
+        "description": "Netzwerke zum Ideenaustausch zählen. Sie denken vielleicht am besten im Gespräch mit Peers, gedeihen in Foren oder kollaborativen Brainstormings und treffen Verbündete über Schreiben, Lehren oder Gruppenchats."
+      },
+      {
+        "planet": "Venus",
+        "title": "Venus im 11. Haus",
+        "description": "Soziale Leichtigkeit unter Peers. Freundschaften können herzlich und ästhetisch wirken; Sie können Verbündete durch Charme, gemeinsamen Geschmack oder kreative Szenen anziehen—ohne jeden Freund zum romantischen Partner zu machen (dafür 7. und 5. prüfen)."
+      },
+      {
+        "planet": "Mars",
+        "title": "Mars im 11. Haus",
+        "description": "Aktive Organisator-Energie—oder kompetitive Freundesdynamiken. Sie treiben Gruppenprojekte hart voran, setzen sich leidenschaftlich für Anliegen ein oder brauchen bewusste Fairness, damit Ehrgeiz den Stamm nicht spaltet."
+      },
+      {
+        "planet": "Jupiter",
+        "title": "Jupiter im 11. Haus",
+        "description": "Erweiterte soziale Reichweite und Optimismus für die Zukunft. Unterstützung, Chancen und Wohlwollen kommen oft über Netzwerke. Klassische Texte setzen Jupiters Freude hier—das „Gute-Geist“-Thema."
+      },
+      {
+        "planet": "Saturn",
+        "title": "Saturn im 11. Haus",
+        "description": "Weniger, aber ernstere Freundschaften oder Mentorships. Zugehörigkeit wird oft langsam erarbeitet; Qualität vor Quantität ist üblich. Gruppenverantwortung und langfristige Verpflichtungen gegenüber Communities können die Geschichte prägen."
+      },
+      {
+        "planet": "Uranus",
+        "title": "Uranus im 11. Haus",
+        "description": "Unkonventionelle Freunde und plötzliche Netzwerkwechsel. Sie bevorzugen vielleicht progressive Kreise, tech-affine Stämme oder Freundschaften, die Individualität in der Gruppe schützen."
+      }
+    ]
+  },
+  "howto": {
+    "id": "howto",
+    "label": "Praktische Schritte",
+    "title": "So Finden Sie Ihr 11. Haus im Geburtshoroskop",
+    "intro": "Sie brauchen nicht jede klassische Nuance, um zu starten. Nutzen Sie diese Schritte mit einem kostenlosen Horoskop—und kehren Sie dann zu den Bedeutungen oben zurück.",
+    "steps": [
+      {
+        "title": "Erstellen Sie Ihr Geburtshoroskop mit genauer Zeit",
+        "description": "Geben Sie Geburtsdatum, genaue Uhrzeit und Ort ein. Häuserspitzen—einschließlich des 11.—hängen von der Zeit ab. Ohne zuverlässige Zeit behandeln Sie Hausstellungen als vorläufig.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Lokalisieren Sie das 11. auf Rad und Tabelle",
+        "description": "Auf dem Rad sitzt das 11. nach dem 10. (Medium-Coeli-Bereich), gegen den Uhrzeigersinn. In der Stellungstabelle suchen Sie Planeten, die in Haus 11 gelistet sind.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Notieren Sie das Zeichen auf dem 11. und seinen Herrscher",
+        "description": "Bei Ganzzeichen belegt ein volles Zeichen das 11. Haus. Der Stil dieses Zeichens färbt Freundschaft und Ziele. Finden Sie den Planeten, der dieses Zeichen anderswo regiert—der Hausherr zählt bei leeren und belebten 11. Häusern gleichermaßen.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Optional: Community-Themen auf den Ort legen",
+        "description": "Nachdem Sie Ihre natalen 11.-Haus-Geschichte verstehen, kann Astrocartography zeigen, wo Netzwerke oder kollaborative Arbeit geografisch lauter wirken—als zweite Schicht, nicht als Ersatz für das natale Haus.",
+        "icon": "RiMapPinLine"
+      }
+    ],
+    "primary_cta": {
+      "title": "Geburtshoroskop Generator öffnen",
+      "url": "/tools/birth-chart-generator",
+      "icon": "RiPieChartLine"
+    }
+  },
+  "relatedHouses": {
+    "id": "related",
+    "title": "Weiter im Häuser-Hub",
+    "description": "Das 11. ist eines von zwölf Lebensbereichen. Kehren Sie zum Hub für die vollständige Karte zurück, oder öffnen Sie einen verwandten Rechner, wenn Sie Stellungen prüfen möchten.",
+    "items": [
+      {
+        "title": "Hub Astrologische Häuser",
+        "description": "Überblick aller 12 Häuser, Eck- / Folge- / Fallende Gruppen und wie man sie zusammen liest.",
+        "href": "/astrology-houses",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Geburtshoroskop-Leitfaden",
+        "description": "Wie das volle Geburtshoroskop Häuser, Zeichen und Planeten in einen Leseweg fügt.",
+        "href": "/chart/natal-chart",
+        "icon": "RiBookOpenLine"
+      },
+      {
+        "title": "Geburtshoroskop Generator",
+        "description": "Kostenloses Rad und Stellungstabelle, um zu sehen, welche Planeten in Ihrem 11. Haus stehen.",
+        "href": "/tools/birth-chart-generator",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Aszendent Rechner",
+        "description": "Bestätigen Sie den Aszendenten, der das Häuser-Rad startet, bevor Sie Hausnummern vertrauen.",
+        "href": "/rising-sign-calculator",
+        "icon": "RiCompass3Line"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "11. Haus Astrologie — Häufig gestellte Fragen",
+    "description": "Kurze Antworten auf häufige Suchen zum elften Haus im Geburtshoroskop.",
+    "items": [
+      {
+        "title": "Was ist das 11. Haus in der Astrologie?",
+        "description": "Das 11. Haus ist der Horoskop-Sektor, der mit Freundschaft, Gemeinschaft, Netzwerken, sozialen Anliegen und langfristigen Hoffnungen verbunden ist. Es beschreibt die Menschen, die Sie wählen, und die Zukunftsvision, die Sie mit ihnen verfolgen—nicht Herkunftsfamilie oder Eheverträge."
+      },
+      {
+        "title": "Was ist der Unterschied zwischen 11. und 7. Haus?",
+        "description": "Das 7. Haus regiert Eins-zu-eins-Partnerschaften wie Ehe und verpflichtende Verträge. Das 11. Haus regiert Freunde, Gruppen und kollektive Zugehörigkeit. Romantik kann auch in anderen Häusern erscheinen (besonders dem 5.), aber Freundschaft-als-Stamm ist vor allem ein 11.-Haus-Thema."
+      },
+      {
+        "title": "Was bedeutet ein leeres 11. Haus?",
+        "description": "Ein leeres 11. Haus bedeutet, dass in Ihrem natalen Horoskop keine Planeten in diesem Haus stehen. Freundschafts- und Hoffnungsthemen werden trotzdem über das Zeichen auf der 11.-Haus-Spitze und seinen Herrscher gelesen. Leer heißt nicht inaktiv oder „keine Freunde“."
+      },
+      {
+        "title": "Brauche ich meine Geburtszeit für 11. Haus Astrologie?",
+        "description": "Ja, für zuverlässige Hausstellungen. Ohne Geburtszeit sind Aszendent und Häuser-Rad unsicher, sodass das 11. Haus wandern kann. Planetenzeichen bleiben nutzbar; Hauszuordnungen brauchen eine verlässliche Zeit."
+      },
+      {
+        "title": "Was ist das natürliche Zeichen des 11. Hauses?",
+        "description": "Lehrtexte verknüpfen das 11. Haus oft mit dem Wassermann. Das ist eine traditionelle Lernassoziation, kein Anspruch, dass Wassermann immer auf Ihrer persönlichen 11.-Haus-Spitze steht. Ihre Spitze hängt von Geburtszeit und Häusersystem ab—AstroCarto nutzt Ganzzeichen-Häuser."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Sehen Sie Ihr 11. Haus im Geburtshoroskop",
+    "description": "Erstellen Sie ein kostenloses Horoskop-Rad und eine Stellungstabelle, um zu sehen, welche Planeten in Ihr 11. Haus fallen—kehren Sie dann zum Hub Astrologische Häuser für die anderen elf Lebensbereiche zurück.",
+    "buttons": [
+      {
+        "title": "Geburtshoroskop Generator",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Hub Astrologische Häuser",
+        "icon": "RiLayoutGridLine",
+        "url": "/astrology-houses",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

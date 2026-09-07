@@ -98,7 +98,7 @@
         { "title": "8ª Casa", "description": "Trasformazione, intimità e risorse condivise.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedente" },
         { "title": "9ª Casa", "description": "Viaggi, filosofia e istruzione superiore.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadente" },
         { "title": "10ª Casa", "description": "Carriera, reputazione e vita pubblica.", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "Angolare" },
-        { "title": "11ª Casa", "description": "Amici, comunità e speranze a lungo termine.", "href": "#house-11", "icon": "RiGroupLine", "group": "Succedente" },
+        { "title": "11ª Casa", "description": "Amici, comunità e speranze a lungo termine.", "href": "/astrology-houses/11th-house", "icon": "RiGroupLine", "group": "Succedente" },
         { "title": "12ª Casa", "description": "Subconscio, solitudine, conclusioni e spiritualità.", "href": "#house-12", "icon": "RiMoonLine", "group": "Cadente" }
       ]
     },

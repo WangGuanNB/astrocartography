@@ -103,6 +103,11 @@ export interface CalculatorPage {
     description: string;
     keywords?: string;
   };
+  breadcrumb?: {
+    home: string;
+    hub: string;
+    current: string;
+  };
   guideHero?: {
     badge: string;
     overviewTitle: string;

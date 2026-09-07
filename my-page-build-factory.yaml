@@ -172,7 +172,19 @@ content_inventory:
       page_type: "hub"
       locale: "en"
       topic_cluster: "astrology education / chart reading"
-      differentiation_notes: "Educational hub for all 12 houses; distinct from birth-chart-generator (tool) and natal-chart (cluster page). Phase 2 may add per-house child pages."
+      differentiation_notes: "Educational hub for all 12 houses; distinct from birth-chart-generator (tool) and natal-chart (cluster page). Child pages start with /astrology-houses/11th-house."
+    - path: "/astrology-houses/11th-house"
+      primary_keyword: "11th house astrology"
+      secondary_keywords:
+        - "11th house meaning"
+        - "eleventh house astrology"
+        - "planets in 11th house"
+        - "empty 11th house"
+      page_type: "blog"
+      locale: "en"
+      locales: ["en", "zh", "pt", "es", "it", "de"]
+      topic_cluster: "astrology-houses"
+      differentiation_notes: "Deep 11th-house guide under hub; hub retains overview and links here. Local primaries: zh 第十一宫 占星 / pt casa 11 astrologia / es casa 11 astrología / it undicesima casa astrologia / de 11. Haus Astrologie."
 
 page_strategy:
   # 允许智能体选择的页面类型。不要随便改这些英文枚举值

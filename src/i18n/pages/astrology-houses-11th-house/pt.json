@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "title": "Casa 11 na Astrologia — Amizades e Sonhos",
+    "description": "Entenda a casa 11 na astrologia: amizades, grupos, redes e esperanças. Veja seus planetas na 11ª casa com um mapa astral grátis na AstroCarto.",
+    "keywords": "casa 11 astrologia, significado casa 11, décima primeira casa astrologia, casa 11 amizade, planetas na casa 11, casa 11 vazia, casa 11 vs casa 7",
+    "ogImage": "/imgs/astrology-houses-11th-house/astrology-houses-11th-house-og.webp"
+  },
+  "breadcrumb": {
+    "home": "Início",
+    "hub": "Casas Astrológicas",
+    "current": "Casa 11"
+  },
+  "guideHero": {
+    "badge": "Guia da Casa 11",
+    "badgeIcon": "RiGroupLine",
+    "description": "A casa 11 descreve as pessoas que você escolhe e o futuro que constrói com elas—amizades, comunidades, redes, causas e esperanças de longo prazo—distinta da família (4ª) ou de parceiros um a um (7ª).",
+    "overviewTitle": "Em resumo",
+    "overviewEyebrow": "Fatos da casa",
+    "overviewIcon": "RiGroupLine",
+    "overviewItems": [
+      {
+        "label": "Governa",
+        "value": "Amigos, grupos, redes, esperanças"
+      },
+      {
+        "label": "Classe",
+        "value": "Sucedente (após a 10ª)"
+      },
+      {
+        "label": "Ligação natural",
+        "value": "Aquário (apenas auxílio didático)"
+      },
+      {
+        "label": "Hora de nascimento?",
+        "value": "Sim — casas pedem horário preciso"
+      }
+    ],
+    "actions": [
+      {
+        "title": "Hub de Casas Astrológicas",
+        "url": "/astrology-houses",
+        "icon": "RiLayoutGridLine",
+        "variant": "secondary"
+      }
+    ],
+    "links": [
+      {
+        "text": "Veja as doze casas em um só guia.",
+        "linkText": "Casas Astrológicas",
+        "url": "/astrology-houses"
+      },
+      {
+        "text": "Caminho completo de leitura do mapa natal.",
+        "linkText": "Guia do Mapa Astral",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "toc": {
+    "label": "Nesta página",
+    "items": [
+      {
+        "id": "meaning",
+        "label": "O que significa"
+      },
+      {
+        "id": "rules",
+        "label": "O que governa"
+      },
+      {
+        "id": "comparison",
+        "label": "11ª vs 7ª"
+      },
+      {
+        "id": "planets",
+        "label": "Planetas na 11ª"
+      },
+      {
+        "id": "howto",
+        "label": "Como encontrar a sua"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      }
+    ]
+  },
+  "meaning": {
+    "id": "meaning",
+    "label": "Significado",
+    "title": "O Que É a Casa 11 na Astrologia?",
+    "paragraphs": [
+      "Na casa 11 astrologia, este setor do mapa astral descreve o pertencimento escolhido—não a família em que você nasceu, nem o parceiro com quem se casa. Cobre amizades que você elege, grupos que parecem uma tribo, redes profissionais e sociais, causas que importam, e as esperanças de longo prazo que guiam suas decisões em silêncio.",
+      "Astrologos clássicos a chamavam de casa do Bom Espírito e ligaram esperanças a amigos por um motivo prático: um desejo dito dentro de uma rede vira plano com ajudantes. O amigo que encaminha uma vaga, a comunidade que financia um projeto, o grupo que sobrevive a três empregos—essas são histórias da casa 11.",
+      "A 11ª é uma casa sucedente. Segue a casa angular 10ª de carreira e vida pública. Onde a 10ª pergunta pelo que você é conhecido, a 11ª pergunta quem caminha com você depois dos holofotes—pares, colaboradores, públicos e comunidades que estabilizam o caminho público. Nos mapas AstroCarto (Signo Inteiro), o signo após o Meio do Céu torna-se a 11ª casa completa, o que facilita a leitura para iniciantes."
+    ],
+    "image": {
+      "src": "/imgs/astrology-houses-11th-house/astrology-houses-11th-house-meaning.webp",
+      "alt": "Diagrama do mapa astral destacando a casa 11: amizades, comunidade e esperanças"
+    }
+  },
+  "rules": {
+    "id": "rules",
+    "label": "Temas",
+    "title": "O Que a Casa 11 Governa (e o Que Não Governa)",
+    "description": "Limites claros ajudam na leitura de casa 11 astrologia. A décima primeira casa é social e voltada ao futuro—mas não cobre todo tipo de relacionamento no mapa.",
+    "doesLabel": "Governa",
+    "doesNotLabel": "Não governa",
+    "does": [
+      {
+        "title": "Amigos, grupos e redes",
+        "description": "Amigos próximos, clubes, times, círculos ativistas, comunidades online e redes profissionais. Se a pergunta é onde você pertence além da família e do romance, comece aqui."
+      },
+      {
+        "title": "Causas e projetos coletivos",
+        "description": "Causas humanitárias ou ligadas à tecnologia, organizações e movimentos. Redes sociais costumam aparecer aqui na prática moderna como espaços de tribo estendida."
+      },
+      {
+        "title": "Esperanças de longo prazo e visão compartilhada",
+        "description": "Não sonhos vagos—metas que você nomeia e persegue com outras pessoas. Mentores, colaboradores e “laços fracos” que abrem portas frequentemente vivem nesta história."
+      }
+    ],
+    "does_not": [
+      {
+        "title": "Casamento e contratos um a um",
+        "description": "Parceiros comprometidos e contratos formais pertencem principalmente à 7ª casa. Misturar 7ª e 11ª é um erro comum de iniciantes."
+      },
+      {
+        "title": "Romance casual e diversão no namoro",
+        "description": "Flertes, encontros e brincadeira criativa ficam mais naturalmente na 5ª casa, mesmo quando amigos apresentam alguém."
+      },
+      {
+        "title": "Família e raízes do lar",
+        "description": "Pais, lar da infância e bases emocionais pertencem à 4ª casa—não à tribo escolhida da 11ª."
+      }
+    ]
+  },
+  "comparison": {
+    "id": "comparison",
+    "label": "Comparar",
+    "title": "Casa 11 vs Casa 7",
+    "description": "Ambas as casas descrevem relacionamentos, mas respondem a perguntas diferentes no mapa. Use esta tabela quando uma amizade parecer parceria—ou um parceiro parecer melhor amigo.",
+    "columns": [
+      "Tema",
+      "Casa 11",
+      "Casa 7"
+    ],
+    "rows": [
+      [
+        "Tipo de vínculo",
+        "Amigos, grupos, redes",
+        "Parceiros um a um e contratos"
+      ],
+      [
+        "Pergunta central",
+        "Quem é a minha gente?",
+        "Quem é o meu correspondente?"
+      ],
+      [
+        "Escala",
+        "Coletivo / muitos",
+        "Dupla / dois"
+      ],
+      [
+        "Tom de futuro",
+        "Esperanças e causas compartilhadas",
+        "Acordos e compromisso"
+      ],
+      [
+        "Confusão comum",
+        "Tratar cônjuge como tema de “casa dos amigos”",
+        "Tratar conflito de grupo como tema de casamento"
+      ]
+    ]
+  },
+  "planets": {
+    "id": "planets",
+    "label": "Guia de leitura",
+    "title": "Planetas na Casa 11",
+    "intro": "Planetas na 11ª coloram como você vive amizade, networking e esperanças de longo alcance. Leia-os com signo e aspectos—uma posição nunca conta a história toda. Casa 11 vazia está no FAQ abaixo.",
+    "items": [
+      {
+        "planet": "Sun",
+        "title": "Sol na casa 11",
+        "description": "A identidade se liga a grupos e causas. Você pode se sentir mais “você” ao contribuir para um time, público ou missão compartilhada. A visibilidade costuma chegar pela comunidade, não pelo holofote solo."
+      },
+      {
+        "planet": "Moon",
+        "title": "Lua na casa 11",
+        "description": "A segurança emocional se liga à amizade e ao pertencimento. O humor pode acompanhar a dinâmica do grupo; a família escolhida pode regular tanto quanto uma base privada quando o restante do mapa apoia."
+      },
+      {
+        "planet": "Mercury",
+        "title": "Mercúrio na casa 11",
+        "description": "Redes de troca de ideias importam. Você pode pensar melhor em conversa com pares, prosperar em fóruns ou brainstorms colaborativos, e conhecer aliados por escrita, ensino ou chats de grupo."
+      },
+      {
+        "planet": "Venus",
+        "title": "Vênus na casa 11",
+        "description": "Facilidade social entre pares. Amizades podem ser afetuosas e estéticas; você pode atrair aliados por charme, gosto compartilhado ou cenas criativas—sem transformar todo amigo em parceiro romântico (veja a 7ª e a 5ª para isso)."
+      },
+      {
+        "planet": "Mars",
+        "title": "Marte na casa 11",
+        "description": "Energia de organizador ativo—ou dinâmicas competitivas entre amigos. Você pode impulsionar projetos de grupo, defender causas com força, ou precisar de justiça consciente para que a ambição não fragmente a tribo."
+      },
+      {
+        "planet": "Jupiter",
+        "title": "Júpiter na casa 11",
+        "description": "Alcance social ampliado e otimismo sobre o futuro. Apoio, oportunidades e boa vontade costumam chegar pelas redes. Textos clássicos colocam a alegria de Júpiter aqui—o tema do “Bom Espírito”."
+      },
+      {
+        "planet": "Saturn",
+        "title": "Saturno na casa 11",
+        "description": "Amizades ou mentoria mais poucas e sérias. O pertencimento pode ser conquistado aos poucos; qualidade acima de quantidade é comum. Responsabilidade grupal e compromissos de longo prazo com comunidades podem definir a história."
+      },
+      {
+        "planet": "Uranus",
+        "title": "Urano na casa 11",
+        "description": "Amigos não convencionais e mudanças súbitas de rede. Você pode preferir círculos progressistas, tribos ligadas à tecnologia, ou amizades que protegem a individualidade dentro do grupo."
+      }
+    ]
+  },
+  "howto": {
+    "id": "howto",
+    "label": "Passos práticos",
+    "title": "Como Encontrar Sua Casa 11 no Mapa Astral",
+    "intro": "Você não precisa de cada nuance clássica para começar. Use estes passos com um mapa grátis—depois volte aos significados acima.",
+    "steps": [
+      {
+        "title": "Gere seu mapa astral com horário preciso",
+        "description": "Informe data, horário exato e local de nascimento. As cúspides—incluindo a 11ª—dependem do horário. Sem horário confiável, trate as casas como provisórias.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Localize a 11ª na roda e na tabela",
+        "description": "Na roda, a 11ª fica após a 10ª (área do Meio do Céu), no sentido anti-horário. Na tabela de posições, procure planetas listados na casa 11.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Anote o signo na 11ª e seu regente",
+        "description": "Em Signo Inteiro, um signo inteiro ocupa a 11ª. O estilo desse signo colore amizade e metas. Encontre o planeta que rege esse signo em outro lugar—o senhor da casa importa tanto em casas vazias quanto ocupadas.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Opcional: leve temas de comunidade à localização",
+        "description": "Depois de entender sua história natal da 11ª, a Astrocartografia pode mostrar onde redes ou trabalho colaborativo soam mais altos geograficamente—como segunda camada, não substituto da casa natal.",
+        "icon": "RiMapPinLine"
+      }
+    ],
+    "primary_cta": {
+      "title": "Abrir Gerador de Mapa Astral",
+      "url": "/tools/birth-chart-generator",
+      "icon": "RiPieChartLine"
+    }
+  },
+  "relatedHouses": {
+    "id": "related",
+    "title": "Continue no Hub de Casas",
+    "description": "A 11ª é uma de doze áreas da vida. Volte ao hub para o mapa completo, ou abra uma calculadora relacionada quando quiser conferir posições.",
+    "items": [
+      {
+        "title": "Hub de Casas Astrológicas",
+        "description": "Visão das 12 casas, grupos angulares / sucedentes / cadentes, e como lê-las juntas.",
+        "href": "/astrology-houses",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Guia do Mapa Astral",
+        "description": "Como o mapa natal completo une casas, signos e planetas em um caminho de leitura.",
+        "href": "/chart/natal-chart",
+        "icon": "RiBookOpenLine"
+      },
+      {
+        "title": "Gerador de Mapa Astral",
+        "description": "Roda e tabela grátis para ver quais planetas estão na sua casa 11.",
+        "href": "/tools/birth-chart-generator",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Calculadora de Ascendente",
+        "description": "Confirme o Ascendente que inicia a roda das casas antes de confiar nos números das casas.",
+        "href": "/rising-sign-calculator",
+        "icon": "RiCompass3Line"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Casa 11 Astrologia — Perguntas Frequentes",
+    "description": "Respostas curtas a buscas comuns sobre a décima primeira casa no mapa astral.",
+    "items": [
+      {
+        "title": "O que é a casa 11 na astrologia?",
+        "description": "A casa 11 é o setor do mapa astral associado a amizade, comunidade, redes, causas sociais e esperanças de longo prazo. Descreve as pessoas que você escolhe e a visão de futuro que persegue com elas—não a família de origem nem contratos de casamento."
+      },
+      {
+        "title": "Qual a diferença entre a casa 11 e a casa 7?",
+        "description": "A 7ª casa governa parcerias um a um, como casamento e contratos comprometidos. A casa 11 governa amigos, grupos e pertencimento coletivo. O romance também pode aparecer em outras casas (especialmente a 5ª), mas a amizade-como-tribo é principalmente tema da 11ª."
+      },
+      {
+        "title": "O que significa uma casa 11 vazia?",
+        "description": "Uma casa 11 vazia significa que nenhum planeta está dentro dessa casa no mapa natal. Temas de amizade e esperança ainda se leem pelo signo na cúspide da 11ª e seu planeta regente. Vazia não significa inativa ou “sem amigos”."
+      },
+      {
+        "title": "Preciso da hora de nascimento para casa 11 astrologia?",
+        "description": "Sim, para posições de casa confiáveis. Sem horário, o Ascendente e a roda das casas ficam incertos, então a 11ª pode mudar. Os signos dos planetas continuam úteis; as casas precisam de horário confiável."
+      },
+      {
+        "title": "Qual é o signo natural da casa 11?",
+        "description": "Textos didáticos costumam ligar a casa 11 a Aquário. É uma associação tradicional para aprendizado, não uma afirmação de que Aquário está sempre na sua cúspide pessoal da 11ª. Sua cúspide depende do horário e do sistema de casas—a AstroCarto usa Casas de Signo Inteiro."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Veja Sua Casa 11 no Mapa Astral",
+    "description": "Gere uma roda e tabela de posições grátis para ver quais planetas caem na sua casa 11—depois volte ao hub de Casas Astrológicas para as outras onze áreas da vida.",
+    "buttons": [
+      {
+        "title": "Gerador de Mapa Astral",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Hub de Casas Astrológicas",
+        "icon": "RiLayoutGridLine",
+        "url": "/astrology-houses",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

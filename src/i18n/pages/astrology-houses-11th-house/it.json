@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "title": "Undicesima Casa — Amicizie e Speranze",
+    "description": "Cosa significa l'undicesima casa in astrologia: amicizie, gruppi, reti e speranze. Trova i pianeti nella 11ª casa con un tema natale gratuito su AstroCarto.",
+    "keywords": "undicesima casa astrologia, significato undicesima casa, 11ª casa astrologia, undicesima casa amicizia, pianeti in undicesima casa, undicesima casa vuota, undicesima casa vs settima casa",
+    "ogImage": "/imgs/astrology-houses-11th-house/astrology-houses-11th-house-og.webp"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "hub": "Case Astrologiche",
+    "current": "Undicesima Casa"
+  },
+  "guideHero": {
+    "badge": "Guida all'Undicesima Casa",
+    "badgeIcon": "RiGroupLine",
+    "description": "L'undicesima casa descrive le persone che scegli e il futuro che costruisci con loro—amicizie, comunità, reti, cause e speranze a lungo termine—distinta dalla famiglia (4ª) o dai partner uno a uno (7ª).",
+    "overviewTitle": "A colpo d'occhio",
+    "overviewEyebrow": "Fatti della casa",
+    "overviewIcon": "RiGroupLine",
+    "overviewItems": [
+      {
+        "label": "Governa",
+        "value": "Amici, gruppi, reti, speranze"
+      },
+      {
+        "label": "Classe",
+        "value": "Succedente (dopo la 10ª)"
+      },
+      {
+        "label": "Legame naturale",
+        "value": "Acquario (solo aiuto didattico)"
+      },
+      {
+        "label": "Ora di nascita?",
+        "value": "Sì — le case richiedono l'ora precisa"
+      }
+    ],
+    "actions": [
+      {
+        "title": "Hub Case Astrologiche",
+        "url": "/astrology-houses",
+        "icon": "RiLayoutGridLine",
+        "variant": "secondary"
+      }
+    ],
+    "links": [
+      {
+        "text": "Vedi tutte e dodici le case in una guida.",
+        "linkText": "Case Astrologiche",
+        "url": "/astrology-houses"
+      },
+      {
+        "text": "Percorso completo di lettura del tema natale.",
+        "linkText": "Guida al Tema Natale",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "toc": {
+    "label": "In questa pagina",
+    "items": [
+      {
+        "id": "meaning",
+        "label": "Cosa significa"
+      },
+      {
+        "id": "rules",
+        "label": "Cosa governa"
+      },
+      {
+        "id": "comparison",
+        "label": "11ª vs 7ª"
+      },
+      {
+        "id": "planets",
+        "label": "Pianeti in undicesima"
+      },
+      {
+        "id": "howto",
+        "label": "Come trovare la tua"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      }
+    ]
+  },
+  "meaning": {
+    "id": "meaning",
+    "label": "Significato",
+    "title": "Cos'è l'Undicesima Casa in Astrologia?",
+    "paragraphs": [
+      "Nell'undicesima casa astrologia, questo settore del tema natale descrive l'appartenenza scelta—non la famiglia in cui sei nato, né il partner con cui ti sposi. Copre amicizie che eleggi, gruppi che sembrano una tribù, reti professionali e sociali, cause a cui tieni, e le speranze a lungo termine che guidano in silenzio le tue decisioni.",
+      "Gli astrologi classici la chiamavano casa del Buon Spirito e collegavano speranze e amici per un motivo pratico: un desiderio espresso in una rete diventa un piano con aiuto. L'amico che inoltra un'offerta di lavoro, la comunità che finanzia un progetto, la chat di gruppo che sopravvive a tre lavori—queste sono storie dell'undicesima casa.",
+      "L'11ª è una casa succedente. Segue la casa angolare 10ª di carriera e vita pubblica. Dove la 10ª chiede per cosa sei conosciuto, l'11ª chiede chi cammina con te dopo i riflettori—pari, collaboratori, pubblici e comunità che stabilizzano il percorso pubblico. Nei temi AstroCarto (Segno Intero), il segno successivo al Medio Cielo diventa l'intera 11ª casa, rendendo più facile la lettura per i principianti."
+    ],
+    "image": {
+      "src": "/imgs/astrology-houses-11th-house/astrology-houses-11th-house-meaning.webp",
+      "alt": "Diagramma del tema natale che evidenzia l'undicesima casa: amicizie, comunità e speranze"
+    }
+  },
+  "rules": {
+    "id": "rules",
+    "label": "Temi",
+    "title": "Cosa Governa l'Undicesima Casa (e Cosa Non Governa)",
+    "description": "Confini chiari aiutano quando si legge undicesima casa astrologia. L'undicesima casa è sociale e rivolta al futuro—ma non copre ogni tipo di relazione nel tema.",
+    "doesLabel": "Governa",
+    "doesNotLabel": "Non governa",
+    "does": [
+      {
+        "title": "Amici, gruppi e reti",
+        "description": "Amici stretti, club, squadre, circoli attivisti, comunità online e reti professionali. Se la domanda è dove appartieni oltre la famiglia e il romanticismo, inizia qui."
+      },
+      {
+        "title": "Cause e progetti collettivi",
+        "description": "Cause umanitarie o tecnologiche, organizzazioni e movimenti. I social network spesso appaiono qui nella pratica moderna come spazi di tribù estesa."
+      },
+      {
+        "title": "Speranze a lungo termine e visione condivisa",
+        "description": "Non sogni vaghi—obiettivi che puoi nominare e perseguire con altri. Mentori, collaboratori e “legami deboli” che aprono porte vivono spesso in questa storia."
+      }
+    ],
+    "does_not": [
+      {
+        "title": "Matrimonio e contratti uno a uno",
+        "description": "Partner impegnati e contratti formali appartengono principalmente alla 7ª casa. Confondere 7ª e 11ª è un errore comune dei principianti."
+      },
+      {
+        "title": "Romance casual e divertimento negli appuntamenti",
+        "description": "Flirt, dating e gioco creativo stanno più naturalmente nella 5ª casa, anche quando gli amici ti presentano qualcuno."
+      },
+      {
+        "title": "Famiglia e radici della casa",
+        "description": "Genitori, casa d'infanzia e basi emotive appartengono alla 4ª casa—non alla tribù scelta dell'11ª."
+      }
+    ]
+  },
+  "comparison": {
+    "id": "comparison",
+    "label": "Confronta",
+    "title": "Undicesima Casa vs Settima Casa",
+    "description": "Entrambe le case descrivono relazioni, ma rispondono a domande diverse nel tema. Usa questa tabella quando un'amicizia sembra una partnership—o un partner sembra il migliore amico.",
+    "columns": [
+      "Tema",
+      "11ª casa",
+      "7ª casa"
+    ],
+    "rows": [
+      [
+        "Tipo di legame",
+        "Amici, gruppi, reti",
+        "Partner uno a uno e contratti"
+      ],
+      [
+        "Domanda centrale",
+        "Chi è la mia gente?",
+        "Chi è la mia controparte?"
+      ],
+      [
+        "Scala",
+        "Collettivo / molti",
+        "Diade / due"
+      ],
+      [
+        "Tono del futuro",
+        "Speranze e cause condivise",
+        "Accordi e impegno"
+      ],
+      [
+        "Confusione comune",
+        "Trattare il coniuge come tema della “casa degli amici”",
+        "Trattare un conflitto di gruppo come tema matrimoniale"
+      ]
+    ]
+  },
+  "planets": {
+    "id": "planets",
+    "label": "Guida di lettura",
+    "title": "Pianeti nell'Undicesima Casa",
+    "intro": "I pianeti in undicesima colorano come vivi amicizia, networking e speranze a lungo raggio. Leggili con segno e aspetti—una sola posizione non racconta tutta la storia. L'undicesima casa vuota è nelle FAQ qui sotto.",
+    "items": [
+      {
+        "planet": "Sun",
+        "title": "Sole in undicesima casa",
+        "description": "L'identità si lega a gruppi e cause. Puoi sentirti più “te stesso” contribuendo a un team, a un pubblico o a una missione condivisa. La visibilità arriva spesso attraverso la comunità, non dal riflettore solitario."
+      },
+      {
+        "planet": "Moon",
+        "title": "Luna in undicesima casa",
+        "description": "La sicurezza emotiva si collega ad amicizia e appartenenza. L'umore può seguire la dinamica del gruppo; la famiglia scelta può regolare tanto quanto una base privata quando il resto del tema lo sostiene."
+      },
+      {
+        "planet": "Mercury",
+        "title": "Mercurio in undicesima casa",
+        "description": "Le reti di scambio di idee contano. Puoi pensare meglio in conversazione con i pari, prosperare in forum o brainstorm collaborativi, e conoscere alleati tramite scrittura, insegnamento o chat di gruppo."
+      },
+      {
+        "planet": "Venus",
+        "title": "Venere in undicesima casa",
+        "description": "Facilità sociale tra pari. Le amicizie possono essere affettuose ed estetiche; puoi attrarre alleati con fascino, gusto condiviso o scene creative—senza trasformare ogni amico in partner romantico (controlla 7ª e 5ª per quello)."
+      },
+      {
+        "planet": "Mars",
+        "title": "Marte in undicesima casa",
+        "description": "Energia da organizzatore attivo—o dinamiche competitive tra amici. Puoi spingere progetti di gruppo, difendere cause con forza, o aver bisogno di equità consapevole affinché l'ambizione non fratturi la tribù."
+      },
+      {
+        "planet": "Jupiter",
+        "title": "Giove in undicesima casa",
+        "description": "Portata sociale ampliata e ottimismo sul futuro. Supporto, opportunità e buona volontà arrivano spesso attraverso le reti. I testi classici pongono la gioia di Giove qui—il tema del “Buon Spirito”."
+      },
+      {
+        "planet": "Saturn",
+        "title": "Saturno in undicesima casa",
+        "description": "Amicizie o mentorship meno numerose e più serie. L'appartenenza può essere guadagnata lentamente; qualità prima della quantità è comune. Responsabilità di gruppo e impegni a lungo termine verso le comunità possono definire la storia."
+      },
+      {
+        "planet": "Uranus",
+        "title": "Urano in undicesima casa",
+        "description": "Amici non convenzionali e improvvisi cambiamenti di rete. Puoi preferire circoli progressisti, tribù tecnologiche, o amicizie che proteggono l'individualità dentro il gruppo."
+      }
+    ]
+  },
+  "howto": {
+    "id": "howto",
+    "label": "Passi pratici",
+    "title": "Come Trovare la Tua Undicesima Casa nel Tema Natale",
+    "intro": "Non ti serve ogni sfumatura classica per iniziare. Usa questi passi con un tema gratuito—poi torna ai significati sopra.",
+    "steps": [
+      {
+        "title": "Genera il tuo tema natale con ora precisa",
+        "description": "Inserisci data, ora esatta e luogo di nascita. Le cuspidi—inclusa l'11ª—dipendono dall'ora. Senza un'ora affidabile, tratta le case come provvisorie.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Individua l'11ª sulla ruota e nella tabella",
+        "description": "Sulla ruota, l'11ª si trova dopo la 10ª (zona del Medio Cielo), in senso antiorario. Nella tabella delle posizioni, cerca i pianeti elencati nella casa 11.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Annota il segno sull'11ª e il suo reggente",
+        "description": "In Segno Intero, un intero segno occupa l'11ª. Lo stile di quel segno colora amicizia e obiettivi. Trova il pianeta che regge quel segno altrove—il signore della casa conta sia nelle case vuote sia in quelle affollate.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Opzionale: porta i temi di comunità sulla localizzazione",
+        "description": "Dopo aver compreso la tua storia natale dell'11ª, l'Astrocartografia può mostrare dove reti o lavoro collaborativo suonano più forti geograficamente—come secondo livello, non come sostituto della casa natale.",
+        "icon": "RiMapPinLine"
+      }
+    ],
+    "primary_cta": {
+      "title": "Apri Generatore Carta Natale",
+      "url": "/tools/birth-chart-generator",
+      "icon": "RiPieChartLine"
+    }
+  },
+  "relatedHouses": {
+    "id": "related",
+    "title": "Continua con l'Hub delle Case",
+    "description": "L'11ª è una di dodici aree della vita. Torna all'hub per la mappa completa, o apri un calcolatore correlato quando sei pronto a controllare le posizioni.",
+    "items": [
+      {
+        "title": "Hub Case Astrologiche",
+        "description": "Panoramica di tutte e 12 le case, gruppi angolari / succedenti / cadenti, e come leggerle insieme.",
+        "href": "/astrology-houses",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Guida al Tema Natale",
+        "description": "Come il tema natale completo unisce case, segni e pianeti in un percorso di lettura.",
+        "href": "/chart/natal-chart",
+        "icon": "RiBookOpenLine"
+      },
+      {
+        "title": "Generatore Carta Natale",
+        "description": "Ruota e tabella gratis per vedere quali pianeti sono nella tua undicesima casa.",
+        "href": "/tools/birth-chart-generator",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Calcolatore Segno Ascendente",
+        "description": "Conferma l'Ascendente che apre la ruota delle case prima di fidarti dei numeri di casa.",
+        "href": "/rising-sign-calculator",
+        "icon": "RiCompass3Line"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Undicesima Casa Astrologia — Domande Frequenti",
+    "description": "Risposte brevi a ricerche comuni sull'undicesima casa nel tema natale.",
+    "items": [
+      {
+        "title": "Cos'è l'undicesima casa in astrologia?",
+        "description": "L'undicesima casa è il settore del tema natale associato ad amicizia, comunità, reti, cause sociali e speranze a lungo termine. Descrive le persone che scegli e la visione di futuro che perseguì con loro—non la famiglia d'origine né i contratti matrimoniali."
+      },
+      {
+        "title": "Qual è la differenza tra undicesima e settima casa?",
+        "description": "La 7ª casa governa partnership uno a uno come matrimonio e contratti impegnati. L'undicesima casa governa amici, gruppi e appartenenza collettiva. Il romance può apparire anche in altre case (soprattutto la 5ª), ma l'amicizia-come-tribù è principalmente un tema dell'11ª."
+      },
+      {
+        "title": "Cosa significa un'undicesima casa vuota?",
+        "description": "Un'undicesima casa vuota significa che nessun pianeta si trova in quella casa nel tema natale. I temi di amicizia e speranza si leggono comunque attraverso il segno sulla cuspide dell'11ª e il suo pianeta reggente. Vuota non significa inattiva o “senza amici”."
+      },
+      {
+        "title": "Serve l'ora di nascita per undicesima casa astrologia?",
+        "description": "Sì, per posizioni di casa affidabili. Senza ora, l'Ascendente e la ruota delle case sono incerti, quindi l'11ª può spostarsi. I segni planetari restano utilizzabili; le assegnazioni di casa richiedono un'ora affidabile."
+      },
+      {
+        "title": "Qual è il segno naturale dell'undicesima casa?",
+        "description": "I testi didattici spesso collegano l'undicesima casa ad Acquario. È un'associazione tradizionale per l'apprendimento, non un'affermazione che Acquario sia sempre sulla tua cuspide personale dell'11ª. La tua cuspide dipende dall'ora e dal sistema di case—AstroCarto usa Case a Segno Intero."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Vedi la Tua Undicesima Casa nel Tema Natale",
+    "description": "Genera una ruota e una tabella di posizioni gratis per vedere quali pianeti cadono nella tua undicesima casa—poi torna all'hub Case Astrologiche per le altre undici aree della vita.",
+    "buttons": [
+      {
+        "title": "Generatore Carta Natale",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Hub Case Astrologiche",
+        "icon": "RiLayoutGridLine",
+        "url": "/astrology-houses",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

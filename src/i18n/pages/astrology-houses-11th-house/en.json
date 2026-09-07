@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "title": "11th House Astrology — Friends, Community & Hopes",
+    "description": "What the 11th house means in astrology: friends, groups, networks, and long-term hopes. Find your 11th house placements with a free birth chart on AstroCarto.",
+    "keywords": "11th house astrology, 11th house meaning, eleventh house astrology, 11th house friendship, planets in 11th house, empty 11th house, 11th house vs 7th house",
+    "ogImage": "/imgs/astrology-houses-11th-house/astrology-houses-11th-house-og.webp"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "hub": "Astrology Houses",
+    "current": "11th House"
+  },
+  "guideHero": {
+    "badge": "11th House Guide",
+    "badgeIcon": "RiGroupLine",
+    "description": "The 11th house describes the people you choose and the future you build with them—friendships, communities, networks, causes, and long-term hopes—distinct from family (4th) or one-to-one partners (7th).",
+    "overviewTitle": "At a glance",
+    "overviewEyebrow": "House facts",
+    "overviewIcon": "RiGroupLine",
+    "overviewItems": [
+      {
+        "label": "Rules",
+        "value": "Friends, groups, networks, hopes"
+      },
+      {
+        "label": "Class",
+        "value": "Succedent (after the 10th)"
+      },
+      {
+        "label": "Natural link",
+        "value": "Aquarius (teaching aid only)"
+      },
+      {
+        "label": "Birth time?",
+        "value": "Yes — houses need accurate time"
+      }
+    ],
+    "actions": [
+      {
+        "title": "Astrology Houses Hub",
+        "url": "/astrology-houses",
+        "icon": "RiLayoutGridLine",
+        "variant": "secondary"
+      }
+    ],
+    "links": [
+      {
+        "text": "See all twelve houses in one guide.",
+        "linkText": "Astrology Houses",
+        "url": "/astrology-houses"
+      },
+      {
+        "text": "Full natal chart reading path.",
+        "linkText": "Natal Chart Guide",
+        "url": "/chart/natal-chart"
+      }
+    ]
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "meaning",
+        "label": "What it means"
+      },
+      {
+        "id": "rules",
+        "label": "What it rules"
+      },
+      {
+        "id": "comparison",
+        "label": "11th vs 7th"
+      },
+      {
+        "id": "planets",
+        "label": "Planets in the 11th"
+      },
+      {
+        "id": "howto",
+        "label": "How to find yours"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      }
+    ]
+  },
+  "meaning": {
+    "id": "meaning",
+    "label": "Meaning",
+    "title": "What Is the 11th House in Astrology?",
+    "paragraphs": [
+      "In 11th house astrology, this sector of the birth chart describes chosen belonging—not the family you were born into, and not the partner you marry. It covers friendships you elect, groups that feel like a tribe, professional and social networks, causes you care about, and the long-term hopes that quietly steer your decisions.",
+      "Classical astrologers called it the house of the Good Spirit and linked hopes with friends for a practical reason: a wish spoken inside a network becomes a plan with helpers. The friend who forwards a job note, the community that funds a project, the group chat that outlasts three jobs—these are 11th house stories.",
+      "The 11th is a succedent house. It follows the angular 10th house of career and public life. Where the 10th asks what you are known for, the 11th asks who walks with you after the spotlight—peers, collaborators, audiences, and communities that stabilize a public path. On AstroCarto charts (Whole Sign), the sign after your Midheaven sign becomes the full 11th house, which keeps beginner reading straightforward."
+    ],
+    "image": {
+      "src": "/imgs/astrology-houses-11th-house/astrology-houses-11th-house-meaning.webp",
+      "alt": "Birth chart diagram highlighting the 11th house of friendship, community, and hopes"
+    }
+  },
+  "rules": {
+    "id": "rules",
+    "label": "Themes",
+    "title": "What the 11th House Rules (and What It Does Not)",
+    "description": "Clear boundaries help when reading 11th house astrology. The eleventh house is social and future-facing—but it is not every relationship type in the chart.",
+    "doesLabel": "Rules",
+    "doesNotLabel": "Does not rule",
+    "does": [
+      {
+        "title": "Friends, groups, and networks",
+        "description": "Close friends, clubs, teams, activist circles, online communities, and professional networks. If the question is where you belong beyond family and romance, start here."
+      },
+      {
+        "title": "Causes and collective projects",
+        "description": "Humanitarian or tech-forward causes, organizations, and movements. Social media networks often show up here in modern practice as extended tribe spaces."
+      },
+      {
+        "title": "Long-term hopes and shared vision",
+        "description": "Not vague daydreams—goals you can name and pursue with others. Mentors, collaborators, and “weak ties” that open doors often live in this house’s story."
+      }
+    ],
+    "does_not": [
+      {
+        "title": "Marriage and one-on-one contracts",
+        "description": "Committed partners and formal contracts belong primarily to the 7th house. Mixing 7th and 11th is a common beginner mistake."
+      },
+      {
+        "title": "Casual romance and dating fun",
+        "description": "Flirtation, dating, and creative play sit more naturally in the 5th house, even when friends introduce you to someone."
+      },
+      {
+        "title": "Family and home roots",
+        "description": "Parents, childhood home, and emotional foundations belong to the 4th house—not the chosen tribe of the 11th."
+      }
+    ]
+  },
+  "comparison": {
+    "id": "comparison",
+    "label": "Compare",
+    "title": "11th House vs 7th House",
+    "description": "Both houses describe relationships, but they answer different chart questions. Use this table when a friendship feels like a partnership—or a partner feels like a best friend.",
+    "columns": [
+      "Theme",
+      "11th house",
+      "7th house"
+    ],
+    "rows": [
+      [
+        "Bond type",
+        "Friends, groups, networks",
+        "One-to-one partners & contracts"
+      ],
+      [
+        "Core question",
+        "Who are my people?",
+        "Who is my counterpart?"
+      ],
+      [
+        "Scale",
+        "Collective / many",
+        "Dyad / two"
+      ],
+      [
+        "Future tone",
+        "Shared hopes & causes",
+        "Agreements & commitment"
+      ],
+      [
+        "Common mix-up",
+        "Calling a spouse a “friend house” issue",
+        "Calling a group conflict a marriage issue"
+      ]
+    ]
+  },
+  "planets": {
+    "id": "planets",
+    "label": "Reading guide",
+    "title": "Planets in the 11th House",
+    "intro": "Planets in the 11th color how you do friendship, networking, and long-range hopes. Read them with sign and aspects—one placement never tells the whole story. An empty 11th is covered in the FAQ below.",
+    "items": [
+      {
+        "planet": "Sun",
+        "title": "Sun in the 11th",
+        "description": "Identity ties to groups and causes. You may feel most “yourself” when contributing to a team, audience, or shared mission. Visibility often arrives through community rather than solo spotlight."
+      },
+      {
+        "planet": "Moon",
+        "title": "Moon in the 11th",
+        "description": "Emotional safety links to friendship and belonging. Moods may track group dynamics; chosen family can feel as regulating as a private home base when the rest of the chart supports it."
+      },
+      {
+        "planet": "Mercury",
+        "title": "Mercury in the 11th",
+        "description": "Idea-sharing networks matter. You may think best in conversation with peers, thrive in forums or collaborative brainstorming, and meet allies through writing, teaching, or group chats."
+      },
+      {
+        "planet": "Venus",
+        "title": "Venus in the 11th",
+        "description": "Social ease among peers. Friendships can feel affectionate and aesthetic; you may attract allies through charm, shared taste, or creative scenes—without turning every friend into a romantic partner (check the 7th and 5th for that)."
+      },
+      {
+        "planet": "Mars",
+        "title": "Mars in the 11th",
+        "description": "Active organizer energy—or competitive friend dynamics. You may drive group projects hard, advocate fiercely for causes, or need conscious fairness so ambition does not fracture the tribe."
+      },
+      {
+        "planet": "Jupiter",
+        "title": "Jupiter in the 11th",
+        "description": "Expanded social reach and optimism about the future. Support, opportunities, and goodwill often arrive through networks. Classical texts place Jupiter’s joy here—the “Good Spirit” theme."
+      },
+      {
+        "planet": "Saturn",
+        "title": "Saturn in the 11th",
+        "description": "Fewer, more serious friendships or mentorships. Belonging may be earned slowly; quality over quantity is common. Group responsibility and long-term commitments to communities can define the story."
+      },
+      {
+        "planet": "Uranus",
+        "title": "Uranus in the 11th",
+        "description": "Unconventional friends and sudden network shifts. You may prefer progressive circles, tech-forward tribes, or friendships that protect individuality inside the group."
+      }
+    ]
+  },
+  "howto": {
+    "id": "howto",
+    "label": "Practical steps",
+    "title": "How to Find Your 11th House in a Birth Chart",
+    "intro": "You do not need every classical nuance to start. Use these steps with a free chart—then come back to the meanings above.",
+    "steps": [
+      {
+        "title": "Generate your birth chart with accurate time",
+        "description": "Enter birth date, exact time, and place. House cusps—including the 11th—depend on time. Without a reliable time, treat house placements as provisional.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Locate the 11th on the wheel and table",
+        "description": "On the wheel, the 11th sits after the 10th (Midheaven area) as you move counter-clockwise. In the placements table, scan planets listed in house 11.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Note the sign on the 11th and its ruler",
+        "description": "In Whole Sign, one full sign occupies the 11th. That sign’s style colors friendship and goals. Find the planet that rules that sign elsewhere—the house lord matters for empty and busy 11th houses alike.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Optional: layer community themes onto location",
+        "description": "After you understand your natal 11th story, Astrocartography can show where networks or collaborative work feel louder geographically—as a second layer, not a replacement for the natal house.",
+        "icon": "RiMapPinLine"
+      }
+    ],
+    "primary_cta": {
+      "title": "Open Birth Chart Generator",
+      "url": "/tools/birth-chart-generator",
+      "icon": "RiPieChartLine"
+    }
+  },
+  "relatedHouses": {
+    "id": "related",
+    "title": "Continue with the Houses Hub",
+    "description": "The 11th is one of twelve life areas. Return to the hub for the full map, or open a related calculator when you are ready to check placements.",
+    "items": [
+      {
+        "title": "Astrology Houses Hub",
+        "description": "Overview of all 12 houses, angular / succedent / cadent groups, and how to read them together.",
+        "href": "/astrology-houses",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Natal Chart Guide",
+        "description": "How the full birth chart fits houses, signs, and planets into one reading path.",
+        "href": "/chart/natal-chart",
+        "icon": "RiBookOpenLine"
+      },
+      {
+        "title": "Birth Chart Generator",
+        "description": "Free wheel and placements table to see which planets sit in your 11th house.",
+        "href": "/tools/birth-chart-generator",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Rising Sign Calculator",
+        "description": "Confirm the Ascendant that starts the house wheel before you trust house numbers.",
+        "href": "/rising-sign-calculator",
+        "icon": "RiCompass3Line"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "11th House Astrology — Frequently Asked Questions",
+    "description": "Short answers to common searches about the eleventh house in a birth chart.",
+    "items": [
+      {
+        "title": "What is the 11th house in astrology?",
+        "description": "The 11th house is the birth-chart sector associated with friendship, community, networks, social causes, and long-term hopes. It describes the people you choose and the future vision you pursue with them—not family of origin or marriage contracts."
+      },
+      {
+        "title": "What is the difference between the 11th house and the 7th house?",
+        "description": "The 7th house rules one-on-one partnerships such as marriage and committed contracts. The 11th house rules friends, groups, and collective belonging. Romance can appear in other houses too (especially the 5th), but friendship-as-tribe is primarily an 11th house theme."
+      },
+      {
+        "title": "What does an empty 11th house mean?",
+        "description": "An empty 11th house means no planets sit inside that house in your natal chart. Friendship and hope themes are still read through the sign on the 11th cusp and its ruling planet. Empty does not mean inactive or “no friends.”"
+      },
+      {
+        "title": "Do I need my birth time for 11th house astrology?",
+        "description": "Yes, for reliable house placements. Without birth time, the Ascendant and house wheel are uncertain, so the 11th house can shift. Planet signs remain usable; house assignments need a trustworthy time."
+      },
+      {
+        "title": "What is the natural sign of the 11th house?",
+        "description": "Teaching texts often link the 11th house with Aquarius. That is a traditional association for learning, not a claim that Aquarius is always on your personal 11th cusp. Your cusp depends on birth time and house system—AstroCarto uses Whole Sign Houses."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "See Your 11th House in Your Birth Chart",
+    "description": "Generate a free birth chart wheel and placements table to see which planets fall in your 11th house—then return to the Astrology Houses hub for the other eleven life areas.",
+    "buttons": [
+      {
+        "title": "Birth Chart Generator",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Astrology Houses Hub",
+        "icon": "RiLayoutGridLine",
+        "url": "/astrology-houses",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}
