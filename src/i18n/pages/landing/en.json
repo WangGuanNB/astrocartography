@@ -990,12 +990,6 @@
         "dofollow": true
       },
       {
-        "title": "Featured on Dofollow.Tools",
-        "url": "https://dofollow.tools",
-        "target": "_blank",
-        "dofollow": true
-      },
-      {
         "title": "Featured AI Agent on AgentHunter",
         "url": "https://www.agenthunter.io?utm_source=badge&utm_medium=embed&utm_campaign=Astrocartography",
         "target": "_blank"
@@ -1003,7 +997,8 @@
       {
         "title": "Listed on ToolRain",
         "url": "https://toolrain.com/item/astrocartography-calculator",
-        "target": "_blank"
+        "target": "_blank",
+        "dofollow": true
       },
       {
         "title": "Astrocartography on Launchtory",
