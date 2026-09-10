@@ -986,12 +986,14 @@
       {
         "title": "Launched on Fazier",
         "url": "https://fazier.com/launches/annorasky.com",
-        "target": "_blank"
+        "target": "_blank",
+        "dofollow": true
       },
       {
         "title": "Featured on Dofollow.Tools",
         "url": "https://dofollow.tools",
-        "target": "_blank"
+        "target": "_blank",
+        "dofollow": true
       },
       {
         "title": "Featured AI Agent on AgentHunter",
