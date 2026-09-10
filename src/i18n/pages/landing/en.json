@@ -982,7 +982,33 @@
     "social": {
       "items": []
     },
-    "badges": [],
+    "badges": [
+      {
+        "title": "Launched on Fazier",
+        "url": "https://fazier.com/launches/annorasky.com",
+        "target": "_blank"
+      },
+      {
+        "title": "Featured on Dofollow.Tools",
+        "url": "https://dofollow.tools",
+        "target": "_blank"
+      },
+      {
+        "title": "Featured AI Agent on AgentHunter",
+        "url": "https://www.agenthunter.io?utm_source=badge&utm_medium=embed&utm_campaign=Astrocartography",
+        "target": "_blank"
+      },
+      {
+        "title": "Listed on ToolRain",
+        "url": "https://toolrain.com/item/astrocartography-calculator",
+        "target": "_blank"
+      },
+      {
+        "title": "Astrocartography on Launchtory",
+        "url": "https://launchtory.com/projects/astrocarto-org",
+        "target": "_blank"
+      }
+    ],
     "agreement": {
       "items": [
         {

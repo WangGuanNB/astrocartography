@@ -149,3 +149,26 @@ pre {
     animation: float-up 4s ease-in-out infinite;
   }
 }
+/* Footer partner badges: ~2-row viewport + vertical marquee */
+@keyframes footer-badge-scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.footer-badge-track {
+  animation: footer-badge-scroll var(--footer-badge-duration, 20s) linear infinite;
+}
+
+.footer-badge-marquee:hover .footer-badge-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-badge-track {
+    animation: none;
+  }
+}

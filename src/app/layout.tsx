@@ -52,22 +52,31 @@ export default async function RootLayout({
                 var anchors = document.querySelectorAll('a[href^="http"], a[target="_blank"]');
                 anchors.forEach(function(a){
                   var isExternal = a.host && a.host !== window.location.host;
-                  if(isExternal){
-                    var rel = (a.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
+                  if(!isExternal) return;
+
+                  var rel = (a.getAttribute('rel') || '').split(/\\s+/).filter(Boolean);
+                  ['noopener','noreferrer'].forEach(function(flag){
+                    if(!rel.includes(flag)) rel.push(flag);
+                  });
+
+                  // Footer partner badges: default keep nofollow; data-dofollow opts out.
+                  // Must run before host whitelist so badges are not stripped accidentally.
+                  if(a.hasAttribute('data-footer-badge')){
+                    if(a.hasAttribute('data-dofollow')){
+                      rel = rel.filter(function(flag){ return flag !== 'nofollow'; });
+                    }else if(!rel.includes('nofollow')){
+                      rel.push('nofollow');
+                    }
+                  }else{
                     var host = a.hostname || '';
-                    // always keep opener/noreferrer for security
-                    ['noopener','noreferrer'].forEach(function(flag){
-                      if(!rel.includes(flag)) rel.push(flag);
-                    });
-                    // skip adding nofollow for specific hosts
                     if(!allowNoFollowHosts.includes(host)){
                       if(!rel.includes('nofollow')) rel.push('nofollow');
                     }else{
-                      // ensure no "nofollow" remains if previously set
                       rel = rel.filter(function(flag){ return flag !== 'nofollow'; });
                     }
-                    a.setAttribute('rel', rel.join(' ').trim());
                   }
+
+                  a.setAttribute('rel', rel.join(' ').trim());
                 });
               }catch(e){}
             })();

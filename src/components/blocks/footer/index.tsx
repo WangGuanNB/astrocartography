@@ -1,8 +1,72 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { usePathname } from "next/navigation";
-import { Footer as FooterType } from "@/types/blocks/footer";
+import { Badge, Footer as FooterType } from "@/types/blocks/footer";
 import Icon from "@/components/icon";
+
+function badgeRel(badge: Badge): string {
+  return badge.dofollow
+    ? "noopener noreferrer"
+    : "noopener noreferrer nofollow";
+}
+
+function BadgeTextLink({
+  badge,
+  tabIndex,
+}: {
+  badge: Badge;
+  tabIndex?: number;
+}) {
+  return (
+    <a
+      href={badge.url}
+      target={badge.target || "_blank"}
+      rel={badgeRel(badge)}
+      title={badge.title}
+      data-footer-badge=""
+      {...(badge.dofollow ? { "data-dofollow": "" } : {})}
+      tabIndex={tabIndex}
+      className="block h-5 truncate text-sm leading-5 hover:text-primary"
+    >
+      {badge.title}
+    </a>
+  );
+}
+
+function BadgeImageLink({
+  badge,
+  tabIndex,
+}: {
+  badge: Badge;
+  tabIndex?: number;
+}) {
+  if (!badge.image?.src) {
+    return <BadgeTextLink badge={badge} tabIndex={tabIndex} />;
+  }
+
+  return (
+    <a
+      href={badge.url}
+      target={badge.target || "_blank"}
+      rel={badgeRel(badge)}
+      title={badge.title}
+      data-footer-badge=""
+      {...(badge.dofollow ? { "data-dofollow": "" } : {})}
+      tabIndex={tabIndex}
+      className="inline-block hover:opacity-90 transition-opacity"
+    >
+      <img
+        src={badge.image.src}
+        alt={badge.image.alt || badge.title}
+        width={Math.round((badge.image.width || 171) * 0.8)}
+        height={Math.round((badge.image.height || 54) * 0.8)}
+        loading="lazy"
+        className="h-auto max-h-10"
+      />
+    </a>
+  );
+}
 
 export default function Footer({
   footer,
@@ -12,18 +76,20 @@ export default function Footer({
   locale?: string;
 }) {
   const pathname = usePathname();
-  
-  // 检测是否是工具页面（chart页面）
-  const isToolPage = pathname?.includes('/chart');
-  
-  // 如果是工具页面，完全不渲染Footer
+
+  const isToolPage = pathname?.includes("/chart");
+
   if (isToolPage) {
     return null;
   }
-  
+
   if (footer.disabled) {
     return null;
   }
+
+  const badges = footer.badges?.filter((b) => b?.title && b?.url) ?? [];
+  const showBadgeMarquee = badges.length > 0;
+  const scrollSeconds = Math.max(14, badges.length * 2.5);
 
   return (
     <section id={footer.name} className="py-16">
@@ -86,80 +152,56 @@ export default function Footer({
             </div>
           </div>
           <div className="mt-8 flex flex-col justify-between gap-4 border-t pt-8 text-center text-sm font-medium text-muted-foreground lg:flex-row lg:items-center lg:text-left">
-            <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-center">
-              {footer.copyright && (
-                <p>
-                  {footer.copyright}
-                </p>
-              )}
-              
-              {/* 新的badges数组（英文版本使用） */}
-              {footer.badges && footer.badges.length > 0 && (
-                <div className="flex items-center gap-3 opacity-60 hover:opacity-80 transition-opacity">
-                  {footer.badges.map((badge, i) => (
-                    badge.type === "codemarket_widget" ? (
-                      <div
-                        key={i}
-                        data-codemarket-widget={badge.widget_id}
-                        data-theme-bg="#ffffff"
-                        data-theme-text="slate-600"
-                        data-layout="grid"
-                        data-show-branding="false"
-                      >
-                        <a href={badge.url} title={badge.title} target={badge.target || "_blank"}>
-                          <img
-                            src={badge.image.src}
-                            alt={badge.image.alt || badge.title}
-                            className="h-auto max-h-10"
-                          />
-                        </a>
-                      </div>
-                    ) : (
-                      <a
-                        key={i}
-                        href={badge.url}
-                        target={badge.target || "_blank"}
-                        rel="noopener noreferrer"
-                        title={badge.title}
-                        className="inline-block hover:opacity-90 transition-opacity"
-                      >
-                        <img
-                          src={badge.image.src}
-                          alt={badge.image.alt || badge.title}
-                          width={Math.round((badge.image.width || 171) * 0.8)} 
-                          height={Math.round((badge.image.height || 54) * 0.8)}
-                          className="h-auto max-h-10"
-                        />
-                      </a>
-                    )
-                  ))}
+            <div className="flex min-w-0 flex-col items-center gap-4 lg:flex-row lg:items-center">
+              {footer.copyright && <p className="shrink-0">{footer.copyright}</p>}
+
+              {showBadgeMarquee && (
+                <div
+                  className="footer-badge-marquee h-11 w-full max-w-xs shrink-0 overflow-hidden opacity-70 hover:opacity-100"
+                  style={
+                    {
+                      ["--footer-badge-duration"]: `${scrollSeconds}s`,
+                    } as CSSProperties
+                  }
+                >
+                  <div className="footer-badge-track">
+                    <ul className="space-y-1">
+                      {badges.map((badge, i) => (
+                        <li key={`badge-a-${i}`}>
+                          {badge.image?.src ? (
+                            <BadgeImageLink badge={badge} />
+                          ) : (
+                            <BadgeTextLink badge={badge} />
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                    {/* Duplicate for seamless loop; hidden from a11y / tab order */}
+                    <ul className="space-y-1" aria-hidden="true">
+                      {badges.map((badge, i) => (
+                        <li key={`badge-b-${i}`}>
+                          {badge.image?.src ? (
+                            <BadgeImageLink badge={badge} tabIndex={-1} />
+                          ) : (
+                            <BadgeTextLink badge={badge} tabIndex={-1} />
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               )}
-              
-              {/* 旧的单个badge字段（其他语言版本使用） */}
-              {!footer.badges && footer.badge && (
+
+              {/* Legacy single badge (image) when badges array absent */}
+              {!footer.badges && footer.badge?.url && (
                 <div className="flex items-center gap-3 opacity-60 hover:opacity-80 transition-opacity">
-                  <a
-                    href={footer.badge.url}
-                    target={footer.badge.target || "_blank"}
-                    rel="noopener noreferrer"
-                    title={footer.badge.title}
-                    className="inline-block hover:opacity-90 transition-opacity"
-                  >
-                    <img
-                      src={footer.badge.image.src}
-                      alt={footer.badge.image.alt || footer.badge.title}
-                      width={Math.round((footer.badge.image.width || 200) * 0.8)} 
-                      height={Math.round((footer.badge.image.height || 54) * 0.8)}
-                      className="h-auto max-h-10"
-                    />
-                  </a>
+                  <BadgeImageLink badge={footer.badge} />
                 </div>
               )}
             </div>
 
             {footer.agreement && (
-              <ul className="flex justify-center gap-4 lg:justify-start">
+              <ul className="flex shrink-0 justify-center gap-4 lg:justify-start">
                 {footer.agreement.items?.map((item, i) => (
                   <li key={i} className="hover:text-primary">
                     <a href={item.url} target={item.target}>

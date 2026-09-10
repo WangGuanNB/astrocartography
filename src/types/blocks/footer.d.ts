@@ -4,9 +4,14 @@ export interface Badge {
   title: string;
   url: string;
   target?: string;
-  image: Image;
+  /** Optional for backward compatibility; new partner badges are text-only. */
+  image?: Image;
   type?: "codemarket_widget" | "link";
   widget_id?: string;
+  /** When true, omit nofollow (noopener noreferrer only). Default: nofollow. */
+  dofollow?: boolean;
+  /** Legacy; ignored when deciding rel — use dofollow whitelist instead. */
+  nofollow?: boolean;
 }
 
 export interface Footer {
