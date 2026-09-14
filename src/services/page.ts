@@ -93,6 +93,10 @@ export async function getAstrologyHouses11thHousePage(locale: string): Promise<H
   return (await getPage("astrology-houses-11th-house", locale)) as HouseGuidePage;
 }
 
+export async function getAstrologyHouses6thHousePage(locale: string): Promise<HouseGuidePage> {
+  return (await getPage("astrology-houses-6th-house", locale)) as HouseGuidePage;
+}
+
 export async function getAstrocartographyWhereToLivePage(locale: string): Promise<CalculatorPage> {
   return (await getPage("astrocartography-where-to-live", locale)) as CalculatorPage;
 }

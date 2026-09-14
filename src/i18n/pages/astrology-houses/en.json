@@ -93,7 +93,7 @@
         { "title": "3rd House", "description": "Communication, siblings, and local environment.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Cadent" },
         { "title": "4th House", "description": "Home, family, roots, and emotional foundations.", "href": "#house-4", "icon": "RiHome4Line", "group": "Angular" },
         { "title": "5th House", "description": "Creativity, romance, joy, and children.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Succedent" },
-        { "title": "6th House", "description": "Daily work, health, routines, and service.", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "Cadent" },
+        { "title": "6th House", "description": "Daily work, health, routines, and service.", "href": "/astrology-houses/6th-house", "icon": "RiHeartPulseLine", "group": "Cadent" },
         { "title": "7th House", "description": "Partnerships, marriage, and one-on-one bonds.", "href": "#house-7", "icon": "RiHeartLine", "group": "Angular" },
         { "title": "8th House", "description": "Transformation, intimacy, and shared resources.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedent" },
         { "title": "9th House", "description": "Travel, philosophy, and higher learning.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadent" },

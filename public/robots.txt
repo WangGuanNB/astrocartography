@@ -50,6 +50,12 @@ Allow: /pt/astrology-houses/11th-house
 Allow: /es/astrology-houses/11th-house
 Allow: /it/astrology-houses/11th-house
 Allow: /de/astrology-houses/11th-house
+Allow: /astrology-houses/6th-house
+Allow: /zh/astrology-houses/6th-house
+Allow: /pt/astrology-houses/6th-house
+Allow: /es/astrology-houses/6th-house
+Allow: /it/astrology-houses/6th-house
+Allow: /de/astrology-houses/6th-house
 Allow: /sun-line-astrocartography
 Allow: /moon-line-astrocartography
 Allow: /venus-line-astrocartography

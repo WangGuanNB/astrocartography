@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "title": "Sesta Casa Astrologia — Lavoro, Salute e Routine",
+    "description": "Cosa significa la sesta casa in astrologia: lavoro quotidiano, salute, routine e servizio—non la carriera della 10ª. Trova i pianeti con un tema natale gratuito.",
+    "keywords": "sesta casa astrologia, significato sesta casa, 6ª casa astrologia, pianeti in sesta casa, sesta casa vuota, sesta casa vs decima casa, sesta casa salute, sesta casa lavoro",
+    "ogImage": "/imgs/astrology-houses-6th-house/astrology-houses-6th-house-og.webp"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "hub": "Case Astrologiche",
+    "current": "Sesta Casa"
+  },
+  "guideHero": {
+    "badge": "Guida alla Sesta Casa",
+    "badgeIcon": "RiHeartPulseLine",
+    "description": "La sesta casa descrive la texture dei giorni ordinari—lavoro quotidiano, abitudini di salute, routine, servizio pratico, colleghi e animali domestici—distinta dallo status di carriera pubblica (10ª) o dal gioco romantico (5ª).",
+    "overviewTitle": "A colpo d'occhio",
+    "overviewEyebrow": "Fatti della casa",
+    "overviewIcon": "RiHeartPulseLine",
+    "overviewItems": [
+      {
+        "label": "Governa",
+        "value": "Lavoro quotidiano, abitudini di salute, routine, servizio"
+      },
+      {
+        "label": "Classe",
+        "value": "Cadente (dopo la 5ª)"
+      },
+      {
+        "label": "Legame naturale",
+        "value": "Vergine (solo aiuto didattico)"
+      },
+      {
+        "label": "Ora di nascita?",
+        "value": "Sì — le case richiedono l'ora precisa"
+      }
+    ],
+    "actions": [
+      {
+        "title": "Hub Case Astrologiche",
+        "url": "/astrology-houses",
+        "icon": "RiLayoutGridLine",
+        "variant": "secondary"
+      }
+    ],
+    "links": [
+      {
+        "text": "Vedi tutte e dodici le case in una guida.",
+        "linkText": "Case Astrologiche",
+        "url": "/astrology-houses"
+      },
+      {
+        "text": "Controlla l'asse di carriera (Medium Coeli / 10ª).",
+        "linkText": "Calcolatore del Medium Coeli",
+        "url": "/midheaven-calculator"
+      }
+    ]
+  },
+  "toc": {
+    "label": "In questa pagina",
+    "items": [
+      {
+        "id": "meaning",
+        "label": "Cosa significa"
+      },
+      {
+        "id": "rules",
+        "label": "Cosa governa"
+      },
+      {
+        "id": "comparison",
+        "label": "6ª vs 10ª"
+      },
+      {
+        "id": "planets",
+        "label": "Pianeti in sesta"
+      },
+      {
+        "id": "howto",
+        "label": "Come trovare la tua"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      }
+    ]
+  },
+  "meaning": {
+    "id": "meaning",
+    "label": "Significato",
+    "title": "Cos'È la Sesta Casa in Astrologia?",
+    "paragraphs": [
+      "Nella sesta casa in astrologia, questo settore del tema natale descrive la manutenzione—i sistemi poco glamourosi che tengono in piedi una vita. Copre il lavoro a cui ti presenti di martedì, le abitudini che proteggono o erodono il corpo, i colleghi e i ruoli di servizio intorno a te, e i piccoli animali che dipendono dal tuo orario. Non riguarda principalmente fama, titolo o eredità pubblica. Quelle domande vivono più naturalmente nella decima casa.",
+      "Pensa alla 6ª come alla manutenzione del sentiero, mentre la 10ª è la vetta della montagna sulla cartolina. Due persone possono condividere lo stesso titolo di carriera e vivere comunque giorni di sesta casa completamente diversi: una prospera con liste rigorose e palestra mattutina; un'altra improvvisa, si esaurisce e poi ricostruisce un ritmo più gentile. Quando i principianti cercano “significato della sesta casa”, di solito vogliono nominare quella texture quotidiana—non diagnosticare malattie né prevedere una mansione.",
+      "La 6ª è una casa cadente. Segue la 5ª casa di creatività e gioco, e ti prepara alla 7ª casa di partnership uno a uno. Dopo che l'ego si espande nella 5ª, la 6ª chiede cosa sei disposto a ripetere: praticare, raffinare, servire e tenere in ordine lo strumento del corpo e del calendario. I testi didattici collegano spesso questa casa a Vergine e Mercurio come aiuto di apprendimento—organizzazione, analisi, mestiere—ma la cuspide personale della tua sesta casa dipende dall'ora di nascita e dal sistema di case.",
+      "Nei temi AstroCarto usiamo le Case a Segno Intero (Whole Sign), quindi un segno intero occupa la 6ª. Questo rende la lettura per principianti lineare: nota il segno sulla casa, eventuali pianeti al suo interno e la condizione del pianeta che governa quel segno. L'astrologia classica a volte chiamava questo un luogo difficile; la pratica moderna lo riformula come mestiere consapevole—dove la costanza sostiene il resto del tema o lo tassa in silenzio. L'astrologia qui è guida interpretativa su pattern e abitudini, non consiglio medico, legale o professionale.",
+      "Un ordine di lettura utile è semplice. Primo, nomina l'area di vita (lavoro quotidiano e manutenzione). Secondo, descrivi lo stile attraverso il segno della cuspide. Terzo, aggiungi eventuali pianeti nella casa come attori attivi. Quarto, controlla la condizione del signore della casa altrove nel tema. Solo allora confronta con la decima casa o il Medium Coeli se stai separando “come si sentono i miei giorni” da “ciò che il mondo chiama la mia carriera.” Quella sequenza mantiene la sesta casa astrologia pratica senza collassarla in auto-aiuto generico o narrazioni di salute basate sulla paura."
+    ],
+    "image": {
+      "src": "/imgs/astrology-houses-6th-house/astrology-houses-6th-house-meaning.webp",
+      "alt": "Diagramma di tema natale che evidenzia la sesta casa di lavoro quotidiano, abitudini di salute e routine"
+    }
+  },
+  "rules": {
+    "id": "rules",
+    "label": "Temi",
+    "title": "Cosa Governa la Sesta Casa (e Cosa Non Governa)",
+    "description": "Confini chiari aiutano a leggere la sesta casa in astrologia. La sesta casa è pratica e ripetitiva—ma non è ogni tema di lavoro o corpo nel tema.",
+    "doesLabel": "Governa",
+    "doesNotLabel": "Non governa",
+    "does": [
+      {
+        "title": "Lavoro quotidiano e il lavoro che fai davvero",
+        "description": "Compiti, carico di lavoro, ritmo del posto di lavoro, colleghi e ruoli di servizio. Se la domanda è come si sentono le tue ore—non come suona il titolo di LinkedIn—inizia qui."
+      },
+      {
+        "title": "Abitudini di salute e manutenzione del corpo",
+        "description": "Dieta, sonno, esercizio, igiene dello stress e le piccole pratiche che ti mantengono funzionale. La 6ª descrive pattern di manutenzione, non una diagnosi medica né un esito di salute garantito."
+      },
+      {
+        "title": "Routine, mestiere e servizio utile",
+        "description": "Orari, abilità raffinate dalla ripetizione ed essere di aiuto affidabile. Animali domestici e piccoli animali tradizionalmente stanno qui perché creano loop quotidiani di cura."
+      }
+    ],
+    "does_not": [
+      {
+        "title": "Carriera pubblica, reputazione e lascito",
+        "description": "Titoli, status e come il mondo marchia la tua vocazione appartengono principalmente alla decima casa e al Medium Coeli. Mischiare 6ª e 10ª è l'errore più comune dei principianti nella sesta casa astrologia."
+      },
+      {
+        "title": "Romance, flirting e gioia creativa",
+        "description": "Flirt, divertimento nelle uscite e autoespressione attraverso il piacere stanno più naturalmente nella 5ª casa—anche quando un crush nasce al lavoro."
+      },
+      {
+        "title": "Contratti matrimoniali e partner uno a uno",
+        "description": "Le partnership impegnate e gli accordi formali appartengono principalmente alla 7ª casa. Il lavoro di squadra sul posto di lavoro è 6ª; i voti matrimoniali no."
+      }
+    ]
+  },
+  "comparison": {
+    "id": "comparison",
+    "label": "Confronta",
+    "title": "Sesta Casa vs Decima Casa",
+    "description": "Entrambe le case possono parlare di “lavoro”, ma rispondono a domande diverse del tema. Usa questa tabella quando ti senti di successo sulla carta ed esausto nella pratica—o abile giorno per giorno senza un titolo pubblico.",
+    "columns": [
+      "Tema",
+      "Sesta casa",
+      "Decima casa"
+    ],
+    "rows": [
+      [
+        "Domanda centrale",
+        "Come funzionano davvero i miei giorni?",
+        "Per cosa sono conosciuto pubblicamente?"
+      ],
+      [
+        "Focus lavorativo",
+        "Compiti, mestiere, colleghi, servizio",
+        "Percorso di carriera, status, reputazione"
+      ],
+      [
+        "Angolo corpo / vitalità",
+        "Abitudini che mantengono il corpo",
+        "Immagine pubblica e direzione di vita"
+      ],
+      [
+        "Scala temporale",
+        "Loop giornalieri / settimanali",
+        "Vocazione a lungo arco e lascito"
+      ],
+      [
+        "Confusione comune",
+        "Chiamare il burnout solo “fallimento di carriera”",
+        "Chiamare ogni compito lavorativo un tema del Medium Coeli"
+      ]
+    ]
+  },
+  "planets": {
+    "id": "planets",
+    "label": "Guida alla lettura",
+    "title": "Pianeti nella Sesta Casa",
+    "intro": "I pianeti in sesta colorano come lavori, servi e mantieni i ritmi di salute. Leggili con segno e aspetti—una sola collocazione non racconta mai tutta la storia. Una 6ª vuota è trattata nelle FAQ sotto.",
+    "items": [
+      {
+        "planet": "Sun",
+        "title": "Sun in sesta",
+        "description": "L'identità si lega all'utilità e al mestiere competente. Puoi sentirti più “te stesso” risolvendo problemi pratici, migliorando sistemi o essendo qualcuno su cui si conta al lavoro—attenzione all'orgoglio che esiste solo quando sei indispensabile."
+      },
+      {
+        "planet": "Moon",
+        "title": "Moon in sesta",
+        "description": "La regolazione emotiva si lega alla routine. L'umore può seguire sonno, cibo e carico di lavoro; prendersi cura degli altri (o degli animali) può calmarti, ma la cura senza riposo diventa deplezione."
+      },
+      {
+        "planet": "Mercury",
+        "title": "Mercury in sesta",
+        "description": "Stile di lavoro analitico. Puoi prosperare con liste, troubleshooting, dettaglio tecnico e processi chiari. L'energia nervosa spesso si mostra nel corpo quando la casella di posta non si svuota mai."
+      },
+      {
+        "planet": "Venus",
+        "title": "Venus in sesta",
+        "description": "Ricerca di armonia nel lavoro quotidiano. Contano ambienti piacevoli, routine estetiche e colleghi cooperativi. Puoi abbellire l'ordinario—o evitare il conflitto finché i sistemi non si rompono in silenzio."
+      },
+      {
+        "planet": "Mars",
+        "title": "Mars in sesta",
+        "description": "Spinta versata in compiti e allenamento. Etica del lavoro forte e disciplina atletica sono temi comuni; l'ombra è il sovraffaticamento, l'irritabilità con l'inefficienza o trattare il riposo come un fallimento."
+      },
+      {
+        "planet": "Jupiter",
+        "title": "Jupiter in sesta",
+        "description": "Crescita attraverso il servizio e lo sviluppo di abilità. Le opportunità possono arrivare via colleghi, apprendistati o archi di miglioramento della salute. Attenzione al sovraimpegno mascherato da generosità."
+      },
+      {
+        "planet": "Saturn",
+        "title": "Saturn in sesta",
+        "description": "Standard seri intorno a lavoro e salute. Responsabilità, dovere e lunghi cicli di formazione possono definire la storia; ritardi o temi cronici di manutenzione chiedono un ritmo sostenibile, non autopunizione."
+      },
+      {
+        "planet": "Uranus",
+        "title": "Uranus in sesta",
+        "description": "Orari irregolari e metodi di lavoro non convenzionali. Puoi aver bisogno di autonomia, strumenti tecnologici o reset improvvisi di routine. La stabilità viene da sistemi flessibili, non da orologi rigidi."
+      }
+    ]
+  },
+  "howto": {
+    "id": "howto",
+    "label": "Passi pratici",
+    "title": "Come Trovare la Tua Sesta Casa in un Tema Natale",
+    "intro": "Non ti serve ogni sfumatura classica per iniziare. Usa questi passi con un tema gratuito—poi torna ai significati sopra.",
+    "steps": [
+      {
+        "title": "Genera il tuo tema natale con ora precisa",
+        "description": "Inserisci data, ora esatta e luogo di nascita. Le cuspidi delle case—inclusa la 6ª—dipendono dall'ora. Senza un'ora affidabile, tratta le collocazioni per casa come provvisorie.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Individua la 6ª sulla ruota e nella tabella",
+        "description": "Sulla ruota, la 6ª sta dopo la 5ª in senso antiorario, prima del Discendente/7ª. Nella tabella delle collocazioni, cerca i pianeti elencati nella casa 6.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Nota il segno sulla 6ª e il suo reggente",
+        "description": "In Whole Sign, un segno intero occupa la 6ª. Lo stile di quel segno colora lavoro e abitudini di salute. Trova il pianeta che governa quel segno altrove—il signore della casa conta sia per 6ª vuota sia per 6ª occupata.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Separa il lavoro quotidiano dalla carriera pubblica",
+        "description": "Confronta la storia della tua sesta casa con la decima casa e il Medium Coeli. Se vuoi il calcolatore dell'asse di carriera dopo, apri lo strumento del Medium Coeli quando hai compreso lo strato quotidiano.",
+        "icon": "RiBriefcaseLine"
+      }
+    ],
+    "primary_cta": {
+      "title": "Apri Generatore di Tema Natale",
+      "url": "/tools/birth-chart-generator",
+      "icon": "RiPieChartLine"
+    }
+  },
+  "relatedHouses": {
+    "id": "related",
+    "title": "Continua con l'Hub delle Case",
+    "description": "La 6ª è una di dodici aree di vita. Torna all'hub per la mappa completa, confronta con la guida dell'undicesima casa sulla comunità, o apri un calcolatore quando sei pronto a controllare le collocazioni.",
+    "items": [
+      {
+        "title": "Hub Case Astrologiche",
+        "description": "Panoramica delle 12 case, gruppi angolari / succedenti / cadenti, e come leggerle insieme.",
+        "href": "/astrology-houses",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "Undicesima Casa Astrologia",
+        "description": "Amici, comunità, reti e speranze a lungo termine—un'altra guida approfondita di questa serie.",
+        "href": "/astrology-houses/11th-house",
+        "icon": "RiGroupLine"
+      },
+      {
+        "title": "Generatore di Tema Natale",
+        "description": "Ruota e tabella delle collocazioni gratuite per vedere quali pianeti stanno nella tua sesta casa.",
+        "href": "/tools/birth-chart-generator",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Calcolatore del Medium Coeli",
+        "description": "Chiarisci l'asse di carriera della decima casa così non confondi il labor quotidiano con la vocazione pubblica.",
+        "href": "/midheaven-calculator",
+        "icon": "RiBriefcaseLine"
+      },
+      {
+        "title": "Guida al Tema Natale",
+        "description": "Come il tema natale completo integra case, segni e pianeti in un percorso di lettura.",
+        "href": "/chart/natal-chart",
+        "icon": "RiBookOpenLine"
+      },
+      {
+        "title": "Calcolatore del Segno Ascendente",
+        "description": "Conferma l'Ascendente che avvia la ruota delle case prima di fidarti dei numeri di casa.",
+        "href": "/rising-sign-calculator",
+        "icon": "RiCompass3Line"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Sesta Casa Astrologia — Domande Frequenti",
+    "description": "Risposte brevi a ricerche comuni sulla sesta casa in un tema natale.",
+    "items": [
+      {
+        "title": "Cos'è la sesta casa in astrologia?",
+        "description": "La sesta casa è il settore del tema natale associato a lavoro quotidiano, abitudini di salute, routine, servizio pratico, colleghi e animali domestici. Descrive come mantieni corpo e agenda—non principalmente il tuo titolo di carriera pubblica."
+      },
+      {
+        "title": "Qual è la differenza tra sesta casa e decima casa?",
+        "description": "La decima casa governa reputazione di carriera, status e direzione di vita (spesso legata al Medium Coeli). La sesta casa governa il labor quotidiano, il mestiere e le abitudini di manutenzione che sostengono—o stressano—quel percorso pubblico. Puoi avere una 10ª forte e una 6ª in difficoltà, o il contrario."
+      },
+      {
+        "title": "Cosa significa una sesta casa vuota?",
+        "description": "Una sesta casa vuota significa che nessun pianeta si trova all'interno di quella casa nel tuo tema natale. I temi di lavoro e salute si leggono ancora attraverso il segno sulla cuspide della 6ª e il suo pianeta reggente. Vuota non significa pigro, malato o disoccupato."
+      },
+      {
+        "title": "Serve l'ora di nascita per la sesta casa astrologia?",
+        "description": "Sì, per collocazioni per casa affidabili. Senza ora di nascita, l'Ascendente e la ruota delle case sono incerti, quindi la sesta casa può spostarsi. I segni planetari restano utilizzabili; le assegnazioni per casa richiedono un'ora affidabile."
+      },
+      {
+        "title": "La sesta casa diagnostica problemi di salute?",
+        "description": "No. Nella sesta casa astrologia, il linguaggio della salute è simbolico—abitudini, pattern di stress e temi di manutenzione. Non è una diagnosi medica, un piano di trattamento né un sostituto delle cure sanitarie professionali."
+      },
+      {
+        "title": "Gli animali domestici sono davvero un tema della sesta casa?",
+        "description": "Nella pratica occidentale tradizionale e moderna, i piccoli animali e gli animali domestici appaiono spesso nella 6ª perché creano routine quotidiane di cura e servizio reciproco. Leggili insieme al resto del tema; una sola casa non racconta mai tutta la storia dell'animale."
+      },
+      {
+        "title": "Qual è il segno naturale della sesta casa?",
+        "description": "I testi didattici collegano spesso la sesta casa a Vergine. Quella è un'associazione tradizionale per l'apprendimento, non un'affermazione che Vergine sia sempre sulla tua cuspide personale della 6ª. La tua cuspide dipende dall'ora di nascita e dal sistema di case—AstroCarto usa le Case a Segno Intero."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Vedi la Tua Sesta Casa nel Tema Natale",
+    "description": "Genera una ruota di tema natale e una tabella delle collocazioni gratuite per vedere quali pianeti cadono nella tua sesta casa—poi confronta con Medium Coeli/10ª se stai separando lavoro quotidiano da carriera pubblica, o torna all'hub Case Astrologiche per le altre undici aree di vita.",
+    "buttons": [
+      {
+        "title": "Generatore di Tema Natale",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Hub Case Astrologiche",
+        "icon": "RiLayoutGridLine",
+        "url": "/astrology-houses",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

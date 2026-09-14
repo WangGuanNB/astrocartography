@@ -93,7 +93,7 @@
         { "title": "3.ª Casa", "description": "Comunicación, hermanos y entorno cercano.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Cadente" },
         { "title": "4.ª Casa", "description": "Hogar, familia, raíces y bases emocionales.", "href": "#house-4", "icon": "RiHome4Line", "group": "Angular" },
         { "title": "5.ª Casa", "description": "Creatividad, romance, alegría e hijos.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Sucedente" },
-        { "title": "6.ª Casa", "description": "Trabajo diario, salud, rutinas y servicio.", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "Cadente" },
+        { "title": "6.ª Casa", "description": "Trabajo diario, salud, rutinas y servicio.", "href": "/astrology-houses/6th-house", "icon": "RiHeartPulseLine", "group": "Cadente" },
         { "title": "7.ª Casa", "description": "Parejas, matrimonio y vínculos uno a uno.", "href": "#house-7", "icon": "RiHeartLine", "group": "Angular" },
         { "title": "8.ª Casa", "description": "Transformación, intimidad y recursos compartidos.", "href": "#house-8", "icon": "RiShieldLine", "group": "Sucedente" },
         { "title": "9.ª Casa", "description": "Viajes, filosofía y estudios superiores.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadente" },

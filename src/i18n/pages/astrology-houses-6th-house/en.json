@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "title": "6th House Astrology — Work, Health & Daily Routines",
+    "description": "What the 6th house means in astrology: daily work, health habits, routines & service—not 10th-house career. Find your 6th-house placements with a free birth chart.",
+    "keywords": "6th house astrology, 6th house meaning, sixth house astrology, planets in 6th house, empty 6th house, 6th house vs 10th house, 6th house health, 6th house work",
+    "ogImage": "/imgs/astrology-houses-6th-house/astrology-houses-6th-house-og.webp"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "hub": "Astrology Houses",
+    "current": "6th House"
+  },
+  "guideHero": {
+    "badge": "6th House Guide",
+    "badgeIcon": "RiHeartPulseLine",
+    "description": "The 6th house describes the texture of ordinary days—daily work, health habits, routines, practical service, coworkers, and pets—distinct from public career status (10th) or romantic play (5th).",
+    "overviewTitle": "At a glance",
+    "overviewEyebrow": "House facts",
+    "overviewIcon": "RiHeartPulseLine",
+    "overviewItems": [
+      {
+        "label": "Rules",
+        "value": "Daily work, health habits, routines, service"
+      },
+      {
+        "label": "Class",
+        "value": "Cadent (after the 5th)"
+      },
+      {
+        "label": "Natural link",
+        "value": "Virgo (teaching aid only)"
+      },
+      {
+        "label": "Birth time?",
+        "value": "Yes — houses need accurate time"
+      }
+    ],
+    "actions": [
+      {
+        "title": "Astrology Houses Hub",
+        "url": "/astrology-houses",
+        "icon": "RiLayoutGridLine",
+        "variant": "secondary"
+      }
+    ],
+    "links": [
+      {
+        "text": "See all twelve houses in one guide.",
+        "linkText": "Astrology Houses",
+        "url": "/astrology-houses"
+      },
+      {
+        "text": "Check the career axis (Midheaven / 10th).",
+        "linkText": "Midheaven Calculator",
+        "url": "/midheaven-calculator"
+      }
+    ]
+  },
+  "toc": {
+    "label": "On this page",
+    "items": [
+      {
+        "id": "meaning",
+        "label": "What it means"
+      },
+      {
+        "id": "rules",
+        "label": "What it rules"
+      },
+      {
+        "id": "comparison",
+        "label": "6th vs 10th"
+      },
+      {
+        "id": "planets",
+        "label": "Planets in the 6th"
+      },
+      {
+        "id": "howto",
+        "label": "How to find yours"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ"
+      }
+    ]
+  },
+  "meaning": {
+    "id": "meaning",
+    "label": "Meaning",
+    "title": "What Is the 6th House in Astrology?",
+    "paragraphs": [
+      "In 6th house astrology, this sector of the birth chart describes maintenance—the unglamorous systems that keep a life running. It covers the work you show up for on a Tuesday, the habits that protect or erode your body, the coworkers and service roles around you, and the small animals that depend on your schedule. It is not primarily about fame, title, or public legacy. Those questions live more naturally in the 10th house.",
+      "Think of the 6th as trail maintenance while the 10th is the mountain summit on the postcard. Two people can share a career headline and still live completely different sixth-house days: one thrives on tight checklists and early gym sessions; another improvises, burns out, then rebuilds a gentler rhythm. When beginners search “6th house meaning,” they are usually trying to name that daily texture—not to diagnose illness or predict a job title.",
+      "The 6th is a cadent house. It follows the 5th house of creativity and play, and it prepares you for the 7th house of one-to-one partnership. After the ego expands in the 5th, the 6th asks what you are willing to repeat: practice, refine, serve, and keep the instrument of your body and calendar in working order. Teaching texts often link this house with Virgo and Mercury as a learning aid—organization, analysis, craft—but your personal 6th-house cusp depends on birth time and house system.",
+      "On AstroCarto charts we use Whole Sign Houses, so one full sign occupies the 6th. That keeps beginner reading straightforward: note the sign on the house, any planets inside it, and the condition of the planet that rules that sign. Classical astrology sometimes called this a difficult place; modern practice reframes it as conscious craft—where consistency either supports the rest of the chart or quietly taxes it. Astrology here is interpretive guidance about patterns and habits, not medical, legal, or occupational advice.",
+      "A useful reading order is simple. First, name the life area (daily work and maintenance). Second, describe the style through the cusp sign. Third, add any planets in the house as active actors. Fourth, check the house ruler’s condition elsewhere in the chart. Only then compare with the 10th house or Midheaven if you are sorting “how my days feel” from “what the world calls my career.” That sequence keeps 6th house astrology practical without collapsing it into generic self-help or fear-based health storytelling."
+    ],
+    "image": {
+      "src": "/imgs/astrology-houses-6th-house/astrology-houses-6th-house-meaning.webp",
+      "alt": "Birth chart diagram highlighting the 6th house of daily work, health habits, and routines"
+    }
+  },
+  "rules": {
+    "id": "rules",
+    "label": "Themes",
+    "title": "What the 6th House Rules (and What It Does Not)",
+    "description": "Clear boundaries help when reading 6th house astrology. The sixth house is practical and repetitive—but it is not every work or body theme in the chart.",
+    "doesLabel": "Rules",
+    "doesNotLabel": "Does not rule",
+    "does": [
+      {
+        "title": "Daily work and the job you actually do",
+        "description": "Tasks, workload, workplace rhythm, coworkers, and service roles. If the question is how your hours feel—not how your LinkedIn headline reads—start here."
+      },
+      {
+        "title": "Health habits and body maintenance",
+        "description": "Diet, sleep, exercise, stress hygiene, and the small practices that keep you functional. The 6th describes maintenance patterns, not a medical diagnosis or a guaranteed health outcome."
+      },
+      {
+        "title": "Routines, craft, and useful service",
+        "description": "Schedules, skills refined through repetition, and being reliably helpful. Pets and small animals traditionally sit here because they create daily care loops."
+      }
+    ],
+    "does_not": [
+      {
+        "title": "Public career, reputation, and legacy",
+        "description": "Titles, status, and how the world brands your vocation belong primarily to the 10th house and Midheaven. Mixing 6th and 10th is the most common beginner error in 6th house astrology."
+      },
+      {
+        "title": "Romance, dating play, and creative joy",
+        "description": "Flirtation, dating fun, and self-expression through pleasure sit more naturally in the 5th house—even when a coworker crush appears at work."
+      },
+      {
+        "title": "Marriage contracts and one-to-one partners",
+        "description": "Committed partnerships and formal agreements belong primarily to the 7th house. Workplace teamwork is 6th; marriage vows are not."
+      }
+    ]
+  },
+  "comparison": {
+    "id": "comparison",
+    "label": "Compare",
+    "title": "6th House vs 10th House",
+    "description": "Both houses can talk about “work,” but they answer different chart questions. Use this table when you feel successful on paper and exhausted in practice—or skilled day-to-day without a public title.",
+    "columns": [
+      "Theme",
+      "6th house",
+      "10th house"
+    ],
+    "rows": [
+      [
+        "Core question",
+        "How do my days actually run?",
+        "What am I known for publicly?"
+      ],
+      [
+        "Work focus",
+        "Tasks, craft, coworkers, service",
+        "Career path, status, reputation"
+      ],
+      [
+        "Body / vitality angle",
+        "Habits that maintain the body",
+        "Public image and life direction"
+      ],
+      [
+        "Time scale",
+        "Daily / weekly loops",
+        "Long-arc vocation and legacy"
+      ],
+      [
+        "Common mix-up",
+        "Calling burnout a “career failure” only",
+        "Calling every job chore a Midheaven issue"
+      ]
+    ]
+  },
+  "planets": {
+    "id": "planets",
+    "label": "Reading guide",
+    "title": "Planets in the 6th House",
+    "intro": "Planets in the 6th color how you work, serve, and maintain health rhythms. Read them with sign and aspects—one placement never tells the whole story. An empty 6th is covered in the FAQ below.",
+    "items": [
+      {
+        "planet": "Sun",
+        "title": "Sun in the 6th",
+        "description": "Identity ties to usefulness and competent craft. You may feel most “yourself” when solving practical problems, improving systems, or being relied on at work—watch pride that only exists when you are indispensable."
+      },
+      {
+        "planet": "Moon",
+        "title": "Moon in the 6th",
+        "description": "Emotional regulation links to routine. Moods may track sleep, food, and workload; caring for others (or pets) can soothe you, but caretaking without rest becomes depletion."
+      },
+      {
+        "planet": "Mercury",
+        "title": "Mercury in the 6th",
+        "description": "Analytical work style. You may thrive on lists, troubleshooting, technical detail, and clear process. Nervous energy often shows up in the body when the inbox never empties."
+      },
+      {
+        "planet": "Venus",
+        "title": "Venus in the 6th",
+        "description": "Harmony-seeking in daily labor. Pleasant workplaces, aesthetic routines, and cooperative teammates matter. You may beautify the ordinary—or avoid conflict until systems quietly break."
+      },
+      {
+        "planet": "Mars",
+        "title": "Mars in the 6th",
+        "description": "Drive poured into tasks and training. Strong work ethic and athletic discipline are common themes; the shadow is overexertion, irritability with inefficiency, or treating rest like failure."
+      },
+      {
+        "planet": "Jupiter",
+        "title": "Jupiter in the 6th",
+        "description": "Growth through service and skill-building. Opportunities may arrive via coworkers, apprenticeships, or health-improvement arcs. Watch overcommitment dressed as generosity."
+      },
+      {
+        "planet": "Saturn",
+        "title": "Saturn in the 6th",
+        "description": "Serious standards around work and health. Responsibility, duty, and long training cycles can define the story; delays or chronic maintenance themes ask for sustainable pacing, not self-punishment."
+      },
+      {
+        "planet": "Uranus",
+        "title": "Uranus in the 6th",
+        "description": "Irregular schedules and unconventional work methods. You may need autonomy, tech-forward tools, or sudden routine resets. Stability comes from flexible systems, not rigid clocks."
+      }
+    ]
+  },
+  "howto": {
+    "id": "howto",
+    "label": "Practical steps",
+    "title": "How to Find Your 6th House in a Birth Chart",
+    "intro": "You do not need every classical nuance to start. Use these steps with a free chart—then return to the meanings above.",
+    "steps": [
+      {
+        "title": "Generate your birth chart with accurate time",
+        "description": "Enter birth date, exact time, and place. House cusps—including the 6th—depend on time. Without a reliable time, treat house placements as provisional.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Locate the 6th on the wheel and table",
+        "description": "On the wheel, the 6th sits after the 5th as you move counter-clockwise, before the Descendant/7th. In the placements table, scan planets listed in house 6.",
+        "icon": "RiSearchLine"
+      },
+      {
+        "title": "Note the sign on the 6th and its ruler",
+        "description": "In Whole Sign, one full sign occupies the 6th. That sign’s style colors work and health habits. Find the planet that rules that sign elsewhere—the house lord matters for empty and busy 6th houses alike.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Separate daily work from public career",
+        "description": "Compare your 6th-house story with the 10th house and Midheaven. If you want the career-axis calculator next, open the Midheaven tool after you understand the daily layer.",
+        "icon": "RiBriefcaseLine"
+      }
+    ],
+    "primary_cta": {
+      "title": "Open Birth Chart Generator",
+      "url": "/tools/birth-chart-generator",
+      "icon": "RiPieChartLine"
+    }
+  },
+  "relatedHouses": {
+    "id": "related",
+    "title": "Continue with the Houses Hub",
+    "description": "The 6th is one of twelve life areas. Return to the hub for the full map, compare with the 11th-house community guide, or open a calculator when you are ready to check placements.",
+    "items": [
+      {
+        "title": "Astrology Houses Hub",
+        "description": "Overview of all 12 houses, angular / succedent / cadent groups, and how to read them together.",
+        "href": "/astrology-houses",
+        "icon": "RiLayoutGridLine"
+      },
+      {
+        "title": "11th House Astrology",
+        "description": "Friends, community, networks, and long-term hopes—another deep house guide in this series.",
+        "href": "/astrology-houses/11th-house",
+        "icon": "RiGroupLine"
+      },
+      {
+        "title": "Birth Chart Generator",
+        "description": "Free wheel and placements table to see which planets sit in your 6th house.",
+        "href": "/tools/birth-chart-generator",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Midheaven Calculator",
+        "description": "Clarify the 10th-house career axis so you do not confuse daily labor with public vocation.",
+        "href": "/midheaven-calculator",
+        "icon": "RiBriefcaseLine"
+      },
+      {
+        "title": "Natal Chart Guide",
+        "description": "How the full birth chart fits houses, signs, and planets into one reading path.",
+        "href": "/chart/natal-chart",
+        "icon": "RiBookOpenLine"
+      },
+      {
+        "title": "Rising Sign Calculator",
+        "description": "Confirm the Ascendant that starts the house wheel before you trust house numbers.",
+        "href": "/rising-sign-calculator",
+        "icon": "RiCompass3Line"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "6th House Astrology — Frequently Asked Questions",
+    "description": "Short answers to common searches about the sixth house in a birth chart.",
+    "items": [
+      {
+        "title": "What is the 6th house in astrology?",
+        "description": "The 6th house is the birth-chart sector associated with daily work, health habits, routines, practical service, coworkers, and pets. It describes how you maintain body and schedule—not primarily your public career title."
+      },
+      {
+        "title": "What is the difference between the 6th house and the 10th house?",
+        "description": "The 10th house rules career reputation, status, and life direction (often linked with the Midheaven). The 6th house rules the day-to-day labor, craft, and maintenance habits that support—or strain—that public path. You can have a strong 10th and a struggling 6th, or the reverse."
+      },
+      {
+        "title": "What does an empty 6th house mean?",
+        "description": "An empty 6th house means no planets sit inside that house in your natal chart. Work and health themes are still read through the sign on the 6th cusp and its ruling planet. Empty does not mean lazy, unhealthy, or unemployed."
+      },
+      {
+        "title": "Do I need my birth time for 6th house astrology?",
+        "description": "Yes, for reliable house placements. Without birth time, the Ascendant and house wheel are uncertain, so the 6th house can shift. Planet signs remain usable; house assignments need a trustworthy time."
+      },
+      {
+        "title": "Does the 6th house diagnose health problems?",
+        "description": "No. In 6th house astrology, health language is symbolic—habits, stress patterns, and maintenance themes. It is not a medical diagnosis, treatment plan, or substitute for professional healthcare."
+      },
+      {
+        "title": "Are pets really a 6th house theme?",
+        "description": "In traditional and modern Western practice, small animals and pets often appear in the 6th because they create daily care routines and mutual service. Read them alongside the rest of the chart; one house never tells the whole pet story."
+      },
+      {
+        "title": "What is the natural sign of the 6th house?",
+        "description": "Teaching texts often link the 6th house with Virgo. That is a traditional association for learning, not a claim that Virgo is always on your personal 6th cusp. Your cusp depends on birth time and house system—AstroCarto uses Whole Sign Houses."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "See Your 6th House in Your Birth Chart",
+    "description": "Generate a free birth chart wheel and placements table to see which planets fall in your 6th house—then compare with the Midheaven/10th if you are sorting daily work from public career, or return to the Astrology Houses hub for the other eleven life areas.",
+    "buttons": [
+      {
+        "title": "Birth Chart Generator",
+        "icon": "RiPieChartLine",
+        "url": "/tools/birth-chart-generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Astrology Houses Hub",
+        "icon": "RiLayoutGridLine",
+        "url": "/astrology-houses",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  }
+}

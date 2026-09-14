@@ -93,7 +93,7 @@
         { "title": "3ª Casa", "description": "Comunicação, irmãos e ambiente local.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Cadent" },
         { "title": "4ª Casa", "description": "Lar, família, raízes e bases emocionais.", "href": "#house-4", "icon": "RiHome4Line", "group": "Angular" },
         { "title": "5ª Casa", "description": "Criatividade, romance, alegria e filhos.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Succedent" },
-        { "title": "6ª Casa", "description": "Trabalho diário, saúde, rotinas e serviço.", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "Cadent" },
+        { "title": "6ª Casa", "description": "Trabalho diário, saúde, rotinas e serviço.", "href": "/astrology-houses/6th-house", "icon": "RiHeartPulseLine", "group": "Cadent" },
         { "title": "7ª Casa", "description": "Parcerias, casamento e vínculos um a um.", "href": "#house-7", "icon": "RiHeartLine", "group": "Angular" },
         { "title": "8ª Casa", "description": "Transformação, intimidade e recursos compartilhados.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedent" },
         { "title": "9ª Casa", "description": "Viagens, filosofia e ensino superior.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadent" },

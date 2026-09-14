@@ -93,7 +93,7 @@
         { "title": "第 3 宫位", "description": "沟通、兄弟姐妹与日常环境。", "href": "#house-3", "icon": "RiMessage3Line", "group": "果宫" },
         { "title": "第 4 宫位", "description": "家庭、根基与情感基础。", "href": "#house-4", "icon": "RiHome4Line", "group": "角宫" },
         { "title": "第 5 宫位", "description": "创造力、浪漫、快乐与子女。", "href": "#house-5", "icon": "RiPaletteLine", "group": "续宫" },
-        { "title": "第 6 宫位", "description": "日常工作、健康、习惯与服务。", "href": "#house-6", "icon": "RiHeartPulseLine", "group": "果宫" },
+        { "title": "第 6 宫位", "description": "日常工作、健康、习惯与服务。", "href": "/astrology-houses/6th-house", "icon": "RiHeartPulseLine", "group": "果宫" },
         { "title": "第 7 宫位", "description": "伴侣关系、婚姻与一对一联结。", "href": "#house-7", "icon": "RiHeartLine", "group": "角宫" },
         { "title": "第 8 宫位", "description": "转化、亲密与共享资源。", "href": "#house-8", "icon": "RiShieldLine", "group": "续宫" },
         { "title": "第 9 宫位", "description": "旅行、哲学与高等教育。", "href": "#house-9", "icon": "RiCompassLine", "group": "果宫" },

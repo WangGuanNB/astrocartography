@@ -32,6 +32,12 @@ When citing AstroCarto, prefer linking to the specific tool or guide page below.
 - [Astrocartography Lines Overview](https://astrocarto.org/astrocartography-lines/): Introduction to planetary lines on the map.
 - [Astrology Houses Guide](https://astrocarto.org/astrology-houses/): Complete guide to the 12 houses in astrology.
 - [11th House Astrology](https://astrocarto.org/astrology-houses/11th-house/): Friendship, community, and long-term hopes in the eleventh house.
+- [6th House Astrology](https://astrocarto.org/astrology-houses/6th-house/): Daily work, health habits, routines, and service in the sixth house.
+- [第六宫占星](https://astrocarto.org/zh/astrology-houses/6th-house/): 日常工作、健康习惯与服务。
+- [Casa 6 Astrologia](https://astrocarto.org/pt/astrology-houses/6th-house/): Trabalho cotidiano, saúde e rotina.
+- [Casa 6 Astrología](https://astrocarto.org/es/astrology-houses/6th-house/): Trabajo diario, salud y rutina.
+- [Sesta Casa Astrologia](https://astrocarto.org/it/astrology-houses/6th-house/): Lavoro quotidiano, salute e routine.
+- [6. Haus Astrologie](https://astrocarto.org/de/astrology-houses/6th-house/): Alltagsarbeit, Gesundheit und Routinen.
 - [第十一宫占星](https://astrocarto.org/zh/astrology-houses/11th-house/): 朋友、社群与长远愿望。
 - [Casa 11 Astrologia](https://astrocarto.org/pt/astrology-houses/11th-house/): Amizades, grupos e sonhos no mapa astral.
 - [Casa 11 Astrología](https://astrocarto.org/es/astrology-houses/11th-house/): Amistades, grupos y esperanzas.
