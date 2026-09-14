@@ -6,6 +6,9 @@ import { getTranslations } from "next-intl/server";
 import { getUserCredits } from "@/services/credit";
 import { getUserUuid } from "@/services/user";
 import moment from "moment";
+import ManageSubscriptionButton from "@/components/subscription/ManageSubscriptionButton";
+
+export const dynamic = "force-dynamic";
 
 export default async function () {
   const t = await getTranslations();
@@ -21,10 +24,19 @@ export default async function () {
   const userCredits = await getUserCredits(user_uuid);
 
   const subscriptionTip = userCredits.subscription?.is_active
-    ? t("my_credits.subscription_active", {
-        plan: userCredits.subscription.product_name || "Plus",
-        renewal: userCredits.subscription.renewal_label || "—",
-      })
+    ? userCredits.subscription.status === "past_due"
+      ? t("my_credits.subscription_past_due", {
+          plan: userCredits.subscription.product_name || "Plus",
+        })
+      : userCredits.subscription.cancel_at_period_end
+        ? t("my_credits.subscription_canceling", {
+            plan: userCredits.subscription.product_name || "Plus",
+            renewal: userCredits.subscription.renewal_label || "—",
+          })
+        : t("my_credits.subscription_active", {
+            plan: userCredits.subscription.product_name || "Plus",
+            renewal: userCredits.subscription.renewal_label || "—",
+          })
     : null;
 
   const table: TableSlotType = {
@@ -75,5 +87,12 @@ export default async function () {
     empty_message: t("my_credits.no_credits"),
   };
 
-  return <TableSlot {...table} />;
+  return (
+    <>
+      {userCredits.subscription?.provider === "stripe" ? (
+        <ManageSubscriptionButton label={t("my_credits.manage_subscription")} />
+      ) : null}
+      <TableSlot {...table} />
+    </>
+  );
 }

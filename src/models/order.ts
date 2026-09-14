@@ -139,6 +139,54 @@ export async function updateOrderSubscription(
   return order;
 }
 
+/** Keep legacy entitlement fields in sync without overwriting payment history. */
+export async function syncOrderSubscriptionState({
+  order_no,
+  sub_id,
+  interval_count,
+  cycle_anchor,
+  period_start,
+  period_end,
+  minimum_sub_times,
+}: {
+  order_no: string;
+  sub_id: string;
+  interval_count: number;
+  cycle_anchor: number;
+  period_start: number;
+  period_end: number;
+  minimum_sub_times?: number;
+}) {
+  const current = await findOrderByOrderNo(order_no);
+  if (!current) throw new Error("invalid order");
+
+  const [order] = await db()
+    .update(orders)
+    .set({
+      sub_id,
+      sub_interval_count: interval_count,
+      sub_cycle_anchor: cycle_anchor,
+      sub_period_start: period_start,
+      sub_period_end: period_end,
+      sub_times: Math.max(current.sub_times || 0, minimum_sub_times || 0),
+    })
+    .where(eq(orders.order_no, order_no))
+    .returning();
+  return order;
+}
+
+export async function incrementOrderSubscriptionTimes(order_no: string) {
+  const current = await findOrderByOrderNo(order_no);
+  if (!current) throw new Error("invalid order");
+
+  const [order] = await db()
+    .update(orders)
+    .set({ sub_times: (current.sub_times || 0) + 1 })
+    .where(eq(orders.order_no, order_no))
+    .returning();
+  return order;
+}
+
 export async function findOrderBySubId(
   sub_id: string
 ): Promise<typeof orders.$inferSelect | undefined> {

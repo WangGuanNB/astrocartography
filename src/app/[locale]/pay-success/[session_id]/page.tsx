@@ -1,6 +1,6 @@
-import { handleOrderSession } from "@/services/order";
 import { redirect } from "@/i18n/navigation";
 import { getStripeClient } from "@/lib/stripe";
+import { handleStripeCheckoutSession } from "@/services/stripe-subscription";
 
 export default async function ({
   params,
@@ -18,7 +18,7 @@ export default async function ({
     const stripe = getStripeClient();
     const session = await stripe.checkout.sessions.retrieve(session_id);
 
-    await handleOrderSession(session);
+    await handleStripeCheckoutSession(session);
   } catch (e) {
     redirect({
       href: process.env.NEXT_PUBLIC_PAY_FAIL_URL || "/",

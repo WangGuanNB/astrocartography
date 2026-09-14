@@ -76,9 +76,16 @@ export function usePayment() {
     const isSubscriptionItem =
       item.interval === "month" || item.interval === "year";
 
-    if (isSubscriptionItem) {
+    if (
+      isSubscriptionItem &&
+      process.env.NEXT_PUBLIC_SUBSCRIPTION_ENABLED !== "true"
+    ) {
       toast.error("Plus subscription is temporarily unavailable. Please choose a one-time plan.");
       return { success: false, message: "subscription_temporarily_unavailable" };
+    }
+
+    if (isSubscriptionItem) {
+      return await processPayment(item, false, "stripe");
     }
 
     if (hasMultiplePaymentMethods()) {
@@ -106,10 +113,15 @@ export function usePayment() {
     const isSubscriptionItem =
       item.interval === "month" || item.interval === "year";
 
-    if (isSubscriptionItem) {
+    if (
+      isSubscriptionItem &&
+      process.env.NEXT_PUBLIC_SUBSCRIPTION_ENABLED !== "true"
+    ) {
       toast.error("Plus subscription is temporarily unavailable. Please choose a one-time plan.");
       return { success: false, message: "subscription_temporarily_unavailable" };
     }
+
+    if (isSubscriptionItem) paymentMethod = "stripe";
 
     if (paymentMethod === "creem") {
       toast.error("This payment method is temporarily unavailable. Please use card or PayPal.");

@@ -1,4 +1,4 @@
-import { findCreditByOrderNo, findCreditByTransNo, getUserValidCredits, insertCredit } from "@/models/credit";
+import { findCreditByOrderNo, getUserValidCredits, insertCredit, insertCreditIfAbsent } from "@/models/credit";
 import { credits as creditsTable } from "@/db/schema";
 import { getIsoTimestr } from "@/lib/time";
 import { getSnowId } from "@/lib/hash";
@@ -8,6 +8,7 @@ import { getFirstPaidOrderByUserUuid } from "@/models/order";
 import { getAIChatCreditCost as getAIChatCreditCostFromConfig } from "./config";
 import { getUserEntitlements } from "./entitlements";
 import { getActivePlusSubscriptionSummary } from "./subscription";
+import { ensureAnnualSubscriptionCreditsForUser } from "./annual-subscription-credits";
 
 export enum CreditsTransType {
   NewUser = "new_user", // initial credits for new user
@@ -31,6 +32,16 @@ export async function getUserCredits(user_uuid: string): Promise<UserCredits> {
   };
 
   try {
+    // Annual Stripe billing has a monthly non-rollover allowance. Grant the
+    // current tranche on first use instead of incorrectly granting once/year.
+    try {
+      await ensureAnnualSubscriptionCreditsForUser(user_uuid);
+    } catch (error) {
+      console.warn("annual subscription credit check skipped", {
+        message: error instanceof Error ? error.message : String(error),
+      });
+    }
+
     const first_paid_order = await getFirstPaidOrderByUserUuid(user_uuid);
     if (first_paid_order) {
       user_credits.is_recharged = true;
@@ -181,10 +192,7 @@ export async function grantSubscriptionPeriodCredits({
   expired_at: string;
   idempotency_key: string;
 }): Promise<boolean> {
-  const existing = await findCreditByTransNo(idempotency_key);
-  if (existing) return false;
-
-  await insertCredit({
+  return await insertCreditIfAbsent({
     trans_no: idempotency_key,
     created_at: new Date(getIsoTimestr()),
     expired_at: new Date(expired_at),
@@ -193,5 +201,4 @@ export async function grantSubscriptionPeriodCredits({
     credits,
     order_no,
   });
-  return true;
 }

@@ -86,6 +86,10 @@
   "my_credits": {
     "title": "Mis Créditos",
     "left_tip": "créditos restantes: {left_credits}",
+    "subscription_active": "Plus activo ({plan}) · se renueva el {renewal}",
+    "subscription_past_due": "Problema de pago en {plan} · actualiza tu método de pago",
+    "subscription_canceling": "{plan} seguirá activo hasta {renewal}",
+    "manage_subscription": "Gestionar suscripción",
     "no_credits": "No hay registros de créditos",
     "recharge": "Recargar",
     "table": {

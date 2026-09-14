@@ -65,6 +65,9 @@
     "title": "My Credits",
     "left_tip": "left credits: {left_credits}",
     "subscription_active": "Plus active ({plan}) · renews {renewal}",
+    "subscription_past_due": "Payment issue for {plan} · update your payment method",
+    "subscription_canceling": "{plan} remains active until {renewal}",
+    "manage_subscription": "Manage subscription",
     "no_credits": "No credits records",
     "recharge": "Recharge",
     "table": {

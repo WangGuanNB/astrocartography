@@ -66,6 +66,74 @@ export const orders = sqliteTable("orders_astrocarto", {
   pay_type: text("pay_type"),
 });
 
+// Canonical recurring-billing state. Keep this separate from orders so
+// renewals and cancellation state do not overwrite the original purchase.
+export const subscriptions = sqliteTable(
+  "subscriptions_astrocarto",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    provider: text("provider").notNull(),
+    provider_subscription_id: text("provider_subscription_id").notNull(),
+    provider_customer_id: text("provider_customer_id"),
+    user_uuid: text("user_uuid").notNull(),
+    order_no: text("order_no").notNull(),
+    product_id: text("product_id").notNull(),
+    interval: text("interval").notNull(),
+    status: text("status").notNull(),
+    cancel_at_period_end: integer("cancel_at_period_end", { mode: "boolean" })
+      .notNull()
+      .default(false),
+    current_period_start: integer("current_period_start"),
+    current_period_end: integer("current_period_end"),
+    last_paid_period_start: integer("last_paid_period_start"),
+    last_paid_invoice_id: text("last_paid_invoice_id"),
+    last_paid_at: integer("last_paid_at"),
+    canceled_at: integer("canceled_at"),
+    ended_at: integer("ended_at"),
+    created_at: integer("created_at", { mode: "timestamp" }).notNull(),
+    updated_at: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (table) => [
+    uniqueIndex("subscriptions_provider_id_unique_idx").on(
+      table.provider,
+      table.provider_subscription_id
+    ),
+    index("subscriptions_user_uuid_idx").on(table.user_uuid),
+    index("subscriptions_order_no_idx").on(table.order_no),
+  ]
+);
+
+// Sanitized webhook ledger for retries, support, and payment-failure analysis.
+export const subscriptionEvents = sqliteTable(
+  "subscription_events_astrocarto",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    provider: text("provider").notNull(),
+    provider_event_id: text("provider_event_id").notNull(),
+    event_type: text("event_type").notNull(),
+    provider_subscription_id: text("provider_subscription_id"),
+    provider_invoice_id: text("provider_invoice_id"),
+    user_uuid: text("user_uuid"),
+    order_no: text("order_no"),
+    amount: integer("amount"),
+    currency: text("currency"),
+    status: text("status").notNull().default("received"),
+    error: text("error"),
+    created_at: integer("created_at", { mode: "timestamp" }).notNull(),
+    processed_at: integer("processed_at", { mode: "timestamp" }),
+  },
+  (table) => [
+    uniqueIndex("subscription_events_provider_event_unique_idx").on(
+      table.provider,
+      table.provider_event_id
+    ),
+    index("subscription_events_subscription_idx").on(
+      table.provider_subscription_id
+    ),
+    index("subscription_events_order_no_idx").on(table.order_no),
+  ]
+);
+
 // API Keys table
 export const apikeys = sqliteTable("apikeys_astrocarto", {
   id: integer("id").primaryKey({ autoIncrement: true }),

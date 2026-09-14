@@ -10,6 +10,17 @@ export async function insertCredit(
   return credit;
 }
 
+export async function insertCreditIfAbsent(
+  data: typeof credits.$inferInsert
+): Promise<boolean> {
+  const inserted = await db()
+    .insert(credits)
+    .values(data)
+    .onConflictDoNothing({ target: credits.trans_no })
+    .returning({ id: credits.id });
+  return inserted.length > 0;
+}
+
 export async function findCreditByTransNo(
   trans_no: string
 ): Promise<typeof credits.$inferSelect | undefined> {

@@ -54,78 +54,92 @@ export async function handleOrderSession(session: Stripe.Checkout.Session) {
       throw new Error("invalid session");
     }
 
-    const order_no = session.metadata.order_no;
-    const paid_email =
-      session.customer_details?.email || session.customer_email || "";
-    const paid_detail = JSON.stringify(session);
-
-    const order = await findOrderByOrderNo(order_no);
-    if (!order) {
-      throw new Error("invalid order");
-    }
-
-    // Webhook often fulfills first; pay-success then runs the same handler.
-    if (order.status === OrderStatus.Paid) {
-      console.log("handle order session already paid, skip: ", order_no);
-      return;
-    }
-
-    if (order.status !== OrderStatus.Created) {
-      throw new Error("invalid order");
-    }
-
-    const paid_at = getIsoTimestr();
-    await updateOrderStatus(
-      order_no,
-      OrderStatus.Paid,
-      paid_at,
-      paid_email,
-      paid_detail
-    );
-    void reportPurchase({
+    await fulfillPaidOrder({
+      orderNo: session.metadata.order_no,
+      paidEmail:
+        session.customer_details?.email || session.customer_email || "",
+      paidDetail: JSON.stringify(session),
       provider: "stripe",
-      transactionId: order.order_no,
-      amount: order.amount,
-      currency: order.currency,
-      productId: order.product_id,
-      productName: order.product_name,
-      gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
     });
-
-    if (order.user_uuid) {
-      if (order.credits > 0) {
-        // increase credits for paied order
-        await updateCreditForOrder(order as unknown as Order);
-      }
-
-      // update affiliate for paied order
-      await updateAffiliateForOrder(order as unknown as Order);
-    }
-
-    // send order confirmation email
-    if (paid_email) {
-      try {
-        await sendOrderConfirmationEmail({
-          order: order as unknown as Order,
-          customerEmail: paid_email,
-        });
-      } catch (e) {
-        console.log("send order confirmation email failed: ", e);
-        // Don't throw error, just log it
-      }
-    }
-
-    console.log(
-      "handle order session successed: ",
-      order_no,
-      paid_at,
-      paid_email,
-      paid_detail
-    );
   } catch (e) {
     console.log("handle order session failed: ", e);
     throw e;
   }
+}
+
+/**
+ * Idempotent paid-order fulfillment shared by Checkout and subscription invoices.
+ * Renewal credits are handled separately because they are keyed by invoice ID.
+ */
+export async function fulfillPaidOrder({
+  orderNo,
+  paidEmail,
+  paidDetail,
+  provider,
+  creditExpiresAt,
+  skipCredits = false,
+}: {
+  orderNo: string;
+  paidEmail: string;
+  paidDetail: string;
+  provider: "stripe" | "paypal" | "creem";
+  creditExpiresAt?: string;
+  skipCredits?: boolean;
+}): Promise<{ order: typeof orders.$inferSelect; newlyPaid: boolean }> {
+  const order = await findOrderByOrderNo(orderNo);
+  if (!order) throw new Error("invalid order");
+
+  if (order.status === OrderStatus.Paid) {
+    return { order, newlyPaid: false };
+  }
+  if (order.status !== OrderStatus.Created) throw new Error("invalid order");
+
+  const paidAt = getIsoTimestr();
+  await updateOrderStatus(
+    orderNo,
+    OrderStatus.Paid,
+    paidAt,
+    paidEmail,
+    paidDetail
+  );
+
+  void reportPurchase({
+    provider,
+    transactionId: order.order_no,
+    amount: order.amount,
+    currency: order.currency,
+    productId: order.product_id,
+    productName: order.product_name,
+    gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+  });
+
+  if (order.user_uuid) {
+    if (order.credits > 0 && !skipCredits) {
+      await updateCreditForOrder({
+        ...(order as unknown as Order),
+        expired_at: creditExpiresAt || (order.expired_at as unknown as string),
+      });
+    }
+    await updateAffiliateForOrder(order as unknown as Order);
+  }
+
+  if (paidEmail) {
+    try {
+      await sendOrderConfirmationEmail({
+        order: order as unknown as Order,
+        customerEmail: paidEmail,
+      });
+    } catch (error) {
+      console.log("send order confirmation email failed: ", error);
+    }
+  }
+
+  console.log("paid order fulfilled", {
+    order_no: orderNo,
+    provider,
+    paid_at: paidAt,
+  });
+  return { order, newlyPaid: true };
 }
 
 /**

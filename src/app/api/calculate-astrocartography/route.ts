@@ -1,24 +1,10 @@
 import { unstable_cache } from 'next/cache';
 import { NextRequest, NextResponse } from 'next/server';
-import * as Astronomy from 'astronomy-engine';
-import { getTimezoneForCoordinates, localDateTimeToUtc } from '@/lib/timezone';
+import { getTimezoneForCoordinates } from '@/lib/timezone';
+import { calculatePlanetaryLines } from '@/lib/astrocartography-lines';
 
 export const revalidate = 3600; // 1 小时，与业务 TTL 一致
 export const maxDuration = 30; // 避免复杂计算被过早终止
-
-// 行星颜色配置
-const PLANET_COLORS: Record<string, string> = {
-  Sun: '#FFD700',      // 金色
-  Moon: '#C0C0C0',     // 银色
-  Mercury: '#FFA500',  // 橙色
-  Venus: '#FF69B4',    // 粉色
-  Mars: '#FF4500',     // 红色
-  Jupiter: '#9370DB',  // 紫色
-  Saturn: '#4169E1',   // 蓝色
-  Uranus: '#00CED1',   // 青色
-  Neptune: '#1E90FF',  // 深蓝
-  Pluto: '#8B4513',    // 棕色
-};
 
 interface BirthData {
   birthDate: string;
@@ -38,9 +24,10 @@ interface CacheEntry {
 
 const calculationCache = new Map<string, CacheEntry>();
 const CACHE_TTL = 1000 * 60 * 60; // 1 小时缓存
+const CALCULATION_VERSION = 'v2-geocentric-angular-lines';
 
 function getCacheKey(birthData: BirthData): string {
-  return `${birthData.birthDate}-${birthData.birthTime}-${birthData.latitude}-${birthData.longitude}-${birthData.timezone}`;
+  return `${CALCULATION_VERSION}-${birthData.birthDate}-${birthData.birthTime}-${birthData.latitude}-${birthData.longitude}-${birthData.timezone}`;
 }
 
 /**
@@ -71,252 +58,12 @@ async function getCachedCalculation(
         },
       };
     },
-    ['astrocartography-calculation', cacheKey], // cacheKey 作为缓存键的一部分
+    ['astrocartography-calculation-v2', cacheKey], // versioned to invalidate old incorrect lines
     {
       revalidate: CACHE_TTL / 1000, // 转为秒（3600秒 = 1小时）
       tags: ['astrocartography'], // 用于手动清除缓存
     }
   )();
-}
-
-/**
- * 计算恒星时（Sidereal Time）
- */
-function getSiderealTime(date: Date, longitude: number): number {
-  // 创建时间对象
-  const time = Astronomy.MakeTime(date);
-  
-  // 计算格林威治恒星时（小时）
-  const gmst = Astronomy.SiderealTime(time);
-  
-  // 转换为度数（1小时 = 15度）并加上经度修正
-  const lst = (gmst * 15 + longitude) % 360;
-  return lst < 0 ? lst + 360 : lst;
-}
-
-/**
- * 使用正确的球面三角学计算 AS 线（上升线）
- */
-function calculateASLine(
-  planetRA: number,
-  planetDec: number,
-  birthTime: Date,
-  birthLongitude: number
-): [number, number][] {
-  const coordinates: [number, number][] = [];
-  const siderealTime = getSiderealTime(birthTime, 0); // 格林威治恒星时
-  
-  // 遍历所有纬度
-  // 优化：步长从 2 改为 3，再次减少约 33% 计算量（Leaflet 会平滑曲线）
-  for (let lat = -85; lat <= 85; lat += 3) {
-    const latRad = lat * Math.PI / 180;
-    const decRad = planetDec * Math.PI / 180;
-    
-    // 计算行星在该纬度上升时的时角
-    // cos(H) = -tan(φ) * tan(δ)
-    const cosH = -Math.tan(latRad) * Math.tan(decRad);
-    
-    // 如果 |cos(H)| > 1，行星在该纬度永不升起或永不落下
-    if (Math.abs(cosH) > 1) {
-      continue;
-    }
-    
-    const H = Math.acos(cosH) * 180 / Math.PI; // 时角（度）
-    
-    // 计算该纬度上行星上升时的经度
-    // 经度 = 行星赤经 - 时角 - 格林威治恒星时
-    let longitude = (planetRA - H - siderealTime) % 360;
-    
-    // 标准化到 -180 到 180
-    if (longitude > 180) longitude -= 360;
-    if (longitude < -180) longitude += 360;
-    
-    coordinates.push([lat, longitude]);
-  }
-  
-  return coordinates;
-}
-
-/**
- * 计算 DS 线（下降线）- 与 AS 线相对（相差 180 度经度）
- */
-function calculateDSLine(
-  planetRA: number,
-  planetDec: number,
-  birthTime: Date,
-  birthLongitude: number
-): [number, number][] {
-  const asLine = calculateASLine(planetRA, planetDec, birthTime, birthLongitude);
-  
-  // DS 线是 AS 线的对跖点（经度 + 180）
-  return asLine.map(([lat, lng]) => {
-    let dsLng = lng + 180;
-    if (dsLng > 180) dsLng -= 360;
-    return [lat, dsLng] as [number, number];
-  });
-}
-
-/**
- * 计算 MC 线（中天线）- 行星在天顶的所有地点
- */
-function calculateMCLine(
-  planetRA: number,
-  planetDec: number,
-  birthTime: Date,
-  birthLongitude: number
-): [number, number][] {
-  const coordinates: [number, number][] = [];
-  const siderealTime = getSiderealTime(birthTime, 0);
-  
-  // MC 线：行星的赤经等于当地恒星时
-  // 经度 = 行星赤经 - 格林威治恒星时
-  const baseLongitude = (planetRA - siderealTime) % 360;
-  const normalizedLng = baseLongitude > 180 ? baseLongitude - 360 : baseLongitude;
-  
-  // MC 线是垂直的经度线（但需要考虑赤纬的曲率）
-  // 优化：步长与 AS 一致，使用 3°
-  for (let lat = -85; lat <= 85; lat += 3) {
-    const latRad = lat * Math.PI / 180;
-    const decRad = planetDec * Math.PI / 180;
-    
-    // 根据赤纬调整经度（球面投影）
-    const declinationEffect = Math.sin(latRad) * Math.tan(decRad) * 15;
-    let longitude = normalizedLng + declinationEffect;
-    
-    if (longitude > 180) longitude -= 360;
-    if (longitude < -180) longitude += 360;
-    
-    coordinates.push([lat, longitude]);
-  }
-  
-  return coordinates;
-}
-
-/**
- * 计算 IC 线（天底线）- 与 MC 线相对
- */
-function calculateICLine(
-  planetRA: number,
-  planetDec: number,
-  birthTime: Date,
-  birthLongitude: number
-): [number, number][] {
-  const mcLine = calculateMCLine(planetRA, planetDec, birthTime, birthLongitude);
-  
-  // IC 线是 MC 线的对跖点
-  return mcLine.map(([lat, lng]) => {
-    let icLng = lng + 180;
-    if (icLng > 180) icLng -= 360;
-    return [lat, icLng] as [number, number];
-  });
-}
-
-/**
- * 使用 astronomy-engine 计算真实的行星位置和行星线
- */
-function calculatePlanetaryLines(birthData: BirthData & { timezone: string }) {
-  const lines = [];
-  const utcTime = localDateTimeToUtc(
-    birthData.birthDate,
-    birthData.birthTime,
-    birthData.timezone
-  );
-  
-  // 主要行星（包括外行星）
-  const planetNames: Astronomy.Body[] = [
-    Astronomy.Body.Sun,
-    Astronomy.Body.Moon,
-    Astronomy.Body.Mercury,
-    Astronomy.Body.Venus,
-    Astronomy.Body.Mars,
-    Astronomy.Body.Jupiter,
-    Astronomy.Body.Saturn,
-    Astronomy.Body.Uranus,
-    Astronomy.Body.Neptune,
-    Astronomy.Body.Pluto,
-  ];
-  
-  const planetNameMap: Partial<Record<Astronomy.Body, string>> = {
-    [Astronomy.Body.Sun]: 'Sun',
-    [Astronomy.Body.Moon]: 'Moon',
-    [Astronomy.Body.Mercury]: 'Mercury',
-    [Astronomy.Body.Venus]: 'Venus',
-    [Astronomy.Body.Mars]: 'Mars',
-    [Astronomy.Body.Jupiter]: 'Jupiter',
-    [Astronomy.Body.Saturn]: 'Saturn',
-    [Astronomy.Body.Uranus]: 'Uranus',
-    [Astronomy.Body.Neptune]: 'Neptune',
-    [Astronomy.Body.Pluto]: 'Pluto',
-  };
-  
-  for (const body of planetNames) {
-    const planetName = planetNameMap[body];
-    if (!planetName) {
-      console.warn(`No name mapping found for body: ${body}`);
-      continue;
-    }
-    const color = PLANET_COLORS[planetName] || '#FFFFFF';
-    
-    try {
-      // 获取行星在出生时刻的赤道坐标
-      const time = Astronomy.MakeTime(utcTime);
-      const observer = new Astronomy.Observer(birthData.latitude!, birthData.longitude!, 0);
-      const equator = Astronomy.Equator(body, time, observer, true, true);
-      
-      // 计算行星的赤经（度）和赤纬（度）
-      const ra = equator.ra * 15; // 转换为度数（1小时 = 15度）
-      const dec = equator.dec;
-      
-      // 计算 AS 线
-      const asLine = calculateASLine(ra, dec, utcTime, birthData.longitude!);
-      if (asLine.length > 0) {
-        lines.push({
-          planet: planetName,
-          type: 'AS' as const,
-          color,
-          coordinates: asLine
-        });
-      }
-      
-      // 计算 DS 线
-      const dsLine = calculateDSLine(ra, dec, utcTime, birthData.longitude!);
-      if (dsLine.length > 0) {
-        lines.push({
-          planet: planetName,
-          type: 'DS' as const,
-          color,
-          coordinates: dsLine
-        });
-      }
-      
-      // 计算 MC 线
-      const mcLine = calculateMCLine(ra, dec, utcTime, birthData.longitude!);
-      if (mcLine.length > 0) {
-        lines.push({
-          planet: planetName,
-          type: 'MC' as const,
-          color,
-          coordinates: mcLine
-        });
-      }
-      
-      // 计算 IC 线
-      const icLine = calculateICLine(ra, dec, utcTime, birthData.longitude!);
-      if (icLine.length > 0) {
-        lines.push({
-          planet: planetName,
-          type: 'IC' as const,
-          color,
-          coordinates: icLine
-        });
-      }
-      
-    } catch (error) {
-      console.error(`Error calculating ${planetName}:`, error);
-    }
-  }
-  
-  return lines;
 }
 
 // 常见城市坐标缓存

@@ -21,6 +21,10 @@ import {
 
 export async function POST(req: Request) {
   try {
+    if (process.env.NEXT_PUBLIC_PAYMENT_CREEM_ENABLED !== "true") {
+      return respErr("This payment method is temporarily unavailable.");
+    }
+
     const ga_client_id = getGaClientIdFromRequest(req);
     let {
       credits,
@@ -106,6 +110,12 @@ export async function POST(req: Request) {
     }
 
     const is_subscription = interval === "month" || interval === "year";
+
+    // Existing Creem renewals continue through the webhook, but all new
+    // subscriptions use the single supported Stripe lifecycle.
+    if (is_subscription) {
+      return respErr("New subscriptions are available through Stripe only.");
+    }
 
     if (interval === "year" && valid_months !== 12) {
       return respErr("invalid valid_months");
@@ -298,5 +308,4 @@ export async function POST(req: Request) {
     return respErr("creem checkout failed: " + e.message);
   }
 }
-
 

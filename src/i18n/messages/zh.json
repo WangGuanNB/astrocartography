@@ -99,6 +99,9 @@
     "title": "我的积分",
     "left_tip": "剩余积分: {left_credits}",
     "subscription_active": "Plus 订阅中（{plan}）· 续费日 {renewal}",
+    "subscription_past_due": "{plan} 扣款异常 · 请更新付款方式",
+    "subscription_canceling": "{plan} 将保持有效至 {renewal}",
+    "manage_subscription": "管理订阅",
     "no_credits": "没有积分记录",
     "recharge": "充值",
     "table": {

@@ -1,6 +1,6 @@
-import { handleOrderSession } from "@/services/order";
 import { respOk } from "@/lib/resp";
 import { getStripeClient } from "@/lib/stripe";
+import { handleStripeWebhookEvent } from "@/services/stripe-subscription";
 
 export async function POST(req: Request) {
   try {
@@ -25,23 +25,12 @@ export async function POST(req: Request) {
       stripeWebhookSecret
     );
 
-    console.log("stripe notify event: ", event);
-
-    switch (event.type) {
-      case "checkout.session.completed": {
-        const session = event.data.object;
-
-        await handleOrderSession(session);
-        break;
-      }
-
-      default:
-        console.log("not handle event: ", event.type);
-    }
+    console.log("stripe webhook received", { id: event.id, type: event.type });
+    await handleStripeWebhookEvent(event);
 
     return respOk();
   } catch (e: any) {
-    console.log("stripe notify failed: ", e);
+    console.log("stripe webhook failed", { message: e?.message || String(e) });
     return Response.json(
       { error: `handle stripe notify failed: ${e.message}` },
       { status: 500 }

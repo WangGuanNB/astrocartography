@@ -180,6 +180,7 @@ async function handleStripeCheckout(params: {
   order_no: string;
   user_uuid: string;
   user_email: string;
+  product_id: string;
   product_name?: string;
   amount: number;
   currency: string;
@@ -190,7 +191,7 @@ async function handleStripeCheckout(params: {
   cancel_url: string;
   ga_client_id?: string;
 }) {
-  const { order_no, user_uuid, user_email, product_name, amount, currency, interval, is_subscription, credits, locale, cancel_url, ga_client_id } = params;
+  const { order_no, user_uuid, user_email, product_id, product_name, amount, currency, interval, is_subscription, credits, locale, cancel_url, ga_client_id } = params;
 
   if (!process.env.STRIPE_PRIVATE_KEY) {
     throw new Error("STRIPE_PRIVATE_KEY is not configured");
@@ -221,10 +222,12 @@ async function handleStripeCheckout(params: {
     metadata: {
       project: process.env.NEXT_PUBLIC_PROJECT_NAME || "",
       product_name: product_name || "",
+      product_id,
       order_no: order_no.toString(),
       user_email: user_email,
       credits: credits?.toString() || "0",
       user_uuid: user_uuid,
+      interval,
     },
     mode: is_subscription ? "subscription" : "payment",
     success_url: `${process.env.NEXT_PUBLIC_WEB_URL}/${locale}/pay-success/{CHECKOUT_SESSION_ID}`,
@@ -241,7 +244,7 @@ async function handleStripeCheckout(params: {
     };
   }
 
-  if (currency === "cny") {
+  if (currency === "cny" && !is_subscription) {
     options.payment_method_types = ["wechat_pay", "alipay", "card"];
     options.payment_method_options = {
       wechat_pay: {
@@ -394,6 +397,20 @@ export async function POST(req: Request) {
       return respErr("This payment method is temporarily unavailable.");
     }
 
+    const isSubscriptionRequest =
+      interval === "month" || interval === "year" || isPlusProductId(product_id);
+    if (isSubscriptionRequest) {
+      if (!isSubscriptionEnabled()) {
+        return respErr("Subscription plans are temporarily unavailable.");
+      }
+      if (paymentMethod !== "stripe") {
+        return respErr("Subscriptions are available through Stripe only.");
+      }
+      if (process.env.NEXT_PUBLIC_PAYMENT_STRIPE_ENABLED !== "true") {
+        return respErr("Stripe subscriptions are not configured.");
+      }
+    }
+
     // 3. 处理 cancel_url
     if (!cancel_url) {
       cancel_url = `${
@@ -427,6 +444,7 @@ export async function POST(req: Request) {
           order_no: orderData.order_no,
           user_uuid: orderData.user_uuid,
           user_email: orderData.user_email,
+          product_id,
           product_name: product_name,
           amount: amount,
           currency: currency,

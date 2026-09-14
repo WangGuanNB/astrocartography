@@ -1,4 +1,5 @@
-import { getOrdersByUserUuid } from "@/models/order";
+import { findOrderByOrderNo, getOrdersByUserUuid } from "@/models/order";
+import { findLatestStripeSubscriptionByUser } from "@/models/subscription";
 import type { orders } from "@/db/schema";
 import type { Pricing } from "@/types/blocks/pricing";
 
@@ -16,7 +17,7 @@ export function isSubscriptionInterval(
 }
 
 export function isSubscriptionEnabled(): boolean {
-  return process.env.NEXT_PUBLIC_SUBSCRIPTION_ENABLED !== "false";
+  return process.env.NEXT_PUBLIC_SUBSCRIPTION_ENABLED === "true";
 }
 
 /** Hide Plus items when subscription flag is off (pricing page, homepage, API). */
@@ -53,6 +54,26 @@ function isOrderSubscriptionActive(order: OrderRow, nowSec: number): boolean {
 export async function getActivePlusSubscription(
   user_uuid: string
 ): Promise<OrderRow | null> {
+  try {
+    const stripeSubscription = await findLatestStripeSubscriptionByUser(user_uuid);
+    if (stripeSubscription) {
+      const linkedOrder = await findOrderByOrderNo(stripeSubscription.order_no);
+      const statusIsEligible = ["active", "trialing", "past_due"].includes(
+        stripeSubscription.status
+      );
+      const periodIsCurrent =
+        !stripeSubscription.current_period_end ||
+        stripeSubscription.current_period_end > Math.floor(Date.now() / 1000);
+      return linkedOrder?.status === "paid" && statusIsEligible && periodIsCurrent
+        ? linkedOrder
+        : null;
+    }
+  } catch (error) {
+    console.warn("subscription table unavailable; using legacy orders", {
+      message: error instanceof Error ? error.message : String(error),
+    });
+  }
+
   const paidOrders = await getOrdersByUserUuid(user_uuid);
   if (!paidOrders?.length) return null;
 
@@ -80,11 +101,53 @@ export interface ActiveSubscriptionSummary {
   sub_period_end?: number | null;
   renewal_label?: string;
   is_active: boolean;
+  provider?: string;
+  status?: string;
+  cancel_at_period_end?: boolean;
 }
 
 export async function getActivePlusSubscriptionSummary(
   user_uuid: string
 ): Promise<ActiveSubscriptionSummary | null> {
+  // New Stripe lifecycle table. Fall back to legacy orders until the migration
+  // is applied and for the existing grandfathered Creem subscriber.
+  try {
+    const subscription = await findLatestStripeSubscriptionByUser(user_uuid);
+    const linkedOrder = subscription
+      ? await findOrderByOrderNo(subscription.order_no)
+      : null;
+    const statusIsEligible = subscription
+      ? ["active", "trialing", "past_due"].includes(subscription.status)
+      : false;
+    const periodIsCurrent =
+      !subscription?.current_period_end ||
+      subscription.current_period_end > Math.floor(Date.now() / 1000);
+    if (subscription) {
+      const isActive = Boolean(
+        linkedOrder?.status === "paid" && statusIsEligible && periodIsCurrent
+      );
+      return {
+        product_id: subscription.product_id,
+        product_name: linkedOrder?.product_name,
+        interval: subscription.interval,
+        sub_period_end: subscription.current_period_end,
+        renewal_label: subscription.current_period_end
+          ? new Date(subscription.current_period_end * 1000)
+              .toISOString()
+              .slice(0, 10)
+          : undefined,
+        is_active: isActive,
+        provider: subscription.provider,
+        status: subscription.status,
+        cancel_at_period_end: subscription.cancel_at_period_end,
+      };
+    }
+  } catch (error) {
+    console.warn("subscription table unavailable; using legacy orders", {
+      message: error instanceof Error ? error.message : String(error),
+    });
+  }
+
   const order = await getActivePlusSubscription(user_uuid);
   if (!order) return null;
 
@@ -101,6 +164,9 @@ export async function getActivePlusSubscriptionSummary(
     sub_period_end: order.sub_period_end,
     renewal_label,
     is_active: true,
+    provider: order.pay_type || "creem",
+    status: "active",
+    cancel_at_period_end: false,
   };
 }
 

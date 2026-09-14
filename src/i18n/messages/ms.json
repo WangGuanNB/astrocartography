@@ -86,6 +86,10 @@
   "my_credits": {
     "title": "Kredit Saya",
     "left_tip": "kredit baki: {left_credits}",
+    "subscription_active": "Plus aktif ({plan}) · diperbaharui pada {renewal}",
+    "subscription_past_due": "Masalah pembayaran untuk {plan} · kemas kini kaedah pembayaran",
+    "subscription_canceling": "{plan} kekal aktif sehingga {renewal}",
+    "manage_subscription": "Urus langganan",
     "no_credits": "Tiada rekod kredit",
     "recharge": "Isi Semula",
     "table": {

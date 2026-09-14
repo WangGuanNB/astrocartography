@@ -20,6 +20,10 @@
     "db:d1:migrate": "npx wrangler d1 migrations apply astrocarto-db --remote",
     "db:d1:migrate:local": "npx wrangler d1 migrations apply astrocarto-db --local",
     "db:migrate:data": "npx tsx scripts/migrate-to-d1.ts",
+    "verify:astro": "tsx scripts/verify-ascendant.ts && tsx scripts/verify-midheaven.ts && tsx scripts/verify-astrocartography-lines.ts",
+    "verify:subscription": "tsx scripts/verify-subscription-credits.ts",
+    "verify:stripe-one-time": "tsx scripts/verify-stripe-one-time.ts",
+    "verify:stripe-lifecycle": "tsx scripts/verify-stripe-subscription-lifecycle.ts",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {

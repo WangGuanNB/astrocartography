@@ -41,28 +41,15 @@ export async function POST(req: Request) {
       return respErr("invalid request body");
     }
 
-    // 🔥 添加详细日志：打印原始请求数据
-    console.log("🔔 [Creem Webhook] ========== 收到 Webhook 请求 ==========");
-    console.log("🔔 [Creem Webhook] 请求头:", Object.fromEntries(req.headers.entries()));
-    console.log("🔔 [Creem Webhook] 签名:", signature || "(无签名)");
-    console.log("🔔 [Creem Webhook] 原始请求体:", body);
-
-    // 验证签名（如果 Creem 提供签名验证）
-    if (signature) {
-      const isValid = verifyCreemWebhookSignature(
-        body,
-        signature,
-        webhookSecret
-      );
-
-      if (!isValid) {
-        console.error("❌ [Creem Webhook] 签名验证失败");
-        return Response.json({ error: "invalid signature" }, { status: 401 });
-      } else {
-        console.log("✅ [Creem Webhook] 签名验证通过");
-      }
-    } else {
-      console.log("⚠️ [Creem Webhook] 未提供签名，跳过验证");
+    // A valid signature is mandatory. Never log raw headers/body because they
+    // can contain payment details and customer PII.
+    if (!signature) {
+      return Response.json({ error: "missing signature" }, { status: 401 });
+    }
+    const isValid = verifyCreemWebhookSignature(body, signature, webhookSecret);
+    if (!isValid) {
+      console.error("Creem webhook signature verification failed");
+      return Response.json({ error: "invalid signature" }, { status: 401 });
     }
 
     // 解析事件
@@ -74,17 +61,9 @@ export async function POST(req: Request) {
       return respErr("invalid json body");
     }
 
-    // 🔥 添加详细日志：打印解析后的数据
-    console.log("🔔 [Creem Webhook] 解析后的完整数据:", JSON.stringify(eventData, null, 2));
-    console.log("🔔 [Creem Webhook] 数据的所有键:", Object.keys(eventData));
-
     // 解析事件类型和数据
     const { type, data } = parseCreemWebhookEvent(eventData);
-
-    // 🔥 添加详细日志：打印解析后的事件类型和数据
-    console.log("🔔 [Creem Webhook] 事件类型:", type);
-    console.log("🔔 [Creem Webhook] 事件数据:", JSON.stringify(data, null, 2));
-    console.log("🔔 [Creem Webhook] 事件数据的所有键:", Object.keys(data || {}));
+    console.log("Creem webhook received", { type });
 
     // 处理不同类型的事件
     switch (type) {
@@ -279,5 +258,4 @@ async function handleCreemPaymentSuccess(data: any) {
     // 不抛出错误，避免 Creem 重复发送 webhook
   }
 }
-
 
