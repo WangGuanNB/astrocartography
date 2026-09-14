@@ -27,7 +27,9 @@ import MiniaturaAIGenerator from "@/components/blocks/miniatur-ai-generator/load
 import FeatureWhatTwo from "@/components/blocks/feature-what-two";
 import Pricing from "@/components/blocks/pricing";
 import Stats from "@/components/blocks/stats";
+import TaaftVerifyBadge from "@/components/blocks/taaft-verify-badge";
 import Testimonial from "@/components/blocks/testimonial";
+import { defaultLocale } from "@/i18n/locale";
 import { getLandingPage } from "@/services/page";
 import { applySubscriptionPricingFilter } from "@/services/subscription";
 import { getCanonicalUrl } from "@/lib/utils";
@@ -324,13 +326,9 @@ export default async function LandingPage({
       
       {/*Footer：收尾文案 + 品牌词 + CTA（鼓励立即使用）-- */}
       {page.cta && <CTA section={page.cta} />}
-      
-      {/* {page.showcase && <Showcase section={page.showcase} />} */}
-      {/* {page.stats && <Stats section={page.stats} />} */}
-   
-    
-    
-    
+
+      {/* TAAFT verify: EN homepage only — do not put in shared header/footer */}
+      {locale === defaultLocale && <TaaftVerifyBadge />}
     </>
   );
 }
