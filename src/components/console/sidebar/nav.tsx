@@ -20,9 +20,10 @@ export default function ({
   return (
     <nav
       className={cn(
-        "flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1",
+        "grid w-full grid-cols-3 gap-2 rounded-xl border border-border/50 bg-background/70 p-2 shadow-sm backdrop-blur-sm lg:flex lg:flex-col lg:gap-1 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-none",
         className
       )}
+      aria-label="Account navigation"
       {...props}
     >
       {items.map((item, index) => (
@@ -34,11 +35,11 @@ export default function ({
             item.is_active || pathname.includes(item.url as any)
               ? "bg-muted/50 text-primary hover:bg-muted hover:text-primary"
               : "hover:bg-transparent hover:underline",
-            "justify-start"
+            "min-h-12 min-w-0 justify-center gap-2 px-2 text-center text-xs leading-tight focus-visible:ring-2 focus-visible:ring-primary/60 sm:text-sm lg:min-h-11 lg:justify-start lg:px-4 lg:text-left"
           )}
         >
-          {item.icon && <Icon name={item.icon} className="w-4 h-4" />}
-          {item.title}
+          {item.icon && <Icon name={item.icon} className="size-4 shrink-0" />}
+          <span className="min-w-0 break-words lg:truncate">{item.title}</span>
         </Link>
       ))}
     </nav>

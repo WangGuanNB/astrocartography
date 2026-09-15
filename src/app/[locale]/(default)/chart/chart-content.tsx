@@ -31,6 +31,7 @@ import {
 import PricingModal from '@/components/pricing/pricing-modal';
 import { Pricing as PricingType } from '@/types/blocks/pricing';
 import type { UserEntitlements } from '@/types/user';
+import type { ResearchProject } from '@/types/research-project';
 
 // 动态导入地图组件（避免 SSR 问题）
 const AstrocartographyMap = dynamic(
@@ -70,6 +71,8 @@ export default function ChartContent() {
   const [chartData, setChartData] = useState<ChartData | null>(null);
   const [birthData, setBirthData] = useState<any>(null);
   const [planetLines, setPlanetLines] = useState<PlanetLine[]>([]);
+  const [restoredProject, setRestoredProject] =
+    useState<ResearchProject | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [chatOpen, setChatOpen] = useState(false);
@@ -93,6 +96,39 @@ export default function ChartContent() {
   }, []);
 
   useEffect(() => {
+    if (searchParams.get('researchProject') === 'current') {
+      setIsLoading(true);
+      fetch('/api/research-project', { cache: 'no-store' })
+        .then((response) => response.json())
+        .then((result) => {
+          const project = result.code === 0 ? result.data?.project : null;
+          if (!project) {
+            throw new Error(t('messages.errorGeneral.researchProjectMissing'));
+          }
+
+          setRestoredProject(project);
+          const data = {
+            birthDate: project.birthProfile.date,
+            birthTime: project.birthProfile.time,
+            birthLocation: project.birthProfile.location,
+            timezone: project.birthProfile.timezone,
+            latitude: project.birthProfile.latitude,
+            longitude: project.birthProfile.longitude,
+          };
+          setChartData(data);
+          return calculateChart(data);
+        })
+        .catch((projectError) => {
+          setError(
+            projectError instanceof Error
+              ? projectError.message
+              : t('messages.errorGeneral.researchProjectMissing')
+          );
+          setIsLoading(false);
+        });
+      return;
+    }
+
     // 从 URL 参数获取出生信息
     const birthDate = searchParams.get('birthDate');
     const birthTime = searchParams.get('birthTime');
@@ -366,8 +402,14 @@ export default function ChartContent() {
                 onCityQuickAsk={handleCityQuickAsk}
                 onAskOther={handleAskOther}
                 onRequireLogin={() => setShowSignModal(true)}
-                maxCompareCities={user ? 4 : 2}
+                maxCompareCities={user ? 3 : 2}
                 cityToolsUserState={user ? 'signed_in' : 'anonymous'}
+                initialCompareCities={restoredProject?.candidateCities}
+                initialComparisonGoal={restoredProject?.goal}
+                initialCurrentCity={restoredProject?.currentCity}
+                initialPlanDate={restoredProject?.planDate}
+                initialConstraints={restoredProject?.constraints}
+                initiallyOpenCompare={Boolean(restoredProject)}
               />
             </div>
 

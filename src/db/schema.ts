@@ -2,6 +2,7 @@ import {
   sqliteTable,
   text,
   integer,
+  real,
   uniqueIndex,
   index,
 } from "drizzle-orm/sqlite-core";
@@ -238,6 +239,34 @@ export const aiChatEvents = sqliteTable(
     index("ai_chat_events_created_at_idx").on(table.created_at),
     index("ai_chat_events_trace_id_idx").on(table.trace_id),
     index("ai_chat_events_user_uuid_idx").on(table.user_uuid),
+  ]
+);
+
+// One saved relocation research project per user for the first subscription MVP.
+// Planetary lines are intentionally not persisted: the chart is recalculated from
+// the saved birth inputs when the user resumes the project.
+export const researchProjects = sqliteTable(
+  "research_projects_astrocarto",
+  {
+    id: text("id").primaryKey(),
+    user_uuid: text("user_uuid").notNull(),
+    birth_date: text("birth_date").notNull(),
+    birth_time: text("birth_time").notNull(),
+    birth_location: text("birth_location").notNull(),
+    birth_latitude: real("birth_latitude").notNull(),
+    birth_longitude: real("birth_longitude").notNull(),
+    birth_timezone: text("birth_timezone").notNull(),
+    goal: text("goal").notNull(),
+    current_city_json: text("current_city_json").notNull(),
+    candidate_cities_json: text("candidate_cities_json").notNull(),
+    plan_date: text("plan_date").notNull(),
+    constraints: text("constraints").notNull().default(""),
+    created_at: integer("created_at", { mode: "timestamp" }).notNull(),
+    updated_at: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (table) => [
+    uniqueIndex("research_projects_user_uuid_unique_idx").on(table.user_uuid),
+    index("research_projects_updated_at_idx").on(table.updated_at),
   ]
 );
 

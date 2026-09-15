@@ -24,6 +24,8 @@
     "verify:subscription": "tsx scripts/verify-subscription-credits.ts",
     "verify:stripe-one-time": "tsx scripts/verify-stripe-one-time.ts",
     "verify:stripe-lifecycle": "tsx scripts/verify-stripe-subscription-lifecycle.ts",
+    "verify:research-project": "tsx scripts/verify-research-project.ts",
+    "verify:research-timing": "tsx scripts/verify-research-timing.ts",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {

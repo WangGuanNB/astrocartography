@@ -30,6 +30,12 @@ export default async function ({ children }: { children: ReactNode }) {
           icon: "RiBankCardLine",
           is_active: false,
         },
+        {
+          title: t("research_project.navTitle"),
+          url: "/my-research",
+          icon: "RiMapPinLine",
+          is_active: false,
+        },
         // {
         //   title: t("my_invites.title"),
         //   url: "/my-invites",

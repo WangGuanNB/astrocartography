@@ -100,6 +100,41 @@
       "status": "Estado"
     }
   },
+  "research_project": {
+    "navTitle": "Mi investigación",
+    "title": "Mi proyecto de investigación",
+    "description": "Retoma tu investigación de reubicación sin volver a introducir todos los datos.",
+    "empty": "Aún no has guardado una comparación de ciudades.",
+    "startComparison": "Iniciar una comparación",
+    "savedProject": "Investigación de reubicación guardada",
+    "continueResearch": "Continuar investigación",
+    "goalLabel": "Objetivo",
+    "planDateLabel": "Fecha prevista",
+    "currentCityLabel": "Ciudad actual",
+    "birthProfileLabel": "Datos natales",
+    "candidatesLabel": "Ciudades candidatas",
+    "constraintsLabel": "Restricciones prácticas",
+    "goals": {"overall": "Ajuste general", "career": "Carrera y reconocimiento", "relationships": "Relaciones y pertenencia", "home": "Hogar y estabilidad emocional", "travel": "Viajes y exploración"}
+  },
+  "research_timing": {
+    "eyebrow": "Tiempos de ángulos reubicados",
+    "title": "Ventanas temporales para tus ciudades guardadas",
+    "description": "Revisa ventanas diarias desde la fecha prevista. Esta capa sigue el ASC y MC reubicados de cada ciudad; no sustituye la comparación ni clasifica una ciudad como la mejor en todo.",
+    "window": "{days} días",
+    "loading": "Calculando ventanas específicas por ciudad…",
+    "errorTitle": "No se pudo calcular la capa temporal",
+    "errorDescription": "Comprueba que la fecha prevista sea hoy o posterior y vuelve a intentarlo. Si continúa, abre la comparación y guarda el proyecto de nuevo.",
+    "retry": "Reintentar",
+    "calculatedAt": "Calculado {date}",
+    "noEvents": "No se encontró una ventana exacta principal dentro del orbe elegido. Es un resultado válido sin cambios; no se inventó ningún evento.",
+    "eventDetail": "Muestra diaria más cercana: a {orb}° del aspecto exacto al {angle} reubicado.",
+    "methodTitle": "Método y límites",
+    "methodDescription": "Escaneo diario a las 12:00 hora local de los tránsitos del Sol a Plutón (sin la Luna) en aspectos mayores dentro de {orb}° del ASC o MC natal reubicado de cada ciudad.",
+    "limitation": "Son ventanas astrológicas diarias de referencia, no clasificaciones, garantías ni consejos prácticos de viaje. Una hora natal incierta desplaza los ángulos; verifica las decisiones importantes por separado.",
+    "tones": { "supportive": "flujo", "challenging": "revisar", "focused": "foco" },
+    "aspects": { "conjunction": "conjunción", "sextile": "sextil", "square": "cuadratura", "trine": "trígono", "opposition": "oposición" },
+    "planets": { "Sun": "Sol", "Mercury": "Mercurio", "Venus": "Venus", "Mars": "Marte", "Jupiter": "Júpiter", "Saturn": "Saturno", "Uranus": "Urano", "Neptune": "Neptuno", "Pluto": "Plutón" }
+  },
   "api_keys": {
     "title": "Claves API",
     "tip": "Por favor, mantén tu clave API segura para evitar fugas",
@@ -418,7 +453,8 @@
         "calculationFailed": "Error en el cálculo",
         "generationFailed": "Error al generar la carta",
         "missingInfo": "Faltan datos de nacimiento necesarios",
-        "returnToRegenerate": "Volver para Regenerar"
+        "returnToRegenerate": "Volver para Regenerar",
+        "researchProjectMissing": "No se pudo cargar tu proyecto guardado."
       },
       "buttons": {
         "returnHome": "Volver al Inicio",
@@ -524,9 +560,30 @@
       "quickQuestions": ["¿Debería mudarme o quedarme, y qué lugares encajan mejor conmigo?", "¿Qué ciudades favorecen mi carrera, dinero y reconocimiento?", "¿Adónde debería mudarme por amor, amistad y pertenencia?", "Compara mi ciudad actual con mejores lugares para el hogar y el bienestar."]
     },
     "cityTools": {
+      "researchProject": {
+        "title": "Guarda estas ciudades y continúa después",
+        "description": "Conserva juntos esta comparación, el objetivo, tu ciudad actual y la fecha prevista en Mi investigación.",
+        "openEditor": "Guardar estas ciudades",
+        "signInToSave": "Inicia sesión para guardar estas ciudades",
+        "currentCityLabel": "¿Dónde vives ahora?",
+        "currentCityPlaceholder": "Busca tu ciudad actual...",
+        "planDateLabel": "¿Cuándo planeas mudarte o viajar?",
+        "constraintsLabel": "Restricciones prácticas (opcional)",
+        "constraintsPlaceholder": "Presupuesto, trabajo, visado, familia, clima u otros factores...",
+        "privacyNote": "Solo se guardan estos datos en tu cuenta privada. Al guardar se actualiza tu único proyecto actual.",
+        "missingFields": "Selecciona tu ciudad actual y la fecha prevista.",
+        "pastPlanDate": "Elige hoy o una fecha futura.",
+        "missingBirthData": "Faltan las coordenadas o la zona horaria necesarias.",
+        "saveError": "No se pudo guardar el proyecto. Inténtalo de nuevo.",
+        "saved": "Proyecto guardado. Puedes continuarlo desde tu cuenta.",
+        "viewSaved": "Ver mi investigación",
+        "cancel": "Ahora no",
+        "save": "Guardar proyecto",
+        "saving": "Guardando..."
+      },
       "checkEyebrow": "CONSULTA DE CIUDAD", "checkTitle": "Consulta una ciudad en tu mapa",
       "checkDescription": "Introduce una ciudad real para revisar líneas planetarias cercanas, distancia aproximada, intensidad y evidencia.",
-      "compareTitle": "Comparar ciudades", "compareDescription": "Añade de 2 a 4 lugares, elige un objetivo y compara apoyo, cautelas y compensaciones.", "suggestedNearTitle": "Ciudades cerca de tus líneas", "suggestedNearHint": "Toca para añadir. Busca abajo si quieres otro lugar.", "showDetails": "Ver detalles", "hideDetails": "Ocultar detalles",
+      "compareTitle": "Comparar ciudades", "compareDescription": "Añade de 2 a 3 lugares, elige un objetivo y compara apoyo, cautelas y compensaciones.", "suggestedNearTitle": "Ciudades cerca de tus líneas", "suggestedNearHint": "Toca para añadir. Busca abajo si quieres otro lugar.", "showDetails": "Ver detalles", "hideDetails": "Ocultar detalles",
       "limitNote": "Puedes comparar hasta {count} ciudades en esta sesión.",
       "signInForMore": "Inicia sesión para comparar más.",
       "limitReached": "Has alcanzado el límite de {count} ciudades en esta sesión.",

@@ -10,11 +10,11 @@ export default async function ConsoleLayout({
   sidebar?: Sidebar;
 }) {
   return (
-    <div className="container md:max-w-7xl py-8 mx-auto">
-      <div className="w-full space-y-6 p-4 pb-16 block">
+    <div className="container mx-auto pb-8 pt-28 sm:pt-32 md:max-w-7xl">
+      <div className="block w-full space-y-6 px-4 pb-16 sm:px-6 lg:px-4">
         <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
           {sidebar?.nav?.items && (
-            <aside className="md:min-w-40 flex-shrink-0">
+            <aside className="w-full flex-shrink-0 lg:sticky lg:top-28 lg:w-48 lg:self-start">
               <SidebarNav items={sidebar.nav?.items} />
             </aside>
           )}

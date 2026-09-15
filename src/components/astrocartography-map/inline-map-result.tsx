@@ -35,6 +35,7 @@ type InlineBirthData = {
   location: string;
   latitude: number;
   longitude: number;
+  timezone?: string;
 };
 
 type InlineChartData = {
@@ -146,7 +147,7 @@ export default function InlineMapResult({
                 defaultPanelOpen={false}
                 showInitialGuide={false}
                 onRequireLogin={onRequireLogin}
-                maxCompareCities={user ? 4 : 2}
+                maxCompareCities={user ? 3 : 2}
                 cityToolsUserState={user ? "signed_in" : "anonymous"}
                 embedded
               />

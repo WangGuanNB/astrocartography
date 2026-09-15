@@ -67,6 +67,41 @@
       "status": "Status"
     }
   },
+  "research_project": {
+    "navTitle": "Meine Recherche",
+    "title": "Mein Rechercheprojekt",
+    "description": "Setze deine Umzugsrecherche fort, ohne alle Daten erneut einzugeben.",
+    "empty": "Du hast noch keinen Städtevergleich gespeichert.",
+    "startComparison": "Städtevergleich starten",
+    "savedProject": "Gespeicherte Umzugsrecherche",
+    "continueResearch": "Recherche fortsetzen",
+    "goalLabel": "Ziel",
+    "planDateLabel": "Geplantes Datum",
+    "currentCityLabel": "Aktueller Wohnort",
+    "birthProfileLabel": "Geburtsdaten",
+    "candidatesLabel": "Kandidatenstädte",
+    "constraintsLabel": "Praktische Einschränkungen",
+    "goals": {"overall": "Allgemeine Eignung", "career": "Karriere und Anerkennung", "relationships": "Beziehungen und Zugehörigkeit", "home": "Zuhause und emotionale Stabilität", "travel": "Reisen und Entdeckung"}
+  },
+  "research_timing": {
+    "eyebrow": "Timing der Relokationsachsen",
+    "title": "Zeitfenster für deine gespeicherten Städte",
+    "description": "Prüfe tägliche Transitfenster ab deinem geplanten Datum. Diese Ebene verfolgt den Relokations-ASC und -MC jeder Stadt; sie ersetzt den Städtevergleich nicht und erklärt keine Stadt pauschal zur besten.",
+    "window": "{days} Tage",
+    "loading": "Stadtspezifische Zeitfenster werden berechnet…",
+    "errorTitle": "Die Zeitebene konnte nicht berechnet werden",
+    "errorDescription": "Prüfe, ob das geplante Datum heute oder später ist, und versuche es erneut. Falls das Problem bleibt, öffne den Vergleich und speichere das Projekt erneut.",
+    "retry": "Erneut versuchen",
+    "calculatedAt": "Berechnet am {date}",
+    "noEvents": "Innerhalb des gewählten Orbis wurde kein genaues Hauptfenster gefunden. Das ist ein gültiges Ergebnis ohne Änderung; es wurde kein Ereignis erfunden.",
+    "eventDetail": "Nächste Tagesstichprobe: {orb}° vom exakten Aspekt zum Relokations-{angle} entfernt.",
+    "methodTitle": "Methode und Grenzen",
+    "methodDescription": "Täglicher Scan um 12:00 Ortszeit für Transite von Sonne bis Pluto (ohne Mond) in Hauptaspekten innerhalb von {orb}° zum Relokations-ASC oder -MC jeder Stadt.",
+    "limitation": "Dies sind astrologische Tagesfenster zur Orientierung, keine Ranglisten, Garantien oder praktischen Reisehinweise. Eine ungenaue Geburtszeit verschiebt die Achsen; wichtige Entscheidungen sollten unabhängig geprüft werden.",
+    "tones": { "supportive": "Fluss", "challenging": "prüfen", "focused": "Fokus" },
+    "aspects": { "conjunction": "Konjunktion", "sextile": "Sextil", "square": "Quadrat", "trine": "Trigon", "opposition": "Opposition" },
+    "planets": { "Sun": "Sonne", "Mercury": "Merkur", "Venus": "Venus", "Mars": "Mars", "Jupiter": "Jupiter", "Saturn": "Saturn", "Uranus": "Uranus", "Neptune": "Neptun", "Pluto": "Pluto" }
+  },
   "api_keys": {
     "title": "API-Schlüssel",
     "tip": "Bitte bewahren Sie Ihren API-Schlüssel sicher auf.",
@@ -371,7 +406,8 @@
         "calculationFailed": "Berechnung fehlgeschlagen",
         "generationFailed": "Karte konnte nicht erstellt werden",
         "missingInfo": "Fehlende Geburtsdaten",
-        "returnToRegenerate": "Zurück zum Neu-Erstellen"
+        "returnToRegenerate": "Zurück zum Neu-Erstellen",
+        "researchProjectMissing": "Dein gespeichertes Rechercheprojekt konnte nicht geladen werden."
       },
       "buttons": {
         "returnHome": "Zur Startseite",
@@ -477,9 +513,30 @@
       "quickQuestions": ["Sollte ich umziehen oder bleiben, und welche Orte passen besser zu mir?", "Welche Städte fördern Karriere, Geld und Anerkennung?", "Wohin sollte ich für Liebe, Freundschaft und Zugehörigkeit ziehen?", "Vergleiche meine aktuelle Stadt mit besseren Orten für Zuhause und Wohlbefinden."]
     },
     "cityTools": {
+      "researchProject": {
+        "title": "Diese Städte speichern und später fortsetzen",
+        "description": "Speichere Vergleich, Ziel, aktuellen Wohnort und geplantes Datum gemeinsam in Meine Recherche.",
+        "openEditor": "Diese Städte speichern",
+        "signInToSave": "Anmelden und Städte speichern",
+        "currentCityLabel": "Wo wohnst du jetzt?",
+        "currentCityPlaceholder": "Aktuellen Wohnort suchen...",
+        "planDateLabel": "Wann planst du Umzug oder Reise?",
+        "constraintsLabel": "Praktische Einschränkungen (optional)",
+        "constraintsPlaceholder": "Budget, Arbeit, Visum, Familie, Klima oder weitere Faktoren...",
+        "privacyNote": "Nur diese Angaben werden in deinem privaten Konto gespeichert. Speichern aktualisiert dein einziges aktuelles Projekt.",
+        "missingFields": "Wähle aktuellen Wohnort und geplantes Datum aus.",
+        "pastPlanDate": "Wähle heute oder ein zukünftiges Datum.",
+        "missingBirthData": "Genaue Koordinaten oder Zeitzone fehlen.",
+        "saveError": "Projekt konnte nicht gespeichert werden. Bitte erneut versuchen.",
+        "saved": "Projekt gespeichert. Du kannst es im Konto fortsetzen.",
+        "viewSaved": "Meine Recherche ansehen",
+        "cancel": "Nicht jetzt",
+        "save": "Projekt speichern",
+        "saving": "Wird gespeichert..."
+      },
       "checkEyebrow": "STADTPRÜFUNG", "checkTitle": "Eine Stadt auf deiner Karte prüfen",
       "checkDescription": "Gib eine echte Stadt ein, um nahe Planetenlinien, ungefähre Entfernung, Stärke und Kartendaten zu prüfen.",
-      "compareTitle": "Städte vergleichen", "compareDescription": "Füge 2–4 Orte hinzu, wähle ein Ziel und vergleiche Unterstützung, Vorsichtspunkte und Abwägungen.", "suggestedNearTitle": "Städte nahe deinen Linien", "suggestedNearHint": "Tippen zum Hinzufügen. Darunter suchen, wenn du einen anderen Ort willst.", "showDetails": "Details anzeigen", "hideDetails": "Details ausblenden",
+      "compareTitle": "Städte vergleichen", "compareDescription": "Füge 2–3 Orte hinzu, wähle ein Ziel und vergleiche Unterstützung, Vorsichtspunkte und Abwägungen.", "suggestedNearTitle": "Städte nahe deinen Linien", "suggestedNearHint": "Tippen zum Hinzufügen. Darunter suchen, wenn du einen anderen Ort willst.", "showDetails": "Details anzeigen", "hideDetails": "Details ausblenden",
       "limitNote": "Du kannst in dieser Sitzung bis zu {count} Städte vergleichen.",
       "signInForMore": "Melde dich an, um mehr zu vergleichen.",
       "limitReached": "Du hast das Limit von {count} Städten für diese Sitzung erreicht.",

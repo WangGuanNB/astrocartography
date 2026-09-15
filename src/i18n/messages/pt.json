@@ -100,6 +100,41 @@
       "status": "Status"
     }
   },
+  "research_project": {
+    "navTitle": "Minha pesquisa",
+    "title": "Meu projeto de pesquisa",
+    "description": "Retome sua pesquisa de mudança sem inserir todos os dados novamente.",
+    "empty": "Você ainda não salvou uma comparação de cidades.",
+    "startComparison": "Iniciar comparação",
+    "savedProject": "Pesquisa de mudança salva",
+    "continueResearch": "Continuar pesquisa",
+    "goalLabel": "Objetivo",
+    "planDateLabel": "Data planejada",
+    "currentCityLabel": "Cidade atual",
+    "birthProfileLabel": "Dados de nascimento",
+    "candidatesLabel": "Cidades candidatas",
+    "constraintsLabel": "Restrições práticas",
+    "goals": {"overall": "Compatibilidade geral", "career": "Carreira e reconhecimento", "relationships": "Relacionamentos e pertencimento", "home": "Lar e estabilidade emocional", "travel": "Viagem e exploração"}
+  },
+  "research_timing": {
+    "eyebrow": "Timing dos ângulos relocados",
+    "title": "Janelas de tempo para suas cidades salvas",
+    "description": "Veja janelas diárias a partir da data planejada. Esta camada acompanha o ASC e MC relocados de cada cidade; não substitui a comparação nem diz que uma cidade é a melhor em tudo.",
+    "window": "{days} dias",
+    "loading": "Calculando janelas específicas por cidade…",
+    "errorTitle": "Não foi possível calcular a camada temporal",
+    "errorDescription": "Confirme que a data planejada é hoje ou futura e tente novamente. Se continuar, reabra a comparação e salve o projeto outra vez.",
+    "retry": "Tentar novamente",
+    "calculatedAt": "Calculado em {date}",
+    "noEvents": "Nenhuma janela exata principal foi encontrada dentro do orbe escolhido. Esse é um resultado válido sem mudança; nenhum evento foi inventado.",
+    "eventDetail": "Amostra diária mais próxima: {orb}° do aspecto exato ao {angle} relocado.",
+    "methodTitle": "Método e limites",
+    "methodDescription": "Varredura diária às 12:00 locais dos trânsitos do Sol a Plutão (Lua excluída) em aspectos maiores dentro de {orb}° do ASC ou MC natal relocado de cada cidade.",
+    "limitation": "São janelas astrológicas diárias de referência, não rankings, garantias ou conselhos práticos de viagem. Um horário natal incerto altera os ângulos; verifique decisões importantes separadamente.",
+    "tones": { "supportive": "fluxo", "challenging": "revisar", "focused": "foco" },
+    "aspects": { "conjunction": "conjunção", "sextile": "sextil", "square": "quadratura", "trine": "trígono", "opposition": "oposição" },
+    "planets": { "Sun": "Sol", "Mercury": "Mercúrio", "Venus": "Vênus", "Mars": "Marte", "Jupiter": "Júpiter", "Saturn": "Saturno", "Uranus": "Urano", "Neptune": "Netuno", "Pluto": "Plutão" }
+  },
   "api_keys": {
     "title": "Chaves API",
     "tip": "Mantenha sua chave API segura para evitar vazamentos",
@@ -345,7 +380,8 @@
         "calculationFailed": "Falha no cálculo",
         "generationFailed": "Falha ao gerar mapa",
         "missingInfo": "Informações de nascimento necessárias ausentes",
-        "returnToRegenerate": "Voltar para Regenerar"
+        "returnToRegenerate": "Voltar para Regenerar",
+        "researchProjectMissing": "Não foi possível carregar o projeto salvo."
       },
       "buttons": {
         "returnHome": "Voltar para Início",
@@ -451,9 +487,30 @@
       "quickQuestions": ["Devo mudar-me ou ficar, e que lugares combinam melhor comigo?", "Que cidades favorecem a minha carreira, dinheiro e reconhecimento?", "Para onde devo mudar-me por amor, amizade e pertença?", "Compare a minha cidade atual com melhores lugares para casa e bem-estar."]
     },
     "cityTools": {
+      "researchProject": {
+        "title": "Salve estas cidades e continue depois",
+        "description": "Mantenha juntos esta comparação, objetivo, cidade atual e data planejada em Minha pesquisa.",
+        "openEditor": "Salvar estas cidades",
+        "signInToSave": "Entre para salvar estas cidades",
+        "currentCityLabel": "Onde você mora agora?",
+        "currentCityPlaceholder": "Pesquise sua cidade atual...",
+        "planDateLabel": "Quando pretende mudar ou viajar?",
+        "constraintsLabel": "Restrições práticas (opcional)",
+        "constraintsPlaceholder": "Orçamento, trabalho, visto, família, clima ou outros fatores...",
+        "privacyNote": "Somente estes dados são salvos na sua conta privada. Salvar atualiza seu único projeto atual.",
+        "missingFields": "Selecione sua cidade atual e a data planejada.",
+        "pastPlanDate": "Escolha hoje ou uma data futura.",
+        "missingBirthData": "Faltam coordenadas precisas ou fuso horário.",
+        "saveError": "Não foi possível salvar o projeto. Tente novamente.",
+        "saved": "Projeto salvo. Você pode continuá-lo pela sua conta.",
+        "viewSaved": "Ver minha pesquisa",
+        "cancel": "Agora não",
+        "save": "Salvar projeto",
+        "saving": "Salvando..."
+      },
       "checkEyebrow": "VERIFICAÇÃO DE CIDADE", "checkTitle": "Verifique uma cidade no seu mapa",
       "checkDescription": "Introduza uma cidade real para ver linhas planetárias próximas, distância aproximada, intensidade e evidências.",
-      "compareTitle": "Comparar cidades", "compareDescription": "Adicione 2–4 lugares, escolha um objetivo e compare apoio, cautelas e compromissos.", "suggestedNearTitle": "Cidades perto das suas linhas", "suggestedNearHint": "Toque para adicionar. Pesquise abaixo se quiser outro lugar.", "showDetails": "Mostrar detalhes", "hideDetails": "Ocultar detalhes",
+      "compareTitle": "Comparar cidades", "compareDescription": "Adicione 2–3 lugares, escolha um objetivo e compare apoio, cautelas e compromissos.", "suggestedNearTitle": "Cidades perto das suas linhas", "suggestedNearHint": "Toque para adicionar. Pesquise abaixo se quiser outro lugar.", "showDetails": "Mostrar detalhes", "hideDetails": "Ocultar detalhes",
       "limitNote": "Pode comparar até {count} cidades nesta sessão.",
       "signInForMore": "Entre para comparar mais.",
       "limitReached": "Atingiu o limite de {count} cidades nesta sessão.",

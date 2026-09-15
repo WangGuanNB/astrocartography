@@ -39,6 +39,7 @@ type InlineBirthData = {
   location: string;
   latitude: number;
   longitude: number;
+  timezone?: string;
 };
 
 type InlineChartData = {

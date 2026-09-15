@@ -112,6 +112,47 @@
       "status": "状态"
     }
   },
+  "research_project": {
+    "navTitle": "我的研究",
+    "title": "我的研究项目",
+    "description": "无需重新输入全部资料，继续上次的迁居与城市研究。",
+    "empty": "你还没有保存城市对比项目。",
+    "startComparison": "开始城市对比",
+    "savedProject": "已保存的迁居研究",
+    "continueResearch": "继续研究",
+    "goalLabel": "研究目标",
+    "planDateLabel": "计划日期",
+    "currentCityLabel": "现居城市",
+    "birthProfileLabel": "出生资料",
+    "candidatesLabel": "候选城市",
+    "constraintsLabel": "现实限制",
+    "goals": {
+      "overall": "整体迁居适配度",
+      "career": "事业与认可",
+      "relationships": "关系与归属",
+      "home": "家庭与情绪稳定",
+      "travel": "旅行与探索"
+    }
+  },
+  "research_timing": {
+    "eyebrow": "迁居盘角度时间层",
+    "title": "已保存城市的时间窗口",
+    "description": "从计划日期开始查看逐日行运窗口。此时间层跟踪每个城市的迁居盘 ASC 和 MC，不替代城市比较，也不声称某个城市在所有方面都最好。",
+    "window": "{days}天",
+    "loading": "正在计算各城市的时间窗口……",
+    "errorTitle": "暂时无法计算时间层",
+    "errorDescription": "请确认保存的计划日期为今天或未来日期，然后重试；如果仍然失败，请重新打开城市比较并保存项目。",
+    "retry": "重试",
+    "calculatedAt": "计算于 {date}",
+    "noEvents": "在当前容许度内没有发现主要精确窗口。这是有效的“无明显变化”结果，系统不会虚构事件。",
+    "eventDetail": "最接近的逐日采样与迁居盘 {angle} 精确相位相差 {orb}°。",
+    "methodTitle": "计算方法与限制",
+    "methodDescription": "按候选城市当地时间每天12:00扫描太阳至冥王星（不含对具体时刻敏感的月亮），寻找它们与该城市迁居盘 ASC 或 MC 在 {orb}°内形成的合相、六合、刑、拱或对冲。",
+    "limitation": "这些是逐日占星参考窗口，不是城市排名、结果保证或现实旅行建议。出生时间不确定会改变迁居盘角度；重大决定仍需独立核实。",
+    "tones": { "supportive": "顺畅", "challenging": "复核", "focused": "聚焦" },
+    "aspects": { "conjunction": "合相", "sextile": "六合", "square": "刑", "trine": "拱", "opposition": "对冲" },
+    "planets": { "Sun": "太阳", "Mercury": "水星", "Venus": "金星", "Mars": "火星", "Jupiter": "木星", "Saturn": "土星", "Uranus": "天王星", "Neptune": "海王星", "Pluto": "冥王星" }
+  },
   "api_keys": {
     "title": "API 密钥",
     "tip": "请妥善保管您的 API 密钥，避免泄露",
@@ -383,7 +424,8 @@
         "calculationFailed": "计算失败",
         "generationFailed": "生成星盘图失败",
         "missingInfo": "缺少必要的出生信息",
-        "returnToRegenerate": "返回重新生成"
+        "returnToRegenerate": "返回重新生成",
+        "researchProjectMissing": "无法加载你保存的研究项目。"
       },
       "buttons": {
         "returnHome": "返回首页",
@@ -490,9 +532,30 @@
       "quickQuestions": ["我应该搬家还是留下？哪些地方更适合我？", "哪些城市更支持我的事业、财富和认可？", "为了爱情、友谊和归属感，我应该搬到哪里？", "将我当前的城市与更适合居住和身心健康的地方进行比较。"]
     },
     "cityTools": {
+      "researchProject": {
+        "title": "保存这些城市，以后继续比较",
+        "description": "把本次比较、研究目标、现居城市和计划日期一起保存到“我的研究”。",
+        "openEditor": "保存这些城市",
+        "signInToSave": "登录后保存这些城市",
+        "currentCityLabel": "你目前住在哪里？",
+        "currentCityPlaceholder": "搜索现居城市……",
+        "planDateLabel": "你计划何时搬迁或旅行？",
+        "constraintsLabel": "现实限制（可选）",
+        "constraintsPlaceholder": "预算、工作、签证、家庭、气候或其他需要考虑的事项……",
+        "privacyNote": "只有此处展示的资料会保存到你的私人账户；再次保存会更新当前唯一的研究项目。",
+        "missingFields": "保存前请选择现居城市和计划日期。",
+        "pastPlanDate": "请选择今天或未来的计划日期。",
+        "missingBirthData": "当前星盘缺少保存所需的精确坐标或时区。",
+        "saveError": "项目保存失败，请重试。",
+        "saved": "项目已保存。离开后可从账户继续研究。",
+        "viewSaved": "查看我的研究",
+        "cancel": "暂不保存",
+        "save": "保存项目",
+        "saving": "正在保存……"
+      },
       "checkEyebrow": "城市检查", "checkTitle": "根据你的地图检查城市",
       "checkDescription": "输入真实城市，查看附近行星线、近似距离、强度与地图证据。",
-      "compareTitle": "对比城市", "compareDescription": "添加 2–4 个地点，选择目标，并排比较支持、谨慎因素与取舍。", "suggestedNearTitle": "靠近你行星线的城市", "suggestedNearHint": "点选即可加入。若要其他城市，可在下方搜索。", "showDetails": "展开详情", "hideDetails": "收起详情",
+      "compareTitle": "对比城市", "compareDescription": "添加 2–3 个地点，选择目标，并排比较支持、谨慎因素与取舍。", "suggestedNearTitle": "靠近你行星线的城市", "suggestedNearHint": "点选即可加入。若要其他城市，可在下方搜索。", "showDetails": "展开详情", "hideDetails": "收起详情",
       "limitNote": "本次可对比最多 {count} 个城市。",
       "signInForMore": "登录后可对比更多。",
       "limitReached": "你已达到本次 {count} 个城市的对比上限。",

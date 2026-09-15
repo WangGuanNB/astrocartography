@@ -17,6 +17,7 @@ import { MAJOR_CITIES } from '@/lib/cities';
 import { useTranslations } from 'next-intl';
 import CityTools, {
   type CityToolsHandle,
+  type ComparisonGoal,
   type MapCity,
 } from './city-tools';
 
@@ -40,6 +41,7 @@ interface AstrocartographyMapProps {
     location: string;
     latitude: number;
     longitude: number;
+    timezone?: string;
   };
   planetLines?: PlanetLine[];
   // 城市快捷提问：由父组件接管“打开 Ask AI 并自动发送”的行为
@@ -55,6 +57,12 @@ interface AstrocartographyMapProps {
   defaultPanelOpen?: boolean;
   showInitialGuide?: boolean;
   embedded?: boolean;
+  initialCompareCities?: MapCity[];
+  initialComparisonGoal?: ComparisonGoal;
+  initialCurrentCity?: MapCity;
+  initialPlanDate?: string;
+  initialConstraints?: string;
+  initiallyOpenCompare?: boolean;
 }
 
 // Planet symbol mapping
@@ -256,6 +264,12 @@ const AstrocartographyMap = forwardRef<
     defaultPanelOpen,
     showInitialGuide = true,
     embedded = false,
+    initialCompareCities,
+    initialComparisonGoal,
+    initialCurrentCity,
+    initialPlanDate,
+    initialConstraints,
+    initiallyOpenCompare = false,
   },
   ref
 ) {
@@ -866,6 +880,12 @@ const AstrocartographyMap = forwardRef<
           onRequireLogin={onRequireLogin}
           maxCompareCities={maxCompareCities}
           userState={cityToolsUserState}
+          initialCompareCities={initialCompareCities}
+          initialComparisonGoal={initialComparisonGoal}
+          initialCurrentCity={initialCurrentCity}
+          initialPlanDate={initialPlanDate}
+          initialConstraints={initialConstraints}
+          initiallyOpenCompare={initiallyOpenCompare}
         />
       )}
 

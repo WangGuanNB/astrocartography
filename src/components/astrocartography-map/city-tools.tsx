@@ -13,6 +13,7 @@ import { useTranslations } from "next-intl";
 import {
   BarChart3,
   ArrowRight,
+  BookmarkCheck,
   Coins,
   Download,
   GitCompareArrows,
@@ -20,6 +21,7 @@ import {
   MapPin,
   Plus,
   Search,
+  Save,
   Sparkles,
   Trash2,
   ChevronDown,
@@ -32,6 +34,7 @@ import { MAJOR_CITIES } from "@/lib/cities";
 import PricingModal from "@/components/pricing/pricing-modal";
 import { Pricing as PricingType } from "@/types/blocks/pricing";
 import { useParams } from "next/navigation";
+import type { ResearchGoal } from "@/types/research-project";
 
 type PlanetLine = {
   planet: string;
@@ -45,6 +48,7 @@ export type MapCity = {
   country: string;
   lat: number;
   lng: number;
+  displayName?: string;
 };
 
 type CityToolsProps = {
@@ -65,16 +69,18 @@ type CityToolsProps = {
   onRequireLogin?: () => void;
   maxCompareCities?: number;
   userState?: "anonymous" | "signed_in";
+  initialCompareCities?: MapCity[];
+  initialComparisonGoal?: ResearchGoal;
+  initialCurrentCity?: MapCity;
+  initialPlanDate?: string;
+  initialConstraints?: string;
+  initiallyOpenCompare?: boolean;
 };
 
 type ToolMode = "check" | "compare" | null;
-type ComparisonGoal =
-  | "overall"
-  | "career"
-  | "relationships"
-  | "home"
-  | "travel";
+export type ComparisonGoal = ResearchGoal;
 type ReportStatus = "idle" | "loading" | "success" | "error";
+type SaveStatus = "idle" | "saving" | "saved" | "error";
 
 export type CityToolsHandle = {
   openCheckCity: () => void;
@@ -170,7 +176,13 @@ function analyzeCity(city: MapCity, planetLines: PlanetLine[]) {
 }
 
 function cityKey(city: MapCity) {
-  return `${city.name}-${city.country}-${city.lat}-${city.lng}`;
+  return `${city.lat.toFixed(5)}:${city.lng.toFixed(5)}`;
+}
+
+function localTodayIso() {
+  const now = new Date();
+  const localTime = new Date(now.getTime() - now.getTimezoneOffset() * 60_000);
+  return localTime.toISOString().slice(0, 10);
 }
 
 function strengthKey(distanceKm: number) {
@@ -448,6 +460,12 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     onRequireLogin,
     maxCompareCities = 4,
     userState = "signed_in",
+    initialCompareCities = [],
+    initialComparisonGoal = "overall",
+    initialCurrentCity,
+    initialPlanDate = "",
+    initialConstraints = "",
+    initiallyOpenCompare = false,
   },
   ref
 ) {
@@ -462,16 +480,22 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     key: string,
     values?: Record<string, string | number>
   ) => t(key as never, values as never);
-  const [mode, setMode] = useState<ToolMode>(null);
+  const initialCities = initialCompareCities.slice(0, maxCompareCities);
+  const [mode, setMode] = useState<ToolMode>(
+    initiallyOpenCompare ? "compare" : null
+  );
   const [checkQuery, setCheckQuery] = useState("");
   const [pendingCheckCity, setPendingCheckCity] = useState<MapCity | null>(null);
   const [checkedCity, setCheckedCity] = useState<MapCity | null>(null);
   const [compareQuery, setCompareQuery] = useState("");
   const [pendingCompareCity, setPendingCompareCity] = useState<MapCity | null>(null);
-  const [compareCities, setCompareCities] = useState<MapCity[]>([]);
+  const [compareCities, setCompareCities] =
+    useState<MapCity[]>(initialCities);
   const [comparisonGoal, setComparisonGoal] =
-    useState<ComparisonGoal>("overall");
-  const [comparisonReady, setComparisonReady] = useState(false);
+    useState<ComparisonGoal>(initialComparisonGoal);
+  const [comparisonReady, setComparisonReady] = useState(
+    initialCities.length >= 2
+  );
   const [reportStatus, setReportStatus] = useState<ReportStatus>("idle");
   const [reportText, setReportText] = useState("");
   const [reportError, setReportError] = useState("");
@@ -480,6 +504,22 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   );
   const [showPricingModal, setShowPricingModal] = useState(false);
   const [pricingData, setPricingData] = useState<PricingType | null>(null);
+  const [saveEditorOpen, setSaveEditorOpen] = useState(false);
+  const [currentCityQuery, setCurrentCityQuery] = useState(
+    initialCurrentCity
+      ? initialCurrentCity.displayName ||
+        [initialCurrentCity.name, initialCurrentCity.country]
+          .filter(Boolean)
+          .join(", ")
+      : ""
+  );
+  const [currentCity, setCurrentCity] = useState<MapCity | null>(
+    initialCurrentCity ?? null
+  );
+  const [planDate, setPlanDate] = useState(initialPlanDate);
+  const [constraints, setConstraints] = useState(initialConstraints);
+  const [saveStatus, setSaveStatus] = useState<SaveStatus>("idle");
+  const [saveError, setSaveError] = useState("");
   const [mounted, setMounted] = useState(false);
   const comparisonResultsRef = useRef<HTMLDivElement>(null);
   const fullReportRef = useRef<HTMLDivElement>(null);
@@ -512,6 +552,11 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     setReportStatus("idle");
     setReportText("");
     setReportError("");
+  }, [compareCities, comparisonGoal]);
+
+  useEffect(() => {
+    setSaveStatus("idle");
+    setSaveError("");
   }, [compareCities, comparisonGoal]);
 
   useEffect(() => {
@@ -574,6 +619,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   }));
 
   const selectCheckedCity = (result: {
+    displayName: string;
     name: string;
     country: string;
     coordinates: { latitude: number; longitude: number };
@@ -583,6 +629,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
       country: result.country,
       lat: result.coordinates.latitude,
       lng: result.coordinates.longitude,
+      displayName: result.displayName,
     };
     setPendingCheckCity(city);
   };
@@ -595,6 +642,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   };
 
   const addCompareCity = (result: {
+    displayName: string;
     name: string;
     country: string;
     coordinates: { latitude: number; longitude: number };
@@ -604,6 +652,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
       country: result.country,
       lat: result.coordinates.latitude,
       lng: result.coordinates.longitude,
+      displayName: result.displayName,
     };
 
     setPendingCompareCity(city);
@@ -681,6 +730,88 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
         });
       });
     });
+  };
+
+  const selectCurrentCity = (result: {
+    displayName: string;
+    name: string;
+    country: string;
+    coordinates: { latitude: number; longitude: number };
+  }) => {
+    setCurrentCity({
+      name: result.name,
+      country: result.country,
+      lat: result.coordinates.latitude,
+      lng: result.coordinates.longitude,
+      displayName: result.displayName,
+    });
+    setSaveStatus("idle");
+    setSaveError("");
+  };
+
+  const openSaveEditor = () => {
+    if (userState === "anonymous") {
+      requestLogin();
+      return;
+    }
+    setSaveEditorOpen(true);
+    setSaveStatus("idle");
+    setSaveError("");
+  };
+
+  const saveResearchProject = async () => {
+    if (!currentCity || !planDate || compareCities.length < 2) {
+      setSaveStatus("error");
+      setSaveError(t("researchProject.missingFields"));
+      return;
+    }
+    if (planDate < localTodayIso()) {
+      setSaveStatus("error");
+      setSaveError(t("researchProject.pastPlanDate"));
+      return;
+    }
+    if (
+      !Number.isFinite(birthData.latitude) ||
+      !Number.isFinite(birthData.longitude) ||
+      !birthData.timezone
+    ) {
+      setSaveStatus("error");
+      setSaveError(t("researchProject.missingBirthData"));
+      return;
+    }
+
+    setSaveStatus("saving");
+    setSaveError("");
+    try {
+      const response = await fetch("/api/research-project", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          birthProfile: {
+            date: birthData.date,
+            time: birthData.time,
+            location: birthData.location,
+            latitude: birthData.latitude,
+            longitude: birthData.longitude,
+            timezone: birthData.timezone,
+          },
+          goal: comparisonGoal,
+          currentCity,
+          candidateCities: compareCities.slice(0, 3),
+          planDate,
+          constraints,
+        }),
+      });
+      const result = await response.json();
+      if (!response.ok || result.code !== 0) {
+        throw new Error(result.message || "save failed");
+      }
+      setSaveStatus("saved");
+    } catch (error) {
+      console.error("Failed to save research project:", error);
+      setSaveStatus("error");
+      setSaveError(t("researchProject.saveError"));
+    }
   };
 
   const compareWithAI = (focus?: string) => {
@@ -1363,6 +1494,139 @@ ${lines}`;
                             </div>
                             );
                           }
+                        )}
+                      </div>
+
+                      <div className="mt-4 rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.055] p-4">
+                        <div className="flex items-start gap-3">
+                          <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-emerald-300/10 text-emerald-200">
+                            <BookmarkCheck className="size-4" />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <div className="text-sm font-bold text-white">
+                              {t("researchProject.title")}
+                            </div>
+                            <p className="mt-1 text-xs leading-relaxed text-white/55">
+                              {t("researchProject.description")}
+                            </p>
+                          </div>
+                        </div>
+
+                        {!saveEditorOpen ? (
+                          <button
+                            type="button"
+                            onClick={openSaveEditor}
+                            className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-300 px-4 py-3 text-sm font-bold text-[#0d201a] transition hover:bg-emerald-200"
+                          >
+                            <Save className="size-4" />
+                            {userState === "anonymous"
+                              ? t("researchProject.signInToSave")
+                              : t("researchProject.openEditor")}
+                          </button>
+                        ) : (
+                          <div className="mt-4 space-y-3">
+                            <div>
+                              <label className="mb-1.5 block text-xs font-semibold text-white/75">
+                                {t("researchProject.currentCityLabel")}
+                              </label>
+                              <LocationAutocomplete
+                                value={currentCityQuery}
+                                onChange={(value) => {
+                                  setCurrentCityQuery(value);
+                                  setCurrentCity(null);
+                                  setSaveStatus("idle");
+                                }}
+                                onSelect={selectCurrentCity}
+                                placeholder={t(
+                                  "researchProject.currentCityPlaceholder"
+                                )}
+                                className="h-10 border-white/15 bg-black/35 text-xs text-white placeholder:text-white/35"
+                              />
+                            </div>
+                            <div>
+                              <label
+                                htmlFor="research-project-plan-date"
+                                className="mb-1.5 block text-xs font-semibold text-white/75"
+                              >
+                                {t("researchProject.planDateLabel")}
+                              </label>
+                              <input
+                                id="research-project-plan-date"
+                                type="date"
+                                min={localTodayIso()}
+                                value={planDate}
+                                onChange={(event) => {
+                                  setPlanDate(event.target.value);
+                                  setSaveStatus("idle");
+                                }}
+                                className="h-10 w-full rounded-md border border-white/15 bg-black/35 px-3 text-xs text-white [color-scheme:dark]"
+                              />
+                            </div>
+                            <div>
+                              <label
+                                htmlFor="research-project-constraints"
+                                className="mb-1.5 block text-xs font-semibold text-white/75"
+                              >
+                                {t("researchProject.constraintsLabel")}
+                              </label>
+                              <textarea
+                                id="research-project-constraints"
+                                value={constraints}
+                                onChange={(event) =>
+                                  setConstraints(event.target.value)
+                                }
+                                maxLength={1500}
+                                rows={3}
+                                placeholder={t(
+                                  "researchProject.constraintsPlaceholder"
+                                )}
+                                className="w-full resize-y rounded-md border border-white/15 bg-black/35 px-3 py-2 text-xs text-white outline-none placeholder:text-white/35 focus:border-emerald-300/50"
+                              />
+                            </div>
+                            <p className="text-[10px] leading-relaxed text-white/45">
+                              {t("researchProject.privacyNote")}
+                            </p>
+                            {saveStatus === "error" && (
+                              <p className="text-xs text-rose-300">
+                                {saveError}
+                              </p>
+                            )}
+                            {saveStatus === "saved" && (
+                              <div className="rounded-xl border border-emerald-300/20 bg-emerald-300/10 p-3 text-xs text-emerald-100">
+                                <p>{t("researchProject.saved")}</p>
+                                <a
+                                  href={
+                                    locale === "en"
+                                      ? "/my-research"
+                                      : `/${locale}/my-research`
+                                  }
+                                  className="mt-2 inline-flex font-bold underline underline-offset-2"
+                                >
+                                  {t("researchProject.viewSaved")}
+                                </a>
+                              </div>
+                            )}
+                            <div className="flex gap-2">
+                              <button
+                                type="button"
+                                onClick={() => setSaveEditorOpen(false)}
+                                className="flex-1 rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold text-white/70 hover:bg-white/10"
+                              >
+                                {t("researchProject.cancel")}
+                              </button>
+                              <button
+                                type="button"
+                                disabled={saveStatus === "saving"}
+                                onClick={saveResearchProject}
+                                className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-emerald-300 px-4 py-2.5 text-xs font-bold text-[#0d201a] hover:bg-emerald-200 disabled:opacity-60"
+                              >
+                                <Save className="size-3.5" />
+                                {saveStatus === "saving"
+                                  ? t("researchProject.saving")
+                                  : t("researchProject.save")}
+                              </button>
+                            </div>
+                          </div>
                         )}
                       </div>
 

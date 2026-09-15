@@ -78,6 +78,47 @@
       "status": "Status"
     }
   },
+  "research_project": {
+    "navTitle": "My Research",
+    "title": "My Research Project",
+    "description": "Return to your saved relocation question without entering everything again.",
+    "empty": "You have not saved a city comparison yet.",
+    "startComparison": "Start a city comparison",
+    "savedProject": "Saved relocation research",
+    "continueResearch": "Continue research",
+    "goalLabel": "Research goal",
+    "planDateLabel": "Planned date",
+    "currentCityLabel": "Current city",
+    "birthProfileLabel": "Birth profile",
+    "candidatesLabel": "Candidate cities",
+    "constraintsLabel": "Practical constraints",
+    "goals": {
+      "overall": "Overall relocation fit",
+      "career": "Career & recognition",
+      "relationships": "Relationships & belonging",
+      "home": "Home & emotional stability",
+      "travel": "Travel & exploration"
+    }
+  },
+  "research_timing": {
+    "eyebrow": "Relocated-angle timing",
+    "title": "Timing windows for your saved cities",
+    "description": "Review day-level transit windows beginning on your planned date. This layer tracks each city's relocated ASC and MC; it does not replace the city comparison or rank one city as universally best.",
+    "window": "{days} days",
+    "loading": "Calculating city-specific timing windows…",
+    "errorTitle": "Timing could not be calculated",
+    "errorDescription": "Check that the saved planned date is today or later, then retry. If the problem continues, reopen the comparison and save the project again.",
+    "retry": "Try again",
+    "calculatedAt": "Calculated {date}",
+    "noEvents": "No major exact window was found within the selected orb. That is a valid no-change result; no event has been invented.",
+    "eventDetail": "Closest daily sample: {orb}° from exact to the relocated {angle}.",
+    "methodTitle": "Method and limits",
+    "methodDescription": "Daily scan at 12:00 local time for transiting Sun through Pluto (Moon excluded) forming conjunction, sextile, square, trine or opposition within {orb}° of each city's relocated natal ASC or MC.",
+    "limitation": "These are day-level astrological reference windows, not rankings, guarantees or practical travel advice. An uncertain birth time can shift the relocated angles; verify major decisions independently.",
+    "tones": { "supportive": "flow", "challenging": "review", "focused": "focus" },
+    "aspects": { "conjunction": "conjunct", "sextile": "sextile", "square": "square", "trine": "trine", "opposition": "opposite" },
+    "planets": { "Sun": "Sun", "Mercury": "Mercury", "Venus": "Venus", "Mars": "Mars", "Jupiter": "Jupiter", "Saturn": "Saturn", "Uranus": "Uranus", "Neptune": "Neptune", "Pluto": "Pluto" }
+  },
   "api_keys": {
     "title": "API Keys",
     "tip": "Please keep your apikey safe to avoid leaks",
@@ -383,7 +424,8 @@
         "calculationFailed": "Calculation failed",
         "generationFailed": "Failed to generate chart",
         "missingInfo": "Missing required birth information",
-        "returnToRegenerate": "Return to Regenerate"
+        "returnToRegenerate": "Return to Regenerate",
+        "researchProjectMissing": "Your saved research project could not be loaded."
       },
       "buttons": {
         "returnHome": "Return Home",
@@ -507,11 +549,32 @@
       ]
     },
     "cityTools": {
+      "researchProject": {
+        "title": "Save these cities and continue later",
+        "description": "Keep this comparison, goal, current city and planned date together in My Research.",
+        "openEditor": "Save these cities",
+        "signInToSave": "Sign in to save these cities",
+        "currentCityLabel": "Where do you live now?",
+        "currentCityPlaceholder": "Search your current city...",
+        "planDateLabel": "When are you planning to move or travel?",
+        "constraintsLabel": "Practical constraints (optional)",
+        "constraintsPlaceholder": "Budget, work, visa, family, climate, or anything else you need to consider...",
+        "privacyNote": "Only the details shown here are saved to your private account. Saving updates your single current research project.",
+        "missingFields": "Select your current city and planned date before saving.",
+        "pastPlanDate": "Choose today or a future planned date.",
+        "missingBirthData": "This chart is missing the precise location or time zone needed to save it.",
+        "saveError": "Your project could not be saved. Please try again.",
+        "saved": "Project saved. You can now leave and continue it from your account.",
+        "viewSaved": "View My Research",
+        "cancel": "Not now",
+        "save": "Save project",
+        "saving": "Saving..."
+      },
       "checkEyebrow": "CITY CHECK",
       "checkTitle": "Check a City Against Your Map",
       "checkDescription": "Enter a real city to review nearby planetary lines, approximate distance, strength, and map evidence.",
       "compareTitle": "Compare Cities",
-      "compareDescription": "Add 2–4 places, choose a goal, and compare calculated support, caution, and trade-offs side by side.",
+      "compareDescription": "Add 2–3 places, choose a goal, and compare calculated support, caution, and trade-offs side by side.",
       "suggestedNearTitle": "Cities near your lines",
       "suggestedNearHint": "Tap to add a city. Search below if you want somewhere else.",
       "showDetails": "Show details",
