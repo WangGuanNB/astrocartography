@@ -406,6 +406,114 @@ export const homeInlineMapEvents = {
 };
 
 /**
+ * 迁居研究与订阅价值漏斗事件。
+ * 支付创建和支付成功继续由现有 checkout_created / purchase 事件负责；
+ * 这里仅补齐付款前的产品发现、保存和时间层使用路径。
+ */
+export const researchFunnelEvents = {
+  entryViewed: (surface: 'home_inline_map' | 'chart_map') => {
+    trackEvent('research_entry_viewed', {
+      surface,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  entryClicked: (surface: 'home_inline_map' | 'chart_map') => {
+    trackEvent('research_entry_clicked', {
+      surface,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  savePromptViewed: (
+    userState: 'anonymous' | 'signed_in',
+    cityCount: number
+  ) => {
+    trackEvent('research_save_prompt_viewed', {
+      user_state: userState,
+      city_count: cityCount,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  saveStarted: (
+    userState: 'anonymous' | 'signed_in',
+    source: 'result_top' | 'result_card'
+  ) => {
+    trackEvent('research_save_started', {
+      user_state: userState,
+      source,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  projectSaved: (cityCount: number, goal: string) => {
+    trackEvent('research_project_saved', {
+      city_count: cityCount,
+      goal,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  projectSaveFailed: () => {
+    trackEvent('research_project_save_failed', {
+      event_category: 'Research Funnel',
+    });
+  },
+
+  timingRequested: (windowDays: 30 | 90, tier: string) => {
+    trackEvent('research_timing_requested', {
+      window_days: windowDays,
+      access_tier: tier,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  timingViewed: (
+    windowDays: 30 | 90,
+    tier: string,
+    source: 'live' | 'saved',
+    previewApplied: boolean
+  ) => {
+    trackEvent('research_timing_viewed', {
+      window_days: windowDays,
+      access_tier: tier,
+      report_source: source,
+      preview_applied: previewApplied,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  timingLocked: (
+    windowDays: 30 | 90,
+    tier: string,
+    subscriptionEnabled: boolean
+  ) => {
+    trackEvent('research_timing_locked', {
+      window_days: windowDays,
+      access_tier: tier,
+      subscription_enabled: subscriptionEnabled,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  plusOfferClicked: (source: 'timing_lock') => {
+    trackEvent('research_plus_offer_clicked', {
+      source,
+      event_category: 'Research Funnel',
+    });
+  },
+
+  timingExported: (windowDays: 30 | 90, tier: string) => {
+    trackEvent('research_timing_exported', {
+      window_days: windowDays,
+      access_tier: tier,
+      event_category: 'Research Funnel',
+    });
+  },
+};
+
+/**
  * 付费相关事件
  */
 export const paymentEvents = {

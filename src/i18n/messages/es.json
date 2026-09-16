@@ -484,7 +484,7 @@
         "newChart": "Nueva Carta",
         "checkCity": "Consultar ciudad",
         "compareCities": "Comparar ciudades",
-        "askAI": "Preguntar IA",
+        "askAI": "Interpretar mi mapa",
         "new": "Nuevo"
       }
     },
@@ -493,13 +493,18 @@
       "title": "Tu mapa de astrocartografía",
       "openFullMap": "Abrir mapa completo",
       "mobileFullMapHint": "Abrir mapa completo para ver más →",
+      "researchPromptEyebrow": "INVESTIGACIÓN DE REUBICACIÓN",
+      "researchPromptTitle": "¿Planeas mudarte o hacer un viaje largo?",
+      "researchPromptDescription": "Compara 2–3 ciudades, guarda tu selección y revisa próximos periodos clave.",
+      "researchPromptCompactDescription": "Compara 2–3 ciudades y guarda tu selección.",
+      "researchPromptCta": "Iniciar investigación",
       "interpretTitle": "Interpreta este mapa",
       "interpretDescription": "Empieza con el mapa generado. Revisa una ciudad, compara lugares y luego pregunta a la IA usando la evidencia del mapa.",
       "askAIDescription": "Obtén una interpretación personal de tu mapa generado.",
       "checkCityDescription": "Revisa líneas planetarias cercanas, distancia e intensidad.",
       "compareCitiesDescription": "¿No sabes qué ciudad encaja mejor contigo? Compara opciones lado a lado.",
       "nextStepTitle": "Qué hacer ahora",
-      "nextStepDescription": "Usa Preguntar a IA para interpretar, Revisar ciudad para un lugar concreto o Comparar ciudades al elegir entre ubicaciones."
+      "nextStepDescription": "Interpreta tu mapa para recibir orientación, consulta una ciudad o compara lugares lado a lado."
     },
     "result": {
       "title": "¡Mira mi Carta de Astrocartografía!",
@@ -582,6 +587,10 @@
     },
     "cityTools": {
       "researchProject": {
+        "quickTitle": "Guarda esta comparación y consulta próximos periodos",
+        "quickDescription": "Conserva tu selección y abre una vista previa gratuita de 30 días en Mi investigación.",
+        "quickCta": "Guardar y ver periodos",
+        "quickSignInCta": "Inicia sesión para guardar y ver periodos",
         "title": "Guarda estas ciudades y continúa después",
         "description": "Conserva juntos esta comparación, el objetivo, tu ciudad actual y la fecha prevista en Mi investigación.",
         "openEditor": "Guardar estas ciudades",

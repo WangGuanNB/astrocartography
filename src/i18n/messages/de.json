@@ -437,7 +437,7 @@
         "newChart": "Neue Karte",
         "checkCity": "Stadt prüfen",
         "compareCities": "Städte vergleichen",
-        "askAI": "KI fragen",
+        "askAI": "Meine Karte deuten",
         "new": "Neu"
       }
     },
@@ -446,13 +446,18 @@
       "title": "Ihre Astrokartografie-Karte",
       "openFullMap": "Vollbildkarte öffnen",
       "mobileFullMapHint": "Vollständige Karte mit mehr Platz öffnen →",
+      "researchPromptEyebrow": "UMZUGSRECHERCHE",
+      "researchPromptTitle": "Planen Sie einen Umzug oder eine längere Reise?",
+      "researchPromptDescription": "Vergleichen Sie 2–3 Städte, speichern Sie Ihre Auswahl und prüfen Sie kommende Zeitfenster.",
+      "researchPromptCompactDescription": "Vergleichen Sie 2–3 Städte und speichern Sie Ihre Auswahl.",
+      "researchPromptCta": "Umzugsrecherche starten",
       "interpretTitle": "Diese Karte deuten",
       "interpretDescription": "Beginnen Sie mit der erstellten Karte. Prüfen Sie eine Stadt, vergleichen Sie Orte und fragen Sie dann die KI mit Kartennachweisen.",
       "askAIDescription": "Erhalten Sie eine persönliche Deutung Ihrer generierten Karte.",
       "checkCityDescription": "Prüfen Sie nahe Planetenlinien, Entfernung und Stärke.",
       "compareCitiesDescription": "Unsicher, welche Stadt besser passt? Vergleichen Sie Optionen nebeneinander.",
       "nextStepTitle": "Was als Nächstes?",
-      "nextStepDescription": "Nutzen Sie KI fragen für eine Deutung, Stadt prüfen für einen bestimmten Ort oder Städte vergleichen, wenn Sie zwischen Orten wählen."
+      "nextStepDescription": "Deuten Sie Ihre Karte persönlich, prüfen Sie eine Stadt oder vergleichen Sie Orte direkt."
     },
     "result": {
       "title": "Schauen Sie sich meine Astrokartografie-Karte an!",
@@ -535,6 +540,10 @@
     },
     "cityTools": {
       "researchProject": {
+        "quickTitle": "Vergleich speichern und kommende Zeitfenster ansehen",
+        "quickDescription": "Speichere deine Auswahl und öffne eine kostenlose 30-Tage-Vorschau in Meine Recherche.",
+        "quickCta": "Speichern & Zeitfenster ansehen",
+        "quickSignInCta": "Anmelden, speichern & Zeitfenster ansehen",
         "title": "Diese Städte speichern und später fortsetzen",
         "description": "Speichere Vergleich, Ziel, aktuellen Wohnort und geplantes Datum gemeinsam in Meine Recherche.",
         "openEditor": "Diese Städte speichern",

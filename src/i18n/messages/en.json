@@ -455,7 +455,7 @@
         "newChart": "New Chart",
         "checkCity": "Check City",
         "compareCities": "Compare Cities",
-        "askAI": "Ask AI",
+        "askAI": "Interpret My Map",
         "new": "New"
       }
     },
@@ -464,13 +464,18 @@
       "title": "Your Astrocartography Map",
       "openFullMap": "Open full map",
       "mobileFullMapHint": "Open full map for more space →",
+      "researchPromptEyebrow": "RELOCATION RESEARCH",
+      "researchPromptTitle": "Planning a move or long trip?",
+      "researchPromptDescription": "Compare 2–3 cities, save your shortlist, and review upcoming timing windows.",
+      "researchPromptCompactDescription": "Compare 2–3 cities and save your shortlist.",
+      "researchPromptCta": "Start relocation research",
       "interpretTitle": "Interpret this map",
       "interpretDescription": "Start with the generated map. Check one city, compare places, then ask AI using the map evidence.",
       "askAIDescription": "Get a personal interpretation from your generated map.",
       "checkCityDescription": "Review nearby planetary lines, distance, and strength.",
       "compareCitiesDescription": "Not sure which city fits you best? Compare options side by side.",
       "nextStepTitle": "What to do next",
-      "nextStepDescription": "Use Ask AI for interpretation, Check City for a specific place, or Compare Cities when choosing between locations."
+      "nextStepDescription": "Interpret your map for personal guidance, check one city, or compare locations side by side."
     },
     "result": {
       "title": "Check out my Astrocartography Chart!",
@@ -571,6 +576,10 @@
     },
     "cityTools": {
       "researchProject": {
+        "quickTitle": "Save this comparison and see upcoming timing",
+        "quickDescription": "Keep your shortlist and open a free 30-day timing preview in My Research.",
+        "quickCta": "Save & view timing",
+        "quickSignInCta": "Sign in to save & view timing",
         "title": "Save these cities and continue later",
         "description": "Keep this comparison, goal, current city and planned date together in My Research.",
         "openEditor": "Save these cities",

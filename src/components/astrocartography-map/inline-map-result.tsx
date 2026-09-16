@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -15,7 +15,11 @@ import { Button } from "@/components/ui/button";
 import AstroChat from "@/components/astro-chat";
 import type { AstrocartographyMapHandle } from "@/components/astrocartography-map";
 import type { User } from "@/types/user";
-import { askAIEvents, homeInlineMapEvents } from "@/lib/analytics";
+import {
+  askAIEvents,
+  homeInlineMapEvents,
+  researchFunnelEvents,
+} from "@/lib/analytics";
 
 const AstrocartographyMap = dynamic(
   () => import("@/components/astrocartography-map"),
@@ -73,6 +77,10 @@ export default function InlineMapResult({
     "city_comparison_report" | undefined
   >(undefined);
 
+  useEffect(() => {
+    researchFunnelEvents.entryViewed("home_inline_map");
+  }, []);
+
   const openAskAI = () => {
     setAskOtherPrefillText(null);
     setAskOtherRequestType(undefined);
@@ -89,6 +97,11 @@ export default function InlineMapResult({
   const openCompareCities = () => {
     mapRef.current?.openCompareCities();
     homeInlineMapEvents.compareCitiesClicked();
+  };
+
+  const openRelocationResearch = () => {
+    researchFunnelEvents.entryClicked("home_inline_map");
+    openCompareCities();
   };
 
   const handleAskOther = (
@@ -185,6 +198,22 @@ export default function InlineMapResult({
                   </span>
                 </span>
               </button>
+              <button
+                type="button"
+                onClick={openRelocationResearch}
+                className="mt-2 flex w-full items-center gap-3 rounded-2xl border border-amber-200/15 bg-amber-200/[0.055] px-4 py-3 text-left text-white transition hover:border-amber-200/25 hover:bg-amber-200/[0.09]"
+              >
+                <GitCompareArrows className="size-4 shrink-0 text-amber-300" />
+                <span className="min-w-0 flex-1">
+                  <span className="block text-sm font-bold">
+                    {t("inlineResult.researchPromptTitle")}
+                  </span>
+                  <span className="mt-0.5 block text-xs leading-snug text-white/50">
+                    {t("inlineResult.researchPromptCompactDescription")}
+                  </span>
+                </span>
+                <span className="shrink-0 text-sm text-amber-200">→</span>
+              </button>
               <div className="mt-2 grid gap-2">
                 <button
                   type="button"
@@ -198,21 +227,6 @@ export default function InlineMapResult({
                     </span>
                     <span className="mt-0.5 block text-xs leading-snug text-white/55">
                       {t("inlineResult.checkCityDescription")}
-                    </span>
-                  </span>
-                </button>
-                <button
-                  type="button"
-                  onClick={openCompareCities}
-                  className="flex w-full items-center gap-3 rounded-2xl border border-amber-200/15 bg-amber-200/[0.07] px-4 py-3 text-left text-white transition hover:bg-amber-200/[0.12]"
-                >
-                  <GitCompareArrows className="size-4 shrink-0 text-amber-300" />
-                  <span className="min-w-0">
-                    <span className="block text-sm font-bold">
-                      {t("messages.buttons.compareCities")}
-                    </span>
-                    <span className="mt-0.5 block text-xs leading-snug text-white/55">
-                      {t("inlineResult.compareCitiesDescription")}
                     </span>
                   </span>
                 </button>
@@ -254,6 +268,22 @@ export default function InlineMapResult({
             </button>
             <button
               type="button"
+              onClick={openRelocationResearch}
+              className="flex w-full items-center gap-3 rounded-2xl border border-amber-200/15 bg-amber-200/[0.045] px-4 py-3 text-left text-white transition hover:border-amber-200/25 hover:bg-amber-200/[0.08]"
+            >
+              <GitCompareArrows className="size-4 shrink-0 text-amber-300" />
+              <span className="min-w-0 flex-1">
+                <span className="block text-sm font-bold">
+                  {t("inlineResult.researchPromptTitle")}
+                </span>
+                <span className="mt-0.5 block text-xs leading-snug text-white/50">
+                  {t("inlineResult.researchPromptCompactDescription")}
+                </span>
+              </span>
+              <span className="shrink-0 text-sm text-amber-200">→</span>
+            </button>
+            <button
+              type="button"
               onClick={openCheckCity}
               className="flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 text-left text-white transition hover:bg-white/10"
             >
@@ -264,21 +294,6 @@ export default function InlineMapResult({
                 </span>
                 <span className="mt-0.5 block text-xs leading-snug text-white/55">
                   {t("inlineResult.checkCityDescription")}
-                </span>
-              </span>
-            </button>
-            <button
-              type="button"
-              onClick={openCompareCities}
-              className="flex w-full items-center gap-3 rounded-2xl border border-amber-200/15 bg-amber-200/[0.055] px-4 py-3 text-left text-white transition hover:bg-amber-200/[0.1]"
-            >
-              <GitCompareArrows className="size-4 shrink-0 text-amber-300" />
-              <span className="min-w-0">
-                <span className="block text-sm font-bold">
-                  {t("messages.buttons.compareCities")}
-                </span>
-                <span className="mt-0.5 block text-xs leading-snug text-white/55">
-                  {t("inlineResult.compareCitiesDescription")}
                 </span>
               </span>
             </button>

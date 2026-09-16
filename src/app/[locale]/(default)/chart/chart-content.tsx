@@ -20,7 +20,11 @@ import dynamic from 'next/dynamic';
 import AstroChat from '@/components/astro-chat';
 import { useAppContext } from '@/contexts/app';
 import SignModal from '@/components/sign/modal';
-import { askAIEvents, paymentEvents } from '@/lib/analytics';
+import {
+  askAIEvents,
+  paymentEvents,
+  researchFunnelEvents,
+} from '@/lib/analytics';
 import { useIsMobile } from '@/hooks/use-mobile';
 import type { AstrocartographyMapHandle } from '@/components/astrocartography-map';
 import { toast } from 'sonner';
@@ -64,6 +68,7 @@ export default function ChartContent() {
   const isMobile = useIsMobile();
   const { user, setShowSignModal } = useAppContext();
   const mapExportRef = useRef<AstrocartographyMapHandle>(null);
+  const researchEntryViewedRef = useRef(false);
   const [chartEntitlements, setChartEntitlements] =
     useState<UserEntitlements | null>(null);
   const [showChartPricingModal, setShowChartPricingModal] = useState(false);
@@ -341,6 +346,24 @@ export default function ChartContent() {
     }
   }, [isLoading, birthData, planetLines, error, chatOpen, hasAutoPopped, user]);
 
+  useEffect(() => {
+    if (
+      researchEntryViewedRef.current ||
+      !chartData ||
+      !birthData ||
+      planetLines.length === 0
+    ) {
+      return;
+    }
+    researchEntryViewedRef.current = true;
+    researchFunnelEvents.entryViewed('chart_map');
+  }, [chartData, birthData, planetLines.length]);
+
+  const openRelocationResearch = () => {
+    researchFunnelEvents.entryClicked('chart_map');
+    mapExportRef.current?.openCompareCities();
+  };
+
   const handleMobileCompareClick = () => {
     setShowMobileCompareNew(false);
     try {
@@ -348,7 +371,7 @@ export default function ChartContent() {
     } catch {
       // Ignore storage failures; the feature remains usable.
     }
-    mapExportRef.current?.openCompareCities();
+    openRelocationResearch();
   };
 
   // 防止 hydration 不匹配：只在客户端挂载后渲染内容
@@ -593,27 +616,28 @@ export default function ChartContent() {
                   </Button>
                 </Link>
 
-                <div className="mt-2 border-t border-white/15 pt-3">
-                  <p className="mb-2 px-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/45">
-                    Explore locations
-                  </p>
-                  <div className="flex flex-col gap-2">
-                    <Button
-                      onClick={() => mapExportRef.current?.openCheckCity()}
-                      className="w-full justify-start bg-black/80 backdrop-blur-md hover:bg-black/90 text-white border border-white/20"
-                    >
-                      <Search className="size-4 mr-2 text-purple-300" />
-                      Check City
-                    </Button>
-                    <Button
-                      onClick={() => mapExportRef.current?.openCompareCities()}
-                      className="w-full justify-start bg-black/80 backdrop-blur-md hover:bg-black/90 text-white border border-white/20"
-                    >
-                      <GitCompareArrows className="size-4 mr-2 text-amber-300" />
-                      Compare Cities
-                    </Button>
-                  </div>
-                </div>
+                <Button
+                  onClick={() => mapExportRef.current?.openCheckCity()}
+                  className="mt-2 w-full justify-start border border-white/20 bg-black/80 text-white backdrop-blur-md hover:bg-black/90"
+                >
+                  <Search className="mr-2 size-4 text-purple-300" />
+                  {t('messages.buttons.checkCity')}
+                </Button>
+                <Button
+                  onClick={openRelocationResearch}
+                  variant="outline"
+                  className="h-auto w-full justify-start whitespace-normal border-amber-200/20 bg-amber-200/[0.055] px-3 py-2.5 text-left text-white hover:bg-amber-200/[0.09] hover:text-white"
+                >
+                  <GitCompareArrows className="mr-2 size-4 shrink-0 text-amber-300" />
+                  <span className="min-w-0">
+                    <span className="block text-xs font-bold">
+                      {t('inlineResult.researchPromptTitle')}
+                    </span>
+                    <span className="mt-0.5 block text-[10px] font-normal leading-snug text-white/50">
+                      {t('inlineResult.researchPromptCompactDescription')}
+                    </span>
+                  </span>
+                </Button>
               </div>
             </div>
           </div>

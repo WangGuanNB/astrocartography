@@ -15,6 +15,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
+import { researchFunnelEvents } from "@/lib/analytics";
 import type { ResearchAccess } from "@/services/research-entitlements";
 import type { ResearchTimingReport } from "@/types/research-timing";
 import type { ResearchTimingWindow } from "@/types/research-timing";
@@ -67,6 +68,7 @@ export default function ResearchTimingLayer({
   useEffect(() => {
     const controller = new AbortController();
     setState("loading");
+    researchFunnelEvents.timingRequested(windowDays, access.tier);
 
     fetch(`/api/research-project/timing?days=${windowDays}`, {
       cache: "no-store",
@@ -83,10 +85,21 @@ export default function ResearchTimingLayer({
         if (nextPayload.locked || !nextPayload.report) {
           setReport(null);
           setState("locked");
+          researchFunnelEvents.timingLocked(
+            windowDays,
+            nextPayload.access.tier,
+            nextPayload.access.subscriptionEnabled
+          );
           return;
         }
         setReport(nextPayload.report);
         setState("success");
+        researchFunnelEvents.timingViewed(
+          windowDays,
+          nextPayload.access.tier,
+          nextPayload.source ?? "live",
+          Boolean(nextPayload.previewApplied)
+        );
       })
       .catch((error) => {
         if (error instanceof DOMException && error.name === "AbortError") return;
@@ -111,6 +124,7 @@ export default function ResearchTimingLayer({
     anchor.click();
     anchor.remove();
     URL.revokeObjectURL(url);
+    researchFunnelEvents.timingExported(report.windowDays, access.tier);
   }
 
   return (
@@ -189,7 +203,12 @@ export default function ResearchTimingLayer({
                 </p>
                 {access.subscriptionEnabled ? (
                   <Button asChild size="sm" className="mt-4">
-                    <Link href={"/#pricing" as any}>
+                    <Link
+                      href={"/#pricing" as any}
+                      onClick={() =>
+                        researchFunnelEvents.plusOfferClicked("timing_lock")
+                      }
+                    >
                       {accessT("viewPlans")}
                     </Link>
                   </Button>

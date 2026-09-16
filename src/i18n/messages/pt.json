@@ -411,7 +411,7 @@
         "newChart": "Novo Mapa",
         "checkCity": "Ver cidade",
         "compareCities": "Comparar cidades",
-        "askAI": "Perguntar IA",
+        "askAI": "Interpretar meu mapa",
         "new": "Novo"
       }
     },
@@ -420,13 +420,18 @@
       "title": "Seu mapa de astrocartografia",
       "openFullMap": "Abrir mapa completo",
       "mobileFullMapHint": "Abrir mapa completo para ver melhor →",
+      "researchPromptEyebrow": "PESQUISA DE RELOCAÇÃO",
+      "researchPromptTitle": "Está a planear mudar-se ou fazer uma viagem longa?",
+      "researchPromptDescription": "Compare 2–3 cidades, guarde a sua seleção e consulte os próximos períodos.",
+      "researchPromptCompactDescription": "Compare 2–3 cidades e guarde a sua seleção.",
+      "researchPromptCta": "Iniciar pesquisa",
       "interpretTitle": "Interpretar este mapa",
       "interpretDescription": "Comece pelo mapa gerado. Verifique uma cidade, compare lugares e depois pergunte à IA usando as evidências do mapa.",
       "askAIDescription": "Receba uma interpretação pessoal do mapa gerado.",
       "checkCityDescription": "Veja linhas planetárias próximas, distância e intensidade.",
       "compareCitiesDescription": "Não sabe que cidade combina melhor consigo? Compare opções lado a lado.",
       "nextStepTitle": "O que fazer agora",
-      "nextStepDescription": "Use Perguntar à IA para interpretação, Verificar cidade para um lugar específico ou Comparar cidades ao escolher entre locais."
+      "nextStepDescription": "Interprete o seu mapa, verifique uma cidade ou compare locais lado a lado."
     },
     "result": {
       "title": "Confira meu Mapa de Astrocartografia!",
@@ -509,6 +514,10 @@
     },
     "cityTools": {
       "researchProject": {
+        "quickTitle": "Salve a comparação e veja os próximos períodos",
+        "quickDescription": "Guarde a sua seleção e abra uma prévia gratuita de 30 dias em Minha pesquisa.",
+        "quickCta": "Salvar e ver períodos",
+        "quickSignInCta": "Entre para salvar e ver períodos",
         "title": "Salve estas cidades e continue depois",
         "description": "Mantenha juntos esta comparação, objetivo, cidade atual e data planejada em Minha pesquisa.",
         "openEditor": "Salvar estas cidades",

@@ -29,7 +29,12 @@ import {
   X,
 } from "lucide-react";
 import { LocationAutocomplete } from "@/components/ui/location-autocomplete";
-import { authEvents, cityToolEvents, paymentEvents } from "@/lib/analytics";
+import {
+  authEvents,
+  cityToolEvents,
+  paymentEvents,
+  researchFunnelEvents,
+} from "@/lib/analytics";
 import { MAJOR_CITIES } from "@/lib/cities";
 import PricingModal from "@/components/pricing/pricing-modal";
 import { Pricing as PricingType } from "@/types/blocks/pricing";
@@ -522,6 +527,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   const [saveError, setSaveError] = useState("");
   const [mounted, setMounted] = useState(false);
   const comparisonResultsRef = useRef<HTMLDivElement>(null);
+  const saveProjectRef = useRef<HTMLDivElement>(null);
   const fullReportRef = useRef<HTMLDivElement>(null);
   const comparisonResults = useMemo(
     () =>
@@ -721,6 +727,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
         ? fitScoreFromRawScore(topResult.score, topResult.evidence.length)
         : undefined
     );
+    researchFunnelEvents.savePromptViewed(userState, compareCities.length);
     setComparisonReady(true);
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
@@ -750,6 +757,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   };
 
   const openSaveEditor = () => {
+    researchFunnelEvents.saveStarted(userState, "result_top");
     if (userState === "anonymous") {
       requestLogin();
       return;
@@ -757,6 +765,12 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     setSaveEditorOpen(true);
     setSaveStatus("idle");
     setSaveError("");
+    requestAnimationFrame(() => {
+      saveProjectRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
   };
 
   const saveResearchProject = async () => {
@@ -807,10 +821,15 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
         throw new Error(result.message || "save failed");
       }
       setSaveStatus("saved");
+      researchFunnelEvents.projectSaved(
+        compareCities.length,
+        comparisonGoal
+      );
     } catch (error) {
       console.error("Failed to save research project:", error);
       setSaveStatus("error");
       setSaveError(t("researchProject.saveError"));
+      researchFunnelEvents.projectSaveFailed();
     }
   };
 
@@ -1310,7 +1329,9 @@ ${lines}`;
                   ) : (
                     <div
                       ref={comparisonResultsRef}
-                      className="scroll-mt-4 pb-28 md:pb-0"
+                      className={`scroll-mt-4 md:pb-0 ${
+                        reportStatus === "idle" ? "" : "pb-28"
+                      }`}
                     >
                       <div className="text-xs font-bold uppercase tracking-[0.16em] text-amber-200">
                         {t("resultsTitle")}
@@ -1327,6 +1348,29 @@ ${lines}`;
                         <p className="mt-1.5 text-xs leading-relaxed text-white/55">
                           {t("rankingDisclaimer")}
                         </p>
+                      </div>
+                      <div className="mt-3 rounded-2xl border border-emerald-300/25 bg-gradient-to-r from-emerald-300/[0.09] to-purple-400/[0.07] p-4">
+                        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2 text-sm font-bold text-white">
+                              <BookmarkCheck className="size-4 shrink-0 text-emerald-200" />
+                              {t("researchProject.quickTitle")}
+                            </div>
+                            <p className="mt-1 text-xs leading-relaxed text-white/55">
+                              {t("researchProject.quickDescription")}
+                            </p>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={openSaveEditor}
+                            className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-emerald-300 px-4 py-2.5 text-xs font-bold text-[#0d201a] transition hover:bg-emerald-200"
+                          >
+                            <Save className="size-3.5" />
+                            {userState === "anonymous"
+                              ? t("researchProject.quickSignInCta")
+                              : t("researchProject.quickCta")}
+                          </button>
+                        </div>
                       </div>
                       <div className="mt-3 grid gap-3 lg:grid-cols-2">
                         {comparisonResults.map(
@@ -1497,33 +1541,25 @@ ${lines}`;
                         )}
                       </div>
 
-                      <div className="mt-4 rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.055] p-4">
-                        <div className="flex items-start gap-3">
-                          <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-emerald-300/10 text-emerald-200">
-                            <BookmarkCheck className="size-4" />
-                          </div>
-                          <div className="min-w-0 flex-1">
-                            <div className="text-sm font-bold text-white">
-                              {t("researchProject.title")}
+                      {saveEditorOpen && (
+                        <div
+                          ref={saveProjectRef}
+                          className="mt-4 scroll-mt-4 rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.055] p-4"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-emerald-300/10 text-emerald-200">
+                              <BookmarkCheck className="size-4" />
                             </div>
-                            <p className="mt-1 text-xs leading-relaxed text-white/55">
-                              {t("researchProject.description")}
-                            </p>
+                            <div className="min-w-0 flex-1">
+                              <div className="text-sm font-bold text-white">
+                                {t("researchProject.title")}
+                              </div>
+                              <p className="mt-1 text-xs leading-relaxed text-white/55">
+                                {t("researchProject.description")}
+                              </p>
+                            </div>
                           </div>
-                        </div>
 
-                        {!saveEditorOpen ? (
-                          <button
-                            type="button"
-                            onClick={openSaveEditor}
-                            className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-300 px-4 py-3 text-sm font-bold text-[#0d201a] transition hover:bg-emerald-200"
-                          >
-                            <Save className="size-4" />
-                            {userState === "anonymous"
-                              ? t("researchProject.signInToSave")
-                              : t("researchProject.openEditor")}
-                          </button>
-                        ) : (
                           <div className="mt-4 space-y-3">
                             <div>
                               <label className="mb-1.5 block text-xs font-semibold text-white/75">
@@ -1627,8 +1663,8 @@ ${lines}`;
                               </button>
                             </div>
                           </div>
-                        )}
-                      </div>
+                        </div>
+                      )}
 
                       <div
                         ref={fullReportRef}
@@ -1769,7 +1805,9 @@ ${lines}`;
           </div>
         </div>
 
-        {mode === "compare" && comparisonReady && (
+        {mode === "compare" &&
+          comparisonReady &&
+          reportStatus !== "idle" && (
           <div className="fixed inset-x-0 bottom-0 z-[1900] border-t border-white/10 bg-[#100c18]/95 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_-8px_30px_rgba(0,0,0,0.45)] backdrop-blur-md md:hidden">
             {reportStatus === "success" ? (
               <div className="mx-auto flex max-w-lg gap-2">

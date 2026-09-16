@@ -455,7 +455,7 @@
         "newChart": "新星盘图",
         "checkCity": "检查城市",
         "compareCities": "城市对比",
-        "askAI": "询问 AI",
+        "askAI": "解读我的地图",
         "new": "新"
       }
     },
@@ -464,13 +464,18 @@
       "title": "你的星盘地图",
       "openFullMap": "打开全屏地图",
       "mobileFullMapHint": "想查看完整地图？打开全屏地图 →",
+      "researchPromptEyebrow": "迁居研究",
+      "researchPromptTitle": "正在计划搬迁或长期旅行？",
+      "researchPromptDescription": "对比 2–3 个城市，保存候选清单，并查看未来的时间窗口。",
+      "researchPromptCompactDescription": "对比 2–3 个城市并保存候选清单。",
+      "researchPromptCta": "开始迁居研究",
       "interpretTitle": "解读这张地图",
       "interpretDescription": "先从生成的地图开始。你可以检查一个城市、对比多个地点，然后基于地图证据询问 AI。",
       "askAIDescription": "根据你生成的地图获得个人解读。",
       "checkCityDescription": "查看附近的行星线、距离和强度。",
       "compareCitiesDescription": "不确定哪个城市更适合你？并排对比多个选择。",
       "nextStepTitle": "下一步做什么",
-      "nextStepDescription": "用 Ask AI 获取解读，用检查城市查看具体地点，或在多个城市之间做对比。"
+      "nextStepDescription": "获取个人化地图解读，检查某个城市，或并排对比多个地点。"
     },
     "result": {
       "title": "查看我的星盘地图！",
@@ -554,6 +559,10 @@
     },
     "cityTools": {
       "researchProject": {
+        "quickTitle": "保存本次对比并查看未来时间",
+        "quickDescription": "保留候选城市，并在“我的研究”中查看免费的 30 天时间预览。",
+        "quickCta": "保存并查看时间",
+        "quickSignInCta": "登录后保存并查看时间",
         "title": "保存这些城市，以后继续比较",
         "description": "把本次比较、研究目标、现居城市和计划日期一起保存到“我的研究”。",
         "openEditor": "保存这些城市",
