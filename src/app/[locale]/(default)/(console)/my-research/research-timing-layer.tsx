@@ -1,14 +1,34 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CalendarRange, Clock3, Info, Loader2, RefreshCw } from "lucide-react";
+import {
+  AlertTriangle,
+  CalendarRange,
+  Clock3,
+  Download,
+  Info,
+  Loader2,
+  LockKeyhole,
+  RefreshCw,
+} from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "@/i18n/navigation";
+import type { ResearchAccess } from "@/services/research-entitlements";
 import type { ResearchTimingReport } from "@/types/research-timing";
 import type { ResearchTimingWindow } from "@/types/research-timing";
 
-type LoadState = "loading" | "success" | "error";
+type LoadState = "loading" | "success" | "locked" | "error";
+type TimingPayload = {
+  report: ResearchTimingReport | null;
+  access: ResearchAccess;
+  locked?: boolean;
+  source?: "live" | "saved";
+  readOnly?: boolean;
+  matchesCurrentProject?: boolean;
+  previewApplied?: boolean;
+};
 
 function formatDate(value: string, locale: string) {
   return new Intl.DateTimeFormat(locale, {
@@ -29,12 +49,19 @@ function formatTimestamp(value: string, locale: string) {
   }).format(new Date(value));
 }
 
-export default function ResearchTimingLayer() {
+export default function ResearchTimingLayer({
+  initialAccess,
+}: {
+  initialAccess: ResearchAccess;
+}) {
   const t = useTranslations("research_timing");
+  const accessT = useTranslations("research_access");
   const locale = useLocale();
   const [windowDays, setWindowDays] = useState<ResearchTimingWindow>(30);
   const [state, setState] = useState<LoadState>("loading");
   const [report, setReport] = useState<ResearchTimingReport | null>(null);
+  const [access, setAccess] = useState(initialAccess);
+  const [payload, setPayload] = useState<TimingPayload | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
@@ -47,20 +74,44 @@ export default function ResearchTimingLayer() {
     })
       .then((response) => response.json())
       .then((result) => {
-        if (result.code !== 0 || !result.data?.report) {
+        if (result.code !== 0 || !result.data?.access) {
           throw new Error(result.message || "timing unavailable");
         }
-        setReport(result.data.report);
+        const nextPayload = result.data as TimingPayload;
+        setAccess(nextPayload.access);
+        setPayload(nextPayload);
+        if (nextPayload.locked || !nextPayload.report) {
+          setReport(null);
+          setState("locked");
+          return;
+        }
+        setReport(nextPayload.report);
         setState("success");
       })
       .catch((error) => {
         if (error instanceof DOMException && error.name === "AbortError") return;
         setReport(null);
+        setPayload(null);
         setState("error");
       });
 
     return () => controller.abort();
   }, [windowDays, reloadKey]);
+
+  function downloadTiming() {
+    if (!report) return;
+    const blob = new Blob([JSON.stringify(report, null, 2)], {
+      type: "application/json;charset=utf-8",
+    });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `astrocartography-timing-${report.windowDays}-days-${report.startDate}.json`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  }
 
   return (
     <Card>
@@ -88,7 +139,14 @@ export default function ResearchTimingLayer() {
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                {t("window", { days })}
+                <span className="inline-flex items-center gap-1.5">
+                  {days === 90 &&
+                  !access.canUse90DayWindow &&
+                  !access.canViewSavedPlusSnapshots ? (
+                    <LockKeyhole className="size-3.5" />
+                  ) : null}
+                  {t("window", { days })}
+                </span>
               </button>
             ))}
           </div>
@@ -120,8 +178,56 @@ export default function ResearchTimingLayer() {
           </div>
         ) : null}
 
+        {state === "locked" ? (
+          <div className="rounded-xl border border-primary/20 bg-primary/[0.03] p-5">
+            <div className="flex items-start gap-3">
+              <LockKeyhole className="mt-0.5 size-5 shrink-0 text-primary" />
+              <div>
+                <p className="font-semibold">{accessT("lockedTitle")}</p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {accessT("lockedDescription")}
+                </p>
+                {access.subscriptionEnabled ? (
+                  <Button asChild size="sm" className="mt-4">
+                    <Link href={"/#pricing" as any}>
+                      {accessT("viewPlans")}
+                    </Link>
+                  </Button>
+                ) : (
+                  <p className="mt-3 text-xs font-medium text-muted-foreground">
+                    {accessT("privateValidation")}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        ) : null}
+
         {state === "success" && report ? (
           <div className="space-y-5">
+            {payload?.source === "saved" ? (
+              <div className="rounded-xl border border-primary/20 bg-primary/[0.03] p-4 text-sm">
+                <p className="font-semibold">{accessT("savedSnapshotTitle")}</p>
+                <p className="mt-1 text-muted-foreground">
+                  {accessT("savedSnapshotDescription")}
+                </p>
+                {payload.matchesCurrentProject === false ? (
+                  <p className="mt-3 flex items-start gap-2 text-amber-700 dark:text-amber-300">
+                    <AlertTriangle className="mt-0.5 size-4 shrink-0" />
+                    {accessT("snapshotOutdated")}
+                  </p>
+                ) : null}
+              </div>
+            ) : null}
+
+            {payload?.previewApplied ? (
+              <div className="rounded-xl border bg-muted/20 p-4 text-sm text-muted-foreground">
+                {accessT("freePreview", {
+                  count: access.previewEventsPerCity ?? 2,
+                })}
+              </div>
+            ) : null}
+
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 rounded-xl border bg-muted/20 px-4 py-3 text-xs text-muted-foreground">
               <span className="font-medium text-foreground">
                 {formatDate(report.startDate, locale)} – {formatDate(report.endDate, locale)}
@@ -132,6 +238,18 @@ export default function ResearchTimingLayer() {
                   date: formatTimestamp(report.calculatedAt, locale),
                 })}
               </span>
+              {access.canExportTiming ? (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  className="ml-auto h-7"
+                  onClick={downloadTiming}
+                >
+                  <Download className="mr-1.5 size-3.5" />
+                  {accessT("exportTiming")}
+                </Button>
+              ) : null}
             </div>
 
             <div className="grid gap-4 xl:grid-cols-3">

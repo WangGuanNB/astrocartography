@@ -1,22 +1,31 @@
-import { BookmarkCheck, CalendarDays, MapPin, Target } from "lucide-react";
+import {
+  BookmarkCheck,
+  CalendarDays,
+  MapPin,
+  ShieldCheck,
+  Target,
+} from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
 import { findResearchProjectForUser } from "@/models/research-project";
+import { getResearchAccess } from "@/services/research-entitlements";
 import { getUserUuid } from "@/services/user";
+import ResearchProjectExportButton from "./research-project-export-button";
 import ResearchTimingLayer from "./research-timing-layer";
 
 export const dynamic = "force-dynamic";
 
 export default async function MyResearchPage() {
   const t = await getTranslations("research_project");
+  const accessT = await getTranslations("research_access");
   const userUuid = await getUserUuid();
   const project = userUuid
     ? await findResearchProjectForUser(userUuid)
     : null;
 
-  if (!project) {
+  if (!userUuid || !project) {
     return (
       <Card>
         <CardHeader>
@@ -31,6 +40,8 @@ export default async function MyResearchPage() {
       </Card>
     );
   }
+
+  const access = await getResearchAccess(userUuid);
 
   return (
     <div className="space-y-5">
@@ -53,11 +64,17 @@ export default async function MyResearchPage() {
                 {project.candidateCities.map((city) => city.name).join(" · ")}
               </CardTitle>
             </div>
-            <Button asChild>
-              <Link href={"/chart?researchProject=current" as any}>
-                {t("continueResearch")}
-              </Link>
-            </Button>
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <ResearchProjectExportButton
+                project={project}
+                label={accessT("exportProject")}
+              />
+              <Button asChild>
+                <Link href={"/chart?researchProject=current" as any}>
+                  {t("continueResearch")}
+                </Link>
+              </Button>
+            </div>
           </div>
         </CardHeader>
         <CardContent className="grid gap-4 pt-6 md:grid-cols-2">
@@ -126,7 +143,31 @@ export default async function MyResearchPage() {
         </CardContent>
       </Card>
 
-      <ResearchTimingLayer />
+      <Card className="border-primary/20 bg-primary/[0.03]">
+        <CardContent className="flex flex-col gap-3 pt-6 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex items-start gap-3">
+            <ShieldCheck className="mt-0.5 size-5 shrink-0 text-primary" />
+            <div>
+              <p className="text-sm font-semibold">
+                {accessT("tiers." + access.tier)}
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {accessT("descriptions." + access.tier)}
+              </p>
+              <p className="mt-2 text-xs text-muted-foreground">
+                {accessT("savedRights")}
+              </p>
+            </div>
+          </div>
+          {!access.subscriptionEnabled && access.tier !== "plus_active" ? (
+            <span className="rounded-full border px-3 py-1 text-xs font-medium text-muted-foreground">
+              {accessT("privateValidation")}
+            </span>
+          ) : null}
+        </CardContent>
+      </Card>
+
+      <ResearchTimingLayer initialAccess={access} />
     </div>
   );
 }

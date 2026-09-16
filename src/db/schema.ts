@@ -270,6 +270,31 @@ export const researchProjects = sqliteTable(
   ]
 );
 
+// Paid Plus timing results are stored separately from the editable project.
+// This lets an expired subscriber keep previously generated results read-only
+// without freezing the base project or taking away free/one-time rights.
+export const researchTimingSnapshots = sqliteTable(
+  "research_timing_snapshots_astrocarto",
+  {
+    id: text("id").primaryKey(),
+    user_uuid: text("user_uuid").notNull(),
+    project_id: text("project_id").notNull(),
+    window_days: integer("window_days").notNull(),
+    project_fingerprint: text("project_fingerprint").notNull(),
+    report_json: text("report_json").notNull(),
+    calculated_at: integer("calculated_at", { mode: "timestamp" }).notNull(),
+    created_at: integer("created_at", { mode: "timestamp" }).notNull(),
+    updated_at: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (table) => [
+    uniqueIndex("research_timing_snapshots_user_window_unique_idx").on(
+      table.user_uuid,
+      table.window_days
+    ),
+    index("research_timing_snapshots_project_idx").on(table.project_id),
+  ]
+);
+
 // Feedbacks table
 export const feedbacks = sqliteTable("feedbacks_astrocarto", {
   id: integer("id").primaryKey({ autoIncrement: true }),

@@ -153,6 +153,27 @@
     "aspects": { "conjunction": "合相", "sextile": "六合", "square": "刑", "trine": "拱", "opposition": "对冲" },
     "planets": { "Sun": "太阳", "Mercury": "水星", "Venus": "金星", "Mars": "火星", "Jupiter": "木星", "Saturn": "土星", "Uranus": "天王星", "Neptune": "海王星", "Pluto": "冥王星" }
   },
+  "research_access": {
+    "eyebrow": "研究权限",
+    "tiers": { "free": "免费研究", "one_time": "一次性付费权益", "plus_active": "Plus 订阅有效", "plus_expired": "Plus 订阅已结束" },
+    "descriptions": {
+      "free": "可保存并继续一个研究项目，并查看受限的 30 天时间预览。",
+      "one_time": "保留现有一次性付费权益，可完整查看 30 天时间层，无需订阅。",
+      "plus_active": "Plus 有效期间可完整查看 30 天和 90 天时间层。",
+      "plus_expired": "研究项目仍可编辑，订阅期内已生成的 Plus 时间结果可继续只读查看。"
+    },
+    "savedRights": "即使订阅结束，你保存的研究项目仍归你所有。",
+    "exportProject": "导出项目",
+    "freePreview": "免费预览：每个城市最多显示 {count} 个时间事件；已保存项目和城市对比不受影响。",
+    "lockedTitle": "90 天时间层需要有效的 Plus 订阅",
+    "lockedDescription": "你的研究项目和 30 天权限不受影响。启用 Plus 后可计算新的 90 天时间层。",
+    "privateValidation": "Plus 目前处于内部验证阶段，暂未开放购买。",
+    "viewPlans": "查看 Plus 套餐",
+    "savedSnapshotTitle": "已保存的订阅结果 · 只读",
+    "savedSnapshotDescription": "该时间结果是在 Plus 有效期间生成的；订阅结束后仍可查看和导出。",
+    "snapshotOutdated": "该结果对应较早版本的研究项目，仅保留作参考；没有有效 Plus 时不会重新计算。",
+    "exportTiming": "导出时间结果"
+  },
   "api_keys": {
     "title": "API 密钥",
     "tip": "请妥善保管您的 API 密钥，避免泄露",

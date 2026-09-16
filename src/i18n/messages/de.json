@@ -102,6 +102,27 @@
     "aspects": { "conjunction": "Konjunktion", "sextile": "Sextil", "square": "Quadrat", "trine": "Trigon", "opposition": "Opposition" },
     "planets": { "Sun": "Sonne", "Mercury": "Merkur", "Venus": "Venus", "Mars": "Mars", "Jupiter": "Jupiter", "Saturn": "Saturn", "Uranus": "Uranus", "Neptune": "Neptun", "Pluto": "Pluto" }
   },
+  "research_access": {
+    "eyebrow": "Forschungszugang",
+    "tiers": { "free": "Kostenlose Forschung", "one_time": "Zugang durch Einmalkauf", "plus_active": "Plus-Abonnement aktiv", "plus_expired": "Plus-Abonnement beendet" },
+    "descriptions": {
+      "free": "Ein Projekt speichern und fortsetzen, mit begrenzter 30-Tage-Zeitvorschau.",
+      "one_time": "Ihr bestehender Kauf behält den vollständigen 30-Tage-Zugang ohne Abonnement.",
+      "plus_active": "Vollständige 30- und 90-Tage-Zeitfenster sind während eines aktiven Plus-Abos verfügbar.",
+      "plus_expired": "Ihr Projekt bleibt bearbeitbar; gespeicherte Plus-Ergebnisse bleiben schreibgeschützt verfügbar."
+    },
+    "savedRights": "Ihr gespeichertes Projekt bleibt auch nach Ende eines Abonnements erhalten.",
+    "exportProject": "Projekt exportieren",
+    "freePreview": "Kostenlose Vorschau: bis zu {count} Zeitereignisse pro Stadt. Projekt und Vergleich bleiben erhalten.",
+    "lockedTitle": "Das 90-Tage-Zeitfenster erfordert ein aktives Plus-Abo",
+    "lockedDescription": "Ihr Projekt und der 30-Tage-Zugang bleiben unverändert. Mit Plus können Sie ein neues 90-Tage-Fenster berechnen.",
+    "privateValidation": "Plus befindet sich derzeit in interner Prüfung und kann noch nicht gekauft werden.",
+    "viewPlans": "Plus-Tarife ansehen",
+    "savedSnapshotTitle": "Gespeichertes Abo-Ergebnis · schreibgeschützt",
+    "savedSnapshotDescription": "Dieses Ergebnis wurde bei aktivem Plus erstellt und bleibt danach sichtbar und exportierbar.",
+    "snapshotOutdated": "Dieses Ergebnis gehört zu einer früheren Projektversion und wird ohne aktives Plus nicht neu berechnet.",
+    "exportTiming": "Zeitdaten exportieren"
+  },
   "api_keys": {
     "title": "API-Schlüssel",
     "tip": "Bitte bewahren Sie Ihren API-Schlüssel sicher auf.",

@@ -119,6 +119,27 @@
     "aspects": { "conjunction": "conjunct", "sextile": "sextile", "square": "square", "trine": "trine", "opposition": "opposite" },
     "planets": { "Sun": "Sun", "Mercury": "Mercury", "Venus": "Venus", "Mars": "Mars", "Jupiter": "Jupiter", "Saturn": "Saturn", "Uranus": "Uranus", "Neptune": "Neptune", "Pluto": "Pluto" }
   },
+  "research_access": {
+    "eyebrow": "Research access",
+    "tiers": { "free": "Free research", "one_time": "One-time purchase access", "plus_active": "Plus subscription active", "plus_expired": "Plus subscription ended" },
+    "descriptions": {
+      "free": "Save and continue one project, with a limited 30-day timing preview.",
+      "one_time": "Your existing purchase keeps full 30-day timing access without requiring a subscription.",
+      "plus_active": "Full 30-day and 90-day timing windows are available while Plus is active.",
+      "plus_expired": "Your project remains editable and saved Plus timing results remain available read-only."
+    },
+    "savedRights": "Your saved project remains yours even if a subscription ends.",
+    "exportProject": "Export project",
+    "freePreview": "Free preview: showing up to {count} timing events per city. Your saved project and comparison remain available.",
+    "lockedTitle": "The 90-day timing window requires active Plus",
+    "lockedDescription": "Your project and 30-day access are unchanged. Activate Plus to calculate a new 90-day timing window.",
+    "privateValidation": "Plus is currently in private validation and is not open for purchase.",
+    "viewPlans": "View Plus plans",
+    "savedSnapshotTitle": "Saved subscription result · read-only",
+    "savedSnapshotDescription": "This timing result was generated while Plus was active. You can keep viewing and exporting it after the subscription ends.",
+    "snapshotOutdated": "This result belongs to an earlier saved project. It is retained for reference and will not be recalculated without active Plus.",
+    "exportTiming": "Export timing"
+  },
   "api_keys": {
     "title": "API Keys",
     "tip": "Please keep your apikey safe to avoid leaks",

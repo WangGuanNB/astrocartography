@@ -135,6 +135,27 @@
     "aspects": { "conjunction": "conjunción", "sextile": "sextil", "square": "cuadratura", "trine": "trígono", "opposition": "oposición" },
     "planets": { "Sun": "Sol", "Mercury": "Mercurio", "Venus": "Venus", "Mars": "Marte", "Jupiter": "Júpiter", "Saturn": "Saturno", "Uranus": "Urano", "Neptune": "Neptuno", "Pluto": "Plutón" }
   },
+  "research_access": {
+    "eyebrow": "Acceso a investigación",
+    "tiers": { "free": "Investigación gratuita", "one_time": "Acceso por compra única", "plus_active": "Suscripción Plus activa", "plus_expired": "Suscripción Plus finalizada" },
+    "descriptions": {
+      "free": "Guarda y continúa un proyecto con una vista previa limitada de 30 días.",
+      "one_time": "Tu compra existente conserva el acceso completo de 30 días sin exigir suscripción.",
+      "plus_active": "Las ventanas completas de 30 y 90 días están disponibles mientras Plus esté activo.",
+      "plus_expired": "Tu proyecto sigue editable y los resultados Plus guardados permanecen disponibles en modo lectura."
+    },
+    "savedRights": "Tu proyecto guardado sigue siendo tuyo aunque termine la suscripción.",
+    "exportProject": "Exportar proyecto",
+    "freePreview": "Vista previa gratuita: hasta {count} eventos por ciudad. El proyecto y la comparación siguen disponibles.",
+    "lockedTitle": "La ventana de 90 días requiere Plus activo",
+    "lockedDescription": "Tu proyecto y acceso de 30 días no cambian. Activa Plus para calcular una nueva ventana de 90 días.",
+    "privateValidation": "Plus está en validación privada y aún no está disponible para comprar.",
+    "viewPlans": "Ver planes Plus",
+    "savedSnapshotTitle": "Resultado de suscripción guardado · solo lectura",
+    "savedSnapshotDescription": "Este resultado se generó con Plus activo y seguirá disponible para ver y exportar.",
+    "snapshotOutdated": "Este resultado pertenece a una versión anterior del proyecto y no se recalculará sin Plus activo.",
+    "exportTiming": "Exportar tiempos"
+  },
   "api_keys": {
     "title": "Claves API",
     "tip": "Por favor, mantén tu clave API segura para evitar fugas",

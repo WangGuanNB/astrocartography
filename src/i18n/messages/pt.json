@@ -135,6 +135,27 @@
     "aspects": { "conjunction": "conjunção", "sextile": "sextil", "square": "quadratura", "trine": "trígono", "opposition": "oposição" },
     "planets": { "Sun": "Sol", "Mercury": "Mercúrio", "Venus": "Vênus", "Mars": "Marte", "Jupiter": "Júpiter", "Saturn": "Saturno", "Uranus": "Urano", "Neptune": "Netuno", "Pluto": "Plutão" }
   },
+  "research_access": {
+    "eyebrow": "Acesso à pesquisa",
+    "tiers": { "free": "Pesquisa gratuita", "one_time": "Acesso por compra única", "plus_active": "Assinatura Plus ativa", "plus_expired": "Assinatura Plus encerrada" },
+    "descriptions": {
+      "free": "Salve e continue um projeto com uma prévia limitada de 30 dias.",
+      "one_time": "Sua compra existente mantém o acesso completo de 30 dias sem exigir assinatura.",
+      "plus_active": "As janelas completas de 30 e 90 dias ficam disponíveis enquanto o Plus estiver ativo.",
+      "plus_expired": "Seu projeto continua editável e os resultados Plus salvos permanecem disponíveis para leitura."
+    },
+    "savedRights": "Seu projeto salvo continua sendo seu mesmo após o fim da assinatura.",
+    "exportProject": "Exportar projeto",
+    "freePreview": "Prévia gratuita: até {count} eventos por cidade. O projeto e a comparação continuam disponíveis.",
+    "lockedTitle": "A janela de 90 dias requer Plus ativo",
+    "lockedDescription": "Seu projeto e acesso de 30 dias não mudam. Ative o Plus para calcular uma nova janela de 90 dias.",
+    "privateValidation": "O Plus está em validação privada e ainda não está disponível para compra.",
+    "viewPlans": "Ver planos Plus",
+    "savedSnapshotTitle": "Resultado de assinatura salvo · somente leitura",
+    "savedSnapshotDescription": "Este resultado foi gerado com o Plus ativo e continuará disponível para visualizar e exportar.",
+    "snapshotOutdated": "Este resultado pertence a uma versão anterior do projeto e não será recalculado sem Plus ativo.",
+    "exportTiming": "Exportar período"
+  },
   "api_keys": {
     "title": "Chaves API",
     "tip": "Mantenha sua chave API segura para evitar vazamentos",

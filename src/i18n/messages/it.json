@@ -135,6 +135,27 @@
     "aspects": { "conjunction": "congiunto", "sextile": "sestile", "square": "quadrato", "trine": "trigono", "opposition": "opposto" },
     "planets": { "Sun": "Sole", "Mercury": "Mercurio", "Venus": "Venere", "Mars": "Marte", "Jupiter": "Giove", "Saturn": "Saturno", "Uranus": "Urano", "Neptune": "Nettuno", "Pluto": "Plutone" }
   },
+  "research_access": {
+    "eyebrow": "Accesso alla ricerca",
+    "tiers": { "free": "Ricerca gratuita", "one_time": "Accesso con acquisto singolo", "plus_active": "Abbonamento Plus attivo", "plus_expired": "Abbonamento Plus terminato" },
+    "descriptions": {
+      "free": "Salva e continua un progetto con un'anteprima temporale limitata di 30 giorni.",
+      "one_time": "L'acquisto esistente mantiene l'accesso completo a 30 giorni senza richiedere un abbonamento.",
+      "plus_active": "Le finestre complete di 30 e 90 giorni sono disponibili mentre Plus è attivo.",
+      "plus_expired": "Il progetto resta modificabile e i risultati Plus salvati restano disponibili in sola lettura."
+    },
+    "savedRights": "Il progetto salvato resta tuo anche dopo la fine dell'abbonamento.",
+    "exportProject": "Esporta progetto",
+    "freePreview": "Anteprima gratuita: fino a {count} eventi per città. Progetto e confronto restano disponibili.",
+    "lockedTitle": "La finestra di 90 giorni richiede Plus attivo",
+    "lockedDescription": "Il progetto e l'accesso a 30 giorni non cambiano. Attiva Plus per calcolare una nuova finestra di 90 giorni.",
+    "privateValidation": "Plus è in validazione privata e non è ancora acquistabile.",
+    "viewPlans": "Vedi piani Plus",
+    "savedSnapshotTitle": "Risultato abbonamento salvato · sola lettura",
+    "savedSnapshotDescription": "Questo risultato è stato generato con Plus attivo e resta visualizzabile ed esportabile.",
+    "snapshotOutdated": "Questo risultato appartiene a una versione precedente del progetto e non verrà ricalcolato senza Plus attivo.",
+    "exportTiming": "Esporta tempi"
+  },
   "api_keys": {
     "title": "Chiavi API",
     "tip": "Per favore, mantieni la tua chiave API al sicuro per evitare perdite",

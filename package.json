@@ -26,6 +26,7 @@
     "verify:stripe-lifecycle": "tsx scripts/verify-stripe-subscription-lifecycle.ts",
     "verify:research-project": "tsx scripts/verify-research-project.ts",
     "verify:research-timing": "tsx scripts/verify-research-timing.ts",
+    "verify:research-entitlements": "tsx scripts/verify-research-entitlements.ts",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
