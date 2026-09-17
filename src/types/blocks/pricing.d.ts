@@ -23,6 +23,8 @@ export interface PricingItem {
   billing_note?: string;
   button?: Button;
   tip?: string;
+  /** Secondary price line shown under the main price. */
+  price_summary?: string;
   /** Switch pricing tab (e.g. standard → subscription) */
   switch_group?: string;
   switch_group_label?: string;

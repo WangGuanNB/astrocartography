@@ -93,6 +93,40 @@
         "valid_months": 0
       },
       {
+        "title": "研究通行证",
+        "description": "适合日期和候选城市仍在变化、想要持续搬迁研究但不想按月付费的用户。",
+        "group": "one-time",
+        "label": "永久解锁 90 天",
+        "features_title": "Plus 的核心时间权益，一次买断永久保留",
+        "features": [
+          "500 积分，用于 AI 对话和城市对比",
+          "已保存研究项目可永久解锁完整 90 天时间窗口",
+          "保存并继续研究项目，最多 3 个候选城市",
+          "导出研究项目和 30 / 90 天时间结果",
+          "永久有效 — 不过期，不自动续费"
+        ],
+        "interval": "one-time",
+        "amount": 3900,
+        "cn_amount": 27900,
+        "currency": "USD",
+        "price": "$39",
+        "original_price": "",
+        "unit": "",
+        "is_featured": false,
+        "tip": "永久保留候选城市与 30 / 90 天时间结果 — 一次买断，不必续费 Plus",
+        "switch_group": "subscription",
+        "switch_group_label": "与 Plus 比较 →",
+        "button": {
+          "title": "购买研究通行证",
+          "url": "/#pricing",
+          "icon": "RiPassValidLine"
+        },
+        "product_id": "research-pass",
+        "product_name": "研究通行证 - 永久有效",
+        "credits": 500,
+        "valid_months": 0
+      },
+      {
         "title": "专业包",
         "description": "适合多城市深度研究、反复对比与长期决策的用户",
         "group": "one-time",
@@ -178,11 +212,12 @@
         "amount": 5900,
         "cn_amount": 41900,
         "currency": "USD",
-        "price": "$59",
-        "original_price": "$82.8",
-        "unit": "/年",
+        "price": "$4.92",
+        "original_price": "$6.9",
+        "price_summary": "全年 $59 一次性支付 — 相比月付节省约 29%",
+        "unit": "/月",
         "is_featured": false,
-        "tip": "约合 $4.9/月，相比月付节省约 29%",
+        "tip": "一年一次性扣费；订阅有效期内每月发放 500 积分。",
         "billing_note": "通过 Stripe 按年自动续费；订阅有效期内每月发放 500 积分。",
         "button": {
           "title": "选择 Plus 年付",

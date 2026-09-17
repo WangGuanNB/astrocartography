@@ -89,6 +89,40 @@
         "valid_months": 0
       },
       {
+        "title": "Passe de Pesquisa",
+        "description": "Um passe único para pesquisa ativa de mudança quando datas e sua lista ainda mudam.",
+        "group": "one-time",
+        "label": "Acesso de 90 dias",
+        "features_title": "Benefícios principais do Plus, mantidos para sempre com um único pagamento",
+        "features": [
+          "500 créditos para chat de IA e comparações entre cidades",
+          "Desbloqueie para sempre janelas completas de 90 dias de cada projeto salvo",
+          "Salve e continue seu projeto de pesquisa com até 3 cidades",
+          "Exporte seu projeto e os resultados de 30/90 dias",
+          "Válido para sempre — sem expiração, sem renovação automática"
+        ],
+        "interval": "one-time",
+        "amount": 3900,
+        "cn_amount": 27900,
+        "currency": "USD",
+        "price": "$39",
+        "original_price": "",
+        "unit": "",
+        "is_featured": false,
+        "tip": "Mantenha sua lista e os resultados de 30/90 dias para sempre — pague uma vez em vez de renovar o Plus",
+        "switch_group": "subscription",
+        "switch_group_label": "Comparar com o Plus →",
+        "button": {
+          "title": "Comprar Passe de Pesquisa",
+          "url": "/#pricing",
+          "icon": "RiPassValidLine"
+        },
+        "product_id": "research-pass",
+        "product_name": "Passe de Pesquisa - Válido para Sempre",
+        "credits": 500,
+        "valid_months": 0
+      },
+      {
         "title": "Plano Profissional",
         "description": "Ideal para pesquisa profunda em várias cidades e revisões repetidas",
         "group": "one-time",
@@ -174,11 +208,12 @@
         "amount": 5900,
         "cn_amount": 41900,
         "currency": "USD",
-        "price": "$59",
-        "original_price": "$82.8",
-        "unit": "/ano",
+        "price": "$4.92",
+        "original_price": "$6.9",
+        "price_summary": "$59 cobrados uma vez ao ano — economize ~29% em relação ao mensal",
+        "unit": "/mês",
         "is_featured": false,
-        "tip": "Cerca de $4,9/mês — economize ~29% em relação à cobrança mensal",
+        "tip": "Cobrança única anual. Receba 500 créditos por mês enquanto estiver ativo.",
         "billing_note": "Renovação anual automática via Stripe. Receba 500 créditos por mês enquanto estiver ativo.",
         "button": {
           "title": "Escolher Plus Anual",

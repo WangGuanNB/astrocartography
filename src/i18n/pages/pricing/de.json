@@ -89,6 +89,40 @@
         "valid_months": 0
       },
       {
+        "title": "Research-Pass",
+        "description": "Ein Einmal-Pass für aktive Umzugsrecherche, wenn sich Termine und Städteliste noch ändern.",
+        "group": "one-time",
+        "label": "90-Tage-Zugang",
+        "features_title": "Plus-Kernzeit-Vorteile, einmal gekauft dauerhaft behalten",
+        "features": [
+          "500 Credits für AI-Chat und Städtevergleiche",
+          "Volle 90-Tage-Zeitfenster für jedes gespeicherte Forschungsprojekt dauerhaft freischalten",
+          "Forschungsprojekt speichern und fortsetzen mit bis zu 3 Städten",
+          "Gespeichertes Projekt und 30/90-Tage-Ergebnisse exportieren",
+          "Für immer gültig — kein Ablauf, keine Auto-Verlängerung"
+        ],
+        "interval": "one-time",
+        "amount": 3900,
+        "cn_amount": 27900,
+        "currency": "USD",
+        "price": "$39",
+        "original_price": "",
+        "unit": "",
+        "is_featured": false,
+        "tip": "Städteliste und 30/90-Tage-Zeitfenster dauerhaft behalten — einmal zahlen statt Plus verlängern",
+        "switch_group": "subscription",
+        "switch_group_label": "Mit Plus vergleichen →",
+        "button": {
+          "title": "Research-Pass kaufen",
+          "url": "/#pricing",
+          "icon": "RiPassValidLine"
+        },
+        "product_id": "research-pass",
+        "product_name": "Research-Pass – Unbegrenzt gültig",
+        "credits": 500,
+        "valid_months": 0
+      },
+      {
         "title": "Profi-Tarif",
         "description": "Ideal für tiefe Multi-City-Recherche und wiederholte Entscheidungschecks",
         "group": "one-time",
@@ -174,11 +208,12 @@
         "amount": 5900,
         "cn_amount": 41900,
         "currency": "USD",
-        "price": "$59",
-        "original_price": "$82.8",
-        "unit": "/Jahr",
+        "price": "$4.92",
+        "original_price": "$6.9",
+        "price_summary": "$59 jährlich abgerechnet — ~29 % günstiger als monatlich",
+        "unit": "/Monat",
         "is_featured": false,
-        "tip": "Ca. $4,9/Monat — rund 29 % günstiger als monatliche Abrechnung",
+        "tip": "Einmal jährliche Abrechnung. Während der Laufzeit monatlich 500 Credits.",
         "billing_note": "Automatische jährliche Verlängerung über Stripe. Während der Laufzeit monatlich 500 Credits.",
         "button": {
           "title": "Plus Jährlich wählen",

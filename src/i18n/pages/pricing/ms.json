@@ -89,6 +89,40 @@
         "valid_months": 0
       },
       {
+        "title": "Pas Penyelidikan",
+        "description": "Pas sekali bayar untuk penyelidikan perpindahan aktif apabila tarikh dan senarai pilihan masih berubah.",
+        "group": "one-time",
+        "label": "Akses 90 Hari",
+        "features_title": "Faedah teras Plus, kekal selama-lamanya dengan satu bayaran",
+        "features": [
+          "500 kredit untuk sembang AI dan perbandingan bandar",
+          "Buka kunci tetingkap 90 hari penuh untuk setiap projek yang disimpan",
+          "Simpan dan teruskan projek penyelidikan dengan sehingga 3 bandar",
+          "Eksport projek dan hasil masa 30/90 hari",
+          "Sah selama-lamanya — tiada luput, tiada pembaharuan automatik"
+        ],
+        "interval": "one-time",
+        "amount": 3900,
+        "cn_amount": 27900,
+        "currency": "USD",
+        "price": "$39",
+        "original_price": "",
+        "unit": "",
+        "is_featured": false,
+        "tip": "Kekalkan senarai dan hasil 30/90 hari selamanya — bayar sekali berbanding memperbaharui Plus",
+        "switch_group": "subscription",
+        "switch_group_label": "Bandingkan dengan Plus →",
+        "button": {
+          "title": "Beli Pas Penyelidikan",
+          "url": "/#pricing",
+          "icon": "RiPassValidLine"
+        },
+        "product_id": "research-pass",
+        "product_name": "Pas Penyelidikan - Sah Selama-lamanya",
+        "credits": 500,
+        "valid_months": 0
+      },
+      {
         "title": "Pelan Profesional",
         "description": "Best for deep multi-city research and repeated decision reviews",
         "group": "one-time",
@@ -174,11 +208,12 @@
         "amount": 5900,
         "cn_amount": 41900,
         "currency": "USD",
-        "price": "$59",
-        "original_price": "$82.8",
-        "unit": "/tahun",
+        "price": "$4.92",
+        "original_price": "$6.9",
+        "price_summary": "$59 dibilkan sekali setahun — jimat ~29% berbanding bulanan",
+        "unit": "/bulan",
         "is_featured": false,
-        "tip": "Kira-kira $4.9/bulan — jimat ~29% berbanding bil bulanan",
+        "tip": "Caj tunggal tahunan. Terima 500 kredit setiap bulan semasa aktif.",
         "billing_note": "Diperbaharui secara automatik setiap tahun melalui Stripe. 500 kredit ditambah setiap bulan semasa aktif.",
         "button": {
           "title": "Pilih Plus Tahunan",

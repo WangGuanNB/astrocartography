@@ -89,6 +89,40 @@
         "valid_months": 0
       },
       {
+        "title": "Pass di Ricerca",
+        "description": "Un pass una tantum per ricerche di trasferimento attive quando date e lista candidate cambiano ancora.",
+        "group": "one-time",
+        "label": "Accesso 90 giorni",
+        "features_title": "Vantaggi chiave di Plus, conservati per sempre con un solo pagamento",
+        "features": [
+          "500 crediti per chat AI e confronti tra città",
+          "Sblocca per sempre le finestre complete di 90 giorni di ogni progetto salvato",
+          "Salva e continua il tuo progetto di ricerca con fino a 3 città",
+          "Esporta il tuo progetto e i risultati di 30/90 giorni",
+          "Valido per sempre — senza scadenza, senza rinnovo automatico"
+        ],
+        "interval": "one-time",
+        "amount": 3900,
+        "cn_amount": 27900,
+        "currency": "USD",
+        "price": "$39",
+        "original_price": "",
+        "unit": "",
+        "is_featured": false,
+        "tip": "Mantieni la tua lista e i risultati di 30/90 giorni per sempre — paga una volta invece di rinnovare Plus",
+        "switch_group": "subscription",
+        "switch_group_label": "Confronta con Plus →",
+        "button": {
+          "title": "Acquista Pass di Ricerca",
+          "url": "/#pricing",
+          "icon": "RiPassValidLine"
+        },
+        "product_id": "research-pass",
+        "product_name": "Pass di Ricerca - Valido per Sempre",
+        "credits": 500,
+        "valid_months": 0
+      },
+      {
         "title": "Piano Professionale",
         "description": "Ideale per ricerche approfondite su più città e revisioni ripetute",
         "group": "one-time",
@@ -174,11 +208,12 @@
         "amount": 5900,
         "cn_amount": 41900,
         "currency": "USD",
-        "price": "$59",
-        "original_price": "$82.8",
-        "unit": "/anno",
+        "price": "$4.92",
+        "original_price": "$6.9",
+        "price_summary": "$59 fatturati una volta all'anno — risparmia ~29% rispetto al mensile",
+        "unit": "/mese",
         "is_featured": false,
-        "tip": "Circa $4,9/mese — risparmia ~29% rispetto alla fatturazione mensile",
+        "tip": "Addebito unico annuale. Ricevi 500 crediti ogni mese mentre è attivo.",
         "billing_note": "Rinnovo annuale automatico tramite Stripe. Ricevi 500 crediti ogni mese mentre è attivo.",
         "button": {
           "title": "Scegli Plus Annuale",

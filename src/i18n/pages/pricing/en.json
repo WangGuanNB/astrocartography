@@ -93,6 +93,40 @@
         "valid_months": 0
       },
       {
+        "title": "Research Pass",
+        "description": "A one-time pass for active relocation research when your dates and shortlist still change.",
+        "group": "one-time",
+        "label": "90-Day Access",
+        "features_title": "Everything Plus gives ongoing, kept forever",
+        "features": [
+          "500 credits for AI chat and city comparisons",
+          "Unlock full 90-day timing for every saved research project",
+          "Save and continue your research project with up to 3 cities",
+          "Export your saved project and 30/90-day timing results",
+          "Valid forever — no expiry, no auto-renewal"
+        ],
+        "interval": "one-time",
+        "amount": 3900,
+        "cn_amount": 27900,
+        "currency": "USD",
+        "price": "$39",
+        "original_price": "",
+        "unit": "",
+        "is_featured": false,
+        "tip": "Keep a shortlist and 30/90-day timing forever — pay once instead of renewing Plus",
+        "switch_group": "subscription",
+        "switch_group_label": "Compare with Plus →",
+        "button": {
+          "title": "Buy Research Pass",
+          "url": "/#pricing",
+          "icon": "RiPassValidLine"
+        },
+        "product_id": "research-pass",
+        "product_name": "Research Pass - Valid Forever",
+        "credits": 500,
+        "valid_months": 0
+      },
+      {
         "title": "Professional Plan",
         "description": "Best for deep multi-city research and repeated decision reviews",
         "group": "one-time",
@@ -174,15 +208,16 @@
         "Export saved project and timing results",
         "Billed yearly — cancel future renewals anytime"
         ],
-        "interval": "year",
+"interval": "year",
         "amount": 5900,
         "cn_amount": 41900,
         "currency": "USD",
-        "price": "$59",
-        "original_price": "$82.8",
-        "unit": "/year",
+        "price": "$4.92",
+        "original_price": "$6.9",
+        "price_summary": "$59 billed yearly — save ~29% vs monthly",
+        "unit": "/month",
         "is_featured": false,
-      "tip": "About $4.9/month — save ~29% compared with monthly billing",
+        "tip": "Billed once a year. 500 credits are added monthly while active.",
       "billing_note": "Auto-renews yearly through Stripe. 500 credits are added monthly while active.",
       "button": {
         "title": "Choose Plus Yearly",

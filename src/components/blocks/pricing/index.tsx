@@ -103,6 +103,11 @@ function PricingPlanCard({
               </span>
             )}
           </div>
+          {item.price_summary && (
+            <p className="text-xs md:text-sm text-muted-foreground mb-2 md:mb-3">
+              {item.price_summary}
+            </p>
+          )}
           {item.description && (
             <p className="text-sm md:text-base text-muted-foreground mb-2 md:mb-0">
               {item.description}
