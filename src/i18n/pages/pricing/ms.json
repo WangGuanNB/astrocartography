@@ -2,19 +2,21 @@
   "pricing": {
     "name": "pricing",
     "label": "Harga",
-    "title": "Pilih Pelan Astrocartografi Anda",
-    "description": "Peta interaktif percuma selama-lamanya, atau buka kunci ciri AI premium dengan pilihan harga fleksibel",
+    "title": "Pilih Cara Anda Mahu Menyelidik",
+    "description": "Gunakan pelan sekali bayar untuk satu keputusan, atau Plus untuk terus menjejak bandar dan tempoh yang disimpan apabila rancangan berubah.",
     "disclaimer": "⚠️ **Penting**: AI hanya menganalisis bandar pada garisan planet anda. Ia tidak akan spekulasi tentang bandar yang tiada dalam carta anda. Keputusan adalah untuk rujukan sahaja.",
     "groups": [
       {
         "name": "one-time",
         "title": "Sekali bayar",
-        "description": "Putuskan sekarang — kredit tidak pernah luput"
+        "description": "Sesuai untuk satu keputusan — kredit tidak pernah luput"
       },
       {
         "name": "subscription",
         "title": "Langganan",
-        "description": "Kemasukan bulanan rendah — cuba AI berbayar sebelum komited"
+        "headline": "Simpan bandar dan tempoh masa dalam satu ruang penyelidikan berterusan",
+        "description": "Untuk berpindah atau perjalanan panjang: sambung semula penyelidikan apabila tarikh atau senarai bandar berubah.",
+        "highlights": ["Hasil penuh 30 hari", "Tetingkap 90 hari semasa Plus aktif", "500 kredit setiap bulan"]
       }
     ],
     "items": [
@@ -58,6 +60,7 @@
         "features": [
           "1000 credits — about 100 AI chats or ~20 full city comparison reports",
           "Full AI City Comparison Reports (50 credits each)",
+          "Hasil masa penuh 30 hari untuk projek yang disimpan",
           "Relocation chart analysis",
           "Country explorer access",
           "Export AI chat (TXT) & download maps",
@@ -72,7 +75,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "Chats + city comparison reports, forever — better value than 2 months of Plus",
+        "tip": "Satu bayaran untuk satu keputusan — kredit dan akses 30 hari tidak luput",
         "switch_group": "subscription",
         "switch_group_label": "Dari $6.9/bulan →",
         "button": {
@@ -121,14 +124,16 @@
       },
       {
         "title": "Plus Bulanan",
-        "description": "Sesuai untuk: mencuba AI berbayar bulan ini — belum bersedia untuk pelan sekali bayar.",
+        "eyebrow": "Penyelidikan perpindahan berterusan",
+        "description": "Untuk perpindahan atau perjalanan panjang apabila tarikh dan bandar pilihan masih boleh berubah.",
         "group": "subscription",
-        "label": "Fleksibel",
-        "features_title": "Termasuk",
+        "label": "Mula di sini",
+        "features_title": "Semua yang diperlukan untuk terus menyelidik",
         "features": [
-          "500 credits/month — about 50 AI chats or ~10 city comparison reports",
-          "Peta astrocartografi tanpa had",
-          "Muat turun peta PNG & eksport sembang TXT",
+          "Hasil masa penuh 30 hari untuk setiap bandar yang disimpan",
+          "Tetingkap masa 90 hari semasa Plus aktif",
+          "500 kredit/bulan — kira-kira 50 sembang AI atau ~10 laporan perbandingan bandar penuh",
+          "Eksport projek dan hasil masa",
           "Pembaharuan bulanan — batal bila-bila masa"
         ],
         "interval": "month",
@@ -139,9 +144,10 @@
         "original_price": "",
         "unit": "/bulan",
         "is_featured": true,
-        "tip": "Bermula $6.9 — tanpa $9.9 di muka · Lebih ciri langganan akan datang",
+        "tip": "Sesuai untuk mencuba Plus dengan rancangan perpindahan atau perjalanan sebenar",
+        "billing_note": "Diperbaharui secara automatik setiap bulan melalui Stripe. Batalkan pembaharuan akan datang bila-bila masa.",
         "button": {
-          "title": "Langgan",
+          "title": "Mulakan Plus Bulanan",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },
@@ -152,15 +158,17 @@
       },
       {
         "title": "Plus Tahunan",
-        "description": "Sesuai untuk: pengguna komited yang akan melanggan sepenuhnya setahun.",
+        "eyebrow": "Penyelidikan perpindahan berterusan",
+        "description": "Untuk penyelidikan sepanjang tahun dengan akses Plus yang sama pada kos bulanan setara yang lebih rendah.",
         "group": "subscription",
         "label": "Jimat ~29%",
-        "features_title": "Termasuk",
+        "features_title": "Semua dalam Plus Bulanan",
         "features": [
-          "500 credits/month — about 50 AI chats or ~10 city comparison reports",
-          "Peta astrocartografi tanpa had",
-          "Muat turun peta PNG & eksport sembang TXT",
-          "Pembaharuan tahunan — batal bila-bila masa"
+          "Hasil masa penuh 30 hari untuk setiap bandar yang disimpan",
+          "Tetingkap masa 90 hari semasa Plus aktif",
+          "500 kredit/bulan — kira-kira 50 sembang AI atau ~10 laporan perbandingan bandar penuh",
+          "Eksport projek dan hasil masa",
+          "Dibilkan setiap tahun — batalkan pembaharuan akan datang bila-bila masa"
         ],
         "interval": "year",
         "amount": 5900,
@@ -170,9 +178,10 @@
         "original_price": "$82.8",
         "unit": "/tahun",
         "is_featured": false,
-        "tip": "Kira-kira $4.9/bulan — jimat ~29% vs bulanan",
+        "tip": "Kira-kira $4.9/bulan — jimat ~29% berbanding bil bulanan",
+        "billing_note": "Diperbaharui secara automatik setiap tahun melalui Stripe. 500 kredit ditambah setiap bulan semasa aktif.",
         "button": {
-          "title": "Langgan Tahunan",
+          "title": "Pilih Plus Tahunan",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },

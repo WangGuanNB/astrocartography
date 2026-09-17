@@ -22,6 +22,7 @@
     "db:migrate:data": "npx tsx scripts/migrate-to-d1.ts",
     "verify:astro": "tsx scripts/verify-ascendant.ts && tsx scripts/verify-midheaven.ts && tsx scripts/verify-astrocartography-lines.ts",
     "verify:subscription": "tsx scripts/verify-subscription-credits.ts",
+    "verify:subscription-rollout": "tsx scripts/verify-subscription-rollout.ts",
     "verify:stripe-one-time": "tsx scripts/verify-stripe-one-time.ts",
     "verify:stripe-lifecycle": "tsx scripts/verify-stripe-subscription-lifecycle.ts",
     "verify:research-project": "tsx scripts/verify-research-project.ts",

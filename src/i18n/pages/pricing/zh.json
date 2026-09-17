@@ -2,19 +2,25 @@
   "pricing": {
     "name": "pricing",
     "label": "定价",
-    "title": "选择您的占星地图方案",
-    "description": "永久免费使用交互式地图，或解锁高级 AI 功能，享受灵活的定价选项",
+  "title": "选择适合你的研究方式",
+  "description": "一次性方案适合完成一个决定；Plus 适合计划变化时持续跟踪已保存城市和时间窗口。",
     "disclaimer": "⚠️ **重要说明**：AI 仅分析您星盘中行星线经过的具体城市。不会推测或分析不在您行星线上的城市。分析结果仅供参考，不构成专业建议。",
     "groups": [
       {
         "name": "one-time",
         "title": "一次性",
-        "description": "这次就要定下来 — 积分永久有效"
+      "description": "适合完成一次决定 — 积分永久有效"
       },
       {
         "name": "subscription",
         "title": "订阅",
-        "description": "低门槛月付 — 适合先试试，尚未决定买断"
+      "headline": "把候选城市与时间窗口放进一个持续研究空间",
+      "description": "适合正在规划搬迁或长期旅行的人：日期和候选城市变化后，可以回来继续同一项研究。",
+      "highlights": [
+        "完整 30 天时间结果",
+        "订阅有效期内解锁 90 天",
+        "每月 500 积分"
+      ]
       }
     ],
     "items": [
@@ -58,6 +64,7 @@
         "features": [
           "1000 积分 — 约 100 次 AI 对话，或约 20 份完整城市对比报告",
           "完整 AI 城市对比报告（每次 50 积分）",
+          "已保存研究项目的完整 30 天时间结果",
           "搬迁星盘分析（Relocation Chart）",
           "国家探索器（Country Explorer）",
           "导出 AI 对话（TXT）与下载地图",
@@ -72,7 +79,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "对话 + 城市对比报告永久可用 — 比连续订 2 个月 Plus 更划算",
+        "tip": "一次付款完成一个明确决定 — 积分和 30 天时间权限不会过期",
         "switch_group": "subscription",
         "switch_group_label": "月付 $6.9 起 →",
         "button": {
@@ -121,14 +128,16 @@
       },
       {
         "title": "Plus 月付",
-        "description": "适合：想先付费体验、这个月大概会问 20–50 次、还没准备好 $9.9 买断的用户。",
+    "eyebrow": "持续搬迁研究",
+    "description": "适合日期和候选城市仍可能变化的搬迁或长期旅行计划。",
         "group": "subscription",
-        "label": "灵活",
-        "features_title": "包含",
+    "label": "建议先从这里开始",
+    "features_title": "持续研究所需的核心权益",
         "features": [
-          "500 积分/月 — 约 50 次 AI 对话，或约 10 份城市对比报告",
-          "无限生成占星地图",
-          "PNG 地图下载与 TXT 导出",
+      "每个已保存城市的完整 30 天时间结果",
+      "Plus 有效期内解锁 90 天时间窗口",
+      "500 积分/月 — 约 50 次 AI 对话，或约 10 份完整城市对比报告",
+      "导出研究项目和时间结果",
           "按月续费，随时可取消"
         ],
         "interval": "month",
@@ -139,9 +148,10 @@
         "original_price": "",
         "unit": "/月",
         "is_featured": true,
-        "tip": "$6.9 起步，不必一次付 $9.9 · 更多订阅功能陆续上线",
+        "tip": "适合用一个真实的搬迁或旅行计划验证 Plus 是否适合你",
+        "billing_note": "通过 Stripe 按月自动续费，可随时取消未来续费。",
         "button": {
-          "title": "订阅",
+          "title": "开始 Plus 月付",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },
@@ -152,15 +162,17 @@
       },
       {
         "title": "Plus 年付",
-        "description": "适合：已确定会连续订阅满一年、想省约 29% 的用户。",
+        "eyebrow": "持续搬迁研究",
+        "description": "适合需要全年持续研究的人，Plus 权益相同，折算月费更低。",
         "group": "subscription",
         "label": "省约 29%",
-        "features_title": "包含",
+        "features_title": "包含 Plus 月付的全部权益",
         "features": [
-          "500 积分/月 — 约 50 次 AI 对话，或约 10 份城市对比报告",
-          "无限生成占星地图",
-          "PNG 地图下载与 TXT 导出",
-          "按年续费，随时可取消"
+          "每个已保存城市的完整 30 天时间结果",
+          "Plus 有效期内解锁 90 天时间窗口",
+          "500 积分/月 — 约 50 次 AI 对话，或约 10 份完整城市对比报告",
+          "导出研究项目和时间结果",
+          "按年计费，可随时取消未来续费"
         ],
         "interval": "year",
         "amount": 5900,
@@ -170,9 +182,10 @@
         "original_price": "$82.8",
         "unit": "/年",
         "is_featured": false,
-        "tip": "约合 $4.9/月，年付更省",
+        "tip": "约合 $4.9/月，相比月付节省约 29%",
+        "billing_note": "通过 Stripe 按年自动续费；订阅有效期内每月发放 500 积分。",
         "button": {
-          "title": "年付订阅",
+          "title": "选择 Plus 年付",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },

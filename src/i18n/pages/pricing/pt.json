@@ -2,19 +2,21 @@
   "pricing": {
     "name": "pricing",
     "label": "Preços",
-    "title": "Escolha Seu Plano de Astrocartografia",
-    "description": "Mapas interativos gratuitos para sempre, ou desbloqueie recursos premium de IA com opções de preços flexíveis",
+    "title": "Escolha como deseja pesquisar",
+    "description": "Use um plano único para uma decisão ou o Plus para acompanhar cidades e períodos salvos quando seus planos mudarem.",
     "disclaimer": "⚠️ **Importante**: A IA apenas analisa cidades em suas linhas planetárias. Não especulará sobre cidades que não estão em seu mapa. Os resultados são apenas para referência.",
     "groups": [
       {
         "name": "one-time",
         "title": "Pagamento único",
-        "description": "Decida agora — créditos nunca expiram"
+        "description": "Ideal para uma decisão — créditos nunca expiram"
       },
       {
         "name": "subscription",
         "title": "Assinatura",
-        "description": "Entrada baixa mensal — experimente a IA paga antes de se comprometer"
+        "headline": "Cidades e períodos salvos em um único espaço de pesquisa contínua",
+        "description": "Para mudança ou viagem longa: retome a mesma pesquisa quando datas ou preferências mudarem.",
+        "highlights": ["Resultados completos de 30 dias", "Janelas de 90 dias enquanto o Plus estiver ativo", "500 créditos por mês"]
       }
     ],
     "items": [
@@ -58,6 +60,7 @@
         "features": [
           "1000 créditos — cerca de 100 chats de IA ou ~20 relatórios completos de comparação de cidades",
           "Relatórios completos de comparação de cidades por IA (50 créditos cada)",
+          "Resultados completos de 30 dias para o projeto salvo",
           "Análise de mapa de relocação",
           "Acesso ao explorador de países",
           "Exportar chat de IA (TXT) e baixar mapas",
@@ -72,7 +75,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "Chats + relatórios de comparação de cidades, para sempre — melhor custo que 2 meses de Plus",
+        "tip": "Um pagamento para uma decisão concreta — créditos e acesso de 30 dias não expiram",
         "switch_group": "subscription",
         "switch_group_label": "A partir de $6,9/mês →",
         "button": {
@@ -121,14 +124,16 @@
       },
       {
         "title": "Plus Mensal",
-        "description": "Ideal para: experimentar a IA paga este mês — ainda não pronto para um plano único.",
+        "eyebrow": "Pesquisa contínua de relocação",
+        "description": "Para mudança ou viagem longa quando datas e cidades candidatas ainda podem mudar.",
         "group": "subscription",
-        "label": "Flexível",
-        "features_title": "Inclui",
+        "label": "Comece aqui",
+        "features_title": "Tudo o que você precisa para continuar pesquisando",
         "features": [
-          "500 créditos/mês — cerca de 50 chats de IA ou ~10 relatórios de comparação de cidades",
-          "Mapas de astrocartografia ilimitados",
-          "Download de mapas PNG e exportação de chat TXT",
+          "Resultados completos de 30 dias para cada cidade salva",
+          "Janelas de 90 dias enquanto o Plus estiver ativo",
+          "500 créditos/mês — cerca de 50 chats de IA ou ~10 relatórios completos de comparação",
+          "Exporte o projeto e os resultados temporais",
           "Renovação mensal — cancele a qualquer momento"
         ],
         "interval": "month",
@@ -139,9 +144,10 @@
         "original_price": "",
         "unit": "/mês",
         "is_featured": true,
-        "tip": "Comece com $6,9 — sem $9,9 adiantado · Mais recursos de assinatura em breve",
+        "tip": "Ideal para testar o Plus com um plano real de mudança ou viagem",
+        "billing_note": "Renovação mensal automática via Stripe. Cancele futuras renovações quando quiser.",
         "button": {
-          "title": "Assinar",
+          "title": "Começar Plus Mensal",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },
@@ -152,15 +158,17 @@
       },
       {
         "title": "Plus Anual",
-        "description": "Ideal para: usuários comprometidos que sabem que assinarão por um ano completo.",
+        "eyebrow": "Pesquisa contínua de relocação",
+        "description": "Para pesquisar durante todo o ano com o mesmo acesso Plus e menor custo mensal equivalente.",
         "group": "subscription",
         "label": "Economize ~29%",
-        "features_title": "Inclui",
+        "features_title": "Tudo do Plus Mensal",
         "features": [
-          "500 créditos/mês — cerca de 50 chats de IA ou ~10 relatórios de comparação de cidades",
-          "Mapas de astrocartografia ilimitados",
-          "Download de mapas PNG e exportação de chat TXT",
-          "Renovação anual — cancele a qualquer momento"
+          "Resultados completos de 30 dias para cada cidade salva",
+          "Janelas de 90 dias enquanto o Plus estiver ativo",
+          "500 créditos/mês — cerca de 50 chats de IA ou ~10 relatórios completos de comparação",
+          "Exporte o projeto e os resultados temporais",
+          "Cobrança anual — cancele futuras renovações quando quiser"
         ],
         "interval": "year",
         "amount": 5900,
@@ -170,9 +178,10 @@
         "original_price": "$82.8",
         "unit": "/ano",
         "is_featured": false,
-        "tip": "Cerca de $4,9/mês — economize ~29% vs mensal",
+        "tip": "Cerca de $4,9/mês — economize ~29% em relação à cobrança mensal",
+        "billing_note": "Renovação anual automática via Stripe. Receba 500 créditos por mês enquanto estiver ativo.",
         "button": {
-          "title": "Assinar Anual",
+          "title": "Escolher Plus Anual",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },

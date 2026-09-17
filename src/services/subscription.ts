@@ -5,6 +5,9 @@ import type { Pricing } from "@/types/blocks/pricing";
 
 export const PLUS_PRODUCT_IDS = new Set(["plus-monthly", "plus-yearly"]);
 
+export type SubscriptionRolloutMode = "off" | "research" | "all";
+export type SubscriptionPricingSurface = "general" | "research";
+
 export function isPlusProductId(productId: string | null | undefined): boolean {
   if (!productId) return false;
   return PLUS_PRODUCT_IDS.has(productId);
@@ -20,15 +23,48 @@ export function isSubscriptionEnabled(): boolean {
   return process.env.NEXT_PUBLIC_SUBSCRIPTION_ENABLED === "true";
 }
 
-/** Hide Plus items when subscription flag is off (pricing page, homepage, API). */
+/**
+ * Keep sale availability and marketing exposure separate.
+ *
+ * - off: checkout and pricing are unavailable
+ * - research: Plus is shown only from an explicit high-intent research entry
+ * - all: Plus is shown on general pricing surfaces too
+ *
+ * When subscriptions are enabled but no rollout mode is configured, default to
+ * the narrower research audience so a deployment cannot accidentally expose
+ * Plus site-wide.
+ */
+export function getSubscriptionRolloutMode(): SubscriptionRolloutMode {
+  if (!isSubscriptionEnabled()) return "off";
+
+  const configured = process.env.NEXT_PUBLIC_SUBSCRIPTION_ROLLOUT;
+  if (configured === "all") return "all";
+  return "research";
+}
+
+export function isSubscriptionVisible(
+  surface: SubscriptionPricingSurface = "general"
+): boolean {
+  const mode = getSubscriptionRolloutMode();
+  return mode === "all" || (mode === "research" && surface === "research");
+}
+
+/** Hide Plus unless the current surface belongs to the configured rollout. */
 export function applySubscriptionPricingFilter(
-  pricing: Pricing | undefined
+  pricing: Pricing | undefined,
+  options: { surface?: SubscriptionPricingSurface } = {}
 ): Pricing | undefined {
-  if (!pricing?.items || isSubscriptionEnabled()) {
+  if (
+    !pricing?.items ||
+    isSubscriptionVisible(options.surface ?? "general")
+  ) {
     return pricing;
   }
   return {
     ...pricing,
+    description:
+      pricing.groups?.find((group) => group.name === "one-time")?.description ??
+      pricing.description,
     items: pricing.items.filter((item) => !isPlusProductId(item.product_id)),
     groups: pricing.groups?.filter((g) => g.name !== "subscription"),
   };

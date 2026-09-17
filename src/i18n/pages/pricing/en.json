@@ -2,19 +2,25 @@
   "pricing": {
     "name": "pricing",
     "label": "Pricing",
-    "title": "Choose Your Astrocartography Plan",
-    "description": "Free interactive maps forever, or unlock premium AI features with flexible pricing options",
+    "title": "Choose How You Want to Research",
+    "description": "Use a one-time plan for one decision, or Plus to keep tracking saved cities and timing as your plans change.",
     "disclaimer": "⚠️ **Important**: AI only analyzes cities on your planetary lines. It will not speculate about cities not in your chart. Results are for reference only.",
     "groups": [
       {
         "name": "one-time",
         "title": "One-Time",
-        "description": "Decide now — credits never expire"
+        "description": "Best for one decision — credits never expire"
       },
       {
         "name": "subscription",
         "title": "Subscription",
-        "description": "Low entry monthly — try paid AI before committing"
+        "headline": "Keep your saved cities and timing in one ongoing workspace",
+        "description": "For an active move or long trip: revisit the same research as dates and plans change.",
+        "highlights": [
+          "Full 30-day timing",
+          "90-day windows while active",
+          "500 credits every month"
+        ]
       }
     ],
     "items": [
@@ -57,7 +63,8 @@
         "features_title": "Premium Features",
         "features": [
           "1000 credits — about 100 AI chats or ~20 full city comparison reports",
-          "Full AI City Comparison Reports (50 credits each)",
+        "Full AI City Comparison Reports (50 credits each)",
+        "Full 30-day timing results for your saved research project",
           "Relocation chart analysis",
           "Country explorer access",
           "Export AI chat (TXT) & download maps",
@@ -72,7 +79,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "Chats + city comparison reports, forever — better value than 2 months of Plus",
+      "tip": "One payment for a focused decision — credits and 30-day timing access do not expire",
         "switch_group": "subscription",
         "switch_group_label": "From $6.9/mo →",
         "button": {
@@ -120,17 +127,19 @@
         "valid_months": 0
       },
       {
-        "title": "Plus Monthly",
-        "description": "Best for: trying paid AI this month — not ready to commit to a one-time plan.",
-        "group": "subscription",
-        "label": "Flexible",
-        "features_title": "Includes",
-        "features": [
-          "500 credits/month — about 50 AI chats or ~10 city comparison reports",
-          "Unlimited astrocartography maps",
-          "PNG map download & TXT chat export",
-          "Renews monthly — cancel anytime"
-        ],
+      "title": "Plus Monthly",
+      "eyebrow": "Ongoing relocation research",
+      "description": "For an active move or long trip when your dates and shortlist may still change.",
+      "group": "subscription",
+      "label": "Start Here",
+      "features_title": "Everything you need to keep researching",
+      "features": [
+        "Full 30-day timing results for every saved city",
+        "Unlock 90-day timing windows while Plus is active",
+        "500 credits/month — about 50 AI chats or ~10 full city comparison reports",
+        "Export saved project and timing results",
+        "Renews monthly — cancel anytime"
+      ],
         "interval": "month",
         "amount": 690,
         "cn_amount": 4900,
@@ -139,9 +148,10 @@
         "original_price": "",
         "unit": "/month",
         "is_featured": true,
-        "tip": "Start at $6.9 — no $9.9 upfront · More subscriber features coming soon",
-        "button": {
-          "title": "Subscribe",
+      "tip": "Best for testing Plus through one real move or travel plan",
+      "billing_note": "Auto-renews monthly through Stripe. Cancel future renewals anytime.",
+      "button": {
+        "title": "Start Plus Monthly",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },
@@ -151,16 +161,18 @@
         "valid_months": 1
       },
       {
-        "title": "Plus Yearly",
-        "description": "Best for: committed users who know they'll subscribe for a full year.",
+      "title": "Plus Yearly",
+      "eyebrow": "Ongoing relocation research",
+      "description": "For ongoing relocation research across the year, with the same Plus access at a lower monthly equivalent.",
         "group": "subscription",
         "label": "Save ~29%",
-        "features_title": "Includes",
-        "features": [
-          "500 credits/month — about 50 AI chats or ~10 city comparison reports",
-          "Unlimited astrocartography maps",
-          "PNG map download & TXT chat export",
-          "Renews yearly — cancel anytime"
+      "features_title": "Everything in Plus Monthly",
+      "features": [
+        "Full 30-day timing results for every saved city",
+        "Unlock 90-day timing windows while Plus is active",
+        "500 credits/month — about 50 AI chats or ~10 full city comparison reports",
+        "Export saved project and timing results",
+        "Billed yearly — cancel future renewals anytime"
         ],
         "interval": "year",
         "amount": 5900,
@@ -170,9 +182,10 @@
         "original_price": "$82.8",
         "unit": "/year",
         "is_featured": false,
-        "tip": "About $4.9/month — save ~29% vs monthly",
-        "button": {
-          "title": "Subscribe Yearly",
+      "tip": "About $4.9/month — save ~29% compared with monthly billing",
+      "billing_note": "Auto-renews yearly through Stripe. 500 credits are added monthly while active.",
+      "button": {
+        "title": "Choose Plus Yearly",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },

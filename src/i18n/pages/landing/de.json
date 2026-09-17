@@ -631,19 +631,21 @@
   "pricing": {
     "name": "pricing",
     "label": "Preise",
-    "title": "Wählen Sie Ihren Astrocartography-Tarif",
-    "description": "Kostenlose interaktive Karten für immer, oder schalten Sie Premium-KI-Funktionen mit flexiblen Preisoptionen frei",
+    "title": "Wählen Sie Ihre Art der Recherche",
+    "description": "Einmalzahlung für eine konkrete Entscheidung oder Plus, um gespeicherte Städte und Zeitfenster bei Planänderungen weiterzuverfolgen.",
     "disclaimer": "⚠️ **Wichtig**: Die KI analysiert nur Städte auf Ihren Planetenlinien. Sie spekuliert nicht über Städte außerhalb Ihres Charts. Ergebnisse nur zur Orientierung.",
     "groups": [
       {
         "name": "one-time",
         "title": "Einmalzahlung",
-        "description": "Jetzt entscheiden — Credits verfallen nie"
+        "description": "Für eine konkrete Entscheidung — Credits verfallen nie"
       },
       {
         "name": "subscription",
         "title": "Abonnement",
-        "description": "Niedriger monatlicher Einstieg — bezahlte KI testen, bevor Sie sich binden"
+        "headline": "Gespeicherte Städte und Zeitfenster in einem fortlaufenden Arbeitsbereich",
+        "description": "Für Umzug oder Langzeitreise: dieselbe Recherche fortsetzen, wenn sich Termine oder Favoriten ändern.",
+        "highlights": ["Volle 30-Tage-Ergebnisse", "90-Tage-Fenster während Plus aktiv ist", "500 Credits pro Monat"]
       }
     ],
     "items": [
@@ -687,6 +689,7 @@
         "features": [
           "1000 Credits — etwa 100 AI-Chats oder ~20 vollständige Städtevergleichsberichte",
           "Vollständige KI-Städtevergleichsberichte (je 50 Credits)",
+          "Volle 30-Tage-Ergebnisse für Ihr gespeichertes Forschungsprojekt",
           "Relokationshoroskop-Analyse",
           "Zugang zum Länder-Explorer",
           "AI-Chat exportieren (TXT) & Karten herunterladen",
@@ -701,7 +704,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "Chats + Städtevergleichsberichte, für immer — günstiger als 2 Monate Plus",
+        "tip": "Eine Zahlung für eine konkrete Entscheidung — Credits und 30-Tage-Zugang verfallen nicht",
         "switch_group": "subscription",
         "switch_group_label": "Ab $6.9/Monat →",
         "button": {
@@ -750,14 +753,16 @@
       },
       {
         "title": "Plus Monatlich",
-        "description": "Ideal für: bezahlte KI diesen Monat testen — noch nicht bereit für Einmalzahlung.",
+        "eyebrow": "Fortlaufende Standortrecherche",
+        "description": "Für Umzug oder Langzeitreise, wenn Termine und Städteliste noch variieren können.",
         "group": "subscription",
-        "label": "Flexibel",
-        "features_title": "Enthalten",
+        "label": "Hier starten",
+        "features_title": "Alles für die fortlaufende Recherche",
         "features": [
-          "500 Credits/Monat — etwa 50 AI-Chats oder ~10 Städtevergleichsberichte",
-          "Unbegrenzte Astrocartography-Karten",
-          "PNG-Karten-Download & TXT-Chat-Export",
+          "Volle 30-Tage-Ergebnisse für jede gespeicherte Stadt",
+          "90-Tage-Zeitfenster, solange Plus aktiv ist",
+          "500 Credits/Monat — etwa 50 AI-Chats oder ~10 vollständige Städtevergleichsberichte",
+          "Forschungsprojekt und Zeitergebnisse exportieren",
           "Monatliche Verlängerung — jederzeit kündbar"
         ],
         "interval": "month",
@@ -768,9 +773,10 @@
         "original_price": "",
         "unit": "/Monat",
         "is_featured": true,
-        "tip": "Ab $6,9 — kein $9,9 im Voraus · Weitere Abo-Funktionen demnächst",
+        "tip": "Ideal, um Plus mit einem echten Umzugs- oder Reiseplan zu testen",
+        "billing_note": "Automatische monatliche Verlängerung über Stripe. Künftige Verlängerungen jederzeit kündbar.",
         "button": {
-          "title": "Abonnieren",
+          "title": "Plus Monatlich starten",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },
@@ -781,15 +787,17 @@
       },
       {
         "title": "Plus Jährlich",
-        "description": "Ideal für: Nutzer, die ein ganzes Jahr abonnieren werden.",
+        "eyebrow": "Fortlaufende Standortrecherche",
+        "description": "Für ganzjährige Recherche mit demselben Plus-Zugang zu einem niedrigeren Monatsäquivalent.",
         "group": "subscription",
         "label": "~29 % sparen",
-        "features_title": "Enthalten",
+        "features_title": "Alles aus Plus Monatlich",
         "features": [
-          "500 Credits/Monat — etwa 50 AI-Chats oder ~10 Städtevergleichsberichte",
-          "Unbegrenzte Astrocartography-Karten",
-          "PNG-Karten-Download & TXT-Chat-Export",
-          "Jährliche Verlängerung — jederzeit kündbar"
+          "Volle 30-Tage-Ergebnisse für jede gespeicherte Stadt",
+          "90-Tage-Zeitfenster, solange Plus aktiv ist",
+          "500 Credits/Monat — etwa 50 AI-Chats oder ~10 vollständige Städtevergleichsberichte",
+          "Forschungsprojekt und Zeitergebnisse exportieren",
+          "Jährliche Abrechnung — künftige Verlängerungen jederzeit kündbar"
         ],
         "interval": "year",
         "amount": 5900,
@@ -799,9 +807,10 @@
         "original_price": "$82.8",
         "unit": "/Jahr",
         "is_featured": false,
-        "tip": "Ca. $4,9/Monat — ~29 % günstiger als monatlich",
+        "tip": "Ca. $4,9/Monat — rund 29 % günstiger als monatliche Abrechnung",
+        "billing_note": "Automatische jährliche Verlängerung über Stripe. Während der Laufzeit monatlich 500 Credits.",
         "button": {
-          "title": "Jährlich abonnieren",
+          "title": "Plus Jährlich wählen",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },

@@ -1,6 +1,13 @@
 "use client";
 
-import { Check, Loader } from "lucide-react";
+import {
+  CalendarRange,
+  Check,
+  Loader,
+  MapPin,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
 import { PricingItem, Pricing as PricingType } from "@/types/blocks/pricing";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useEffect, useId, useMemo, useState } from "react";
@@ -34,19 +41,33 @@ function PricingPlanCard({
   isPreferred?: boolean;
 }) {
   usePricingItemTracking(item);
+  const isSubscriptionPlan = item.group === "subscription";
+  const isHighlighted = Boolean(item.is_featured || isPreferred);
 
   return (
     <div
       data-product-id={item.product_id}
       data-preferred-plan={isPreferred ? "true" : undefined}
-      className={`rounded-lg p-4 md:p-5 ${
-        item.is_featured || isPreferred
-          ? "border-primary border-2 bg-card text-card-foreground"
-          : "border-muted border"
+      className={`relative overflow-hidden rounded-xl p-4 md:p-5 transition-all ${
+        isSubscriptionPlan
+          ? isHighlighted
+            ? "border border-violet-400/60 bg-gradient-to-b from-violet-500/[0.14] via-card to-card text-card-foreground shadow-[0_20px_60px_-32px_rgba(168,85,247,0.8)] ring-1 ring-violet-400/20"
+            : "border border-violet-400/25 bg-gradient-to-b from-violet-500/[0.06] via-card to-card text-card-foreground"
+          : isHighlighted
+            ? "border-primary border-2 bg-card text-card-foreground"
+            : "border-muted border"
       }`}
     >
+      {isSubscriptionPlan && isHighlighted ? (
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-300 via-fuchsia-400 to-violet-500" />
+      ) : null}
       <div className="flex h-full flex-col justify-between gap-3 md:gap-4">
         <div>
+          {item.eyebrow && (
+            <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.18em] text-violet-500 dark:text-violet-300">
+              {item.eyebrow}
+            </p>
+          )}
           <div className="flex items-center gap-2 mb-2 md:mb-3">
             {item.title && (
               <h3 className="text-lg md:text-xl font-semibold">{item.title}</h3>
@@ -55,7 +76,11 @@ function PricingPlanCard({
             {item.label && (
               <Badge
                 variant="outline"
-                className="border-primary bg-primary px-1 md:px-1.5 text-primary-foreground text-xs"
+                className={
+                  isSubscriptionPlan
+                    ? "border-violet-400/50 bg-violet-500/15 px-1.5 text-violet-700 dark:text-violet-200 text-xs"
+                    : "border-primary bg-primary px-1 md:px-1.5 text-primary-foreground text-xs"
+                }
               >
                 {item.label}
               </Badge>
@@ -92,7 +117,13 @@ function PricingPlanCard({
             <ul className="flex flex-col gap-2 md:gap-2">
               {item.features.map((feature, fi) => (
                 <li className="flex gap-2 text-sm md:text-base" key={`feature-${fi}`}>
-                  <Check className="mt-0.5 md:mt-1 size-3 md:size-4 shrink-0" />
+                  <Check
+                    className={`mt-0.5 md:mt-1 size-3 md:size-4 shrink-0 ${
+                      isSubscriptionPlan
+                        ? "text-emerald-500"
+                        : "text-current"
+                    }`}
+                  />
                   {feature}
                 </li>
               ))}
@@ -102,7 +133,11 @@ function PricingPlanCard({
         <div className="flex flex-col gap-2">
           {item.button && item.amount > 0 && (
             <Button
-              className="w-full flex items-center justify-center gap-2 font-semibold text-sm md:text-base h-9 md:h-10"
+              className={`w-full flex items-center justify-center gap-2 font-semibold text-sm md:text-base h-10 md:h-11 ${
+                isSubscriptionPlan
+                  ? "border-0 bg-gradient-to-r from-amber-300 via-fuchsia-400 to-violet-600 text-slate-950 shadow-md hover:brightness-105"
+                  : ""
+              }`}
               disabled={isLoading}
               onClick={() => {
                 if (isLoading) return;
@@ -131,6 +166,12 @@ function PricingPlanCard({
           {item.tip && (
             <p className="text-muted-foreground text-xs md:text-sm mt-1 md:mt-2">
               {item.tip}
+            </p>
+          )}
+          {item.billing_note && (
+            <p className="mt-1 flex items-start gap-1.5 text-[11px] leading-relaxed text-muted-foreground">
+              <ShieldCheck className="mt-0.5 size-3.5 shrink-0 text-emerald-500" />
+              <span>{item.billing_note}</span>
             </p>
           )}
           {showSubscriptionLink &&
@@ -176,7 +217,10 @@ export default function Pricing({
     pricing.groups?.map((g) => g.name).filter(Boolean).join("|") ?? "";
 
   const [group, setGroup] = useState(
-    pricing.groups?.[0]?.name ?? pricing.items?.[0]?.group ?? ""
+    pricing.items?.find((item) => item.product_id === preferredProductId)?.group ??
+      pricing.groups?.[0]?.name ??
+      pricing.items?.[0]?.group ??
+      ""
   );
 
   // Only resync when available tabs change and current selection is invalid.
@@ -188,6 +232,16 @@ export default function Pricing({
       setGroup(names[0] ?? "");
     }
   }, [groupNamesKey, group]);
+
+  useEffect(() => {
+    if (!preferredProductId) return;
+    const preferredGroup = pricing.items?.find(
+      (item) => item.product_id === preferredProductId
+    )?.group;
+    if (preferredGroup && preferredGroup !== group) {
+      setGroup(preferredGroup);
+    }
+  }, [group, preferredProductId, pricing.items]);
 
   const activeGroup = pricing.groups?.find((g) => g.name === group);
 
@@ -271,12 +325,15 @@ export default function Pricing({
   };
 
   return (
-    <section id={pricing.name} className={isInModal ? "py-0" : "py-6 md:py-8"}>
+    <section
+      id={pricing.name}
+      className={isInModal ? "py-0" : "pb-6 pt-24 md:pb-8 md:pt-28"}
+    >
       <div className={isInModal ? "w-full" : "container"}>
         {/* 🔥 在弹窗中不显示标题和描述（已在 DialogHeader 中显示） */}
         {!isInModal && (
-          <div className="mx-auto mb-4 md:mb-6 text-center">
-            <h2 className="mb-2 md:mb-3 text-2xl md:text-4xl font-semibold lg:text-5xl">
+          <div className="mx-auto mb-4 max-w-5xl text-center md:mb-6">
+            <h2 className="mb-2 text-2xl font-semibold leading-tight md:mb-3 md:text-4xl lg:text-5xl">
               {pricing.title}
             </h2>
             <p className="text-sm md:text-base text-muted-foreground lg:text-lg">
@@ -339,11 +396,52 @@ export default function Pricing({
               </RadioGroup>
             </div>
           )}
-          {activeGroup?.description && (
+          {group === "subscription" &&
+          (activeGroup?.headline || activeGroup?.description) ? (
+            <div className="mb-2 w-full rounded-2xl border border-violet-400/25 bg-gradient-to-r from-violet-500/[0.10] via-fuchsia-500/[0.05] to-amber-400/[0.08] p-4 md:p-5">
+              <div className="flex items-start gap-3">
+                <div className="rounded-xl bg-violet-500/15 p-2.5 text-violet-600 dark:text-violet-300">
+                  <Sparkles className="size-5" />
+                </div>
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-violet-500 dark:text-violet-300">
+                    Plus
+                  </p>
+                  {activeGroup.headline && (
+                    <h3 className="mt-1 text-lg font-semibold md:text-xl">
+                      {activeGroup.headline}
+                    </h3>
+                  )}
+                  {activeGroup.description && (
+                    <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                      {activeGroup.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+              {activeGroup.highlights?.length ? (
+                <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                  {activeGroup.highlights.map((highlight, index) => {
+                    const HighlightIcon =
+                      [MapPin, CalendarRange, Sparkles][index] ?? Check;
+                    return (
+                      <div
+                        key={`${highlight}-${index}`}
+                        className="flex items-center gap-2 rounded-xl border border-border/60 bg-background/55 px-3 py-2.5 text-sm font-medium"
+                      >
+                        <HighlightIcon className="size-4 shrink-0 text-violet-500" />
+                        <span>{highlight}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : null}
+            </div>
+          ) : activeGroup?.description ? (
             <p className="text-sm text-muted-foreground text-center max-w-xl mb-2">
               {activeGroup.description}
             </p>
-          )}
+          ) : null}
           <div
             className={`w-full mt-0 grid gap-3 md:gap-4 ${gridColsClass}`}
           >

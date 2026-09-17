@@ -5,6 +5,8 @@ export interface PricingGroup {
   title?: string;
   description?: string;
   label?: string;
+  headline?: string;
+  highlights?: string[];
 }
 
 export interface PricingItem {
@@ -17,6 +19,8 @@ export interface PricingItem {
   unit?: string;
   features_title?: string;
   features?: string[];
+  eyebrow?: string;
+  billing_note?: string;
   button?: Button;
   tip?: string;
   /** Switch pricing tab (e.g. standard → subscription) */

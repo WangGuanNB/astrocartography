@@ -46,10 +46,10 @@ export default async function PricingPage({
 }) {
   const { locale } = await params;
   const page = await getPricingPage(locale);
+  const pricing = page.pricing
+    ? applySubscriptionPricingFilter(page.pricing, { surface: "general" }) ??
+      page.pricing
+    : undefined;
 
-  if (page.pricing) {
-    page.pricing = applySubscriptionPricingFilter(page.pricing) ?? page.pricing;
-  }
-
-  return <>{page.pricing && <Pricing pricing={page.pricing} />}</>;
+  return <>{pricing && <Pricing pricing={pricing} />}</>;
 }

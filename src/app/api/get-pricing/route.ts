@@ -11,14 +11,16 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const locale = searchParams.get('locale') || 'en';
+    const source = searchParams.get('source');
 
     const page = await getPricingPage(locale);
-
-    if (page.pricing) {
-      page.pricing = applySubscriptionPricingFilter(page.pricing) ?? page.pricing;
-    }
+    const pricing = page.pricing
+      ? applySubscriptionPricingFilter(page.pricing, {
+        surface: source === 'research' ? 'research' : 'general',
+      }) ?? page.pricing
+      : undefined;
     
-    if (!page || !page.pricing) {
+    if (!pricing) {
       return NextResponse.json(
         {
           success: false,
@@ -30,7 +32,7 @@ export async function GET(request: Request) {
 
     return NextResponse.json({
       success: true,
-      pricing: page.pricing,
+      pricing,
     });
   } catch (error) {
     console.error('Failed to get pricing data:', error);
@@ -43,4 +45,3 @@ export async function GET(request: Request) {
     );
   }
 }
-

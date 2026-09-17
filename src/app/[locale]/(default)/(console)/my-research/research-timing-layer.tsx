@@ -204,7 +204,7 @@ export default function ResearchTimingLayer({
                 {access.subscriptionEnabled ? (
                   <Button asChild size="sm" className="mt-4">
                     <Link
-                      href={"/#pricing" as any}
+                      href={"/pricing/research#pricing" as any}
                       onClick={() =>
                         researchFunnelEvents.plusOfferClicked("timing_lock")
                       }
