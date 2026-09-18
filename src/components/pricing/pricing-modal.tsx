@@ -1,11 +1,13 @@
 "use client";
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay, DialogPortal } from "@/components/ui/dialog";
-import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from "@/components/ui/drawer";
+import { Drawer, DrawerClose, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription } from "@/components/ui/drawer";
+import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Pricing from "@/components/blocks/pricing";
 import { Pricing as PricingType } from "@/types/blocks/pricing";
 import { useTranslations } from "next-intl";
+import { X } from "lucide-react";
 
 interface PricingModalProps {
   open: boolean;
@@ -60,21 +62,34 @@ export default function PricingModal({
     );
   }
 
-  // 移动端使用 Drawer
+  // 移动端：全屏 Drawer，把高度留给套餐卡片
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
-      <DrawerContent className="max-h-[85vh] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-t">
-        <DrawerHeader className="text-center pb-2">
-          <DrawerTitle className="text-xl font-bold">
+      <DrawerContent
+        className="!mt-0 !h-[100dvh] !max-h-[100dvh] rounded-none border-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 flex flex-col"
+      >
+        <DrawerHeader className="relative shrink-0 text-left gap-1 px-4 pr-12 pt-1 pb-2">
+          <DrawerClose asChild>
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              className="absolute right-2 top-0 h-10 w-10 rounded-full"
+              aria-label="Close"
+            >
+              <X className="h-5 w-5" />
+            </Button>
+          </DrawerClose>
+          <DrawerTitle className="text-lg font-bold leading-tight">
             {pricing.title || t('payment.modal.title')}
           </DrawerTitle>
           {pricing.description && (
-            <DrawerDescription className="text-sm">
+            <DrawerDescription className="text-xs leading-snug line-clamp-2">
               {pricing.description}
             </DrawerDescription>
           )}
         </DrawerHeader>
-        <div className="px-3 pb-3 overflow-y-auto">
+        <div className="flex-1 min-h-0 overflow-y-auto px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
           <Pricing
             pricing={pricing}
             isInModal={true}

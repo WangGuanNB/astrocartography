@@ -162,7 +162,7 @@ export default function ChartContent() {
 
   const fetchChartPricing = useCallback(async () => {
     try {
-      const response = await fetch(`/api/get-pricing?locale=${locale}`);
+      const response = await fetch(`/api/get-pricing?locale=${locale}&source=research`);
       const data = await response.json();
       if (data.success && data.pricing) {
         setChartPricingData(data.pricing);

@@ -112,12 +112,18 @@ export function usePayment() {
   ): Promise<{ success?: boolean; message?: string; needAuth?: boolean }> => {
     const isSubscriptionItem =
       item.interval === "month" || item.interval === "year";
+    const planName = item.product_name || item.title || item.product_id;
+    const planPrice = (item.amount || 0) / 100;
+    const trackFail = (reason: string) => {
+      paymentEvents.paymentFailed(planName, planPrice, item.product_id, reason);
+    };
 
     if (
       isSubscriptionItem &&
       process.env.NEXT_PUBLIC_SUBSCRIPTION_ENABLED !== "true"
     ) {
       toast.error("Plus subscription is temporarily unavailable. Please choose a one-time plan.");
+      trackFail("subscription_temporarily_unavailable");
       return { success: false, message: "subscription_temporarily_unavailable" };
     }
 
@@ -125,6 +131,7 @@ export function usePayment() {
 
     if (paymentMethod === "creem") {
       toast.error("This payment method is temporarily unavailable. Please use card or PayPal.");
+      trackFail("creem_temporarily_unavailable");
       return { success: false, message: "creem_temporarily_unavailable" };
     }
 
@@ -172,6 +179,7 @@ export function usePayment() {
       const { code, message, data } = await response.json();
       if (code !== 0) {
         toast.error(message);
+        trackFail(message || "checkout_rejected");
         return { success: false, message };
       }
 
@@ -179,20 +187,22 @@ export function usePayment() {
         const { approval_url } = data;
         if (approval_url) {
           paymentEvents.paymentInitiated(
-            item.product_name || item.title || item.product_id,
-            (item.amount || 0) / 100,
+            planName,
+            planPrice,
             item.product_id
           );
           window.location.href = approval_url;
           return { success: true };
         }
         toast.error("Failed to get PayPal approval URL");
+        trackFail("paypal_approval_url_missing");
         return { success: false, message: "Failed to get PayPal approval URL" };
       }
 
       const { public_key, session_id } = data;
       if (!public_key || !session_id) {
         toast.error("Invalid payment response");
+        trackFail("invalid_payment_response");
         return { success: false, message: "Invalid payment response" };
       }
 
@@ -200,12 +210,13 @@ export function usePayment() {
 
       if (!stripe) {
         toast.error("checkout failed");
+        trackFail("stripe_js_load_failed");
         return { success: false };
       }
 
       paymentEvents.paymentInitiated(
-        item.product_name || item.title || item.product_id,
-        (item.amount || 0) / 100,
+        planName,
+        planPrice,
         item.product_id
       );
 
@@ -215,6 +226,7 @@ export function usePayment() {
 
       if (result.error) {
         toast.error(result.error.message);
+        trackFail(result.error.message || "stripe_redirect_failed");
         return { success: false, message: result.error.message };
       }
 
@@ -222,6 +234,7 @@ export function usePayment() {
     } catch (e) {
       console.log("checkout failed: ", e);
       toast.error("checkout failed");
+      trackFail(e instanceof Error ? e.message : "checkout_exception");
       return { success: false };
     } finally {
       setIsLoading(false);

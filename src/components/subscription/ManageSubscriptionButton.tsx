@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLocale } from "next-intl";
 import { toast } from "sonner";
+import { paymentEvents } from "@/lib/analytics";
 
 export default function ManageSubscriptionButton({ label }: { label: string }) {
   const locale = useLocale();
@@ -11,6 +12,7 @@ export default function ManageSubscriptionButton({ label }: { label: string }) {
   async function openPortal() {
     try {
       setLoading(true);
+      paymentEvents.subscriptionManageOpened("account");
       const response = await fetch("/api/subscription/portal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

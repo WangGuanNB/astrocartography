@@ -1,7 +1,7 @@
 {
   "pricing": {
     "name": "pricing",
-    "label": "定价",
+    "label": "研究定价",
     "title": "选择你的研究方案",
     "description": "一次性方案适合完成一个决定；Plus 适合计划变化时持续跟踪已保存城市和时间窗口。",
     "disclaimer": "⚠️ **重要说明**：AI 仅分析您星盘中行星线经过的具体城市。不会推测或分析不在您行星线上的城市。分析结果仅供参考，不构成专业建议。",
@@ -24,37 +24,6 @@
       }
     ],
     "items": [
-      {
-        "title": "免费体验",
-        "description": "快速体验 AI 占星分析的核心功能",
-        "group": "one-time",
-        "features_title": "包含",
-        "features": [
-          "10 积分（1 次 AI 提问）",
-          "交互式占星地图",
-          "基础行星线解释",
-          "无限生成地图",
-          "即时访问"
-        ],
-        "interval": "one-time",
-        "amount": 0,
-        "cn_amount": 0,
-        "currency": "USD",
-        "price": "免费",
-        "original_price": "",
-        "unit": "",
-        "is_featured": false,
-        "tip": "永久免费，体验核心功能",
-        "button": {
-          "title": "开始免费体验",
-          "url": "/#generator",
-          "icon": "RiMapLine"
-        },
-        "product_id": "free",
-        "product_name": "免费占星地图体验",
-        "credits": 10,
-        "valid_months": 0
-      },
       {
         "title": "标准包",
         "description": "适合完成一次明确决定 — 对比城市、选择下一步去哪里。",

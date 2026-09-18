@@ -47,8 +47,8 @@ export default function FAQ({ section }: { section: SectionType }) {
                     </span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pt-2 pb-6 pl-12">
-                  <p className="text-muted-foreground leading-relaxed">
+                <AccordionContent className="pt-2 pb-6 pl-2 sm:pl-12">
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                     {item.description}
                   </p>
                 </AccordionContent>

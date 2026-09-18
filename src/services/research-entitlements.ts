@@ -1,7 +1,10 @@
 import { getOrdersByUserUuid } from "@/models/order";
 import type { ResearchProject } from "@/types/research-project";
 import type { ResearchTimingReport } from "@/types/research-timing";
-import { PAID_TIER_PRODUCT_IDS } from "@/services/entitlements";
+import {
+  isResearchPassProductId,
+  PAID_TIER_PRODUCT_IDS,
+} from "@/services/entitlements";
 import {
   getActivePlusSubscriptionSummary,
   isPlusProductId,
@@ -30,11 +33,13 @@ export type ResearchAccess = {
 
 export function resolveResearchAccess({
   hasOneTimePurchase,
+  hasResearchPass,
   hasAnyPlusPurchase,
   hasActivePlus,
   subscriptionEnabled,
 }: {
   hasOneTimePurchase: boolean;
+  hasResearchPass?: boolean;
   hasAnyPlusPurchase: boolean;
   hasActivePlus: boolean;
   subscriptionEnabled: boolean;
@@ -47,6 +52,8 @@ export function resolveResearchAccess({
         ? "one_time"
         : "free";
   const fallbackTier = hasOneTimePurchase ? "one_time" : "free";
+  // Research Pass keeps 90-day timing forever (unlike Plus, which is active-only).
+  const canUse90DayWindow = hasActivePlus || Boolean(hasResearchPass);
 
   return {
     tier,
@@ -55,7 +62,7 @@ export function resolveResearchAccess({
     canContinueProject: true,
     canExportProject: true,
     canViewFull30DayWindow: hasActivePlus || hasOneTimePurchase,
-    canUse90DayWindow: hasActivePlus,
+    canUse90DayWindow,
     canViewSavedPlusSnapshots: !hasActivePlus && hasAnyPlusPurchase,
     canExportTiming:
       hasActivePlus || hasOneTimePurchase || hasAnyPlusPurchase,
@@ -79,6 +86,9 @@ export async function getResearchAccess(
       hasOneTimePurchase: paidOrders.some((order) =>
         PAID_TIER_PRODUCT_IDS.has(order.product_id || "")
       ),
+      hasResearchPass: paidOrders.some((order) =>
+        isResearchPassProductId(order.product_id)
+      ),
       hasAnyPlusPurchase: paidOrders.some((order) =>
         isPlusProductId(order.product_id)
       ),
@@ -91,6 +101,7 @@ export async function getResearchAccess(
     });
     return resolveResearchAccess({
       hasOneTimePurchase: false,
+      hasResearchPass: false,
       hasAnyPlusPurchase: false,
       hasActivePlus: false,
       subscriptionEnabled: isSubscriptionEnabled(),

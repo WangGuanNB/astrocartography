@@ -16,6 +16,12 @@ import {
 import { grantSubscriptionPeriodCredits } from "@/services/credit";
 import { fulfillPaidOrder, handleOrderSession } from "@/services/order";
 import { ensureAnnualSubscriptionCreditsForUser } from "@/services/annual-subscription-credits";
+import {
+  getGaClientIdFromOrderDetail,
+  reportPaymentFailed,
+  reportPurchase,
+  reportSubscriptionCancel,
+} from "@/lib/ga4-server-events";
 
 function objectId(value: { id: string } | string | null | undefined): string {
   if (!value) return "";
@@ -222,6 +228,18 @@ async function handlePaidInvoice(stripe: Stripe, invoice: Stripe.Invoice) {
     return;
   }
 
+  // Renewals: first payment already reported purchase via fulfillPaidOrder.
+  // Use invoice.id so each period is a unique GA4 transaction.
+  void reportPurchase({
+    provider: "stripe",
+    transactionId: invoice.id,
+    amount: invoice.amount_paid || order.amount || 0,
+    currency: invoice.currency || order.currency,
+    productId: order.product_id,
+    productName: order.product_name,
+    gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+  });
+
   if (isAnnual) return;
 
   const granted = await grantSubscriptionPeriodCredits({
@@ -320,17 +338,43 @@ export async function handleStripeWebhookEvent(event: Stripe.Event) {
           stripe,
           invoiceSubscription(invoice)
         );
-        await syncStripeSubscription(
+        const { order } = await syncStripeSubscription(
           subscription,
           invoiceSubscriptionMetadata(invoice)
         );
+        void reportPaymentFailed({
+          provider: "stripe",
+          transactionId: invoice.id,
+          amount: invoice.amount_due || order.amount || 0,
+          currency: invoice.currency || order.currency,
+          productId: order.product_id,
+          productName: order.product_name,
+          gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+          errorReason:
+            invoice.last_finalization_error?.message ||
+            invoice.billing_reason ||
+            "invoice_payment_failed",
+        });
         break;
       }
       case "customer.subscription.created":
       case "customer.subscription.updated":
-      case "customer.subscription.deleted":
         await syncStripeSubscription(event.data.object);
         break;
+      case "customer.subscription.deleted": {
+        const subscription = event.data.object;
+        const { order } = await syncStripeSubscription(subscription);
+        void reportSubscriptionCancel({
+          provider: "stripe",
+          transactionId: subscription.id,
+          amount: 0,
+          currency: order.currency || "usd",
+          productId: order.product_id,
+          productName: order.product_name,
+          gaClientId: getGaClientIdFromOrderDetail(order.order_detail),
+        });
+        break;
+      }
     }
     await finishSubscriptionEvent("stripe", event.id);
   } catch (error) {

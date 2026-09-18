@@ -208,7 +208,7 @@ export default async function LandingPage({
 }) {
   const { locale } = await params;
   const page = await getLandingPage(locale);
-  const pricing = applySubscriptionPricingFilter(page.pricing);
+  const pricing = applySubscriptionPricingFilter(page.pricing, { surface: "research" });
 
   const faqSchema = page.faq?.items?.length ? {
     "@context": "https://schema.org",

@@ -1,7 +1,7 @@
 {
   "pricing": {
     "name": "pricing",
-    "label": "Preise",
+    "label": "Recherche-Preise",
     "title": "Wählen Sie Ihren Recherche-Plan",
     "description": "Einmalzahlung für eine fokussierte Recherche oder Plus, um Städte und Zeitfenster bei Planänderungen weiterzuverfolgen.",
     "disclaimer": "⚠️ **Wichtig**: Die KI analysiert nur Städte auf Ihren Planetenlinien. Sie spekuliert nicht über Städte außerhalb Ihres Charts. Ergebnisse nur zur Orientierung.",
@@ -24,37 +24,6 @@
       }
     ],
     "items": [
-      {
-        "title": "Free Trial",
-        "description": "Quickly experience core AI astrocartography features",
-        "group": "one-time",
-        "features_title": "Includes",
-        "features": [
-          "10 credits (1 AI question)",
-          "Interactive astrocartography map",
-          "Basic planetary line explanations",
-          "Generate unlimited maps",
-          "Instant access"
-        ],
-        "interval": "one-time",
-        "amount": 0,
-        "cn_amount": 0,
-        "currency": "USD",
-        "price": "Free",
-        "original_price": "",
-        "unit": "",
-        "is_featured": false,
-        "tip": "100% free forever, experience core features",
-        "button": {
-          "title": "Start Free Trial",
-          "url": "/#generator",
-          "icon": "RiMapLine"
-        },
-        "product_id": "free",
-        "product_name": "Free Astrocartography Trial",
-        "credits": 10,
-        "valid_months": 0
-      },
       {
         "title": "Standard-Plan",
         "description": "Ideal für eine fokussierte Entscheidung — Städte vergleichen und wählen, wohin es als nächstes geht.",

@@ -188,7 +188,7 @@ export default function AstroChat({
   // 获取定价数据
   const fetchPricingData = async () => {
     try {
-      const response = await fetch(`/api/get-pricing?locale=${locale}`);
+      const response = await fetch(`/api/get-pricing?locale=${locale}&source=research`);
       const data = await response.json();
       if (data.success && data.pricing) {
         setPricingData(data.pricing);

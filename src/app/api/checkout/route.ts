@@ -263,6 +263,7 @@ async function handleStripeCheckout(params: {
     transactionId: order_no,
     amount,
     currency,
+    productId: product_id,
     productName: product_name,
     gaClientId: ga_client_id,
   });

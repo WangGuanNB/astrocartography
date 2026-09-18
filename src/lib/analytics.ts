@@ -533,11 +533,13 @@ export const paymentEvents = {
    * 查看价格方案
    * @param planName 方案名称
    * @param planPrice 方案价格
+   * @param planId 方案 ID（product_id）
    */
-  planViewed: (planName: string, planPrice: number) => {
+  planViewed: (planName: string, planPrice: number, planId?: string) => {
     trackEvent('pricing_plan_viewed', {
       plan_name: planName,
       plan_price: planPrice,
+      ...(planId ? { plan_id: planId, product_id: planId } : {}),
       event_category: 'Payment',
       event_label: planName,
     });
@@ -630,6 +632,17 @@ export const paymentEvents = {
       error_reason: errorReason || 'unknown',
       event_category: 'Payment',
       event_label: 'Payment Failed',
+    });
+  },
+
+  /**
+   * 打开 Stripe 订阅管理门户（取消/换卡等）
+   */
+  subscriptionManageOpened: (source: string = 'account') => {
+    trackEvent('subscription_manage_opened', {
+      source,
+      event_category: 'Payment',
+      event_label: 'Manage Subscription',
     });
   },
 };

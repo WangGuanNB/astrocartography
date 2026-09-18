@@ -61,9 +61,15 @@ function fallbackClientId(transactionId: string): string {
   return `${Math.max(hash, 1)}.1`;
 }
 
+type Ga4ServerEventName =
+  | "checkout_created"
+  | "purchase"
+  | "payment_failed"
+  | "subscription_cancel";
+
 async function reportPaymentEvent(
-  name: "checkout_created" | "purchase",
-  input: PaymentEventInput
+  name: Ga4ServerEventName,
+  input: PaymentEventInput & { errorReason?: string | null }
 ) {
   const measurementId =
     process.env.GA4_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
@@ -100,6 +106,9 @@ async function reportPaymentEvent(
                 value,
                 payment_provider: input.provider,
                 engagement_time_msec: 1,
+                ...(input.errorReason
+                  ? { error_reason: input.errorReason }
+                  : {}),
                 items: [
                   {
                     item_id: input.productId || input.transactionId,
@@ -150,4 +159,14 @@ export function reportCheckoutCreated(input: PaymentEventInput) {
 
 export function reportPurchase(input: PaymentEventInput) {
   return reportPaymentEvent("purchase", input);
+}
+
+export function reportPaymentFailed(
+  input: PaymentEventInput & { errorReason?: string | null }
+) {
+  return reportPaymentEvent("payment_failed", input);
+}
+
+export function reportSubscriptionCancel(input: PaymentEventInput) {
+  return reportPaymentEvent("subscription_cancel", input);
 }

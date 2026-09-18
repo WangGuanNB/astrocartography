@@ -9,16 +9,24 @@ import {
 export const PAID_TIER_PRODUCT_IDS = new Set([
   "standard",
   "professional",
+  "research-pass",
   "premium-2weeks",
 ]);
+
+export function isResearchPassProductId(
+  productId: string | null | undefined
+): boolean {
+  return productId === "research-pass";
+}
 
 function orderGrantsPaidTier(productId: string | null): boolean {
   if (!productId || productId === "free") return false;
   return PAID_TIER_PRODUCT_IDS.has(productId);
 }
 
+/** Professional + Research Pass unlock permanent chat history. */
 function orderGrantsProfessional(productId: string | null): boolean {
-  return productId === "professional";
+  return productId === "professional" || isResearchPassProductId(productId);
 }
 
 /**

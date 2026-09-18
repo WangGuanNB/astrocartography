@@ -17,7 +17,8 @@ export function usePricingItemTracking(item: PricingItem) {
       viewedRef.current = true;
       paymentEvents.planViewed(
         item.title || 'Unknown Plan',
-        item.amount / 100
+        item.amount / 100,
+        item.product_id
       );
     }
   }, [item.title, item.amount]);

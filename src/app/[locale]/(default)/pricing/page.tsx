@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Pricing from "@/components/blocks/pricing";
+import FAQ from "@/components/blocks/faq";
 import { getPricingPage } from "@/services/page";
 import { getCanonicalUrl } from "@/lib/utils";
 import { applySubscriptionPricingFilter } from "@/services/subscription";
@@ -11,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const page = await getPricingPage(locale);
-  
+
   const title = page.pricing?.title || "Pricing";
   const description = page.pricing?.description || "Choose the perfect plan for your needs";
 
@@ -47,9 +48,14 @@ export default async function PricingPage({
   const { locale } = await params;
   const page = await getPricingPage(locale);
   const pricing = page.pricing
-    ? applySubscriptionPricingFilter(page.pricing, { surface: "general" }) ??
+    ? applySubscriptionPricingFilter(page.pricing, { surface: "research" }) ??
       page.pricing
     : undefined;
 
-  return <>{pricing && <Pricing pricing={pricing} />}</>;
+  return (
+    <>
+      {pricing && <Pricing pricing={pricing} />}
+      {page.faq && <FAQ section={page.faq} />}
+    </>
+  );
 }

@@ -12,6 +12,7 @@ function access(
 ) {
   return resolveResearchAccess({
     hasOneTimePurchase: false,
+    hasResearchPass: false,
     hasAnyPlusPurchase: false,
     hasActivePlus: false,
     subscriptionEnabled: false,
@@ -32,6 +33,15 @@ assert.equal(oneTime.canViewFull30DayWindow, true);
 assert.equal(oneTime.canUse90DayWindow, false);
 assert.equal(oneTime.canExportTiming, true);
 assert.equal(oneTime.previewEventsPerCity, null);
+
+const researchPass = access({
+  hasOneTimePurchase: true,
+  hasResearchPass: true,
+});
+assert.equal(researchPass.tier, "one_time");
+assert.equal(researchPass.canViewFull30DayWindow, true);
+assert.equal(researchPass.canUse90DayWindow, true);
+assert.equal(researchPass.previewEventsPerCity, null);
 
 const activePlus = access({
   hasAnyPlusPurchase: true,
@@ -55,6 +65,14 @@ const expiredPlusWithPurchase = access({
 assert.equal(expiredPlusWithPurchase.tier, "plus_expired");
 assert.equal(expiredPlusWithPurchase.fallbackTier, "one_time");
 assert.equal(expiredPlusWithPurchase.canViewFull30DayWindow, true);
+
+const expiredPlusWithResearchPass = access({
+  hasOneTimePurchase: true,
+  hasResearchPass: true,
+  hasAnyPlusPurchase: true,
+});
+assert.equal(expiredPlusWithResearchPass.tier, "plus_expired");
+assert.equal(expiredPlusWithResearchPass.canUse90DayWindow, true);
 
 const report: ResearchTimingReport = {
   method: "relocated_angle_transits_v1",

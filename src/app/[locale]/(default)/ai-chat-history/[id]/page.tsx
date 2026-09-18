@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import PricingModal from "@/components/pricing/pricing-modal";
 import { Pricing as PricingType } from "@/types/blocks/pricing";
 import { toast } from "sonner";
+import { paymentEvents } from "@/lib/analytics";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -31,7 +32,7 @@ export default function AiChatHistoryDetailPage() {
 
   const fetchPricing = async (): Promise<boolean> => {
     try {
-      const response = await fetch(`/api/get-pricing?locale=${locale}`);
+      const response = await fetch(`/api/get-pricing?locale=${locale}&source=research`);
       if (!response.ok) return false;
       const data = await response.json();
       if (data.success && data.pricing) {
@@ -161,6 +162,7 @@ export default function AiChatHistoryDetailPage() {
                     }
                   }
                   setShowPricingModal(true);
+                  paymentEvents.pricingModalOpened("other");
                 }}
               >
                 {t("view_plans")}

@@ -2,9 +2,9 @@
   "pricing": {
     "name": "pricing",
     "label": "Preços",
-    "title": "Escolha como deseja pesquisar",
-    "description": "Use um plano único para uma decisão ou o Plus para acompanhar cidades e períodos salvos quando seus planos mudarem.",
-    "disclaimer": "⚠️ **Importante**: A IA apenas analisa cidades em suas linhas planetárias. Não especulará sobre cidades que não estão em seu mapa. Os resultados são apenas para referência.",
+    "title": "Escolha seu plano de pesquisa",
+    "description": "Planos únicos para uma pesquisa focada, ou Plus para continuar rastreando cidades e momentos conforme seus planos mudam.",
+    "disclaimer": "⚠️ **Importante**: A IA analisa apenas cidades em suas linhas planetárias. Não especulará sobre cidades fora do seu mapa. Os resultados são apenas para referência.",
     "groups": [
       {
         "name": "one-time",
@@ -14,58 +14,60 @@
       {
         "name": "subscription",
         "title": "Assinatura",
-        "headline": "Cidades e períodos salvos em um único espaço de pesquisa contínua",
-        "description": "Para mudança ou viagem longa: retome a mesma pesquisa quando datas ou preferências mudarem.",
-        "highlights": ["Resultados completos de 30 dias", "Janelas de 90 dias enquanto o Plus estiver ativo", "500 créditos por mês"]
+        "headline": "Continue rastreando cidades salvas e momentos conforme seus planos mudam",
+        "description": "Para uma mudança ativa ou viagem longa: volte à mesma pesquisa conforme datas e planos mudam.",
+        "highlights": [
+          "Resultados completos de 30 dias",
+          "Janelas de 90 dias enquanto Plus estiver ativo",
+          "150 créditos por mês"
+        ]
       }
     ],
     "items": [
       {
-        "title": "Teste Gratuito",
-        "description": "Experimente rapidamente os principais recursos de astrocartografia com IA",
+        "title": "Free Trial",
+        "description": "Quickly experience core AI astrocartography features",
         "group": "one-time",
-        "features_title": "Inclui",
+        "features_title": "Includes",
         "features": [
-          "10 créditos (1 pergunta de IA)",
-          "Mapa interativo de astrocartografia",
-          "Explicações básicas das linhas planetárias",
-          "Gerar mapas ilimitados",
-          "Acesso instantâneo"
+          "10 credits (1 AI question)",
+          "Interactive astrocartography map",
+          "Basic planetary line explanations",
+          "Generate unlimited maps",
+          "Instant access"
         ],
         "interval": "one-time",
         "amount": 0,
         "cn_amount": 0,
         "currency": "USD",
-        "price": "Gratuito",
+        "price": "Free",
         "original_price": "",
         "unit": "",
         "is_featured": false,
-        "tip": "100% gratuito para sempre, experimente recursos principais",
+        "tip": "100% free forever, experience core features",
         "button": {
-          "title": "Iniciar Teste Gratuito",
+          "title": "Start Free Trial",
           "url": "/#generator",
           "icon": "RiMapLine"
         },
         "product_id": "free",
-        "product_name": "Teste Gratuito de Astrocartografia",
+        "product_name": "Free Astrocartography Trial",
         "credits": 10,
         "valid_months": 0
       },
       {
-        "title": "Plano Padrão",
-        "description": "Ideal para comparar cidades e decidir uma mudança",
+        "title": "Plano Standard",
+        "description": "Ideal para uma decisão focada — compare cidades e escolha para onde ir a seguir.",
         "group": "one-time",
-        "label": "Mais Popular",
-        "features_title": "Recursos Premium",
+        "label": "Mais popular",
+        "features_title": "O que você recebe",
         "features": [
-          "1000 créditos — cerca de 100 chats de IA ou ~20 relatórios completos de comparação de cidades",
-          "Relatórios completos de comparação de cidades por IA (50 créditos cada)",
-          "Resultados completos de 30 dias para o projeto salvo",
-          "Análise de mapa de relocação",
-          "Acesso ao explorador de países",
-          "Exportar chat de IA (TXT) e baixar mapas",
-          "Experiência sem anúncios",
-          "Válido para sempre — pagamento único, sem renovação automática"
+          "150 créditos IA — cerca de 15 chats ou 3 relatórios completos de comparação de cidades",
+          "Uso típico: 1 comparação completa de cidade (50) + 10 perguntas de acompanhamento (100)",
+          "Prévia de 30 dias para seu projeto de pesquisa salvo",
+          "Baixe mapas (PNG) e exporte o chat atual (TXT)",
+          "Sugestões de acompanhamento IA após cada resposta",
+          "Créditos nunca expiram — pague uma vez, sem renovação automática"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -75,146 +77,156 @@
         "original_price": "",
         "unit": "",
         "is_featured": true,
-        "tip": "Um pagamento para uma decisão concreta — créditos e acesso de 30 dias não expiram",
+        "tip": "Perfeito para uma decisão de mudança — créditos suficientes para uma primeira rodada completa de pesquisa.",
         "switch_group": "subscription",
-        "switch_group_label": "A partir de $6,9/mês →",
+        "switch_group_label": "Ou Plus a partir de $7.9/mês →",
         "button": {
-          "title": "Comprar Agora",
+          "title": "Comprar Standard",
           "url": "/#pricing",
           "icon": "RiShoppingCartLine"
         },
         "product_id": "standard",
-        "product_name": "Plano Padrão - Válido para Sempre",
-        "credits": 1000,
+        "product_name": "Plano Standard - Válido para sempre",
+        "credits": 150,
+        "valid_months": 0
+      },
+      {
+        "title": "Plano Professional",
+        "description": "Ideal para pesquisa profunda de várias cidades e revisões de decisão repetidas.",
+        "group": "one-time",
+        "label": "Pesquisa profunda",
+        "features_title": "Tudo no Standard, mais",
+        "features": [
+          "500 créditos IA — cerca de 50 chats ou 10 relatórios completos de comparação de cidades",
+          "Uso típico: 4 comparações completas de cidades + 30 perguntas de acompanhamento",
+          "⭐ Histórico permanente de chat — revise e reexporte sessões passadas",
+          "⭐ Análise avançada de linhas planetárias (Chiron, Lilith, pontos médios)",
+          "Resultados completos de 30 dias (sem limitação de prévia)",
+          "Baixe mapas (PNG) e exporte o chat atual (TXT)",
+          "Sugestões de acompanhamento IA após cada resposta",
+          "Créditos nunca expiram — pague uma vez, sem renovação automática"
+        ],
+        "interval": "one-time",
+        "amount": 1990,
+        "cn_amount": 13990,
+        "currency": "USD",
+        "price": "$19.9",
+        "original_price": "$24.9",
+        "unit": "",
+        "is_featured": false,
+        "tip": "Para pesquisa séria — compare 3-5 cidades e mantenha a análise para sempre.",
+        "switch_group": "subscription",
+        "switch_group_label": "Ou Plus a partir de $7.9/mês →",
+        "button": {
+          "title": "Comprar Professional",
+          "url": "/#pricing",
+          "icon": "RiShoppingCartLine"
+        },
+        "product_id": "professional",
+        "product_name": "Plano Professional - Válido para sempre",
+        "credits": 500,
         "valid_months": 0
       },
       {
         "title": "Passe de Pesquisa",
-        "description": "Um passe único para pesquisa ativa de mudança quando datas e sua lista ainda mudam.",
+        "description": "Um passe único para pesquisa ativa de mudança quando suas datas e lista curta ainda mudam.",
         "group": "one-time",
-        "label": "Acesso de 90 dias",
-        "features_title": "Benefícios principais do Plus, mantidos para sempre com um único pagamento",
+        "label": "Melhor valor",
+        "features_title": "Tudo no Professional, mais",
         "features": [
-          "500 créditos para chat de IA e comparações entre cidades",
-          "Desbloqueie para sempre janelas completas de 90 dias de cada projeto salvo",
-          "Salve e continue seu projeto de pesquisa com até 3 cidades",
-          "Exporte seu projeto e os resultados de 30/90 dias",
-          "Válido para sempre — sem expiração, sem renovação automática"
+          "1000 créditos IA — cerca de 100 chats ou 20 relatórios completos de comparação de cidades",
+          "Uso típico: 8 comparações completas de cidades + 60 perguntas de acompanhamento",
+          "⭐ Resultados completos de 90 dias (para sempre, não só durante a assinatura)",
+          "⭐ Salve até 5 projetos de pesquisa lado a lado",
+          "⭐ Exporte em lote várias sessões de chat como arquivos TXT",
+          "⭐ Suporte prioritário por e-mail (resposta em 24 horas)",
+          "Todos os recursos Professional incluídos",
+          "Créditos nunca expiram — pague uma vez, sem renovação automática"
         ],
         "interval": "one-time",
-        "amount": 3900,
-        "cn_amount": 27900,
+        "amount": 2990,
+        "cn_amount": 20990,
         "currency": "USD",
-        "price": "$39",
-        "original_price": "",
+        "price": "$29.9",
+        "original_price": "$39",
         "unit": "",
         "is_featured": false,
-        "tip": "Mantenha sua lista e os resultados de 30/90 dias para sempre — pague uma vez em vez de renovar o Plus",
+        "tip": "Construído para um ano inteiro de pesquisa de mudança — muitas cidades na lista curta, muitas mudanças planejadas.",
         "switch_group": "subscription",
-        "switch_group_label": "Comparar com o Plus →",
+        "switch_group_label": "Ou Plus a partir de $7.9/mês →",
         "button": {
           "title": "Comprar Passe de Pesquisa",
           "url": "/#pricing",
           "icon": "RiPassValidLine"
         },
         "product_id": "research-pass",
-        "product_name": "Passe de Pesquisa - Válido para Sempre",
-        "credits": 500,
-        "valid_months": 0
-      },
-      {
-        "title": "Plano Profissional",
-        "description": "Ideal para pesquisa profunda em várias cidades e revisões repetidas",
-        "group": "one-time",
-        "label": "Melhor Valor",
-        "features_title": "Todos os recursos Padrão, mais",
-        "features": [
-          "3000 créditos — cerca de 300 chats de IA ou ~60 relatórios completos de comparação de cidades",
-          "Todos os recursos do Plano Padrão",
-          "Histórico permanente de chat — ver, rever e exportar na sua conta",
-          "Resposta prioritária de IA (2x mais rápida)",
-          "Análise avançada de linhas planetárias (Quíron, Lilith, etc.)",
-          "Suporte por e-mail (resposta em 48 horas)",
-          "Válido para sempre — pagamento único, sem renovação automática"
-        ],
-        "interval": "one-time",
-        "amount": 1890,
-        "cn_amount": 13290,
-        "currency": "USD",
-        "price": "$18.9",
-        "original_price": "$24.9",
-        "unit": "",
-        "is_featured": false,
-        "tip": "Mais relatórios de comparação + histórico permanente — cerca de $0.063 por chat",
-        "button": {
-          "title": "Comprar Agora",
-          "url": "/#pricing",
-          "icon": "RiShoppingCartLine"
-        },
-        "product_id": "professional",
-        "product_name": "Plano Profissional - Válido para Sempre",
-        "credits": 3000,
+        "product_name": "Passe de Pesquisa - Válido para sempre",
+        "credits": 1000,
         "valid_months": 0
       },
       {
         "title": "Plus Mensal",
-        "eyebrow": "Pesquisa contínua de relocação",
-        "description": "Para mudança ou viagem longa quando datas e cidades candidatas ainda podem mudar.",
+        "eyebrow": "Pesquisa contínua",
+        "description": "Para uma mudança ativa ou viagem longa quando suas datas e lista curta ainda podem mudar.",
         "group": "subscription",
-        "label": "Comece aqui",
-        "features_title": "Tudo o que você precisa para continuar pesquisando",
+        "label": "Rastreamento contínuo",
+        "features_title": "O que você recebe todo mês",
         "features": [
+          "150 créditos todo mês — cerca de 15 chats ou 3 relatórios completos de comparação de cidades",
           "Resultados completos de 30 dias para cada cidade salva",
-          "Janelas de 90 dias enquanto o Plus estiver ativo",
-          "500 créditos/mês — cerca de 50 chats de IA ou ~10 relatórios completos de comparação",
-          "Exporte o projeto e os resultados temporais",
-          "Renovação mensal — cancele a qualquer momento"
+          "Desbloqueie janelas de 90 dias enquanto Plus estiver ativo",
+          "1 projeto de pesquisa salvo",
+          "Baixe mapas (PNG) e exporte o chat atual (TXT)",
+          "Sugestões de acompanhamento IA após cada resposta",
+          "Créditos renovados mensalmente — cancele quando quiser"
         ],
         "interval": "month",
-        "amount": 690,
-        "cn_amount": 4900,
+        "amount": 790,
+        "cn_amount": 5500,
         "currency": "USD",
-        "price": "$6.9",
+        "price": "$7.9",
         "original_price": "",
         "unit": "/mês",
         "is_featured": true,
-        "tip": "Ideal para testar o Plus com um plano real de mudança ou viagem",
-        "billing_note": "Renovação mensal automática via Stripe. Cancele futuras renovações quando quiser.",
+        "tip": "Melhor para uma mudança em andamento ou viagem longa — créditos renovam conforme você continua pesquisando.",
+        "billing_note": "Renova mensalmente através do Stripe. Cancele renovações futuras a qualquer momento.",
         "button": {
-          "title": "Começar Plus Mensal",
+          "title": "Iniciar Plus Mensal",
           "url": "/#pricing",
           "icon": "RiRefreshLine"
         },
         "product_id": "plus-monthly",
         "product_name": "Assinatura Plus - Mensal",
-        "credits": 500,
+        "credits": 150,
         "valid_months": 1
       },
       {
         "title": "Plus Anual",
-        "eyebrow": "Pesquisa contínua de relocação",
-        "description": "Para pesquisar durante todo o ano com o mesmo acesso Plus e menor custo mensal equivalente.",
+        "eyebrow": "Pesquisa contínua",
+        "description": "Mesmo acesso Plus, cobrado anualmente a um preço mensal mais baixo.",
         "group": "subscription",
-        "label": "Economize ~29%",
-        "features_title": "Tudo do Plus Mensal",
+        "label": "Economize ~34%",
+        "features_title": "Tudo no Plus Mensal",
         "features": [
+          "150 créditos todo mês — cerca de 15 chats ou 3 relatórios completos de comparação de cidades",
           "Resultados completos de 30 dias para cada cidade salva",
-          "Janelas de 90 dias enquanto o Plus estiver ativo",
-          "500 créditos/mês — cerca de 50 chats de IA ou ~10 relatórios completos de comparação",
-          "Exporte o projeto e os resultados temporais",
-          "Cobrança anual — cancele futuras renovações quando quiser"
+          "Desbloqueie janelas de 90 dias enquanto Plus estiver ativo",
+          "1 projeto de pesquisa salvo",
+          "Baixe mapas (PNG) e exporte o chat atual (TXT)",
+          "Sugestões de acompanhamento IA após cada resposta",
+          "Cobrado anualmente — cancele renovações futuras a qualquer momento"
         ],
         "interval": "year",
-        "amount": 5900,
-        "cn_amount": 41900,
+        "amount": 7100,
+        "cn_amount": 49900,
         "currency": "USD",
-        "price": "$4.92",
-        "original_price": "$6.9",
-        "price_summary": "$59 cobrados uma vez ao ano — economize ~29% em relação ao mensal",
+        "price": "$5.92",
+        "original_price": "$7.9",
+        "price_summary": "$71 cobrado anualmente — economize ~34% vs mensal",
         "unit": "/mês",
         "is_featured": false,
-        "tip": "Cobrança única anual. Receba 500 créditos por mês enquanto estiver ativo.",
-        "billing_note": "Renovação anual automática via Stripe. Receba 500 créditos por mês enquanto estiver ativo.",
+        "tip": "Cobrado uma vez por ano. 150 créditos são adicionados mensalmente enquanto ativo.",
+        "billing_note": "Renova anualmente através do Stripe. 150 créditos são adicionados mensalmente enquanto ativo.",
         "button": {
           "title": "Escolher Plus Anual",
           "url": "/#pricing",
@@ -222,8 +234,52 @@
         },
         "product_id": "plus-yearly",
         "product_name": "Assinatura Plus - Anual",
-        "credits": 500,
+        "credits": 150,
         "valid_months": 12
+      }
+    ]
+  },
+  "faq": {
+    "name": "pricing-faq",
+    "label": "FAQ",
+    "title": "Pricing FAQ — Common Questions About Our Plans",
+    "description": "Everything you need to know about credits, plans, refunds, and what each tier unlocks.",
+    "items": [
+      {
+        "title": "Which plan should I pick?",
+        "description": "If you have one focused decision (e.g., \"should I move to Lisbon or Barcelona?\"), Standard at $9.9 is enough. If you're comparing 3-5 cities or want permanent chat history, choose Professional at $19.9. If you're planning an entire relocation year with multiple candidate cities, Research Pass at $29.9 unlocks 90-day timing and up to 5 saved projects. If you want to keep tracking cities as your plans change, Plus Monthly at $7.9 is the most flexible option."
+      },
+      {
+        "title": "How much can I do with 150, 500, or 1000 credits?",
+        "description": "Roughly: 1 AI chat = 10 credits, 1 full city comparison report = 50 credits. So 150 credits ≈ 15 chats or 3 city comparisons. 500 credits ≈ 50 chats or 10 comparisons. 1000 credits ≈ 100 chats or 20 comparisons. A typical first round of research (1 full city comparison + 10 follow-ups) costs about 150 credits."
+      },
+      {
+        "title": "Do credits expire?",
+        "description": "No — all credits from Standard, Professional, and Research Pass are valid forever. You can take your time, save your research, and come back months later. Plus subscription credits refresh every month while you're subscribed, and any unused monthly credits do not roll over."
+      },
+      {
+        "title": "What's the difference between Standard and Professional?",
+        "description": "Standard ($9.9, 150 credits) is for a single focused decision. Professional ($19.9, 500 credits) adds 3.3× more credits plus two exclusive features: (1) ⭐ permanent chat history — revisit and re-export past sessions from your account, and (2) ⭐ advanced planetary line analysis including Chiron, Lilith, and midpoint work. If you only need the AI chat once, Standard is enough. If you'll come back to your research or want deeper chart work, Professional pays off quickly."
+      },
+      {
+        "title": "Plus Monthly vs Plus Yearly — which should I pick?",
+        "description": "Plus Monthly ($7.9/mo) is best if you want to try Plus through one real move or trip with no long-term commitment. Plus Yearly ($71/yr, about $5.92/mo) saves you ~34% and is best if you know you'll be researching for the full year. Both give 150 credits/month, full 30-day timing, and 90-day timing while active. Cancel anytime."
+      },
+      {
+        "title": "What happens to my research projects if I cancel Plus?",
+        "description": "Your saved projects and shortlist are kept in your account. However, after cancellation: 90-day timing windows become read-only, monthly credit refresh stops, and you fall back to the entitlements of your last one-time purchase (if any). Standard users keep their credits and 30-day timing preview. To get 90-day timing permanently, buy the Research Pass instead of subscribing."
+      },
+      {
+        "title": "What does the Research Pass include that Professional doesn't?",
+        "description": "Research Pass adds 4 exclusive features on top of everything in Professional: (1) ⭐ permanent 90-day timing access (not just while subscribed), (2) ⭐ save up to 5 research projects side by side, (3) ⭐ batch export multiple chat sessions as TXT files at once, and (4) ⭐ priority email support with 24-hour response time. Plus you get 1000 credits (2× Professional) for serious research volume."
+      },
+      {
+        "title": "What is your refund policy?",
+        "description": "Standard and Professional one-time purchases qualify for a full change-of-mind refund within 7 days of payment with fewer than 3 completed paid AI uses (0–2). Each question-and-answer or paid report counts once, not each chat window. Research Pass: 7 days with fewer than 5 uses. First Plus payments, monthly or yearly when offered, have a 7-day guarantee with fewer than 5 uses. Billing errors, non-delivery and service problems are reviewed separately; mandatory rights are unaffected."
+      },
+      {
+        "title": "Can I pay with Alipay, WeChat Pay, or other local methods?",
+        "description": "Yes. We support Stripe (international credit/debit cards, Apple Pay, Google Pay) and Creem (Alipay, WeChat Pay for Chinese users). The payment method selector appears automatically when you check out — pick whichever works for your region. Prices may be slightly adjusted for CNY payments to account for currency conversion."
       }
     ]
   }

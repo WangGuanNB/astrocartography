@@ -597,7 +597,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   const openPricingForCredits = async () => {
     try {
       if (!pricingData) {
-        const response = await fetch(`/api/get-pricing?locale=${locale}`);
+        const response = await fetch(`/api/get-pricing?locale=${locale}&source=research`);
         const data = await response.json();
         if (data.success && data.pricing) {
           setPricingData(data.pricing);
@@ -1855,7 +1855,7 @@ ${lines}`;
             open={showPricingModal}
             onOpenChange={setShowPricingModal}
             pricing={pricingData}
-            preferredProductId="standard"
+            preferredProductId="plus-monthly"
           />
         )}
     </>,
