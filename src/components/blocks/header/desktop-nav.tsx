@@ -38,13 +38,14 @@ export default function DesktopNav({ header }: { header: HeaderType }) {
   }
 
   return (
-    <div className="flex min-w-0 items-center gap-0.5 xl:gap-1">
+    <div className="flex min-w-0 max-w-full items-center gap-0 overflow-x-auto overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {header.nav.items.map((item, i) => {
         const menuKey = item.title || String(i);
         const navButtonClass = cn(
-          "h-9 whitespace-nowrap px-2 text-sm text-muted-foreground xl:h-10 xl:px-3",
+          "h-9 shrink-0 whitespace-nowrap px-1.5 text-xs text-muted-foreground xl:h-10 xl:px-2.5 xl:text-sm 2xl:px-3",
           buttonVariants({ variant: "ghost" })
         );
+        const iconClass = "mr-1 hidden size-3 shrink-0 2xl:inline-block";
 
         if (item.children && item.children.length > 0) {
           // 🔥 SSR 时渲染静态按钮，客户端挂载后渲染完整的 DropdownMenu
@@ -52,14 +53,14 @@ export default function DesktopNav({ header }: { header: HeaderType }) {
             return (
               <button
                 key={i}
-                className={cn(navButtonClass, "flex items-center gap-1")}
+                className={cn(navButtonClass, "flex items-center gap-0.5")}
                 disabled
               >
                 {item.icon && (
-                  <Icon name={item.icon} className="mr-1 size-3 shrink-0" />
+                  <Icon name={item.icon} className={iconClass} />
                 )}
                 <span>{item.title}</span>
-                <Icon name="RiArrowDownSLine" className="ml-1 size-3 opacity-60" />
+                <Icon name="RiArrowDownSLine" className="ml-0.5 size-3 opacity-60" />
               </button>
             );
           }
@@ -70,12 +71,12 @@ export default function DesktopNav({ header }: { header: HeaderType }) {
               open={openMenu === menuKey}
               onOpenChange={(open) => setOpenMenu(open ? menuKey : null)}
             >
-              <DropdownMenuTrigger className={cn(navButtonClass, "flex items-center gap-1")}>
+              <DropdownMenuTrigger className={cn(navButtonClass, "flex items-center gap-0.5")}>
                 {item.icon && (
-                  <Icon name={item.icon} className="mr-1 size-3 shrink-0" />
+                  <Icon name={item.icon} className={iconClass} />
                 )}
                 <span>{item.title}</span>
-                <Icon name="RiArrowDownSLine" className="ml-1 size-3 opacity-60" />
+                <Icon name="RiArrowDownSLine" className="ml-0.5 size-3 opacity-60" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-80 p-3">
                 {item.children.map((iitem, ii) => (
@@ -107,13 +108,13 @@ export default function DesktopNav({ header }: { header: HeaderType }) {
         return (
           <Link
             key={i}
-            className={navButtonClass}
+            className={cn(navButtonClass, "inline-flex items-center")}
             href={item.url as any}
             target={item.target}
             onClick={() => setOpenMenu(null)}
           >
             {item.icon && (
-              <Icon name={item.icon} className="mr-1 size-3 shrink-0" />
+              <Icon name={item.icon} className={iconClass} />
             )}
             {item.title}
           </Link>

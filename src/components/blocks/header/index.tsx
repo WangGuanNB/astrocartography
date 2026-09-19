@@ -54,9 +54,9 @@ export default function Header({ header }: { header: HeaderType }) {
               "bg-background/50 rounded-2xl border border-border/30 backdrop-blur-lg"
           )}
         >
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:flex-nowrap lg:gap-3 lg:py-4 xl:gap-6">
+          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:flex-nowrap lg:gap-2 lg:py-4 xl:gap-4">
             {/* 左侧：Logo + 导航菜单 */}
-            <div className="flex w-full min-w-0 items-center justify-between lg:w-auto lg:min-w-0 lg:flex-1 lg:justify-start lg:gap-3 xl:gap-6">
+            <div className="flex w-full min-w-0 items-center justify-between lg:w-auto lg:min-w-0 lg:flex-1 lg:justify-start lg:gap-2 xl:gap-4">
               <Link
                 href={(header.brand?.url as any) || "/"}
                 className="flex min-w-0 shrink-0 items-center gap-2"
@@ -72,7 +72,7 @@ export default function Header({ header }: { header: HeaderType }) {
                 )}
                 {header.brand?.title && (
                   <span
-                    className="truncate text-base font-semibold text-foreground lg:max-w-[9.5rem] xl:max-w-[12rem] 2xl:max-w-none 2xl:whitespace-normal"
+                    className="truncate text-base font-semibold text-foreground lg:max-w-[7.5rem] xl:max-w-[10rem] 2xl:max-w-[14rem]"
                     title={header.brand.title}
                   >
                     {header.brand?.title || ""}
@@ -88,14 +88,14 @@ export default function Header({ header }: { header: HeaderType }) {
                 <Menu className="group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
                 <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
               </button>
-              {/* 桌面端导航菜单 - 靠左，紧跟在 Logo 后面 */}
-              <div className="hidden min-w-0 lg:block">
+              {/* 桌面端导航：可收缩，避免盖住右侧语言切换 */}
+              <div className="hidden min-w-0 flex-1 overflow-hidden lg:block">
                 <DesktopNav header={header} />
               </div>
             </div>
 
-            {/* 右侧控制按钮 - 桌面端 */}
-            <div className="hidden shrink-0 flex-nowrap items-center justify-end gap-1 lg:flex lg:w-auto xl:gap-2">
+            {/* 右侧控制按钮 - 桌面端：始终压在导航上层，不被长文案遮挡 */}
+            <div className="relative z-20 hidden shrink-0 flex-nowrap items-center justify-end gap-0.5 bg-transparent lg:flex lg:w-auto xl:gap-1.5">
               {header.show_locale && <LocaleToggle />}
               {header.show_theme && <ThemeToggle />}
               {header.buttons?.map((item, i) => {

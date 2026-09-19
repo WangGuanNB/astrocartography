@@ -27,9 +27,7 @@ import MiniaturaAIGenerator from "@/components/blocks/miniatur-ai-generator/load
 import FeatureWhatTwo from "@/components/blocks/feature-what-two";
 import Pricing from "@/components/blocks/pricing";
 import Stats from "@/components/blocks/stats";
-import TaaftVerifyBadge from "@/components/blocks/taaft-verify-badge";
 import Testimonial from "@/components/blocks/testimonial";
-import { defaultLocale } from "@/i18n/locale";
 import { getLandingPage } from "@/services/page";
 import { applySubscriptionPricingFilter } from "@/services/subscription";
 import { getCanonicalUrl } from "@/lib/utils";
@@ -208,7 +206,18 @@ export default async function LandingPage({
 }) {
   const { locale } = await params;
   const page = await getLandingPage(locale);
-  const pricing = applySubscriptionPricingFilter(page.pricing, { surface: "research" });
+  const filteredPricing = applySubscriptionPricingFilter(page.pricing, {
+    surface: "research",
+  });
+  // Homepage: hide Free Trial card (keep paid plans only).
+  const pricing = filteredPricing
+    ? {
+        ...filteredPricing,
+        items: filteredPricing.items?.filter(
+          (item) => item.product_id !== "free" && (item.amount ?? 0) > 0
+        ),
+      }
+    : undefined;
 
   const faqSchema = page.faq?.items?.length ? {
     "@context": "https://schema.org",
@@ -326,9 +335,6 @@ export default async function LandingPage({
       
       {/*Footer：收尾文案 + 品牌词 + CTA（鼓励立即使用）-- */}
       {page.cta && <CTA section={page.cta} />}
-
-      {/* TAAFT verify: EN homepage only — do not put in shared header/footer */}
-      {locale === defaultLocale && <TaaftVerifyBadge />}
     </>
   );
 }

@@ -4,7 +4,11 @@ export interface Badge {
   title: string;
   url: string;
   target?: string;
-  /** Optional for backward compatibility; new partner badges are text-only. */
+  /**
+   * Optional image. When present, footer renders the badge image (lazy);
+   * otherwise a text link is shown. Prefer self-hosted assets when possible;
+   * remote URLs are allowed for partner crawlers (e.g. TAAFT).
+   */
   image?: Image;
   type?: "codemarket_widget" | "link";
   widget_id?: string;

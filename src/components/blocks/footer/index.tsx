@@ -12,60 +12,85 @@ function badgeRel(badge: Badge): string {
     : "noopener noreferrer nofollow";
 }
 
-function BadgeTextLink({
+function isTaaftBadge(badge: Badge): boolean {
+  return badge.url.includes("theresanaiforthat.com");
+}
+
+function BadgeItem({
   badge,
   tabIndex,
+  withTaaftId,
 }: {
   badge: Badge;
   tabIndex?: number;
+  withTaaftId?: boolean;
 }) {
+  const showImage = Boolean(badge.image?.src);
+  const common = {
+    href: badge.url,
+    target: badge.target || "_blank",
+    rel: badgeRel(badge),
+    title: badge.title,
+    "data-footer-badge": "" as const,
+    ...(badge.dofollow ? { "data-dofollow": "" as const } : {}),
+    ...(withTaaftId && isTaaftBadge(badge) ? { id: "taaft-verify" } : {}),
+    tabIndex,
+  };
+
+  if (showImage && badge.image) {
+    const width = badge.image.width || 200;
+    const height = badge.image.height || 54;
+    return (
+      <a
+        {...common}
+        className="inline-flex h-10 shrink-0 items-center px-3 opacity-80 transition-opacity hover:opacity-100"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element -- partner crawlers may require exact remote badge URLs */}
+        <img
+          src={badge.image.src}
+          alt={badge.image.alt || badge.title}
+          width={width}
+          height={height}
+          loading="lazy"
+          decoding="async"
+          className="h-8 w-auto max-h-8 object-contain"
+        />
+      </a>
+    );
+  }
+
   return (
     <a
-      href={badge.url}
-      target={badge.target || "_blank"}
-      rel={badgeRel(badge)}
-      title={badge.title}
-      data-footer-badge=""
-      {...(badge.dofollow ? { "data-dofollow": "" } : {})}
-      tabIndex={tabIndex}
-      className="block h-5 truncate text-sm leading-5 hover:text-primary"
+      {...common}
+      className="inline-flex h-10 shrink-0 items-center whitespace-nowrap px-4 text-sm text-muted-foreground transition-colors hover:text-primary"
     >
       {badge.title}
     </a>
   );
 }
 
-function BadgeImageLink({
-  badge,
-  tabIndex,
+function BadgeTrack({
+  badges,
+  ariaHidden,
 }: {
-  badge: Badge;
-  tabIndex?: number;
+  badges: Badge[];
+  ariaHidden?: boolean;
 }) {
-  if (!badge.image?.src) {
-    return <BadgeTextLink badge={badge} tabIndex={tabIndex} />;
-  }
-
   return (
-    <a
-      href={badge.url}
-      target={badge.target || "_blank"}
-      rel={badgeRel(badge)}
-      title={badge.title}
-      data-footer-badge=""
-      {...(badge.dofollow ? { "data-dofollow": "" } : {})}
-      tabIndex={tabIndex}
-      className="inline-block hover:opacity-90 transition-opacity"
+    <ul
+      className="flex shrink-0 items-center"
+      aria-hidden={ariaHidden ? true : undefined}
     >
-      <img
-        src={badge.image.src}
-        alt={badge.image.alt || badge.title}
-        width={Math.round((badge.image.width || 171) * 0.8)}
-        height={Math.round((badge.image.height || 54) * 0.8)}
-        loading="lazy"
-        className="h-auto max-h-10"
-      />
-    </a>
+      {badges.map((badge, i) => (
+        <li key={`${ariaHidden ? "b" : "a"}-${i}`} className="shrink-0">
+          <BadgeItem
+            badge={badge}
+            tabIndex={ariaHidden ? -1 : undefined}
+            withTaaftId={!ariaHidden}
+          />
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -90,7 +115,7 @@ export default function Footer({
 
   const badges = footer.badges?.filter((b) => b?.title && b?.url) ?? [];
   const showBadgeMarquee = badges.length > 0;
-  const scrollSeconds = Math.max(14, badges.length * 2.5);
+  const scrollSeconds = Math.max(28, badges.length * 6);
   const brandHomeHref =
     footer.brand?.url ||
     (locale && locale !== "en" ? `/${locale}` : "/");
@@ -163,54 +188,9 @@ export default function Footer({
               ))}
             </div>
           </div>
+
           <div className="mt-8 flex flex-col justify-between gap-4 border-t pt-8 text-center text-sm font-medium text-muted-foreground lg:flex-row lg:items-center lg:text-left">
-            <div className="flex min-w-0 flex-col items-center gap-4 lg:flex-row lg:items-center">
-              {footer.copyright && <p className="shrink-0">{footer.copyright}</p>}
-
-              {showBadgeMarquee && (
-                <div
-                  className="footer-badge-marquee h-11 w-full max-w-xs shrink-0 overflow-hidden opacity-70 hover:opacity-100"
-                  style={
-                    {
-                      ["--footer-badge-duration"]: `${scrollSeconds}s`,
-                    } as CSSProperties
-                  }
-                >
-                  <div className="footer-badge-track">
-                    <ul className="space-y-1">
-                      {badges.map((badge, i) => (
-                        <li key={`badge-a-${i}`}>
-                          {badge.image?.src ? (
-                            <BadgeImageLink badge={badge} />
-                          ) : (
-                            <BadgeTextLink badge={badge} />
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                    {/* Duplicate for seamless loop; hidden from a11y / tab order */}
-                    <ul className="space-y-1" aria-hidden="true">
-                      {badges.map((badge, i) => (
-                        <li key={`badge-b-${i}`}>
-                          {badge.image?.src ? (
-                            <BadgeImageLink badge={badge} tabIndex={-1} />
-                          ) : (
-                            <BadgeTextLink badge={badge} tabIndex={-1} />
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              )}
-
-              {/* Legacy single badge (image) when badges array absent */}
-              {!footer.badges && footer.badge?.url && (
-                <div className="flex items-center gap-3 opacity-60 hover:opacity-80 transition-opacity">
-                  <BadgeImageLink badge={footer.badge} />
-                </div>
-              )}
-            </div>
+            {footer.copyright && <p className="shrink-0">{footer.copyright}</p>}
 
             {footer.agreement && (
               <ul className="flex shrink-0 justify-center gap-4 lg:justify-start">
@@ -224,6 +204,29 @@ export default function Footer({
               </ul>
             )}
           </div>
+
+          {showBadgeMarquee && (
+            <div
+              className="footer-badge-marquee-x mt-6 overflow-hidden border-t pt-6"
+              style={
+                {
+                  ["--footer-badge-duration"]: `${scrollSeconds}s`,
+                } as CSSProperties
+              }
+            >
+              <div className="footer-badge-track-x">
+                <BadgeTrack badges={badges} />
+                <BadgeTrack badges={badges} ariaHidden />
+              </div>
+            </div>
+          )}
+
+          {/* Legacy single badge when badges array absent */}
+          {!footer.badges && footer.badge?.url && (
+            <div className="mt-6 flex justify-center opacity-60 hover:opacity-80 transition-opacity">
+              <BadgeItem badge={footer.badge} withTaaftId />
+            </div>
+          )}
         </footer>
       </div>
     </section>
