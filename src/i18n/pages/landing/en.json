@@ -1071,7 +1071,13 @@
         "title": "Listed on Turbo0",
         "url": "https://turbo0.com/item/astrocartography-calculator",
         "target": "_blank",
-        "dofollow": true
+        "dofollow": true,
+        "image": {
+          "src": "https://img.turbo0.com/badge-listed-light.svg",
+          "alt": "Listed on Turbo0",
+          "width": 200,
+          "height": 54
+        }
       },
       {
         "title": "Featured on Findly.tools",
@@ -1082,7 +1088,13 @@
         "title": "Featured on toolfame.com",
         "url": "https://toolfame.com/item/astrocarto",
         "target": "_blank",
-        "dofollow": true
+        "dofollow": true,
+        "image": {
+          "src": "https://toolfame.com/badge-light.svg",
+          "alt": "Featured on toolfame.com",
+          "width": 200,
+          "height": 54
+        }
       },
       {
         "title": "Featured on ShowMeBestAI",
