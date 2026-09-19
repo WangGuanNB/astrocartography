@@ -1081,7 +1081,8 @@
       {
         "title": "Featured on toolfame.com",
         "url": "https://toolfame.com/item/astrocarto",
-        "target": "_blank"
+        "target": "_blank",
+        "dofollow": true
       },
       {
         "title": "Featured on ShowMeBestAI",
