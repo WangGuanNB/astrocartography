@@ -1070,7 +1070,8 @@
       {
         "title": "Listed on Turbo0",
         "url": "https://turbo0.com/item/astrocartography-calculator",
-        "target": "_blank"
+        "target": "_blank",
+        "dofollow": true
       },
       {
         "title": "Featured on Findly.tools",
