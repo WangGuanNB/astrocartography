@@ -1087,7 +1087,8 @@
       {
         "title": "Featured on ShowMeBestAI",
         "url": "https://showmebest.ai",
-        "target": "_blank"
+        "target": "_blank",
+        "dofollow": true
       },
       {
         "title": "Listed on Uno Directory",
