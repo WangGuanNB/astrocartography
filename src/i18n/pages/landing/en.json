@@ -1109,6 +1109,11 @@
         "dofollow": true
       },
       {
+        "title": "Featured on SimilarLabs",
+        "url": "https://similarlabs.com",
+        "target": "_blank"
+      },
+      {
         "title": "Featured on There's An AI For That",
         "url": "https://theresanaiforthat.com/ai/free-astrocartography-calculator-with-ai/?ref=featured&v=4854509",
         "target": "_blank",
