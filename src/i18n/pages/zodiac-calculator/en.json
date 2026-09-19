@@ -36,8 +36,8 @@
         "url": "/venus-sign-calculator"
       },
       {
-        "text": "See where your chart thrives globally.",
-        "linkText": "Astrocartography Map",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       }
     ]
@@ -55,17 +55,26 @@
       {
         "title": "Sun Sign from Birth Date Only",
         "description": "Most people searching for a zodiac calculator want a quick answer: what is my zodiac sign? This tool uses your birth date and ephemeris-backed astronomical calculation to return your tropical sun sign, degree in sign, element (Fire, Earth, Air, Water), modality (Cardinal, Fixed, Mutable), and ruling planet. You do not need birth time or birthplace for the sun sign itself—though those details become essential when you move to rising sign, moon sign, and house placements.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Calendar input for zodiac sign calculator" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Calendar input for zodiac sign calculator"
+        }
       },
       {
         "title": "Tropical Western Zodiac",
         "description": "This zodiac calculator uses the tropical zodiac—the system used by most Western horoscopes and birth chart software. Tropical signs are tied to seasons, not fixed star constellations. If you follow Vedic or sidereal astrology, your sign may differ by roughly one sign. We disclose this clearly so you can compare systems honestly rather than assuming one universal answer.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Tropical zodiac wheel illustration" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Tropical zodiac wheel illustration"
+        }
       },
       {
         "title": "From Sun Sign to Full Chart",
         "description": "Your sun sign is one layer of a much richer natal chart. After using this zodiac sign calculator, continue to our Birth Chart Generator for moon sign, rising sign, planetary placements, and houses—or explore Astrocartography to see where those energies activate geographically. The sun sign answers who you are at your core; the full chart and map show how that core expresses across relationships, career, home, and location.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Path from sun sign result to full birth chart and world map" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Path from sun sign result to full birth chart and world map"
+        }
       }
     ]
   },
@@ -79,19 +88,28 @@
         "title": "Ephemeris-Backed Accuracy",
         "description": "We calculate your sun sign using the same astronomical engine that powers our birth chart and placement calculators—not static date tables alone. The Sun's position shifts sign boundaries by year, especially near cusp dates. Ephemeris calculation at a consistent reference time gives you a reliable tropical result with transparent limitations when you were born on a sign-change day.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Accurate sun sign calculation display" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Accurate sun sign calculation display"
+        }
       },
       {
         "title": "Free, No Signup Required",
         "description": "Use this zodiac sign calculator as many times as you want without creating an account or paying. Calculate your sign, a friend's sign, or compare family birthdays. When you are ready for moon, rising, Venus, or relocation insights, our other calculators and Astrocartography map remain free entry points into location-based astrology.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Free zodiac calculator with no signup" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Free zodiac calculator with no signup"
+        }
       },
       {
         "title": "Sun vs Rising vs Moon—Clear Next Steps",
         "description": "Many zodiac calculator searches confuse sun sign with rising sign or moon sign. This page explains the difference plainly: sun sign needs only birth date; rising sign needs birth time and location; moon sign changes roughly every two and a half days. After your sun sign result, we link you to the Rising Sign Calculator and Birth Chart Generator so you can deepen the picture without keyword confusion or duplicate content.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Sun sign versus rising sign comparison" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Sun sign versus rising sign comparison"
+        }
       }
     ]
   },
@@ -206,6 +224,13 @@
     "title": "Find Your Zodiac Sign Now",
     "description": "Use our free zodiac sign calculator to discover your tropical sun sign by birth date. Read element, modality, and ruling planet details, then generate your full birth chart and explore your Astrocartography map—no signup required.",
     "buttons": [
+      {
+        "title": "Free Astrocartography Chart & Map →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Generate your full birth chart →",
         "icon": "RiMapLine",

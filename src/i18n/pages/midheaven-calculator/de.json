@@ -26,9 +26,9 @@
         "url": "/jupiter-line-astrocartography"
       },
       {
-        "text": "Zurück zur Hauptkarte und den Tools.",
-        "linkText": "Astrocartography Startseite",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       }
     ]
   },
@@ -215,9 +215,9 @@
     "description": "Berechnen Sie kostenlos MC-Zeichen, Grad, Herrscher und IC – dann Sonnen- und Jupiter-MC-Linien auf der Astrocartography-Karte für standortbasierte Berufssymbolik erkunden.",
     "buttons": [
       {
-        "title": "Sonnen- und Jupiter-MC-Linien erkunden → Karte",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

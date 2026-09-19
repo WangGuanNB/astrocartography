@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "生成你的占星地图",
-        "url": "/",
+        "url": "/zh",
         "icon": "RiArrowRightLine"
       },
       {
@@ -47,9 +47,9 @@
     "title": "规划你的下一个地点",
     "items": [
       {
-        "text": "还没有生成地图？",
-        "linkText": "免费占星地图计算器",
-        "url": "/"
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "想了解每条行星线？",
@@ -243,9 +243,9 @@
     "description": "生成你的占星地图，比较候选城市，并在需要时用 AI 解读深入理解这些地点。",
     "buttons": [
       {
-        "title": "生成免费占星地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       },

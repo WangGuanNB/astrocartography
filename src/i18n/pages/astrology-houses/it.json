@@ -11,6 +11,11 @@
     "title": "Navigazione rapida",
     "items": [
       {
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
+      },
+      {
         "text": "Pronto a vedere le tue case?",
         "linkText": "Generatore Carta Natale",
         "url": "/tools/birth-chart-generator"
@@ -34,19 +39,50 @@
   },
   "hubHero": {
     "badge": "Hub Astrologia",
-    "primaryCta": { "title": "Vedi le tue case nel tema natale", "url": "/tools/birth-chart-generator" },
-    "secondaryCta": { "title": "Guida al tema natale", "url": "/chart/natal-chart" },
+    "primaryCta": {
+      "title": "Vedi le tue case nel tema natale",
+      "url": "/tools/birth-chart-generator"
+    },
+    "secondaryCta": {
+      "title": "Guida al tema natale",
+      "url": "/chart/natal-chart"
+    },
     "sidebarLabel": "12 aree di vita",
-    "sidebarTags": ["Identità", "Carriera", "Casa", "Amore"],
+    "sidebarTags": [
+      "Identità",
+      "Carriera",
+      "Casa",
+      "Amore"
+    ],
     "sidebarTitle": "Impara le case, poi leggi la carta",
     "sidebarDescription": "Esplora tutte e 12 le case astrologiche, poi genera il tuo tema natale per vedere i tuoi posizionamenti."
   },
   "navPills": [
-    { "title": "Inizia qui", "href": "#start-here", "icon": "RiSparklingLine" },
-    { "title": "12 Case", "href": "#twelve-houses", "icon": "RiLayoutGridLine" },
-    { "title": "Tipi di case", "href": "#house-types", "icon": "RiFocus3Line" },
-    { "title": "Trova le tue", "href": "#usage", "icon": "RiSearchLine" },
-    { "title": "Guida", "href": "#introduce", "icon": "RiBookOpenLine" }
+    {
+      "title": "Inizia qui",
+      "href": "#start-here",
+      "icon": "RiSparklingLine"
+    },
+    {
+      "title": "12 Case",
+      "href": "#twelve-houses",
+      "icon": "RiLayoutGridLine"
+    },
+    {
+      "title": "Tipi di case",
+      "href": "#house-types",
+      "icon": "RiFocus3Line"
+    },
+    {
+      "title": "Trova le tue",
+      "href": "#usage",
+      "icon": "RiSearchLine"
+    },
+    {
+      "title": "Guida",
+      "href": "#introduce",
+      "icon": "RiBookOpenLine"
+    }
   ],
   "hubLinkLabels": {
     "openTool": "Apri strumento",
@@ -88,18 +124,90 @@
       "description": "Usa questa directory per saltare a una qualsiasi delle 12 case astrologiche. Ogni sezione spiega l'area di vita, l'associazione naturale con il segno e come leggere i pianeti in quella casa.",
       "columns": "sm:grid-cols-2 lg:grid-cols-4",
       "items": [
-        { "title": "1ª Casa", "description": "Sé, identità, aspetto e vitalità.", "href": "#house-1", "icon": "RiUserLine", "group": "Angolare" },
-        { "title": "2ª Casa", "description": "Denaro, valori, beni e autostima.", "href": "#house-2", "icon": "RiWalletLine", "group": "Succedente" },
-        { "title": "3ª Casa", "description": "Comunicazione, fratelli e ambiente locale.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Cadente" },
-        { "title": "4ª Casa", "description": "Casa, famiglia, radici e fondamenta emotive.", "href": "#house-4", "icon": "RiHome4Line", "group": "Angolare" },
-        { "title": "5ª Casa", "description": "Creatività, romanticismo, gioia e figli.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Succedente" },
-        { "title": "6ª Casa", "description": "Lavoro quotidiano, salute, routine e servizio.", "href": "/astrology-houses/6th-house", "icon": "RiHeartPulseLine", "group": "Cadente" },
-        { "title": "7ª Casa", "description": "Partenariati, matrimonio e legami uno a uno.", "href": "#house-7", "icon": "RiHeartLine", "group": "Angolare" },
-        { "title": "8ª Casa", "description": "Trasformazione, intimità e risorse condivise.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedente" },
-        { "title": "9ª Casa", "description": "Viaggi, filosofia e istruzione superiore.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadente" },
-        { "title": "10ª Casa", "description": "Carriera, reputazione e vita pubblica.", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "Angolare" },
-        { "title": "11ª Casa", "description": "Amici, comunità e speranze a lungo termine.", "href": "/astrology-houses/11th-house", "icon": "RiGroupLine", "group": "Succedente" },
-        { "title": "12ª Casa", "description": "Subconscio, solitudine, conclusioni e spiritualità.", "href": "#house-12", "icon": "RiMoonLine", "group": "Cadente" }
+        {
+          "title": "1ª Casa",
+          "description": "Sé, identità, aspetto e vitalità.",
+          "href": "#house-1",
+          "icon": "RiUserLine",
+          "group": "Angolare"
+        },
+        {
+          "title": "2ª Casa",
+          "description": "Denaro, valori, beni e autostima.",
+          "href": "#house-2",
+          "icon": "RiWalletLine",
+          "group": "Succedente"
+        },
+        {
+          "title": "3ª Casa",
+          "description": "Comunicazione, fratelli e ambiente locale.",
+          "href": "#house-3",
+          "icon": "RiMessage3Line",
+          "group": "Cadente"
+        },
+        {
+          "title": "4ª Casa",
+          "description": "Casa, famiglia, radici e fondamenta emotive.",
+          "href": "#house-4",
+          "icon": "RiHome4Line",
+          "group": "Angolare"
+        },
+        {
+          "title": "5ª Casa",
+          "description": "Creatività, romanticismo, gioia e figli.",
+          "href": "#house-5",
+          "icon": "RiPaletteLine",
+          "group": "Succedente"
+        },
+        {
+          "title": "6ª Casa",
+          "description": "Lavoro quotidiano, salute, routine e servizio.",
+          "href": "/astrology-houses/6th-house",
+          "icon": "RiHeartPulseLine",
+          "group": "Cadente"
+        },
+        {
+          "title": "7ª Casa",
+          "description": "Partenariati, matrimonio e legami uno a uno.",
+          "href": "#house-7",
+          "icon": "RiHeartLine",
+          "group": "Angolare"
+        },
+        {
+          "title": "8ª Casa",
+          "description": "Trasformazione, intimità e risorse condivise.",
+          "href": "#house-8",
+          "icon": "RiShieldLine",
+          "group": "Succedente"
+        },
+        {
+          "title": "9ª Casa",
+          "description": "Viaggi, filosofia e istruzione superiore.",
+          "href": "#house-9",
+          "icon": "RiCompassLine",
+          "group": "Cadente"
+        },
+        {
+          "title": "10ª Casa",
+          "description": "Carriera, reputazione e vita pubblica.",
+          "href": "#house-10",
+          "icon": "RiBriefcaseLine",
+          "group": "Angolare"
+        },
+        {
+          "title": "11ª Casa",
+          "description": "Amici, comunità e speranze a lungo termine.",
+          "href": "/astrology-houses/11th-house",
+          "icon": "RiGroupLine",
+          "group": "Succedente"
+        },
+        {
+          "title": "12ª Casa",
+          "description": "Subconscio, solitudine, conclusioni e spiritualità.",
+          "href": "#house-12",
+          "icon": "RiMoonLine",
+          "group": "Cadente"
+        }
       ]
     },
     "houseTypes": {
@@ -429,9 +537,9 @@
         "variant": "default"
       },
       {
-        "title": "Mappa Astrocartography Gratuita",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "outline"
       }

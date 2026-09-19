@@ -11,9 +11,9 @@
     "title": "相关工具",
     "items": [
       {
-        "text": "想看世界地图版本？",
-        "linkText": "试试 Astrocartography",
-        "url": "/"
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "只知道出生日期？",
@@ -78,19 +78,28 @@
         "title": "更严谨的计算基础",
         "description": "我们基于天文数据与时间转换来计算行星落点，让本命盘尽可能对应你的出生瞬间。这在对比接近的出生时间、学习精确度数与宫位主题时尤为重要。",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "严谨计算" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "严谨计算"
+        }
       },
       {
         "title": "完全免费",
         "description": "无需账号、无需信用卡、无隐藏限制。一次生成即可同时获得星盘轮盘与清晰的落点列表（星座、度数与宫位）。",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "免费本命盘生成器" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "免费本命盘生成器"
+        }
       },
       {
         "title": "隐私优先",
         "description": "你的出生信息用于在当前会话中完成计算与展示结果。我们不会要求你注册账号，让你可以更少摩擦地使用工具，并按需选择是否分享。",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "隐私优先" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "隐私优先"
+        }
       }
     ]
   },
@@ -222,13 +231,12 @@
     "description": "几秒生成本命盘轮盘。查看太阳、月亮与上升，核对行星落点与宫位，然后在 Astrocartography 世界地图上探索你的星盘主题。",
     "buttons": [
       {
-        "title": "在世界地图上查看 → Astrocartography",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }
     ]
   }
 }
-

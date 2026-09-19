@@ -11,9 +11,9 @@
     "title": "Strumenti collegati",
     "items": [
       {
-        "text": "Ingresso principale: mappa mondiale e calcolatore.",
-        "linkText": "Home",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       },
       {
         "text": "Confronta i transiti con la carta natale.",
@@ -45,17 +45,26 @@
       {
         "title": "Perché conta la carta del trasferimento",
         "description": "Molti la scoprono quando progettano di lasciare casa. I cambi di angoli e case evidenziano temi come carriera, relazioni e radici. Non sostituisce consulenze legali o finanziarie, ma dà un quadro ordinato: come potrebbe sentirsi la carta a Parigi rispetto a Tokyo o alla città natale. Usiamo lo stesso approccio astronomico delle altre nostre utilità: longitudini geocentriche e case intere chiare.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Utilità della carta rilocata" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Utilità della carta rilocata"
+        }
       },
       {
         "title": "Carta del trasferimento e mappa astrocartografica",
         "description": "L’astrocartografia traccia linee planetarie sulla Terra. La carta rilocata sceglie un nuovo punto e ridisegna la ruota per quel punto. Se ami le mappe, continua con l’astrocartografia; se vuoi tabella e angoli per una destinazione, la rilocazione è più rapida. Dopo il calcolo puoi aprire la mappa in un clic con gli stessi dati di nascita.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Rilocazione versus astrocartografia" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Rilocazione versus astrocartografia"
+        }
       },
       {
         "title": "Come calcoliamo",
         "description": "Inserisci dati di nascita e città di destinazione. Convertiamo l’ora locale di nascita in UTC, calcoliamo l’Ascendente sulle coordinate di nascita e di nuovo su quelle della destinazione. I pianeti sono valutati nello stesso istante UTC. Le case seguono il segno intero da ogni Ascendente. In tabella: segno e grado una volta, due colonne di casa.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Come funziona il calcolo" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Come funziona il calcolo"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Logica autentica di rilocazione",
         "description": "Stesso istante UTC, due latitudini e longitudini, due Ascendenti, due impostazioni di case. La tabella mostra come cambia la casa di ogni pianeta.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Carta rilocata accurata" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Carta rilocata accurata"
+        }
       },
       {
         "title": "Gratuito, senza registrazione",
         "description": "Genera quante carte vuoi e prova più città prima di decidere. I dati restano nella sessione della pagina.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Strumento gratuito" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Strumento gratuito"
+        }
       },
       {
         "title": "Per chi si trasferisce o viaggia a lungo",
         "description": "Nomadi digitali, studenti all’estero e chi pianifica un trasloco usano la carta rilocata per confrontare i luoghi. Poi puoi aprire l’astrocartografia con gli stessi dati.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Trasferimenti e viaggi" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Trasferimenti e viaggi"
+        }
       }
     ]
   },
@@ -185,9 +203,9 @@
     "description": "Usa il calcolatore gratuito qui sopra, poi esplora le linee planetarie sul globo con gli stessi dati di nascita.",
     "buttons": [
       {
-        "title": "Apri calcolatore astrocartografia",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "default"
       }

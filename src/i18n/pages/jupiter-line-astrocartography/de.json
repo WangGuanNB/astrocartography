@@ -11,9 +11,9 @@
     "title": "Verwandte Ressourcen",
     "items": [
       {
-        "text": "Finden Sie Ihre Jupiter-Linie auf einer Weltkarte.",
-        "linkText": "Kostenloser Astrokartografie Rechner",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Sehen Sie alle Planetenlinien und ihre Bedeutungen.",
@@ -206,9 +206,9 @@
     "description": "Erstellen Sie Ihre persönliche Astrokartografie-Karte und entdecken Sie genau, wo Ihre Jupiter-Linie den Globus kreuzt. Sehen Sie, welche Städte auf Ihrer Jupiter-MC-, ASC-, DSC- oder IC-Linie liegen, und erhalten Sie sofortige KI-Interpretationen, was jede Platzierung für Ihre Karriere, Beziehungen und allgemeine Fülle bedeutet. Komplett kostenlos, keine Anmeldung erforderlich.",
     "buttons": [
       {
-        "title": "Kostenlose Astrokartografie-Karte erstellen",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

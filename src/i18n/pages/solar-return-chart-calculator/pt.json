@@ -11,9 +11,9 @@
     "title": "Outras ferramentas",
     "items": [
       {
-        "text": "Linhas planetárias a partir da",
-        "linkText": "página inicial do Astrocartography",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Céu de um dia sobre o mapa natal:",
@@ -45,17 +45,26 @@
       {
         "title": "Como entra na leitura do dia a dia",
         "description": "Na prática olha-se Ascendente da revolução, Lua por casa e planetas nos eixos. Não substitui terapia nem orientação jurídica ou financeira, mas dá nome a temas do ano. Aqui os números vêm primeiro; em seguida você pode ir à página inicial e ver como o mesmo nascimento se desenha no mapa-múndi.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Uso da revolução solar" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Uso da revolução solar"
+        }
       },
       {
         "title": "Revolução solar e mapa natal",
         "description": "O natal é a base; a revolução solar atualiza o roteiro de um aniversário ao outro. Se você muda só o local de cálculo — mesmo instante, outras coordenadas — mudam casas e ângulos: é o que a literatura brasileira costuma chamar de revolução para outro lugar ou mapa deslocado.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Revolução solar e mapa natal" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Revolução solar e mapa natal"
+        }
       },
       {
         "title": "Aniversário fora de casa",
         "description": "Se você já sabe que vai estar em outra cidade, faz sentido calcular a revolução para lá: o Sol volta ao mesmo grau, mas as casas seguem o horizonte novo. Depois, com um clique, o Astrocartography na página inicial reaproveita data e hora sem digitar de novo.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Revolução solar em viagem" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Revolução solar em viagem"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Informação completa para checar",
         "description": "Planetas, signos, graus e casas inteiras a partir do Ascendente da revolução, mais o horário UTC do retorno do Sol — dá para conferir na efeméride ou converter para o fuso local.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Precisão na revolução solar" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Precisão na revolução solar"
+        }
       },
       {
         "title": "Grátis para testar",
         "description": "Troque de ano ou de cidade de cálculo sem pagar pelo mapa básico. Outras áreas do site podem ter créditos; o núcleo desta página fica aberto.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora gratuita" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora gratuita"
+        }
       },
       {
         "title": "Um clique até a página inicial",
         "description": "Depois de ler o mapa, um botão leva seus dados à página inicial para abrir as linhas: sem copiar e colar.",
         "icon": "RiMapLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Da revolução solar ao mapa" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Da revolução solar ao mapa"
+        }
       }
     ]
   },
@@ -193,9 +211,9 @@
     "description": "Escolha o ano, leia Ascendente e casas; se precisar de contexto geográfico, vá à página inicial do Astrocartography com os mesmos dados de nascimento.",
     "buttons": [
       {
-        "title": "Ir à página inicial do Astrocartography",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

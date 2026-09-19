@@ -11,9 +11,9 @@
     "title": "Herramientas relacionadas",
     "items": [
       {
-        "text": "Entrada principal: mapa mundial y calculadora principal.",
-        "linkText": "Inicio",
-        "url": "/"
+        "text": "Genera tu carta de astrocartografía gratis en el mapa mundial.",
+        "linkText": "Carta de Astrocartografía gratis",
+        "url": "/es"
       },
       {
         "text": "Ver tránsitos frente a tu carta natal.",
@@ -45,17 +45,26 @@
       {
         "title": "Por qué importa la carta de reubicación",
         "description": "Muchas personas la descubren al planear irse de casa. Los cambios angulares y de casas resaltan temas como carrera, pareja o familia según el nuevo lugar. No sustituye asesoría legal ni financiera, pero ordena la intuición: cómo podría sentirse tu carta en París frente a Tokio o tu ciudad natal. Usamos el mismo enfoque astronómico que en nuestras herramientas de nacimiento: longitudes geocéntricas y casas enteras claras.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Para qué sirve la carta de reubicación" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Para qué sirve la carta de reubicación"
+        }
       },
       {
         "title": "Carta de reubicación frente a mapa astrocartográfico",
         "description": "La astrocartografía dibuja líneas planetarias sobre el globo. La reubicación elige un nuevo sitio y vuelve a armar la rueda para ese sitio. Si ya te gustan los mapas, sigue con astrocartografía; si quieres tabla y ángulos para un destino concreto, la reubicación es más directa. Tras calcular, puedes abrir el mapa con un clic usando los mismos datos de nacimiento.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Reubicación versus astrocartografía" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Reubicación versus astrocartografía"
+        }
       },
       {
         "title": "Cómo lo calculamos",
         "description": "Introduces datos de nacimiento y la ciudad de destino. Convertimos la hora local de nacimiento a UTC, calculamos el Ascendente en las coordenadas de nacimiento y otra vez en las del destino. Los planetas se evalúan en ese mismo instante UTC. Las casas son enteras desde cada Ascendente. En la tabla verás signo y grado una vez, con dos columnas de casa: natal y reubicada.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Cálculo de la carta de reubicación" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Cálculo de la carta de reubicación"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Lógica real de reubicación",
         "description": "Mismo instante UTC, dos latitudes y longitudes, dos Ascendentes, dos distribuciones de casas. La tabla muestra cómo cambia la casa de cada planeta al cambiar de lugar.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Carta de reubicación precisa" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Carta de reubicación precisa"
+        }
       },
       {
         "title": "Gratis y sin registro",
         "description": "Genera tantas cartas como quieras y prueba varias ciudades antes de decidir. Los datos permanecen en tu sesión de página.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora gratuita" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora gratuita"
+        }
       },
       {
         "title": "Para mudanzas y viajes largos",
         "description": "Nómadas digitales, estudiantes en el extranjero y quienes planean mudarse usan la reubicación para comparar ambientes. Después puedes abrir la astrocartografía con los mismos datos.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Reubicación para viajeros" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Reubicación para viajeros"
+        }
       }
     ]
   },
@@ -185,9 +203,9 @@
     "description": "Usa la calculadora gratuita arriba y luego explora líneas planetarias en el globo con la misma carta natal.",
     "buttons": [
       {
-        "title": "Abrir calculadora de astrocartografía",
+        "title": "Carta de Astrocartografía gratis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/es",
         "target": "_self",
         "variant": "default"
       }

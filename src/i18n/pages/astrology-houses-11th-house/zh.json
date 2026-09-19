@@ -319,6 +319,13 @@
     "description": "免费生成星盘轮盘与落点表，看看哪些行星落入你的第十一宫——再回到十二宫位 Hub 阅读其余十一个生活领域。",
     "buttons": [
       {
+        "title": "免费星盘地图 Astrocartography →",
+        "icon": "RiMapLine",
+        "url": "/zh",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
         "title": "星盘生成器",
         "icon": "RiPieChartLine",
         "url": "/tools/birth-chart-generator",
@@ -331,6 +338,16 @@
         "url": "/astrology-houses",
         "target": "_self",
         "variant": "outline"
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "相关工具",
+    "items": [
+      {
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       }
     ]
   }

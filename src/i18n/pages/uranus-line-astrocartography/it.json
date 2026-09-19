@@ -11,9 +11,9 @@
     "title": "Risorse Correlate",
     "items": [
       {
-        "text": "Trova la tua linea di Urano su una mappa mondiale.",
-        "linkText": "Calcolatore di Astrocartografia Gratuito",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       },
       {
         "text": "Confronta la linea di Urano con altre linee planetarie.",
@@ -206,9 +206,9 @@
     "description": "Genera la tua mappa personale di astrocartografia con calcoli Swiss Ephemeris e vedi esattamente dove la tua linea di Urano attraversa il globo. Clicca su qualsiasi città o linea per un'interpretazione istantanea con IA — incluso quale angolo di Urano è attivo e cosa significa per la tua libertà, reinvenzione professionale e relazioni. Completamente gratuito, senza registrazione.",
     "buttons": [
       {
-        "title": "Genera la Tua Carta di Astrocartografia Gratuita",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "default"
       }

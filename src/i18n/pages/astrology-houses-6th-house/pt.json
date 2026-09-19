@@ -341,6 +341,13 @@
     "description": "Gere uma roda de mapa natal e tabela de colocações grátis para ver quais planetas caem na sua casa 6—depois compare com o Meio do Céu/10ª se estiver separando trabalho diário de carreira pública, ou volte ao hub de Casas Astrológicas para as outras onze áreas da vida.",
     "buttons": [
       {
+        "title": "Mapa de Astrocartografia grátis →",
+        "icon": "RiMapLine",
+        "url": "/pt",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
         "title": "Gerador de Mapa Natal",
         "icon": "RiPieChartLine",
         "url": "/tools/birth-chart-generator",
@@ -353,6 +360,16 @@
         "url": "/astrology-houses",
         "target": "_self",
         "variant": "outline"
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "Ferramentas relacionadas",
+    "items": [
+      {
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       }
     ]
   }

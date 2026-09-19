@@ -11,6 +11,11 @@
     "title": "快速导航",
     "items": [
       {
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
+      },
+      {
         "text": "想直接查看你的宫位落点？",
         "linkText": "Birth Chart Generator",
         "url": "/tools/birth-chart-generator"
@@ -34,19 +39,50 @@
   },
   "hubHero": {
     "badge": "占星学习中心",
-    "primaryCta": { "title": "在本命盘中查看你的宫位", "url": "/tools/birth-chart-generator" },
-    "secondaryCta": { "title": "Natal Chart 本命盘指南", "url": "/chart/natal-chart" },
+    "primaryCta": {
+      "title": "在本命盘中查看你的宫位",
+      "url": "/tools/birth-chart-generator"
+    },
+    "secondaryCta": {
+      "title": "Natal Chart 本命盘指南",
+      "url": "/chart/natal-chart"
+    },
     "sidebarLabel": "12 个人生领域",
-    "sidebarTags": ["自我认同", "事业", "家庭", "爱情"],
+    "sidebarTags": [
+      "自我认同",
+      "事业",
+      "家庭",
+      "爱情"
+    ],
     "sidebarTitle": "先学宫位，再读星盘",
     "sidebarDescription": "浏览全部 12 个宫位，然后生成本命盘查看你的行星落点。"
   },
   "navPills": [
-    { "title": "从这里开始", "href": "#start-here", "icon": "RiSparklingLine" },
-    { "title": "12 宫位", "href": "#twelve-houses", "icon": "RiLayoutGridLine" },
-    { "title": "宫位类型", "href": "#house-types", "icon": "RiFocus3Line" },
-    { "title": "查找你的宫位", "href": "#usage", "icon": "RiSearchLine" },
-    { "title": "指南", "href": "#introduce", "icon": "RiBookOpenLine" }
+    {
+      "title": "从这里开始",
+      "href": "#start-here",
+      "icon": "RiSparklingLine"
+    },
+    {
+      "title": "12 宫位",
+      "href": "#twelve-houses",
+      "icon": "RiLayoutGridLine"
+    },
+    {
+      "title": "宫位类型",
+      "href": "#house-types",
+      "icon": "RiFocus3Line"
+    },
+    {
+      "title": "查找你的宫位",
+      "href": "#usage",
+      "icon": "RiSearchLine"
+    },
+    {
+      "title": "指南",
+      "href": "#introduce",
+      "icon": "RiBookOpenLine"
+    }
   ],
   "hubLinkLabels": {
     "openTool": "打开工具",
@@ -88,18 +124,90 @@
       "description": "使用本目录跳转到任意一个占星宫位。下方各节说明对应的人生领域、自然星座关联，以及如何解读该宫位内的行星落点。",
       "columns": "sm:grid-cols-2 lg:grid-cols-4",
       "items": [
-        { "title": "第 1 宫位", "description": "自我、身份认同、外貌与生命力。", "href": "#house-1", "icon": "RiUserLine", "group": "角宫" },
-        { "title": "第 2 宫位", "description": "金钱、价值观、物质与自我价值。", "href": "#house-2", "icon": "RiWalletLine", "group": "续宫" },
-        { "title": "第 3 宫位", "description": "沟通、兄弟姐妹与日常环境。", "href": "#house-3", "icon": "RiMessage3Line", "group": "果宫" },
-        { "title": "第 4 宫位", "description": "家庭、根基与情感基础。", "href": "#house-4", "icon": "RiHome4Line", "group": "角宫" },
-        { "title": "第 5 宫位", "description": "创造力、浪漫、快乐与子女。", "href": "#house-5", "icon": "RiPaletteLine", "group": "续宫" },
-        { "title": "第 6 宫位", "description": "日常工作、健康、习惯与服务。", "href": "/astrology-houses/6th-house", "icon": "RiHeartPulseLine", "group": "果宫" },
-        { "title": "第 7 宫位", "description": "伴侣关系、婚姻与一对一联结。", "href": "#house-7", "icon": "RiHeartLine", "group": "角宫" },
-        { "title": "第 8 宫位", "description": "转化、亲密与共享资源。", "href": "#house-8", "icon": "RiShieldLine", "group": "续宫" },
-        { "title": "第 9 宫位", "description": "旅行、哲学与高等教育。", "href": "#house-9", "icon": "RiCompassLine", "group": "果宫" },
-        { "title": "第 10 宫位", "description": "事业、声誉与公众生活。", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "角宫" },
-        { "title": "第 11 宫位", "description": "朋友、社群与长远希望。", "href": "/astrology-houses/11th-house", "icon": "RiGroupLine", "group": "续宫" },
-        { "title": "第 12 宫位", "description": "潜意识、独处、终结与灵性。", "href": "#house-12", "icon": "RiMoonLine", "group": "果宫" }
+        {
+          "title": "第 1 宫位",
+          "description": "自我、身份认同、外貌与生命力。",
+          "href": "#house-1",
+          "icon": "RiUserLine",
+          "group": "角宫"
+        },
+        {
+          "title": "第 2 宫位",
+          "description": "金钱、价值观、物质与自我价值。",
+          "href": "#house-2",
+          "icon": "RiWalletLine",
+          "group": "续宫"
+        },
+        {
+          "title": "第 3 宫位",
+          "description": "沟通、兄弟姐妹与日常环境。",
+          "href": "#house-3",
+          "icon": "RiMessage3Line",
+          "group": "果宫"
+        },
+        {
+          "title": "第 4 宫位",
+          "description": "家庭、根基与情感基础。",
+          "href": "#house-4",
+          "icon": "RiHome4Line",
+          "group": "角宫"
+        },
+        {
+          "title": "第 5 宫位",
+          "description": "创造力、浪漫、快乐与子女。",
+          "href": "#house-5",
+          "icon": "RiPaletteLine",
+          "group": "续宫"
+        },
+        {
+          "title": "第 6 宫位",
+          "description": "日常工作、健康、习惯与服务。",
+          "href": "/astrology-houses/6th-house",
+          "icon": "RiHeartPulseLine",
+          "group": "果宫"
+        },
+        {
+          "title": "第 7 宫位",
+          "description": "伴侣关系、婚姻与一对一联结。",
+          "href": "#house-7",
+          "icon": "RiHeartLine",
+          "group": "角宫"
+        },
+        {
+          "title": "第 8 宫位",
+          "description": "转化、亲密与共享资源。",
+          "href": "#house-8",
+          "icon": "RiShieldLine",
+          "group": "续宫"
+        },
+        {
+          "title": "第 9 宫位",
+          "description": "旅行、哲学与高等教育。",
+          "href": "#house-9",
+          "icon": "RiCompassLine",
+          "group": "果宫"
+        },
+        {
+          "title": "第 10 宫位",
+          "description": "事业、声誉与公众生活。",
+          "href": "#house-10",
+          "icon": "RiBriefcaseLine",
+          "group": "角宫"
+        },
+        {
+          "title": "第 11 宫位",
+          "description": "朋友、社群与长远希望。",
+          "href": "/astrology-houses/11th-house",
+          "icon": "RiGroupLine",
+          "group": "续宫"
+        },
+        {
+          "title": "第 12 宫位",
+          "description": "潜意识、独处、终结与灵性。",
+          "href": "#house-12",
+          "icon": "RiMoonLine",
+          "group": "果宫"
+        }
       ]
     },
     "houseTypes": {
@@ -429,9 +537,9 @@
         "variant": "default"
       },
       {
-        "title": "免费 Astrocartography 地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "outline"
       }

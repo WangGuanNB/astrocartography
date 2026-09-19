@@ -11,8 +11,8 @@
     "title": "Related Resources",
     "items": [
       {
-        "text": "Find your Venus line on a map.",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -218,7 +218,7 @@
     "description": "Generate your personal astrocartography map using professional Swiss Ephemeris calculations and see exactly where your Venus line crosses the globe. Click any city or line for an instant AI interpretation—including which Venus angle is active and what it means for your relationships, career, and daily life. Completely free, no sign-up required.",
     "buttons": [
       {
-        "title": "Generate Your Free Astrocartography Chart",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

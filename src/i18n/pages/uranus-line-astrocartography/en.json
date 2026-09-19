@@ -11,8 +11,8 @@
     "title": "Related Resources",
     "items": [
       {
-        "text": "Find your Uranus line on a world map.",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -206,7 +206,7 @@
     "description": "Generate your personal astrocartography map using Swiss Ephemeris calculations and see exactly where your Uranus line crosses the globe. Click any city or line for an instant AI interpretation—including which Uranus angle is active and what it means for your freedom, career reinvention, and relationships. Completely free, no sign-up required.",
     "buttons": [
       {
-        "title": "Generate Your Free Astrocartography Chart",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

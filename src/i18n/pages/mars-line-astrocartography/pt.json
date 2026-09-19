@@ -11,9 +11,9 @@
     "title": "Recursos Relacionados",
     "items": [
       {
-        "text": "Encontre sua linha de Marte em um mapa mundial.",
-        "linkText": "Calculadora de Astrocartografia Grátis",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Compare a linha de Marte com outras linhas planetárias.",
@@ -206,9 +206,9 @@
     "description": "Gere seu mapa pessoal de astrocartografia e veja exatamente onde sua linha de Marte cruza o globo. Descubra qual ângulo (ASC, DSC, MC, IC) está ativo em cidades específicas e obtenha interpretações instantâneas com IA sobre o que a linha de Marte significa para sua carreira, energia física e relacionamentos ali. Completamente grátis, sem cadastro.",
     "buttons": [
       {
-        "title": "Gere Seu Mapa de Astrocartografia Grátis",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

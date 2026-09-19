@@ -26,8 +26,8 @@
         "url": "/jupiter-line-astrocartography"
       },
       {
-        "text": "Back to the main map and tools.",
-        "linkText": "Astrocartography Home",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       }
     ]
@@ -215,7 +215,7 @@
     "description": "Calculate your MC sign, degree, ruler, and IC free—then explore Sun and Jupiter Midheaven lines on the Astrocartography map for location-based career symbolism.",
     "buttons": [
       {
-        "title": "Explore Sun & Jupiter MC lines → Map",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

@@ -319,6 +319,13 @@
     "description": "Erstellen Sie ein kostenloses Horoskop-Rad und eine Stellungstabelle, um zu sehen, welche Planeten in Ihr 11. Haus fallen—kehren Sie dann zum Hub Astrologische Häuser für die anderen elf Lebensbereiche zurück.",
     "buttons": [
       {
+        "title": "Kostenlose Astrocartography-Karte →",
+        "icon": "RiMapLine",
+        "url": "/de",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
         "title": "Geburtshoroskop Generator",
         "icon": "RiPieChartLine",
         "url": "/tools/birth-chart-generator",
@@ -331,6 +338,16 @@
         "url": "/astrology-houses",
         "target": "_self",
         "variant": "outline"
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "Verwandte Tools",
+    "items": [
+      {
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       }
     ]
   }

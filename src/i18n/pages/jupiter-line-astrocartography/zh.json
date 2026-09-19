@@ -12,8 +12,8 @@
     "items": [
       {
         "text": "在世界地图上找到你的木星线。",
-        "linkText": "免费星盘地图计算器",
-        "url": "/"
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "查看所有行星线及其含义。",
@@ -206,9 +206,9 @@
     "description": "生成你的个人星盘地图，精确查看木星线如何穿越全球。了解哪些城市落在木星 MC、ASC、DSC 或 IC 线上，并获得即时 AI 解读——包括各配置对事业、关系与整体丰盛的含义。完全免费，无需注册。",
     "buttons": [
       {
-        "title": "免费生成你的星盘地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

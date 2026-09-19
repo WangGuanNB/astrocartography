@@ -11,9 +11,9 @@
     "title": "Verwandte Ressourcen",
     "items": [
       {
-        "text": "Finden Sie Ihre Mars-Linie auf einer Weltkarte.",
-        "linkText": "Kostenloser Astrokartografie Rechner",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Vergleichen Sie die Mars-Linie mit anderen Planetenlinien.",
@@ -206,9 +206,9 @@
     "description": "Erstellen Sie Ihre persönliche Astrokartografie-Karte und sehen Sie genau, wo Ihre Mars-Linie den Globus kreuzt. Entdecken Sie, welcher Winkel (ASC, DSC, MC, IC) in bestimmten Städten aktiv ist, und erhalten Sie sofortige KI-Interpretationen, was die Mars-Linie für Ihre Karriere, körperliche Energie und Beziehungen dort bedeutet. Komplett kostenlos, keine Anmeldung erforderlich.",
     "buttons": [
       {
-        "title": "Kostenlose Astrokartografie-Karte erstellen",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

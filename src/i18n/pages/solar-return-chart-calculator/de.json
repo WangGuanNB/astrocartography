@@ -11,9 +11,9 @@
     "title": "Weitere Tools",
     "items": [
       {
-        "text": "Planetenlinien von der",
-        "linkText": "Astrocartography-Startseite",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Tageshimmel zum Radix:",
@@ -45,17 +45,26 @@
       {
         "title": "Wofür man es im Alltag nutzt",
         "description": "Üblich ist der Blick auf den Aszendenten der Revolution, den Mond in den Häusern und Planeten an den Achsen. Eine sorgfältig berechnete Solarrevolution ersetzt keine Therapie und keine Steuer- oder Rechtsberatung, aber sie ordnet oft bereits gespürte Jahresthemen. Bei uns stehen zuerst belastbare astronomische Angaben — danach können Sie zur Startseitenkarte wechseln und sehen, wie sich Ihr Radix auf der Erde abbildet.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Praxis der Solarrevolution" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Praxis der Solarrevolution"
+        }
       },
       {
         "title": "Solarrevolution und Radix",
         "description": "Das Radix beschreibt die Grundfigur; die Solarrevolution aktualisiert die Geschichte für ein Jahr. Ändern Sie nur den Berechnungsort (gleicher Zeitpunkt, andere Koordinaten), ändern sich Häuser und Winkel: das nennt man verlegte oder ortsbezogene Solarrevolution und ist bei Reisen üblich.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Solarrevolution und Geburtshoroskop" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Solarrevolution und Geburtshoroskop"
+        }
       },
       {
         "title": "Geburtstag unterwegs",
         "description": "Wenn Sie wissen, dass Sie nicht am Geburtsort feiern, sollte die Solarrevolution für jene Stadt gerechnet werden, in der Sie sich tatsächlich aufhalten — Sonnengrad gleich, Häuser neu. Anschließend lässt sich Astrocartography auf der Startseite mit denselben Geburtsdaten öffnen, ohne alles neu einzutippen.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Solarrevolution auf Reisen" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Solarrevolution auf Reisen"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Alle Angaben zum Nachrechnen",
         "description": "Planeten, Zeichen, Grade und Vollhäuser bezogen auf den Aszendenten der Revolution plus UTC-Zeitpunkt der Sonnenrückkehr — geeignet für Ephemeridenvergleich oder Umrechnung in Ortszeit.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Präzise Solarrevolution" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Präzise Solarrevolution"
+        }
       },
       {
         "title": "Kostenlos zum Ausprobieren",
         "description": "Jahr oder Ort wechseln, ohne für das Grundrad zu zahlen. Andere Bereiche der Website können kostenpflichtig sein; der Kern dieser Seite bleibt offen.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Rechner" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Kostenloser Rechner"
+        }
       },
       {
         "title": "Sprung zur Startseite",
         "description": "Nach der Lektüre bringt ein Button Ihre Daten zur Startseitenkarte — ohne Copy und Paste.",
         "icon": "RiMapLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Von der Solarrevolution zur Weltkarte" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Von der Solarrevolution zur Weltkarte"
+        }
       }
     ]
   },
@@ -193,9 +211,9 @@
     "description": "Wählen Sie das Jahr, lesen Sie Aszendent und Häuser; bei geografischen Fragen wechseln Sie zur Astrocartography-Startseite mit denselben Geburtsdaten.",
     "buttons": [
       {
-        "title": "Zur Astrocartography-Startseite",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

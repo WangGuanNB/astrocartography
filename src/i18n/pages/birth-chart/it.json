@@ -11,9 +11,9 @@
     "title": "Strumenti correlati",
     "items": [
       {
-        "text": "Vuoi la versione con mappa del mondo?",
-        "linkText": "Prova Astrocartography",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       },
       {
         "text": "Conosci solo la data di nascita?",
@@ -78,19 +78,28 @@
         "title": "Rigore astronomico",
         "description": "Calcoliamo le posizioni dei pianeti con dati astronomici e conversione del tempo, così il tema natale riflette il momento di nascita. È particolarmente utile per confrontare orari vicini e imparare gradi e temi di case.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Rigore astronomico" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Rigore astronomico"
+        }
       },
       {
         "title": "Completamente gratuito",
         "description": "Genera temi natali illimitati senza account, senza carta e senza limiti nascosti. In un’unica pagina ottieni la ruota e la lista dei posizionamenti (segno, grado e casa).",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Generatore di tema natale gratis" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Generatore di tema natale gratis"
+        }
       },
       {
         "title": "Privacy prima di tutto",
         "description": "I tuoi dati di nascita vengono usati per calcolare e mostrare i risultati nella tua sessione. Non richiediamo registrazione per generare una carta, così puoi usarla con meno frizione e condividere solo se vuoi.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Privacy prima di tutto" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Privacy prima di tutto"
+        }
       }
     ]
   },
@@ -222,13 +231,12 @@
     "description": "Crea la tua ruota del tema natale in pochi secondi. Controlla Sole, Luna e Ascendente, posizioni e case, poi esplora la tua carta sulla mappa del mondo con Astrocartography.",
     "buttons": [
       {
-        "title": "Vedi sulla mappa del mondo → Astrocartography",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "default"
       }
     ]
   }
 }
-

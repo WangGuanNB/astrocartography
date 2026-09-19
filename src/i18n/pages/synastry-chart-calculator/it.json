@@ -11,9 +11,9 @@
     "title": "Strumenti correlati",
     "items": [
       {
-        "text": "Hub di mappe e calcolatori.",
-        "linkText": "Home",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       },
       {
         "text": "Strumento per un solo tema natale.",
@@ -40,22 +40,34 @@
       {
         "title": "Sinastria e abbinamento solo al segno solare",
         "description": "Un match veloce sui segni può divertire, ma la sinastria va più a fondo. Posizioni planetarie reali —non solo il Sole— raccontano chimica e tensione. L’astrologia relazionale è multidimensionale: Luna bisogni, Venere affetto, Marte ritmo, Saturno tenuta, Mercurio dialogo. Qui trovi aspetti inter-tema verificabili, non un paragrafo vago. Per una sinastria seria nelle conversazioni quotidiane, parti da dati di nascita accurati; l’ora migliora angoli e precisione lunare.",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "Perché la sinastria va oltre il solo segno solare" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Perché la sinastria va oltre il solo segno solare"
+        }
       },
       {
         "title": "Cosa mostra questo calcolatore di sinastria",
         "description": "Pensato per la leggibilità: vista biwheel e elenco degli aspetti maggiori tra i dieci punti classici di entrambi. Congiunzione, opposizione, quadratura, trigono e sestile con orb consueti — ciò che quasi tutti controllano per primi. L’IA opzionale (crediti, accesso) può sintetizzare i temi con tono responsabile, sempre ancorata agli stessi dati di sinastria appena calcolati.",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "Calcolatore di sinastria: aspetti e doppia ruota" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Calcolatore di sinastria: aspetti e doppia ruota"
+        }
       },
       {
         "title": "Sinastria + luogo: sovrapposizioni e mappe",
         "description": "Gli aspetti nella sinastria non cambiano viaggiando; cambiano case e angoli — per questo offriamo una città condivisa opzionale per sovrapposizioni relocate in segno intero. Per la sola geografia apri una mappa piena per persona; per la struttura del rapporto resta prima sulla sinastria.",
-        "image": { "src": "/imgs/features/synastry/3.webp", "alt": "Sinastria con astrocartografia e città condivisa" }
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Sinastria con astrocartografia e città condivisa"
+        }
       },
       {
         "title": "Leggere la sinastria con equilibrio",
         "description": "La sinastria descrive tendenze, non destini. L’uso più sano abbina astrologia e comunicazione: nomina l’aspetto, esplora il bisogno sottostante, scegli comportamenti coerenti con i tuoi valori. Evita di trasformare qualsiasi sinastria in sentenza — usala come linguaggio per empatia e tempistiche. Senza ora di nascita, tratta con cautela Luna e angoli.",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "Linee guida per una lettura responsabile della sinastria" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Linee guida per una lettura responsabile della sinastria"
+        }
       }
     ]
   },
@@ -69,19 +81,28 @@
         "title": "Una sinastria che si naviga davvero",
         "description": "Tanti strumenti sommergono di jargon; qui puntiamo alla chiarezza: doppia ruota e tabella aspetti con gli orb più stretti in cima. Se hai solo dieci minuti, guarda le prime righe — di solito sono i dialoghi più forti.",
         "icon": "RiHeartLine",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "Navigare la sinastria con chiarezza" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Navigare la sinastria con chiarezza"
+        }
       },
       {
         "title": "Compatibilità tra temi senza mistero artificiale",
         "description": "L’astrologia relazionale funziona quando il confronto è esplicito. I risultati elencano contatti pianeta-pianeta da approfondire e discutere: la compatibilità diventa conversazione, non punteggio segreto. Questa è la sinastria contemporanea.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "Compatibilità dagli aspetti di sinastria" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Compatibilità dagli aspetti di sinastria"
+        }
       },
       {
         "title": "Dalla sinastria all’astrocartografia",
         "description": "Dopo aver generato la sinastria, passa alle linee planetarie di ciascuno. La sinastria riguarda il «tra di voi»; la mappa il «sulla Terra». Insieme coprono un percorso completo — soprattutto con viaggi o trasferimenti.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "Dopo la sinastria, mappe di astrocartografia" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Dopo la sinastria, mappe di astrocartografia"
+        }
       }
     ]
   },
@@ -189,9 +210,9 @@
     "description": "La sinastria spiega la dinamica tra voi; l’astrocartografia mostra dove le linee enfatizzano ciascuno sulla Terra. Continua con gli stessi dati di nascita per ragionare sul luogo.",
     "buttons": [
       {
-        "title": "Home astrocartografia",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "default"
       }

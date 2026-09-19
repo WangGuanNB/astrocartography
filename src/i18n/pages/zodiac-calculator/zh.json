@@ -37,8 +37,8 @@
       },
       {
         "text": "查看星盘在全球何处更易发挥。",
-        "linkText": "星盘地图计算器",
-        "url": "/"
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       }
     ]
   },
@@ -55,17 +55,26 @@
       {
         "title": "仅凭出生日期查太阳星座",
         "description": "多数搜索「星座计算器」的人只想快速知道：我的星座是什么？本工具结合出生日期与星历表级天文计算，返回热带太阳星座、星座内度数、元素（火/土/风/水）、模式（本位/固定/变动）与守护星。计算太阳星座本身不需要出生时间或出生地——但若要查上升、月亮与宫位，则需要更完整的数据。",
-        "image": { "src": "/imgs/features/1.webp", "alt": "星座计算器的日期输入" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "星座计算器的日期输入"
+        }
       },
       {
         "title": "热带黄道西方占星",
         "description": "本星座计算器使用热带黄道——多数西方运势与本命盘软件采用的体系。热带星座与季节相关，而非固定恒星星座。若你使用恒星制或印度占星，结果可能相差约一个星座。我们会明确说明，便于你诚实比较不同体系，而非假设只有一个标准答案。",
-        "image": { "src": "/imgs/features/2.webp", "alt": "热带黄道轮盘示意" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "热带黄道轮盘示意"
+        }
       },
       {
         "title": "从太阳星座到完整星盘",
         "description": "太阳星座只是丰富本命盘的一层。使用本星座计算器后，可继续用本命盘生成器查看月亮、上升、行星落座与宫位，或通过 Astrocartography 探索这些能量在地理上的激活。太阳星座回答「核心是谁」；完整星盘与地图展示这份核心如何在关系、事业、家庭与地点中展开。",
-        "image": { "src": "/imgs/features/3.webp", "alt": "从太阳星座结果到本命盘与世界地图" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "从太阳星座结果到本命盘与世界地图"
+        }
       }
     ]
   },
@@ -79,19 +88,28 @@
         "title": "星历表级计算精度",
         "description": "太阳星座使用与本命盘、落座计算器相同的天文引擎——而非仅靠静态日期表。太阳换座时刻因年份而异，尤其在交界日期附近。在统一参考时刻进行星历计算，可给出可靠的热带结果，并在换座日透明说明局限。",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "准确的太阳星座计算结果" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "准确的太阳星座计算结果"
+        }
       },
       {
         "title": "免费，无需注册",
         "description": "可无限次使用本星座计算器，无需账号或付费。为自己、朋友或家人查询，比较不同生日。准备好了解月亮、上升、金星或搬迁议题时，其他计算器与 Astrocartography 地图仍是免费的入口。",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "免费星座计算器" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "免费星座计算器"
+        }
       },
       {
         "title": "太阳、上升、月亮——清晰下一步",
         "description": "许多搜索会混淆太阳、上升与月亮星座。本页清楚说明：太阳星座只需出生日期；上升需要出生时间与地点；月亮约每两天半换座。得到太阳星座后，我们链接上升星座计算器与本命盘生成器，帮你深化理解而不产生关键词内耗。",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "太阳星座与上升星座对比" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "太阳星座与上升星座对比"
+        }
       }
     ]
   },
@@ -206,6 +224,13 @@
     "title": "立即查询你的星座",
     "description": "使用免费星座计算器，按出生日期发现热带太阳星座。阅读元素、模式与守护星说明，然后生成本命盘并探索 Astrocartography 地图——无需注册。",
     "buttons": [
+      {
+        "title": "免费星盘地图 Astrocartography →",
+        "icon": "RiMapLine",
+        "url": "/zh",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "生成本命盘 →",
         "icon": "RiMapLine",

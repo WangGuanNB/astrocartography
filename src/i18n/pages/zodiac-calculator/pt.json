@@ -36,9 +36,9 @@
         "url": "/venus-sign-calculator"
       },
       {
-        "text": "Veja onde sua carta prospera no mundo.",
-        "linkText": "Mapa de Astrocartography",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       }
     ]
   },
@@ -55,17 +55,26 @@
       {
         "title": "Signo solar só com a data de nascimento",
         "description": "A maioria das pessoas que buscam uma calculadora zodíaco quer uma resposta rápida: qual é meu signo zodíaco? Esta ferramenta usa sua data de nascimento e cálculo astronômico respaldado por efemérides para devolver seu signo solar tropical, grau no signo, elemento (Fogo, Terra, Ar, Água), modalidade (Cardinal, Fixo, Mutável) e planeta regente. Você não precisa de hora nem local de nascimento para o signo solar em si—embora esses dados se tornem essenciais ao avançar para ascendente, lua e casas.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Entrada de calendário para a calculadora signo zodíaco" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Entrada de calendário para a calculadora signo zodíaco"
+        }
       },
       {
         "title": "Zodíaco tropical ocidental",
         "description": "Esta calculadora signo zodíaco usa o zodíaco tropical—o sistema adotado pela maioria dos horóscopos ocidentais e softwares de mapa astral. Os signos tropicais estão ligados às estações, não a constelações fixas de estrelas. Se você segue astrologia védica ou sideral, seu signo pode diferir em cerca de um signo. Deixamos isso claro para que você compare sistemas com honestidade em vez de assumir uma resposta universal.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Ilustração da roda do zodíaco tropical" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Ilustração da roda do zodíaco tropical"
+        }
       },
       {
         "title": "Do signo solar à carta completa",
         "description": "Seu signo solar é uma camada de uma carta natal muito mais rica. Depois de usar esta calculadora zodíaco, continue com nosso Gerador de Mapa Astral para signo lunar, ascendente, posições planetárias e casas—ou explore a Astrocartography para ver onde essas energias se ativam geograficamente. O signo solar responde quem você é no núcleo; a carta completa e o mapa mostram como esse núcleo se expressa em relacionamentos, carreira, lar e localização.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Caminho do resultado do signo solar ao mapa astral completo e ao mapa mundial" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Caminho do resultado do signo solar ao mapa astral completo e ao mapa mundial"
+        }
       }
     ]
   },
@@ -79,19 +88,28 @@
         "title": "Precisão respaldada por efemérides",
         "description": "Calculamos seu signo solar com o mesmo motor astronômico que alimenta nossas calculadoras de mapa astral e posições planetárias—não apenas tabelas estáticas de datas. A posição do Sol muda os limites entre signos conforme o ano, especialmente perto das datas de cúspide. O cálculo com efemérides em um momento de referência consistente oferece um resultado tropical confiável, com limitações transparentes quando você nasceu em um dia de mudança de signo.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Tela de cálculo preciso do signo solar" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Tela de cálculo preciso do signo solar"
+        }
       },
       {
         "title": "Grátis, sem cadastro",
         "description": "Use esta calculadora signo zodíaco quantas vezes quiser sem criar conta ou pagar. Calcule seu signo, o de um amigo ou compare aniversários da família. Quando estiver pronto para lua, ascendente, Vênus ou insights de relocação, nossas outras calculadoras e o mapa de Astrocartography continuam sendo pontos de entrada gratuitos à astrologia baseada em localização.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora zodíaco grátis sem cadastro" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora zodíaco grátis sem cadastro"
+        }
       },
       {
         "title": "Sol vs ascendente vs lua—próximos passos claros",
         "description": "Muitas buscas por calculadora zodíaco confundem signo solar com ascendente ou lua. Esta página explica a diferença de forma direta: signo solar precisa só da data de nascimento; ascendente exige hora e local; a lua muda aproximadamente a cada dois dias e meio. Depois do seu resultado solar, ligamos você à Calculadora do Signo Ascendente e ao Gerador de Mapa Astral para aprofundar sem confusão de palavras-chave ou conteúdo duplicado.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Comparação entre signo solar e signo ascendente" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Comparação entre signo solar e signo ascendente"
+        }
       }
     ]
   },
@@ -206,6 +224,13 @@
     "title": "Descubra seu signo zodíaco agora",
     "description": "Use nossa calculadora signo zodíaco gratuita para descobrir seu signo solar tropical pela data de nascimento. Leia elemento, modalidade e planeta regente, depois gere seu mapa astral completo e explore seu mapa de Astrocartography—sem cadastro.",
     "buttons": [
+      {
+        "title": "Mapa de Astrocartografia grátis →",
+        "icon": "RiMapLine",
+        "url": "/pt",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Gere seu mapa astral completo →",
         "icon": "RiMapLine",

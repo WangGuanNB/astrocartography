@@ -20,7 +20,8 @@
           "Resultados completos de 30 dias",
           "Janelas de 90 dias enquanto Plus estiver ativo",
           "150 créditos por mês"
-        ]
+        ],
+        "label": "Melhor valor"
       }
     ],
     "items": [
@@ -45,7 +46,7 @@
         "price": "$9.9",
         "original_price": "",
         "unit": "",
-        "is_featured": true,
+        "is_featured": false,
         "tip": "Perfeito para uma decisão de mudança — créditos suficientes para uma primeira rodada completa de pesquisa.",
         "switch_group": "subscription",
         "switch_group_label": "Ou Plus a partir de $7.9/mês →",
@@ -63,7 +64,7 @@
         "title": "Plano Professional",
         "description": "Ideal para pesquisa profunda de várias cidades e revisões de decisão repetidas.",
         "group": "one-time",
-        "label": "Pesquisa profunda",
+        "label": "Recomendado",
         "features_title": "Tudo no Standard, mais",
         "features": [
           "500 créditos IA — cerca de 50 chats ou 10 relatórios completos de comparação de cidades",
@@ -82,7 +83,7 @@
         "price": "$19.9",
         "original_price": "$24.9",
         "unit": "",
-        "is_featured": false,
+        "is_featured": true,
         "tip": "Para pesquisa séria — compare 3-5 cidades e mantenha a análise para sempre.",
         "switch_group": "subscription",
         "switch_group_label": "Ou Plus a partir de $7.9/mês →",

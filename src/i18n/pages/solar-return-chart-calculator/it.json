@@ -11,9 +11,9 @@
     "title": "Altri strumenti",
     "items": [
       {
-        "text": "Linee planetarie dalla",
-        "linkText": "pagina iniziale Astrocartography",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       },
       {
         "text": "Cielo di un giorno sul tema natale:",
@@ -45,17 +45,26 @@
       {
         "title": "Come si legge in pratica",
         "description": "Si parte spesso dall’Ascendente della rivoluzione, dalla Luna per casa e dai pianeti sugli assi. Non sostituisce un supporto psicologico o un consulente finanziario, ma dà cornice ai temi dell’anno. Qui mettiamo in primo piano i numeri—poi puoi passare alla mappa sulla pagina iniziale e vedere come il tema natale si proietta sul mondo.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Lettura pratica della rivoluzione solare" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Lettura pratica della rivoluzione solare"
+        }
       },
       {
         "title": "Rivoluzione solare e tema natale",
         "description": "Il natale è la bussola di fondo; la rivoluzione solare aggiorna il racconto per i dodici mesi tra un compleanno e l’altro. Se cambi solo il luogo di calcolo (stesso istante, altre coordinate), cambiano case e angoli: è la cosiddetta rivoluzione «spostata» o per altro luogo, molto usata dai viaggiatori.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Rivoluzione solare e tema natale" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Rivoluzione solare e tema natale"
+        }
       },
       {
         "title": "Compleanno in viaggio",
         "description": "Se sai già che non sarai nel luogo di nascita, conviene impostare la rivoluzione per la città dove si festeggia: il Sole torna allo stesso grado, ma le case seguono il nuovo orizzonte. Da lì, con un clic puoi aprire Astrocartography sulla pagina iniziale senza reinserire data e ora.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Rivoluzione solare in viaggio" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Rivoluzione solare in viaggio"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Tutti i dati per confrontare",
         "description": "Pianeti, segni, gradi e case intere rispetto all’Ascendente della rivoluzione, più l’istante UTC del ritorno del Sole. Utile per controllare le effemeridi o convertire in ora locale.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Precisione rivoluzione solare" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Precisione rivoluzione solare"
+        }
       },
       {
         "title": "Gratis per provare",
         "description": "Cambia anno o luogo di calcolo senza costi sul tema base. Altrove sul sito le funzioni avanzate possono essere a pagamento; qui il nucleo resta aperto.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calcolatore gratuito" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calcolatore gratuito"
+        }
       },
       {
         "title": "Collegamento alla pagina iniziale",
         "description": "Dopo la lettura, un pulsante porta i tuoi dati alla pagina iniziale per la mappa delle linee: niente copia e incolla.",
         "icon": "RiMapLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Dalla rivoluzione solare alla mappa" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Dalla rivoluzione solare alla mappa"
+        }
       }
     ]
   },
@@ -193,9 +211,9 @@
     "description": "Scegli l’anno, leggi Ascendente e case; se ti serve il contesto geografico, vai alla pagina iniziale di Astrocartography con gli stessi dati di nascita.",
     "buttons": [
       {
-        "title": "Vai alla pagina iniziale Astrocartography",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "default"
       }

@@ -12,8 +12,8 @@
     "items": [
       {
         "text": "在世界地图上找到你的金星线。",
-        "linkText": "免费星盘地图计算器",
-        "url": "/"
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "查看所有行星线的完整解读。",
@@ -218,9 +218,9 @@
     "description": "使用专业 Swiss Ephemeris 计算生成个人星盘地图，精确查看金星线如何横跨全球。点击任意城市或线条即可获得即时 AI 解读——包括哪条金星角点激活，以及对关系、事业与日常生活的含义。完全免费，无需注册。",
     "buttons": [
       {
-        "title": "生成免费星盘地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

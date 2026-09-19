@@ -11,9 +11,9 @@
     "title": "Strumenti correlati",
     "items": [
       {
-        "text": "Vuoi la versione mappa del mondo della tua carta natale?",
-        "linkText": "Prova Astrocartografia",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       },
       {
         "text": "Ti serve un generatore di carta natale semplice?",
@@ -83,19 +83,28 @@
         "title": "Carta natale precisa, non oroscopi vaghi",
         "description": "Invece di una lettura generica per segno solare, questo strumento di carta natale calcola le posizioni esatte di pianeti, ascendente e case. La tua carta natale mostra un pattern unico che non si riduce a Ariete o Toro: combina Sole, Luna, ascendente e case in un quadro completo.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calcolatore carta natale preciso" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calcolatore carta natale preciso"
+        }
       },
       {
         "title": "Completamente gratuito e senza limiti",
         "description": "Genera quante carte natali vuoi, senza account né paywall. Ottieni la ruota della carta natale e una tabella delle posizioni con segni, gradi e case in una sola pagina.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calcolatore carta natale gratuito" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calcolatore carta natale gratuito"
+        }
       },
       {
         "title": "Strumento carta natale con privacy al primo posto",
         "description": "La tua carta natale si basa su dati sensibili come data, ora e luogo di nascita. Manteniamo il processo semplice e rispettoso della privacy: inserisci i dati, visualizza la tua carta natale e decidi cosa conservare o condividere. Non serve registrarsi per calcolare la carta.",
         "icon": "RiLockLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Strumento carta natale privacy" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Strumento carta natale privacy"
+        }
       }
     ]
   },
@@ -211,9 +220,9 @@
     "description": "Crea la tua carta natale in secondi, visualizza Sole, Luna e ascendente, rivedi le posizioni per segno e casa e esplora dove la tua carta natale si attiva sulla mappa di astrocartografia.",
     "buttons": [
       {
-        "title": "Dove si attiva la tua carta natale → Astrocartografia",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "default"
       }

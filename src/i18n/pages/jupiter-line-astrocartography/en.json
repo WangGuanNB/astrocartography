@@ -11,8 +11,8 @@
     "title": "Related Resources",
     "items": [
       {
-        "text": "Find your Jupiter line on a world map.",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -206,7 +206,7 @@
     "description": "Generate your personal astrocartography map and discover exactly where your Jupiter line crosses the globe. See which cities fall on your Jupiter MC, ASC, DSC, or IC line, and get instant AI interpretations of what each placement means for your career, relationships, and overall abundance. Completely free, no sign-up required.",
     "buttons": [
       {
-        "title": "Generate Your Free Astrocartography Chart",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

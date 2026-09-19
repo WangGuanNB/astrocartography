@@ -11,9 +11,9 @@
     "title": "Recursos Relacionados",
     "items": [
       {
-        "text": "Encuentra tu línea de Saturno en un mapa mundial.",
-        "linkText": "Calculadora de Astrocartografía Gratis",
-        "url": "/"
+        "text": "Genera tu carta de astrocartografía gratis en el mapa mundial.",
+        "linkText": "Carta de Astrocartografía gratis",
+        "url": "/es"
       },
       {
         "text": "Compara la línea de Saturno con otras líneas planetarias.",
@@ -206,9 +206,9 @@
     "description": "Genera tu mapa personal de astrocartografía con cálculos Swiss Ephemeris y ve exactamente dónde tu línea de Saturno cruza el globo. Descubre qué ciudades caen en tu línea MC, ASC, DSC o IC de Saturno, y obtén interpretaciones instantáneas con IA de lo que la línea de Saturno significa para tu carrera, relaciones y crecimiento personal allí. Completamente gratis, sin registro.",
     "buttons": [
       {
-        "title": "Genera Tu Carta de Astrocartografía Gratis",
+        "title": "Carta de Astrocartografía gratis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/es",
         "target": "_self",
         "variant": "default"
       }

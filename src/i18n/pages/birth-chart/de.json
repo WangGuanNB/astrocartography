@@ -11,9 +11,9 @@
     "title": "Verwandte Tools",
     "items": [
       {
-        "text": "Weltkarten-Version gewünscht?",
-        "linkText": "Astrokartografie ausprobieren",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Nur Geburtsdatum bekannt?",
@@ -50,17 +50,26 @@
       {
         "title": "Professionelle astronomische Berechnungen",
         "description": "Der Geburtshoroskop Generator berechnet die geozentrischen Positionen von Sonne, Mond und Planeten für Ihren exakten Geburtsmoment und ordnet sie Tierkreiszeichen und Graden zu. Wir rechnen Ihre lokale Geburtszeit in UTC um und ermitteln Platzierungen aus astronomischen Daten – Ihr Geburtshoroskop entspricht dem Himmel bei der Geburt (Häuser mit Whole Sign Houses zur Klarheit).",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Geburtshoroskop-Rad erklärt" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Geburtshoroskop-Rad erklärt"
+        }
       },
       {
         "title": "Sofortige Rad-Visualisierung",
         "description": "Erstellen Sie in Sekunden ein Geburtshoroskop-Rad. Das Kreisdiagramm zeigt die 12 Häuser, Tierkreiszeichen und Planetenplatzierungen übersichtlich und einsteigerfreundlich – so verstehen Sie Ihr Chart auf einen Blick und können placement für placement vertiefen.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Wie der Geburtshoroskop Generator Platzierungen berechnet" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Wie der Geburtshoroskop Generator Platzierungen berechnet"
+        }
       },
       {
         "title": "Vom Geburtshoroskop zu realen Orten",
         "description": "Über Positionen hinaus: Der nächste Schritt ist, Ihre Geburtsdaten auf der Weltkarte zu nutzen. Geburtshoroskop = „Wer bin ich?“ Astrokartografie = „Wo gedeihe ich?“ Nach dem Erstellen Ihres Rads hier bringt ein Klick Ihre exakten Geburtsdaten zur Astrokartografie-Karte – Karriere-, Beziehungs- und Wachstumsthemen nach Ort erkunden.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Geburtshoroskop vs. Astrokartografie" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Geburtshoroskop vs. Astrokartografie"
+        }
       }
     ]
   },
@@ -74,19 +83,28 @@
         "title": "Astronomische Strenge",
         "description": "Wir berechnen Planetenpositionen aus astronomischen Daten und Zeitumrechnung, damit Ihr Geburtshoroskop Ihren Geburtsmoment widerspiegelt. Besonders wichtig beim Vergleichen naher Geburtszeiten oder beim Lernen exakter Grade und Häuserthemen.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Astronomische Strenge" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Astronomische Strenge"
+        }
       },
       {
         "title": "Komplett kostenlos",
         "description": "Erstellen Sie unbegrenzt Geburtshoroskope ohne Konto, Kreditkarte oder versteckte Limits. Sie erhalten Ihr Geburtshoroskop-Rad plus eine klare Platzierungsliste (Zeichen, Grad, Haus) auf einer Seite.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Geburtshoroskop Generator" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Kostenloser Geburtshoroskop Generator"
+        }
       },
       {
         "title": "Datenschutz zuerst",
         "description": "Ihre Geburtsdaten werden nur für Berechnungen und die Anzeige in Ihrer Sitzung genutzt. Wir verlangen kein Konto – Sie nutzen den Geburtshoroskop Generator mit minimalem Aufwand und teilen nur gezielt.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Datenschutzorientierter Geburtshoroskop Generator" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Datenschutzorientierter Geburtshoroskop Generator"
+        }
       }
     ]
   },
@@ -218,9 +236,9 @@
     "description": "Erstellen Sie in Sekunden Ihr Geburtshoroskop-Rad. Entdecken Sie Sonnen-, Mond- und Aszendentenzeichen, prüfen Sie Planetenplatzierungen und Häuser, dann erkunden Sie Ihr Chart auf der Weltkarte mit Astrokartografie.",
     "buttons": [
       {
-        "title": "Ihr Chart auf der Weltkarte → Astrokartografie",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

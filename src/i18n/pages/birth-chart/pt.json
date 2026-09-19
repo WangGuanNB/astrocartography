@@ -11,9 +11,9 @@
     "title": "Ferramentas relacionadas",
     "items": [
       {
-        "text": "Quer a versão com mapa do mundo?",
-        "linkText": "Experimente Astrocartography",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Só conhece sua data de nascimento?",
@@ -78,19 +78,28 @@
         "title": "Rigor astronômico",
         "description": "Calculamos posições planetárias com base em dados astronômicos e conversão de tempo para que seu mapa natal reflita o momento de nascimento. Isso é especialmente útil para comparar horários próximos e aprender graus e temas de casas.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Rigor astronômico" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Rigor astronômico"
+        }
       },
       {
         "title": "Totalmente gratuito",
         "description": "Gere mapas natais ilimitados sem conta, sem cartão e sem limites ocultos. Em uma única página, você obtém a roda e a lista de posicionamentos (signo, grau e casa).",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Gerador de mapa astral grátis" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Gerador de mapa astral grátis"
+        }
       },
       {
         "title": "Privacidade em primeiro lugar",
         "description": "Seus dados de nascimento são usados para calcular e exibir resultados na sua sessão. Não exigimos cadastro para gerar o mapa, reduzindo fricção e permitindo que você compartilhe apenas se quiser.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Privacidade em primeiro lugar" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Privacidade em primeiro lugar"
+        }
       }
     ]
   },
@@ -222,13 +231,12 @@
     "description": "Crie sua roda do mapa natal em segundos. Veja Sol, Lua e Ascendente, revise posições e casas e depois explore seu mapa no mundo com Astrocartography.",
     "buttons": [
       {
-        "title": "Ver no mapa do mundo → Astrocartography",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }
     ]
   }
 }
-

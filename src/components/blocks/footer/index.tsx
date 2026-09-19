@@ -1,6 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Badge, Footer as FooterType } from "@/types/blocks/footer";
 import Icon from "@/components/icon";
@@ -90,6 +91,9 @@ export default function Footer({
   const badges = footer.badges?.filter((b) => b?.title && b?.url) ?? [];
   const showBadgeMarquee = badges.length > 0;
   const scrollSeconds = Math.max(14, badges.length * 2.5);
+  const brandHomeHref =
+    footer.brand?.url ||
+    (locale && locale !== "en" ? `/${locale}` : "/");
 
   return (
     <section id={footer.name} className="py-16">
@@ -99,7 +103,15 @@ export default function Footer({
             <div className="flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start">
               {footer.brand && (
                 <div>
-                  <div className="flex items-center justify-center gap-2 lg:justify-start">
+                  <Link
+                    href={brandHomeHref}
+                    className="flex items-center justify-center gap-2 lg:justify-start hover:opacity-90 transition-opacity"
+                    aria-label={
+                      footer.brand.title
+                        ? `${footer.brand.title} home`
+                        : "Home"
+                    }
+                  >
                     {footer.brand.logo && (
                       <img
                         src={footer.brand.logo.src}
@@ -112,7 +124,7 @@ export default function Footer({
                         {footer.brand.title}
                       </p>
                     )}
-                  </div>
+                  </Link>
                   {footer.brand.description && (
                     <p className="mt-6 text-md text-muted-foreground">
                       {footer.brand.description}

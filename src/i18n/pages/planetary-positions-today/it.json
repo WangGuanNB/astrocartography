@@ -11,6 +11,11 @@
     "title": "Strumenti correlati",
     "items": [
       {
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
+      },
+      {
         "text": "Vuoi il cielo di oggi sul tuo tema natale?",
         "linkText": "Calcolatore di Transiti",
         "url": "/transit-chart-calculator"
@@ -32,10 +37,19 @@
     "title": "Come calcoliamo le posizioni planetarie attuali",
     "description": "Questa tabella è generata con il metodo spiegato di seguito.",
     "highlights": [
-      { "label": "astronomy-engine", "url": "https://github.com/cosinekitty/astronomy" },
-      { "label": "Tropicale · Geocentrico" },
-      { "label": "UTC" },
-      { "label": "API server" }
+      {
+        "label": "astronomy-engine",
+        "url": "https://github.com/cosinekitty/astronomy"
+      },
+      {
+        "label": "Tropicale · Geocentrico"
+      },
+      {
+        "label": "UTC"
+      },
+      {
+        "label": "API server"
+      }
     ],
     "items": [
       {
@@ -76,17 +90,26 @@
       {
         "title": "Il cielo adesso, non il tuo tema natale",
         "description": "Il tema natale congela il cielo della nascita. Le posizioni planetarie attuali cambiano continuamente: la Luna avanza circa 13° al giorno, il Sole circa 1°, i pianeti esterni più lentamente. Usa questa tabella per segni e retrogradazioni istantanee; il tema natale per l'istante della nascita; il transito per vedere come il cielo di oggi aspetta il tuo natale.",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp", "alt": "Cielo attuale rispetto al tema natale" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp",
+          "alt": "Cielo attuale rispetto al tema natale"
+        }
       },
       {
         "title": "Come leggere segno, grado e retrogrado",
         "description": "Ogni pianeta occupa uno dei dodici segni da 30°. Il grado nel segno (0°–29°) indica quanto vi è entrato. Il moto giornaliero è la variazione di longitudine in 24 ore; se negativo, il pianeta è retrogrado (℞) — moto apparente dalla Terra. Sole e Luna non retrogradano mai. Nei giorni di cambio segno c'è comunque una sola longitudine tropicale; un pianeta può stare in un solo segno alla volta.",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp", "alt": "Leggere posizioni: segno, grado e retrogrado" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp",
+          "alt": "Leggere posizioni: segno, grado e retrogrado"
+        }
       },
       {
         "title": "Dal cielo di oggi al timing e al luogo",
         "description": "Dopo aver visto il cielo attuale, il passo successivo è spesso personale e geografico: sovrapporre lo stesso cielo con il calcolatore di transiti, o generare il tema natale se non ce l'hai ancora. L'astrocartografia traccia linee natali sulla mappa; non ridisegna il cielo in tempo reale. La mappa risponde dove risuona la tua energia natal; questa pagina risponde cosa fa il cielo adesso.",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp", "alt": "Dalla posizione dei pianeti oggi al transito" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp",
+          "alt": "Dalla posizione dei pianeti oggi al transito"
+        }
       }
     ]
   },
@@ -100,19 +123,28 @@
         "title": "Senza dati di nascita",
         "description": "Molte ricerche su «pianeti oggi» non dovrebbero chiedere l'atto di nascita. Questo calcolatore carica l'ora UTC attuale all'apertura. Servono data e ora solo se consulti un altro istante. L'ora di nascita resta nelle pagine natale, Ascendente e transito — lì sì cambia il risultato.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Tabella del cielo senza dati di nascita" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "Tabella del cielo senza dati di nascita"
+        }
       },
       {
         "title": "Ora reale, non effemeridi di mezzogiorno",
         "description": "Le effemeridi stampate usano spesso 00:00 o 12:00 UTC. Per i pianeti lenti va bene; per la Luna inganna — da mezzanotte a mezzogiorno può spostarsi di circa 6°. Questa tabella usa l'istante calcolato così la Luna corrisponde a «adesso», non a una tabella di mezzogiorno.",
         "icon": "RiTimeLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Posizioni in tempo reale, non effemeridi di mezzogiorno" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "Posizioni in tempo reale, non effemeridi di mezzogiorno"
+        }
       },
       {
         "title": "Limiti chiari, passo successivo ovvio",
         "description": "Risultati geocentrici tropicali, non siderali, eliocentrici né oroscopo giornaliero per segno solare. Le case compaiono negli strumenti con luogo di nascita. Dopo la tabella, apri il transito per vedere come queste posizioni aspettano i tuoi pianeti natali.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Posizioni tropicali geocentriche con contesto" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "Posizioni tropicali geocentriche con contesto"
+        }
       }
     ]
   },
@@ -209,6 +241,13 @@
     "title": "Guarda come il cielo di oggi agisce sul tuo tema",
     "description": "Hai già visto il cielo tropicale attuale. Sovrapponi quelle stesse posizioni al tuo tema natale con il calcolatore di transiti gratuito — lì servono i dati di nascita, perché è timing personale, non una tabella del cielo.",
     "buttons": [
+      {
+        "title": "Carta di Astrocartografia gratuita →",
+        "icon": "RiMapLine",
+        "url": "/it",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Apri calcolatore di transiti",
         "icon": "RiTimeLine",

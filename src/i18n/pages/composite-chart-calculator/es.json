@@ -11,9 +11,9 @@
     "title": "Herramientas relacionadas",
     "items": [
       {
-        "text": "Centro de mapas y calculadoras.",
-        "linkText": "Inicio",
-        "url": "/"
+        "text": "Genera tu carta de astrocartografía gratis en el mapa mundial.",
+        "linkText": "Carta de Astrocartografía gratis",
+        "url": "/es"
       },
       {
         "text": "Compara dos temas natales directamente.",
@@ -214,6 +214,13 @@
     "title": "Tras tu carta compuesta, sigue explorando",
     "description": "La carta compuesta muestra qué es la relación. La sinastría muestra cómo la vive cada persona. Los mapas de astrocartografía revelan dónde se siente más fuerte vuestra energía en el mundo.",
     "buttons": [
+      {
+        "title": "Carta de Astrocartografía gratis →",
+        "icon": "RiMapLine",
+        "url": "/es",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Mapa de Astrocartografía",
         "icon": "RiMapPinLine",

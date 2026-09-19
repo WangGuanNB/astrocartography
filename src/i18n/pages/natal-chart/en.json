@@ -11,8 +11,8 @@
     "title": "Related Tools",
     "items": [
       {
-        "text": "Want the world‑map version of your natal chart?",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -225,7 +225,7 @@
     "description": "Create your natal chart in seconds, see your Sun, Moon and Rising signs, review planet placements by sign and house, then explore where your natal chart thrives on the astrocartography map.",
     "buttons": [
       {
-        "title": "See where your natal chart activates → Astrocartography",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

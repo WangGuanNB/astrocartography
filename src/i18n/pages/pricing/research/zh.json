@@ -20,7 +20,8 @@
           "完整 30 天时间结果",
           "订阅有效期内解锁 90 天",
           "每月 150 积分"
-        ]
+        ],
+        "label": "更划算"
       }
     ],
     "items": [
@@ -45,7 +46,7 @@
         "price": "$9.9",
         "original_price": "",
         "unit": "",
-        "is_featured": true,
+        "is_featured": false,
         "tip": "完成一次搬迁决策的理想方案 — 足够支持第一轮完整研究。",
         "switch_group": "subscription",
         "switch_group_label": "或选择 Plus 月付 $7.9 起 →",
@@ -63,7 +64,7 @@
         "title": "专业包",
         "description": "适合多城市深度研究和反复决策审查的用户。",
         "group": "one-time",
-        "label": "深度研究",
+        "label": "更推荐",
         "features_title": "包含所有标准包功能，另加",
         "features": [
           "500 积分 — 约 50 次 AI 对话，或约 10 份完整城市对比报告",
@@ -82,7 +83,7 @@
         "price": "$19.9",
         "original_price": "$24.9",
         "unit": "",
-        "is_featured": false,
+        "is_featured": true,
         "tip": "认真研究的用户首选 — 对比 3-5 个城市，分析永久保留。",
         "switch_group": "subscription",
         "switch_group_label": "或选择 Plus 月付 $7.9 起 →",

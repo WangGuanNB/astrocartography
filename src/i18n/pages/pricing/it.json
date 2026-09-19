@@ -20,7 +20,8 @@
           "Risultati completi a 30 giorni",
           "Finestre a 90 giorni mentre Plus è attivo",
           "150 crediti ogni mese"
-        ]
+        ],
+        "label": "Più valore"
       }
     ],
     "items": [
@@ -47,7 +48,7 @@
         "tip": "100% free forever, experience core features",
         "button": {
           "title": "Start Free Trial",
-          "url": "/#generator",
+          "url": "/it#generator",
           "icon": "RiMapLine"
         },
         "product_id": "free",
@@ -76,7 +77,7 @@
         "price": "$9.9",
         "original_price": "",
         "unit": "",
-        "is_featured": true,
+        "is_featured": false,
         "tip": "Perfetto per una decisione di trasloco — crediti sufficienti per un primo giro completo di ricerca.",
         "switch_group": "subscription",
         "switch_group_label": "Oppure Plus da $7.9/mese →",
@@ -94,7 +95,7 @@
         "title": "Piano Professional",
         "description": "Ideale per ricerche approfondite su più città e revisioni ripetute delle decisioni.",
         "group": "one-time",
-        "label": "Ricerca approfondita",
+        "label": "Consigliato",
         "features_title": "Tutto dello Standard, in più",
         "features": [
           "500 crediti IA — circa 50 chat o 10 rapporti completi di confronto città",
@@ -113,7 +114,7 @@
         "price": "$19.9",
         "original_price": "$24.9",
         "unit": "",
-        "is_featured": false,
+        "is_featured": true,
         "tip": "Per ricerche serie — confronta 3-5 città e mantieni l'analisi per sempre.",
         "switch_group": "subscription",
         "switch_group_label": "Oppure Plus da $7.9/mese →",

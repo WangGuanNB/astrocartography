@@ -20,7 +20,8 @@
           "Volle 30-Tage-Ergebnisse",
           "90-Tage-Fenster während Plus aktiv ist",
           "150 Credits pro Monat"
-        ]
+        ],
+        "label": "Mehr Wert"
       }
     ],
     "items": [
@@ -45,7 +46,7 @@
         "price": "$9.9",
         "original_price": "",
         "unit": "",
-        "is_featured": true,
+        "is_featured": false,
         "tip": "Perfekt für eine Umzugsentscheidung — genug Credits für eine komplette erste Rechercherunde.",
         "switch_group": "subscription",
         "switch_group_label": "Oder Plus ab $7.9/Mo →",
@@ -63,7 +64,7 @@
         "title": "Professional-Plan",
         "description": "Ideal für tiefgehende Multi-City-Recherche und wiederholte Entscheidungsprüfungen.",
         "group": "one-time",
-        "label": "Tiefenrecherche",
+        "label": "Empfohlen",
         "features_title": "Alles im Standard, plus",
         "features": [
           "500 KI-Credits — ca. 50 Chats oder 10 vollständige Stadtvergleichsberichte",
@@ -82,7 +83,7 @@
         "price": "$19.9",
         "original_price": "$24.9",
         "unit": "",
-        "is_featured": false,
+        "is_featured": true,
         "tip": "Für ernsthafte Recherche — 3-5 Städte vergleichen und die Analyse für immer behalten.",
         "switch_group": "subscription",
         "switch_group_label": "Oder Plus ab $7.9/Mo →",

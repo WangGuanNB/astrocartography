@@ -11,8 +11,8 @@
     "title": "Related Resources",
     "items": [
       {
-        "text": "Find your Saturn line on a world map.",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -206,7 +206,7 @@
     "description": "Generate your personal astrocartography map and discover exactly where your Saturn line crosses the globe. See which cities fall on your Saturn MC, ASC, DSC, or IC line, and get instant AI interpretations of what the Saturn line means for your career, relationships, and personal growth there. Completely free, no sign-up required.",
     "buttons": [
       {
-        "title": "Generate Your Free Astrocartography Chart",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

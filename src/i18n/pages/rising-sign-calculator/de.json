@@ -26,9 +26,9 @@
         "url": "/tools/birth-chart-generator"
       },
       {
-        "text": "Wo Ihr Chart global gedeiht.",
-        "linkText": "Astrokartografie Rechner",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       }
     ]
   },
@@ -45,17 +45,26 @@
       {
         "title": "Warum die genaue Geburtszeit wichtig ist",
         "description": "Ihr Aszendent bewegt sich etwa ein Grad alle vier Minuten und durchläuft alle zwölf Zeichen in 24 Stunden. Ein Aszendent Rechner braucht die Geburtszeit möglichst auf die Minute genau. Schon 15–30 Minuten Abweichung können den Aszendentengrad deutlich verschieben oder nahe Zeichengrenzen das Zeichen ganz wechseln. Ohne präzise Zeit werden Häusergrenzen unzuverlässig. Wenn Ihre Geburtsurkunde eine Zeit angibt, nutzen Sie sie; bei Schätzung tragen Ergebnisse Unsicherheit – besonders bei Grenzgraden.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Uhrdiagramm: Aszendent wechselt etwa alle zwei Stunden" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Uhrdiagramm: Aszendent wechselt etwa alle zwei Stunden"
+        }
       },
       {
         "title": "Wie der Ort Ihren Aszendenten prägt",
         "description": "Geografie verändert Ihr aufsteigendes Zeichen grundlegend, weil der Horizont bei der Geburt davon abhängt, wo Sie auf der Erde stehen. Zwei Menschen zur gleichen UTC-Zeit in London und Sydney sehen völlig unterschiedliche Zeichen aufsteigen. Unser Aszendent Rechner zeigt das mit der geografischen Perspektive: Nach der Berechnung Ihres Aszendenten für Ihren Geburtsort sehen Sie, was derselbe Moment in großen Städten weltweit ergeben würde – die Brücke zur Astrokartografie und wie der Ort die astrologische Ausdrucksweise von Geburt an beeinflusst.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Weltkarte mit unterschiedlichen Aszendenten in Städten" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Weltkarte mit unterschiedlichen Aszendenten in Städten"
+        }
       },
       {
         "title": "Vom Aszendenten zu Ihrem globalen Chart",
         "description": "Wenn Sie Ihr aufsteigendes Zeichen kennen, ist der nächste Schritt zu erkunden, wo Ihr gesamter Chart weltweit aktiv wird. Dieser Aszendent Rechner beantwortet „Was ist mein Aszendent bei der Geburt“; Astrokartografie erweitert die Frage global: Wo verstärken meine Planetenlinien Karriere, Beziehungen, Kreativität oder persönliche Transformation? Das aufsteigende Zeichen markiert Ihren Anfang; die Weltkarte zeigt, überall wo diese Energie wirken kann. Nutzen Sie dieselben Geburtsdaten in beiden Tools für nahtlose standortbezogene Astrologie.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Übergang vom Aszendent-Ergebnis zur Astrokartografie-Weltkarte" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Übergang vom Aszendent-Ergebnis zur Astrokartografie-Weltkarte"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Astronomische Präzision, der Sie vertrauen können",
         "description": "Wir berechnen das aufsteigende Zeichen mit denselben astronomischen Standards wie professionelle Astrologen. Geburtsdatum, exakte Zeit (inkl. Zeitzone) und Ort (Koordinaten oder Stadt) eingeben – der Aszendent Rechner liefert Aszendentenzeichen, Grad auf zwei Dezimalstellen und modernen Herrscherplaneten. Ob Abgleich mit Astrologie-Software oder erste Entdeckung: Präzision zählt. Die Genauigkeit der Geburtszeit bestimmt die Zuverlässigkeit direkt.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Präzise astronomische Berechnungsengine" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Präzise astronomische Berechnungsengine"
+        }
       },
       {
         "title": "Komplett kostenlos, ohne Hürden",
         "description": "Nutzen Sie diesen Aszendent Rechner unbegrenzt ohne Konto, Zahlungsdaten oder Werbung. Aszendent berechnen, geografischen Vergleich in Städten erkunden, Interpretationen lesen und optional mit einem Klick zur Astrokartografie – alles kostenlos. Grundlegende astrologische Tools sollen für alle zugänglich sein.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenlose Aszendent Rechner Oberfläche" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Kostenlose Aszendent Rechner Oberfläche"
+        }
       },
       {
         "title": "Aszendent vs. Sternzeichen – endlich klar",
         "description": "Viele verwechseln Aszendent und Sternzeichen. Dieser Aszendent Rechner klärt beides: Das Sternzeichen kommt nur vom Geburtsdatum und steht für Kernidentität. Der Aszendent braucht Datum plus exakte Zeit und Ort – er zeigt, wie Sie instinktiv der Welt begegnen und wie andere Sie zunächst wahrnehmen. Wir fokussieren hier klar auf den Aszendenten; für integrierte Sonne-Mond-Aszendent-Analyse danach unseren Geburtshoroskop Generator nutzen.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Vergleich Aszendent vs. Sternzeichen" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Vergleich Aszendent vs. Sternzeichen"
+        }
       }
     ]
   },
@@ -201,9 +219,9 @@
     "description": "Nutzen Sie unseren Aszendent Rechner, um sofort Ihr Aszendentenzeichen, exakten Grad und Herrscherplanet zu finden. Sehen Sie, wie derselbe Geburtsmoment in Städten weltweit unterschiedliche Aszendenten erzeugt, dann erkunden Sie Ihren vollständigen Chart auf der Weltkarte mit Astrokartografie – kostenlos, genau, ohne Anmeldung.",
     "buttons": [
       {
-        "title": "Ihr Chart global erkunden → Astrokartografie",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

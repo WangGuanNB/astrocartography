@@ -26,9 +26,9 @@
         "url": "/jupiter-line-astrocartography"
       },
       {
-        "text": "Torna alla mappa principale e agli strumenti.",
-        "linkText": "Home Astrocartography",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       }
     ]
   },
@@ -215,9 +215,9 @@
     "description": "Calcola gratis segno MC, grado, reggente e IC; poi esplora le linee MC del Sole e di Giove sulla mappa Astrocartography per simbolismo vocazionale per luogo.",
     "buttons": [
       {
-        "title": "Esplora linee MC del Sole e di Giove → Mappa",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "default"
       }

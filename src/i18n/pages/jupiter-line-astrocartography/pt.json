@@ -11,9 +11,9 @@
     "title": "Recursos Relacionados",
     "items": [
       {
-        "text": "Encontre sua linha de Júpiter em um mapa mundial.",
-        "linkText": "Calculadora de Astrocartografia Grátis",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Veja todas as linhas planetárias e seus significados.",
@@ -206,9 +206,9 @@
     "description": "Gere seu mapa pessoal de astrocartografia e descubra exatamente onde sua linha de Júpiter cruza o globo. Veja quais cidades caem em sua linha Júpiter MC, ASC, DSC ou IC, e obtenha interpretações instantâneas com IA do que cada colocação significa para sua carreira, relacionamentos e abundância geral. Completamente grátis, sem cadastro.",
     "buttons": [
       {
-        "title": "Gere sua Carta de Astrocartografia Grátis",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

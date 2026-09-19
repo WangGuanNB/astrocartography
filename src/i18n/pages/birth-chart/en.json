@@ -11,8 +11,8 @@
     "title": "Related Tools",
     "items": [
       {
-        "text": "Want the world‑map version?",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -88,19 +88,28 @@
         "title": "Astronomical rigor",
         "description": "We calculate planet positions from astronomical data and time conversion so your natal chart reflects your birth moment. This matters most when you’re comparing close birth times or learning exact degrees and house themes.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Astronomical rigor" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Astronomical rigor"
+        }
       },
       {
         "title": "Completely free",
         "description": "Generate unlimited natal charts with no account, no credit card, and no hidden limits. Get your birth chart wheel plus a clean placements list (sign, degree, and house) in one page.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Completely free birth chart generator" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Completely free birth chart generator"
+        }
       },
       {
         "title": "Privacy first",
         "description": "Your birth data is used to run calculations and display results in your session. We don’t ask for an account to generate a chart, so you can use the tool with minimal friction and share selectively.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Privacy-first birth chart generator" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Privacy-first birth chart generator"
+        }
       }
     ]
   },
@@ -232,7 +241,7 @@
     "description": "Create your natal chart wheel in seconds. Discover your Sun, Moon, and Rising signs, review your planet placements and houses, then explore your chart on the world map with Astrocartography.",
     "buttons": [
       {
-        "title": "See your chart on the world map → Astrocartography",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",
@@ -241,4 +250,3 @@
     ]
   }
 }
-

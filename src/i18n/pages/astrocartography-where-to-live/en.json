@@ -47,8 +47,8 @@
     "title": "Plan Your Next Location",
     "items": [
       {
-        "text": "Need your map first?",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -243,7 +243,7 @@
     "description": "Generate your map, compare your candidate cities, and use AI-assisted interpretation when you want a deeper reading of the places you are considering.",
     "buttons": [
       {
-        "title": "Generate Your Free Astrocartography Map",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

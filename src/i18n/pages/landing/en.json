@@ -13,7 +13,7 @@
     "nav": {
       "items": [
         {
-          "title": "Home",
+          "title": "Astrocartography Map",
           "url": "/",
           "icon": "RiHomeLine"
         },
@@ -762,7 +762,8 @@
           "Full 30-day timing",
           "90-day windows while active",
           "150 credits every month"
-        ]
+        ],
+        "label": "Better value"
       }
     ],
     "items": [
@@ -818,7 +819,7 @@
         "price": "$9.9",
         "original_price": "",
         "unit": "",
-        "is_featured": true,
+        "is_featured": false,
         "tip": "Perfect for one relocation decision — enough credits for a complete first round of research.",
         "switch_group": "subscription",
         "switch_group_label": "Or get Plus from $7.9/mo →",
@@ -836,7 +837,7 @@
         "title": "Professional Plan",
         "description": "Best for deep multi-city research and repeated decision reviews.",
         "group": "one-time",
-        "label": "Deep Research",
+        "label": "Recommended",
         "features_title": "Everything in Standard, plus",
         "features": [
           "500 AI credits — about 50 chats or 10 city comparison reports",
@@ -855,7 +856,7 @@
         "price": "$19.9",
         "original_price": "$24.9",
         "unit": "",
-        "is_featured": false,
+        "is_featured": true,
         "tip": "For serious research — compare 3-5 cities and keep the analysis forever.",
         "switch_group": "subscription",
         "switch_group_label": "Or get Plus from $7.9/mo →",
@@ -999,6 +1000,11 @@
           "title": "Product",
           "children": [
             {
+              "title": "Free Astrocartography Chart & Map",
+              "url": "/",
+              "target": "_self"
+            },
+            {
               "title": "Astrocartography Calculator",
               "url": "/astrocartography-calculator",
               "target": "_self"
@@ -1009,8 +1015,8 @@
           "title": "Resources",
           "children": [
             {
-              "title": "FAQ",
-              "url": "/#faq"
+              "title": "Free Astrocartography Chart & Map",
+              "url": "/"
             },
             {
               "title": "Contact Us",

@@ -11,9 +11,9 @@
     "title": "Ferramentas relacionadas",
     "items": [
       {
-        "text": "Quer a versão em mapa do mundo do seu mapa astral?",
-        "linkText": "Experimente Astrocartografia",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Precisa de um gerador de carta natal simples?",
@@ -83,19 +83,28 @@
         "title": "Mapa astral preciso, não horóscopos vagos",
         "description": "Em vez de uma leitura genérica por signo solar, esta ferramenta de mapa astral calcula as posições exatas dos seus planetas, ascendente e casas. Seu mapa astral mostra um padrão único que não se resume a Áries ou Touro: combina Sol, Lua, ascendente e casas numa visão completa.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora de mapa astral precisa" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora de mapa astral precisa"
+        }
       },
       {
         "title": "Totalmente grátis e sem limites",
         "description": "Gere quantos mapas astrais quiser, sem conta nem paywall. Você obtém a roda do mapa astral e uma tabela de posições com signos, graus e casas numa só página.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora de mapa astral grátis" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora de mapa astral grátis"
+        }
       },
       {
         "title": "Ferramenta de mapa astral com foco em privacidade",
         "description": "Seu mapa astral é baseado em dados sensíveis como data, hora e local de nascimento. Mantemos o processo simples e com privacidade: você informa os dados, vê seu mapa astral e decide o que guardar ou compartilhar. Não é preciso cadastro para calcular sua carta.",
         "icon": "RiLockLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Ferramenta mapa astral privacidade" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Ferramenta mapa astral privacidade"
+        }
       }
     ]
   },
@@ -211,9 +220,9 @@
     "description": "Crie seu mapa astral em segundos, veja seu Sol, Lua e ascendente, revise as posições por signo e casa e explore onde seu mapa astral se ativa no mapa de astrocartografia.",
     "buttons": [
       {
-        "title": "Onde seu mapa astral se ativa → Astrocartografia",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

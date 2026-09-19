@@ -11,6 +11,11 @@
     "title": "Ferramentas relacionadas",
     "items": [
       {
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
+      },
+      {
         "text": "Queres o céu de hoje sobre o teu mapa natal?",
         "linkText": "Calculadora de Trânsitos",
         "url": "/transit-chart-calculator"
@@ -32,10 +37,19 @@
     "title": "Como calculamos as posições planetárias atuais",
     "description": "Esta tabela é gerada com o método explicado abaixo.",
     "highlights": [
-      { "label": "astronomy-engine", "url": "https://github.com/cosinekitty/astronomy" },
-      { "label": "Tropical · Geocêntrico" },
-      { "label": "UTC" },
-      { "label": "API do servidor" }
+      {
+        "label": "astronomy-engine",
+        "url": "https://github.com/cosinekitty/astronomy"
+      },
+      {
+        "label": "Tropical · Geocêntrico"
+      },
+      {
+        "label": "UTC"
+      },
+      {
+        "label": "API do servidor"
+      }
     ],
     "items": [
       {
@@ -76,17 +90,26 @@
       {
         "title": "O céu de agora, não o teu mapa natal",
         "description": "O mapa natal congela o céu do nascimento. As posições planetárias atuais mudam sem parar: a Lua avança cerca de 13° por dia, o Sol cerca de 1°, os exteriores mais devagar. Usa esta tabela para signos e retrogradações instantâneas; o mapa natal para o instante do nascimento; o trânsito para ver como o céu de hoje aspecta o teu natal.",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp", "alt": "Céu atual versus mapa natal" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp",
+          "alt": "Céu atual versus mapa natal"
+        }
       },
       {
         "title": "Como ler signo, grau e retrógrado",
         "description": "Cada planeta ocupa um dos doze signos de 30°. O grau dentro do signo (0°–29°) indica quanto entrou nele. O movimento diário é a variação de longitude em 24 horas; se for negativo, o planeta está retrógrado (℞) — movimento aparente da Terra. Sol e Lua nunca retrogradam. Em dias de mudança de signo continua a haver uma única longitude tropical; um planeta só pode estar num signo de cada vez.",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp", "alt": "Ler posições: signo, grau e retrógrado" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp",
+          "alt": "Ler posições: signo, grau e retrógrado"
+        }
       },
       {
         "title": "Do céu de hoje ao timing e ao lugar",
         "description": "Depois de ver o céu atual, o passo seguinte costuma ser pessoal e geográfico: sobrepor o mesmo céu com a calculadora de trânsitos, ou gerar o mapa natal se ainda não o tens. A astrocartografia traça linhas natais no mapa; não redesenha o céu em tempo real. O mapa responde onde a tua energia natal ressoa; esta página responde o que o céu faz agora.",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp", "alt": "Da posição dos planetas hoje ao trânsito" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp",
+          "alt": "Da posição dos planetas hoje ao trânsito"
+        }
       }
     ]
   },
@@ -100,19 +123,28 @@
         "title": "Sem dados de nascimento",
         "description": "Muitas pesquisas de «planetas hoje» não deveriam pedir a certidão de nascimento. Esta calculadora carrega a hora UTC atual ao abrir. Só precisas de data e hora se consultares outro instante. A hora de nascimento fica nas páginas de natal, Ascendente e trânsito — aí sim altera o resultado.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Tabela do céu sem dados de nascimento" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "Tabela do céu sem dados de nascimento"
+        }
       },
       {
         "title": "Hora real, não efemérides de meio-dia",
         "description": "Efemérides impressas usam muitas vezes 00:00 ou 12:00 UTC. Para planetas lentos serve; para a Lua engana — da meia-noite ao meio-dia pode mover cerca de 6°. Esta tabela usa o instante calculado para a Lua coincidir com «agora», não com uma tabela de meio-dia.",
         "icon": "RiTimeLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Posições em tempo real, não efemérides de meio-dia" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "Posições em tempo real, não efemérides de meio-dia"
+        }
       },
       {
         "title": "Limites claros, próximo passo óbvio",
         "description": "Resultados geocêntricos tropicais, não sidéreos, heliocêntricos nem horóscopo diário por signo solar. As casas aparecem em ferramentas com local de nascimento. Depois da tabela, abre o trânsito para ver como estas posições aspectam os teus planetas natais.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "Posições tropicais geocêntricas com contexto" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "Posições tropicais geocêntricas com contexto"
+        }
       }
     ]
   },
@@ -209,6 +241,13 @@
     "title": "Vê como o céu de hoje actua sobre o teu mapa",
     "description": "Já viste o céu tropical atual. Sobrepõe essas mesmas posições no teu mapa natal com a calculadora de trânsitos gratuita — aí sim precisas de dados de nascimento, porque é timing pessoal, não uma tabela do céu.",
     "buttons": [
+      {
+        "title": "Mapa de Astrocartografia grátis →",
+        "icon": "RiMapLine",
+        "url": "/pt",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Abrir calculadora de trânsitos",
         "icon": "RiTimeLine",

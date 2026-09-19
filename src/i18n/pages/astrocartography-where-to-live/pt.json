@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "Gerar seu mapa",
-        "url": "/",
+        "url": "/pt",
         "icon": "RiArrowRightLine"
       },
       {
@@ -47,9 +47,9 @@
     "title": "Planeje seu próximo lugar",
     "items": [
       {
-        "text": "Precisa do seu mapa primeiro?",
-        "linkText": "Calculadora de astrocartografia grátis",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Quer entender cada linha?",
@@ -243,9 +243,9 @@
     "description": "Gere seu mapa, compare cidades candidatas e use interpretação com IA quando quiser uma leitura mais profunda.",
     "buttons": [
       {
-        "title": "Gerar mapa de astrocartografia grátis",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       },

@@ -21,9 +21,9 @@
         "url": "/planetary-positions-today"
       },
       {
-        "text": "Descubra onde sua carta prospera no mundo.",
-        "linkText": "Calculadora Astrocartography",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       }
     ]
   },
@@ -40,17 +40,26 @@
       {
         "title": "Por que usar um mapa de trânsitos",
         "description": "Um mapa de trânsitos responde: o que está acontecendo no céu em relação ao meu mapa natal hoje (ou numa data específica)? Os planetas em trânsito formam conjunções, quadraturas, trinos e outros aspectos aos seus planetas natais. Esses trânsitos são usados para o timing e para entender temas de vida atuais. Nossa calculadora usa 12:00 UTC como momento do trânsito para evitar confusão de data entre fusos horários. Você obtém uma lista clara de posições e aspectos e depois pode explorar astrologia por localização com Astrocartography.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Significado e uso do mapa de trânsitos" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Significado e uso do mapa de trânsitos"
+        }
       },
       {
         "title": "Mapa de trânsitos vs mapa natal",
         "description": "Seu mapa natal é uma foto do céu ao nascer; um mapa de trânsitos sobrepõe o céu de uma data escolhida a essa foto. O mapa natal é fixo; o de trânsitos muda a cada dia. Esta calculadora dá os dois: suas posições natais e as posições em trânsito para a data escolhida. Os aspectos entre trânsitos e natais são calculados com orbes padrão (conjunção e oposição ±8°, quadratura e trino ±6°, sextil ±4°) para resultados profissionais e legíveis.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Mapa de trânsitos frente a mapa natal" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Mapa de trânsitos frente a mapa natal"
+        }
       },
       {
         "title": "Do mapa de trânsitos à Astrocartography",
         "description": "Depois de ver seu mapa de trânsitos, o próximo passo é ver onde sua carta se ativa no mundo. Astrocartography projeta seu mapa natal no globo. Use o botão abaixo dos resultados para ir à página inicial e criar seu mapa Astrocartography com os mesmos dados de nascimento. O mapa de trânsitos mostra quando; o mapa mundial mostra onde.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Do mapa de trânsitos ao mapa mundial" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Do mapa de trânsitos ao mapa mundial"
+        }
       }
     ]
   },
@@ -64,19 +73,28 @@
         "title": "Mapa de trânsitos de nível profissional",
         "description": "Calculamos posições geocêntricas do Sol, da Lua e de todos os planetas clássicos e exteriores. As posições de trânsito usam 12:00 UTC da data escolhida. Os orbes dos aspectos seguem a prática habitual: conjunção e oposição ±8°, quadratura e trino ±6°, sextil ±4°. Seu mapa de trânsitos é adequado para estudo pessoal e para cruzar com outras ferramentas.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Cálculo preciso do mapa de trânsitos" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Cálculo preciso do mapa de trânsitos"
+        }
       },
       {
         "title": "Mapa de trânsitos grátis, sem cadastro",
         "description": "Gere um mapa de trânsitos quantas vezes quiser sem conta. Informe dados de nascimento e data de trânsito para ver posições e aspectos. Depois use os mesmos dados na página inicial para criar seu mapa Astrocartography e ver onde as energias da sua carta são mais fortes no mundo.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora de mapa de trânsitos grátis" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora de mapa de trânsitos grátis"
+        }
       },
       {
         "title": "Lista clara de aspectos",
         "description": "O resultado mostra quais planetas em trânsito aspectam quais planetas natais e com qual orbe. Você vê de relance os trânsitos principais da data escolhida. Para interpretação mais profunda oferecemos uma leitura com IA (consome créditos). O mapa de trânsitos grátis dá os dados; o mapa e as funções premium acrescentam localização e interpretação.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Lista de aspectos do mapa de trânsitos" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Lista de aspectos do mapa de trânsitos"
+        }
       }
     ]
   },
@@ -170,9 +188,9 @@
     "description": "Use nossa calculadora gratuita para ver como os trânsitos aspectam seu mapa natal. Depois explore onde sua carta prospera no mapa mundial com Astrocartography — mesmos dados, sem cadastro.",
     "buttons": [
       {
-        "title": "Explorar minha carta no mapa mundial → Astrocartography",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

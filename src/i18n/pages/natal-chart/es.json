@@ -11,9 +11,9 @@
     "title": "Herramientas relacionadas",
     "items": [
       {
-        "text": "¿Quieres la versión en mapa del mundo de tu carta natal?",
-        "linkText": "Prueba Astrocartography",
-        "url": "/"
+        "text": "Genera tu carta de astrocartografía gratis en el mapa mundial.",
+        "linkText": "Carta de Astrocartografía gratis",
+        "url": "/es"
       },
       {
         "text": "¿Necesitas un generador de carta natal sencillo?",
@@ -83,19 +83,28 @@
         "title": "Carta natal precisa, no horóscopos vagos",
         "description": "En lugar de una lectura genérica por signo solar, esta herramienta de carta natal calcula las posiciones exactas de tus planetas, ascendente y casas. Tu carta natal muestra un patrón único que no se reduce a Aries o Tauro: combina Sol, Luna, ascendente y casas en una imagen completa.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora de carta natal precisa" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora de carta natal precisa"
+        }
       },
       {
         "title": "Totalmente gratis y sin límites",
         "description": "Genera todas las cartas natales que quieras: sin cuenta ni pago. Obtienes la rueda de carta natal y una tabla de posiciones con signos, grados y casas en una sola página, para explorar tu carta o ayudar a amigos o clientes sin fricciones.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora de carta natal gratis" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora de carta natal gratis"
+        }
       },
       {
         "title": "Herramienta de carta natal con privacidad",
         "description": "Tu carta natal se basa en datos sensibles como fecha, hora y lugar de nacimiento. Mantenemos el proceso simple y centrado en la privacidad: introduces tus datos, ves tu carta natal y decides qué guardar o compartir. No hace falta registrarse para calcular tu carta.",
         "icon": "RiLockLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Herramienta de carta natal con privacidad" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Herramienta de carta natal con privacidad"
+        }
       }
     ]
   },
@@ -211,9 +220,9 @@
     "description": "Crea tu carta natal en segundos, consulta tu Sol, Luna y ascendente, revisa las posiciones por signo y casa y explora dónde tu carta natal se activa en el mapa de astrocartografía.",
     "buttons": [
       {
-        "title": "Ver dónde se activa tu carta natal → Astrocartography",
+        "title": "Carta de Astrocartografía gratis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/es",
         "target": "_self",
         "variant": "default"
       }

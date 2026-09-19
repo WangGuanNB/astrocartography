@@ -11,6 +11,11 @@
     "title": "Quick Navigation",
     "items": [
       {
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
+        "url": "/"
+      },
+      {
         "text": "Ready to see your houses?",
         "linkText": "Birth Chart Generator",
         "url": "/tools/birth-chart-generator"
@@ -34,19 +39,50 @@
   },
   "hubHero": {
     "badge": "Astrology Learn Hub",
-    "primaryCta": { "title": "See Your Houses in Your Chart", "url": "/tools/birth-chart-generator" },
-    "secondaryCta": { "title": "Natal Chart Guide", "url": "/chart/natal-chart" },
+    "primaryCta": {
+      "title": "See Your Houses in Your Chart",
+      "url": "/tools/birth-chart-generator"
+    },
+    "secondaryCta": {
+      "title": "Natal Chart Guide",
+      "url": "/chart/natal-chart"
+    },
     "sidebarLabel": "12 life areas",
-    "sidebarTags": ["Identity", "Career", "Home", "Love"],
+    "sidebarTags": [
+      "Identity",
+      "Career",
+      "Home",
+      "Love"
+    ],
     "sidebarTitle": "Learn houses, then read your chart",
     "sidebarDescription": "Browse all 12 houses, then generate your birth chart to see your placements."
   },
   "navPills": [
-    { "title": "Start Here", "href": "#start-here", "icon": "RiSparklingLine" },
-    { "title": "12 Houses", "href": "#twelve-houses", "icon": "RiLayoutGridLine" },
-    { "title": "House Types", "href": "#house-types", "icon": "RiFocus3Line" },
-    { "title": "Find Yours", "href": "#usage", "icon": "RiSearchLine" },
-    { "title": "Guide", "href": "#introduce", "icon": "RiBookOpenLine" }
+    {
+      "title": "Start Here",
+      "href": "#start-here",
+      "icon": "RiSparklingLine"
+    },
+    {
+      "title": "12 Houses",
+      "href": "#twelve-houses",
+      "icon": "RiLayoutGridLine"
+    },
+    {
+      "title": "House Types",
+      "href": "#house-types",
+      "icon": "RiFocus3Line"
+    },
+    {
+      "title": "Find Yours",
+      "href": "#usage",
+      "icon": "RiSearchLine"
+    },
+    {
+      "title": "Guide",
+      "href": "#introduce",
+      "icon": "RiBookOpenLine"
+    }
   ],
   "hubLinkLabels": {
     "openTool": "Open tool",
@@ -88,18 +124,90 @@
       "description": "Use this directory to jump to any of the 12 houses in astrology. Each section below explains the life area, natural sign association, and how to read planets inside that house.",
       "columns": "sm:grid-cols-2 lg:grid-cols-4",
       "items": [
-        { "title": "1st House", "description": "Self, identity, appearance, and vitality.", "href": "#house-1", "icon": "RiUserLine", "group": "Angular" },
-        { "title": "2nd House", "description": "Money, values, possessions, and self-worth.", "href": "#house-2", "icon": "RiWalletLine", "group": "Succedent" },
-        { "title": "3rd House", "description": "Communication, siblings, and local environment.", "href": "#house-3", "icon": "RiMessage3Line", "group": "Cadent" },
-        { "title": "4th House", "description": "Home, family, roots, and emotional foundations.", "href": "#house-4", "icon": "RiHome4Line", "group": "Angular" },
-        { "title": "5th House", "description": "Creativity, romance, joy, and children.", "href": "#house-5", "icon": "RiPaletteLine", "group": "Succedent" },
-        { "title": "6th House", "description": "Daily work, health, routines, and service.", "href": "/astrology-houses/6th-house", "icon": "RiHeartPulseLine", "group": "Cadent" },
-        { "title": "7th House", "description": "Partnerships, marriage, and one-on-one bonds.", "href": "#house-7", "icon": "RiHeartLine", "group": "Angular" },
-        { "title": "8th House", "description": "Transformation, intimacy, and shared resources.", "href": "#house-8", "icon": "RiShieldLine", "group": "Succedent" },
-        { "title": "9th House", "description": "Travel, philosophy, and higher learning.", "href": "#house-9", "icon": "RiCompassLine", "group": "Cadent" },
-        { "title": "10th House", "description": "Career, reputation, and public life.", "href": "#house-10", "icon": "RiBriefcaseLine", "group": "Angular" },
-        { "title": "11th House", "description": "Friends, community, and long-term hopes.", "href": "/astrology-houses/11th-house", "icon": "RiGroupLine", "group": "Succedent" },
-        { "title": "12th House", "description": "Subconscious, solitude, endings, and spirituality.", "href": "#house-12", "icon": "RiMoonLine", "group": "Cadent" }
+        {
+          "title": "1st House",
+          "description": "Self, identity, appearance, and vitality.",
+          "href": "#house-1",
+          "icon": "RiUserLine",
+          "group": "Angular"
+        },
+        {
+          "title": "2nd House",
+          "description": "Money, values, possessions, and self-worth.",
+          "href": "#house-2",
+          "icon": "RiWalletLine",
+          "group": "Succedent"
+        },
+        {
+          "title": "3rd House",
+          "description": "Communication, siblings, and local environment.",
+          "href": "#house-3",
+          "icon": "RiMessage3Line",
+          "group": "Cadent"
+        },
+        {
+          "title": "4th House",
+          "description": "Home, family, roots, and emotional foundations.",
+          "href": "#house-4",
+          "icon": "RiHome4Line",
+          "group": "Angular"
+        },
+        {
+          "title": "5th House",
+          "description": "Creativity, romance, joy, and children.",
+          "href": "#house-5",
+          "icon": "RiPaletteLine",
+          "group": "Succedent"
+        },
+        {
+          "title": "6th House",
+          "description": "Daily work, health, routines, and service.",
+          "href": "/astrology-houses/6th-house",
+          "icon": "RiHeartPulseLine",
+          "group": "Cadent"
+        },
+        {
+          "title": "7th House",
+          "description": "Partnerships, marriage, and one-on-one bonds.",
+          "href": "#house-7",
+          "icon": "RiHeartLine",
+          "group": "Angular"
+        },
+        {
+          "title": "8th House",
+          "description": "Transformation, intimacy, and shared resources.",
+          "href": "#house-8",
+          "icon": "RiShieldLine",
+          "group": "Succedent"
+        },
+        {
+          "title": "9th House",
+          "description": "Travel, philosophy, and higher learning.",
+          "href": "#house-9",
+          "icon": "RiCompassLine",
+          "group": "Cadent"
+        },
+        {
+          "title": "10th House",
+          "description": "Career, reputation, and public life.",
+          "href": "#house-10",
+          "icon": "RiBriefcaseLine",
+          "group": "Angular"
+        },
+        {
+          "title": "11th House",
+          "description": "Friends, community, and long-term hopes.",
+          "href": "/astrology-houses/11th-house",
+          "icon": "RiGroupLine",
+          "group": "Succedent"
+        },
+        {
+          "title": "12th House",
+          "description": "Subconscious, solitude, endings, and spirituality.",
+          "href": "#house-12",
+          "icon": "RiMoonLine",
+          "group": "Cadent"
+        }
       ]
     },
     "houseTypes": {
@@ -429,7 +537,7 @@
         "variant": "default"
       },
       {
-        "title": "Free Astrocartography Map",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

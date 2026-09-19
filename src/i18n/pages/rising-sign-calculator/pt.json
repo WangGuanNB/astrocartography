@@ -26,9 +26,9 @@
         "url": "/tools/birth-chart-generator"
       },
       {
-        "text": "Descubra onde sua carta prospera no mundo.",
-        "linkText": "Calculadora Astrocartography",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       }
     ]
   },
@@ -45,17 +45,26 @@
       {
         "title": "Por que a hora exata de nascimento importa",
         "description": "Seu ascendente se move aproximadamente um grau a cada quatro minutos e percorre todo o zodíaco em 24 horas. A calculadora precisa da hora de nascimento o mais precisa possível (de preferência ao minuto). Um erro de 15–30 minutos pode mudar o grau ou, nos limites entre signos, o próprio signo. Sem hora precisa, as cúspides das casas ficam pouco confiáveis. Se sua certidão de nascimento tiver a hora, use-a; se estiver estimando, lembre-se de que o resultado pode variar.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "O ascendente muda aproximadamente a cada duas horas" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "O ascendente muda aproximadamente a cada duas horas"
+        }
       },
       {
         "title": "Como o lugar molda seu ascendente",
         "description": "A geografia altera seu ascendente porque o horizonte no nascimento depende de onde você está na superfície da Terra. Duas pessoas nascidas no mesmo UTC em Londres e Sydney verão signos ascendentes diferentes. Nossa calculadora mostra isso com a perspectiva geográfica: depois de calcular seu ascendente no seu local de nascimento, mostra o que o mesmo momento produziria em outras cidades do mundo, ligando ao conceito da Astrocartography.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Mapa mundial com ascendentes diferentes por cidade" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Mapa mundial com ascendentes diferentes por cidade"
+        }
       },
       {
         "title": "Do ascendente à sua carta global",
         "description": "Depois de conhecer seu ascendente, o próximo passo é explorar onde toda a sua carta se ativa no planeta. Esta calculadora responde «qual é meu ascendente ao nascer»; a Astrocartography amplia a pergunta: onde as linhas planetárias reforçam carreira, relacionamentos, criatividade ou transformação? O ascendente marca seu começo; o mapa mundial mostra onde essa energia pode se manifestar. Use os mesmos dados nas duas ferramentas.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Do resultado do ascendente ao mapa Astrocartography" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Do resultado do ascendente ao mapa Astrocartography"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Precisão astronômica confiável",
         "description": "Calculamos o ascendente com os mesmos padrões usados por astrólogos profissionais. Informe data, hora (e fuso horário) e local ou coordenadas. A calculadora devolve o signo ascendente, grau com duas casas decimais e planeta regente moderno, para resultados verificáveis. A precisão da hora de nascimento determina a confiabilidade do resultado.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Cálculo astronômico preciso" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Cálculo astronômico preciso"
+        }
       },
       {
         "title": "Completamente grátis, sem barreiras",
         "description": "Use esta calculadora sem limites: sem conta, pagamento ou anúncios. Calcule seu ascendente, compare por cidades, leia interpretações e continue para a Astrocartography com um clique. Acreditamos que ferramentas astrológicas básicas devem ser acessíveis a todos.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calculadora grátis sem cadastro" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calculadora grátis sem cadastro"
+        }
       },
       {
         "title": "Ascendente vs signo solar: finalmente claro",
         "description": "Muitos confundem ascendente com signo solar. O signo solar depende só da data e representa a identidade central. O ascendente exige data, hora e local exatos e mostra como você se aproxima do mundo e como os outros te percebem no início. Aqui o foco é o ascendente; para análise integrada sol-lua-ascendente, use depois o Gerador de Mapa Astral.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Ascendente vs signo solar" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Ascendente vs signo solar"
+        }
       }
     ]
   },
@@ -201,9 +219,9 @@
     "description": "Use nossa calculadora do ascendente para obter na hora seu signo ascendente, grau preciso e planeta regente. Veja como o mesmo momento de nascimento gera ascendentes diferentes em cidades do mundo e explore sua carta no mapa com a Astrocartography: grátis, preciso e sem cadastro.",
     "buttons": [
       {
-        "title": "Explorar minha carta no mundo → Astrocartography",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

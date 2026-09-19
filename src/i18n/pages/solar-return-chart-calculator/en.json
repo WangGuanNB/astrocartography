@@ -11,8 +11,8 @@
     "title": "Related tools",
     "items": [
       {
-        "text": "Map planetary lines from the",
-        "linkText": "Astrocartography homepage",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -45,17 +45,26 @@
       {
         "title": "Why the Annual Solar Return Matters",
         "description": "Readers study the Ascendant of the return wheel, the Moon’s house, and angular planets to sense where life will ask for attention. A careful solar return chart does not replace professional advice, yet it gives vocabulary for patterns you may already feel. Our tool emphasizes transparent numbers first—then invites you to open the Astrocartography homepage and see where natal lines reinforce those yearly themes.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Meaning of the annual solar return" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Meaning of the annual solar return"
+        }
       },
       {
         "title": "Solar Return Chart vs Natal Chart",
         "description": "Your natal chart is fixed; each new return refreshes the story because the Ascendant and house rulers change unless you relocate. Comparing the two wheels shows how this birthday cycle differs from your lifelong blueprint. Advanced students sometimes request a relocated return for travel years—the same Sun degree, but houses recalculated for another longitude. We label the UTC moment and location so you always know what the wheel represents.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Solar return compared with the natal chart" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Solar return compared with the natal chart"
+        }
       },
       {
         "title": "Relocated Returns and Travel Planning",
         "description": "If you already know you will be abroad on your birthday, testing a relocated chart can show how angles and house topics shift. Pair that insight with planetary lines on our map to align “when” with “where.” Astrocartography on the homepage uses identical birth data, so you do not retype cities when you switch tools.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Relocated solar return and travel" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Relocated solar return and travel"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Clear Positions and Timing Notes",
         "description": "Every result lists planets, signs, degrees, and whole-sign houses anchored to the return Ascendant. You also see the UTC timestamp for the solar return instant, which helps cross-check ephemerides or convert to local time before a trip.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Accurate solar return positions" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Accurate solar return positions"
+        }
       },
       {
         "title": "Free Access for Planning Cycles",
         "description": "Refresh results while comparing two cities or two years—no paywall on the core wheel. We want the calculator to earn trust through usefulness before you explore optional premium Astrocartography insights elsewhere.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Free solar return calculator" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Free solar return calculator"
+        }
       },
       {
         "title": "Homepage Link With Your Birth Data",
         "description": "After you review the return wheel, one button sends your birth information to the Astrocartography homepage so you can study planetary lines without manual copy-paste. That flow respects how people plan: interpret the year, then ask where on Earth those stories intensify.",
         "icon": "RiMapLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "From solar return to world map" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "From solar return to world map"
+        }
       }
     ]
   },
@@ -193,7 +211,7 @@
     "description": "Cast the wheel for the year you care about, note the Ascendant and house emphasis, and jump to Astrocartography on the homepage to see where planetary lines cross the world. The return chart frames the annual story; the homepage map shows geographic leverage.",
     "buttons": [
       {
-        "title": "Go to Astrocartography homepage",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

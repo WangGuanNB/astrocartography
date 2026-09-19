@@ -26,8 +26,8 @@
         "url": "/tools/birth-chart-generator"
       },
       {
-        "text": "Discover where your chart thrives globally.",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       }
     ]
@@ -45,17 +45,26 @@
       {
         "title": "Why Precise Birth Time Matters",
         "description": "Your ascendant moves approximately one degree every four minutes, completing a full zodiac cycle every 24 hours. A Rising Sign Calculator requires birth time accurate to the minute when possible. Even a 15-30 minute error can shift your ascendant degree significantly or, near sign boundaries, change the sign entirely. Without precise timing, house cusps become unreliable, affecting the entire chart structure. If your birth certificate shows time, use it. If estimating, understand results carry uncertainty—especially for borderline degrees between signs.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Clock diagram showing rising sign changes every two hours" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Clock diagram showing rising sign changes every two hours"
+        }
       },
       {
         "title": "How Location Shapes Your Ascendant",
         "description": "Geography fundamentally alters your rising sign because the horizon at birth depends on where you stand on Earth's surface. Two people born at identical UTC times in London and Sydney see completely different zodiac signs rising. Our calculator demonstrates this through a geographic perspective feature: after computing your ascendant for your birthplace, it shows what the same birth moment would produce in major cities worldwide. This bridges individual chart interpretation with Astrocartography—revealing how physical location influences astrological expression from birth onward.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "World map showing different rising signs across global cities" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "World map showing different rising signs across global cities"
+        }
       },
       {
         "title": "From Ascendant to Your Global Chart",
         "description": "Once you know your rising sign, the natural next step is exploring where your entire chart activates across the planet. While this calculator answers 'what is my ascendant at birth,' Astrocartography extends that question globally: where do my planetary lines strengthen career, relationships, creativity, or personal transformation? The rising sign marks your beginning; the world map shows everywhere that energy can manifest. Use identical birth data in both tools for seamless exploration of location-based astrology.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Transition from rising sign result to astrocartography world map" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Transition from rising sign result to astrocartography world map"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Astronomical Precision You Can Trust",
         "description": "We calculate rising signs using the same astronomical standards professional astrologers rely on. Enter your birth date, exact time (including timezone), and location coordinates or city name. The calculator returns your ascendant sign, degree to two decimal places, and modern ruling planet—giving you accurate, verifiable results. Whether cross-checking with astrology software or discovering your ascendant for the first time, precision matters. Birth time accuracy directly determines result reliability.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Accurate astronomical calculation engine display" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Accurate astronomical calculation engine display"
+        }
       },
       {
         "title": "Completely Free, Zero Barriers",
         "description": "Use this Rising Sign Calculator unlimited times without creating accounts, entering payment information, or watching advertisements. Calculate your ascendant, explore the geographic comparison across cities, read interpretations, then optionally continue to Astrocartography with one click—all free. We believe foundational astrological tools should be universally accessible. Whether you're a curious beginner or experienced practitioner double-checking data, access remains unrestricted and immediate.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Free calculator interface with no signup requirements" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Free calculator interface with no signup requirements"
+        }
       },
       {
         "title": "Rising Sign vs Sun Sign—Finally Clear",
         "description": "Many people confuse rising sign with sun sign. This calculator clarifies both. Your sun sign comes from birth date alone and represents core identity. Your rising sign requires birth date plus exact time and location—it shows how you instinctively approach the world and how others perceive you initially. We focus squarely on the ascendant here, explaining its role as chart foundation and first-house cusp. For integrated sun-moon-rising analysis, explore our Birth Chart Generator afterward.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Comparison chart showing rising sign versus sun sign differences" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Comparison chart showing rising sign versus sun sign differences"
+        }
       }
     ]
   },
@@ -201,7 +219,7 @@
     "description": "Use our Rising Sign Calculator to instantly find your ascendant sign, precise degree, and ruling planet. See how the same birth moment creates different rising signs across global cities, then explore your complete chart on the world map with Astrocartography—free, accurate, no signup required.",
     "buttons": [
       {
-        "title": "Explore your chart globally → Astrocartography",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

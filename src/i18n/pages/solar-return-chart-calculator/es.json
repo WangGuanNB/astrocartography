@@ -11,9 +11,9 @@
     "title": "Otras herramientas",
     "items": [
       {
-        "text": "Ver tus líneas planetarias desde la",
-        "linkText": "página principal de Astrocartography",
-        "url": "/"
+        "text": "Genera tu carta de astrocartografía gratis en el mapa mundial.",
+        "linkText": "Carta de Astrocartografía gratis",
+        "url": "/es"
       },
       {
         "text": "Comparar el cielo de un día con tu natal:",
@@ -45,17 +45,26 @@
       {
         "title": "Para qué sirve en la práctica",
         "description": "Quien interpreta suele mirar primero el Ascendente de la revolución, la Luna por casa y los planetas en la cruz (casas I, IV, VII, X). La carta no reemplaza terapia ni asesoría legal o financiera, pero ordena intuiciones sobre el año. Aquí priorizamos cifras astronómicas claras; después puedes pasar al mapa de la página principal y ver cómo esas mismas configuraciones natales se proyectan sobre el globo.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Uso práctico de la revolución solar" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Uso práctico de la revolución solar"
+        }
       },
       {
         "title": "Revolución solar y tema natal",
         "description": "El natal describe el guion de fondo; la revolución solar actualiza el guion del año. Cada vuelta cambia Ascendente y distribución por casas (salvo que calcules todo para el mismo lugar y el mismo instante). Quienes viajan el día del cumpleaños a veces comparan la revolución en el lugar natal y en el lugar de visita: el Sol retorna al mismo grado, pero las casas cambian de registro. Por eso mostramos el instante UTC y el lugar usado para las casas.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Revolución solar frente a carta natal" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Revolución solar frente a carta natal"
+        }
       },
       {
         "title": "Otro lugar el día del retorno",
         "description": "Si ya sabes que estarás fuera de tu ciudad natal, conviene calcular la revolución para las coordenadas donde realmente vas a estar: es la forma hispana habitual de hablar de la «revolución en otro lugar» o carta anual desplazada. Después, en Astrocartography puedes seguir con las mismas fechas y horas de nacimiento para ver líneas planetarias sin volver a teclear datos.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Revolución solar en otro lugar" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Revolución solar en otro lugar"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Datos completos para contrastar",
         "description": "Planetas, signos, grados y casas enteras tomadas desde el Ascendente de la revolución, más la hora UTC del retorno solar. Así puedes cotejar con tu efeméride o pasar a hora local.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Precisión en la revolución solar" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Precisión en la revolución solar"
+        }
       },
       {
         "title": "Gratis para probar varias opciones",
         "description": "Cambia de año o de ciudad de retorno sin coste en la carta base. Las funciones avanzadas de Astrocartography en otras secciones pueden tener otro esquema, pero aquí el núcleo es abierto.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Revolución solar gratuita" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Revolución solar gratuita"
+        }
       },
       {
         "title": "Salto a la página principal con un clic",
         "description": "Tras leer la revolución, un botón lleva tus datos a la página principal para abrir el mapa de líneas sin copiar y pegar: primero el año, después el «dónde» en el planeta.",
         "icon": "RiMapLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "De la revolución solar al mapa" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "De la revolución solar al mapa"
+        }
       }
     ]
   },
@@ -193,9 +211,9 @@
     "description": "Elige el año, mira Ascendente y casas, y si tu pregunta es también geográfica, pasa a la página principal de Astrocartography para ver cómo se cruzan las líneas en el mundo.",
     "buttons": [
       {
-        "title": "Ir a la página principal de Astrocartography",
+        "title": "Carta de Astrocartografía gratis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/es",
         "target": "_self",
         "variant": "default"
       }

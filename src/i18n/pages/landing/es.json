@@ -8,13 +8,13 @@
         "src": "/logo.png",
         "alt": "Calculadora de Astrocartografía"
       },
-      "url": "/"
+      "url": "/es"
     },
     "nav": {
       "items": [
         {
-          "title": "Inicio",
-          "url": "/",
+          "title": "Mapa de Astrocartografía",
+          "url": "/es",
           "icon": "RiHomeLine"
         },
         {
@@ -275,7 +275,7 @@
       {
         "title": "Genera tu Carta de Astrocartografía Gratis",
         "icon": "RiMagicLine",
-        "url": "/#generator",
+        "url": "/es#generator",
         "target": "_self",
         "variant": "default"
       }
@@ -642,7 +642,7 @@
       {
         "title": "Genera Mapa Gratis Ahora",
         "icon": "RiMapLine",
-        "url": "/#generator",
+        "url": "/es#generator",
         "target": "_self",
         "variant": "default"
       }
@@ -669,7 +669,8 @@
           "Resultados completos de 30 días",
           "Ventanas de 90 días mientras Plus está activo",
           "150 créditos cada mes"
-        ]
+        ],
+        "label": "Mejor valor"
       }
     ],
     "items": [
@@ -696,7 +697,7 @@
         "tip": "100% free forever, experience core features",
         "button": {
           "title": "Start Free Trial",
-          "url": "/#generator",
+          "url": "/es#generator",
           "icon": "RiMapLine"
         },
         "product_id": "free",
@@ -725,7 +726,7 @@
         "price": "$9.9",
         "original_price": "",
         "unit": "",
-        "is_featured": true,
+        "is_featured": false,
         "tip": "Perfecto para una decisión de mudanza — suficientes créditos para una primera ronda completa de investigación.",
         "switch_group": "subscription",
         "switch_group_label": "O obtén Plus desde $7.9/mes →",
@@ -743,7 +744,7 @@
         "title": "Plan Profesional",
         "description": "Ideal para investigación profunda de múltiples ciudades y revisiones de decisiones repetidas.",
         "group": "one-time",
-        "label": "Investigación profunda",
+        "label": "Recomendado",
         "features_title": "Todo en Estándar, además",
         "features": [
           "500 créditos IA — unas 50 conversaciones o 10 informes completos de comparación de ciudades",
@@ -762,7 +763,7 @@
         "price": "$19.9",
         "original_price": "$24.9",
         "unit": "",
-        "is_featured": false,
+        "is_featured": true,
         "tip": "Para investigación seria — compara 3-5 ciudades y mantén el análisis para siempre.",
         "switch_group": "subscription",
         "switch_group_label": "O obtén Plus desde $7.9/mes →",
@@ -897,21 +898,27 @@
         "src": "/logo.png",
         "alt": "Calculadora de Astrocartografía"
       },
-      "url": "/"
+      "url": "/es"
     },
     "copyright": "© 2025 • Calculadora de Astrocartografía. Todos los derechos reservados.",
     "nav": {
       "items": [
         {
           "title": "Producto",
-          "children": []
+          "children": [
+            {
+              "title": "Carta de Astrocartografía gratis",
+              "url": "/es",
+              "target": "_self"
+            }
+          ]
         },
         {
           "title": "Recursos",
           "children": [
             {
-              "title": "Preguntas Frecuentes",
-              "url": "/#faq"
+              "title": "Carta de Astrocartografía gratis",
+              "url": "/es"
             },
             {
               "title": "Contáctenos",

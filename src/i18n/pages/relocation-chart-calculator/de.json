@@ -11,9 +11,9 @@
     "title": "Verwandte Tools",
     "items": [
       {
-        "text": "Haupteinstieg: Weltkarte und Haupt-Rechner.",
-        "linkText": "Startseite",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Transite zur Radix sehen.",
@@ -45,17 +45,26 @@
       {
         "title": "Warum Relokation wichtig ist",
         "description": "Viele entdecken sie bei Umzugsplänen. Wechsel von Winkeln und Häusern betonen Themen wie Beruf, Partnerschaft und Wurzeln. Kein Ersatz für Rechts- oder Finanzberatung, aber eine strukturierte Frage: Wie könnte sich mein Rad in Paris, Tokio oder der Heimatstadt anfühlen? Wir nutzen denselben astronomischen Ansatz wie bei unseren Geburts-Tools: geozentrische Längen und klare ganze Zeichenhäuser.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Sinn der Relokation" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Sinn der Relokation"
+        }
       },
       {
         "title": "Relokation und Astrocartographie-Karte",
         "description": "Astrocartographie zeichnet Planetenlinien auf der Erde. Relokation wählt einen neuen Punkt und baut das Rad für diesen Punkt neu. Wer Karten liebt, geht danach zur Astrocartographie; wer Tabelle und Winkel für ein Ziel will, ist mit Relokation schneller. Nach dem Rechnen öffnen Sie die Weltkarte per Klick mit denselben Geburtsdaten.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Relokation versus Astrocartographie" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Relokation versus Astrocartographie"
+        }
       },
       {
         "title": "So rechnen wir",
         "description": "Sie geben Geburtsdaten und Zielstadt ein. Wir wandeln die lokale Geburtszeit in UTC um, berechnen den Aszendenten auf den Geburtskoordinaten und erneut auf den Zielkoordinaten. Planeten gelten für denselben UTC-Moment. Häuser folgen ganzen Zeichen vom jeweiligen Aszendenten. In der Tabelle: Zeichen und Grad einmal, zwei Hausspalten.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Berechnung Relokation" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Berechnung Relokation"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Echte Relokationslogik",
         "description": "Derselbe UTC-Moment, zwei Breiten- und Längengrade, zwei Aszendenten, zwei Hausverteilungen. Die Tabelle zeigt, wie sich die Hauszuordnung jedes Planeten am neuen Ort ändert.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Präzises Relokationshoroskop" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Präzises Relokationshoroskop"
+        }
       },
       {
         "title": "Kostenlos, ohne Registrierung",
         "description": "So oft rechnen wie Sie wollen und mehrere Städte testen. Daten bleiben in Ihrer Seitensitzung.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Rechner" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Kostenloser Rechner"
+        }
       },
       {
         "title": "Für Umziehende und Langzeitreisende",
         "description": "Digitale Nomaden, Auslandssemester und Umzugsplaner vergleichen Orte mit Relokation. Danach öffnen Sie die Astrocartographie mit denselben Daten.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Umzug und Reise" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Umzug und Reise"
+        }
       }
     ]
   },
@@ -185,9 +203,9 @@
     "description": "Nutzen Sie den kostenlosen Rechner oben, dann Planetenlinien am Globus mit denselben Geburtsdaten.",
     "buttons": [
       {
-        "title": "Astrocartographie-Rechner öffnen",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

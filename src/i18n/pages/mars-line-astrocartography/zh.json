@@ -12,8 +12,8 @@
     "items": [
       {
         "text": "在世界地图上找到你的火星线。",
-        "linkText": "免费星盘地图计算器",
-        "url": "/"
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "将火星线与其他行星线对比。",
@@ -206,9 +206,9 @@
     "description": "生成你的个人星盘地图，精确查看火星线如何穿越全球。了解特定城市激活的角点（ASC、DSC、MC、IC），并获得即时 AI 解读——包括火星线对事业、体能与关系的含义。完全免费，无需注册。",
     "buttons": [
       {
-        "title": "免费生成你的星盘地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

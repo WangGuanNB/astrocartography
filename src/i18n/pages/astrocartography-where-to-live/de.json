@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "Karte erstellen",
-        "url": "/",
+        "url": "/de",
         "icon": "RiArrowRightLine"
       },
       {
@@ -47,9 +47,9 @@
     "title": "Plane deinen nächsten Ort",
     "items": [
       {
-        "text": "Brauchst du zuerst deine Karte?",
-        "linkText": "Kostenloser Astrokartografie-Rechner",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Möchtest du jede Linie verstehen?",
@@ -243,9 +243,9 @@
     "description": "Erstelle deine Karte, vergleiche Kandidatenstädte und nutze KI-gestützte Deutung, wenn du tiefer einsteigen möchtest.",
     "buttons": [
       {
-        "title": "Kostenlose Astrokartografie-Karte erstellen",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       },

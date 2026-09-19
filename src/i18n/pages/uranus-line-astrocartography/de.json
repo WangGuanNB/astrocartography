@@ -11,9 +11,9 @@
     "title": "Verwandte Ressourcen",
     "items": [
       {
-        "text": "Finden Sie Ihre Uranus-Linie auf einer Weltkarte.",
-        "linkText": "Kostenloser Astrokartografie Rechner",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Vergleichen Sie die Uranus-Linie mit anderen Planetenlinien.",
@@ -206,9 +206,9 @@
     "description": "Erstellen Sie Ihre persönliche Astrokartografie-Karte mit Swiss-Ephemeris-Berechnungen und sehen Sie genau, wo Ihre Uranus-Linie den Globus kreuzt. Klicken Sie auf eine Stadt oder Linie für eine sofortige KI-Interpretation – einschließlich welcher Uranus-Winkel aktiv ist und was das für Ihre Freiheit, berufliche Neuerfindung und Beziehungen bedeutet. Komplett kostenlos, keine Anmeldung erforderlich.",
     "buttons": [
       {
-        "title": "Kostenlose Astrokartografie-Karte erstellen",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

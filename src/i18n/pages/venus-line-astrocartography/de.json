@@ -11,9 +11,9 @@
     "title": "Verwandte Ressourcen",
     "items": [
       {
-        "text": "Finden Sie Ihre Venuslinie auf einer Weltkarte.",
-        "linkText": "Kostenloser Astrokartografie-Rechner",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Alle Planetenlinien erklärt.",
@@ -218,9 +218,9 @@
     "description": "Erstellen Sie Ihre persönliche Astrokartografie-Karte mit professionellen Swiss-Ephemeris-Berechnungen und sehen Sie genau, wo Ihre Venuslinie den Globus kreuzt. Klicken Sie auf eine Stadt oder Linie für eine sofortige KI-Interpretation — einschließlich welcher Venus-Winkel aktiv ist und was das für Ihre Beziehungen, Karriere und Ihr Alltagsleben bedeutet. Komplett kostenlos, keine Anmeldung erforderlich.",
     "buttons": [
       {
-        "title": "Kostenlose Astrokartografie-Karte erstellen",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

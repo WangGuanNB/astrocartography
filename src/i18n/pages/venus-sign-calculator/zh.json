@@ -63,9 +63,9 @@
   "schemaName": "金星星座计算器",
   "relatedLinks": [
     {
-      "text": "想看世界地图版本？",
-      "linkText": "试试占星地图",
-      "url": "/"
+      "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+      "linkText": "免费星盘地图 Astrocartography Chart",
+      "url": "/zh"
     },
     {
       "text": "从地点角度看爱情。",

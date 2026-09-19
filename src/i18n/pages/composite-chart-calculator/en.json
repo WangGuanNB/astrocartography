@@ -12,7 +12,7 @@
     "items": [
       {
         "text": "Hub for astrocartography and all calculators.",
-        "linkText": "Home",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -214,6 +214,13 @@
     "title": "After Your Composite Chart, Explore More",
     "description": "Composite chart shows what the relationship is. Synastry shows how each person experiences it. Astrocartography maps reveal where your relationship energy feels strongest on Earth.",
     "buttons": [
+      {
+        "title": "Free Astrocartography Chart & Map →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Astrocartography Map",
         "icon": "RiMapPinLine",

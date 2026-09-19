@@ -11,9 +11,9 @@
     "title": "Ferramentas relacionadas",
     "items": [
       {
-        "text": "Central de mapas e calculadoras.",
-        "linkText": "Início",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Ferramenta de mapa astral individual.",
@@ -40,22 +40,34 @@
       {
         "title": "Sinastria versus combinar só o signo solar",
         "description": "Combinar signos pode ser divertido, mas sinastria vai além. Posições planetárias reais — não só o Sol — descrevem afinidade e tensão. Astrologia relacional é multidimensional: Lua necessidades, Vênus afeto, Marte ritmo, Saturno sustentação, Mercúrio conversa. Aqui você recebe aspectos intermapas que pode conferir — não um parágrafo vago. Para uma sinastria séria no dia a dia, use dados de nascimento confiáveis; horário exato melhora ângulos e precisão lunar.",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "Por que sinastria vai além do signo solar" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Por que sinastria vai além do signo solar"
+        }
       },
       {
         "title": "O que esta calculadora de sinastria mostra",
         "description": "Feita para leitura clara: vista biwheel e lista dos aspectos maiores entre os dez pontos clássicos de ambos. Conjunção, oposição, quadratura, trígono e sextil com orbes usuais — o que a maioria checa primeiro. IA opcional (créditos, login) pode organizar temas com tom responsável, sempre com base nos mesmos dados de sinastria que você acabou de gerar.",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "Calculadora de sinastria: aspectos e roda dupla" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Calculadora de sinastria: aspectos e roda dupla"
+        }
       },
       {
         "title": "Sinastria + local: sobreposições e mapas",
         "description": "Aspectos na sinastria não mudam quando você viaja; casas e ângulos mudam — por isso oferecemos cidade compartilhada opcional para sobreposições relocadas em signo inteiro. Para geografia pura, abra um mapa completo por pessoa; para estrutura do relacionamento, fique primeiro na sinastria.",
-        "image": { "src": "/imgs/features/synastry/3.webp", "alt": "Sinastria com astrocartografia e cidade compartilhada" }
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Sinastria com astrocartografia e cidade compartilhada"
+        }
       },
       {
         "title": "Ler sinastria com responsabilidade",
         "description": "Sinastria descreve tendências, não sentença. O uso mais saudável combina astrologia e diálogo: nomeie o aspecto, explore a necessidade por trás, escolha comportamentos alinhados aos seus valores. Evite transformar qualquer sinastria em veredito — use como linguagem para empatia e timing. Sem hora de nascimento, trate Lua e ângulos com cautela.",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "Orientação para leitura responsável da sinastria" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Orientação para leitura responsável da sinastria"
+        }
       }
     ]
   },
@@ -69,19 +81,28 @@
         "title": "Uma sinastria que dá para navegar",
         "description": "Muitas ferramentas enchem de jargão; aqui priorizamos clareza: roda dupla e tabela de aspectos com os orbes mais apertados primeiro. Se você só tem dez minutos, veja as linhas do topo — costumam ser os diálogos mais intensos.",
         "icon": "RiHeartLine",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "Navegar a sinastria com facilidade" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Navegar a sinastria com facilidade"
+        }
       },
       {
         "title": "Compatibilidade entre mapas sem mistério vazio",
         "description": "Astrologia relacional funciona quando a comparação é explícita. Seus resultados listam contatos planeta a planeta para pesquisar e conversar — compatibilidade vira diálogo, não pontuação oculta. Essa é a sinastria contemporânea.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "Compatibilidade pelos aspectos de sinastria" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Compatibilidade pelos aspectos de sinastria"
+        }
       },
       {
         "title": "Da sinastria à astrocartografia",
         "description": "Depois de gerar a sinastria, vá às linhas planetárias de cada pessoa. Sinastria trata do «entre vocês»; o mapa, do «na Terra». Juntas formam um fluxo completo — especialmente com viagens ou mudanças.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "Após a sinastria, mapas de astrocartografia" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Após a sinastria, mapas de astrocartografia"
+        }
       }
     ]
   },
@@ -189,9 +210,9 @@
     "description": "Sinastria explica a dinâmica entre vocês; astrocartografia mostra onde as linhas enfatizam cada um na Terra. Continue com os mesmos dados de nascimento para pensar o lugar.",
     "buttons": [
       {
-        "title": "Início da astrocartografia",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

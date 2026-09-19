@@ -42,7 +42,11 @@ function PricingPlanCard({
 }) {
   usePricingItemTracking(item);
   const isSubscriptionPlan = item.group === "subscription";
-  const isHighlighted = Boolean(item.is_featured || isPreferred);
+  // One-time: only `is_featured` drives the strong stroke so Recommended stays unique.
+  // Subscription / preferredProductId can still highlight Plus cards.
+  const isHighlighted = isSubscriptionPlan
+    ? Boolean(item.is_featured || isPreferred)
+    : Boolean(item.is_featured);
 
   return (
     <div
@@ -54,8 +58,8 @@ function PricingPlanCard({
             ? "border border-violet-400/60 bg-gradient-to-b from-violet-500/[0.14] via-card to-card text-card-foreground shadow-[0_20px_60px_-32px_rgba(168,85,247,0.8)] ring-1 ring-violet-400/20"
             : "border border-violet-400/25 bg-gradient-to-b from-violet-500/[0.06] via-card to-card text-card-foreground"
           : isHighlighted
-            ? "border-primary border-2 bg-card text-card-foreground"
-            : "border-muted border"
+            ? "border-2 border-primary bg-card text-card-foreground shadow-[0_0_0_1px_hsl(var(--primary)/0.25)]"
+            : "border border-border/50 bg-card/80 text-card-foreground"
       }`}
     >
       {isSubscriptionPlan && isHighlighted ? (
@@ -372,11 +376,16 @@ export default function Pricing({
                   const name = item.name || "";
                   const radioId = `${tabsId}-${name}`;
                   const selected = group === name;
+                  const isSubscriptionTab = name === "subscription";
                   return (
                     <div
                       key={name || radioId}
                       className={`h-full rounded-md transition-all ${
-                        selected ? "bg-white" : ""
+                        selected
+                          ? "bg-white"
+                          : isSubscriptionTab
+                            ? "border border-primary/55 bg-primary/5"
+                            : ""
                       }`}
                     >
                       <RadioGroupItem
@@ -389,15 +398,19 @@ export default function Pricing({
                         onClick={() => {
                           if (name) setGroup(name);
                         }}
-                        className={`flex h-full cursor-pointer items-center justify-center px-4 md:px-7 font-semibold text-sm md:text-base ${
-                          selected ? "text-primary" : "text-muted-foreground"
+                        className={`flex h-full cursor-pointer items-center justify-center gap-1 px-2.5 md:px-7 font-semibold text-sm md:text-base ${
+                          selected
+                            ? "text-primary"
+                            : isSubscriptionTab
+                              ? "text-foreground"
+                              : "text-muted-foreground"
                         }`}
                       >
                         {item.title}
                         {item.label && (
                           <Badge
                             variant="outline"
-                            className="border-primary bg-primary px-1 md:px-1.5 ml-1 text-primary-foreground text-xs"
+                            className="border-primary bg-primary px-1 md:px-1.5 text-primary-foreground text-[10px] md:text-xs leading-none whitespace-nowrap"
                           >
                             {item.label}
                           </Badge>

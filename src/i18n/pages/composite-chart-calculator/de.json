@@ -11,9 +11,9 @@
     "title": "Verwandte Tools",
     "items": [
       {
-        "text": "Zentrale für Karten und Rechner.",
-        "linkText": "Startseite",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Zwei Geburtshoroskope direkt vergleichen.",
@@ -214,6 +214,13 @@
     "title": "Nach dem Komposit-Horoskop weiter erkunden",
     "description": "Das Komposit zeigt, was die Beziehung ist. Synastrie zeigt, wie jede Person sie erlebt. Astrokartografie-Karten enthüllen, wo Ihre Beziehungsenergie auf der Erde am stärksten ist.",
     "buttons": [
+      {
+        "title": "Kostenlose Astrocartography-Karte →",
+        "icon": "RiMapLine",
+        "url": "/de",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Astrokartografie-Karte",
         "icon": "RiMapPinLine",

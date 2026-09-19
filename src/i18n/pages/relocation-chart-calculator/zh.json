@@ -12,8 +12,8 @@
     "items": [
       {
         "text": "主入口：免费星盘地图与核心计算器。",
-        "linkText": "首页",
-        "url": "/"
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "想看过运行星与本命的互动？",
@@ -45,17 +45,26 @@
       {
         "title": "为什么需要移居星盘",
         "description": "多数人是在规划离开家乡时接触移居星盘。宫位与角点变化，会让事业、关系、家庭等主题在新城市被不同方式强调。移居星盘不能替代法律或财务决策，但能结构化地比较：同一套本命，在巴黎、东京或老家会有何不同体感。我们采用与出生工具一致的天文算法：地心黄道经度 + 清晰的整宫制，方便阅读。",
-        "image": { "src": "/imgs/features/1.webp", "alt": "移居星盘的用途" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "移居星盘的用途"
+        }
       },
       {
         "title": "移居星盘与星盘地图的区别",
         "description": "星盘地图把行星线画在地球上；移居星盘则选定一个新地点，为同一瞬间重排宫位。若你偏爱地图，可再去用星盘地图；若你要表格与角点、针对「这一座城」，移居星盘更快。算完后可一键用相同出生数据打开地图，继续看地理上的强调。",
-        "image": { "src": "/imgs/features/2.webp", "alt": "移居星盘与星盘地图" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "移居星盘与星盘地图"
+        }
       },
       {
         "title": "我们如何计算",
         "description": "你输入出生资料与移居城市。系统把出生地的钟表时间换算为 UTC，在出生地经纬度算一次上升，再在移居地经纬度用同一 UTC 时刻重算上升。行星位置均取该 UTC 瞬间。宫位采用整宫制。结果表里星座与度数只列一列，宫位两列对照，一眼看出哪些领域「换宫」了。",
-        "image": { "src": "/imgs/features/3.webp", "alt": "移居星盘计算说明" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "移居星盘计算说明"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "真实的换地点逻辑",
         "description": "同一 UTC 时刻、两组经纬度、两个上升、两套宫位。不是泛泛运势，而是逐星展示宫位在移居后如何变动。",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "准确的移居星盘" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "准确的移居星盘"
+        }
       },
       {
         "title": "免费、无需注册",
         "description": "可反复计算、多试几座城市再决定。数据留在当前页面会话，简单省事。",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "免费移居星盘" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "免费移居星盘"
+        }
       },
       {
         "title": "适合搬家族与旅人",
         "description": "外派、留学、远程工作者常用移居星盘比较城市气质。算完可继续用相同出生资料查看星盘地图上的行星线。",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "移居与旅行场景" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "移居与旅行场景"
+        }
       }
     ]
   },
@@ -185,9 +203,9 @@
     "description": "用上方免费工具完成换地点对比，再用相同出生资料打开星盘地图，查看行星线。",
     "buttons": [
       {
-        "title": "打开星盘地图计算器",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

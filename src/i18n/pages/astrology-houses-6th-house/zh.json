@@ -345,6 +345,13 @@
     "description": "生成免费星盘轮与落点表，查看哪些行星落在第六宫——若要分清日常工作与公众事业，再对照中天/第十宫；或回到十二宫位 Hub 继续其余十一宫。",
     "buttons": [
       {
+        "title": "免费星盘地图 Astrocartography →",
+        "icon": "RiMapLine",
+        "url": "/zh",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
         "title": "星盘生成器",
         "icon": "RiPieChartLine",
         "url": "/tools/birth-chart-generator",
@@ -357,6 +364,16 @@
         "url": "/astrology-houses",
         "target": "_self",
         "variant": "outline"
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "相关工具",
+    "items": [
+      {
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       }
     ]
   }

@@ -12,8 +12,8 @@
     "items": [
       {
         "text": "从首页生成并查看全球行星线：",
-        "linkText": "Astrocartography 首页",
-        "url": "/"
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "看某天行运与本命的关系：",
@@ -45,17 +45,26 @@
       {
         "title": "为什么看盘会先看日返",
         "description": "实务上大家会盯返照上升、月亮落宫和贴轴行星，感受「今年精力主要泼在哪」。日返不能代替心理咨询或职业规划，但能把你已经隐约感觉到的东西说清楚一点。我们这里先把行星度数、宫位摆明白，再请你回到首页地图：同样一张本命，哪些主题会在哪些经纬度被强调，一眼对照。",
-        "image": { "src": "/imgs/features/1.webp", "alt": "日返盘在年度运势里的位置" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "日返盘在年度运势里的位置"
+        }
       },
       {
         "title": "日返盘和本命盘怎么配合看",
         "description": "本命盘管一辈子的大设定；日返盘只管「从这个生日到下一个生日」这一圈。除非你整年搬去别处长住，否则上升与宫主线的讲法每年都会换一批。进阶用法是在出差、留学、移民那年做易地日返：太阳经度不变，宫位却跟着经纬度走。我们页面上会写明采用的 UTC 时刻与起盘地点，避免和别的软件各算各的。",
-        "image": { "src": "/imgs/features/2.webp", "alt": "日返盘与本命盘的差别" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "日返盘与本命盘的差别"
+        }
       },
       {
         "title": "易地日返和出门旅行",
         "description": "若你确定生日那天人在国外或另一座城市，可以改用那座城市做宫位起点，看「人在他乡」时年度主题怎么挪位。算完若还想看地理，直接进首页 Astrocartography：出生资料会自动带过去，不用重填。",
-        "image": { "src": "/imgs/features/3.webp", "alt": "易地日返与出行" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "易地日返与出行"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "度数、宫位与时间一并给出",
         "description": "结果里含各行星星座与度数、相对返照上升的整宫宫位，并标出太阳精确回到本命经度的 UTC 时间。要对表星历或换算成当地时间安排行程，都方便。",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "日返盘度数与宫位" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "日返盘度数与宫位"
+        }
       },
       {
         "title": "免费多试几个年份或城市",
         "description": "换年份、换「生日所在城市」多试几次不收费——我们希望你先觉得好用。若之后要用 Astrocartography 里更费算力的功能，再按站内规则即可。",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "免费日返排盘" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "免费日返排盘"
+        }
       },
       {
         "title": "一键带回首页看地图线",
         "description": "看完日返，点按钮即可带着同一套出生资料打开首页行星线图，省得复制粘贴。先看「这一年」，再问「在地球哪一段线最强」，路径顺。",
         "icon": "RiMapLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "从日返到世界地图" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "从日返到世界地图"
+        }
       }
     ]
   },
@@ -193,9 +211,9 @@
     "description": "选好年份、看清返照上升与宫位，需要时前往 Astrocartography 首页，用同一组出生资料查看行星线在世界上的走向。日返定调这一年；地图帮你对地点。",
     "buttons": [
       {
-        "title": "前往 Astrocartography 首页",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

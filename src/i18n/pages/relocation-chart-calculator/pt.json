@@ -11,9 +11,9 @@
     "title": "Ferramentas relacionadas",
     "items": [
       {
-        "text": "Entrada principal: mapa mundial e calculadora principal.",
-        "linkText": "Início",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Ver trânsitos em relação ao mapa natal.",
@@ -45,17 +45,26 @@
       {
         "title": "Por que o mapa de realocação importa",
         "description": "Muitas pessoas descobrem ao planejar sair de casa. Mudanças de ângulos e casas destacam temas como carreira, relacionamento e raízes. Não substitui assessoria jurídica ou financeira, mas organiza a pergunta: como meu mapa poderia se sentir em Paris, Tóquio ou na cidade natal. Usamos a mesma abordagem astronômica das outras ferramentas: longitudes geocêntricas e casas inteiras claras.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Para que serve a realocação" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Para que serve a realocação"
+        }
       },
       {
         "title": "Realocação versus mapa astrocartográfico",
         "description": "A astrocartografia desenha linhas planetárias na Terra. A realocação escolhe um novo ponto e remonta a roda para esse ponto. Se você gosta de mapas, siga para a astrocartografia; se quer tabela e ângulos para um destino, a realocação é mais direta. Depois de calcular, abrimos o mapa em um clique com os mesmos dados de nascimento.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Realocação versus astrocartografia" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Realocação versus astrocartografia"
+        }
       },
       {
         "title": "Como calculamos",
         "description": "Você informa o nascimento e a cidade de destino. Convertemos a hora local de nascimento para UTC, calculamos o Ascendente nas coordenadas do nascimento e de novo nas do destino. Os planetas são avaliados nesse mesmo instante UTC. As casas seguem signo inteiro a partir de cada Ascendente. Na tabela: signo e grau uma vez, duas colunas de casa.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Como o cálculo funciona" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Como o cálculo funciona"
+        }
       }
     ]
   },
@@ -69,19 +78,28 @@
         "title": "Lógica real de realocação",
         "description": "Mesmo instante UTC, duas latitudes e longitudes, dois Ascendentes, duas distribuições de casas. A tabela mostra como a casa de cada planeta muda ao mudar de lugar.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Mapa de realocação preciso" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Mapa de realocação preciso"
+        }
       },
       {
         "title": "Grátis, sem cadastro",
         "description": "Gere quantos mapas quiser e teste várias cidades antes de decidir. Os dados ficam na sessão da página.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Ferramenta gratuita" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Ferramenta gratuita"
+        }
       },
       {
         "title": "Para mudanças e viagens longas",
         "description": "Nômades digitais, intercambistas e quem planeja mudança usam a realocação para comparar lugares. Depois você abre a astrocartografia com os mesmos dados.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Mudança e viagem" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Mudança e viagem"
+        }
       }
     ]
   },
@@ -185,9 +203,9 @@
     "description": "Use a calculadora gratuita acima e depois explore linhas planetárias no mapa com os mesmos dados de nascimento.",
     "buttons": [
       {
-        "title": "Abrir calculadora de astrocartografia",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

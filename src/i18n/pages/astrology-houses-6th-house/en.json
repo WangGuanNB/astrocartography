@@ -341,6 +341,13 @@
     "description": "Generate a free birth chart wheel and placements table to see which planets fall in your 6th house—then compare with the Midheaven/10th if you are sorting daily work from public career, or return to the Astrology Houses hub for the other eleven life areas.",
     "buttons": [
       {
+        "title": "Free Astrocartography Chart & Map →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
         "title": "Birth Chart Generator",
         "icon": "RiPieChartLine",
         "url": "/tools/birth-chart-generator",
@@ -353,6 +360,16 @@
         "url": "/astrology-houses",
         "target": "_self",
         "variant": "outline"
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "Related Tools",
+    "items": [
+      {
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
+        "url": "/"
       }
     ]
   }

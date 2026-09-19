@@ -26,9 +26,9 @@
         "url": "/jupiter-line-astrocartography"
       },
       {
-        "text": "返回主地图与工具。",
-        "linkText": "星盘地理图首页",
-        "url": "/"
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       }
     ]
   },
@@ -215,9 +215,9 @@
     "description": "免费计算 MC 星座、度数、宫主星与 IC—然后在星盘地理图上探索太阳与木星中天线，按地点解读事业象征。",
     "buttons": [
       {
-        "title": "探索太阳与木星 MC 线 → 地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

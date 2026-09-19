@@ -11,8 +11,8 @@
     "title": "Related Resources",
     "items": [
       {
-        "text": "Find your Mars line on a world map.",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -206,7 +206,7 @@
     "description": "Generate your personal astrocartography map and see exactly where your Mars line crosses the globe. Discover which angle (ASC, DSC, MC, IC) is active in specific cities, and get instant AI interpretations of what the Mars line means for your career, physical energy, and relationships there. Completely free, no sign-up required.",
     "buttons": [
       {
-        "title": "Generate Your Free Astrocartography Chart",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

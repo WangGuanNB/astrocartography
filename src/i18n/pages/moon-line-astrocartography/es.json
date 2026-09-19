@@ -11,9 +11,9 @@
     "title": "Recursos Relacionados",
     "items": [
       {
-        "text": "Encuentra tu línea de la Luna en un mapa mundial.",
-        "linkText": "Calculadora de Astrocartografía Gratis",
-        "url": "/"
+        "text": "Genera tu carta de astrocartografía gratis en el mapa mundial.",
+        "linkText": "Carta de Astrocartografía gratis",
+        "url": "/es"
       },
       {
         "text": "Compara la línea de la Luna con otras líneas.",
@@ -206,9 +206,9 @@
     "description": "Genera tu mapa personal de astrocartografía y ve exactamente dónde tu línea de la Luna cruza el globo, incluyendo cuál de los cuatro ángulos (ASC, DSC, MC, IC) está activo en ciudades específicas. Haz clic en cualquier ubicación para una interpretación instantánea con IA sobre qué significa la línea de la Luna para tu vida en el hogar, bienestar emocional y sentido de pertenencia. Completamente gratis, sin registro.",
     "buttons": [
       {
-        "title": "Genera Tu Mapa de Astrocartografía Gratis",
+        "title": "Carta de Astrocartografía gratis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/es",
         "target": "_self",
         "variant": "default"
       }

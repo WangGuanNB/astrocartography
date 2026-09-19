@@ -11,9 +11,9 @@
     "title": "相关工具",
     "items": [
       {
-        "text": "想看本命盘在世界地图上的投射？",
-        "linkText": "试试 Astrocartography",
-        "url": "/"
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "只想简单生成一张本命盘？",
@@ -220,9 +220,9 @@
     "description": "几秒生成 Natal Chart 本命盘轮盘，查看太阳、月亮与上升，以及各行星在星座与宫位中的落点。看懂自己的本命盘结构后，一键跳转到 Astrocartography 世界地图，探索哪些城市和地点更适合你。",
     "buttons": [
       {
-        "title": "在世界地图上查看你的本命盘 → Astrocartography",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

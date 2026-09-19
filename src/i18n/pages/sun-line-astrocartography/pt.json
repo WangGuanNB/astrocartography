@@ -11,9 +11,9 @@
     "title": "Recursos Relacionados",
     "items": [
       {
-        "text": "Encontre sua linha do Sol em um mapa mundial.",
-        "linkText": "Calculadora de Astrocartografia Grátis",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Compare a linha do Sol com outras linhas planetárias.",
@@ -206,9 +206,9 @@
     "description": "Gere seu mapa pessoal de astrocartografia usando cálculos Swiss Ephemeris e veja exatamente onde sua linha do Sol cruza o globo. Clique em qualquer cidade ou linha para interpretação instantânea com IA — incluindo qual ângulo do Sol está ativo e o que significa para carreira, confiança e autoexpressão autêntica. Completamente grátis, sem cadastro.",
     "buttons": [
       {
-        "title": "Gere seu Mapa de Astrocartografia Grátis",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

@@ -11,6 +11,11 @@
     "title": "相关工具",
     "items": [
       {
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
+      },
+      {
         "text": "想把今日天空叠在本命盘上？",
         "linkText": "过运盘计算器",
         "url": "/transit-chart-calculator"
@@ -32,10 +37,19 @@
     "title": "我们如何计算当前行星位置",
     "description": "下表按照下方说明的方法生成。",
     "highlights": [
-      { "label": "astronomy-engine", "url": "https://github.com/cosinekitty/astronomy" },
-      { "label": "热带 · 地心" },
-      { "label": "UTC" },
-      { "label": "服务端 API" }
+      {
+        "label": "astronomy-engine",
+        "url": "https://github.com/cosinekitty/astronomy"
+      },
+      {
+        "label": "热带 · 地心"
+      },
+      {
+        "label": "UTC"
+      },
+      {
+        "label": "服务端 API"
+      }
     ],
     "items": [
       {
@@ -76,17 +90,26 @@
       {
         "title": "此刻的天空，不是本命盘",
         "description": "本命盘冻结出生时的天空。当前行星位置持续变化：月亮每天约移动 13°，太阳约 1°，外行星更慢。想查当下星座与逆行时用本表；想看出生快照用本命盘；想看今日天空如何打本命盘用过运盘。",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp", "alt": "当前天空与本命盘对比" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-now-vs-natal.webp",
+          "alt": "当前天空与本命盘对比"
+        }
       },
       {
         "title": "如何读星座、度数与逆行",
         "description": "每颗行星占据十二个 30° 星座之一。星座内度数（0°–29°）表示它已进入该星座多远。日运动是 24 小时内黄经的变化；若为负值，则为逆行（℞）——从地球视角看的视逆行。太阳与月亮不逆行。交界日仍只有一个热带经度；同一时刻行星只落在一个星座。",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp", "alt": "读行星位置：星座度数与逆行" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sign-degree-retrograde.webp",
+          "alt": "读行星位置：星座度数与逆行"
+        }
       },
       {
         "title": "从今日天空到时机与地点",
         "description": "看清当前天空后，常见下一步是个人与地理问题：用过运盘计算器把同一天空叠在本命盘上；若还没有本命轮盘先生成本命盘。星盘地理图画的是本命角点在全球的投射，不会随行运实时重画。地图回答本命能量在何处更响；本页回答天空此刻在做什么。",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp", "alt": "从今日行星位置到过运盘" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-sky-to-transit.webp",
+          "alt": "从今日行星位置到过运盘"
+        }
       }
     ]
   },
@@ -100,19 +123,28 @@
         "title": "无需出生资料",
         "description": "多数「今天行星在哪」的搜索不应先要出生证。本计算器自动加载当前 UTC 时刻。只有查过去或未来时刻才需选日期时间。出生时间留在本命、上升与过运页——那里才会改变结果。",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "无需出生资料的当前天空表" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "无需出生资料的当前天空表"
+        }
       },
       {
         "title": "按钟表时刻，不是正午星历",
         "description": "印刷星历常用 00:00 或 12:00 UTC。对慢行星尚可，对月亮则易误导——午夜到正午可差约 6°。默认表用真实计算时刻，让月亮度数对应「现在」，而非正午表。",
         "icon": "RiTimeLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "实时行星位置而非正午星历" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "实时行星位置而非正午星历"
+        }
       },
       {
         "title": "诚实边界，清晰下一步",
         "description": "结果为热带地心坐标，非恒星黄道、非日心，也非每日太阳星座运势。宫位需在有地点的星盘工具中才出现。读完表后，可打开过运盘查看这些位置如何与本命行星形成相位。",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp", "alt": "热带地心行星位置与说明" }
+        "image": {
+          "src": "/imgs/planetary-positions-today/planetary-positions-today-benefit-live-table.webp",
+          "alt": "热带地心行星位置与说明"
+        }
       }
     ]
   },
@@ -209,6 +241,13 @@
     "title": "看今日天空如何作用你的星盘",
     "description": "你已看到当前热带天空。用免费过运盘计算器把相同位置叠在本命盘上——那里需要出生资料，因为那是个人时机问题，不是天空表。",
     "buttons": [
+      {
+        "title": "免费星盘地图 Astrocartography →",
+        "icon": "RiMapLine",
+        "url": "/zh",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "打开过运盘计算器",
         "icon": "RiTimeLine",

@@ -11,9 +11,9 @@
     "title": "Verwandte Tools",
     "items": [
       {
-        "text": "Zentrale für Karten und Rechner.",
-        "linkText": "Startseite",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Einzelnes Geburtshoroskop.",
@@ -40,22 +40,34 @@
       {
         "title": "Synastrie vs. reines Sonnenzeichen-Matching",
         "description": "Ein schnelles Zeichen-Match kann unterhalten, doch Synastrie geht tiefer. Echte Planetenpositionen – nicht nur die Sonne – beschreiben Spannung und Nähe. Partnerschaftsastrologie ist mehrdimensional: Mond Bedürfnisse, Venus Nähe, Mars Tempo, Saturn Halt, Merkur Gespräch. Hier erhalten Sie strukturierte Inter-Aspekte zum Nachprüfen – kein vager Fließtext. Für eine Synastrie, die Sie im Alltag besprechen können, brauchen Sie verlässliche Geburtsdaten; die Zeit schärft vor allem Mond und Winkel.",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "Warum Synastrie mehr zeigt als nur das Sonnenzeichen" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Warum Synastrie mehr zeigt als nur das Sonnenzeichen"
+        }
       },
       {
         "title": "Was dieser Synastrie-Rechner zeigt",
         "description": "Gebaut für Lesbarkeit: Doppelrad plus sortierbare Liste der Hauptaspekte zwischen den klassischen Punkten beider Personen. Konjunktion, Opposition, Quadrat, Trigon und Sextil mit üblichen Orbis – das, was die meisten zuerst prüfen. Optional KI-Synastrie (Credits, Login) kann Themen verantwortungsvoll einordnen – immer auf Basis derselben Daten, die Sie eben berechnet haben.",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "Synastrie-Rechner: Aspekte und Doppelrad" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Synastrie-Rechner: Aspekte und Doppelrad"
+        }
       },
       {
         "title": "Synastrie + Ort: Overlays und Karten",
         "description": "Aspekte in der Synastrie ändern sich nicht durch Reisen, Winkel und Häuser schon – deshalb optional ein gemeinsamer Ort für Relokations-Overlays und Ganzzeichen-Kontext. Reine Geografie: volle Karte pro Person; Beziehungsstruktur zuerst in der Synastrie klären.",
-        "image": { "src": "/imgs/features/synastry/3.webp", "alt": "Synastrie mit Astrokartografie und gemeinsamem Ort" }
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Synastrie mit Astrokartografie und gemeinsamem Ort"
+        }
       },
       {
         "title": "Synastrie verantwortungsvoll lesen",
         "description": "Synastrie beschreibt Tendenzen, kein Schicksal. Am gesündesten: Aspekt benennen, Bedürfnis dahinter besprechen, Handeln an Werten ausrichten. Kein Urteil aus einem Rad – sondern Sprache für Empathie und Timing. Ohne Geburtszeit: Mond- und Aszendenten-Themen vorsichtig; langsamere Kontakte bleiben oft valide.",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "Hinweise für eine reflektierte Synastrie-Deutung" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Hinweise für eine reflektierte Synastrie-Deutung"
+        }
       }
     ]
   },
@@ -69,19 +81,28 @@
         "title": "Eine Synastrie, die Sie navigieren können",
         "description": "Statt Jargon: Doppelrad plus Aspektliste, engste Orbis zuerst – so ergibt die Synastrie eine nachvollziehbare Story. Nur zehn Minuten? Die oberen Zeilen sind meist die lautesten Dialoge.",
         "icon": "RiHeartLine",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "Synastrie-Ergebnis klar strukturiert" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Synastrie-Ergebnis klar strukturiert"
+        }
       },
       {
         "title": "Radix-Vergleich ohne Esoterik-Score",
         "description": "Partnerschaftsastrologie funktioniert, wenn der Vergleich konkret ist. Planet-zu-Planet-Kontakte zum Nachlesen und Gespräch – Kompatibilität wird Dialog, kein Geheimcode. Das ist moderne Synastrie.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "Geburtshoroskop-Vergleich über Synastrie-Aspekte" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Geburtshoroskop-Vergleich über Synastrie-Aspekte"
+        }
       },
       {
         "title": "Von der Synastrie zur Astrokartografie",
         "description": "Nach der Synastrie zu den Planetenlinien jeder Person. Synastrie = zwischen euch; Karte = auf der Erde. Zusammen ein rundes Bild – besonders bei Reise- oder Umzugsthemen.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "Nach der Synastrie zur Astrokartografie-Karte" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Nach der Synastrie zur Astrokartografie-Karte"
+        }
       }
     ]
   },
@@ -189,9 +210,9 @@
     "description": "Synastrie erklärt das Zwischen-euch; Astrokartografie zeigt, wo welche Linien Sie auf der Erde betonen. Gleiche Geburtsdaten, anderer Blick auf den Ort.",
     "buttons": [
       {
-        "title": "Zur Astrokartografie-Startseite",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

@@ -11,9 +11,9 @@
     "title": "相关资源",
     "items": [
       {
-        "text": "在世界地图上找到你的月亮线。",
-        "linkText": "免费星盘地图计算器",
-        "url": "/"
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "将月亮线与其他行星线对比。",
@@ -206,9 +206,9 @@
     "description": "生成你的个人星盘地图，精确查看月亮线如何穿越全球——包括哪些城市激活了四个角点（ASC、DSC、MC、IC）中的哪一个。点击任意地点，即可获得即时 AI 解读，了解月亮线对你的家庭生活、情感福祉与归属感的含义。完全免费，无需注册。",
     "buttons": [
       {
-        "title": "免费生成你的星盘地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

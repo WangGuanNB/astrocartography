@@ -11,9 +11,9 @@
     "title": "Strumenti correlati",
     "items": [
       {
-        "text": "Hub di mappe e calcolatori.",
-        "linkText": "Home",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       },
       {
         "text": "Confronta due temi natali direttamente.",
@@ -214,6 +214,13 @@
     "title": "Dopo il tema composito, continua a esplorare",
     "description": "Il tema composito mostra cos'è la relazione. La sinastria mostra come la vive ciascuno. Le mappe di astrocartografia rivelano dove la vostra energia relazionale è più forte sulla Terra.",
     "buttons": [
+      {
+        "title": "Carta di Astrocartografia gratuita →",
+        "icon": "RiMapLine",
+        "url": "/it",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Mappa di Astrocartografia",
         "icon": "RiMapPinLine",

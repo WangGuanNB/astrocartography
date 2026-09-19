@@ -11,9 +11,9 @@
     "title": "Ferramentas relacionadas",
     "items": [
       {
-        "text": "Central de mapas e calculadoras.",
-        "linkText": "Início",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Compare dois mapas astrais diretamente.",
@@ -214,6 +214,13 @@
     "title": "Após o mapa composto, continue explorando",
     "description": "O mapa composto mostra o que é o relacionamento. A sinastria mostra como cada pessoa o vive. Os mapas de astrocartografia revelam onde a energia do casal é mais forte na Terra.",
     "buttons": [
+      {
+        "title": "Mapa de Astrocartografia grátis →",
+        "icon": "RiMapLine",
+        "url": "/pt",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Mapa de Astrocartografia",
         "icon": "RiMapPinLine",

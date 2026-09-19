@@ -11,9 +11,9 @@
     "title": "Verwandte Ressourcen",
     "items": [
       {
-        "text": "Allgemeine Einführung gesucht?",
-        "linkText": "Startseite besuchen",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Zuerst Ihren Aszendenten ermitteln.",
@@ -40,17 +40,26 @@
       {
         "title": "Wie funktioniert der Astrokartografie Rechner?",
         "description": "Der Planetenlinien-Rechner nutzt Swiss Ephemeris, um die Position jedes Planeten am Himmel zu Ihrem Geburtszeitpunkt zu bestimmen, und berechnet dann, wo diese Planeten über der Erdoberfläche im Winkel standen (aufsteigend, untergehend, im Zenit oder am Nadir). Dieser Astrokartografie Rechner verwendet sphärische Trigonometrie – z. B. cos(H) = -tan(φ) * tan(δ) für ASC/DSC-Linien – um Planetenpositionen auf eine Weltkarte zu projizieren. Das Standort-Astrologie-Tool wandelt äquatoriale Koordinaten (Rektaszension und Deklination) in geografische Koordinaten um und erzeugt sichtbare Linien für standortspezifische Energiemuster. Der Astrokartografie Rechner verarbeitet alle Berechnungen in Echtzeit mit professioneller Genauigkeit.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Wie der Astrokartografie Rechner funktioniert" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Wie der Astrokartografie Rechner funktioniert"
+        }
       },
       {
         "title": "Welche astrologischen Parameter nutzt der Astrokartografie Rechner?",
         "description": "Der Relocation-Astrologie-Rechner verarbeitet neun Planeten (Sonne, Mond, Venus, Mars, Jupiter, Saturn, Uranus, Neptun, Pluto) und vier Winkelpunkte: Aszendent (ASC), Deszendent (DSC), Medium Coeli (MC) und Imum Coeli (IC). Für jeden Planeten berechnet dieser Astrokartografie Rechner Rektaszension und Deklination zu Ihrem Geburtszeitpunkt und ermittelt, wo jeder Planet über der Erdoberfläche im Winkel stand. Zeitzonen, historische Sommerzeit und Kalenderumstellungen werden automatisch berücksichtigt – so liefert der Astrokartografie Rechner zuverlässige Winkelpositionen.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Astrologische Parameter im Astrokartografie Rechner" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Astrologische Parameter im Astrokartografie Rechner"
+        }
       },
       {
         "title": "Wie unterscheidet sich Astrokartografie vom Geburtshoroskop?",
         "description": "Ein Geburtshoroskop fixiert Ihren Geburtsort und zeigt, wo Planeten am Himmel standen; der Astrokartografie Rechner fixiert Ihre Geburtszeit und zeigt, wo Planeten auf der Erdoberfläche standen. Der Planetenlinien-Rechner zeigt Ergebnisse auf einer interaktiven Weltkarte mit geografisch überlagerten Planetenlinien. Ein Geburtshoroskop zeigt ein Kreisdiagramm mit Häusern und Planetenpositionen. Nutzen Sie den Astrokartografie Rechner für Umzüge, Reisen oder Geschäftsstandorte; Geburtshoroskope für Selbstverständnis. Der Astrokartografie Rechner ergänzt die Geburtshoroskop-Analyse um die geografische Dimension.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Astrokartografie Rechner vs. Geburtshoroskop" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Astrokartografie Rechner vs. Geburtshoroskop"
+        }
       }
     ]
   },
@@ -64,19 +73,28 @@
         "title": "Professionelle Präzision mit 1-Meilen-Genauigkeit",
         "description": "Der Planetenlinien-Rechner nutzt Swiss Ephemeris (Zürcher Sternwarte) – Planetenpositionen auf 1 Meile genau. Dieser Astrokartografie Rechner wurde mit Software wie Solar Fire und AstroGold abgeglichen. Zeitzonen und historische Sommerzeit werden automatisch verarbeitet. So sind Ihre Planetenlinien-Positionen für ernsthafte Umzugsplanung und professionelle Nutzung zuverlässig.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Genauigkeit des Astrokartografie Rechners" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Genauigkeit des Astrokartografie Rechners"
+        }
       },
       {
         "title": "Komplett kostenlos, unbegrenzte Nutzung",
         "description": "Dieser Astrokartografie Rechner ist komplett kostenlos und unbegrenzt nutzbar – keine Kreditkarte, keine versteckten Gebühren. Erstellen Sie unbegrenzt Karten, laden Sie dateien ohne Wasserzeichen herunter und nutzen Sie KI-Interpretationen. Der Relocation-Astrologie-Rechner verarbeitet alle Geburtsdaten lokal im Browser bei voller Privatsphäre.",
         "icon": "RiGiftLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Astrokartografie Rechner" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Kostenloser Astrokartografie Rechner"
+        }
       },
       {
         "title": "KI-gestützte Interpretationen",
         "description": "Über Berechnungen hinaus liefert dieser Astrokartografie Rechner KI-Interpretationen: was jede Planetenlinie für Karriere, Beziehungen und persönliches Wachstum bedeutet. Der Astrokartografie Rechner hilft, standortspezifische Energiemuster zu verstehen und macht komplexe astrologische Konzepte für praktische Entscheidungen zugänglich.",
         "icon": "RiSparklingLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "KI-Interpretationen im Astrokartografie Rechner" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "KI-Interpretationen im Astrokartografie Rechner"
+        }
       }
     ]
   },
@@ -182,9 +200,9 @@
     "description": "Nutzen Sie unseren professionellen Astrokartografie Rechner für Ihre persönliche Karte mit Swiss-Ephemeris-Präzision. Entdecken Sie ideale Städte für Karriere, Beziehungen und persönliches Wachstum. Dieser Relocation-Astrologie-Rechner ist komplett kostenlos – keine Anmeldung, unbegrenzte Nutzung.",
     "buttons": [
       {
-        "title": "Karte jetzt kostenlos erstellen",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/#generator",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

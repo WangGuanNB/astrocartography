@@ -12,8 +12,8 @@
     "items": [
       {
         "text": "在世界地图上找到你的土星线。",
-        "linkText": "免费星盘地图计算器",
-        "url": "/"
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "将土星线与其他行星线对比。",
@@ -206,9 +206,9 @@
     "description": "使用专业 Swiss Ephemeris 计算生成你的个人星盘地图，精确查看土星线如何穿越全球。查看哪些城市落在你的土星 MC、ASC、DSC 或 IC 线上，并获得即时 AI 解读——包括土星线对你在当地职业、关系与个人成长的含义。完全免费，无需注册。",
     "buttons": [
       {
-        "title": "免费生成你的星盘地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

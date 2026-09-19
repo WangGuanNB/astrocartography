@@ -11,8 +11,8 @@
     "title": "Related Resources",
     "items": [
       {
-        "text": "Find your Moon line on a world map.",
-        "linkText": "Free Astrocartography Calculator",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -206,7 +206,7 @@
     "description": "Generate your personal astrocartography map and see exactly where your Moon line crosses the globe—including which of the four angles (ASC, DSC, MC, IC) is active in specific cities. Click any location for an instant AI interpretation of what the Moon line means for your home life, emotional wellbeing, and sense of belonging. Completely free, no sign-up required.",
     "buttons": [
       {
-        "title": "Generate Your Free Astrocartography Chart",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

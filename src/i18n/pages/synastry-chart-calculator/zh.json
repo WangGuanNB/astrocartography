@@ -11,9 +11,9 @@
     "title": "相关工具",
     "items": [
       {
-        "text": "地图与计算器总览。",
-        "linkText": "首页",
-        "url": "/"
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "单人本命盘工具。",
@@ -40,22 +40,34 @@
       {
         "title": "合盘 vs. 只看太阳星座",
         "description": "星座速配可以好玩，但合盘看的是真实黄道位置，不只太阳。关系占星是多维的：月亮谈需求，金星谈亲近方式，火星谈节奏，土星谈承诺与压力，水星谈如何说清楚。这里给的是可核对的相位表，而不是模糊段落。若要做能带进现实对话的合盘，请尽量填准出生资料；有准确时间会明显改善月亮与上升相关议题。",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "为何合盘比只看太阳星座更细" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "为何合盘比只看太阳星座更细"
+        }
       },
       {
         "title": "本合盘计算器输出什么",
         "description": "界面为易读设计：双轮视图，外加双方十大古典点之间的主要相位列表（合相、对分、四分、三分、六分，标准容许度）。把表格当作剧情清单：和谐、拉扯与重复模式。可选 AI 合盘解读（登录与积分）在负责任的前提下归纳主题——仍基于你刚算出的同一套合盘数据。",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "合盘计算器：相位表与双轮" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "合盘计算器：相位表与双轮"
+        }
       },
       {
         "title": "合盘 + 地点：换置与地图",
         "description": "行星之间的本命相位不随搬家改变，但宫位与角点会变，因此提供可选「共同城市」做换置叠加，在同一经纬度下看整宫语境。若只想看地理能量，可分别为两人开完整地图；若先看两人结构，建议先稳住合盘再进地图。",
-        "image": { "src": "/imgs/features/synastry/3.webp", "alt": "合盘与占星地图、共同城市叠加" }
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "合盘与占星地图、共同城市叠加"
+        }
       },
       {
         "title": "如何较负责任地读合盘",
         "description": "合盘描述倾向，不判决关系。较健康的用法是把占星当共同语言：点名相位、讨论背后的需要，再选择符合价值观的相处方式。避免把任何一次合盘当成终审——它更适合用来谈共情与时点。若出生时间未知，月亮与上升相关议题宜保守看待，可优先参考不依赖精确上升的长期相位。无论新手或复习旧题，问题尽量具体、温和。",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "负责任阅读合盘的提示" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "负责任阅读合盘的提示"
+        }
       }
     ]
   },
@@ -69,19 +81,28 @@
         "title": "一份读得懂的合盘",
         "description": "许多工具堆术语；我们强调清晰：双轮 + 按容许度由紧到松排序的相位表，让合盘能讲出一条连贯故事。若只有十分钟，先看最上面几行——往往是本轮对话里最强的几条线。",
         "icon": "RiHeartLine",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "轻松浏览合盘结果" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "轻松浏览合盘结果"
+        }
       },
       {
         "title": "本命比较，不靠玄学打分",
         "description": "关系占星在「比较被说清楚」时最有用。结果列出可查证、可讨论的行星对行星接触，让「配不配」变成对话，而不是神秘分数。这也是现代比较盘的意义：共同语言、共同好奇。",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "从合盘相位谈本命比较" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "从合盘相位谈本命比较"
+        }
       },
       {
         "title": "从合盘到占星地图",
         "description": "生成合盘后，可分别为两人打开行星线。合盘处理「人与人之间」；地图呈现「在地球上哪里被强调」。两者合用，特别适合旅行、异地或搬迁主题活跃时。",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "合盘之后接占星地图" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "合盘之后接占星地图"
+        }
       }
     ]
   },
@@ -189,9 +210,9 @@
     "description": "合盘解释「两人之间」的动力；占星地图显示地球上哪里强调各自能量。可用同一出生数据继续探索地点议题。",
     "buttons": [
       {
-        "title": "占星地图首页",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

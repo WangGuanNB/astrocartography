@@ -11,9 +11,9 @@
     "title": "Risorse Correlate",
     "items": [
       {
-        "text": "Trova la tua linea di Giove su una mappa mondiale.",
-        "linkText": "Calcolatore di Astrocartografia Gratuito",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       },
       {
         "text": "Consulta tutte le linee planetarie e i loro significati.",
@@ -206,9 +206,9 @@
     "description": "Genera la tua mappa personale di astrocartografia e scopri esattamente dove la tua linea di Giove attraversa il globo. Vedi quali città cadono sulla tua linea Giove MC, ASC, DSC o IC, e ottieni interpretazioni istantanee con IA di cosa significa ogni collocazione per la tua carriera, le relazioni e l'abbondanza generale. Completamente gratuito, senza registrazione.",
     "buttons": [
       {
-        "title": "Genera la tua Carta di Astrocartografia Gratuita",
+        "title": "Carta di Astrocartografia gratuita →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/it",
         "target": "_self",
         "variant": "default"
       }

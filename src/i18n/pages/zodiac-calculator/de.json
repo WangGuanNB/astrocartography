@@ -36,9 +36,9 @@
         "url": "/venus-sign-calculator"
       },
       {
-        "text": "Sehen Sie, wo Ihr Chart weltweit gedeiht.",
-        "linkText": "Astrokartografie Karte",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       }
     ]
   },
@@ -55,17 +55,26 @@
       {
         "title": "Sonnenzeichen nur aus dem Geburtsdatum",
         "description": "Die meisten, die einen Sternzeichen Rechner suchen, wollen eine schnelle Antwort: Welches Sternzeichen bin ich? Dieses Tool nutzt Ihr Geburtsdatum und ephemeridenbasierte astronomische Berechnung, um Ihr tropisches Sonnenzeichen, Grad im Zeichen, Element (Feuer, Erde, Luft, Wasser), Modalität (Kardinal, Fix, Veränderlich) und Herrscherplanet zurückzugeben. Für das Sonnenzeichen selbst brauchen Sie keine Geburtszeit oder Geburtsort – diese Angaben werden jedoch wichtig, wenn Sie zu Aszendent, Mondzeichen und Hausstellungen wechseln.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Kalendereingabe für Sternzeichen Rechner" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Kalendereingabe für Sternzeichen Rechner"
+        }
       },
       {
         "title": "Tropischer westlicher Tierkreis",
         "description": "Dieser Sternzeichen Rechner nutzt den tropischen Tierkreis – das System der meisten westlichen Horoskope und Geburtshoroskop-Software. Tropische Zeichen sind an Jahreszeiten gebunden, nicht an feste Sternbilder. Bei vedischer oder siderischer Astrologie kann Ihr Zeichen etwa ein Zeichen abweichen. Wir weisen darauf klar hin, damit Sie Systeme ehrlich vergleichen können, statt eine universelle Antwort vorauszusetzen.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Illustration des tropischen Tierkreisrads" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Illustration des tropischen Tierkreisrads"
+        }
       },
       {
         "title": "Vom Sonnenzeichen zum vollständigen Chart",
         "description": "Ihr Sternzeichen ist eine Schicht eines viel reicheren Geburtshoroskops. Nach dem Sternzeichen Rechner geht es weiter zum Geburtshoroskop Generator für Mondzeichen, Aszendent, Planetenstellungen und Häuser – oder erkunden Sie Astrokartografie, um zu sehen, wo diese Energien geografisch aktiv werden. Das Sonnenzeichen beantwortet, wer Sie im Kern sind; Chart und Karte zeigen, wie sich dieser Kern in Beziehungen, Karriere, Zuhause und am Ort ausdrückt.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Weg vom Sonnenzeichen-Ergebnis zum Geburtshoroskop und zur Weltkarte" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Weg vom Sonnenzeichen-Ergebnis zum Geburtshoroskop und zur Weltkarte"
+        }
       }
     ]
   },
@@ -79,19 +88,28 @@
         "title": "Ephemeriden-gestützte Genauigkeit",
         "description": "Wir berechnen Ihr Sonnenzeichen mit derselben astronomischen Engine wie unsere Geburtshoroskop- und Planeten-Rechner – nicht nur statischen Datumstabellen. Die Sonnenposition verschiebt Zeichengrenzen jährlich, besonders nahe Grenzdaten. Ephemeriden-Berechnung zu einer einheitlichen Referenzzeit liefert ein zuverlässiges tropisches Ergebnis mit transparenter Einschränkung, wenn Sie an einem Zeichenwechseltag geboren wurden.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Präzise Sonnenzeichen-Berechnungsanzeige" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Präzise Sonnenzeichen-Berechnungsanzeige"
+        }
       },
       {
         "title": "Kostenlos, ohne Anmeldung",
         "description": "Nutzen Sie diesen Sternzeichen Rechner so oft Sie möchten, ohne Konto oder Zahlung. Berechnen Sie Ihr Zeichen, das eines Freundes oder vergleichen Sie Familiengeburtstage. Wenn Sie bereit sind für Mond, Aszendent, Venus oder Umzugs-Insights, bleiben unsere anderen Rechner und die Astrokartografie-Karte kostenlose Einstiegspunkte in die standortbezogene Astrologie.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Sternzeichen Rechner ohne Anmeldung" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Kostenloser Sternzeichen Rechner ohne Anmeldung"
+        }
       },
       {
         "title": "Sonne vs. Aszendent vs. Mond – klare nächste Schritte",
         "description": "Viele Sternzeichen-Rechner-Suchen verwechseln Sonnenzeichen mit Aszendent oder Mondzeichen. Diese Seite erklärt den Unterschied klar: Sonnenzeichen braucht nur Geburtsdatum; Aszendent braucht Geburtszeit und -ort; Mondzeichen wechselt etwa alle zweieinhalb Tage. Nach Ihrem Ergebnis verlinken wir zum Aszendent Rechner und Geburtshoroskop Generator, damit Sie das Bild vertiefen können – ohne Keyword-Verwirrung oder doppelten Inhalt.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Vergleich Sonnenzeichen vs. Aszendent" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Vergleich Sonnenzeichen vs. Aszendent"
+        }
       }
     ]
   },
@@ -206,6 +224,13 @@
     "title": "Finden Sie jetzt Ihr Sternzeichen",
     "description": "Nutzen Sie unseren kostenlosen Sternzeichen Rechner, um Ihr tropisches Sonnenzeichen nach Geburtsdatum zu entdecken. Lesen Sie Element, Modalität und Herrscherplanet, erstellen Sie dann Ihr vollständiges Geburtshoroskop und erkunden Sie Ihre Astrokartografie-Karte – ohne Anmeldung.",
     "buttons": [
+      {
+        "title": "Kostenlose Astrocartography-Karte →",
+        "icon": "RiMapLine",
+        "url": "/de",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Vollständiges Geburtshoroskop erstellen →",
         "icon": "RiMapLine",

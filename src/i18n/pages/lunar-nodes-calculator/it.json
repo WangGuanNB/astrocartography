@@ -63,9 +63,9 @@
   "schemaName": "Calcolatore dei Nodi Lunari",
   "relatedLinks": [
     {
-      "text": "Vuoi temi di crescita per luogo?",
-      "linkText": "Prova l'astrocartografia",
-      "url": "/"
+      "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+      "linkText": "Carta di Astrocartografia gratuita",
+      "url": "/it"
     },
     {
       "text": "Ti serve il tema natale?",

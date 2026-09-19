@@ -319,6 +319,13 @@
     "description": "Genera una rueda y tabla de posiciones gratis para ver qué planetas caen en tu casa 11—luego vuelve al hub de Casas Astrológicas para las otras once áreas de la vida.",
     "buttons": [
       {
+        "title": "Carta de Astrocartografía gratis →",
+        "icon": "RiMapLine",
+        "url": "/es",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
         "title": "Generador de Carta Natal",
         "icon": "RiPieChartLine",
         "url": "/tools/birth-chart-generator",
@@ -331,6 +338,16 @@
         "url": "/astrology-houses",
         "target": "_self",
         "variant": "outline"
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "Herramientas relacionadas",
+    "items": [
+      {
+        "text": "Genera tu carta de astrocartografía gratis en el mapa mundial.",
+        "linkText": "Carta de Astrocartografía gratis",
+        "url": "/es"
       }
     ]
   }

@@ -11,9 +11,9 @@
     "title": "相关资源",
     "items": [
       {
-        "text": "在世界地图上找到你的太阳线。",
-        "linkText": "免费星盘地图计算器",
-        "url": "/"
+        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "将太阳线与其他行星线对比。",
@@ -206,9 +206,9 @@
     "description": "使用 Swiss Ephemeris 计算生成你的个人星盘地图，精确查看太阳线如何穿越全球。点击任意城市或线条，即可获得即时 AI 解读——包括哪条太阳角点被激活，以及它对事业、自信与真实自我表达意味着什么。完全免费，无需注册。",
     "buttons": [
       {
-        "title": "免费生成你的星盘地图",
+        "title": "免费星盘地图 Astrocartography →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/zh",
         "target": "_self",
         "variant": "default"
       }

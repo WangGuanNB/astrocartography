@@ -11,8 +11,8 @@
     "title": "Related",
     "items": [
       {
-        "text": "Hub for maps and calculators.",
-        "linkText": "Home",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -40,22 +40,34 @@
       {
         "title": "Synastry Chart vs. Sun-Sign Matching",
         "description": "A quick horoscope match can be fun, but a synastry chart goes deeper. Real planetary positions—not only Sun signs—describe chemistry and conflict. Relationship astrology is multidimensional: the Moon speaks to needs, Venus to affection, Mars to pacing, Saturn to durability, Mercury to how you talk things through. Here you get structured inter-chart aspects you can verify—not a vague paragraph. If your goal is a serious synastry chart for real-life conversations, start with accurate birth data; time improves angles and Moon precision.",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "Why a synastry chart beats sun sign only" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Why a synastry chart beats sun sign only"
+        }
       },
       {
         "title": "What This Synastry Chart Calculator Shows",
         "description": "This synastry chart calculator is built for readability: a biwheel view plus a sortable list of major aspects between ten classical points for both people. You will see conjunctions, oppositions, squares, trines, and sextiles within standard orbs—what most readers check first in any synastry reading. Treat the table as a storyline list: harmony, stretch, and repeating patterns. Optional AI synastry reading (credits, sign-in) can narrate themes responsibly—still grounded in the same synastry chart data you generated above.",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "Synastry chart calculator aspects and biwheel" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Synastry chart calculator aspects and biwheel"
+        }
       },
       {
         "title": "Synastry Chart + Location: Overlays and Maps",
         "description": "Aspects in a synastry chart do not change when you travel, but angles and houses do—so we offer an optional shared city for relocated overlays. That adds whole-sign context for one place. For geography alone, open a full map per person; for relationship structure, stay with the synastry chart first.",
-        "image": { "src": "/imgs/features/synastry/3.webp", "alt": "Synastry chart with astrocartography and shared city overlays" }
+        "image": {
+          "src": "/imgs/features/synastry/3.webp",
+          "alt": "Synastry chart with astrocartography and shared city overlays"
+        }
       },
       {
         "title": "How to Read Your Synastry Chart Responsibly",
         "description": "A synastry chart describes tendencies, not fate. The healthiest reading pairs astrology with communication: name the aspect, discuss the need behind it, and choose behaviors that fit your values. Avoid turning any synastry chart into a verdict—use it as language for empathy and timing. If birth time is unknown, treat Moon and angle topics as provisional and lean on slower contacts you can still trust without an exact Ascendant. Whether you are new to synastry or revisiting an old pattern, keep questions practical and kind.",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "Responsible synastry chart reading guidance" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Responsible synastry chart reading guidance"
+        }
       }
     ]
   },
@@ -69,19 +81,28 @@
         "title": "A Synastry Chart You Can Navigate",
         "description": "Many tools dump jargon; we focus on clarity: a biwheel plus an aspect list sorted tightest-first so your synastry chart tells a coherent story. If you only have ten minutes, scan the top rows—those are the loudest dialogues in your reading.",
         "icon": "RiHeartLine",
-        "image": { "src": "/imgs/features/synastry/4.webp", "alt": "Navigate your synastry chart easily" }
+        "image": {
+          "src": "/imgs/features/synastry/4.webp",
+          "alt": "Navigate your synastry chart easily"
+        }
       },
       {
         "title": "Birth Chart Compatibility Without Hand-Waving",
         "description": "Relationship astrology works when the comparison is explicit. Your results list planet-to-planet contacts you can research and discuss—so birth chart compatibility becomes conversation, not a mystery score. That is the point of modern synastry: shared language, shared curiosity.",
         "icon": "RiShieldCheckLine",
-        "image": { "src": "/imgs/features/synastry/1.webp", "alt": "Birth chart compatibility from synastry chart aspects" }
+        "image": {
+          "src": "/imgs/features/synastry/1.webp",
+          "alt": "Birth chart compatibility from synastry chart aspects"
+        }
       },
       {
         "title": "From Synastry Chart to Astrocartography",
         "description": "After you generate your synastry chart, jump to planetary lines for each person. Synastry handles “between you”; maps highlight “on Earth.” Used together, the session becomes a full relationship astrology workflow—especially when travel or relocation themes are active.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/synastry/2.webp", "alt": "Synastry chart then astrocartography maps" }
+        "image": {
+          "src": "/imgs/features/synastry/2.webp",
+          "alt": "Synastry chart then astrocartography maps"
+        }
       }
     ]
   },
@@ -189,7 +210,7 @@
     "description": "A synastry chart explains between-you dynamics; Astrocartography shows where lines emphasize each person on Earth. Continue with the same birth data for location intelligence.",
     "buttons": [
       {
-        "title": "Astrocartography Home",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
         "url": "/",
         "target": "_self",

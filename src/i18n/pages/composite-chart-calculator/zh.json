@@ -12,8 +12,8 @@
     "items": [
       {
         "text": "占星地图与所有计算器的主页。",
-        "linkText": "首页",
-        "url": "/"
+        "linkText": "免费星盘地图 Astrocartography Chart",
+        "url": "/zh"
       },
       {
         "text": "直接对比两张本命盘。",
@@ -218,6 +218,13 @@
     "title": "生成复合盘后，继续探索",
     "description": "复合盘揭示关系的本质，合盘揭示各自的体验，占星地图揭示你们关系在地球哪里能量最强。三者结合，才是完整图景。",
     "buttons": [
+      {
+        "title": "免费星盘地图 Astrocartography →",
+        "icon": "RiMapLine",
+        "url": "/zh",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "占星地图",
         "icon": "RiMapPinLine",

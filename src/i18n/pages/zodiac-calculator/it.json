@@ -36,9 +36,9 @@
         "url": "/venus-sign-calculator"
       },
       {
-        "text": "Scopri dove la tua carta prospera nel mondo.",
-        "linkText": "Mappa Astrocartography",
-        "url": "/"
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       }
     ]
   },
@@ -55,17 +55,26 @@
       {
         "title": "Segno solare solo dalla data di nascita",
         "description": "La maggior parte di chi cerca un calcolatore segno zodiacale vuole una risposta rapida: qual è il mio segno zodiacale? Questo strumento usa la tua data di nascita e un calcolo astronomico basato su effemeridi per restituire il segno solare tropicale, grado nel segno, elemento (Fuoco, Terra, Aria, Acqua), modalità (Cardinale, Fisso, Mutabile) e pianeta dominante. Per il segno solare non servono ora di nascita né luogo – ma questi dati diventano essenziali per ascendente, segno lunare e posizioni nelle case.",
-        "image": { "src": "/imgs/features/1.webp", "alt": "Inserimento calendario per calcolatore segno zodiacale" }
+        "image": {
+          "src": "/imgs/features/1.webp",
+          "alt": "Inserimento calendario per calcolatore segno zodiacale"
+        }
       },
       {
         "title": "Zodiaco tropicale occidentale",
         "description": "Questo calcolatore segno zodiacale usa lo zodiaco tropicale – il sistema della maggior parte degli oroscopi occidentali e del software per temi natali. I segni tropicali sono legati alle stagioni, non alle costellazioni fisse. Se segui l'astrologia vedica o siderale, il tuo segno può differire di circa un segno. Lo indichiamo chiaramente così puoi confrontare i sistemi in modo onesto, senza presumere una risposta universale.",
-        "image": { "src": "/imgs/features/2.webp", "alt": "Illustrazione della ruota zodiacale tropicale" }
+        "image": {
+          "src": "/imgs/features/2.webp",
+          "alt": "Illustrazione della ruota zodiacale tropicale"
+        }
       },
       {
         "title": "Dal segno solare al tema natale completo",
         "description": "Il tuo segno zodiacale è uno strato di una carta natale molto più ricca. Dopo il calcolatore segno zodiacale, prosegui con il Generatore Tema Natale per segno lunare, ascendente, posizioni planetarie e case – oppure esplora l'Astrocartography per vedere dove quelle energie si attivano geograficamente. Il segno solare risponde a chi sei nel profondo; la carta completa e la mappa mostrano come quel nucleo si esprime in relazioni, carriera, casa e luogo.",
-        "image": { "src": "/imgs/features/3.webp", "alt": "Percorso dal risultato del segno solare al tema natale e alla mappa mondiale" }
+        "image": {
+          "src": "/imgs/features/3.webp",
+          "alt": "Percorso dal risultato del segno solare al tema natale e alla mappa mondiale"
+        }
       }
     ]
   },
@@ -79,19 +88,28 @@
         "title": "Precisione basata su effemeridi",
         "description": "Calcoliamo il tuo segno solare con lo stesso motore astronomico che alimenta i nostri calcolatori di tema natale e posizioni – non solo tabelle statiche per data. La posizione del Sole sposta i confini tra segni ogni anno, soprattutto vicino alle date di transizione. Il calcolo con effemeridi a un'ora di riferimento coerente offre un risultato tropicale affidabile con limiti trasparenti se sei nato in un giorno di cambio segno.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Visualizzazione precisa del calcolo del segno solare" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Visualizzazione precisa del calcolo del segno solare"
+        }
       },
       {
         "title": "Gratuito, senza registrazione",
         "description": "Usa questo calcolatore segno zodiacale quante volte vuoi senza account né pagamento. Calcola il tuo segno, quello di un amico o confronta compleanni in famiglia. Quando sei pronto per luna, ascendente, Venere o insight per trasferimenti, i nostri altri calcolatori e la mappa Astrocartography restano punti di accesso gratuiti all'astrologia per luogo.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Calcolatore segno zodiacale gratuito senza registrazione" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Calcolatore segno zodiacale gratuito senza registrazione"
+        }
       },
       {
         "title": "Sole vs ascendente vs luna — prossimi passi chiari",
         "description": "Molte ricerche di calcolatore segno zodiacale confondono segno solare con ascendente o segno lunare. Questa pagina spiega la differenza chiaramente: il segno solare richiede solo la data; l'ascendente richiede ora e luogo; la luna cambia segno circa ogni due giorni e mezzo. Dopo il risultato, ti indirizziamo al Calcolatore Segno Ascendente e al Generatore Tema Natale per approfondire senza confusione di keyword o contenuti duplicati.",
         "icon": "RiMapPinLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Confronto segno solare vs ascendente" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Confronto segno solare vs ascendente"
+        }
       }
     ]
   },
@@ -206,6 +224,13 @@
     "title": "Scopri ora il tuo segno zodiacale",
     "description": "Usa il nostro calcolatore segno zodiacale gratuito per scoprire il segno solare tropicale per data di nascita. Leggi elemento, modalità e pianeta dominante, poi genera il tema natale completo ed esplora la mappa Astrocartography – senza registrazione.",
     "buttons": [
+      {
+        "title": "Carta di Astrocartografia gratuita →",
+        "icon": "RiMapLine",
+        "url": "/it",
+        "target": "_self",
+        "variant": "default"
+      },
       {
         "title": "Genera il tuo tema natale completo →",
         "icon": "RiMapLine",

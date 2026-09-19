@@ -20,7 +20,8 @@
           "Keputusan lengkap 30 hari",
           "Tetingkap 90 hari semasa Plus aktif",
           "150 kredit setiap bulan"
-        ]
+        ],
+        "label": "Lebih berbaloi"
       }
     ],
     "items": [
@@ -45,7 +46,7 @@
         "price": "$9.9",
         "original_price": "",
         "unit": "",
-        "is_featured": true,
+        "is_featured": false,
         "tip": "Sempurna untuk satu keputusan perpindahan — kredit yang cukup untuk pusingan pertama penyelidikan lengkap.",
         "switch_group": "subscription",
         "switch_group_label": "Atau Plus dari $7.9/bulan →",
@@ -63,7 +64,7 @@
         "title": "Pelan Profesional",
         "description": "Sesuai untuk penyelidikan pelbagai bandar yang mendalam dan semakan keputusan berulang.",
         "group": "one-time",
-        "label": "Penyelidikan Mendalam",
+        "label": "Disyorkan",
         "features_title": "Semua dalam Standard, ditambah",
         "features": [
           "500 kredit AI — kira-kira 50 perbualan atau 10 laporan perbandingan bandar lengkap",
@@ -82,7 +83,7 @@
         "price": "$19.9",
         "original_price": "$24.9",
         "unit": "",
-        "is_featured": false,
+        "is_featured": true,
         "tip": "Untuk penyelidikan serius — bandingkan 3-5 bandar dan kekalkan analisis selama-lamanya.",
         "switch_group": "subscription",
         "switch_group_label": "Atau Plus dari $7.9/bulan →",

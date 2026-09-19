@@ -11,9 +11,9 @@
     "title": "Recursos Relacionados",
     "items": [
       {
-        "text": "Encontre sua linha de Mercúrio em um mapa mundial.",
-        "linkText": "Calculadora de Astrocartografia Grátis",
-        "url": "/"
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       },
       {
         "text": "Compare Mercúrio com outras linhas planetárias.",
@@ -206,9 +206,9 @@
     "description": "Gere seu mapa pessoal de astrocartografia com cálculos Swiss Ephemeris e veja exatamente onde sua linha de Mercúrio cruza o globo. Veja quais cidades caem em sua linha MC, ASC, DSC ou IC de Mercúrio e obtenha interpretações instantâneas com IA sobre o que cada colocação significa para sua escrita, negócios e vida intelectual. Completamente grátis, sem cadastro.",
     "buttons": [
       {
-        "title": "Gere Seu Mapa de Astrocartografia Grátis",
+        "title": "Mapa de Astrocartografia grátis →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/pt",
         "target": "_self",
         "variant": "default"
       }

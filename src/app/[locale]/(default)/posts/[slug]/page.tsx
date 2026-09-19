@@ -93,7 +93,7 @@ export default async function ({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <BlogDetail post={post as unknown as Post} />
+      <BlogDetail post={post as unknown as Post} locale={locale} />
     </>
   );
 }

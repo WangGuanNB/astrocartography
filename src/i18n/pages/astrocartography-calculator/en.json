@@ -11,8 +11,8 @@
     "title": "Related Resources",
     "items": [
       {
-        "text": "Looking for a general introduction?",
-        "linkText": "Astrocartography Map",
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
       },
       {
@@ -200,9 +200,9 @@
     "description": "Use our professional astrocartography calculator to create your personalized chart with Swiss Ephemeris precision. Discover ideal cities for your career, relationships, and personal growth. This relocation astrology calculator is completely free—no registration required, unlimited use.",
     "buttons": [
       {
-        "title": "Generate Free Chart Now",
+        "title": "Free Astrocartography Chart & Map →",
         "icon": "RiMapLine",
-        "url": "/#generator",
+        "url": "/",
         "target": "_self",
         "variant": "default"
       }

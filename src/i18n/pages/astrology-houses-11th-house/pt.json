@@ -319,6 +319,13 @@
     "description": "Gere uma roda e tabela de posições grátis para ver quais planetas caem na sua casa 11—depois volte ao hub de Casas Astrológicas para as outras onze áreas da vida.",
     "buttons": [
       {
+        "title": "Mapa de Astrocartografia grátis →",
+        "icon": "RiMapLine",
+        "url": "/pt",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
         "title": "Gerador de Mapa Astral",
         "icon": "RiPieChartLine",
         "url": "/tools/birth-chart-generator",
@@ -331,6 +338,16 @@
         "url": "/astrology-houses",
         "target": "_self",
         "variant": "outline"
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "Ferramentas relacionadas",
+    "items": [
+      {
+        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
+        "linkText": "Mapa de Astrocartografia grátis",
+        "url": "/pt"
       }
     ]
   }

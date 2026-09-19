@@ -11,9 +11,9 @@
     "title": "Verwandte Tools",
     "items": [
       {
-        "text": "Weltkarten-Version Ihres Geburtshoroskops?",
-        "linkText": "Astrokartografie ausprobieren",
-        "url": "/"
+        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
+        "linkText": "Kostenlose Astrocartography-Karte",
+        "url": "/de"
       },
       {
         "text": "Einfachen Geburtshoroskop-Generator benötigt?",
@@ -83,19 +83,28 @@
         "title": "Präzises Geburtshoroskop, keine vagen Horoskope",
         "description": "Statt einer pauschalen Sonnenzeichen-Deutung berechnet dieses Geburtshoroskop-Tool die exakten Positionen Ihrer Planeten, des Aszendenten und der Häuser. Ihr Geburtshoroskop zeigt ein einzigartiges Muster – es verbindet Sonne, Mond, Aszendent und Häuser zu einem Gesamtbild.",
         "icon": "RiFlashlightLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Präziser Geburtshoroskop-Rechner" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Präziser Geburtshoroskop-Rechner"
+        }
       },
       {
         "title": "Kostenlos und unbegrenzt",
         "description": "Erstellen Sie so viele Geburtshoroskope wie Sie möchten – ohne Konto oder Bezahlschranke. Sie erhalten das Geburtshoroskop-Rad und eine Stellungstabelle mit Zeichen, Grad und Häusern auf einer Seite.",
         "icon": "RiListCheck",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Kostenloser Geburtshoroskop-Rechner" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Kostenloser Geburtshoroskop-Rechner"
+        }
       },
       {
         "title": "Datenschutz beim Geburtshoroskop",
         "description": "Ihr Geburtshoroskop basiert auf sensiblen Daten wie Geburtsdatum, -zeit und -ort. Wir halten den Ablauf einfach und datenschutzorientiert: Daten eingeben, Geburtshoroskop ansehen, selbst entscheiden, was Sie speichern oder teilen. Kein Login nötig.",
         "icon": "RiLockLine",
-        "image": { "src": "/imgs/features/4.webp", "alt": "Datenschutz Geburtshoroskop-Tool" }
+        "image": {
+          "src": "/imgs/features/4.webp",
+          "alt": "Datenschutz Geburtshoroskop-Tool"
+        }
       }
     ]
   },
@@ -211,9 +220,9 @@
     "description": "Erstellen Sie Ihr Geburtshoroskop in Sekunden, sehen Sie Sonne, Mond und Aszendent, prüfen Sie die Stellungen nach Zeichen und Haus und erkunden Sie, wo Ihr Geburtshoroskop auf der Astrokartografie-Karte wirkt.",
     "buttons": [
       {
-        "title": "Wo Ihr Geburtshoroskop wirkt → Astrokartografie",
+        "title": "Kostenlose Astrocartography-Karte →",
         "icon": "RiMapLine",
-        "url": "/",
+        "url": "/de",
         "target": "_self",
         "variant": "default"
       }

@@ -319,6 +319,13 @@
     "description": "Genera una ruota e una tabella di posizioni gratis per vedere quali pianeti cadono nella tua undicesima casa—poi torna all'hub Case Astrologiche per le altre undici aree della vita.",
     "buttons": [
       {
+        "title": "Carta di Astrocartografia gratuita →",
+        "icon": "RiMapLine",
+        "url": "/it",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
         "title": "Generatore Carta Natale",
         "icon": "RiPieChartLine",
         "url": "/tools/birth-chart-generator",
@@ -331,6 +338,16 @@
         "url": "/astrology-houses",
         "target": "_self",
         "variant": "outline"
+      }
+    ]
+  },
+  "internalLinks": {
+    "title": "Strumenti correlati",
+    "items": [
+      {
+        "text": "Genera la tua carta di astrocartografia gratuita sulla mappa del mondo.",
+        "linkText": "Carta di Astrocartografia gratuita",
+        "url": "/it"
       }
     ]
   }
