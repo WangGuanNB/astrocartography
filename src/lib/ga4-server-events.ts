@@ -106,6 +106,10 @@ async function reportPaymentEvent(
                 value,
                 payment_provider: input.provider,
                 engagement_time_msec: 1,
+                // plan_id is registered as a GA4 event-scoped custom dimension for funnel breakdown.
+                ...(input.productId
+                  ? { plan_id: input.productId, product_id: input.productId }
+                  : {}),
                 ...(input.errorReason
                   ? { error_reason: input.errorReason }
                   : {}),

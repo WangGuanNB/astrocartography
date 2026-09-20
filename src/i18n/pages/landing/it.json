@@ -652,7 +652,7 @@
     "name": "pricing",
     "label": "Prezzi",
     "title": "Scegli il tuo piano di ricerca",
-    "description": "Piani una tantum per una ricerca mirata, o Plus per continuare a tracciare città e tempistiche mentre i tuoi piani cambiano.",
+    "description": "Piani una tantum per profondità di ricerca: Standard per una decisione, Professional per lavoro multi-città e revisione, Research Pass per un piano di trasferimento completo. Scegli Plus quando date e shortlist continuano a cambiare e serve rivedere il timing.",
     "disclaimer": "⚠️ **Importante**: l'IA analizza solo le città sulle tue linee planetarie. Non speculerà su città fuori dal tuo tema. I risultati sono solo di riferimento.",
     "groups": [
       {
@@ -707,17 +707,17 @@
       },
       {
         "title": "Piano Standard",
-        "description": "Ideale per una decisione mirata — confronta le città e scegli dove andare dopo.",
+        "description": "Lettura chiara — una decisione mirata: confronta le città e scegli il passo successivo.",
         "group": "one-time",
-        "label": "Più popolare",
+        "label": "Una decisione",
         "features_title": "Cosa ottieni",
         "features": [
-          "150 crediti IA — circa 15 chat o 3 rapporti completi di confronto città",
-          "Uso tipico: 1 confronto città completo (50) + 10 domande di approfondimento (100)",
-          "Anteprima 30 giorni per il tuo progetto di ricerca salvato",
+          "150 crediti — non scadono mai",
+          "Sufficienti per un primo ciclo completo di ricerca (confronto città + follow-up)",
+          "Anteprima timing 30 giorni per il progetto di ricerca salvato",
           "Scarica mappe (PNG) ed esporta la chat corrente (TXT)",
-          "Suggerimenti di follow-up IA dopo ogni risposta",
-          "I crediti non scadono mai — paghi una volta, nessun rinnovo automatico"
+          "Suggerimenti di follow-up AI dopo ogni risposta",
+          "Pagamento unico — nessun rinnovo automatico"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -727,7 +727,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": false,
-        "tip": "Perfetto per una decisione di trasloco — crediti sufficienti per un primo giro completo di ricerca.",
+        "tip": "Scegli questo per una decisione chiara. Ti serve revisione multi-città o cronologia permanente? Vedi Professional.",
         "switch_group": "subscription",
         "switch_group_label": "Oppure Plus da $7.9/mese →",
         "button": {
@@ -738,23 +738,24 @@
         "product_id": "standard",
         "product_name": "Piano Standard - Valido per sempre",
         "credits": 150,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Lettura chiara"
       },
       {
         "title": "Piano Professional",
-        "description": "Ideale per ricerche approfondite su più città e revisioni ripetute delle decisioni.",
+        "description": "Lettura approfondita — lavoro multi-città con revisione e archivi duraturi.",
         "group": "one-time",
         "label": "Consigliato",
         "features_title": "Tutto dello Standard, in più",
         "features": [
-          "500 crediti IA — circa 50 chat o 10 rapporti completi di confronto città",
-          "Uso tipico: 4 confronti città completi + 30 domande di approfondimento",
-          "⭐ Cronologia chat permanente — rivedi e riesporta sessioni passate",
-          "⭐ Analisi avanzata delle linee planetarie (Chirone, Lilith, punti medi)",
-          "Risultati completi a 30 giorni (nessuna limitazione di anteprima)",
+          "Tutto di Standard",
+          "500 crediti — non scadono mai — per più cicli di confronto e follow-up",
+          "⭐ Cronologia chat permanente — rivedi e riesporta tra le sessioni",
+          "⭐ Analisi avanzata delle linee planetarie (Chiron, Lilith, punti medi e altro)",
+          "⭐ Risultati timing 30 giorni completi (non limitati all'anteprima)",
           "Scarica mappe (PNG) ed esporta la chat corrente (TXT)",
-          "Suggerimenti di follow-up IA dopo ogni risposta",
-          "I crediti non scadono mai — paghi una volta, nessun rinnovo automatico"
+          "Suggerimenti di follow-up AI dopo ogni risposta",
+          "Pagamento unico — nessun rinnovo automatico"
         ],
         "interval": "one-time",
         "amount": 1990,
@@ -775,23 +776,23 @@
         "product_id": "professional",
         "product_name": "Piano Professional - Valido per sempre",
         "credits": 500,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Lettura approfondita"
       },
       {
         "title": "Pass di Ricerca",
-        "description": "Un pass una tantum per ricerche di trasloco attive quando date e shortlist cambiano ancora.",
+        "description": "Valutazione trasferimento — per date e shortlist che cambiano ancora in un piano di trasferimento completo.",
         "group": "one-time",
-        "label": "Miglior valore",
+        "label": "Ricerca trasferimento",
         "features_title": "Tutto del Professional, in più",
         "features": [
-          "1000 crediti IA — circa 100 chat o 20 rapporti completi di confronto città",
-          "Uso tipico: 8 confronti città completi + 60 domande di approfondimento",
-          "⭐ Tempistiche complete a 90 giorni (per sempre, non solo durante l'abbonamento)",
-          "⭐ Salva fino a 5 progetti di ricerca affiancati",
-          "⭐ Esporta in batch più sessioni di chat come file TXT",
-          "⭐ Supporto email prioritario (risposta in 24 ore)",
-          "Tutte le funzionalità Professional incluse",
-          "I crediti non scadono mai — paghi una volta, nessun rinnovo automatico"
+          "Tutto di Professional",
+          "1000 crediti — non scadono mai — ampia quota di ricerca",
+          "⭐ Finestre timing 90 giorni complete (permanenti — non legate all'abbonamento)",
+          "⭐ Salva fino a 5 progetti di ricerca insieme",
+          "⭐ Esporta più chat in batch come TXT",
+          "⭐ Supporto email prioritario (risposta entro 24 ore)",
+          "Pagamento unico — nessun rinnovo automatico"
         ],
         "interval": "one-time",
         "amount": 2990,
@@ -812,7 +813,8 @@
         "product_id": "research-pass",
         "product_name": "Pass di Ricerca - Valido per sempre",
         "credits": 1000,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Valutazione trasferimento"
       },
       {
         "title": "Plus Mensile",
@@ -822,13 +824,13 @@
         "label": "Tracciamento continuo",
         "features_title": "Cosa ottieni ogni mese",
         "features": [
-          "150 crediti ogni mese — circa 15 chat o 3 rapporti completi di confronto città",
-          "Risultati completi a 30 giorni per ogni città salvata",
-          "Sblocca finestre a 90 giorni mentre Plus è attivo",
-          "1 progetto di ricerca salvato",
+          "150 crediti rinnovati ogni mese",
+          "Timing 30 giorni completo per ogni città salvata",
+          "Finestre timing 90 giorni mentre Plus è attivo",
+          "Salva 1 progetto di ricerca",
           "Scarica mappe (PNG) ed esporta la chat corrente (TXT)",
-          "Suggerimenti di follow-up IA dopo ogni risposta",
-          "I crediti si rinnovano mensilmente — disdici quando vuoi"
+          "Suggerimenti di follow-up AI dopo ogni risposta",
+          "Annulla i rinnovi futuri in qualsiasi momento"
         ],
         "interval": "month",
         "amount": 790,
@@ -858,13 +860,13 @@
         "label": "Risparmia ~34%",
         "features_title": "Tutto di Plus Mensile",
         "features": [
-          "150 crediti ogni mese — circa 15 chat o 3 rapporti completi di confronto città",
-          "Risultati completi a 30 giorni per ogni città salvata",
-          "Sblocca finestre a 90 giorni mentre Plus è attivo",
-          "1 progetto di ricerca salvato",
+          "150 crediti rinnovati ogni mese",
+          "Timing 30 giorni completo per ogni città salvata",
+          "Finestre timing 90 giorni mentre Plus è attivo",
+          "Salva 1 progetto di ricerca",
           "Scarica mappe (PNG) ed esporta la chat corrente (TXT)",
-          "Suggerimenti di follow-up IA dopo ogni risposta",
-          "Fatturato annualmente — annulla i rinnovi futuri in qualsiasi momento"
+          "Suggerimenti di follow-up AI dopo ogni risposta",
+          "Fatturazione annuale — annulla i rinnovi futuri in qualsiasi momento"
         ],
         "interval": "year",
         "amount": 7100,

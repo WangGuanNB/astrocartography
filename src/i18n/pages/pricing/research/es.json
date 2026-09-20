@@ -3,7 +3,7 @@
     "name": "pricing",
     "label": "Precios de Investigación",
     "title": "Elige tu plan de investigación",
-    "description": "Planes únicos para una investigación enfocada, o Plus para seguir rastreando ciudades y momentos mientras tus planes cambian.",
+    "description": "Planes de un solo pago según la profundidad de investigación: Standard para una decisión, Professional para trabajo profundo multi-ciudad y revisión, Research Pass para un plan de mudanza completo. Elige Plus cuando las fechas y la lista corta siguen cambiando y necesitas volver al timing.",
     "disclaimer": "⚠️ **Importante**: La IA solo analiza ciudades en tus líneas planetarias. No especulará sobre ciudades fuera de tu carta. Los resultados son solo de referencia.",
     "groups": [
       {
@@ -27,17 +27,17 @@
     "items": [
       {
         "title": "Plan Estándar",
-        "description": "Ideal para una decisión enfocada — compara ciudades y elige a dónde ir a continuación.",
+        "description": "Lectura clara — una decisión concreta: compara ciudades y elige el siguiente paso.",
         "group": "one-time",
-        "label": "Más popular",
+        "label": "Una decisión",
         "features_title": "Qué obtienes",
         "features": [
-          "150 créditos IA — unas 15 conversaciones o 3 informes completos de comparación de ciudades",
-          "Uso típico: 1 comparación completa de ciudad (50) + 10 preguntas de seguimiento (100)",
-          "Vista previa de 30 días para tu proyecto de investigación guardado",
-          "Descarga mapas (PNG) y exporta el chat actual (TXT)",
-          "Sugerencias de seguimiento de IA después de cada respuesta",
-          "Los créditos nunca expiran — paga una vez, sin renovación automática"
+          "150 créditos — nunca caducan",
+          "Suficiente para una primera ronda completa de investigación (comparación de ciudades + seguimientos)",
+          "Vista previa de timing de 30 días para tu proyecto guardado",
+          "Descargar mapas (PNG) y exportar el chat actual (TXT)",
+          "Sugerencias de seguimiento de la IA tras cada respuesta",
+          "Pago único — sin renovación automática"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -47,7 +47,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": false,
-        "tip": "Perfecto para una decisión de mudanza — suficientes créditos para una primera ronda completa de investigación.",
+        "tip": "Elige esto para una decisión clara. ¿Necesitas revisión multi-ciudad o historial permanente? Mira Professional.",
         "switch_group": "subscription",
         "switch_group_label": "O obtén Plus desde $7.9/mes →",
         "button": {
@@ -58,23 +58,24 @@
         "product_id": "standard",
         "product_name": "Plan Estándar - Válido para siempre",
         "credits": 150,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Lectura clara"
       },
       {
         "title": "Plan Profesional",
-        "description": "Ideal para investigación profunda de múltiples ciudades y revisiones de decisiones repetidas.",
+        "description": "Lectura profunda — trabajo detallado multi-ciudad con revisión y registros duraderos.",
         "group": "one-time",
         "label": "Recomendado",
         "features_title": "Todo en Estándar, además",
         "features": [
-          "500 créditos IA — unas 50 conversaciones o 10 informes completos de comparación de ciudades",
-          "Uso típico: 4 comparaciones completas de ciudades + 30 preguntas de seguimiento",
-          "⭐ Historial de chat permanente — revisa y reexporta sesiones pasadas",
-          "⭐ Análisis avanzado de líneas planetarias (Chiron, Lilith, puntos medios)",
-          "Resultados completos de 30 días (sin limitación de vista previa)",
-          "Descarga mapas (PNG) y exporta el chat actual (TXT)",
-          "Sugerencias de seguimiento de IA después de cada respuesta",
-          "Los créditos nunca expiran — paga una vez, sin renovación automática"
+          "Todo lo de Standard",
+          "500 créditos — nunca caducan — para varias rondas de comparación y seguimientos",
+          "⭐ Historial de chat permanente — revisar y reexportar entre sesiones",
+          "⭐ Análisis avanzado de líneas planetarias (Chiron, Lilith, puntos medios y más)",
+          "⭐ Resultados completos de timing de 30 días (sin límite de vista previa)",
+          "Descargar mapas (PNG) y exportar el chat actual (TXT)",
+          "Sugerencias de seguimiento de la IA tras cada respuesta",
+          "Pago único — sin renovación automática"
         ],
         "interval": "one-time",
         "amount": 1990,
@@ -95,23 +96,23 @@
         "product_id": "professional",
         "product_name": "Plan Profesional - Válido para siempre",
         "credits": 500,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Lectura profunda"
       },
       {
         "title": "Pase de Investigación",
-        "description": "Un pase único para investigación activa de mudanza cuando tus fechas y lista corta aún cambian.",
+        "description": "Evaluación de mudanza — para fechas y listas cortas que siguen cambiando en un plan de mudanza completo.",
         "group": "one-time",
-        "label": "Mejor valor",
+        "label": "Investigación de mudanza",
         "features_title": "Todo en Profesional, además",
         "features": [
-          "1000 créditos IA — unas 100 conversaciones o 20 informes completos de comparación de ciudades",
-          "Uso típico: 8 comparaciones completas de ciudades + 60 preguntas de seguimiento",
-          "⭐ Resultados completos de 90 días (para siempre, no solo durante la suscripción)",
-          "⭐ Guarda hasta 5 proyectos de investigación lado a lado",
-          "⭐ Exporta por lotes múltiples sesiones de chat como archivos TXT",
-          "⭐ Soporte prioritario por correo (respuesta en 24 horas)",
-          "Todas las funciones de Profesional incluidas",
-          "Los créditos nunca expiran — paga una vez, sin renovación automática"
+          "Todo lo de Professional",
+          "1000 créditos — nunca caducan — cupo amplio de investigación",
+          "⭐ Ventanas de timing de 90 días completas (permanentes — no ligadas a suscripción)",
+          "⭐ Guardar hasta 5 proyectos de investigación a la vez",
+          "⭐ Exportar varios chats en lote como TXT",
+          "⭐ Soporte prioritario por email (respuesta en 24 horas)",
+          "Pago único — sin renovación automática"
         ],
         "interval": "one-time",
         "amount": 2990,
@@ -132,7 +133,8 @@
         "product_id": "research-pass",
         "product_name": "Pase de Investigación - Válido para siempre",
         "credits": 1000,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Evaluación de mudanza"
       },
       {
         "title": "Plus Mensual",
@@ -142,13 +144,13 @@
         "label": "Seguimiento continuo",
         "features_title": "Qué obtienes cada mes",
         "features": [
-          "150 créditos cada mes — unas 15 conversaciones o 3 informes completos de comparación de ciudades",
-          "Resultados completos de 30 días para cada ciudad guardada",
-          "Desbloquea ventanas de 90 días mientras Plus está activo",
-          "1 proyecto de investigación guardado",
-          "Descarga mapas (PNG) y exporta el chat actual (TXT)",
-          "Sugerencias de seguimiento de IA después de cada respuesta",
-          "Los créditos se renuevan mensualmente — cancela cuando quieras"
+          "150 créditos renovados cada mes",
+          "Timing completo de 30 días para cada ciudad guardada",
+          "Ventanas de timing de 90 días mientras Plus esté activo",
+          "Guardar 1 proyecto de investigación",
+          "Descargar mapas (PNG) y exportar el chat actual (TXT)",
+          "Sugerencias de seguimiento de la IA tras cada respuesta",
+          "Cancela renovaciones futuras en cualquier momento"
         ],
         "interval": "month",
         "amount": 790,
@@ -178,13 +180,13 @@
         "label": "Ahorra ~34%",
         "features_title": "Todo en Plus Mensual",
         "features": [
-          "150 créditos cada mes — unas 15 conversaciones o 3 informes completos de comparación de ciudades",
-          "Resultados completos de 30 días para cada ciudad guardada",
-          "Desbloquea ventanas de 90 días mientras Plus está activo",
-          "1 proyecto de investigación guardado",
-          "Descarga mapas (PNG) y exporta el chat actual (TXT)",
-          "Sugerencias de seguimiento de IA después de cada respuesta",
-          "Facturado anualmente — cancela las renovaciones futuras en cualquier momento"
+          "150 créditos renovados cada mes",
+          "Timing completo de 30 días para cada ciudad guardada",
+          "Ventanas de timing de 90 días mientras Plus esté activo",
+          "Guardar 1 proyecto de investigación",
+          "Descargar mapas (PNG) y exportar el chat actual (TXT)",
+          "Sugerencias de seguimiento de la IA tras cada respuesta",
+          "Facturación anual — cancela renovaciones futuras en cualquier momento"
         ],
         "interval": "year",
         "amount": 7100,
@@ -216,20 +218,20 @@
     "description": "Everything you need to know about credits, plans, refunds, and what each tier unlocks.",
     "items": [
       {
-        "title": "Which plan should I pick?",
-        "description": "If you have one focused decision (e.g., \"should I move to Lisbon or Barcelona?\"), Standard at $9.9 is enough. If you're comparing 3-5 cities or want permanent chat history, choose Professional at $19.9. If you're planning an entire relocation year with multiple candidate cities, Research Pass at $29.9 unlocks 90-day timing and up to 5 saved projects. If you want to keep tracking cities as your plans change, Plus Monthly at $7.9 is the most flexible option."
+        "title": "¿Qué plan debo elegir?",
+        "description": "Para una decisión concreta (p. ej. Lisboa vs Barcelona), elige Standard a $9.9. Para investigación multi-ciudad con historial permanente y análisis de líneas más profundo, elige Professional a $19.9. Para un plan de mudanza completo con varios candidatos, Research Pass a $29.9 desbloquea timing de 90 días permanente y hasta 5 proyectos. Si fechas y listas cortas siguen cambiando, Plus Monthly a $7.9 es la opción flexible."
       },
       {
-        "title": "How much can I do with 150, 500, or 1000 credits?",
-        "description": "Roughly: 1 AI chat = 10 credits, 1 full city comparison report = 50 credits. So 150 credits ≈ 15 chats or 3 city comparisons. 500 credits ≈ 50 chats or 10 comparisons. 1000 credits ≈ 100 chats or 20 comparisons. A typical first round of research (1 full city comparison + 10 follow-ups) costs about 150 credits."
+        "title": "¿Cómo se consumen los créditos?",
+        "description": "Uso: 1 chat de IA = 10 créditos; 1 informe completo de comparación de ciudades = 50 créditos. Elige según la profundidad — Standard alcanza para una primera ronda; Professional y Research Pass aportan más cupo más historial, líneas avanzadas y timing de 90 días. Compara planes por capacidades, no por estimaciones de número de chats."
       },
       {
-        "title": "Do credits expire?",
-        "description": "No — all credits from Standard, Professional, and Research Pass are valid forever. You can take your time, save your research, and come back months later. Plus subscription credits refresh every month while you're subscribed, and any unused monthly credits do not roll over."
+        "title": "¿Cómo se consumen los créditos?",
+        "description": "Uso: 1 chat de IA = 10 créditos; 1 informe completo de comparación de ciudades = 50 créditos. Elige según la profundidad — Standard alcanza para una primera ronda; Professional y Research Pass aportan más cupo más historial, líneas avanzadas y timing de 90 días. Compara planes por capacidades, no por estimaciones de número de chats."
       },
       {
-        "title": "What's the difference between Standard and Professional?",
-        "description": "Standard ($9.9, 150 credits) is for a single focused decision. Professional ($19.9, 500 credits) adds 3.3× more credits plus two exclusive features: (1) ⭐ permanent chat history — revisit and re-export past sessions from your account, and (2) ⭐ advanced planetary line analysis including Chiron, Lilith, and midpoint work. If you only need the AI chat once, Standard is enough. If you'll come back to your research or want deeper chart work, Professional pays off quickly."
+        "title": "¿Cuál es la diferencia entre Standard y Professional?",
+        "description": "Standard ($9.9, 150 créditos) es para una decisión focalizada. Professional ($19.9, 500 créditos) añade más cupo y capacidades exclusivas: (1) ⭐ historial de chat permanente; (2) ⭐ análisis avanzado de líneas planetarias incl. Chiron, Lilith y puntos medios; (3) ⭐ resultados completos de timing de 30 días. Una decisión → Standard. Revisión continua o trabajo más profundo → Professional."
       },
       {
         "title": "Plus Monthly vs Plus Yearly — which should I pick?",
@@ -240,8 +242,8 @@
         "description": "Your saved projects and shortlist are kept in your account. However, after cancellation: 90-day timing windows become read-only, monthly credit refresh stops, and you fall back to the entitlements of your last one-time purchase (if any). Standard users keep their credits and 30-day timing preview. To get 90-day timing permanently, buy the Research Pass instead of subscribing."
       },
       {
-        "title": "What does the Research Pass include that Professional doesn't?",
-        "description": "Research Pass adds 4 exclusive features on top of everything in Professional: (1) ⭐ permanent 90-day timing access (not just while subscribed), (2) ⭐ save up to 5 research projects side by side, (3) ⭐ batch export multiple chat sessions as TXT files at once, and (4) ⭐ priority email support with 24-hour response time. Plus you get 1000 credits (2× Professional) for serious research volume."
+        "title": "¿Qué incluye Research Pass que Professional no?",
+        "description": "Research Pass añade sobre Professional: (1) ⭐ timing de 90 días permanente; (2) ⭐ hasta 5 proyectos guardados; (3) ⭐ exportación por lotes de varios chats; (4) ⭐ soporte prioritario por email (respuesta en 24 horas). También incluye un cupo de investigación mayor para planificación seria de mudanza."
       },
       {
         "title": "What is your refund policy?",

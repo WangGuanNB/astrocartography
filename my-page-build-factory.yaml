@@ -33,6 +33,12 @@ analytics:
     property_id: "513310501"
     measurement_id: "G-322DZP4F8E"
     domain: "astrocarto.org"
+    # Event-scoped custom dimension (Admin API / GA4 UI). Event param: plan_id.
+    # Used to break down pricing_plan_viewed / pricing_buy_clicked / payment_* / purchase by SKU.
+    custom_dimensions:
+      - parameter_name: plan_id
+        display_name: Plan ID
+        scope: EVENT
 
 site:
   # 网站/产品名称

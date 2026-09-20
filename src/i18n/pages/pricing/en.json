@@ -3,7 +3,7 @@
     "name": "pricing",
     "label": "Pricing",
     "title": "Choose Your Research Plan",
-    "description": "One-time plans for focused research, or Plus to keep tracking your cities and timing as plans change.",
+    "description": "One-time plans by research depth: Standard for one decision, Professional for multi-city deep work and review, Research Pass for a full relocation plan. Choose Plus when dates and shortlists keep changing and you need to revisit timing.",
     "disclaimer": "⚠️ **Important**: AI only analyzes cities on your planetary lines. It will not speculate about cities not in your chart. Results are for reference only.",
     "groups": [
       {
@@ -58,17 +58,17 @@
       },
       {
         "title": "Standard Plan",
-        "description": "Best for one focused decision — compare cities and choose where to go next.",
+        "description": "Clear Reading — one focused decision: compare cities and choose where to go next.",
         "group": "one-time",
-        "label": "Most Popular",
+        "label": "One Decision",
         "features_title": "What you get",
         "features": [
-          "150 AI credits — about 15 chats or 3 city comparison reports",
-          "Typical use: 1 full city comparison (50) + 10 follow-up questions (100)",
+          "150 credits — never expire",
+          "Enough for a complete first round of research (city comparison + follow-ups)",
           "30-day timing preview for your saved research project",
           "Download maps (PNG) & export current chat (TXT)",
           "AI follow-up suggestions after every answer",
-          "Credits never expire — pay once, no auto-renewal"
+          "Pay once — no auto-renewal"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -78,7 +78,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": false,
-        "tip": "Perfect for one relocation decision — enough credits for a complete first round of research.",
+        "tip": "Choose this for one clear decision. Need multi-city review or permanent history? See Professional.",
         "switch_group": "subscription",
         "switch_group_label": "Or get Plus from $7.9/mo →",
         "button": {
@@ -89,23 +89,24 @@
         "product_id": "standard",
         "product_name": "Standard Plan - Valid Forever",
         "credits": 150,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Clear Reading"
       },
       {
         "title": "Professional Plan",
-        "description": "Best for deep multi-city research and repeated decision reviews.",
+        "description": "Deep Reading — multi-city detail work with review and lasting records.",
         "group": "one-time",
         "label": "Recommended",
         "features_title": "Everything in Standard, plus",
         "features": [
-          "500 AI credits — about 50 chats or 10 city comparison reports",
-          "Typical use: 4 full city comparisons + 30 follow-up questions",
-          "⭐ Permanent chat history — review & re-export past sessions",
-          "⭐ Advanced planetary line analysis (Chiron, Lilith, midpoints)",
-          "Full 30-day timing results (no preview limitation)",
+          "Everything in Standard",
+          "500 credits — never expire — for multiple comparison rounds and follow-ups",
+          "⭐ Permanent chat history — revisit and re-export across sessions",
+          "⭐ Advanced planetary line analysis (Chiron, Lilith, midpoints, and more)",
+          "⭐ Full 30-day timing results (not preview-limited)",
           "Download maps (PNG) & export current chat (TXT)",
           "AI follow-up suggestions after every answer",
-          "Credits never expire — pay once, no auto-renewal"
+          "Pay once — no auto-renewal"
         ],
         "interval": "one-time",
         "amount": 1990,
@@ -126,23 +127,23 @@
         "product_id": "professional",
         "product_name": "Professional Plan - Valid Forever",
         "credits": 500,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Deep Reading"
       },
       {
         "title": "Research Pass",
-        "description": "A one-time pass for active relocation research when your dates and shortlist still change.",
+        "description": "Relocation Assessment — for shifting dates and shortlists across a full move plan.",
         "group": "one-time",
-        "label": "Best Value",
+        "label": "Relocation Research",
         "features_title": "Everything in Professional, plus",
         "features": [
-          "1000 AI credits — about 100 chats or 20 city comparison reports",
-          "Typical use: 8 full city comparisons + 60 follow-up questions",
-          "⭐ Full 90-day timing (kept forever, not just while subscribed)",
+          "Everything in Professional",
+          "1000 credits — never expire — high-volume research allowance",
+          "⭐ Full 90-day timing windows (permanent — not tied to a subscription)",
           "⭐ Save up to 5 research projects side by side",
-          "⭐ Batch export multiple chat sessions as TXT files",
-          "⭐ Priority email support (24-hour response)",
-          "All Professional features included",
-          "Credits never expire — pay once, no auto-renewal"
+          "⭐ Batch-export multiple chats as TXT",
+          "⭐ Priority email support (reply within 24 hours)",
+          "Pay once — no auto-renewal"
         ],
         "interval": "one-time",
         "amount": 2990,
@@ -163,7 +164,8 @@
         "product_id": "research-pass",
         "product_name": "Research Pass - Valid Forever",
         "credits": 1000,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Relocation Assessment"
       },
       {
         "title": "Plus Monthly",
@@ -173,13 +175,13 @@
         "label": "Ongoing Tracking",
         "features_title": "What you get each month",
         "features": [
-          "150 credits every month — about 15 chats or 3 city comparisons",
-          "Full 30-day timing results for every saved city",
-          "Unlock 90-day timing windows while Plus is active",
-          "1 saved research project",
+          "150 credits refreshed every month",
+          "Full 30-day timing for each saved city",
+          "90-day timing windows while Plus is active",
+          "Save 1 research project",
           "Download maps (PNG) & export current chat (TXT)",
           "AI follow-up suggestions after every answer",
-          "Credits refresh monthly — cancel anytime"
+          "Cancel future renewals anytime"
         ],
         "interval": "month",
         "amount": 790,
@@ -209,10 +211,10 @@
         "label": "Save ~34%",
         "features_title": "Everything in Plus Monthly",
         "features": [
-          "150 credits every month — about 15 chats or 3 city comparisons",
-          "Full 30-day timing results for every saved city",
-          "Unlock 90-day timing windows while Plus is active",
-          "1 saved research project",
+          "150 credits refreshed every month",
+          "Full 30-day timing for each saved city",
+          "90-day timing windows while Plus is active",
+          "Save 1 research project",
           "Download maps (PNG) & export current chat (TXT)",
           "AI follow-up suggestions after every answer",
           "Billed yearly — cancel future renewals anytime"
@@ -248,11 +250,11 @@
     "items": [
       {
         "title": "Which plan should I pick?",
-        "description": "If you have one focused decision (e.g., \"should I move to Lisbon or Barcelona?\"), Standard at $9.9 is enough. If you're comparing 3-5 cities or want permanent chat history, choose Professional at $19.9. If you're planning an entire relocation year with multiple candidate cities, Research Pass at $29.9 unlocks 90-day timing and up to 5 saved projects. If you want to keep tracking cities as your plans change, Plus Monthly at $7.9 is the most flexible option."
+        "description": "For one focused decision (e.g. Lisbon vs Barcelona), choose Standard at $9.9. For multi-city research with permanent chat history and deeper line analysis, choose Professional at $19.9. For a full relocation plan with multiple candidates, Research Pass at $29.9 unlocks permanent 90-day timing and up to 5 saved projects. If dates and shortlists keep changing, Plus Monthly at $7.9 is the flexible option."
       },
       {
         "title": "How much can I do with 150, 500, or 1000 credits?",
-        "description": "Roughly: 1 AI chat = 10 credits, 1 full city comparison report = 50 credits. So 150 credits ≈ 15 chats or 3 city comparisons. 500 credits ≈ 50 chats or 10 comparisons. 1000 credits ≈ 100 chats or 20 comparisons. A typical first round of research (1 full city comparison + 10 follow-ups) costs about 150 credits."
+        "description": "How credits are used: 1 AI chat = 10 credits; 1 full city comparison report = 50 credits. Pick by research depth — Standard is sized for a first research round; Professional and Research Pass add larger allowances plus history, advanced lines, and 90-day timing. Compare plans by capabilities, not by chat-count estimates."
       },
       {
         "title": "Do credits expire?",
@@ -260,7 +262,7 @@
       },
       {
         "title": "What's the difference between Standard and Professional?",
-        "description": "Standard ($9.9, 150 credits) is for a single focused decision. Professional ($19.9, 500 credits) adds 3.3× more credits plus two exclusive features: (1) ⭐ permanent chat history — revisit and re-export past sessions from your account, and (2) ⭐ advanced planetary line analysis including Chiron, Lilith, and midpoint work. If you only need the AI chat once, Standard is enough. If you'll come back to your research or want deeper chart work, Professional pays off quickly."
+        "description": "Standard ($9.9, 150 credits) is for one focused decision. Professional ($19.9, 500 credits) adds a larger allowance plus exclusive capabilities: (1) ⭐ permanent chat history — revisit and re-export past sessions; (2) ⭐ advanced planetary line analysis including Chiron, Lilith, and midpoints; (3) ⭐ full 30-day timing results. One decision → Standard. Ongoing review or deeper chart work → Professional."
       },
       {
         "title": "Plus Monthly vs Plus Yearly — which should I pick?",
@@ -272,7 +274,7 @@
       },
       {
         "title": "What does the Research Pass include that Professional doesn't?",
-        "description": "Research Pass adds 4 exclusive features on top of everything in Professional: (1) ⭐ permanent 90-day timing access (not just while subscribed), (2) ⭐ save up to 5 research projects side by side, (3) ⭐ batch export multiple chat sessions as TXT files at once, and (4) ⭐ priority email support with 24-hour response time. Plus you get 1000 credits (2× Professional) for serious research volume."
+        "description": "Research Pass adds exclusive capabilities on top of Professional: (1) ⭐ permanent 90-day timing (not subscription-limited); (2) ⭐ up to 5 saved research projects; (3) ⭐ batch-export multiple chats; (4) ⭐ priority email support (24-hour reply). It also includes a larger research allowance for serious relocation planning."
       },
       {
         "title": "What is your refund policy?",

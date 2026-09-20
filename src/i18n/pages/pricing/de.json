@@ -3,7 +3,7 @@
     "name": "pricing",
     "label": "Preise",
     "title": "Wählen Sie Ihren Recherche-Plan",
-    "description": "Einmalzahlung für eine fokussierte Recherche oder Plus, um Städte und Zeitfenster bei Planänderungen weiterzuverfolgen.",
+    "description": "Einmalpläne nach Forschungstiefe: Standard für eine Entscheidung, Professional für Multi-City-Tiefenarbeit und Review, Research Pass für einen kompletten Umzugsplan. Plus wählen, wenn Daten und Shortlists sich weiter ändern und Timing erneut geprüft werden muss.",
     "disclaimer": "⚠️ **Wichtig**: Die KI analysiert nur Städte auf Ihren Planetenlinien. Sie spekuliert nicht über Städte außerhalb Ihres Charts. Ergebnisse nur zur Orientierung.",
     "groups": [
       {
@@ -58,17 +58,17 @@
       },
       {
         "title": "Standard-Plan",
-        "description": "Ideal für eine fokussierte Entscheidung — Städte vergleichen und wählen, wohin es als nächstes geht.",
+        "description": "Klare Deutung — eine klare Entscheidung: Städte vergleichen und den nächsten Schritt wählen.",
         "group": "one-time",
-        "label": "Am beliebtesten",
+        "label": "Eine Entscheidung",
         "features_title": "Was Sie erhalten",
         "features": [
-          "150 KI-Credits — ca. 15 Chats oder 3 vollständige Stadtvergleichsberichte",
-          "Typische Nutzung: 1 vollständiger Stadtvergleich (50) + 10 Folgefragen (100)",
-          "30-Tage-Vorschau für Ihr gespeichertes Forschungsprojekt",
+          "150 Credits — verfallen nie",
+          "Genug für eine komplette erste Forschungsrunde (Stadtvergleich + Folgefragen)",
+          "30-Tage-Timing-Vorschau für Ihr gespeichertes Forschungsprojekt",
           "Karten herunterladen (PNG) & aktuellen Chat exportieren (TXT)",
-          "KI-Vorschläge für Folgefragen nach jeder Antwort",
-          "Credits verfallen nie — einmal zahlen, keine automatische Verlängerung"
+          "KI-Folgefragen nach jeder Antwort",
+          "Einmal zahlen — keine automatische Verlängerung"
         ],
         "interval": "one-time",
         "amount": 990,
@@ -78,7 +78,7 @@
         "original_price": "",
         "unit": "",
         "is_featured": false,
-        "tip": "Perfekt für eine Umzugsentscheidung — genug Credits für eine komplette erste Rechercherunde.",
+        "tip": "Wählen Sie dies für eine klare Entscheidung. Brauchen Sie Multi-City-Review oder dauerhafte Historie? Siehe Professional.",
         "switch_group": "subscription",
         "switch_group_label": "Oder Plus ab $7.9/Mo →",
         "button": {
@@ -89,23 +89,24 @@
         "product_id": "standard",
         "product_name": "Standard-Plan - Für immer gültig",
         "credits": 150,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Klare Deutung"
       },
       {
         "title": "Professional-Plan",
-        "description": "Ideal für tiefgehende Multi-City-Recherche und wiederholte Entscheidungsprüfungen.",
+        "description": "Tiefe Deutung — Multi-City-Detailarbeit mit Review und dauerhaften Aufzeichnungen.",
         "group": "one-time",
         "label": "Empfohlen",
         "features_title": "Alles im Standard, plus",
         "features": [
-          "500 KI-Credits — ca. 50 Chats oder 10 vollständige Stadtvergleichsberichte",
-          "Typische Nutzung: 4 vollständige Stadtvergleiche + 30 Folgefragen",
-          "⭐ Permanenter Chat-Verlauf — vergangene Sitzungen ansehen & neu exportieren",
-          "⭐ Erweiterte Planetenlinien-Analyse (Chiron, Lilith, Mittelpunkte)",
-          "Volle 30-Tage-Ergebnisse (keine Vorschau-Beschränkung)",
+          "Alles aus Standard",
+          "500 Credits — verfallen nie — für mehrere Vergleichsrunden und Folgefragen",
+          "⭐ Dauerhafte Chat-Historie — Sitzungen erneut öffnen und exportieren",
+          "⭐ Erweiterte Planetenlinien-Analyse (Chiron, Lilith, Mittelpunkte u. a.)",
+          "⭐ Vollständige 30-Tage-Timing-Ergebnisse (nicht nur Vorschau)",
           "Karten herunterladen (PNG) & aktuellen Chat exportieren (TXT)",
-          "KI-Vorschläge für Folgefragen nach jeder Antwort",
-          "Credits verfallen nie — einmal zahlen, keine automatische Verlängerung"
+          "KI-Folgefragen nach jeder Antwort",
+          "Einmal zahlen — keine automatische Verlängerung"
         ],
         "interval": "one-time",
         "amount": 1990,
@@ -126,23 +127,23 @@
         "product_id": "professional",
         "product_name": "Professional-Plan - Für immer gültig",
         "credits": 500,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Tiefe Deutung"
       },
       {
         "title": "Research Pass",
-        "description": "Ein Einmalpass für aktive Umzugsrecherche, wenn sich Termine und Shortlist noch ändern.",
+        "description": "Umzugseinschätzung — wenn sich Daten und Shortlists ändern und ein kompletter Umzugsplan nötig ist.",
         "group": "one-time",
-        "label": "Bestes Preis-Leistungs-Verhältnis",
+        "label": "Umzugsforschung",
         "features_title": "Alles im Professional, plus",
         "features": [
-          "1000 KI-Credits — ca. 100 Chats oder 20 vollständige Stadtvergleichsberichte",
-          "Typische Nutzung: 8 vollständige Stadtvergleiche + 60 Folgefragen",
-          "⭐ Volle 90-Tage-Ergebnisse (für immer, nicht nur während des Abos)",
-          "⭐ Bis zu 5 Forschungsprojekte nebeneinander speichern",
-          "⭐ Mehrere Chat-Sitzungen als TXT-Dateien stapelweise exportieren",
-          "⭐ Priorisierter E-Mail-Support (24-Stunden-Antwort)",
-          "Alle Professional-Funktionen enthalten",
-          "Credits verfallen nie — einmal zahlen, keine automatische Verlängerung"
+          "Alles aus Professional",
+          "1000 Credits — verfallen nie — großes Forschungskontingent",
+          "⭐ Vollständige 90-Tage-Timing-Fenster (dauerhaft — nicht an Abo gebunden)",
+          "⭐ Bis zu 5 Forschungsprojekte parallel speichern",
+          "⭐ Mehrere Chats gesammelt als TXT exportieren",
+          "⭐ Priorisierter E-Mail-Support (Antwort innerhalb von 24 Stunden)",
+          "Einmal zahlen — keine automatische Verlängerung"
         ],
         "interval": "one-time",
         "amount": 2990,
@@ -163,7 +164,8 @@
         "product_id": "research-pass",
         "product_name": "Research Pass - Für immer gültig",
         "credits": 1000,
-        "valid_months": 0
+        "valid_months": 0,
+        "eyebrow": "Umzugseinschätzung"
       },
       {
         "title": "Plus Monatlich",
@@ -173,13 +175,13 @@
         "label": "Laufende Verfolgung",
         "features_title": "Was Sie jeden Monat erhalten",
         "features": [
-          "150 Credits jeden Monat — ca. 15 Chats oder 3 vollständige Stadtvergleichsberichte",
-          "Volle 30-Tage-Ergebnisse für jede gespeicherte Stadt",
-          "90-Tage-Fenster freischalten, während Plus aktiv ist",
-          "1 gespeichertes Forschungsprojekt",
+          "150 Credits jeden Monat erneuert",
+          "Vollständiges 30-Tage-Timing für jede gespeicherte Stadt",
+          "90-Tage-Timing-Fenster solange Plus aktiv ist",
+          "1 Forschungsprojekt speichern",
           "Karten herunterladen (PNG) & aktuellen Chat exportieren (TXT)",
-          "KI-Vorschläge für Folgefragen nach jeder Antwort",
-          "Credits werden monatlich aufgefüllt — jederzeit kündbar"
+          "KI-Folgefragen nach jeder Antwort",
+          "Zukünftige Verlängerungen jederzeit kündbar"
         ],
         "interval": "month",
         "amount": 790,
@@ -209,13 +211,13 @@
         "label": "Sparen Sie ~34%",
         "features_title": "Alles in Plus Monatlich",
         "features": [
-          "150 Credits jeden Monat — ca. 15 Chats oder 3 vollständige Stadtvergleichsberichte",
-          "Volle 30-Tage-Ergebnisse für jede gespeicherte Stadt",
-          "90-Tage-Fenster freischalten, während Plus aktiv ist",
-          "1 gespeichertes Forschungsprojekt",
+          "150 Credits jeden Monat erneuert",
+          "Vollständiges 30-Tage-Timing für jede gespeicherte Stadt",
+          "90-Tage-Timing-Fenster solange Plus aktiv ist",
+          "1 Forschungsprojekt speichern",
           "Karten herunterladen (PNG) & aktuellen Chat exportieren (TXT)",
-          "KI-Vorschläge für Folgefragen nach jeder Antwort",
-          "Jährlich abgerechnet — künftige Verlängerungen jederzeit kündbar"
+          "KI-Folgefragen nach jeder Antwort",
+          "Jährliche Abrechnung — zukünftige Verlängerungen jederzeit kündbar"
         ],
         "interval": "year",
         "amount": 7100,
@@ -247,20 +249,20 @@
     "description": "Everything you need to know about credits, plans, refunds, and what each tier unlocks.",
     "items": [
       {
-        "title": "Which plan should I pick?",
-        "description": "If you have one focused decision (e.g., \"should I move to Lisbon or Barcelona?\"), Standard at $9.9 is enough. If you're comparing 3-5 cities or want permanent chat history, choose Professional at $19.9. If you're planning an entire relocation year with multiple candidate cities, Research Pass at $29.9 unlocks 90-day timing and up to 5 saved projects. If you want to keep tracking cities as your plans change, Plus Monthly at $7.9 is the most flexible option."
+        "title": "Welchen Plan soll ich wählen?",
+        "description": "Für eine klare Einzelentscheidung (z. B. Lissabon vs. Barcelona) wählen Sie Standard für $9.9. Für Multi-City-Forschung mit dauerhafter Chat-Historie und tieferer Linienanalyse wählen Sie Professional für $19.9. Für einen kompletten Umzugsplan mit mehreren Kandidaten schaltet Research Pass für $29.9 dauerhaftes 90-Tage-Timing und bis zu 5 Projekte frei. Wenn sich Daten und Shortlists weiter ändern, ist Plus Monthly für $7.9 die flexible Option."
       },
       {
-        "title": "How much can I do with 150, 500, or 1000 credits?",
-        "description": "Roughly: 1 AI chat = 10 credits, 1 full city comparison report = 50 credits. So 150 credits ≈ 15 chats or 3 city comparisons. 500 credits ≈ 50 chats or 10 comparisons. 1000 credits ≈ 100 chats or 20 comparisons. A typical first round of research (1 full city comparison + 10 follow-ups) costs about 150 credits."
+        "title": "Wie werden Credits verbraucht?",
+        "description": "Verbrauch: 1 KI-Chat = 10 Credits; 1 vollständiger Stadtvergleichsbericht = 50 Credits. Wählen Sie nach Forschungstiefe — Standard reicht für eine erste Runde; Professional und Research Pass bieten größeres Kontingent plus Historie, erweiterte Linien und 90-Tage-Timing. Vergleichen Sie Pläne nach Fähigkeiten, nicht nach geschätzter Chat-Anzahl."
       },
       {
-        "title": "Do credits expire?",
-        "description": "No — all credits from Standard, Professional, and Research Pass are valid forever. You can take your time, save your research, and come back months later. Plus subscription credits refresh every month while you're subscribed, and any unused monthly credits do not roll over."
+        "title": "Wie werden Credits verbraucht?",
+        "description": "Verbrauch: 1 KI-Chat = 10 Credits; 1 vollständiger Stadtvergleichsbericht = 50 Credits. Wählen Sie nach Forschungstiefe — Standard reicht für eine erste Runde; Professional und Research Pass bieten größeres Kontingent plus Historie, erweiterte Linien und 90-Tage-Timing. Vergleichen Sie Pläne nach Fähigkeiten, nicht nach geschätzter Chat-Anzahl."
       },
       {
-        "title": "What's the difference between Standard and Professional?",
-        "description": "Standard ($9.9, 150 credits) is for a single focused decision. Professional ($19.9, 500 credits) adds 3.3× more credits plus two exclusive features: (1) ⭐ permanent chat history — revisit and re-export past sessions from your account, and (2) ⭐ advanced planetary line analysis including Chiron, Lilith, and midpoint work. If you only need the AI chat once, Standard is enough. If you'll come back to your research or want deeper chart work, Professional pays off quickly."
+        "title": "Was ist der Unterschied zwischen Standard und Professional?",
+        "description": "Standard ($9.9, 150 Credits) ist für eine fokussierte Entscheidung. Professional ($19.9, 500 Credits) bietet mehr Kontingent und exklusive Fähigkeiten: (1) ⭐ dauerhafte Chat-Historie; (2) ⭐ erweiterte Planetenlinien-Analyse inkl. Chiron, Lilith und Mittelpunkte; (3) ⭐ vollständige 30-Tage-Timing-Ergebnisse. Eine Entscheidung → Standard. Laufendes Review oder tiefere Chart-Arbeit → Professional."
       },
       {
         "title": "Plus Monthly vs Plus Yearly — which should I pick?",
@@ -271,8 +273,8 @@
         "description": "Your saved projects and shortlist are kept in your account. However, after cancellation: 90-day timing windows become read-only, monthly credit refresh stops, and you fall back to the entitlements of your last one-time purchase (if any). Standard users keep their credits and 30-day timing preview. To get 90-day timing permanently, buy the Research Pass instead of subscribing."
       },
       {
-        "title": "What does the Research Pass include that Professional doesn't?",
-        "description": "Research Pass adds 4 exclusive features on top of everything in Professional: (1) ⭐ permanent 90-day timing access (not just while subscribed), (2) ⭐ save up to 5 research projects side by side, (3) ⭐ batch export multiple chat sessions as TXT files at once, and (4) ⭐ priority email support with 24-hour response time. Plus you get 1000 credits (2× Professional) for serious research volume."
+        "title": "Was enthält der Research Pass zusätzlich zu Professional?",
+        "description": "Research Pass ergänzt Professional um: (1) ⭐ dauerhaftes 90-Tage-Timing; (2) ⭐ bis zu 5 gespeicherte Projekte; (3) ⭐ Batch-Export mehrerer Chats; (4) ⭐ priorisierten E-Mail-Support (Antwort in 24 Stunden). Dazu ein größeres Forschungskontingent für ernsthafte Umzugsplanung."
       },
       {
         "title": "What is your refund policy?",

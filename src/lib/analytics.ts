@@ -556,6 +556,7 @@ export const paymentEvents = {
       plan_name: planName,
       plan_price: planPrice,
       plan_id: planId,
+      product_id: planId,
       event_category: 'Payment',
       event_label: planName,
       value: planPrice, // 用于 GA4 的货币价值追踪
@@ -574,6 +575,7 @@ export const paymentEvents = {
       plan_name: planName,
       plan_price: planPrice,
       plan_id: planId,
+      product_id: planId,
       event_category: 'Payment',
       event_label: 'Payment Started',
       value: planPrice,
@@ -599,6 +601,8 @@ export const paymentEvents = {
       transaction_id: transactionId || `plan_${planId}_${Date.now()}`,
       value: planPrice,
       currency: 'USD',
+      plan_id: planId,
+      product_id: planId,
       items: [
         {
           item_id: planId,
@@ -629,6 +633,7 @@ export const paymentEvents = {
       plan_name: planName,
       plan_price: planPrice,
       plan_id: planId,
+      product_id: planId,
       error_reason: errorReason || 'unknown',
       event_category: 'Payment',
       event_label: 'Payment Failed',
