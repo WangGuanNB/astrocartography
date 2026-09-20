@@ -1143,6 +1143,18 @@
         "dofollow": true
       },
       {
+        "title": "AI Directories Badge",
+        "url": "https://www.aidirectori.es",
+        "target": "_blank",
+        "dofollow": true,
+        "image": {
+          "src": "https://cdn.aidirectori.es/ai-tools/badges/dark-mode.png",
+          "alt": "AI Directories Badge",
+          "width": 200,
+          "height": 54
+        }
+      },
+      {
         "title": "Featured on There's An AI For That",
         "url": "https://theresanaiforthat.com/ai/free-astrocartography-calculator-with-ai/?ref=featured&v=4854509",
         "target": "_blank",
