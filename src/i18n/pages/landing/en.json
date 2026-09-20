@@ -1135,6 +1135,12 @@
         "dofollow": true
       },
       {
+        "title": "Featured on ToolPilot",
+        "url": "https://www.toolpilot.ai",
+        "target": "_blank",
+        "dofollow": true
+      },
+      {
         "title": "Featured on There's An AI For That",
         "url": "https://theresanaiforthat.com/ai/free-astrocartography-calculator-with-ai/?ref=featured&v=4854509",
         "target": "_blank",
