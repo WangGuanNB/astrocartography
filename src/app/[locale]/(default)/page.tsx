@@ -1,9 +1,9 @@
-// 🔥 CPU 优化：将首页改为静态生成（ISR），7天重新验证
+// 首页使用静态生成（ISR），每天重新验证，避免 SEO/权益内容长期保持旧版本
 export const dynamic = 'force-static';
-export const revalidate = 604800;  // 7天缓存（内容很少变化，延长缓存降低 CPU）
+export const revalidate = 86400;  // 1天缓存
 export const dynamicParams = true;
 
-// 预生成多语言版本（ISR 优化，7天缓存）
+// 预生成多语言版本（ISR 优化，1天重新验证）
 export async function generateStaticParams() {
   return [
     { locale: 'en' },  // 英文版
