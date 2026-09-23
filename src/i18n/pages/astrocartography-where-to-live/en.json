@@ -257,5 +257,9 @@
         "variant": "outline"
       }
     ]
+  },
+  "schemaLabels": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Astrocartography Where to Live"
   }
 }

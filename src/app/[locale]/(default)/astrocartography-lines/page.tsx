@@ -10,147 +10,14 @@ import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
+import type { HubSectionContent } from "@/types/pages/landing";
 
 export const dynamic = "force-static";
 export const revalidate = 604800;
 export const dynamicParams = true;
 
 const PATH = "/astrocartography-lines";
-const LOCALES = ["en"];
-
-const navPills = [
-  { title: "Start Here", href: "#start-here", icon: "RiSparklingLine" },
-  { title: "Planets", href: "#planetary-lines", icon: "RiPlanetLine" },
-  { title: "Life Goals", href: "#life-goals", icon: "RiCompassDiscoverLine" },
-  { title: "Angles", href: "#angles", icon: "RiFocus3Line" },
-  { title: "Guide", href: "#introduce", icon: "RiQuestionLine" },
-];
-
-const startHereItems = [
-  {
-    title: "Free Astrocartography Calculator",
-    description: "Generate your personal map first, then come back to read each line with context.",
-    href: "/",
-    icon: "RiMapLine",
-  },
-  {
-    title: "Where to Live",
-    description: "Compare cities for love, career, home, growth, and relocation decisions.",
-    href: "/astrocartography-where-to-live",
-    icon: "RiHomeHeartLine",
-  },
-  {
-    title: "Relocation Chart",
-    description: "Check one target city with a relocated chart after you shortlist locations.",
-    href: "/relocation-chart-calculator",
-    icon: "RiFlightTakeoffLine",
-  },
-];
-
-const planetaryLineItems = [
-  {
-    title: "Sun Line",
-    description: "Visibility, confidence, leadership, and identity.",
-    href: "/sun-line-astrocartography",
-    icon: "RiSunLine",
-  },
-  {
-    title: "Moon Line",
-    description: "Home, emotional security, family, and belonging.",
-    href: "/moon-line-astrocartography",
-    icon: "RiMoonLine",
-  },
-  {
-    title: "Mercury Line",
-    description: "Communication, learning, writing, and business.",
-    href: "/mercury-line-astrocartography",
-    icon: "RiMessage3Line",
-  },
-  {
-    title: "Venus Line",
-    description: "Love, beauty, relationships, and daily ease.",
-    href: "/venus-line-astrocartography",
-    icon: "RiHeartLine",
-  },
-  {
-    title: "Mars Line",
-    description: "Drive, ambition, action, and competitive energy.",
-    href: "/mars-line-astrocartography",
-    icon: "RiFireLine",
-  },
-  {
-    title: "Jupiter Line",
-    description: "Growth, opportunity, luck, and expansion.",
-    href: "/jupiter-line-astrocartography",
-    icon: "RiStarLine",
-  },
-  {
-    title: "Saturn Line",
-    description: "Discipline, responsibility, mastery, and endurance.",
-    href: "/saturn-line-astrocartography",
-    icon: "RiShieldLine",
-  },
-  {
-    title: "Uranus Line",
-    description: "Freedom, reinvention, change, and unconventional paths.",
-    href: "/uranus-line-astrocartography",
-    icon: "RiFlashlightLine",
-  },
-];
-
-const lifeGoalItems = [
-  {
-    title: "Love & Relationships",
-    description: "Start with Venus and Moon lines when your question is about connection.",
-    href: "/venus-line-astrocartography",
-    icon: "RiHeartLine",
-  },
-  {
-    title: "Career & Success",
-    description: "Compare Sun, Jupiter, Saturn, Mercury, and Mars career themes.",
-    href: "/jupiter-line-astrocartography",
-    icon: "RiBriefcaseLine",
-  },
-  {
-    title: "Home & Belonging",
-    description: "Use Moon and Venus IC themes when you want a place to feel rooted.",
-    href: "/moon-line-astrocartography",
-    icon: "RiHome4Line",
-  },
-  {
-    title: "Growth & Challenge",
-    description: "Read Saturn, Mars, and Uranus carefully before choosing intense places.",
-    href: "/saturn-line-astrocartography",
-    icon: "RiLeafLine",
-  },
-];
-
-const angleItems = [
-  {
-    title: "ASC Lines",
-    description: "How a place affects identity, first impressions, and self-expression.",
-    href: "#angles",
-    icon: "RiCompassLine",
-  },
-  {
-    title: "DSC Lines",
-    description: "How a place activates partners, clients, and one-on-one relationships.",
-    href: "#angles",
-    icon: "RiHeartLine",
-  },
-  {
-    title: "MC Lines",
-    description: "How a place emphasizes career, public direction, and reputation.",
-    href: "#angles",
-    icon: "RiBriefcaseLine",
-  },
-  {
-    title: "IC Lines",
-    description: "How a place shapes home, family, roots, and private life.",
-    href: "#angles",
-    icon: "RiHome4Line",
-  },
-];
+const LOCALES = ["en", "zh", "pt", "es", "it", "de"];
 
 export async function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -171,7 +38,15 @@ export async function generateMetadata({
     keywords,
     alternates: {
       canonical: getCanonicalUrl(locale, PATH),
-      languages: { en: getCanonicalUrl("en", PATH) },
+      languages: {
+        en: getCanonicalUrl("en", PATH),
+        zh: getCanonicalUrl("zh", PATH),
+        pt: getCanonicalUrl("pt", PATH),
+        es: getCanonicalUrl("es", PATH),
+        it: getCanonicalUrl("it", PATH),
+        de: getCanonicalUrl("de", PATH),
+        "x-default": getCanonicalUrl("en", PATH),
+      },
     },
     openGraph: {
       title,
@@ -179,9 +54,9 @@ export async function generateMetadata({
       type: "website",
       url: getCanonicalUrl(locale, PATH),
       siteName: "Astrocartography Calculator",
-      images: [{ url: "/imgs/features/hero-web.webp", width: 1200, height: 630, alt: title }],
+      images: [{ url: "/imgs/features/planetary-lines-meaning-map.webp", width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: "summary_large_image", title, description, images: ["/imgs/features/hero-web.webp"] },
+    twitter: { card: "summary_large_image", title, description, images: ["/imgs/features/planetary-lines-meaning-map.webp"] },
     robots: {
       index: true,
       follow: true,
@@ -198,7 +73,16 @@ export default async function AstrocartographyLinesPage({
   const { locale } = await params;
   const page = await getAstrocartographyLinesPage(locale);
 
-  const h1Title = page.metadata.title.split(" - ")[0].replace(/\s+\d{4}$/, "").trim();
+  const h1Title = page.heading?.title || page.metadata.title.split(" - ")[0].replace(/\s+\d{4}$/, "").trim();
+  const hubHero = page.hubHero;
+  const navPills = page.navPills || [];
+  const hubSections = page.hubSections;
+  const comparison = page.comparison;
+  const angleGuide = page.angleGuide;
+  const readYourMap = page.readYourMap;
+  const openGuideLabel = page.hubLinkLabels?.openGuide || "Open guide";
+  const schema = page.schemaLabels;
+  const planetaryLineItems = hubSections?.planetaryLines?.items || [];
 
   return (
     <>
@@ -208,29 +92,29 @@ export default async function AstrocartographyLinesPage({
             <div className="max-w-3xl">
               <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary shadow-sm">
                 <Icon name="RiMapPinLine" className="size-4" />
-                Astrocartography Hub
+                {page.heading?.eyebrow || hubHero?.badge || "Astrocartography Hub"}
               </span>
               <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
                 {h1Title}
               </h1>
-              {page.intentAnchor && (
+              {(page.heading?.description || page.intentAnchor?.text) && (
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/78 lg:text-xl">
-                  {page.intentAnchor.text}
+                  {page.heading?.description || page.intentAnchor?.text}
                 </p>
               )}
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link
-                  href="/"
+                  href={(hubHero?.primaryCta.url || "/") as any}
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:bg-primary/90"
                 >
-                  Free Astrocartography Calculator
+                  {hubHero?.primaryCta.title || "Free Astrocartography Calculator"}
                   <Icon name="RiArrowRightLine" className="size-4" />
                 </Link>
                 <Link
-                  href="/astrocartography-where-to-live"
+                  href={(hubHero?.secondaryCta.url || "/astrocartography-where-to-live") as any}
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-primary/40 hover:bg-white/10"
                 >
-                  Find Where to Live
+                  {hubHero?.secondaryCta.title || "Find Where to Live"}
                   <Icon name="RiHomeHeartLine" className="size-4" />
                 </Link>
               </div>
@@ -239,56 +123,63 @@ export default async function AstrocartographyLinesPage({
             <div className="relative hidden overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/30 lg:block">
               <div className="relative aspect-[4/3] min-h-[280px]">
                 <Image
-                  src="/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp"
-                  alt="Astrocartography map preview with planetary lines"
+                  src="/imgs/features/planetary-lines-meaning-map.webp"
+                  alt={h1Title}
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 420px"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/20" />
-                <div className="absolute left-4 right-4 top-4 rounded-xl border border-white/15 bg-black/45 p-4 backdrop-blur-md">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-white/65">
-                    Explore by intent
-                  </p>
-                  <div className="mt-3 grid grid-cols-2 gap-2 text-sm font-semibold text-white">
-                    <span className="rounded-lg bg-white/10 px-3 py-2">Love</span>
-                    <span className="rounded-lg bg-white/10 px-3 py-2">Career</span>
-                    <span className="rounded-lg bg-white/10 px-3 py-2">Home</span>
-                    <span className="rounded-lg bg-white/10 px-3 py-2">Growth</span>
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/15 bg-background/85 p-4 backdrop-blur-md">
-                  <div className="flex items-center gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                      <Icon name="RiSearchLine" className="size-5" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-white">Find the right guide faster</p>
-                      <p className="mt-1 text-xs leading-relaxed text-white/60">
-                        Browse by planet, life goal, or angle before reading the full guide.
+                {hubHero && (
+                  <>
+                    <div className="absolute left-4 right-4 top-4 rounded-xl border border-white/15 bg-black/45 p-4 backdrop-blur-md">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-white/65">
+                        {hubHero.sidebarLabel}
                       </p>
+                      <div className="mt-3 grid grid-cols-2 gap-2 text-sm font-semibold text-white">
+                        {hubHero.sidebarTags.map((tag) => (
+                          <span key={tag} className="rounded-lg bg-white/10 px-3 py-2">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </div>
+                    <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/15 bg-background/85 p-4 backdrop-blur-md">
+                      <div className="flex items-center gap-3">
+                        <div className="flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                          <Icon name="RiSearchLine" className="size-5" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-white">{hubHero.sidebarTitle}</p>
+                          <p className="mt-1 text-xs leading-relaxed text-white/60">
+                            {hubHero.sidebarDescription}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
 
-          <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.035] p-2">
-            <div className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {navPills.map((item) => (
-                <Link
-                  key={item.title}
-                  href={item.href as any}
-                  className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-xl px-3.5 text-sm font-semibold text-white/65 transition hover:bg-white/8 hover:text-white"
-                >
-                  <Icon name={item.icon} className="size-4" />
-                  {item.title}
-                </Link>
-              ))}
+          {navPills.length > 0 && (
+            <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.035] p-2">
+              <div className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {navPills.map((item) => (
+                  <Link
+                    key={item.title}
+                    href={item.href as any}
+                    className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-xl px-3.5 text-sm font-semibold text-white/65 transition hover:bg-white/8 hover:text-white"
+                  >
+                    <Icon name={item.icon} className="size-4" />
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 
@@ -311,53 +202,200 @@ export default async function AstrocartographyLinesPage({
         </div>
       )}
 
-      <HubSection
-        id="start-here"
-        eyebrow="Start here"
-        title="Choose the fastest path for your question"
-        description="Most visitors come to astrocartography lines with one of three intents: generate a map, compare where to live, or check a specific relocation chart."
-        items={startHereItems}
-        columns="lg:grid-cols-3"
-      />
+      {hubSections?.startHere && (
+        <HubSection section={hubSections.startHere} openGuideLabel={openGuideLabel} />
+      )}
+      {hubSections?.planetaryLines && (
+        <HubSection section={hubSections.planetaryLines} openGuideLabel={openGuideLabel} />
+      )}
 
-      <HubSection
-        id="planetary-lines"
-        eyebrow="Browse by planet"
-        title="Every major astrocartography line in one place"
-        description="Use this section as the main directory for planetary line meanings. These links keep every line page reachable from the hub."
-        items={planetaryLineItems}
-        columns="sm:grid-cols-2 lg:grid-cols-4"
-      />
+      {comparison && (
+        <section id="planet-comparison" className="scroll-mt-24 py-10 lg:py-16">
+          <div className="container max-w-6xl">
+            <div className="mb-8 max-w-3xl">
+              <span className="mb-4 inline-flex rounded-full border border-primary/15 bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                {comparison.eyebrow}
+              </span>
+              <h2 className="text-2xl font-bold leading-tight md:text-3xl lg:text-4xl">
+                {comparison.title}
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
+                {comparison.description}
+              </p>
+            </div>
 
-      <HubSection
-        id="life-goals"
-        eyebrow="Browse by life goal"
-        title="Find lines that match what you want from a place"
-        description="If you are not sure which planet to read first, start with the life area you care about most."
-        items={lifeGoalItems}
-        columns="sm:grid-cols-2 lg:grid-cols-4"
-      />
+            <div className="grid gap-4 md:hidden">
+              {comparison.items.map((item) => (
+                <Link
+                  key={item.planet}
+                  href={item.href as any}
+                  className="rounded-2xl border border-border/70 bg-card/70 p-5 transition hover:border-primary/45 hover:bg-card"
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <h3 className="text-lg font-semibold">
+                      {item.planet}
+                      {comparison.lineSuffix ? ` ${comparison.lineSuffix}` : ""}
+                    </h3>
+                    <Icon name="RiArrowRightUpLine" className="size-5 text-primary" />
+                  </div>
+                  <dl className="mt-4 grid gap-3 text-sm">
+                    <div>
+                      <dt className="font-semibold text-foreground">{comparison.columns.theme}</dt>
+                      <dd className="mt-1 text-muted-foreground">{item.theme}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-foreground">{comparison.columns.usefulFor}</dt>
+                      <dd className="mt-1 text-muted-foreground">{item.usefulFor}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-foreground">{comparison.columns.watchFor}</dt>
+                      <dd className="mt-1 text-muted-foreground">{item.watchFor}</dd>
+                    </div>
+                  </dl>
+                </Link>
+              ))}
+            </div>
 
-      <section id="angles" className="py-16 lg:py-20">
-        <div className="container max-w-6xl">
-          <div className="mb-8 max-w-3xl">
-            <span className="mb-4 inline-flex rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-              Browse by angle
-            </span>
-            <h2 className="text-2xl font-bold leading-tight md:text-3xl lg:text-4xl">
-              ASC, DSC, MC, and IC change how each line feels
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
-              The planet tells you the theme. The angle tells you where that theme tends to show up: identity, relationships, career, or home.
-            </p>
+            <div className="hidden overflow-hidden rounded-2xl border border-border/70 bg-card/60 md:block">
+              <table className="w-full table-fixed text-left">
+                <thead className="border-b border-border/70 bg-white/[0.035] text-xs uppercase tracking-wide text-muted-foreground">
+                  <tr>
+                    <th className="w-[15%] px-5 py-4">{comparison.columns.planet}</th>
+                    <th className="w-[27%] px-5 py-4">{comparison.columns.theme}</th>
+                    <th className="w-[29%] px-5 py-4">{comparison.columns.usefulFor}</th>
+                    <th className="w-[29%] px-5 py-4">{comparison.columns.watchFor}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border/60 text-sm">
+                  {comparison.items.map((item) => (
+                    <tr key={item.planet} className="transition hover:bg-white/[0.035]">
+                      <th className="px-5 py-4 font-semibold">
+                        <Link href={item.href as any} className="inline-flex items-center gap-1.5 text-primary hover:underline">
+                          {item.planet}
+                          <Icon name="RiArrowRightUpLine" className="size-4" />
+                        </Link>
+                      </th>
+                      <td className="px-5 py-4 text-muted-foreground">{item.theme}</td>
+                      <td className="px-5 py-4 text-muted-foreground">{item.usefulFor}</td>
+                      <td className="px-5 py-4 text-muted-foreground">{item.watchFor}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {angleItems.map((item) => (
-              <HubCard key={item.title} item={item} />
-            ))}
+        </section>
+      )}
+
+      {hubSections?.lifeGoals && (
+        <HubSection section={hubSections.lifeGoals} openGuideLabel={openGuideLabel} />
+      )}
+
+      {angleGuide && (
+        <section id="angles" className="py-16 lg:py-20">
+          <div className="container max-w-6xl">
+            <div className="mb-8 max-w-3xl">
+              <span className="mb-4 inline-flex rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                {angleGuide.eyebrow}
+              </span>
+              <h2 className="text-2xl font-bold leading-tight md:text-3xl lg:text-4xl">
+                {angleGuide.title}
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
+                {angleGuide.description}
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {angleGuide.cards.map((item) => (
+                <HubCard key={item.title} item={item} openGuideLabel={openGuideLabel} />
+              ))}
+            </div>
+            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              {angleGuide.guides.map((item) => (
+                <article
+                  key={item.id}
+                  id={item.id}
+                  className="scroll-mt-24 rounded-2xl border border-border/70 bg-card/60 p-6 lg:p-7"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wide text-primary">{item.label}</p>
+                  <h3 className="mt-3 text-xl font-semibold leading-snug">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">{item.description}</p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {item.examples.map((example) => (
+                      <Link
+                        key={example.label}
+                        href={example.href as any}
+                        className="rounded-full border border-primary/20 bg-primary/8 px-3 py-1.5 text-xs font-semibold text-primary transition hover:border-primary/45 hover:bg-primary/15"
+                      >
+                        {example.label}
+                      </Link>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {readYourMap && (
+        <section id="read-your-map" className="scroll-mt-24 py-12 lg:py-20">
+          <div className="container max-w-6xl">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center">
+              <figure className="overflow-hidden rounded-2xl border border-border/70 bg-card/60 shadow-2xl shadow-black/15">
+                <Image
+                  src="/imgs/features/astrocartography-lines-calculation.webp"
+                  alt={readYourMap.imageAlt}
+                  width={2370}
+                  height={1768}
+                  sizes="(max-width: 1024px) 100vw, 680px"
+                  className="h-auto w-full"
+                />
+                <figcaption className="border-t border-border/60 px-5 py-3 text-xs leading-relaxed text-muted-foreground">
+                  {readYourMap.figcaption}
+                </figcaption>
+              </figure>
+
+              <div>
+                <span className="mb-4 inline-flex rounded-full border border-primary/15 bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                  {readYourMap.eyebrow}
+                </span>
+                <h2 className="text-2xl font-bold leading-tight md:text-3xl lg:text-4xl">
+                  {readYourMap.title}
+                </h2>
+                <ol className="mt-6 grid gap-4">
+                  {readYourMap.steps.map((step) => (
+                    <li key={step.number} className="flex gap-4 rounded-2xl border border-border/60 bg-card/50 p-4">
+                      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                        {step.number}
+                      </span>
+                      <div>
+                        <h3 className="font-semibold">{step.title}</h3>
+                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href={readYourMap.primaryCta.url as any}
+                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+                  >
+                    {readYourMap.primaryCta.title}
+                    <Icon name="RiArrowRightLine" className="size-4" />
+                  </Link>
+                  <Link
+                    href={readYourMap.secondaryCta.url as any}
+                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-semibold transition hover:border-primary/40 hover:text-primary"
+                  >
+                    {readYourMap.secondaryCta.title}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {page.introduce && <FeatureWhatTwo section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
@@ -387,7 +425,7 @@ export default async function AstrocartographyLinesPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Astrocartography Lines",
+            name: schema?.collectionName || h1Title,
             description: page.metadata.description,
             url: getCanonicalUrl(locale, PATH),
             hasPart: planetaryLineItems.map((item) => ({
@@ -405,7 +443,7 @@ export default async function AstrocartographyLinesPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
-            name: "Astrocartography Line Guides",
+            name: schema?.itemListName || h1Title,
             itemListElement: planetaryLineItems.map((item, index) => ({
               "@type": "ListItem",
               position: index + 1,
@@ -423,8 +461,8 @@ export default async function AstrocartographyLinesPage({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: getCanonicalUrl(locale, "/") },
-              { "@type": "ListItem", position: 2, name: "Astrocartography Lines", item: getCanonicalUrl(locale, PATH) },
+              { "@type": "ListItem", position: 1, name: schema?.breadcrumbHome || "Home", item: getCanonicalUrl(locale, "/") },
+              { "@type": "ListItem", position: 2, name: schema?.breadcrumbCurrent || h1Title, item: getCanonicalUrl(locale, PATH) },
             ],
           }),
         }}
@@ -458,39 +496,31 @@ type HubItem = {
 };
 
 function HubSection({
-  id,
-  eyebrow,
-  title,
-  description,
-  items,
-  columns,
+  section,
+  openGuideLabel,
 }: {
-  id: string;
-  eyebrow: string;
-  title: string;
-  description: string;
-  items: HubItem[];
-  columns: string;
+  section: HubSectionContent;
+  openGuideLabel: string;
 }) {
   return (
-    <section id={id} className="py-7 lg:py-12">
+    <section id={section.id} className="py-7 lg:py-12">
       <div className="container max-w-6xl">
         <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <span className="mb-4 inline-flex rounded-full border border-primary/15 bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-              {eyebrow}
+              {section.eyebrow}
             </span>
             <h2 className="text-[1.7rem] font-bold leading-tight md:text-3xl lg:text-[2.35rem]">
-              {title}
+              {section.title}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
-              {description}
+              {section.description}
             </p>
           </div>
         </div>
-        <div className={`grid gap-4 ${columns}`}>
-          {items.map((item) => (
-            <HubCard key={item.title} item={item} />
+        <div className={`grid gap-4 ${section.columns}`}>
+          {section.items.map((item) => (
+            <HubCard key={item.title} item={item} openGuideLabel={openGuideLabel} />
           ))}
         </div>
       </div>
@@ -498,7 +528,7 @@ function HubSection({
   );
 }
 
-function HubCard({ item }: { item: HubItem }) {
+function HubCard({ item, openGuideLabel }: { item: HubItem; openGuideLabel: string }) {
   return (
     <Link
       href={item.href as any}
@@ -514,7 +544,7 @@ function HubCard({ item }: { item: HubItem }) {
         {item.description}
       </p>
       <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-        Open guide
+        {openGuideLabel}
         <Icon name="RiArrowRightUpLine" className="size-4" />
       </span>
     </Link>

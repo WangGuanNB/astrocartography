@@ -82,6 +82,8 @@ export async function generateMetadata({
         'pt': getCanonicalUrl('pt', '/astrocartography-calculator'),
         'es': getCanonicalUrl('es', '/astrocartography-calculator'),
         'it': getCanonicalUrl('it', '/astrocartography-calculator'),
+        'de': getCanonicalUrl('de', '/astrocartography-calculator'),
+        'x-default': getCanonicalUrl('en', '/astrocartography-calculator'),
       },
     },
   };

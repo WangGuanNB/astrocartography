@@ -1,0 +1,684 @@
+{
+  "metadata": {
+    "title": "ACG 行星线含义：太阳到土星与 ASC/DSC/MC/IC 怎么看",
+    "description": "系统了解 ACG 行星线含义：对比太阳、月亮、金星、木星等地理占星行星线，读懂 ASC、DSC、MC、IC 四轴差异，并在个人地图上定位每条线，为择地、旅行与搬迁做决策。",
+    "keywords": "ACG 行星线含义, 地理占星行星线, 占星地图怎么看, 择地占星 行星线, 行星线含义, ACG 地图解读, 太阳线 金星线, ASC DSC MC IC, 搬迁占星, 地理占星指南"
+  },
+  "heading": {
+    "eyebrow": "ACG 指南",
+    "title": "ACG 行星线含义：读懂地图上的每一条线",
+    "description": "对比每颗行星的地理占星行星线主题，理解 ASC、DSC、MC、IC 如何改变同一条线的侧重点，然后在个人地图上找到对应符号，为择地与旅行做判断。"
+  },
+  "hubHero": {
+    "badge": "地理占星中心",
+    "primaryCta": {
+      "title": "免费 ACG 星盘地图",
+      "url": "/"
+    },
+    "secondaryCta": {
+      "title": "择地占星：适合住哪里",
+      "url": "/astrocartography-where-to-live"
+    },
+    "sidebarLabel": "按目标浏览",
+    "sidebarTags": [
+      "爱情",
+      "事业",
+      "家",
+      "成长"
+    ],
+    "sidebarTitle": "更快找到对的指南",
+    "sidebarDescription": "先按行星、人生目标或四轴角度浏览，再阅读完整 ACG 行星线含义指南。"
+  },
+  "navPills": [
+    {
+      "title": "从这里开始",
+      "href": "#start-here",
+      "icon": "RiSparklingLine"
+    },
+    {
+      "title": "行星线",
+      "href": "#planetary-lines",
+      "icon": "RiPlanetLine"
+    },
+    {
+      "title": "对比",
+      "href": "#planet-comparison",
+      "icon": "RiTableLine"
+    },
+    {
+      "title": "人生目标",
+      "href": "#life-goals",
+      "icon": "RiCompassDiscoverLine"
+    },
+    {
+      "title": "四轴角度",
+      "href": "#angles",
+      "icon": "RiFocus3Line"
+    },
+    {
+      "title": "读地图",
+      "href": "#read-your-map",
+      "icon": "RiMap2Line"
+    },
+    {
+      "title": "完整指南",
+      "href": "#introduce",
+      "icon": "RiQuestionLine"
+    }
+  ],
+  "hubLinkLabels": {
+    "openGuide": "打开指南"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "从这里开始",
+      "title": "按你的问题选择最快路径",
+      "description": "先确定你需要的是生成地图、对比城市、查看搬迁星盘，还是学习一套可重复的占星地图怎么看的方法。",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "免费 ACG 星盘计算器",
+          "description": "先生成个人地图，再回来逐条阅读 ACG 行星线含义。",
+          "href": "/",
+          "icon": "RiMapLine"
+        },
+        {
+          "title": "择地占星：适合住哪里",
+          "description": "从爱情、事业、家、成长等维度对比城市，辅助搬迁决策。",
+          "href": "/astrocartography-where-to-live",
+          "icon": "RiHomeHeartLine"
+        },
+        {
+          "title": "搬迁星盘计算器",
+          "description": "筛选出目标城市后，用搬迁星盘进一步核对当地能量。",
+          "href": "/relocation-chart-calculator",
+          "icon": "RiFlightTakeoffLine"
+        },
+        {
+          "title": "占星地图怎么看",
+          "description": "学习可重复的方法：读行星、四轴、距离与地点背景。",
+          "href": "/posts/astrocartography-map-interpretation",
+          "icon": "RiBookOpenLine"
+        }
+      ]
+    },
+    "planetaryLines": {
+      "id": "planetary-lines",
+      "eyebrow": "按行星浏览",
+      "title": "主要地理占星行星线一览",
+      "description": "本区是 ACG 行星线含义的主目录。通过这些链接，可从中心页直达每条行星线的完整解读。",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "太阳线",
+          "description": "能见度、自信、领导力与身份认同。",
+          "href": "/sun-line-astrocartography",
+          "icon": "RiSunLine"
+        },
+        {
+          "title": "月亮线",
+          "description": "家、情绪安全、家庭与归属感。",
+          "href": "/moon-line-astrocartography",
+          "icon": "RiMoonLine"
+        },
+        {
+          "title": "水星线",
+          "description": "沟通、学习、写作与商业。",
+          "href": "/mercury-line-astrocartography",
+          "icon": "RiMessage3Line"
+        },
+        {
+          "title": "金星线",
+          "description": "爱情、美感、关系与日常轻松感。",
+          "href": "/venus-line-astrocartography",
+          "icon": "RiHeartLine"
+        },
+        {
+          "title": "火星线",
+          "description": "驱动力、野心、行动与竞争能量。",
+          "href": "/mars-line-astrocartography",
+          "icon": "RiFireLine"
+        },
+        {
+          "title": "木星线",
+          "description": "成长、机会、好运与扩展。",
+          "href": "/jupiter-line-astrocartography",
+          "icon": "RiStarLine"
+        },
+        {
+          "title": "土星线",
+          "description": "纪律、责任、精通与耐力。",
+          "href": "/saturn-line-astrocartography",
+          "icon": "RiShieldLine"
+        },
+        {
+          "title": "天王星线",
+          "description": "自由、重塑、变化与非传统路径。",
+          "href": "/uranus-line-astrocartography",
+          "icon": "RiFlashlightLine"
+        }
+      ]
+    },
+    "lifeGoals": {
+      "id": "life-goals",
+      "eyebrow": "按人生目标浏览",
+      "title": "找到与你择地需求匹配的行星线",
+      "description": "若不确定先看哪颗行星，就从你最在意的人生领域出发。",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "爱情与关系",
+          "description": "若问题围绕联结与亲密，优先看金星线与月亮线。",
+          "href": "/venus-line-astrocartography",
+          "icon": "RiHeartLine"
+        },
+        {
+          "title": "事业与成功",
+          "description": "对比太阳、木星、土星、水星、火星的事业主题。",
+          "href": "/jupiter-line-astrocartography",
+          "icon": "RiBriefcaseLine"
+        },
+        {
+          "title": "家与归属",
+          "description": "想找到扎根之地时，重点看月亮 IC 与金星 IC 主题。",
+          "href": "/moon-line-astrocartography",
+          "icon": "RiHome4Line"
+        },
+        {
+          "title": "成长与挑战",
+          "description": "选择土星、火星、天王星线前，先了解其强度与代价。",
+          "href": "/saturn-line-astrocartography",
+          "icon": "RiLeafLine"
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "eyebrow": "对比行星线含义",
+    "title": "哪条 ACG 行星线符合你的目标？",
+    "description": "先选与问题匹配的行星，再用 ASC、DSC、MC、IC 判断主题会通过身份、关系、事业还是家庭来表达。",
+    "lineSuffix": "线",
+    "columns": {
+      "planet": "行星",
+      "theme": "核心主题",
+      "usefulFor": "适合用于",
+      "watchFor": "需注意"
+    },
+    "items": [
+      {
+        "planet": "太阳",
+        "theme": "身份、自信、能见度",
+        "usefulFor": "领导力、认可、人生方向",
+        "watchFor": "被看见的压力或表演感",
+        "href": "/sun-line-astrocartography"
+      },
+      {
+        "planet": "月亮",
+        "theme": "情绪、家、归属",
+        "usefulFor": "家庭、照护、安定下来",
+        "watchFor": "情绪波动或情感过载",
+        "href": "/moon-line-astrocartography"
+      },
+      {
+        "planet": "水星",
+        "theme": "沟通、学习、流动",
+        "usefulFor": "写作、学习、贸易、社交",
+        "watchFor": "坐立不安或思维过载",
+        "href": "/mercury-line-astrocartography"
+      },
+      {
+        "planet": "金星",
+        "theme": "爱情、美感、和谐",
+        "usefulFor": "关系、艺术、社交轻松",
+        "watchFor": "贪图舒适或回避挑战",
+        "href": "/venus-line-astrocartography"
+      },
+      {
+        "planet": "火星",
+        "theme": "驱动、勇气、行动",
+        "usefulFor": "野心、运动、启动新项目",
+        "watchFor": "冲突、急躁、身心透支",
+        "href": "/mars-line-astrocartography"
+      },
+      {
+        "planet": "木星",
+        "theme": "成长、机会、扩展",
+        "usefulFor": "事业上升、旅行、深造",
+        "watchFor": "过度扩张或盲目乐观",
+        "href": "/jupiter-line-astrocartography"
+      },
+      {
+        "planet": "土星",
+        "theme": "结构、责任、精通",
+        "usefulFor": "长期建设、权威积累",
+        "watchFor": "孤立、延迟、沉重负担",
+        "href": "/saturn-line-astrocartography"
+      },
+      {
+        "planet": "天王星",
+        "theme": "自由、变化、重塑",
+        "usefulFor": "创新、新方向、突破旧模式",
+        "watchFor": "不稳定或突发变动",
+        "href": "/uranus-line-astrocartography"
+      }
+    ]
+  },
+  "angleGuide": {
+    "eyebrow": "按四轴角度浏览",
+    "title": "ASC、DSC、MC、IC 如何改变每条线的感受",
+    "description": "行星决定主题，四轴决定主题多半出现在哪里：身份、关系、事业还是家庭。",
+    "cards": [
+      {
+        "title": "ASC 线",
+        "description": "地点如何影响身份、第一印象与自我表达。",
+        "href": "#asc-lines",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "DSC 线",
+        "description": "地点如何激活伴侣、客户与一对一关系。",
+        "href": "#dsc-lines",
+        "icon": "RiHeartLine"
+      },
+      {
+        "title": "MC 线",
+        "description": "地点如何强调事业、公众方向与声誉。",
+        "href": "#mc-lines",
+        "icon": "RiBriefcaseLine"
+      },
+      {
+        "title": "IC 线",
+        "description": "地点如何塑造家、家庭、根基与私人生活。",
+        "href": "#ic-lines",
+        "icon": "RiHome4Line"
+      }
+    ],
+    "guides": [
+      {
+        "id": "asc-lines",
+        "label": "ASC · 上升点",
+        "title": "ASC 线将行星能量聚焦在身份与自我表达",
+        "description": "当你的问题是自信、形象、活力、独立，或进入新环境时的表现，优先看 ASC 线。行星会成为你行动方式的一部分，也影响他人对你的第一印象。",
+        "examples": [
+          {
+            "label": "太阳 ASC：能见度与自信",
+            "href": "/sun-line-astrocartography"
+          },
+          {
+            "label": "金星 ASC：轻松与吸引力",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "火星 ASC：驱动与身体动能",
+            "href": "/mars-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "dsc-lines",
+        "label": "DSC · 下降点",
+        "title": "DSC 线将行星能量聚焦在伴侣与一对一联结",
+        "description": "当你的问题是爱情、客户、合作、冲突，或某地带给你什么样的人，优先看 DSC 线。行星主题往往通过他人进入你的生活。",
+        "examples": [
+          {
+            "label": "金星 DSC：伴侣与浪漫",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "月亮 DSC：情感联结",
+            "href": "/moon-line-astrocartography"
+          },
+          {
+            "label": "木星 DSC：支持性联盟",
+            "href": "/jupiter-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "mc-lines",
+        "label": "MC · 中天",
+        "title": "MC 线将行星能量聚焦在事业与公众方向",
+        "description": "当你的问题是声誉、领导力、职业动能、认可或长期事业方向，优先看 MC 线。这类线通常是事业导向择地研究中最相关的部分。",
+        "examples": [
+          {
+            "label": "太阳 MC：认可与领导力",
+            "href": "/sun-line-astrocartography"
+          },
+          {
+            "label": "木星 MC：成长与机会",
+            "href": "/jupiter-line-astrocartography"
+          },
+          {
+            "label": "土星 MC：持久的权威",
+            "href": "/saturn-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "ic-lines",
+        "label": "IC · 天底",
+        "title": "IC 线将行星能量聚焦在家、根基与私人生活",
+        "description": "当你的问题是归属、家庭、情感根基、隐私，或哪里适合安家，优先看 IC 线。影响可能不如 MC 公开，却更个人、更深层。",
+        "examples": [
+          {
+            "label": "月亮 IC：家与归属",
+            "href": "/moon-line-astrocartography"
+          },
+          {
+            "label": "金星 IC：家庭和谐",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "土星 IC：根基与责任",
+            "href": "/saturn-line-astrocartography"
+          }
+        ]
+      }
+    ]
+  },
+  "readYourMap": {
+    "eyebrow": "读你的个人地图",
+    "title": "把一条彩色线变成有用的地点问题",
+    "imageAlt": "AstroCarto 地图界面：左侧行星控制、ASC DSC MC IC 标签，以及个人世界地图上的线条",
+    "figcaption": "AstroCarto 地图示例：左侧显示行星控制，实线与虚线代表地图上不同的四轴行星线。",
+    "steps": [
+      {
+        "number": "1",
+        "title": "识别行星",
+        "description": "将线条颜色或符号对应到行星，得到主要主题——例如金星代表联结，土星代表责任。"
+      },
+      {
+        "number": "2",
+        "title": "确认 ASC、DSC、MC 或 IC",
+        "description": "四轴告诉你主题更可能出现在自我、伴侣、事业还是家庭层面。"
+      },
+      {
+        "number": "3",
+        "title": "对比距离与现实背景",
+        "description": "附近的线只是一个信号，不是定论。结合具体城市、现实约束与整张星盘再下结论。"
+      }
+    ],
+    "primaryCta": {
+      "title": "生成你的地图",
+      "url": "/"
+    },
+    "secondaryCta": {
+      "title": "阅读解读方法",
+      "url": "/posts/astrocartography-map-interpretation"
+    }
+  },
+  "schemaLabels": {
+    "collectionName": "ACG 行星线指南",
+    "itemListName": "地理占星行星线解读",
+    "breadcrumbHome": "首页",
+    "breadcrumbCurrent": "ACG 行星线含义"
+  },
+  "intentAnchor": {
+    "text": "本页是 ACG 行星线含义的完整参考——每颗行星的地理占星行星线代表什么、四轴如何改变其效果，以及如何把这套知识用于择地、旅行与搬迁决策。"
+  },
+  "internalLinks": {
+    "title": "快速导航",
+    "items": [
+      {
+        "text": "在世界地图上生成你的免费 ACG 星盘。",
+        "linkText": "免费 ACG 星盘地图",
+        "url": "/"
+      },
+      {
+        "text": "最受欢迎：",
+        "linkText": "金星线",
+        "url": "/venus-line-astrocartography"
+      },
+      {
+        "text": "事业首选：",
+        "linkText": "木星线",
+        "url": "/jupiter-line-astrocartography"
+      },
+      {
+        "text": "先确认本命 MC 星座：",
+        "linkText": "中天计算器",
+        "url": "/midheaven-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "什么是地理占星行星线？",
+    "label": "基础",
+    "description": "地理占星行星线（ACG 线）是在世界地图上绘制的路径，显示你出生时每颗行星落在天空四个关键角度（四轴）的位置。每个人都有独一无二、横跨全球的线条组合——居住或旅行到这些线附近，会放大该行星在日常生活中的能量。",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "ACG 行星线地图，显示横跨全球的地理占星行星线"
+    },
+    "items": [
+      {
+        "title": "ACG 行星线如何计算",
+        "description": "在你出生的那一刻，每颗行星都占据天空中的特定位置。地理占星通过计算每颗行星在全球各经度上处于上升（ASC）、下降（DSC）、天顶最高（MC）或天底（IC）的位置，生成四条不同的线——个人地图上最多可有 40 条主要行星线。计算采用 Swiss Ephemeris 天文历表数据，通过球面三角将行星的赤道坐标（赤经与赤纬）转换为地理经纬度。",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "ACG 行星线如何根据行星四轴角度计算"
+        }
+      },
+      {
+        "title": "四轴角度：ASC、DSC、MC 与 IC",
+        "description": "每条 ACG 行星线都有四个版本，取决于行星触及哪个角度。上升点（ASC）线穿过出生时行星正在东方地平线上升的地点——影响身份、形象与他人对你的感知。下降点（DSC）线标记行星在西方地平线落下的地点——影响一对一关系与伴侣。中天（MC）线标记行星在天空最高点的地点——影响事业、公众声誉与人生方向。天底（IC）线标记行星在地平线下的地点——影响家、家庭、根基与私人生活。了解一条线属于哪个角度，与知道是哪颗行星同样重要。",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "地理占星中 ASC DSC MC IC 四轴角度说明"
+        }
+      },
+      {
+        "title": "行星线的影响有多强？",
+        "description": "越靠近某条行星线，影响越强。多数地理占星师认为，在 200–300 英里（320–480 公里）内即可感受到明显效果，50 英里内显著增强，正好在线上则最为强烈。两条线交叉处称为「能量交汇点」（paran 线），两种行星能量同时激活。不必永久搬迁——即使短期旅行或度假靠近你的线，也可能带来有意义、暂时的体验变化。",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "ACG 行星线影响强度与距离的关系"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "每颗行星的 ACG 线含义",
+    "label": "行星线",
+    "description": "在地理占星中，每颗行星都携带独特的主题，塑造其线条所在地点的体验。以下是七颗主要行星线的简明指南，以及四轴（ASC、DSC、MC、IC）如何改变其侧重点。",
+    "items": [
+      {
+        "title": "太阳线 — 身份、事业与能见度",
+        "description": "太阳线激活核心身份、自信与被认可的渴望。在太阳线上，你更像自己，也更容易被看见与承认。太阳 MC 线对事业能见度与领导力尤其有力，太阳 ASC 线则增强个人魅力与自我表达。这些地点要求真实——不容你隐藏。适合想建立公众声誉、承担领导或重新找回人生方向的人，但若不习惯被关注可能感到身心俱疲。",
+        "icon": "RiSunLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "太阳线 ACG 行星线含义"
+        }
+      },
+      {
+        "title": "月亮线 — 家、情绪与家庭",
+        "description": "月亮线放大情绪敏感、直觉与对舒适、归属的需求。这些是向内聚焦的地点，感受更易浮现，家庭生活成为中心。月亮 IC 线——常称「温暖居家线」——是找到真正家的最强落点，最适合永久搬迁。月亮 ASC 线增强情绪表达与自我发现。适合疗愈、滋养关系或安定下来，但对偏好理性、习惯用头脑思考的人，情绪高涨可能令人难以承受。",
+        "icon": "RiMoonLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "月亮线 ACG 行星线含义"
+        }
+      },
+      {
+        "title": "金星线 — 爱情、美感与关系",
+        "description": "金星线营造轻松、吸引、美感与社交顺畅的氛围。在这些地方，生活更柔和，关系自然形成，愉悦更易获得。金星 DSC 线对浪漫伴侣最有力——常称「蜜月线」——金星 ASC 线增强个人魅力与社交自信，金星 IC 线创造和谐的家庭环境。金星线因温和、支持性强而备受择地者青睐。其阴暗面在于，若目标不明确，舒适可能削弱动力与自律。",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "金星线 ACG 行星线含义"
+        }
+      },
+      {
+        "title": "火星线 — 能量、驱动与野心",
+        "description": "火星线激活身体能量、果断、野心与直接行动。这些是节奏快、要求高的地点——你更有动力，也可能坐立不安或容易起冲突。火星 MC 线对事业野心、创业与领导力尤其有力，火星 ASC 线强化个人驱动力与身体活力。火星线适合短期冲刺目标、运动或启动新项目，但因持续激活「战斗反应」，长期居住可能令人精疲力竭。",
+        "icon": "RiFireLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "火星线 ACG 行星线含义"
+        }
+      },
+      {
+        "title": "木星线 — 好运、丰盛与扩展",
+        "description": "木星线带来扩展感、乐观、机会与好运。作为「大吉星」，木星常被视为地理占星中最利于搬迁的行星。在木星线上，门更易打开，人更乐于助人，进展更少受阻。木星 MC 线支持事业成功、认可与职业成长，木星 ASC 线拓宽视野并提升日常生活品质，木星 DSC 线吸引慷慨、成功的伴侣与合作者。其阴暗面是过度扩张、盲目自信，或因一切太顺而缺乏持续努力。",
+        "icon": "RiStarLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "木星线 ACG 行星线含义"
+        }
+      },
+      {
+        "title": "土星线 — 纪律、挑战与长期成长",
+        "description": "土星线激活纪律、责任、结构与业力课题。这些是严肃、要求高的地点——捷径无效，生活需要持续投入。土星线上的进展慢但稳固——在此取得的成就往往可持续一生。土星 MC 线通过凭实力赢得的声誉建立持久的职业权威，土星 IC 线通过责任与深根建立稳固的家庭基础。土星线未必「不好」——需要结构或想建立长久事业的人，可能在此获得深刻转变。但一般不建议用于休息、玩乐或追求轻松。",
+        "icon": "RiShieldLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "土星线 ACG 行星线含义"
+        }
+      },
+      {
+        "title": "水星线 — 沟通、学习与商业",
+        "description": "水星线增强智力活动、沟通能力、学习与社交。这些是思维活跃的环境——头脑更敏锐，对话更顺畅，信息处理更快。水星 MC 线支持写作、新闻、教学、媒体、咨询等职业——想法能触达受众，专业表达更蓬勃。水星 ASC 线让社交与自我表达毫不费力，水星 IC 线支持私人学习、深度阅读与充满书卷气的家庭环境。适合学生、作家、教师、交易员及依赖思维敏捷的工作。其阴暗面是思维过载、难以慢下来。",
+        "icon": "RiMessage3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "水星线 ACG 行星线含义"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "如何运用 ACG 行星线",
+    "label": "实用指南",
+    "description": "理解 ACG 行星线含义只是第一步。以下说明如何实际应用——无论你在规划搬迁、度假，还是想理解为何某些地方感受如此不同。",
+    "items": [
+      {
+        "title": "先明确你的目的",
+        "description": "不同人生目标需要不同行星线。若追求事业晋升与认可，优先太阳 MC 或木星 MC 线。若想找爱情或改善关系，重点看金星 DSC 或月亮 DSC 线。若要平静、滋养的家，看月亮 IC 或金星 IC 线。若追求创意或智力成长，探索水星或海王星线。先知道要什么，再读地图，避免追逐每条线，才能有意识地决定时间与精力投向哪里。",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "先测试再承诺",
+        "description": "不必永久搬迁也能感受行星线影响。先到线上或附近城市短期停留几天或几周，留意感受、事情是否顺遂、环境是否支持你的目标。许多人报告抵达后 24–48 小时内即可感知线的能量。这对火星或土星等挑战性线路尤其重要——当地的要求可能超过收益，取决于你当前的人生阶段。",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "考虑重叠线与能量交汇点",
+        "description": "两条或多条行星线交叉处形成「能量强点」或「平行交汇区」（paran 区），多种行星能量同时激活，体验更复杂、更强烈。木星-金星交汇可能格外浪漫且丰盛，火星-土星交汇则可能尤其高压、紧绷。评估地点时，不仅看哪些单条线经过，还要看哪些能量组合被激活。许多人生命中最重要的城市，正落在多线交汇处。",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "用星盘理解，而非限制自己",
+        "description": "ACG 行星线是理解地理能量模式的框架，不是限制。你可在任何地方过得幸福、取得成功——线只是揭示哪些品质更自然，哪些需要更努力。有人住在具有挑战性的土星或火星线上，久而久之反而练出最大优势；也有人选择没有强线的地点，享受更中性、自主的环境。把线当作择地决策的视角之一，与家庭、事业、生活成本等现实因素一并考量。",
+        "icon": "RiLightbulbLine"
+      },
+      {
+        "title": "哪条 ACG 行星线最适合你的目标？",
+        "description": "最佳线路完全取决于你追求什么。爱情与浪漫：金星 DSC 最有力——广称「蜜月线」。事业成长与认可：木星 MC 或太阳 MC 最强。真正的归属感：月亮 IC 始终是首选。通过精通建立持久职业权威：土星 MC 能建最稳固的声誉。野心与创业动力：火星 MC 无可匹敌。沟通、写作、商业：水星 MC 最精准。个人自信与身份：太阳 ASC 或金星 ASC 皆佳。没有放之四海皆准的「最佳」线——对的线，是现在真正想从地点获得什么的那条。",
+        "icon": "RiCompassLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "每条行星线的深度指南",
+    "label": "完整解读",
+    "description": "每条地理占星行星线都有独立完整指南，涵盖四轴（ASC、DSC、MC、IC）、受影响人生领域、实用策略与常见问题。选择与你当前目标最相关的线开始阅读。",
+    "items": [
+      {
+        "title": "太阳线 — 事业、自信与身份",
+        "description": "太阳线放大核心身份、自信与被认可的渴望。太阳 MC 是全部 ACG 中最强的事业落点。了解四个太阳线角度如何不同影响生活，以及太阳线城市是否符合当前目标。阅读完整太阳线指南获取详细解读。",
+        "icon": "RiSunLine"
+      },
+      {
+        "title": "月亮线 — 家、情绪与家庭",
+        "description": "月亮线是找到真正归属感的最强落点——尤其月亮 IC，常称「温暖居家线」。也会放大情绪敏感、直觉与家庭联结。阅读完整月亮线指南，了解哪个角度最符合你的需求。",
+        "icon": "RiMoonLine"
+      },
+      {
+        "title": "金星线 — 爱情、美感与关系",
+        "description": "金星线是 ACG 中最受欢迎的线路之一，影响浪漫、社交轻松感与日常生活品质。金星 DSC 是寻找浪漫伴侣的最强落点。阅读完整金星线指南，了解四轴差异与用法。",
+        "icon": "RiHeartLine"
+      },
+      {
+        "title": "木星线 — 好运、扩展与机会",
+        "description": "木星线一直被认为是最利于搬迁的线路——事业之门更易打开，关系更慷慨，生活带有扩展性的乐观。木星 MC 对职业认可尤其有力。阅读完整木星线指南。",
+        "icon": "RiStarLine"
+      },
+      {
+        "title": "火星线 — 能量、驱动与野心",
+        "description": "火星线放大身体驱动力、竞争意识与野心。适合大胆的事业行动与运动追求，但需有意识的方向感，避免身心透支与冲突。火星 MC 是事业上最具产出的角度。阅读完整火星线指南，判断是否适合你的目标。",
+        "icon": "RiFireLine"
+      },
+      {
+        "title": "土星线 — 纪律、成长与持久成就",
+        "description": "土星线要求最高，但对长期建设者回报也最大。土星 MC 通过真正的精通与持续努力建立持久的职业权威。不是为舒适而选的线——但对准备建立长久事业的人值得考虑。阅读完整土星线指南。",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "水星线 — 沟通、学习与商业",
+        "description": "水星线让头脑更敏锐、学习更快，支持各类专业沟通。水星 MC 是作家、记者、教师、交易员与知识工作者最强的落点。阅读完整水星线指南，看四轴如何表达水星能量。",
+        "icon": "RiMessage3Line"
+      },
+      {
+        "title": "天王星线 — 自由、变化与创新",
+        "description": "天王星线激活 sudden change、 independence 与 personal reinvention。transformative 而非 comfortable——想 break old patterns 时 excellent，但需要 stability 时 demanding。天王星 MC 支持 unconventional careers 与 innovation。阅读完整天王星线指南。",
+        "icon": "RiFlashlightLine"
+      },
+      {
+        "title": "哪条 ACG 行星线适合你？",
+        "description": "ideal 线取决于 current life priority。事业 growth 与 public recognition：木星 MC（机会易来）、太阳 MC（领导力与能见度）、土星 MC（通过 mastery 的 lasting authority）。爱情与关系：金星 DSC（「 honeymoon 线」—— romance 最强）、月亮 DSC（deep emotional bonding）、金星 ASC（personal magnetism）。找 true home：月亮 IC（全部 ACG 中最强 belonging placement）、金星 IC（beauty 与 domestic harmony）。ambition 与 drive：火星 MC（boldest career moves）、火星 ASC（physical energy 与 assertiveness）。communication 与 learning：水星 MC（writing、 teaching、business）、水星 ASC（social intelligence 与 networking）。用免费地图看各线经过哪些城市——把每个地点 match 到 current life goal。",
+        "icon": "RiCompassLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "常见问题",
+    "title": "ACG 行星线含义 — 常见问题",
+    "description": "关于理解与运用地理占星行星线的最常见问题解答。",
+    "items": [
+      {
+        "title": "什么是 ACG 行星线？",
+        "description": "ACG 行星线（地理占星行星线）是在世界地图上绘制的路径，显示你出生时每颗行星落在天空四个关键角度（上升、下降、天顶、天底）之一的位置。每颗行星产生四条线——ASC、DSC、MC、IC——个人地图上最多约 40 条主要线。居住或旅行到这些线附近，会放大该行星在日常生活中的能量。"
+      },
+      {
+        "title": "我有多少条 ACG 行星线？",
+        "description": "多数人地图上有 28–40 条主要行星线，取决于计算包含多少行星与点。七颗传统行星（太阳、月亮、水星、金星、火星、木星、土星）共 28 条（7×4）。加入天王星、海王星、冥王星则为 40 条。部分系统还包含凯龙、北交点等，会再增加线条。"
+      },
+      {
+        "title": "搬迁时哪条 ACG 行星线最好？",
+        "description": "「最好」 entirely 取决于 personal goals。木星线 generally 被认为最 favorable 于 overall expansion 与 opportunity。金星线 excellent 于 relationships 与 quality of life。太阳线 support career visibility 与 identity。月亮线 ideal 于 finding true sense of home。但「最好」 always relative——对 seeking discipline 与 long-term achievement 的人， demanding 的土星线可能 exactly 所需。"
+      },
+      {
+        "title": "离行星线多远能感受到效果？",
+        "description": "多数地理占星师认为，在 200–300 英里（320–480 公里）内 noticeable，50 英里内 significantly stronger， directly on line 最 intense。 exact distance 因 individual sensitivity 与行星而异——外行星如冥王星、天王星 orb 可能比内行星水星、金星 broader。"
+      },
+      {
+        "title": "同一城市可以同时有好线和挑战线吗？",
+        "description": "可以。多数城市会有多条行星线经过或靠近，各自 activate 不同 life areas。某城可能同时在金星 ASC 线（enhance relationships 与 beauty）与土星 MC 线（demand professional discipline）上—— love life 可能 flourish， career 却需 significantly more effort，体验 nuanced。"
+      },
+      {
+        "title": "ACG 行星线会随时间改变吗？",
+        "description": "基于出生盘的本命 ACG 线 lifetime 不变。但地理占星师也用「推运 ACG」，基于推运盘（会 evolve over time）计算线条。推运线可 indicate 某些 geographic areas 在 life 中 more 或 less activated 的时期，即使本命线 remain constant。"
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "立即查找你的 ACG 行星线",
+    "description": "使用 Swiss Ephemeris 计算、1 英里精度生成个人 ACG 地图。精确查看每条地理占星行星线在全球的位置——点击任意线或城市即可获得 AI 解读。完全免费，无需注册。",
+    "buttons": [
+      {
+        "title": "免费 ACG 星盘地图 →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

@@ -4,6 +4,17 @@ import FAQ from "@/components/blocks/faq";
 import { getPricingPage } from "@/services/page";
 import { getCanonicalUrl } from "@/lib/utils";
 import { applySubscriptionPricingFilter } from "@/services/subscription";
+import { locales } from "@/i18n/locale";
+
+export const dynamic = "force-static";
+export const revalidate = 604800;
+export const dynamicParams = true;
+
+const PATH = "/pricing";
+
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
@@ -23,7 +34,7 @@ export async function generateMetadata({
       title,
       description,
       type: "website",
-      url: getCanonicalUrl(locale, '/pricing'),
+      url: getCanonicalUrl(locale, PATH),
     },
     twitter: {
       card: "summary_large_image",
@@ -35,7 +46,13 @@ export async function generateMetadata({
       follow: true,
     },
     alternates: {
-      canonical: getCanonicalUrl(locale, '/pricing'),
+      canonical: getCanonicalUrl(locale, PATH),
+      languages: {
+        ...Object.fromEntries(
+          locales.map((language) => [language, getCanonicalUrl(language, PATH)])
+        ),
+        "x-default": getCanonicalUrl("en", PATH),
+      },
     },
   };
 }

@@ -49,6 +49,8 @@ export async function generateMetadata({
         pt: getCanonicalUrl("pt", path),
         es: getCanonicalUrl("es", path),
         it: getCanonicalUrl("it", path),
+        de: getCanonicalUrl("de", path),
+        "x-default": getCanonicalUrl("en", path),
       },
     },
     openGraph: {

@@ -1,0 +1,684 @@
+{
+  "metadata": {
+    "title": "Astrokartographie Planetenlinien: Bedeutung von Sonne bis Uranus & AC/DC/MC/IC",
+    "description": "Verstehen Sie jede Astrokartographie Planetenlinie: Sonne, Mond, Venus, Jupiter und mehr an AC, DC, MC und IC — und finden Sie sie auf Ihrer persönlichen Karte.",
+    "keywords": "Astrokartographie Planetenlinien, Bedeutung der Planetenlinien, Astrokartographie Linien verstehen, Planetenlinien Astrokartographie, AC DC MC IC, Astrokartographie Linien lesen, beste Planetenlinien, Umzugsastrologie, Astrokartographie Achsen"
+  },
+  "heading": {
+    "eyebrow": "Astrokartographie Hub",
+    "title": "Astrokartographie Planetenlinien verstehen",
+    "description": "Vergleichen Sie die Bedeutung jeder Planetenlinie, verstehen Sie, wie AC, DC, MC und IC den Fokus verschieben, und finden Sie dieselben Symbole auf Ihrer persönlichen Karte."
+  },
+  "hubHero": {
+    "badge": "Astrokartographie Hub",
+    "primaryCta": {
+      "title": "Kostenloser Astrokartographie-Rechner",
+      "url": "/"
+    },
+    "secondaryCta": {
+      "title": "Wo soll ich leben?",
+      "url": "/astrocartography-where-to-live"
+    },
+    "sidebarLabel": "Nach Ziel erkunden",
+    "sidebarTags": [
+      "Liebe",
+      "Karriere",
+      "Zuhause",
+      "Wachstum"
+    ],
+    "sidebarTitle": "Schneller zum richtigen Guide",
+    "sidebarDescription": "Stöbern Sie nach Planet, Lebensziel oder Achse, bevor Sie den vollständigen Guide lesen."
+  },
+  "navPills": [
+    {
+      "title": "Start",
+      "href": "#start-here",
+      "icon": "RiSparklingLine"
+    },
+    {
+      "title": "Planeten",
+      "href": "#planetary-lines",
+      "icon": "RiPlanetLine"
+    },
+    {
+      "title": "Vergleich",
+      "href": "#planet-comparison",
+      "icon": "RiTableLine"
+    },
+    {
+      "title": "Lebensziele",
+      "href": "#life-goals",
+      "icon": "RiCompassDiscoverLine"
+    },
+    {
+      "title": "Achsen",
+      "href": "#angles",
+      "icon": "RiFocus3Line"
+    },
+    {
+      "title": "Karte lesen",
+      "href": "#read-your-map",
+      "icon": "RiMap2Line"
+    },
+    {
+      "title": "Guide",
+      "href": "#introduce",
+      "icon": "RiQuestionLine"
+    }
+  ],
+  "hubLinkLabels": {
+    "openGuide": "Guide öffnen"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "Hier starten",
+      "title": "Wählen Sie den schnellsten Weg zu Ihrer Frage",
+      "description": "Entscheiden Sie, ob Sie eine Karte erstellen, Orte vergleichen, ein Umzugshoroskop prüfen oder eine wiederholbare Deutungsmethode lernen möchten.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Kostenloser Astrokartographie-Rechner",
+          "description": "Erstellen Sie zuerst Ihre persönliche Karte und lesen Sie dann jede Planetenlinie im Kontext.",
+          "href": "/",
+          "icon": "RiMapLine"
+        },
+        {
+          "title": "Wo soll ich leben?",
+          "description": "Vergleichen Sie Städte für Liebe, Karriere, Zuhause, Wachstum und Umzugsentscheidungen.",
+          "href": "/astrocartography-where-to-live",
+          "icon": "RiHomeHeartLine"
+        },
+        {
+          "title": "Umzugshoroskop",
+          "description": "Prüfen Sie eine Zielstadt mit einem Umzugshoroskop, nachdem Sie Orte vorausgewählt haben.",
+          "href": "/relocation-chart-calculator",
+          "icon": "RiFlightTakeoffLine"
+        },
+        {
+          "title": "So lesen Sie Ihre Karte",
+          "description": "Lernen Sie eine wiederholbare Methode: Planeten, Achsen, Entfernung und Ortskontext deuten.",
+          "href": "/posts/astrocartography-map-interpretation",
+          "icon": "RiBookOpenLine"
+        }
+      ]
+    },
+    "planetaryLines": {
+      "id": "planetary-lines",
+      "eyebrow": "Nach Planet durchsuchen",
+      "title": "Alle wichtigen Astrokartographie Planetenlinien auf einen Blick",
+      "description": "Nutzen Sie diesen Abschnitt als Hauptverzeichnis für Planetenlinien-Bedeutungen. Diese Links halten jede Linienseite vom Hub aus erreichbar.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Sonnenlinie",
+          "description": "Sichtbarkeit, Selbstvertrauen, Führung und Identität.",
+          "href": "/sun-line-astrocartography",
+          "icon": "RiSunLine"
+        },
+        {
+          "title": "Mondlinie",
+          "description": "Zuhause, emotionale Sicherheit, Familie und Zugehörigkeit.",
+          "href": "/moon-line-astrocartography",
+          "icon": "RiMoonLine"
+        },
+        {
+          "title": "Merkurlinie",
+          "description": "Kommunikation, Lernen, Schreiben und Geschäft.",
+          "href": "/mercury-line-astrocartography",
+          "icon": "RiMessage3Line"
+        },
+        {
+          "title": "Venuslinie",
+          "description": "Liebe, Schönheit, Beziehungen und Alltagswohlbefinden.",
+          "href": "/venus-line-astrocartography",
+          "icon": "RiHeartLine"
+        },
+        {
+          "title": "Marslinie",
+          "description": "Antrieb, Ehrgeiz, Handlung und Wettbewerbsenergie.",
+          "href": "/mars-line-astrocartography",
+          "icon": "RiFireLine"
+        },
+        {
+          "title": "Jupiterlinie",
+          "description": "Wachstum, Chancen, Glück und Expansion.",
+          "href": "/jupiter-line-astrocartography",
+          "icon": "RiStarLine"
+        },
+        {
+          "title": "Saturnlinie",
+          "description": "Disziplin, Verantwortung, Meisterschaft und Ausdauer.",
+          "href": "/saturn-line-astrocartography",
+          "icon": "RiShieldLine"
+        },
+        {
+          "title": "Uranuslinie",
+          "description": "Freiheit, Neuerfindung, Wandel und unkonventionelle Wege.",
+          "href": "/uranus-line-astrocartography",
+          "icon": "RiFlashlightLine"
+        }
+      ]
+    },
+    "lifeGoals": {
+      "id": "life-goals",
+      "eyebrow": "Nach Lebensziel durchsuchen",
+      "title": "Finden Sie Linien, die zu dem passen, was Sie von einem Ort erwarten",
+      "description": "Wenn Sie nicht wissen, welchen Planeten Sie zuerst lesen sollen, beginnen Sie mit dem Lebensbereich, der Ihnen am wichtigsten ist.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Liebe & Beziehungen",
+          "description": "Beginnen Sie mit Venus- und Mondlinien, wenn es um Verbindung geht.",
+          "href": "/venus-line-astrocartography",
+          "icon": "RiHeartLine"
+        },
+        {
+          "title": "Karriere & Erfolg",
+          "description": "Vergleichen Sie Sonne-, Jupiter-, Saturn-, Merkur- und Mars-Karrierethemen.",
+          "href": "/jupiter-line-astrocartography",
+          "icon": "RiBriefcaseLine"
+        },
+        {
+          "title": "Zuhause & Zugehörigkeit",
+          "description": "Nutzen Sie Mond- und Venus-IC-Themen, wenn Sie sich an einem Ort verwurzeln möchten.",
+          "href": "/moon-line-astrocartography",
+          "icon": "RiHome4Line"
+        },
+        {
+          "title": "Wachstum & Herausforderung",
+          "description": "Lesen Sie Saturn-, Mars- und Uranuslinien sorgfältig, bevor Sie intensive Orte wählen.",
+          "href": "/saturn-line-astrocartography",
+          "icon": "RiLeafLine"
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "eyebrow": "Linienbedeutungen vergleichen",
+    "title": "Welche Astrokartographie Planetenlinie passt zu Ihrem Ziel?",
+    "description": "Beginnen Sie mit dem Planeten, der zu Ihrer Frage passt, und nutzen Sie die Achse, um zu sehen, ob das Thema über Identität, Beziehungen, Karriere oder Zuhause zum Ausdruck kommt.",
+    "lineSuffix": "linie",
+    "columns": {
+      "planet": "Planet",
+      "theme": "Kernthema",
+      "usefulFor": "Nützlich für",
+      "watchFor": "Achtung bei"
+    },
+    "items": [
+      {
+        "planet": "Sonne",
+        "theme": "Identität, Selbstvertrauen, Sichtbarkeit",
+        "usefulFor": "Führung, Anerkennung, Lebenssinn",
+        "watchFor": "Druck, sichtbar zu sein oder zu performen",
+        "href": "/sun-line-astrocartography"
+      },
+      {
+        "planet": "Mond",
+        "theme": "Emotion, Zuhause, Zugehörigkeit",
+        "usefulFor": "Familie, Fürsorge, Ankommen",
+        "watchFor": "Stimmungsschwankungen oder emotionale Überlastung",
+        "href": "/moon-line-astrocartography"
+      },
+      {
+        "planet": "Merkur",
+        "theme": "Kommunikation, Lernen, Bewegung",
+        "usefulFor": "Schreiben, Studium, Handel, Netzwerken",
+        "watchFor": "Unruhe oder geistige Überlastung",
+        "href": "/mercury-line-astrocartography"
+      },
+      {
+        "planet": "Venus",
+        "theme": "Liebe, Schönheit, Harmonie",
+        "usefulFor": "Beziehungen, Kunst, soziale Leichtigkeit",
+        "watchFor": "Komfortsuche oder Vermeidung",
+        "href": "/venus-line-astrocartography"
+      },
+      {
+        "planet": "Mars",
+        "theme": "Antrieb, Mut, Handlung",
+        "usefulFor": "Ehrgeiz, Sport, Neuanfänge",
+        "watchFor": "Konflikte, Ungeduld, Burnout",
+        "href": "/mars-line-astrocartography"
+      },
+      {
+        "planet": "Jupiter",
+        "theme": "Wachstum, Chancen, Expansion",
+        "usefulFor": "Karrierewachstum, Reisen, Bildung",
+        "watchFor": "Exzess oder Überheblichkeit",
+        "href": "/jupiter-line-astrocartography"
+      },
+      {
+        "planet": "Saturn",
+        "theme": "Struktur, Pflicht, Meisterschaft",
+        "usefulFor": "Langfristiges Aufbauen und Autorität",
+        "watchFor": "Isolation, Verzögerung, schwere Anforderungen",
+        "href": "/saturn-line-astrocartography"
+      },
+      {
+        "planet": "Uranus",
+        "theme": "Freiheit, Wandel, Neuerfindung",
+        "usefulFor": "Innovation und neue Richtungen",
+        "watchFor": "Instabilität oder plötzliche Umbrüche",
+        "href": "/uranus-line-astrocartography"
+      }
+    ]
+  },
+  "angleGuide": {
+    "eyebrow": "Nach Achse durchsuchen",
+    "title": "AC, DC, MC und IC verändern, wie sich jede Linie anfühlt",
+    "description": "Der Planet nennt Ihnen das Thema. Die Achse zeigt, wo es sich zeigt: Identität, Beziehungen, Karriere oder Zuhause.",
+    "cards": [
+      {
+        "title": "AC-Linien",
+        "description": "Wie ein Ort Identität, ersten Eindruck und Selbstausdruck beeinflusst.",
+        "href": "#asc-lines",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "DC-Linien",
+        "description": "Wie ein Ort Partner, Kunden und Eins-zu-eins-Beziehungen aktiviert.",
+        "href": "#dsc-lines",
+        "icon": "RiHeartLine"
+      },
+      {
+        "title": "MC-Linien",
+        "description": "Wie ein Ort Karriere, öffentliche Richtung und Reputation betont.",
+        "href": "#mc-lines",
+        "icon": "RiBriefcaseLine"
+      },
+      {
+        "title": "IC-Linien",
+        "description": "Wie ein Ort Zuhause, Familie, Wurzeln und Privatleben prägt.",
+        "href": "#ic-lines",
+        "icon": "RiHome4Line"
+      }
+    ],
+    "guides": [
+      {
+        "id": "asc-lines",
+        "label": "AC · Aszendent",
+        "title": "AC-Linien richten den Planeten auf Identität und Selbstausdruck aus",
+        "description": "Nutzen Sie AC-Linien, wenn es um Selbstvertrauen, Erscheinung, Vitalität, Unabhängigkeit oder Ihren Einstieg in eine neue Umgebung geht. Der Planet wird Teil dessen, wie Sie handeln und wie andere Sie zuerst erleben.",
+        "examples": [
+          {
+            "label": "Sonne AC für Sichtbarkeit und Selbstvertrauen",
+            "href": "/sun-line-astrocartography"
+          },
+          {
+            "label": "Venus AC für Leichtigkeit und Anziehung",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Mars AC für Antrieb und körperliche Energie",
+            "href": "/mars-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "dsc-lines",
+        "label": "DC · Deszendent",
+        "title": "DC-Linien richten den Planeten auf Partner und Eins-zu-eins-Bindungen aus",
+        "description": "Nutzen Sie DC-Linien, wenn es um Liebe, Kunden, Mitstreiter, Konflikte oder die Menschen geht, die ein Ort in Ihr Leben bringt. Das Planetenthema zeigt sich oft über andere Menschen.",
+        "examples": [
+          {
+            "label": "Venus DC für Partnerschaft und Romantik",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Mond DC für emotionale Verbindung",
+            "href": "/moon-line-astrocartography"
+          },
+          {
+            "label": "Jupiter DC für unterstützende Allianzen",
+            "href": "/jupiter-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "mc-lines",
+        "label": "MC · Medium Coeli",
+        "title": "MC-Linien richten den Planeten auf Karriere und öffentliche Richtung aus",
+        "description": "Nutzen Sie MC-Linien, wenn es um Reputation, Führung, beruflichen Schwung, Anerkennung oder langfristige Berufung geht. Diese Linien sind besonders relevant für karriereorientierte Umzugsrecherche.",
+        "examples": [
+          {
+            "label": "Sonne MC für Anerkennung und Führung",
+            "href": "/sun-line-astrocartography"
+          },
+          {
+            "label": "Jupiter MC für Wachstum und Chancen",
+            "href": "/jupiter-line-astrocartography"
+          },
+          {
+            "label": "Saturn MC für dauerhafte Autorität",
+            "href": "/saturn-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "ic-lines",
+        "label": "IC · Imum Coeli",
+        "title": "IC-Linien richten den Planeten auf Zuhause, Wurzeln und Privatleben aus",
+        "description": "Nutzen Sie IC-Linien, wenn es um Zugehörigkeit, Familie, emotionale Grundlagen, Privatsphäre oder den Ort geht, an dem Sie ein Zuhause aufbauen könnten. Die Wirkung ist weniger öffentlich, dafür persönlicher und tiefer spürbar.",
+        "examples": [
+          {
+            "label": "Mond IC für Zuhause und Zugehörigkeit",
+            "href": "/moon-line-astrocartography"
+          },
+          {
+            "label": "Venus IC für Harmonie daheim",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Saturn IC für Wurzeln und Verantwortung",
+            "href": "/saturn-line-astrocartography"
+          }
+        ]
+      }
+    ]
+  },
+  "readYourMap": {
+    "eyebrow": "Ihre persönliche Karte lesen",
+    "title": "Aus einer farbigen Linie eine nützliche Ortsfrage machen",
+    "imageAlt": "AstroCarto-Kartenoberfläche mit Planetenlinien-Steuerung, AC-DC-MC-IC-Beschriftungen und persönlicher Weltkarte",
+    "figcaption": "Beispiel aus der AstroCarto-Karte: Planetensteuerung links, durchgezogene und gestrichelte Pfade zeigen die verschiedenen Achsenlinien auf der Weltkarte.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Planeten identifizieren",
+        "description": "Ordnen Sie Farbe oder Symbol dem Planeten zu. Das liefert das Kernthema — Venus für Verbindung oder Saturn für Verantwortung."
+      },
+      {
+        "number": "2",
+        "title": "AC, DC, MC oder IC prüfen",
+        "description": "Die Achse zeigt, wo das Thema wahrscheinlich auftritt: Selbst, Partner, Karriere oder Zuhause."
+      },
+      {
+        "number": "3",
+        "title": "Entfernung und Alltagskontext vergleichen",
+        "description": "Eine nahe Linie ist ein Signal, kein Urteil. Vergleichen Sie die konkrete Stadt, praktische Rahmenbedingungen und den Rest Ihres Horoskops, bevor Sie entscheiden."
+      }
+    ],
+    "primaryCta": {
+      "title": "Karte erstellen",
+      "url": "/"
+    },
+    "secondaryCta": {
+      "title": "Deutungsmethode lesen",
+      "url": "/posts/astrocartography-map-interpretation"
+    }
+  },
+  "schemaLabels": {
+    "collectionName": "Astrokartographie Planetenlinien",
+    "itemListName": "Guides zu Astrokartographie Planetenlinien",
+    "breadcrumbHome": "Startseite",
+    "breadcrumbCurrent": "Astrokartographie Planetenlinien"
+  },
+  "intentAnchor": {
+    "text": "Diese Seite ist ein umfassendes Nachschlagewerk zu jeder Astrokartographie Planetenlinie — was jede Linie bedeutet, wie die vier Achsen die Wirkung verändern und wie Sie dieses Wissen bei der Wahl von Wohn- oder Reisezielen nutzen."
+  },
+  "internalLinks": {
+    "title": "Schnellnavigation",
+    "items": [
+      {
+        "text": "Erstellen Sie Ihr kostenloses Astrokartographie-Horoskop auf der Weltkarte.",
+        "linkText": "Kostenlose Astrokartographie-Karte",
+        "url": "/"
+      },
+      {
+        "text": "Am beliebtesten:",
+        "linkText": "Venuslinie",
+        "url": "/venus-line-astrocartography"
+      },
+      {
+        "text": "Am besten für die Karriere:",
+        "linkText": "Jupiterlinie",
+        "url": "/jupiter-line-astrocartography"
+      },
+      {
+        "text": "Finden Sie zuerst Ihr MC-Zeichen:",
+        "linkText": "MC-Rechner",
+        "url": "/midheaven-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Was sind Astrokartographie Planetenlinien?",
+    "label": "GRUNDLAGEN",
+    "description": "Astrokartographie Planetenlinien sind Pfade auf einer Weltkarte, die zeigen, wo jeder Planet Ihres Geburtshoroskops zum Zeitpunkt Ihrer Geburt an einer der vier Hauptachsen des Himmels stand. Jeder Mensch hat ein einzigartiges Liniennetz über den Globus — und Leben oder Reisen in der Nähe dieser Linien verstärkt die Energie dieses Planeten im Alltag.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Astrokartographie-Karte mit Planetenlinien über den Globus"
+    },
+    "items": [
+      {
+        "title": "Wie Astrokartographie Planetenlinien berechnet werden",
+        "description": "Zum Zeitpunkt Ihrer Geburt stand jeder Planet an einer bestimmten Himmelsposition. Die Astrokartographie berechnet, wo jeder dieser Planeten für jeden Längengrad auf der Erde aufging (AC), unterging (DC), im Zenit stand (MC) oder im Nadir (IC). Diese vier Positionen ergeben vier Linien pro Planet — bis zu 40 primäre Planetenlinien auf Ihrer persönlichen Karte. Die Berechnung nutzt astronomische Daten der Swiss Ephemeris und wandelt äquatoriale Koordinaten (Rektaszension und Deklination) über sphärische Trigonometrie in geographische Breite und Länge um.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Berechnung von Astrokartographie Planetenlinien anhand der Planetenachsen"
+        }
+      },
+      {
+        "title": "Die vier Achsen: AC, DC, MC und IC",
+        "description": "Jede Astrokartographie Planetenlinie existiert in vier Varianten, je nachdem, welche Achse der Planet berührt. Die Aszendentenlinie (AC) verläuft nord-süd durch Orte, an denen der Planet bei Ihrer Geburt am östlichen Horizont aufging — dort prägt er Identität, Erscheinung und Fremdwahrnehmung. Die Deszendentenlinie (DC) markiert, wo der Planet unterging — dort wirkt er auf Partnerschaften und Eins-zu-eins-Beziehungen. Die MC-Linie markiert den höchsten Stand des Planeten am Himmel — dort betrifft er Karriere, öffentliche Reputation und Lebensrichtung. Die IC-Linie markiert die Position direkt unter der Erde — dort prägt er Zuhause, Familie, Wurzeln und Privatleben. Zu wissen, welcher Achse eine Linie angehört, ist genauso wichtig wie der Planet selbst.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Die vier Achsen AC DC MC IC in der Astrokartographie erklärt"
+        }
+      },
+      {
+        "title": "Wie stark ist der Einfluss einer Linie?",
+        "description": "Je näher Sie an einer Planetenlinie sind, desto stärker ihre Wirkung. Die meisten Astrokartographen gehen davon aus, dass ein spürbarer Effekt innerhalb von 320–480 km entsteht, mit deutlicher Intensivierung innerhalb von 80 km. Direkt auf einer Linie zu leben ist die intensivste Erfahrung. Linienkreuzungen — sogenannte Paran-Linien oder Power Spots — entstehen, wo sich zwei Planetenlinien schneiden und zwei Energien gleichzeitig aktivieren. Ein Besuch muss kein dauerhafter Umzug sein: Auch kurze Reisen in der Nähe Ihrer Linien können spürbare, vorübergehende Veränderungen bringen.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Stärke des Astrokartographie-Linieneinflusses nach Entfernung"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Jede Planetenlinie und ihre Bedeutung",
+    "label": "PLANETENLINIEN",
+    "description": "Jeder Planet in der Astrokartographie trägt eigene Themen, die Ihre Erfahrung an den Orten seiner Linien prägen. Hier ein kompakter Guide zu allen sieben Hauptplanetenlinien und wie sich ihr Einfluss je nach Achse (AC, DC, MC, IC) verschiebt.",
+    "items": [
+      {
+        "title": "Sonnenlinie — Identität, Karriere & Sichtbarkeit",
+        "description": "Sonnenlinien aktivieren Ihre Kernidentität, Ihr Selbstvertrauen und den Wunsch nach Anerkennung. An Sonnenlinien fühlen Sie sich mehr wie Sie selbst und werden eher wahrgenommen. Sonne MC ist besonders stark für berufliche Sichtbarkeit und Führung, Sonne AC stärkt Ausstrahlung und Selbstausdruck. Diese Orte verlangen Authentizität — Verstecken funktioniert nicht. Sonnenlinien eignen sich für Menschen, die öffentlich sichtbar werden, Führung übernehmen oder ihren Lebenssinn wiederfinden möchten. Sie können aber erschöpfend wirken, wenn Sichtbarkeit unbequem ist.",
+        "icon": "RiSunLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Bedeutung der Sonnenlinie in der Astrokartographie"
+        }
+      },
+      {
+        "title": "Mondlinie — Zuhause, Emotionen & Familie",
+        "description": "Mondlinien verstärken emotionale Sensibilität, Intuition und das Bedürfnis nach Geborgenheit. Das sind innen gerichtete Orte, an denen Gefühle leichter an die Oberfläche kommen und das häusliche Leben im Mittelpunkt steht. Mond IC — oft die „Kuschelpulli-Linie“ genannt — ist am stärksten für echtes Zuhause und Zugehörigkeit, ideal für dauerhafte Umzüge. Mond AC fördert emotionalen Ausdruck und Selbsterkenntnis. Hervorragend für Heilung, nährende Beziehungen oder Ankommen — die gesteigerte Emotionalität kann aber überwältigend sein, wenn Sie lieber im Kopf bleiben.",
+        "icon": "RiMoonLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Bedeutung der Mondlinie in der Astrokartographie"
+        }
+      },
+      {
+        "title": "Venuslinie — Liebe, Schönheit & Beziehungen",
+        "description": "Venuslinien schaffen Leichtigkeit, Anziehung, Schönheit und sozialen Fluss. An diesen Orten fühlt sich das Leben weicher an, Beziehungen entstehen natürlicher und Genuss ist leichter zugänglich. Venus DC ist am stärksten für romantische Partnerschaften — oft die „Flitterwochen-Linie“ —, Venus AC stärkt persönliche Ausstrahlung und soziales Selbstvertrauen. Venus IC schafft harmonische Wohnumgebungen. Venuslinien gehören zu den begehrtesten für Umzüge wegen ihrer sanften, unterstützenden Qualität. Die Schattenseite: Komfort kann Motivation und Disziplin mindern, wenn Sie Ihre Ziele nicht bewusst verfolgen.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Bedeutung der Venuslinie in der Astrokartographie"
+        }
+      },
+      {
+        "title": "Marslinie — Energie, Antrieb & Ehrgeiz",
+        "description": "Marslinien aktivieren körperliche Energie, Durchsetzungsvermögen, Ehrgeiz und direktes Handeln. Das sind schnelle, fordernde Orte — motivierend, aber auch unruhig und potenziell konfrontativ. Mars MC ist besonders stark für Karriereambition, Unternehmertum und Führung. Mars AC verstärkt persönlichen Antrieb und körperliche Vitalität. Marslinien eignen sich für kurzfristige Ziele, Sport oder Neuanfänge, können aber langfristig erschöpfend wirken, weil der Kampfmodus dauernd aktiv ist.",
+        "icon": "RiFireLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Bedeutung der Marslinie in der Astrokartographie"
+        }
+      },
+      {
+        "title": "Jupiterlinie — Glück, Fülle & Expansion",
+        "description": "Jupiterlinien schaffen Expansion, Optimismus, Chancen und gutes Gelingen. Als „Großer Wohltäter“ gilt Jupiter als günstigster Planet für Umzüge in der Astrokartographie. An Jupiterlinien öffnen sich Türen leichter, Menschen sind hilfsbereit und Fortschritt fühlt sich weniger blockiert an. Jupiter MC unterstützt beruflichen Erfolg und Anerkennung, Jupiter AC erweitert den Horizont und hebt den Alltag. Jupiter DC zieht großzügige, erfolgreiche Partner an. Die Schattenseite: Neigung zu Exzess, Überheblichkeit oder mangelnder Konsequenz, weil alles zu leicht erscheint.",
+        "icon": "RiStarLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Bedeutung der Jupiterlinie in der Astrokartographie"
+        }
+      },
+      {
+        "title": "Saturnlinie — Disziplin, Herausforderung & langfristiges Wachstum",
+        "description": "Saturnlinien aktivieren Disziplin, Verantwortung, Struktur und karmische Lektionen. Das sind ernste, fordernde Orte, an denen Abkürzungen nicht funktionieren und konsequenter Einsatz nötig ist. Fortschritt auf Saturnlinien ist langsam, aber dauerhaft — Errungenschaften halten oft ein Leben lang. Saturn MC baut berufliche Autorität durch verdiente Reputation auf, Saturn IC schafft starke familiäre Wurzeln durch Verpflichtung. Saturnlinien sind nicht per se schlecht — für Menschen, die Struktur brauchen oder etwas Beständiges aufbauen wollen, können sie transformierend sein. Für Erholung oder Leichtigkeit eher nicht empfohlen.",
+        "icon": "RiShieldLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Bedeutung der Saturnlinie in der Astrokartographie"
+        }
+      },
+      {
+        "title": "Merkurlinie — Kommunikation, Lernen & Geschäft",
+        "description": "Merkurlinien verstärken geistige Aktivität, Kommunikationsfähigkeit, Lernen und Netzwerken. Das sind mental anregende Umgebungen — der Geist ist schärfer, Gespräche fließen leichter, Informationen werden schneller verarbeitet. Merkur MC unterstützt Schreiben, Journalismus, Lehre, Medien und Beratung. Merkur AC macht Netzwerken und Selbstausdruck mühelos. Merkur IC fördert privates Studium und intellektuelle Wohnatmosphäre. Ideal für Studierende, Autoren, Lehrkräfte, Händler und alle, deren Arbeit von geistiger Beweglichkeit abhängt. Schattenseite: geistige Überlastung und Schwierigkeit, langsamer zu werden.",
+        "icon": "RiMessage3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Bedeutung der Merkurlinie in der Astrokartographie"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "So nutzen Sie Ihre Astrokartographie Planetenlinien",
+    "label": "PRAXISGUIDE",
+    "description": "Die Bedeutung der Planetenlinien zu verstehen ist nur der erste Schritt. So wenden Sie dieses Wissen praktisch an — ob für einen Umzug, Urlaub oder um zu verstehen, warum manche Orte sich so anders anfühlen.",
+    "items": [
+      {
+        "title": "Beginnen Sie mit Ihrem Ziel",
+        "description": "Verschiedene Lebensziele brauchen verschiedene Planetenlinien. Für Karriere und Anerkennung: Sonne MC oder Jupiter MC. Für Liebe und Beziehungen: Venus DC oder Mond DC. Für ein friedliches Zuhause: Mond IC oder Venus IC. Für kreatives oder intellektuelles Wachstum: Merkur- oder Neptunlinien. Wenn Sie wissen, was Sie suchen, vermeiden Sie, jeder Linie hinterherzujagen, und treffen bewusste Entscheidungen.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Linien testen, bevor Sie sich festlegen",
+        "description": "Sie müssen nicht dauerhaft umziehen, um eine Planetenlinie zu spüren. Besuchen Sie Städte an oder nahe Ihrer Linien für einige Tage oder Wochen. Achten Sie darauf, wie Sie sich fühlen, wie leicht Dinge fließen und ob die Umgebung Ihre Ziele unterstützt. Viele berichten, dass die Energie innerhalb von 24–48 Stunden spürbar wird. Besonders wichtig bei herausfordernden Linien wie Mars oder Saturn.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Überlappende Linien und Power Spots beachten",
+        "description": "Wo sich zwei oder mehr Planetenlinien auf Ihrer Karte kreuzen, entsteht ein Power Spot oder Paran-Zonen. Diese Orte aktivieren mehrere Planetenenergien gleichzeitig — besonders komplex und intensiv. Ein Jupiter-Venus-Kreuz kann außergewöhnlich romantisch und reichhaltig wirken, ein Mars-Saturn-Kreuz besonders fordernd. Prüfen Sie bei jedem Ort nicht nur einzelne Linien, sondern auch die Kombination aktiver Energien.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Ihr Horoskop zum Verstehen nutzen, nicht zum Einschränken",
+        "description": "Astrokartographie Planetenlinien sind ein Rahmen zum Verstehen geografischer Energiemuster, keine Beschränkung. Sie können überall glücklich und erfolgreich leben — Ihre Linien zeigen, wo bestimmte Qualitäten natürlicher fließen und wo mehr Arbeit nötig ist. Manche wachsen an herausfordernden Saturn- oder Marslinien am stärksten. Andere wählen neutrale Orte ohne starke Linien. Betrachten Sie Ihre Linien als eine Perspektive neben Familie, Karrierechancen und Lebenshaltungskosten.",
+        "icon": "RiLightbulbLine"
+      },
+      {
+        "title": "Welche Planetenlinie passt am besten zu Ihrem Ziel?",
+        "description": "Die beste Linie hängt ganz von Ihrem Anliegen ab. Für Liebe und Romantik: Venus DC — die „Flitterwochen-Linie“. Für Karrierewachstum: Jupiter MC oder Sonne MC. Für echtes Zuhause: Mond IC. Für dauerhafte berufliche Autorität: Saturn MC. Für Ehrgeiz und Unternehmertum: Mars MC. Für Kommunikation und Geschäft: Merkur MC. Für persönliches Selbstvertrauen: Sonne AC oder Venus AC. Keine Linie ist universell „am besten“ — die richtige passt zu dem, was Sie gerade von einem Ort erwarten.",
+        "icon": "RiCompassLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Ausführliche Guides zu jeder Planetenlinie",
+    "label": "VOLLSTÄNDIGE GUIDES",
+    "description": "Jede Planetenlinie hat einen eigenen Guide zu allen vier Achsen (AC, DC, MC, IC), betroffenen Lebensbereichen, praktischen Strategien und FAQ. Wählen Sie die Linie, die zu Ihren aktuellen Zielen passt.",
+    "items": [
+      {
+        "title": "Sonnenlinie — Karriere, Selbstvertrauen & Identität",
+        "description": "Die Sonnenlinie verstärkt Kernidentität, Selbstvertrauen und den Wunsch nach Anerkennung. Sonne MC ist die stärkste Karriereplatzierung in der Astrokartographie. Erfahren Sie, wie alle vier Sonnenachsen Ihr Leben prägen und ob eine Sonnenlinien-Stadt zu Ihren Zielen passt.",
+        "icon": "RiSunLine"
+      },
+      {
+        "title": "Mondlinie — Zuhause, Emotionen & Familie",
+        "description": "Mondlinien sind am stärksten für echtes Zuhause und Zugehörigkeit — besonders Mond IC, oft die „Kuschelpulli-Linie“. Sie verstärken auch emotionale Sensibilität, Intuition und Familienbindungen.",
+        "icon": "RiMoonLine"
+      },
+      {
+        "title": "Venuslinie — Liebe, Schönheit & Beziehungen",
+        "description": "Die Venuslinie gehört zu den begehrtesten in der Astrokartographie wegen Romantik, sozialer Leichtigkeit und Lebensqualität. Venus DC ist die stärkste Platzierung für einen romantischen Partner.",
+        "icon": "RiHeartLine"
+      },
+      {
+        "title": "Jupiterlinie — Glück, Expansion & Chancen",
+        "description": "Jupiterlinien gelten als besonders günstig für Umzüge — Karrieretüren öffnen sich leichter, Beziehungen sind großzügiger, das Leben trägt optimistische Weite. Jupiter MC ist besonders stark für berufliche Anerkennung.",
+        "icon": "RiStarLine"
+      },
+      {
+        "title": "Marslinie — Energie, Antrieb & Ehrgeiz",
+        "description": "Marslinien verstärken körperlichen Antrieb, Wettbewerbsgeist und Ehrgeiz. Hervorragend für mutige Karriereschritte und Sport, erfordern aber bewusste Steuerung, um Burnout und Konflikte zu vermeiden. Mars MC ist die produktivste berufliche Achse.",
+        "icon": "RiFireLine"
+      },
+      {
+        "title": "Saturnlinie — Disziplin, Wachstum & dauerhafte Leistung",
+        "description": "Saturnlinien sind am anspruchsvollsten, aber auch am lohnendsten für Langzeitbauer. Saturn MC schafft dauerhafte berufliche Autorität durch echte Meisterschaft. Nicht für Komfort — aber für alle, die etwas Beständiges aufbauen wollen.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "Merkurlinie — Kommunikation, Lernen & Geschäft",
+        "description": "Merkurlinien schärfen den Geist, beschleunigen Lernen und unterstützen jede Form professioneller Kommunikation. Merkur MC ist die stärkste Platzierung für Autoren, Journalisten, Lehrkräfte, Händler und Wissensarbeiter.",
+        "icon": "RiMessage3Line"
+      },
+      {
+        "title": "Uranuslinie — Freiheit, Wandel & Innovation",
+        "description": "Uranuslinien aktivieren plötzlichen Wandel, Unabhängigkeit und persönliche Neuerfindung. Transformierend statt komfortabel — hervorragend, wenn Sie alte Muster durchbrechen wollen, fordernd, wenn Sie Stabilität brauchen. Uranus MC unterstützt unkonventionelle Karrieren.",
+        "icon": "RiFlashlightLine"
+      },
+      {
+        "title": "Welche Planetenlinie ist die richtige für Sie?",
+        "description": "Ihre ideale Linie hängt von Ihrer aktuellen Lebenspriorität ab. Karrierewachstum: Jupiter MC, Sonne MC oder Saturn MC. Liebe: Venus DC, Mond DSC oder Venus AC. Zuhause: Mond IC oder Venus IC. Antrieb: Mars MC oder Mars AC. Kommunikation: Merkur MC oder Merkur AC. Nutzen Sie Ihre kostenlose Karte, um zu sehen, welche Städte auf Ihren persönlichen Linien liegen — und ordnen Sie jeden Ort Ihrem aktuellen Lebensziel zu.",
+        "icon": "RiCompassLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Astrokartographie Planetenlinien — Häufig gestellte Fragen",
+    "description": "Antworten auf die häufigsten Fragen zum Verstehen und Nutzen von Astrokartographie Planetenlinien.",
+    "items": [
+      {
+        "title": "Was sind Astrokartographie Planetenlinien?",
+        "description": "Astrokartographie Planetenlinien sind Pfade auf einer Weltkarte, die zeigen, wo jeder Planet Ihres Geburtshoroskops zum Zeitpunkt Ihrer Geburt an einer der vier Hauptachsen (Aufgang, Untergang, Zenit oder Nadir) stand. Jeder Planet erzeugt vier Linien — AC, DC, MC und IC — insgesamt bis zu 40 primäre Linien auf Ihrer persönlichen Karte. Leben oder Reisen in der Nähe verstärkt die Energie dieses Planeten im Alltag."
+      },
+      {
+        "title": "Wie viele Planetenlinien habe ich?",
+        "description": "Die meisten Karten zeigen zwischen 28 und 40 primäre Planetenlinien, je nachdem, welche Planeten einbezogen werden. Die sieben traditionellen Planeten (Sonne, Mond, Merkur, Venus, Mars, Jupiter, Saturn) ergeben 28 Linien (7 × 4). Mit Uranus, Neptun und Pluto sind es 40. Manche Systeme fügen Chiron, den Mondknoten und weitere Punkte hinzu."
+      },
+      {
+        "title": "Welche Planetenlinien eignen sich am besten für einen Umzug?",
+        "description": "Die „besten“ Linien hängen von Ihren persönlichen Zielen ab. Jupiterlinien gelten allgemein als günstig für Expansion und Chancen. Venuslinien für Beziehungen und Lebensqualität. Sonnenlinien für berufliche Sichtbarkeit und Identität. Mondlinien für echtes Zuhause. „Am besten“ ist immer relativ — eine Saturnlinie kann für jemanden, der Disziplin und langfristige Leistung sucht, genau richtig sein."
+      },
+      {
+        "title": "In welcher Entfernung spürt man die Wirkung?",
+        "description": "Die meisten Astrokartographen gehen davon aus, dass die Wirkung innerhalb von 320–480 km spürbar ist, mit deutlicher Verstärkung innerhalb von 80 km. Direkt auf einer Linie ist die intensivste Erfahrung. Die genaue Distanz variiert je nach Empfindlichkeit und Planet — äußere Planeten wie Pluto und Uranus haben oft einen weiteren Einflussbereich als innere wie Merkur oder Venus."
+      },
+      {
+        "title": "Kann eine Stadt sowohl günstige als auch schwierige Linien haben?",
+        "description": "Ja, absolut. Die meisten Städte auf Ihrer Karte haben mehrere Planetenlinien in der Nähe, die verschiedene Lebensbereiche aktivieren. Eine Stadt kann auf Ihrer Venus-AC-Linie liegen (Beziehungen und Schönheit) und gleichzeitig auf Ihrer Saturn-MC-Linie (berufliche Disziplin). So fühlt sich das Liebesleben leicht an, während die Karriere mehr Anstrengung verlangt."
+      },
+      {
+        "title": "Verändern sich Planetenlinien im Laufe der Zeit?",
+        "description": "Ihre natal Astrokartographie Planetenlinien — basierend auf Ihrem Geburtshoroskop — bleiben lebenslang gleich. Astrokartographen nutzen aber auch „progressierte“ Linien aus dem progressierten Horoskop, das sich im Laufe der Zeit entwickelt. Progressierte Linien können Perioden markieren, in denen bestimmte Regionen stärker oder schwächer aktiviert werden."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Finden Sie jetzt Ihre Astrokartographie Planetenlinien",
+    "description": "Erstellen Sie Ihre persönliche Astrokartographie-Karte mit Swiss-Ephemeris-Berechnungen und 1-Meilen-Genauigkeit. Sehen Sie genau, wo jede Planetenlinie auf dem Globus verläuft — und klicken Sie auf jede Linie oder Stadt für eine sofortige KI-Deutung. Völlig kostenlos, ohne Anmeldung.",
+    "buttons": [
+      {
+        "title": "Kostenlose Astrokartographie-Karte →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "Genera la tua mappa",
-        "url": "/it",
+        "url": "/",
         "icon": "RiArrowRightLine"
       },
       {
@@ -257,5 +257,9 @@
         "variant": "outline"
       }
     ]
+  },
+  "schemaLabels": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Astrocartografia dove vivere"
   }
 }

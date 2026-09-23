@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "Genera tu mapa",
-        "url": "/es",
+        "url": "/",
         "icon": "RiArrowRightLine"
       },
       {
@@ -257,5 +257,9 @@
         "variant": "outline"
       }
     ]
+  },
+  "schemaLabels": {
+    "breadcrumbHome": "Inicio",
+    "breadcrumbCurrent": "Mejores lugares para vivir según la astrocartografía"
   }
 }

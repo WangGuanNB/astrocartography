@@ -151,13 +151,13 @@ export default async function AstrocartographyWhereToLivePage({
               {
                 "@type": "ListItem",
                 position: 1,
-                name: "Home",
+                name: page.schemaLabels?.breadcrumbHome || "Home",
                 item: getCanonicalUrl(locale, "/"),
               },
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Astrocartography Where to Live",
+                name: page.schemaLabels?.breadcrumbCurrent || h1Title,
                 item: getCanonicalUrl(locale, PATH),
               },
             ],

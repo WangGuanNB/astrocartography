@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "生成你的占星地图",
-        "url": "/zh",
+        "url": "/",
         "icon": "RiArrowRightLine"
       },
       {
@@ -257,5 +257,9 @@
         "variant": "outline"
       }
     ]
+  },
+  "schemaLabels": {
+    "breadcrumbHome": "首页",
+    "breadcrumbCurrent": "占星地图适合居住地"
   }
 }

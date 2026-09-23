@@ -1,8 +1,418 @@
 {
   "metadata": {
-    "title": "Astrocartography Lines: Complete Guide to Every Planetary Line",
-    "description": "Understand every astrocartography line and what each planet means for your life. This complete guide covers Sun, Moon, Venus, Mars, Jupiter, Saturn, Mercury lines—and the 4 angles (ASC, DSC, MC, IC) that determine how each line affects you.",
+    "title": "Astrocartography Lines Meaning: Planets, ASC, DSC, MC & IC",
+    "description": "Learn what every astrocartography line means. Compare Sun, Moon, Venus, Jupiter and other planetary lines across ASC, DSC, MC and IC, then find them on your personal map.",
     "keywords": "astrocartography lines, astrocartography lines meaning, planetary lines astrocartography, what are astrocartography lines, astrocartography line guide, astrocartography lines explained, best astrocartography lines, astrocartography lines ASC DSC MC IC, how to read astrocartography lines, astrocartography relocation lines"
+  },
+  "heading": {
+    "eyebrow": "Astrocartography Hub",
+    "title": "Astrocartography Lines Meaning: A Practical Guide",
+    "description": "Compare the meaning of each planetary line, understand how ASC, DSC, MC and IC change its focus, and then locate the same symbols on your personal map."
+  },
+  "hubHero": {
+    "badge": "Astrocartography Hub",
+    "primaryCta": {
+      "title": "Free Astrocartography Calculator",
+      "url": "/"
+    },
+    "secondaryCta": {
+      "title": "Find Where to Live",
+      "url": "/astrocartography-where-to-live"
+    },
+    "sidebarLabel": "Explore by intent",
+    "sidebarTags": [
+      "Love",
+      "Career",
+      "Home",
+      "Growth"
+    ],
+    "sidebarTitle": "Find the right guide faster",
+    "sidebarDescription": "Browse by planet, life goal, or angle before reading the full guide."
+  },
+  "navPills": [
+    {
+      "title": "Start Here",
+      "href": "#start-here",
+      "icon": "RiSparklingLine"
+    },
+    {
+      "title": "Planets",
+      "href": "#planetary-lines",
+      "icon": "RiPlanetLine"
+    },
+    {
+      "title": "Compare",
+      "href": "#planet-comparison",
+      "icon": "RiTableLine"
+    },
+    {
+      "title": "Life Goals",
+      "href": "#life-goals",
+      "icon": "RiCompassDiscoverLine"
+    },
+    {
+      "title": "Angles",
+      "href": "#angles",
+      "icon": "RiFocus3Line"
+    },
+    {
+      "title": "Read a Map",
+      "href": "#read-your-map",
+      "icon": "RiMap2Line"
+    },
+    {
+      "title": "Guide",
+      "href": "#introduce",
+      "icon": "RiQuestionLine"
+    }
+  ],
+  "hubLinkLabels": {
+    "openGuide": "Open guide"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "Start here",
+      "title": "Choose the fastest path for your question",
+      "description": "Choose whether you need to generate a map, compare locations, check one relocation chart, or learn a repeatable interpretation method.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Free Astrocartography Calculator",
+          "description": "Generate your personal map first, then come back to read each line with context.",
+          "href": "/",
+          "icon": "RiMapLine"
+        },
+        {
+          "title": "Where to Live",
+          "description": "Compare cities for love, career, home, growth, and relocation decisions.",
+          "href": "/astrocartography-where-to-live",
+          "icon": "RiHomeHeartLine"
+        },
+        {
+          "title": "Relocation Chart",
+          "description": "Check one target city with a relocated chart after you shortlist locations.",
+          "href": "/relocation-chart-calculator",
+          "icon": "RiFlightTakeoffLine"
+        },
+        {
+          "title": "How to Read Your Map",
+          "description": "Learn a repeatable way to read planets, angles, distance, and location context.",
+          "href": "/posts/astrocartography-map-interpretation",
+          "icon": "RiBookOpenLine"
+        }
+      ]
+    },
+    "planetaryLines": {
+      "id": "planetary-lines",
+      "eyebrow": "Browse by planet",
+      "title": "Every major astrocartography line in one place",
+      "description": "Use this section as the main directory for planetary line meanings. These links keep every line page reachable from the hub.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Sun Line",
+          "description": "Visibility, confidence, leadership, and identity.",
+          "href": "/sun-line-astrocartography",
+          "icon": "RiSunLine"
+        },
+        {
+          "title": "Moon Line",
+          "description": "Home, emotional security, family, and belonging.",
+          "href": "/moon-line-astrocartography",
+          "icon": "RiMoonLine"
+        },
+        {
+          "title": "Mercury Line",
+          "description": "Communication, learning, writing, and business.",
+          "href": "/mercury-line-astrocartography",
+          "icon": "RiMessage3Line"
+        },
+        {
+          "title": "Venus Line",
+          "description": "Love, beauty, relationships, and daily ease.",
+          "href": "/venus-line-astrocartography",
+          "icon": "RiHeartLine"
+        },
+        {
+          "title": "Mars Line",
+          "description": "Drive, ambition, action, and competitive energy.",
+          "href": "/mars-line-astrocartography",
+          "icon": "RiFireLine"
+        },
+        {
+          "title": "Jupiter Line",
+          "description": "Growth, opportunity, luck, and expansion.",
+          "href": "/jupiter-line-astrocartography",
+          "icon": "RiStarLine"
+        },
+        {
+          "title": "Saturn Line",
+          "description": "Discipline, responsibility, mastery, and endurance.",
+          "href": "/saturn-line-astrocartography",
+          "icon": "RiShieldLine"
+        },
+        {
+          "title": "Uranus Line",
+          "description": "Freedom, reinvention, change, and unconventional paths.",
+          "href": "/uranus-line-astrocartography",
+          "icon": "RiFlashlightLine"
+        }
+      ]
+    },
+    "lifeGoals": {
+      "id": "life-goals",
+      "eyebrow": "Browse by life goal",
+      "title": "Find lines that match what you want from a place",
+      "description": "If you are not sure which planet to read first, start with the life area you care about most.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Love & Relationships",
+          "description": "Start with Venus and Moon lines when your question is about connection.",
+          "href": "/venus-line-astrocartography",
+          "icon": "RiHeartLine"
+        },
+        {
+          "title": "Career & Success",
+          "description": "Compare Sun, Jupiter, Saturn, Mercury, and Mars career themes.",
+          "href": "/jupiter-line-astrocartography",
+          "icon": "RiBriefcaseLine"
+        },
+        {
+          "title": "Home & Belonging",
+          "description": "Use Moon and Venus IC themes when you want a place to feel rooted.",
+          "href": "/moon-line-astrocartography",
+          "icon": "RiHome4Line"
+        },
+        {
+          "title": "Growth & Challenge",
+          "description": "Read Saturn, Mars, and Uranus carefully before choosing intense places.",
+          "href": "/saturn-line-astrocartography",
+          "icon": "RiLeafLine"
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "eyebrow": "Compare line meanings",
+    "title": "Which astrocartography line matches your goal?",
+    "description": "Start with the planet that matches your question, then use the angle to see whether the theme is expressed through identity, relationships, career, or home.",
+    "lineSuffix": "line",
+    "columns": {
+      "planet": "Planet",
+      "theme": "Core theme",
+      "usefulFor": "Useful for",
+      "watchFor": "Watch for"
+    },
+    "items": [
+      {
+        "planet": "Sun",
+        "theme": "Identity, confidence, visibility",
+        "usefulFor": "Leadership, recognition, purpose",
+        "watchFor": "Pressure to perform or be seen",
+        "href": "/sun-line-astrocartography"
+      },
+      {
+        "planet": "Moon",
+        "theme": "Emotion, home, belonging",
+        "usefulFor": "Family, care, settling down",
+        "watchFor": "Moodiness or emotional overload",
+        "href": "/moon-line-astrocartography"
+      },
+      {
+        "planet": "Mercury",
+        "theme": "Communication, learning, movement",
+        "usefulFor": "Writing, study, trade, networking",
+        "watchFor": "Restlessness or mental overload",
+        "href": "/mercury-line-astrocartography"
+      },
+      {
+        "planet": "Venus",
+        "theme": "Love, beauty, harmony",
+        "usefulFor": "Relationships, art, social ease",
+        "watchFor": "Comfort-seeking or avoidance",
+        "href": "/venus-line-astrocartography"
+      },
+      {
+        "planet": "Mars",
+        "theme": "Drive, courage, action",
+        "usefulFor": "Ambition, sport, starting things",
+        "watchFor": "Conflict, impatience, burnout",
+        "href": "/mars-line-astrocartography"
+      },
+      {
+        "planet": "Jupiter",
+        "theme": "Growth, opportunity, expansion",
+        "usefulFor": "Career growth, travel, education",
+        "watchFor": "Excess or overconfidence",
+        "href": "/jupiter-line-astrocartography"
+      },
+      {
+        "planet": "Saturn",
+        "theme": "Structure, duty, mastery",
+        "usefulFor": "Long-term building and authority",
+        "watchFor": "Isolation, delay, heavy demands",
+        "href": "/saturn-line-astrocartography"
+      },
+      {
+        "planet": "Uranus",
+        "theme": "Freedom, change, reinvention",
+        "usefulFor": "Innovation and new directions",
+        "watchFor": "Instability or sudden disruption",
+        "href": "/uranus-line-astrocartography"
+      }
+    ]
+  },
+  "angleGuide": {
+    "eyebrow": "Browse by angle",
+    "title": "ASC, DSC, MC, and IC change how each line feels",
+    "description": "The planet tells you the theme. The angle tells you where that theme tends to show up: identity, relationships, career, or home.",
+    "cards": [
+      {
+        "title": "ASC Lines",
+        "description": "How a place affects identity, first impressions, and self-expression.",
+        "href": "#asc-lines",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "DSC Lines",
+        "description": "How a place activates partners, clients, and one-on-one relationships.",
+        "href": "#dsc-lines",
+        "icon": "RiHeartLine"
+      },
+      {
+        "title": "MC Lines",
+        "description": "How a place emphasizes career, public direction, and reputation.",
+        "href": "#mc-lines",
+        "icon": "RiBriefcaseLine"
+      },
+      {
+        "title": "IC Lines",
+        "description": "How a place shapes home, family, roots, and private life.",
+        "href": "#ic-lines",
+        "icon": "RiHome4Line"
+      }
+    ],
+    "guides": [
+      {
+        "id": "asc-lines",
+        "label": "ASC · Ascendant",
+        "title": "ASC lines focus the planet on identity and self-expression",
+        "description": "Use ASC lines when your question is about confidence, appearance, vitality, independence, or how you enter a new environment. The planet becomes part of how you act and how other people first experience you.",
+        "examples": [
+          {
+            "label": "Sun ASC for visibility and confidence",
+            "href": "/sun-line-astrocartography"
+          },
+          {
+            "label": "Venus ASC for ease and attraction",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Mars ASC for drive and physical momentum",
+            "href": "/mars-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "dsc-lines",
+        "label": "DSC · Descendant",
+        "title": "DSC lines focus the planet on partners and one-to-one bonds",
+        "description": "Use DSC lines when your question is about love, clients, collaborators, conflict, or the kinds of people a place brings into your life. The planetary theme is often encountered through other people.",
+        "examples": [
+          {
+            "label": "Venus DSC for partnership and romance",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Moon DSC for emotional connection",
+            "href": "/moon-line-astrocartography"
+          },
+          {
+            "label": "Jupiter DSC for supportive alliances",
+            "href": "/jupiter-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "mc-lines",
+        "label": "MC · Midheaven",
+        "title": "MC lines focus the planet on career and public direction",
+        "description": "Use MC lines when your question is about reputation, leadership, professional momentum, recognition, or long-term vocation. These lines tend to be the most relevant for career-led relocation research.",
+        "examples": [
+          {
+            "label": "Sun MC for recognition and leadership",
+            "href": "/sun-line-astrocartography"
+          },
+          {
+            "label": "Jupiter MC for growth and opportunity",
+            "href": "/jupiter-line-astrocartography"
+          },
+          {
+            "label": "Saturn MC for durable authority",
+            "href": "/saturn-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "ic-lines",
+        "label": "IC · Imum Coeli",
+        "title": "IC lines focus the planet on home, roots, and private life",
+        "description": "Use IC lines when your question is about belonging, family, emotional foundations, privacy, or where you could build a home. The effect may be less public but more personal and deeply felt.",
+        "examples": [
+          {
+            "label": "Moon IC for home and belonging",
+            "href": "/moon-line-astrocartography"
+          },
+          {
+            "label": "Venus IC for harmony at home",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Saturn IC for roots and responsibility",
+            "href": "/saturn-line-astrocartography"
+          }
+        ]
+      }
+    ]
+  },
+  "readYourMap": {
+    "eyebrow": "Read your personal map",
+    "title": "Turn a colored line into a useful location question",
+    "imageAlt": "AstroCarto map interface showing planetary line controls, ASC DSC MC IC labels, and a personal world map",
+    "figcaption": "Example from the AstroCarto map: planet controls appear on the left, while solid and dashed paths show the different angular lines on the world map.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Identify the planet",
+        "description": "Match the line color or glyph to the planet. This gives you the main theme, such as Venus for connection or Saturn for responsibility."
+      },
+      {
+        "number": "2",
+        "title": "Check ASC, DSC, MC, or IC",
+        "description": "The angle shows where the theme is likely to appear: self, partners, career, or home."
+      },
+      {
+        "number": "3",
+        "title": "Compare distance and real-life context",
+        "description": "A nearby line is one signal, not a verdict. Compare the exact city, practical constraints, and the rest of your chart before deciding."
+      }
+    ],
+    "primaryCta": {
+      "title": "Generate your map",
+      "url": "/"
+    },
+    "secondaryCta": {
+      "title": "Read the interpretation method",
+      "url": "/posts/astrocartography-map-interpretation"
+    }
+  },
+  "schemaLabels": {
+    "collectionName": "Astrocartography Lines",
+    "itemListName": "Astrocartography Line Guides",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Astrocartography Lines"
   },
   "intentAnchor": {
     "text": "This page is a comprehensive reference for every astrocartography line—what each planetary line means, how the four angles change its effect, and how to use this knowledge when choosing where to live or travel."

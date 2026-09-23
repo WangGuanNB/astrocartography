@@ -104,6 +104,11 @@ export interface CalculatorPage {
     description: string;
     keywords?: string;
   };
+  heading?: {
+    eyebrow?: string;
+    title: string;
+    description?: string;
+  };
   breadcrumb?: {
     home: string;
     hub: string;
@@ -162,16 +167,18 @@ export interface CalculatorPage {
   };
   navPills?: Array<{ title: string; href: string; icon: string }>;
   hubSections?: {
-    startHere: HubSectionContent;
-    twelveHouses: HubSectionContent;
-    houseTypes: HubSectionContent;
-    houseGuide: {
+    startHere?: HubSectionContent;
+    twelveHouses?: HubSectionContent;
+    houseTypes?: HubSectionContent;
+    houseGuide?: {
       eyebrow: string;
       title: string;
       description: string;
       disclaimer: string;
       naturalSignLabel: string;
     };
+    planetaryLines?: HubSectionContent;
+    lifeGoals?: HubSectionContent;
   };
   houseDetails?: Array<{
     id: string;
@@ -183,9 +190,62 @@ export interface CalculatorPage {
     description: string;
   }>;
   hubLinkLabels?: {
-    openTool: string;
-    readMeaning: string;
-    learnMore: string;
+    openTool?: string;
+    openGuide?: string;
+    readMeaning?: string;
+    learnMore?: string;
+  };
+  comparison?: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    lineSuffix?: string;
+    columns: {
+      planet: string;
+      theme: string;
+      usefulFor: string;
+      watchFor: string;
+    };
+    items: Array<{
+      planet: string;
+      theme: string;
+      usefulFor: string;
+      watchFor: string;
+      href: string;
+    }>;
+  };
+  angleGuide?: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    cards: Array<{
+      title: string;
+      description: string;
+      href: string;
+      icon: string;
+    }>;
+    guides: Array<{
+      id: string;
+      label: string;
+      title: string;
+      description: string;
+      examples: Array<{ label: string; href: string }>;
+    }>;
+  };
+  readYourMap?: {
+    eyebrow: string;
+    title: string;
+    imageAlt: string;
+    figcaption: string;
+    steps: Array<{ number: string; title: string; description: string }>;
+    primaryCta: { title: string; url: string };
+    secondaryCta: { title: string; url: string };
+  };
+  schemaLabels?: {
+    collectionName: string;
+    itemListName: string;
+    breadcrumbHome: string;
+    breadcrumbCurrent: string;
   };
 }
 

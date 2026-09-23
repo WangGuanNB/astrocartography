@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getCanonicalUrl } from "@/lib/utils";
+import { getLinesBreadcrumbLabels } from "@/lib/lines-breadcrumb";
 import { getVenusLinePage } from "@/services/page";
 import FeatureWhatTwo from "@/components/blocks/feature-what-two";
 import Feature2 from "@/components/blocks/feature2";
@@ -69,6 +70,7 @@ export default async function VenusLinePage({
 }) {
   const { locale } = await params;
   const page = await getVenusLinePage(locale);
+  const crumbs = getLinesBreadcrumbLabels(locale, "venus");
 
   const h1Title = page.metadata.title.split(" - ")[0].replace(/\s+\d{4}$/, "").trim();
 
@@ -136,9 +138,9 @@ export default async function VenusLinePage({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: getCanonicalUrl(locale, "/") },
-              { "@type": "ListItem", position: 2, name: "Astrocartography Lines", item: getCanonicalUrl(locale, "/astrocartography-lines") },
-              { "@type": "ListItem", position: 3, name: "Venus Line", item: getCanonicalUrl(locale, PATH) },
+              { "@type": "ListItem", position: 1, name: crumbs.home, item: getCanonicalUrl(locale, "/") },
+              { "@type": "ListItem", position: 2, name: crumbs.hub, item: getCanonicalUrl(locale, "/astrocartography-lines") },
+              { "@type": "ListItem", position: 3, name: crumbs.current, item: getCanonicalUrl(locale, PATH) },
             ],
           }),
         }}

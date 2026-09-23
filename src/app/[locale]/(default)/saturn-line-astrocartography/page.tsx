@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getCanonicalUrl } from "@/lib/utils";
+import { getLinesBreadcrumbLabels } from "@/lib/lines-breadcrumb";
 import { getSaturnLinePage } from "@/services/page";
 import FeatureWhatTwo from "@/components/blocks/feature-what-two";
 import Feature2 from "@/components/blocks/feature2";
@@ -69,6 +70,7 @@ export default async function SaturnLinePage({
 }) {
   const { locale } = await params;
   const page = await getSaturnLinePage(locale);
+  const crumbs = getLinesBreadcrumbLabels(locale, "saturn");
   const h1Title = page.metadata.title.split(" - ")[0].replace(/\s+\d{4}$/, "").trim();
 
   return (
@@ -135,9 +137,9 @@ export default async function SaturnLinePage({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: getCanonicalUrl(locale, "/") },
-              { "@type": "ListItem", position: 2, name: "Astrocartography Lines", item: getCanonicalUrl(locale, "/astrocartography-lines") },
-              { "@type": "ListItem", position: 3, name: "Saturn Line", item: getCanonicalUrl(locale, PATH) },
+              { "@type": "ListItem", position: 1, name: crumbs.home, item: getCanonicalUrl(locale, "/") },
+              { "@type": "ListItem", position: 2, name: crumbs.hub, item: getCanonicalUrl(locale, "/astrocartography-lines") },
+              { "@type": "ListItem", position: 3, name: crumbs.current, item: getCanonicalUrl(locale, PATH) },
             ],
           }),
         }}

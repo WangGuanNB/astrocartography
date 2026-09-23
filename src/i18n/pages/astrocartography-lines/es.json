@@ -1,0 +1,684 @@
+{
+  "metadata": {
+    "title": "Líneas de astrocartografía: planetas, ASC, DSC, MC e IC",
+    "description": "Descubre el significado de cada línea de astrocartografía. Compara las líneas planetarias del Sol, la Luna, Venus, Júpiter y más en ASC, DSC, MC e IC, y localízalas en tu mapa personal.",
+    "keywords": "líneas de astrocartografía, significado de las líneas de astrocartografía, líneas planetarias astrocartografía, qué son las líneas de astrocartografía, guía de líneas astrocartografía, líneas astrocartografía explicadas, mejores líneas astrocartografía, líneas ASC DSC MC IC, cómo leer mapa astrocartografía, líneas de reubicación astrocartografía"
+  },
+  "heading": {
+    "eyebrow": "Centro de astrocartografía",
+    "title": "Líneas de astrocartografía: guía práctica de significados",
+    "description": "Compara el significado de cada línea planetaria, entiende cómo ASC, DSC, MC e IC cambian su enfoque y localiza los mismos símbolos en tu mapa personal."
+  },
+  "hubHero": {
+    "badge": "Centro de astrocartografía",
+    "primaryCta": {
+      "title": "Calculadora gratuita de astrocartografía",
+      "url": "/"
+    },
+    "secondaryCta": {
+      "title": "Dónde vivir según astrocartografía",
+      "url": "/astrocartography-where-to-live"
+    },
+    "sidebarLabel": "Explorar por objetivo",
+    "sidebarTags": [
+      "Amor",
+      "Carrera",
+      "Hogar",
+      "Crecimiento"
+    ],
+    "sidebarTitle": "Encuentra la guía adecuada más rápido",
+    "sidebarDescription": "Navega por planeta, meta de vida o ángulo antes de leer la guía completa."
+  },
+  "navPills": [
+    {
+      "title": "Empezar aquí",
+      "href": "#start-here",
+      "icon": "RiSparklingLine"
+    },
+    {
+      "title": "Planetas",
+      "href": "#planetary-lines",
+      "icon": "RiPlanetLine"
+    },
+    {
+      "title": "Comparar",
+      "href": "#planet-comparison",
+      "icon": "RiTableLine"
+    },
+    {
+      "title": "Metas de vida",
+      "href": "#life-goals",
+      "icon": "RiCompassDiscoverLine"
+    },
+    {
+      "title": "Ángulos",
+      "href": "#angles",
+      "icon": "RiFocus3Line"
+    },
+    {
+      "title": "Leer el mapa",
+      "href": "#read-your-map",
+      "icon": "RiMap2Line"
+    },
+    {
+      "title": "Guía",
+      "href": "#introduce",
+      "icon": "RiQuestionLine"
+    }
+  ],
+  "hubLinkLabels": {
+    "openGuide": "Abrir guía"
+  },
+  "hubSections": {
+    "startHere": {
+      "id": "start-here",
+      "eyebrow": "Empezar aquí",
+      "title": "Elige el camino más rápido para tu pregunta",
+      "description": "Decide si necesitas generar un mapa, comparar ubicaciones, revisar una carta de reubicación o aprender un método de interpretación repetible.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Calculadora gratuita de astrocartografía",
+          "description": "Genera primero tu mapa personal y vuelve aquí para leer cada línea con contexto.",
+          "href": "/",
+          "icon": "RiMapLine"
+        },
+        {
+          "title": "Dónde vivir",
+          "description": "Compara ciudades para amor, carrera, hogar, crecimiento y decisiones de mudanza.",
+          "href": "/astrocartography-where-to-live",
+          "icon": "RiHomeHeartLine"
+        },
+        {
+          "title": "Carta de reubicación",
+          "description": "Revisa una ciudad objetivo con una carta reubicada después de preseleccionar ubicaciones.",
+          "href": "/relocation-chart-calculator",
+          "icon": "RiFlightTakeoffLine"
+        },
+        {
+          "title": "Cómo leer tu mapa",
+          "description": "Aprende un método repetible para leer planetas, ángulos, distancia y contexto del lugar.",
+          "href": "/posts/astrocartography-map-interpretation",
+          "icon": "RiBookOpenLine"
+        }
+      ]
+    },
+    "planetaryLines": {
+      "id": "planetary-lines",
+      "eyebrow": "Explorar por planeta",
+      "title": "Todas las líneas de astrocartografía principales en un solo lugar",
+      "description": "Usa esta sección como directorio principal de significados de líneas planetarias. Estos enlaces mantienen accesible cada página de línea desde el hub.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Línea del Sol",
+          "description": "Visibilidad, confianza, liderazgo e identidad.",
+          "href": "/sun-line-astrocartography",
+          "icon": "RiSunLine"
+        },
+        {
+          "title": "Línea de la Luna",
+          "description": "Hogar, seguridad emocional, familia y pertenencia.",
+          "href": "/moon-line-astrocartography",
+          "icon": "RiMoonLine"
+        },
+        {
+          "title": "Línea de Mercurio",
+          "description": "Comunicación, aprendizaje, escritura y negocios.",
+          "href": "/mercury-line-astrocartography",
+          "icon": "RiMessage3Line"
+        },
+        {
+          "title": "Línea de Venus",
+          "description": "Amor, belleza, relaciones y facilidad cotidiana.",
+          "href": "/venus-line-astrocartography",
+          "icon": "RiHeartLine"
+        },
+        {
+          "title": "Línea de Marte",
+          "description": "Impulso, ambición, acción y energía competitiva.",
+          "href": "/mars-line-astrocartography",
+          "icon": "RiFireLine"
+        },
+        {
+          "title": "Línea de Júpiter",
+          "description": "Crecimiento, oportunidad, suerte y expansión.",
+          "href": "/jupiter-line-astrocartography",
+          "icon": "RiStarLine"
+        },
+        {
+          "title": "Línea de Saturno",
+          "description": "Disciplina, responsabilidad, maestría y resistencia.",
+          "href": "/saturn-line-astrocartography",
+          "icon": "RiShieldLine"
+        },
+        {
+          "title": "Línea de Urano",
+          "description": "Libertad, reinvencción, cambio y caminos poco convencionales.",
+          "href": "/uranus-line-astrocartography",
+          "icon": "RiFlashlightLine"
+        }
+      ]
+    },
+    "lifeGoals": {
+      "id": "life-goals",
+      "eyebrow": "Explorar por meta de vida",
+      "title": "Encuentra líneas que encajen con lo que buscas de un lugar",
+      "description": "Si no sabes qué planeta leer primero, empieza por el área de vida que más te importa.",
+      "columns": "sm:grid-cols-2 lg:grid-cols-4",
+      "items": [
+        {
+          "title": "Amor y relaciones",
+          "description": "Empieza con las líneas de Venus y la Luna cuando tu pregunta trata de conexión.",
+          "href": "/venus-line-astrocartography",
+          "icon": "RiHeartLine"
+        },
+        {
+          "title": "Carrera y éxito",
+          "description": "Compara los temas de carrera del Sol, Júpiter, Saturno, Mercurio y Marte.",
+          "href": "/jupiter-line-astrocartography",
+          "icon": "RiBriefcaseLine"
+        },
+        {
+          "title": "Hogar y pertenencia",
+          "description": "Usa los temas IC de la Luna y Venus cuando buscas un lugar donde echar raíces.",
+          "href": "/moon-line-astrocartography",
+          "icon": "RiHome4Line"
+        },
+        {
+          "title": "Crecimiento y desafío",
+          "description": "Lee con cuidado Saturno, Marte y Urano antes de elegir lugares intensos.",
+          "href": "/saturn-line-astrocartography",
+          "icon": "RiLeafLine"
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "eyebrow": "Comparar significados de líneas",
+    "title": "¿Qué línea de astrocartografía encaja con tu objetivo?",
+    "description": "Empieza con el planeta que coincide con tu pregunta y usa el ángulo para ver si el tema se expresa a través de la identidad, las relaciones, la carrera o el hogar.",
+    "lineSuffix": "línea",
+    "columns": {
+      "planet": "Planeta",
+      "theme": "Tema central",
+      "usefulFor": "Útil para",
+      "watchFor": "Precaución"
+    },
+    "items": [
+      {
+        "planet": "Sol",
+        "theme": "Identidad, confianza, visibilidad",
+        "usefulFor": "Liderazgo, reconocimiento, propósito",
+        "watchFor": "Presión por destacar o ser visto",
+        "href": "/sun-line-astrocartography"
+      },
+      {
+        "planet": "Luna",
+        "theme": "Emoción, hogar, pertenencia",
+        "usefulFor": "Familia, cuidado, arraigo",
+        "watchFor": "Cambios de ánimo o sobrecarga emocional",
+        "href": "/moon-line-astrocartography"
+      },
+      {
+        "planet": "Mercurio",
+        "theme": "Comunicación, aprendizaje, movimiento",
+        "usefulFor": "Escritura, estudio, comercio, networking",
+        "watchFor": "Inquietud o sobrecarga mental",
+        "href": "/mercury-line-astrocartography"
+      },
+      {
+        "planet": "Venus",
+        "theme": "Amor, belleza, armonía",
+        "usefulFor": "Relaciones, arte, facilidad social",
+        "watchFor": "Buscar solo comodidad o evitar conflictos",
+        "href": "/venus-line-astrocartography"
+      },
+      {
+        "planet": "Marte",
+        "theme": "Impulso, coraje, acción",
+        "usefulFor": "Ambición, deporte, iniciar proyectos",
+        "watchFor": "Conflictos, impaciencia, agotamiento",
+        "href": "/mars-line-astrocartography"
+      },
+      {
+        "planet": "Júpiter",
+        "theme": "Crecimiento, oportunidad, expansión",
+        "usefulFor": "Crecimiento profesional, viajes, educación",
+        "watchFor": "Excesos o exceso de confianza",
+        "href": "/jupiter-line-astrocartography"
+      },
+      {
+        "planet": "Saturno",
+        "theme": "Estructura, deber, maestría",
+        "usefulFor": "Construcción a largo plazo y autoridad",
+        "watchFor": "Aislamiento, retrasos, exigencias pesadas",
+        "href": "/saturn-line-astrocartography"
+      },
+      {
+        "planet": "Urano",
+        "theme": "Libertad, cambio, reinvenión",
+        "usefulFor": "Innovación y nuevas direcciones",
+        "watchFor": "Inestabilidad o cambios bruscos",
+        "href": "/uranus-line-astrocartography"
+      }
+    ]
+  },
+  "angleGuide": {
+    "eyebrow": "Explorar por ángulo",
+    "title": "ASC, DSC, MC e IC cambian cómo se siente cada línea",
+    "description": "El planeta te indica el tema. El ángulo te muestra dónde suele manifestarse: identidad, relaciones, carrera u hogar.",
+    "cards": [
+      {
+        "title": "Líneas ASC",
+        "description": "Cómo un lugar afecta la identidad, las primeras impresiones y la autoexpresión.",
+        "href": "#asc-lines",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Líneas DSC",
+        "description": "Cómo un lugar activa parejas, clientes y relaciones uno a uno.",
+        "href": "#dsc-lines",
+        "icon": "RiHeartLine"
+      },
+      {
+        "title": "Líneas MC",
+        "description": "Cómo un lugar enfatiza la carrera, la dirección pública y la reputación.",
+        "href": "#mc-lines",
+        "icon": "RiBriefcaseLine"
+      },
+      {
+        "title": "Líneas IC",
+        "description": "Cómo un lugar moldea el hogar, la familia, las raíces y la vida privada.",
+        "href": "#ic-lines",
+        "icon": "RiHome4Line"
+      }
+    ],
+    "guides": [
+      {
+        "id": "asc-lines",
+        "label": "ASC · Ascendente",
+        "title": "Las líneas ASC centran el planeta en la identidad y la autoexpresión",
+        "description": "Usa las líneas ASC cuando tu pregunta trata de confianza, apariencia, vitalidad, independencia o cómo entras en un entorno nuevo. El planeta forma parte de cómo actúas y de la primera impresión que causas.",
+        "examples": [
+          {
+            "label": "Sol ASC para visibilidad y confianza",
+            "href": "/sun-line-astrocartography"
+          },
+          {
+            "label": "Venus ASC para facilidad y atracción",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Marte ASC para impulso y energía física",
+            "href": "/mars-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "dsc-lines",
+        "label": "DSC · Descendente",
+        "title": "Las líneas DSC centran el planeta en parejas y vínculos uno a uno",
+        "description": "Usa las líneas DSC cuando tu pregunta trata de amor, clientes, colaboradores, conflictos o el tipo de personas que un lugar atrae a tu vida. El tema planetario suele manifestarse a través de otras personas.",
+        "examples": [
+          {
+            "label": "Venus DSC para pareja y romance",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Luna DSC para conexión emocional",
+            "href": "/moon-line-astrocartography"
+          },
+          {
+            "label": "Júpiter DSC para alianzas de apoyo",
+            "href": "/jupiter-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "mc-lines",
+        "label": "MC · Medio Cielo",
+        "title": "Las líneas MC centran el planeta en la carrera y la dirección pública",
+        "description": "Usa las líneas MC cuando tu pregunta trata de reputación, liderazgo, impulso profesional, reconocimiento o vocación a largo plazo. Suelen ser las más relevantes para investigar mudanzas orientadas a la carrera.",
+        "examples": [
+          {
+            "label": "Sol MC para reconocimiento y liderazgo",
+            "href": "/sun-line-astrocartography"
+          },
+          {
+            "label": "Júpiter MC para crecimiento y oportunidad",
+            "href": "/jupiter-line-astrocartography"
+          },
+          {
+            "label": "Saturno MC para autoridad duradera",
+            "href": "/saturn-line-astrocartography"
+          }
+        ]
+      },
+      {
+        "id": "ic-lines",
+        "label": "IC · Fondo del Cielo",
+        "title": "Las líneas IC centran el planeta en el hogar, las raíces y la vida privada",
+        "description": "Usa las líneas IC cuando tu pregunta trata de pertenencia, familia, bases emocionales, privacidad o dónde podrías construir un hogar. El efecto puede ser menos público, pero más personal y profundo.",
+        "examples": [
+          {
+            "label": "Luna IC para hogar y pertenencia",
+            "href": "/moon-line-astrocartography"
+          },
+          {
+            "label": "Venus IC para armonía en el hogar",
+            "href": "/venus-line-astrocartography"
+          },
+          {
+            "label": "Saturno IC para raíces y responsabilidad",
+            "href": "/saturn-line-astrocartography"
+          }
+        ]
+      }
+    ]
+  },
+  "readYourMap": {
+    "eyebrow": "Leer tu mapa personal",
+    "title": "Convierte una línea de color en una pregunta útil sobre el lugar",
+    "imageAlt": "Interfaz del mapa AstroCarto con controles de líneas planetarias, etiquetas ASC DSC MC IC y un mapa mundial personal",
+    "figcaption": "Ejemplo del mapa AstroCarto: los controles de planetas aparecen a la izquierda, mientras las trayectorias sólidas y discontinuas muestran las distintas líneas angulares en el mapa mundial.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Identifica el planeta",
+        "description": "Relaciona el color o glifo de la línea con el planeta. Eso te da el tema principal: Venus para conexión, Saturno para responsabilidad, etc."
+      },
+      {
+        "number": "2",
+        "title": "Revisa ASC, DSC, MC o IC",
+        "description": "El ángulo indica dónde es probable que aparezca el tema: yo, parejas, carrera u hogar."
+      },
+      {
+        "number": "3",
+        "title": "Compara distancia y contexto real",
+        "description": "Una línea cercana es una señal, no un veredicto. Compara la ciudad exacta, las limitaciones prácticas y el resto de tu carta antes de decidir."
+      }
+    ],
+    "primaryCta": {
+      "title": "Genera tu mapa",
+      "url": "/"
+    },
+    "secondaryCta": {
+      "title": "Lee el método de interpretación",
+      "url": "/posts/astrocartography-map-interpretation"
+    }
+  },
+  "schemaLabels": {
+    "collectionName": "Líneas de astrocartografía",
+    "itemListName": "Guías de líneas de astrocartografía",
+    "breadcrumbHome": "Inicio",
+    "breadcrumbCurrent": "Líneas de astrocartografía"
+  },
+  "intentAnchor": {
+    "text": "Esta página es una referencia completa sobre las líneas de astrocartografía: qué significa cada línea planetaria, cómo los cuatro ángulos cambian su efecto y cómo usar este conocimiento al elegir dónde vivir o viajar."
+  },
+  "internalLinks": {
+    "title": "Navegación rápida",
+    "items": [
+      {
+        "text": "Genera tu carta de astrocartografía gratuita en el mapa mundial.",
+        "linkText": "Carta y mapa de astrocartografía gratis",
+        "url": "/"
+      },
+      {
+        "text": "Más popular:",
+        "linkText": "Línea de Venus",
+        "url": "/venus-line-astrocartography"
+      },
+      {
+        "text": "Mejor para carrera:",
+        "linkText": "Línea de Júpiter",
+        "url": "/jupiter-line-astrocartography"
+      },
+      {
+        "text": "Encuentra primero tu signo natal del MC:",
+        "linkText": "Calculadora de Medio Cielo",
+        "url": "/midheaven-calculator"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "¿Qué son las líneas de astrocartografía?",
+    "label": "FUNDAMENTOS",
+    "description": "Las líneas de astrocartografía son trayectorias trazadas sobre un mapa mundial que muestran dónde estaba posicionado cada planeta de tu carta natal en los cuatro ángulos clave del cielo en el momento de tu nacimiento. Cada persona tiene un conjunto único de líneas que cruzan el globo, y vivir o viajar cerca de esas líneas amplifica la energía de ese planeta en tu experiencia diaria.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Mapa de líneas de astrocartografía con trayectorias planetarias alrededor del globo"
+    },
+    "items": [
+      {
+        "title": "Cómo se calculan las líneas de astrocartografía",
+        "description": "En el momento de tu nacimiento, cada planeta ocupaba una posición específica en el cielo. La astrocartografía calcula dónde estaba cada uno de esos planetas al salir (ASC), al ponerse (DSC), culminando en su punto más alto (MC) o en su punto más bajo bajo la Tierra (IC) para cada longitud del globo. Estas cuatro posiciones crean cuatro líneas distintas por planeta, lo que da hasta 40 líneas planetarias principales en tu mapa personal. Las líneas se calculan con datos astronómicos de Swiss Ephemeris, convirtiendo las coordenadas ecuatoriales planetarias (Ascensión Recta y Declinación) en latitud y longitud geográficas mediante trigonometría esférica.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Cómo se calculan las líneas de astrocartografía usando los ángulos planetarios"
+        }
+      },
+      {
+        "title": "Los cuatro ángulos: ASC, DSC, MC e IC",
+        "description": "Cada línea de astrocartografía tiene cuatro versiones según el ángulo que toca el planeta. La línea del Ascendente (ASC) corre de norte a sur por los lugares donde el planeta salía en el horizonte oriental al nacer: esos sitios afectan tu identidad, apariencia y cómo te perciben. La línea del Descendente (DSC) marca dónde el planeta se ponía en el horizonte occidental: esos lugares influyen en las relaciones uno a uno y las parejas. La línea del Medio Cielo (MC) marca dónde el planeta estaba en su punto más alto: esos lugares afectan la carrera, la reputación pública y la dirección de vida. La línea del Fondo del Cielo (IC) marca dónde el planeta estaba directamente bajo la Tierra: esos lugares moldean el hogar, la familia, las raíces y la vida privada. Entender a qué ángulo pertenece una línea es tan importante como saber qué planeta la genera.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Los cuatro ángulos ASC DSC MC IC en astrocartografía explicados"
+        }
+      },
+      {
+        "title": "¿Qué tan fuerte es la influencia de una línea?",
+        "description": "Cuanto más cerca estés de una línea planetaria, más fuerte será su influencia. La mayoría de los astrocartógrafos coinciden en que vivir a menos de 320–480 km (200–300 millas) de una línea produce un efecto perceptible, intensificándose de forma notable dentro de unos 80 km (50 millas). Estar exactamente sobre una línea es la experiencia más potente. Las intersecciones de líneas, llamadas «líneas paran» o «puntos de poder», ocurren donde se cruzan dos líneas planetarias, creando zonas donde dos energías planetarias se activan a la vez. Visitar un lugar no implica necesariamente mudarse: incluso viajes cortos o vacaciones cerca de tus líneas pueden producir cambios temporales significativos en tu experiencia.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Intensidad de la influencia de una línea de astrocartografía según la distancia"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Cada línea planetaria y su significado",
+    "label": "LÍNEAS PLANETARIAS",
+    "description": "Cada planeta en astrocartografía lleva temas distintos que moldean tu experiencia en los lugares donde caen sus líneas. Aquí tienes una guía concisa de las siete líneas planetarias principales, junto con cómo cambia su influencia según el ángulo (ASC, DSC, MC, IC).",
+    "items": [
+      {
+        "title": "Línea del Sol — Identidad, carrera y visibilidad",
+        "description": "Las líneas del Sol activan tu identidad central, tu confianza y tu deseo de reconocimiento. En ellas te sientes más tú mismo y es más probable que te vean y te reconozcan. Las líneas Sol MC son especialmente potentes para visibilidad profesional y liderazgo, mientras que las Sol ASC potencian el carisma personal y la autoexpresión. Estos lugares exigen autenticidad: no permiten esconderte. Son excelentes para quien busca reputación pública, liderazgo o reconectar con su propósito. Sin embargo, pueden resultar agotadoras si no te sientes cómodo con la visibilidad.",
+        "icon": "RiSunLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Significado de la línea del Sol en astrocartografía"
+        }
+      },
+      {
+        "title": "Línea de la Luna — Hogar, emociones y familia",
+        "description": "Las líneas de la Luna intensifican la sensibilidad emocional, la intuición y la necesidad de confort y pertenencia. Son lugares profundamente introspectivos donde las emociones afloran con más facilidad y la vida doméstica se vuelve central. Las líneas Luna IC, a menudo llamadas la «línea del suéter acogedor», son las más potentes para encontrar un verdadero sentido de hogar y pertenencia, ideales para una mudanza permanente. Las Luna ASC favorecen la expresión emocional y el autodescubrimiento. Son excelentes para sanar, nutrir relaciones o arraigarse, aunque la mayor emotividad puede resultar abrumadora para quien prefiere mantenerse en la mente.",
+        "icon": "RiMoonLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Significado de la línea de la Luna en astrocartografía"
+        }
+      },
+      {
+        "title": "Línea de Venus — Amor, belleza y relaciones",
+        "description": "Las líneas de Venus crean una atmósfera de facilidad, atracción, belleza y fluidez social. Son lugares donde la vida se siente más suave, las relaciones surgen con más naturalidad y el placer es más accesible. Las Venus DSC son las más potentes para parejas románticas, a menudo llamadas la «línea de luna de miel», mientras que las Venus ASC potencian el magnetismo personal y la confianza social. Las Venus IC crean hogares armoniosos y bellos. Las líneas de Venus están entre las más buscadas para mudarse por su calidad suave y de apoyo. Su lado sombrío es que la comodidad puede reducir la motivación y la disciplina si no eres intencional con tus metas.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Significado de la línea de Venus en astrocartografía"
+        }
+      },
+      {
+        "title": "Línea de Marte — Energía, impulso y ambición",
+        "description": "Las líneas de Marte activan la energía física, la asertividad, la ambición y la acción directa. Son lugares de ritmo acelerado y exigentes, donde te sientes motivado pero también inquieto y potencialmente confrontacional. Las Marte MC son especialmente potentes para ambición profesional, emprendimiento y liderazgo: persigues metas con audacia y sientes impulso por competir y triunfar. Las Marte ASC intensifican el impulso personal y la vitalidad física. Aunque son excelentes para metas a corto plazo, deportes o lanzar iniciativas, pueden resultar agotadoras para vivir a largo plazo por la activación constante de tu respuesta de lucha.",
+        "icon": "RiFireLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Significado de la línea de Marte en astrocartografía"
+        }
+      },
+      {
+        "title": "Línea de Júpiter — Suerte, abundancia y expansión",
+        "description": "Las líneas de Júpiter crean una sensación de expansión, optimismo, oportunidad y buena fortuna. Conocido como el «Gran Benefactor», Júpiter se considera el planeta más favorable para mudarse en astrocartografía. En sus líneas las puertas se abren con más facilidad, la gente es servicial y el progreso se siente menos obstaculizado. Las Júpiter MC apoyan el éxito profesional, el reconocimiento y el crecimiento laboral, mientras que las Júpiter ASC amplían tu visión del mundo y aportan una cualidad edificante al día a día. Las Júpiter DSC atraen parejas y colaboradores generosos y exitosos. Su lado sombrío es la tendencia al exceso, la excesiva confianza o no aplicar esfuerzo constante porque todo parece demasiado fácil.",
+        "icon": "RiStarLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Significado de la línea de Júpiter en astrocartografía"
+        }
+      },
+      {
+        "title": "Línea de Saturno — Disciplina, desafío y crecimiento a largo plazo",
+        "description": "Las líneas de Saturno activan la disciplina, la responsabilidad, la estructura y las lecciones kármicas. Son lugares serios y exigentes donde los atajos no funcionan y la vida requiere esfuerzo constante. El progreso en líneas de Saturno es lento pero duradero: los logros aquí suelen perdurar toda la vida. Las Saturno MC construyen autoridad profesional duradera mediante reputación ganada, mientras que las Saturno IC crean bases familiares sólidas a través de la obligación y raíces profundas. No son necesariamente malas: para quien necesita estructura o quiere construir algo duradero, pueden ser transformadoras. Sin embargo, generalmente no se recomiendan para descanso, diversión o buscar facilidad.",
+        "icon": "RiShieldLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Significado de la línea de Saturno en astrocartografía"
+        }
+      },
+      {
+        "title": "Línea de Mercurio — Comunicación, aprendizaje y negocios",
+        "description": "Las líneas de Mercurio potencian la actividad intelectual, las habilidades de comunicación, el aprendizaje y el networking. Son entornos mentalmente estimulantes donde la mente se siente más ágil, las conversaciones fluyen con más facilidad y el procesamiento de información se acelera. Las Mercurio MC apoyan carreras en escritura, periodismo, enseñanza, medios y consultoría: tus ideas llegan a audiencias y la comunicación profesional florece. Las Mercurio ASC hacen que el networking y la autoexpresión se sientan naturales. Las Mercurio IC favorecen el estudio privado, la lectura profunda y entornos intelectuales en el hogar. Son excelentes para estudiantes, escritores, docentes, comerciantes y quien dependa de la agilidad mental. Su lado sombrío es la sobrecarga mental y la dificultad para frenar.",
+        "icon": "RiMessage3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Significado de la línea de Mercurio en astrocartografía"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo usar tus líneas de astrocartografía",
+    "label": "GUÍA PRÁCTICA",
+    "description": "Entender tus líneas de astrocartografía es solo el primer paso. Aquí tienes cómo aplicar este conocimiento de forma práctica, ya sea que planees mudarte, tomar vacaciones o simplemente quieras entender por qué algunos lugares se sienten tan distintos.",
+    "items": [
+      {
+        "title": "Empieza identificando tu propósito",
+        "description": "Distintas metas de vida requieren distintas líneas planetarias. Si buscas avance profesional y reconocimiento, prioriza tus líneas Sol MC o Júpiter MC. Si quieres encontrar amor o mejorar relaciones, enfócate en Venus DSC o Luna DSC. Para un hogar pacífico y nutritivo, mira Luna IC o Venus IC. Para crecimiento creativo o intelectual, explora Mercurio o Neptuno. Saber qué quieres antes de mirar tu mapa evita perseguir cada línea y te ayuda a tomar decisiones intencionales sobre dónde invertir tiempo y energía.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Prueba las líneas antes de comprometerte",
+        "description": "No necesitas mudarte permanentemente para sentir la influencia de una línea planetaria. Visita ciudades sobre o cerca de tus líneas durante unos días o semanas. Observa cómo te sientes, qué tan fluido resulta todo y si el entorno apoya tus metas. Muchas personas reportan que la energía de la línea se hace evidente en las primeras 24–48 horas tras llegar. Este enfoque es especialmente importante con líneas exigentes como Marte o Saturno, donde las demandas del lugar pueden superar los beneficios según tu situación actual.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Considera líneas superpuestas y puntos de poder",
+        "description": "Donde dos o más líneas planetarias se cruzan en tu mapa, se crea un «punto de poder» o «zona paran». Estos lugares activan varias energías planetarias a la vez, lo que los hace especialmente complejos e intensos. Un punto de poder Júpiter-Venus puede crear una atmósfera excepcionalmente romántica y abundante, mientras que un cruce Marte-Saturno puede sentirse especialmente exigente y presionado. Al evaluar una ubicación, revisa no solo qué líneas individuales la atraviesan, sino también qué combinación de energías está activa. Algunas de las ciudades más significativas en la vida de las personas caen en estas intersecciones multilínea.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Usa tu carta para entender, no para limitarte",
+        "description": "Las líneas de astrocartografía son un marco para entender patrones de energía geográfica, no un conjunto de restricciones. Puedes vivir feliz y con éxito en cualquier lugar: tus líneas simplemente revelan dónde ciertas cualidades surgen con más naturalidad y dónde necesitas esforzarte más. Muchas personas descubren que vivir en una línea exigente de Saturno o Marte fortalece sus mayores capacidades con el tiempo. Otras eligen ubicaciones sin líneas fuertes para disfrutar un entorno más neutro y autodirigido. Piensa en tus líneas como una lente entre muchas al decidir dónde ir, junto con factores prácticos como familia, oportunidades laborales y costo de vida.",
+        "icon": "RiLightbulbLine"
+      },
+      {
+        "title": "¿Qué línea de astrocartografía es mejor para tu objetivo?",
+        "description": "La mejor línea depende enteramente de lo que buscas. Para amor y romance, Venus DSC es la más potente, ampliamente conocida como la «línea de luna de miel». Para crecimiento profesional y reconocimiento, Júpiter MC o Sol MC son las opciones más fuertes. Para un verdadero sentido de hogar y pertenencia, Luna IC es consistentemente la recomendación principal. Para autoridad profesional duradera mediante maestría, Saturno MC construye la reputación más sólida. Para ambición y empuje emprendedor, Marte MC no tiene rival. Para comunicación, escritura y negocios, Mercurio MC es la colocación más específica. Para confianza personal e identidad, Sol ASC o Venus ASC son excelentes. Ninguna línea es universalmente «la mejor»: la adecuada es la que coincide con lo que realmente quieres de un lugar ahora mismo.",
+        "icon": "RiCompassLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Guías en profundidad para cada línea planetaria",
+    "label": "GUÍAS COMPLETAS",
+    "description": "Cada línea planetaria tiene su propia guía completa que cubre los cuatro ángulos (ASC, DSC, MC, IC), las áreas de vida más afectadas, estrategias prácticas de uso y un FAQ completo. Elige la línea más relevante para tus metas actuales.",
+    "items": [
+      {
+        "title": "Línea del Sol — Carrera, confianza e identidad",
+        "description": "La línea del Sol amplifica tu identidad central, tu confianza y tu deseo de reconocimiento. Sol MC es la colocación profesional más fuerte en toda la astrocartografía. Aprende cómo los cuatro ángulos de la línea del Sol afectan tu vida de forma distinta y si una ciudad Sol encaja con tus metas actuales. Lee nuestra guía completa de la línea del Sol en astrocartografía para el desglose completo.",
+        "icon": "RiSunLine"
+      },
+      {
+        "title": "Línea de la Luna — Hogar, emociones y familia",
+        "description": "Las líneas de la Luna son la colocación más potente para encontrar un verdadero sentido de hogar y pertenencia, especialmente Luna IC, a menudo llamada la «línea del suéter acogedor». También intensifican la sensibilidad emocional, la intuición y los lazos familiares. Lee nuestra guía completa de la línea de la Luna en astrocartografía para entender qué ángulo encaja mejor contigo.",
+        "icon": "RiMoonLine"
+      },
+      {
+        "title": "Línea de Venus — Amor, belleza y relaciones",
+        "description": "La línea de Venus está entre las más buscadas en astrocartografía por su efecto en el romance, la facilidad social y la calidad de vida cotidiana. Venus DSC es la colocación más potente para encontrar pareja romántica. Lee nuestra guía completa de la línea de Venus en astrocartografía para entender los cuatro ángulos y cómo usarlos.",
+        "icon": "RiHeartLine"
+      },
+      {
+        "title": "Línea de Júpiter — Suerte, expansión y oportunidad",
+        "description": "Las líneas de Júpiter se consideran consistentemente las más favorables para mudarse: las puertas profesionales se abren con más facilidad, las relaciones son más generosas y la vida lleva una cualidad de optimismo expansivo. Júpiter MC es especialmente potente para reconocimiento profesional. Lee nuestra guía completa de la línea de Júpiter en astrocartografía para un desglose completo.",
+        "icon": "RiStarLine"
+      },
+      {
+        "title": "Línea de Marte — Energía, impulso y ambición",
+        "description": "Las líneas de Marte amplifican el impulso físico, la ventaja competitiva y la ambición. Son excelentes para movimientos profesionales audaces y actividades atléticas, pero requieren dirección intencional para evitar agotamiento y conflictos. Marte MC es el ángulo profesionalmente más productivo. Lee nuestra guía completa de la línea de Marte en astrocartografía para decidir si encaja con tus metas.",
+        "icon": "RiFireLine"
+      },
+      {
+        "title": "Línea de Saturno — Disciplina, crecimiento y logro duradero",
+        "description": "Las líneas de Saturno son las más exigentes pero también las más gratificantes para quien construye a largo plazo. Saturno MC crea autoridad profesional duradera mediante maestría genuina y esfuerzo sostenido. No son líneas para elegir por comodidad, sino para quien está listo para construir algo permanente. Lee nuestra guía completa de la línea de Saturno en astrocartografía.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "Línea de Mercurio — Comunicación, aprendizaje y negocios",
+        "description": "Las líneas de Mercurio agudizan la mente, aceleran el aprendizaje y apoyan todas las formas de comunicación profesional. Mercurio MC es la colocación más fuerte para escritores, periodistas, educadores, comerciantes y trabajadores del conocimiento. Lee nuestra guía completa de la línea de Mercurio en astrocartografía para ver cómo los cuatro ángulos expresan la energía de Mercurio.",
+        "icon": "RiMessage3Line"
+      },
+      {
+        "title": "Línea de Urano — Libertad, cambio e innovación",
+        "description": "Las líneas de Urano activan cambios bruscos, independencia y reinvenión personal. Son transformadoras más que cómodas: excelentes cuando quieres romper viejos patrones, pero exigentes si necesitas estabilidad. Urano MC apoya carreras poco convencionales e innovación. Lee nuestra guía completa de la línea de Urano en astrocartografía para los cuatro ángulos y estrategias prácticas.",
+        "icon": "RiFlashlightLine"
+      },
+      {
+        "title": "¿Qué línea de astrocartografía es adecuada para ti?",
+        "description": "Tu línea ideal depende de tu prioridad de vida actual. Para crecimiento profesional y reconocimiento público: Júpiter MC (las oportunidades llegan con facilidad), Sol MC (liderazgo y visibilidad), Saturno MC (autoridad duradera mediante maestría). Para amor y relaciones: Venus DSC (la «línea de luna de miel», la más potente para romance), Luna DSC (vínculo emocional profundo), Venus ASC (magnetismo personal). Para encontrar un verdadero hogar: Luna IC (la colocación de pertenencia más fuerte en astrocartografía), Venus IC (belleza y armonía doméstica). Para ambición e impulso: Marte MC (movimientos profesionales más audaces), Marte ASC (energía física y asertividad). Para comunicación y aprendizaje: Mercurio MC (escritura, enseñanza, negocios), Mercurio ASC (inteligencia social y networking). Usa tu carta gratuita para ver exactamente qué ciudades caen en cada una de tus líneas personales y relaciona cada ubicación con tu meta de vida actual.",
+        "icon": "RiCompassLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Líneas de astrocartografía — Preguntas frecuentes",
+    "description": "Respuestas a las preguntas más comunes sobre cómo entender y usar las líneas de astrocartografía.",
+    "items": [
+      {
+        "title": "¿Qué son las líneas de astrocartografía?",
+        "description": "Las líneas de astrocartografía son trayectorias trazadas sobre un mapa mundial que muestran dónde estaba posicionado cada planeta de tu carta natal en uno de los cuatro ángulos clave del cielo (salida, puesta, culminación o nadir) en el momento de tu nacimiento. Cada planeta crea cuatro líneas — ASC, DSC, MC e IC — para un total de hasta 40 líneas principales en tu mapa personal. Vivir o viajar cerca de estas líneas amplifica la energía de ese planeta en tu vida diaria."
+      },
+      {
+        "title": "¿Cuántas líneas de astrocartografía tengo?",
+        "description": "En la mayoría de los mapas aparecen entre 28 y 40 líneas planetarias principales, según cuántos planetas y puntos se incluyan en el cálculo. Con los siete planetas tradicionales (Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno) obtienes 28 líneas (7 planetas × 4 ángulos). Añadir Urano, Neptuno y Plutón lleva el total a 40. Algunos sistemas también incluyen Quirón, el Nodo Norte y otros puntos, lo que puede añadir líneas adicionales."
+      },
+      {
+        "title": "¿Qué líneas de astrocartografía son mejores para mudarse?",
+        "description": "Las «mejores» líneas dependen enteramente de tus metas personales. Las líneas de Júpiter suelen considerarse las más favorables para expansión y oportunidad en general. Las de Venus son excelentes para relaciones y calidad de vida. Las del Sol apoyan visibilidad profesional e identidad. Las de la Luna son ideales para encontrar un verdadero sentido de hogar. Sin embargo, «mejor» siempre es relativo a lo que quieres de un lugar. Una línea de Saturno exigente puede ser exactamente lo que alguien busca para disciplina y logro a largo plazo."
+      },
+      {
+        "title": "¿A qué distancia de una línea se sienten los efectos?",
+        "description": "La mayoría de los astrocartógrafos coinciden en que el efecto es perceptible a menos de 320–480 km (200–300 millas) de una línea, intensificándose de forma notable dentro de unos 80 km (50 millas). Estar directamente sobre una línea es la experiencia más intensa. La distancia exacta varía según la sensibilidad individual y el planeta: los planetas exteriores como Plutón y Urano tienden a tener orbes de influencia más amplios que los interiores como Mercurio o Venus."
+      },
+      {
+        "title": "¿Puedo tener líneas buenas y difíciles en la misma ciudad?",
+        "description": "Sí, absolutamente. La mayoría de las ciudades en tu mapa tendrán varias líneas planetarias pasando por ellas o cerca, activando distintas áreas de vida. Una ciudad puede caer tanto en tu línea Venus ASC (potenciando relaciones y belleza) como en tu Saturno MC (exigiendo disciplina profesional). Esto crea una experiencia matizada donde distintos aspectos de tu vida se sienten muy diferentes en ese lugar: tu vida amorosa puede florecer mientras tu carrera requiere significativamente más esfuerzo."
+      },
+      {
+        "title": "¿Las líneas de astrocartografía cambian con el tiempo?",
+        "description": "Tus líneas natales de astrocartografía — basadas en tu carta natal — no cambian a lo largo de tu vida. Sin embargo, los astrocartógrafos también usan astrocartografía progresada, que calcula líneas según tu carta progresada (que sí evoluciona con el tiempo). Las líneas progresadas pueden indicar periodos en los que ciertas áreas geográficas se activan más o menos en tu vida, aunque tus líneas natales permanezcan constantes."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Encuentra tus líneas de astrocartografía ahora",
+    "description": "Genera tu mapa personalizado de astrocartografía con cálculos Swiss Ephemeris y precisión de 1 milla. Ve exactamente dónde cae cada línea planetaria en el globo y haz clic en cualquier línea o ciudad para una interpretación instantánea con IA. Completamente gratis, sin registro.",
+    "buttons": [
+      {
+        "title": "Carta y mapa de astrocartografía gratis →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

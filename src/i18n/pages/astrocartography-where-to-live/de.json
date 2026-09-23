@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "Karte erstellen",
-        "url": "/de",
+        "url": "/",
         "icon": "RiArrowRightLine"
       },
       {
@@ -257,5 +257,9 @@
         "variant": "outline"
       }
     ]
+  },
+  "schemaLabels": {
+    "breadcrumbHome": "Startseite",
+    "breadcrumbCurrent": "Astrokartografie Wohnort finden"
   }
 }
