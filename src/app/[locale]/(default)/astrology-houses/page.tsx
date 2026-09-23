@@ -82,6 +82,10 @@ export default async function AstrologyHousesPage({
   const hub = page.hubSections;
   const labels = page.hubLinkLabels;
   const houseDetails = page.houseDetails ?? [];
+  const houseGuide = hub?.houseGuide;
+  const openToolLabel = labels?.openTool ?? "Open tool";
+  const readMeaningLabel = labels?.readMeaning ?? "Read meaning";
+  const learnMoreLabel = labels?.learnMore ?? "Learn more";
 
   return (
     <>
@@ -203,29 +207,29 @@ export default async function AstrologyHousesPage({
         </div>
       )}
 
-      {hub?.startHere && labels && (
-        <HubSection section={hub.startHere} linkLabel={labels.openTool} />
+      {hub?.startHere && (
+        <HubSection section={hub.startHere} linkLabel={openToolLabel} />
       )}
 
-      {hub?.twelveHouses && labels && (
-        <HubSection section={hub.twelveHouses} linkLabel={labels.readMeaning} />
+      {hub?.twelveHouses && (
+        <HubSection section={hub.twelveHouses} linkLabel={readMeaningLabel} />
       )}
 
-      {hub?.houseGuide && houseDetails.length > 0 && (
+      {houseGuide && houseDetails.length > 0 && (
         <section className="py-7 lg:py-12">
           <div className="container max-w-6xl">
             <div className="mb-8 max-w-3xl">
               <span className="mb-4 inline-flex rounded-full border border-primary/15 bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                {hub.houseGuide.eyebrow}
+                {houseGuide.eyebrow}
               </span>
               <h2 className="text-[1.7rem] font-bold leading-tight md:text-3xl lg:text-[2.35rem]">
-                {hub.houseGuide.title}
+                {houseGuide.title}
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base lg:text-lg">
-                {hub.houseGuide.description}
+                {houseGuide.description}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground/90 md:text-base">
-                {hub.houseGuide.disclaimer}
+                {houseGuide.disclaimer}
               </p>
             </div>
             <div className="grid gap-5 md:grid-cols-2">
@@ -240,7 +244,7 @@ export default async function AstrologyHousesPage({
                       {house.group}
                     </span>
                     <span className="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground">
-                      {hub.houseGuide.naturalSignLabel}: {house.naturalSign}
+                      {houseGuide.naturalSignLabel}: {house.naturalSign}
                     </span>
                   </div>
                   <h3 className="text-lg font-semibold leading-snug text-foreground">{house.title}</h3>
@@ -255,8 +259,8 @@ export default async function AstrologyHousesPage({
         </section>
       )}
 
-      {hub?.houseTypes && labels && (
-        <HubSection section={hub.houseTypes} linkLabel={labels.learnMore} />
+      {hub?.houseTypes && (
+        <HubSection section={hub.houseTypes} linkLabel={learnMoreLabel} />
       )}
 
       {page.introduce && <FeatureWhatTwo section={page.introduce} />}
