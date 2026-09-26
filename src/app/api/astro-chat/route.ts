@@ -5,9 +5,11 @@ import { createDeepSeek } from "@ai-sdk/deepseek";
 import { respErr } from "@/lib/resp";
 import {
   formatChartContext,
+  formatRisingSignContext,
   formatSynastryContext,
   getSystemPrompt,
   getSynastrySystemPrompt,
+  type RisingSignPayloadForAI,
   type SynastryPayloadForAI,
 } from "@/lib/astro-format";
 import { getUserUuid } from "@/services/user";
@@ -21,6 +23,7 @@ const ASTRO_CHAT_MODEL =
   process.env.ASTRO_CHAT_MODEL ||
   "deepseek-v4-flash";
 const CITY_COMPARISON_REPORT_CREDIT_COST = 50;
+const RISING_SIGN_DEEP_REPORT_CREDIT_COST = 50;
 // Paid city-comparison reports can justify a longer reasoning pass. Standard
 // chat must produce visible text promptly, so it uses the streaming path below.
 const THINKING_ATTEMPT_TIMEOUT_MS = 45_000;
@@ -95,7 +98,7 @@ type StartedDeepSeekStream = {
 
 type ChatTrace = {
   id: string;
-  requestType: "standard" | "city_comparison_report" | "unknown";
+  requestType: "standard" | "city_comparison_report" | "rising_sign_deep_report" | "unknown";
   startedAt: number;
   userUuid?: string;
 };
@@ -850,10 +853,12 @@ interface ChatRequest {
   };
   /** When set, uses synastry context instead of map lines (planetLines may be empty). */
   synastryData?: SynastryPayloadForAI;
+  /** When set with rising_sign_deep_report, uses natal rising-sign context (no map lines). */
+  risingSignData?: RisingSignPayloadForAI;
   questionCount?: number; // 当前是第几个问题
   remainingFreeQuestions?: number; // 剩余免费问题数量
   userLocale?: string; // 🔥 新增：用户语言环境（用于优化 AI 回答）
-  requestType?: 'standard' | 'city_comparison_report';
+  requestType?: 'standard' | 'city_comparison_report' | 'rising_sign_deep_report';
 }
 
 export async function POST(req: Request) {
@@ -865,14 +870,26 @@ export async function POST(req: Request) {
 
   try {
     const body: ChatRequest = await req.json();
-    const { messages, chartData, synastryData, questionCount, remainingFreeQuestions, userLocale, requestType = 'standard' } = body;
+    const {
+      messages,
+      chartData,
+      synastryData,
+      risingSignData,
+      questionCount,
+      remainingFreeQuestions,
+      userLocale,
+      requestType = "standard",
+    } = body;
     trace.requestType = requestType;
+
+    const isRisingSignDeepReport = requestType === "rising_sign_deep_report";
 
     logChatEvent(trace, "request_received", {
       messageCount: messages?.length || 0,
       lastMessageCharacters: messages?.[messages.length - 1]?.content?.length || 0,
       hasChartData: Boolean(chartData),
       hasSynastryData: Boolean(synastryData),
+      hasRisingSignData: Boolean(risingSignData),
       planetLineCount: chartData?.planetLines?.length || 0,
     });
 
@@ -883,17 +900,29 @@ export async function POST(req: Request) {
 
     // 获取最后一条用户消息
     const lastMessage = messages[messages.length - 1];
-    if (lastMessage.role !== 'user' || !lastMessage.content.trim()) {
+    if (lastMessage.role !== "user" || !lastMessage.content.trim()) {
       return respErr("Question cannot be empty");
     }
 
-    // 🔥 详细检查 chartData / synastryData
-    if (!chartData) {
+    if (isRisingSignDeepReport) {
+      if (!risingSignData?.birthData || !risingSignData?.ascendant) {
+        logChatEvent(trace, "request_rejected", { reason: "rising_sign_data_missing" });
+        return respErr("Rising sign data is incomplete");
+      }
+      const rb = risingSignData.birthData;
+      if (!rb.date || !rb.time || !rb.location) {
+        logChatEvent(trace, "request_rejected", { reason: "rising_sign_birth_incomplete" });
+        return respErr("Rising sign birth data is incomplete");
+      }
+      if (!risingSignData.bigThree || !risingSignData.angles || !Array.isArray(risingSignData.houses)) {
+        logChatEvent(trace, "request_rejected", { reason: "rising_sign_structure_incomplete" });
+        return respErr("Rising sign chart structure is incomplete");
+      }
+      logChatEvent(trace, "request_validated", { contextType: "rising_sign" });
+    } else if (!chartData) {
       logChatEvent(trace, "request_rejected", { reason: "chart_data_missing" });
       return respErr("Chart data is incomplete");
-    }
-
-    if (synastryData) {
+    } else if (synastryData) {
       if (!synastryData.personA?.birthData || !synastryData.personB?.birthData) {
         return respErr("Synastry data is incomplete");
       }
@@ -967,10 +996,12 @@ export async function POST(req: Request) {
     }
     trace.userUuid = user_uuid;
 
-    // 🔥 获取 AI 消耗的积分数量：普通聊天读取配置，城市对比完整报告固定 50 credits
+    // 🔥 获取 AI 消耗的积分数量：普通聊天读取配置，深度报告固定 50 credits
     const creditCost =
-      requestType === 'city_comparison_report'
-        ? CITY_COMPARISON_REPORT_CREDIT_COST
+      requestType === "city_comparison_report" || requestType === "rising_sign_deep_report"
+        ? requestType === "rising_sign_deep_report"
+          ? RISING_SIGN_DEEP_REPORT_CREDIT_COST
+          : CITY_COMPARISON_REPORT_CREDIT_COST
         : getAIChatCreditCost();
     
     // 🔥 检查用户积分余额
@@ -1004,31 +1035,39 @@ export async function POST(req: Request) {
       const actualQuestionCount = questionCount ?? messages.filter(m => m.role === 'user').length;
       const actualRemainingFreeQuestions = remainingFreeQuestions ?? 0;
       
-      const chartContext = synastryData
-        ? formatSynastryContext(synastryData)
-        : formatChartContext(chartData);
+      const chartContext = isRisingSignDeepReport && risingSignData
+        ? formatRisingSignContext(risingSignData)
+        : synastryData
+          ? formatSynastryContext(synastryData)
+          : formatChartContext(chartData!);
 
       const systemPrompt = synastryData
         ? getSynastrySystemPrompt(userLanguage, actualQuestionCount, actualRemainingFreeQuestions, userLocale)
         : getSystemPrompt(userLanguage, actualQuestionCount, actualRemainingFreeQuestions, userLocale);
 
-      const chartDataIntro = synastryData
+      const chartDataIntro = isRisingSignDeepReport
         ? userLanguage === "中文"
-          ? "以下是双方的合盘（比较盘）数据："
-          : "Below is the synastry (two-chart relationship) data:"
-        : userLanguage === "中文"
-          ? "以下是用户的星盘数据："
-          : userLanguage === "英文"
-            ? "Below is the user's astrocartography chart data:"
-            : "Below is the user's astrocartography chart data:";
+          ? "以下是用户的上升星座（本命盘骨架）数据："
+          : "Below is the user's rising-sign / natal chart skeleton data:"
+        : synastryData
+          ? userLanguage === "中文"
+            ? "以下是双方的合盘（比较盘）数据："
+            : "Below is the synastry (two-chart relationship) data:"
+          : userLanguage === "中文"
+            ? "以下是用户的星盘数据："
+            : userLanguage === "英文"
+              ? "Below is the user's astrocartography chart data:"
+              : "Below is the user's astrocartography chart data:";
+
+      const reportInstruction = requestType === "city_comparison_report"
+        ? "The user is requesting a paid full city comparison report. Provide a structured, complete report with clear sections, but only interpret the supplied astrocartography evidence. Do not invent cities, exact predictions, or guarantees."
+        : requestType === "rising_sign_deep_report"
+          ? "The user is requesting a paid personalized rising-sign deep report. Use whole-sign houses and the supplied modern/traditional rulers. Write a structured report with these sections: (1) Ascendant personality, first impressions, and outward style — include a brief appearance/presence note (posture, vibe, physical impression tendencies; not deterministic looks). (2) First-house planets and aspects TO the Ascendant — explain how they modify the rising sign (if none, say so). (3) Big Three interplay (Sun/Moon/Rising). (4) Four angles (ASC/DSC/MC/IC) as life axes. (5) Chart ruler(s): modern and traditional co-ruler when supplied — sign, house, and major aspects to the ruler(s). (6) How whole-sign house signs frame life areas. If cusp-sensitivity is flagged, note birth-time uncertainty without changing the sign. Be specific to supplied degrees/placements/aspects only. Do not invent data. End with 2–3 natural follow-up questions about location or their chart."
+          : "";
       
       const systemMessage = {
         role: 'system' as const,
-        content: `${systemPrompt}\n\n${
-          requestType === 'city_comparison_report'
-            ? 'The user is requesting a paid full city comparison report. Provide a structured, complete report with clear sections, but only interpret the supplied astrocartography evidence. Do not invent cities, exact predictions, or guarantees.'
-            : ''
-        }\n\n${chartDataIntro}\n\n${chartContext}`,
+        content: `${systemPrompt}\n\n${reportInstruction}\n\n${chartDataIntro}\n\n${chartContext}`,
       };
 
       // 🔥 修复：构建完整的对话上下文（系统消息 + 所有用户消息，包括当前问题）
@@ -1038,9 +1077,10 @@ export async function POST(req: Request) {
         ...messages, // ✅ 包含所有消息，包括当前用户问题（最后一条）
       ];
 
-      const maxTokens = requestType === "city_comparison_report"
-        ? CITY_COMPARISON_REPORT_MAX_TOKENS
-        : STANDARD_CHAT_MAX_TOKENS;
+      const maxTokens =
+        requestType === "city_comparison_report" || requestType === "rising_sign_deep_report"
+          ? CITY_COMPARISON_REPORT_MAX_TOKENS
+          : STANDARD_CHAT_MAX_TOKENS;
 
       logChatEvent(trace, "model_request_prepared", {
         messageCount: conversationMessages.length,

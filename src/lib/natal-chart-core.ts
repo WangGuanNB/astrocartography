@@ -26,6 +26,54 @@ export const PLANETS: Array<{ body: Astronomy.Body; name: PlanetName; glyph: str
   { body: Astronomy.Body.Pluto, name: "Pluto", glyph: "♇" },
 ];
 
+export const MODERN_SIGN_RULERS: Record<number, PlanetName> = {
+  0: "Mars",
+  1: "Venus",
+  2: "Mercury",
+  3: "Moon",
+  4: "Sun",
+  5: "Mercury",
+  6: "Venus",
+  7: "Pluto",
+  8: "Jupiter",
+  9: "Saturn",
+  10: "Uranus",
+  11: "Neptune",
+};
+
+export const TRADITIONAL_SIGN_RULERS: Record<number, PlanetName> = {
+  0: "Mars",
+  1: "Venus",
+  2: "Mercury",
+  3: "Moon",
+  4: "Sun",
+  5: "Mercury",
+  6: "Venus",
+  7: "Mars",
+  8: "Jupiter",
+  9: "Saturn",
+  10: "Saturn",
+  11: "Jupiter",
+};
+
+export function getSignRulers(signIndex: number): {
+  modern: PlanetName;
+  traditional: PlanetName;
+} {
+  const modern = MODERN_SIGN_RULERS[signIndex] ?? "Mars";
+  const traditional = TRADITIONAL_SIGN_RULERS[signIndex] ?? modern;
+  return { modern, traditional };
+}
+
+export type CuspSensitivity = "early" | "late" | null;
+
+/** Flag ascendant degrees near sign boundaries (sensitive to birth-time error). */
+export function getAscendantCuspSensitivity(ascDegreeInSign: number): CuspSensitivity {
+  if (ascDegreeInSign <= 3) return "early";
+  if (ascDegreeInSign >= 27) return "late";
+  return null;
+}
+
 export const SIGNS = [
   "Aries",
   "Taurus",

@@ -1,29 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
   calculateAscendantLongitude,
+  calculateMidheavenLongitude,
+  computeWholeSignChart,
   degreeInSign,
+  getAscendantCuspSensitivity,
+  getSignRulers,
   localBirthTimeToUtc,
+  normalizeDegrees,
   SIGNS,
   signIndexFromLongitude,
+  type PlanetName,
+  type PlanetRow,
 } from "@/lib/natal-chart-core";
+import { computeAspectsToLongitude } from "@/lib/synastry-aspects";
 
 export const maxDuration = 30;
-
-/** Modern ruler: sign index (0–11) → planet name */
-const RISING_SIGN_RULERS: Record<number, string> = {
-  0: "Mars", // Aries
-  1: "Venus", // Taurus
-  2: "Mercury", // Gemini
-  3: "Moon", // Cancer
-  4: "Sun", // Leo
-  5: "Mercury", // Virgo
-  6: "Venus", // Libra
-  7: "Pluto", // Scorpio
-  8: "Jupiter", // Sagittarius
-  9: "Saturn", // Capricorn
-  10: "Uranus", // Aquarius
-  11: "Neptune", // Pisces
-};
 
 /** Cities for "geographic perspective" (same birth moment, different location) */
 const GEO_CITIES = [
@@ -66,6 +58,48 @@ const CITY_COORDINATES: Record<string, { latitude: number; longitude: number }> 
   lima: { latitude: -12.0464, longitude: -77.0428 },
   "lima, peru": { latitude: -12.0464, longitude: -77.0428 },
 };
+
+function roundDeg(deg: number) {
+  return Math.round(deg * 100) / 100;
+}
+
+function anglePayload(longitude: number) {
+  return {
+    sign: SIGNS[signIndexFromLongitude(longitude)],
+    degree: roundDeg(degreeInSign(longitude)),
+    longitude: roundDeg(longitude),
+  };
+}
+
+function planetPlacement(p: PlanetRow) {
+  return {
+    planet: p.name,
+    sign: p.sign,
+    degree: roundDeg(p.degree),
+    house: p.house,
+    longitude: roundDeg(p.longitude),
+  };
+}
+
+function rulerPayload(planetName: PlanetName, planets: PlanetRow[]) {
+  const row = planets.find((p) => p.name === planetName);
+  if (!row) {
+    return {
+      planet: planetName,
+      sign: null as string | null,
+      degree: null as number | null,
+      house: null as number | null,
+      longitude: null as number | null,
+    };
+  }
+  return {
+    planet: planetName,
+    sign: row.sign,
+    degree: roundDeg(row.degree),
+    house: row.house,
+    longitude: roundDeg(row.longitude),
+  };
+}
 
 async function geocodeLocation(location: string): Promise<{ latitude: number; longitude: number } | null> {
   const normalized = location.toLowerCase().trim();
@@ -116,11 +150,45 @@ export async function POST(request: NextRequest) {
     }
 
     const utcTime = localBirthTimeToUtc(birthDate, birthTime, timezone);
-    const ascLon = calculateAscendantLongitude(utcTime, latitude, longitude);
+    const chart = computeWholeSignChart(utcTime, latitude, longitude);
+    const ascLon = chart.ascendant.longitude;
     const signIndex = signIndexFromLongitude(ascLon);
-    const sign = SIGNS[signIndex];
-    const degree = degreeInSign(ascLon);
-    const ruler = RISING_SIGN_RULERS[signIndex] ?? "—";
+    const { modern: modernRuler, traditional: traditionalRuler } = getSignRulers(signIndex);
+    const mcLon = calculateMidheavenLongitude(utcTime, longitude);
+    const dscLon = normalizeDegrees(ascLon + 180);
+    const icLon = normalizeDegrees(mcLon + 180);
+
+    const sun = chart.planets.find((p) => p.name === "Sun");
+    const moon = chart.planets.find((p) => p.name === "Moon");
+    const modernRulerPlanet = rulerPayload(modernRuler, chart.planets);
+    const traditionalRulerPlanet = rulerPayload(traditionalRuler, chart.planets);
+
+    const planetLons = chart.planets.map((p) => ({
+      name: p.name,
+      glyph: p.glyph,
+      longitude: p.longitude,
+    }));
+
+    const ascendantAspects = computeAspectsToLongitude(ascLon, planetLons);
+    const modernRulerAspects =
+      modernRulerPlanet.longitude != null
+        ? computeAspectsToLongitude(modernRulerPlanet.longitude, planetLons).filter(
+            (a) => a.planet !== modernRuler
+          )
+        : [];
+    const traditionalRulerAspects =
+      traditionalRuler !== modernRuler && traditionalRulerPlanet.longitude != null
+        ? computeAspectsToLongitude(traditionalRulerPlanet.longitude, planetLons).filter(
+            (a) => a.planet !== traditionalRuler
+          )
+        : [];
+
+    const firstHousePlanets = chart.planets.filter((p) => p.house === 1).map(planetPlacement);
+
+    const houses = Array.from({ length: 12 }, (_, i) => ({
+      house: i + 1,
+      sign: SIGNS[(signIndex + i) % 12],
+    }));
 
     const otherCities = GEO_CITIES.map((city) => {
       const cityAscLon = calculateAscendantLongitude(utcTime, city.lat, city.lng);
@@ -130,9 +198,12 @@ export async function POST(request: NextRequest) {
         cityName: city.name,
         country: city.country,
         sign: SIGNS[citySignIndex],
-        degree: Math.round(cityDegree * 100) / 100,
+        degree: roundDeg(cityDegree),
       };
     });
+
+    const ascDegree = roundDeg(chart.ascendant.degree);
+    const cuspSensitivity = getAscendantCuspSensitivity(ascDegree);
 
     return NextResponse.json({
       success: true,
@@ -146,11 +217,44 @@ export async function POST(request: NextRequest) {
           timezone,
         },
         ascendant: {
-          sign,
-          degree: Math.round(degree * 100) / 100,
-          longitude: ascLon,
-          ruler,
+          sign: chart.ascendant.sign,
+          degree: ascDegree,
+          longitude: roundDeg(ascLon),
+          ruler: modernRuler,
+          rulers: {
+            modern: modernRuler,
+            traditional: traditionalRuler,
+          },
+          cuspSensitivity,
         },
+        bigThree: {
+          sun: sun
+            ? { sign: sun.sign, degree: roundDeg(sun.degree), house: sun.house }
+            : null,
+          moon: moon
+            ? { sign: moon.sign, degree: roundDeg(moon.degree), house: moon.house }
+            : null,
+          rising: {
+            sign: chart.ascendant.sign,
+            degree: ascDegree,
+          },
+        },
+        angles: {
+          asc: anglePayload(ascLon),
+          dsc: anglePayload(dscLon),
+          mc: anglePayload(mcLon),
+          ic: anglePayload(icLon),
+        },
+        houses,
+        houseSystem: "whole-sign",
+        rulerSystem: "modern-primary-traditional-noted",
+        firstHousePlanets,
+        ascendantAspects,
+        chartRuler: modernRulerPlanet,
+        traditionalChartRuler: traditionalRuler !== modernRuler ? traditionalRulerPlanet : null,
+        chartRulerAspects: modernRulerAspects,
+        traditionalChartRulerAspects:
+          traditionalRuler !== modernRuler ? traditionalRulerAspects : [],
         otherCities,
       },
     });

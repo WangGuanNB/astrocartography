@@ -462,6 +462,150 @@ Correct response should explain that a map line can support a city-level compari
 Remember: Be professional, empathetic, accurate, and engaging. Follow the 4-part structure, make the Core Interpretation detailed (100-150 chars/80-120 words), answer ALL parts of the question, and end with ONE natural curiosity hook. Do NOT include A/B/C follow-up options in the main answer.`;
 }
 
+type RisingSignAspectRow = { planet: string; aspect: string; orb: number };
+
+type RisingSignPlanetRow = {
+  planet: string;
+  sign: string;
+  degree: number;
+  house: number;
+};
+
+type RisingSignRulerRow = {
+  planet: string;
+  sign: string | null;
+  degree: number | null;
+  house: number | null;
+};
+
+/** Payload for rising-sign deep report (no map lines). */
+export interface RisingSignPayloadForAI {
+  birthData: {
+    date: string;
+    time: string;
+    location: string;
+    timezone?: string;
+    latitude?: number;
+    longitude?: number;
+  };
+  ascendant: {
+    sign: string;
+    degree: number;
+    ruler: string;
+    rulers?: { modern: string; traditional: string };
+    cuspSensitivity?: "early" | "late" | null;
+  };
+  bigThree: {
+    sun: { sign: string; degree: number; house: number } | null;
+    moon: { sign: string; degree: number; house: number } | null;
+    rising: { sign: string; degree: number };
+  };
+  angles: {
+    asc: { sign: string; degree: number };
+    dsc: { sign: string; degree: number };
+    mc: { sign: string; degree: number };
+    ic: { sign: string; degree: number };
+  };
+  houses: Array<{ house: number; sign: string }>;
+  houseSystem?: string;
+  rulerSystem?: string;
+  firstHousePlanets?: RisingSignPlanetRow[];
+  ascendantAspects?: RisingSignAspectRow[];
+  chartRuler: RisingSignRulerRow;
+  traditionalChartRuler?: RisingSignRulerRow | null;
+  chartRulerAspects?: RisingSignAspectRow[];
+  traditionalChartRulerAspects?: RisingSignAspectRow[];
+}
+
+function formatRulerBlock(label: string, ruler: RisingSignRulerRow, aspects?: RisingSignAspectRow[]) {
+  let block = `${label}: ${ruler.planet}`;
+  if (ruler.sign != null && ruler.degree != null) {
+    block += ` in ${ruler.sign} ${ruler.degree.toFixed(1)}°`;
+  }
+  if (ruler.house != null) {
+    block += ` (House ${ruler.house})`;
+  }
+  block += "\n";
+  if (aspects?.length) {
+    for (const a of aspects.slice(0, 12)) {
+      block += `  ${a.planet} ${a.aspect} chart ruler (orb ${a.orb}°)\n`;
+    }
+  } else {
+    block += "  (no major aspects to other planets within standard orbs)\n";
+  }
+  return block;
+}
+
+export function formatRisingSignContext(data: RisingSignPayloadForAI): string {
+  const b = data.birthData;
+  let txt = "=== RISING SIGN / ASCENDANT REPORT DATA ===\n\n";
+  txt += `Method: ${data.houseSystem || "whole-sign"} houses; modern ruler primary`;
+  if (data.ascendant.rulers && data.ascendant.rulers.traditional !== data.ascendant.rulers.modern) {
+    txt += `; traditional co-ruler noted for ${data.ascendant.sign}`;
+  }
+  txt += ".\n";
+  txt += `Birth: ${b.date} ${b.time} (${b.timezone || "TZ"}) — ${b.location}`;
+  if (b.latitude != null && b.longitude != null) {
+    txt += ` (${b.latitude.toFixed(2)}, ${b.longitude.toFixed(2)})`;
+  }
+  txt += `\n\nAscendant: ${data.ascendant.sign} ${data.ascendant.degree.toFixed(1)}°`;
+  if (data.ascendant.cuspSensitivity === "early") {
+    txt += " [CUSP-SENSITIVE: early degree — small birth-time errors may shift the rising sign]";
+  } else if (data.ascendant.cuspSensitivity === "late") {
+    txt += " [CUSP-SENSITIVE: late degree — small birth-time errors may shift the rising sign]";
+  }
+  txt += `\nChart ruler (modern): ${data.ascendant.rulers?.modern ?? data.ascendant.ruler}`;
+  if (
+    data.ascendant.rulers &&
+    data.ascendant.rulers.traditional !== data.ascendant.rulers.modern
+  ) {
+    txt += `\nChart ruler (traditional): ${data.ascendant.rulers.traditional}`;
+  }
+  txt += `\n\n=== BIG THREE ===\n`;
+  if (data.bigThree.sun) {
+    txt += `Sun: ${data.bigThree.sun.sign} ${data.bigThree.sun.degree.toFixed(1)}° (H${data.bigThree.sun.house})\n`;
+  }
+  if (data.bigThree.moon) {
+    txt += `Moon: ${data.bigThree.moon.sign} ${data.bigThree.moon.degree.toFixed(1)}° (H${data.bigThree.moon.house})\n`;
+  }
+  txt += `Rising: ${data.bigThree.rising.sign} ${data.bigThree.rising.degree.toFixed(1)}°\n`;
+  txt += `\n=== FOUR ANGLES ===\n`;
+  txt += `ASC: ${data.angles.asc.sign} ${data.angles.asc.degree.toFixed(1)}°\n`;
+  txt += `DSC: ${data.angles.dsc.sign} ${data.angles.dsc.degree.toFixed(1)}°\n`;
+  txt += `MC: ${data.angles.mc.sign} ${data.angles.mc.degree.toFixed(1)}°\n`;
+  txt += `IC: ${data.angles.ic.sign} ${data.angles.ic.degree.toFixed(1)}°\n`;
+  txt += `\n=== FIRST HOUSE PLANETS (modify Ascendant expression) ===\n`;
+  if (data.firstHousePlanets?.length) {
+    for (const p of data.firstHousePlanets) {
+      txt += `${p.planet}: ${p.sign} ${p.degree.toFixed(1)}° (H${p.house})\n`;
+    }
+  } else {
+    txt += "(none — Ascendant sign reads without a first-house planet overlay)\n";
+  }
+  txt += `\n=== ASPECTS TO ASCENDANT (major aspects, standard orbs) ===\n`;
+  if (data.ascendantAspects?.length) {
+    for (const a of data.ascendantAspects.slice(0, 12)) {
+      txt += `${a.planet} ${a.aspect} Ascendant (orb ${a.orb}°)\n`;
+    }
+  } else {
+    txt += "(no major aspects within standard orbs)\n";
+  }
+  txt += `\n=== WHOLE-SIGN HOUSE CUSPS (sign on each house) ===\n`;
+  for (const h of data.houses) {
+    txt += `House ${h.house}: ${h.sign}\n`;
+  }
+  txt += `\n=== CHART RULER PLACEMENT & ASPECTS ===\n`;
+  txt += formatRulerBlock("Modern ruler", data.chartRuler, data.chartRulerAspects);
+  if (data.traditionalChartRuler) {
+    txt += formatRulerBlock(
+      "Traditional co-ruler",
+      data.traditionalChartRuler,
+      data.traditionalChartRulerAspects
+    );
+  }
+  return txt;
+}
+
 /** Payload for AI synastry mode (no map lines). */
 export interface SynastryPayloadForAI {
   personA: {
