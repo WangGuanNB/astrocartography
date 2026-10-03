@@ -4,7 +4,12 @@ import { db } from "@/db";
 export type AiChatEventInput = {
   traceId: string;
   userUuid?: string;
-  requestType: "standard" | "city_comparison_report" | "rising_sign_deep_report" | "unknown";
+  requestType:
+    | "standard"
+    | "city_comparison_report"
+    | "rising_sign_deep_report"
+    | "synastry_deep_report"
+    | "unknown";
   event: string;
   provider?: string;
   model?: string;

@@ -619,6 +619,11 @@ export interface SynastryPayloadForAI {
     };
     ascendant: { sign: string; degree: number };
     planets: Array<{ name: string; sign: string; house: number }>;
+    bigThree?: {
+      sun: { sign: string; degree: number } | null;
+      moon: { sign: string; degree: number } | null;
+      rising: { sign: string; degree: number };
+    };
   };
   personB: {
     birthData: {
@@ -631,8 +636,32 @@ export interface SynastryPayloadForAI {
     };
     ascendant: { sign: string; degree: number };
     planets: Array<{ name: string; sign: string; house: number }>;
+    bigThree?: {
+      sun: { sign: string; degree: number } | null;
+      moon: { sign: string; degree: number } | null;
+      rising: { sign: string; degree: number };
+    };
   };
   aspects: Array<{ planetA: string; planetB: string; aspect: string; orb: number }>;
+  headlineAspects?: Array<{
+    planetA: string;
+    planetB: string;
+    aspect: string;
+    orb: number;
+    pairKey: string;
+    tone: string;
+  }>;
+  relationshipSnapshot?: {
+    attraction: string;
+    emotional: string;
+    communication: string;
+    overall: string;
+  };
+  natalOverlay?: {
+    aInB: Array<{ planet: string; houseInPartner: number }>;
+    bInA: Array<{ planet: string; houseInPartner: number }>;
+    highlights: Array<{ house: number; planetsAInB: string[]; planetsBInA: string[] }>;
+  };
   relocated?: {
     location: string;
     ascendantA: { sign: string; degree: number };
@@ -640,6 +669,7 @@ export interface SynastryPayloadForAI {
     aInB: Array<{ planet: string; houseInPartner: number }>;
     bInA: Array<{ planet: string; houseInPartner: number }>;
   };
+  birthTimeProvided?: { personA: boolean; personB: boolean };
 }
 
 export function formatSynastryContext(data: SynastryPayloadForAI): string {
@@ -659,12 +689,56 @@ export function formatSynastryContext(data: SynastryPayloadForAI): string {
 
   let txt = "=== SYNASTRY (two natal charts) ===\n\n";
   txt += fmtBirth("PERSON A", data.personA);
+  if (data.personA.bigThree) {
+    const bt = data.personA.bigThree;
+    txt += `  Big Three: Sun ${bt.sun?.sign ?? "?"} · Moon ${bt.moon?.sign ?? "?"} · Rising ${bt.rising.sign}\n`;
+  }
   txt += "\n";
   txt += fmtBirth("PERSON B", data.personB);
+  if (data.personB.bigThree) {
+    const bt = data.personB.bigThree;
+    txt += `  Big Three: Sun ${bt.sun?.sign ?? "?"} · Moon ${bt.moon?.sign ?? "?"} · Rising ${bt.rising.sign}\n`;
+  }
+  if (data.birthTimeProvided && (!data.birthTimeProvided.personA || !data.birthTimeProvided.personB)) {
+    txt += "\n(Birth time missing for one or both people — Moon/angles may be provisional.)\n";
+  }
+  if (data.relationshipSnapshot) {
+    txt += `\n=== RELATIONSHIP SNAPSHOT (algorithmic labels, not a score) ===\n`;
+    txt += `  Attraction: ${data.relationshipSnapshot.attraction}\n`;
+    txt += `  Emotional: ${data.relationshipSnapshot.emotional}\n`;
+    txt += `  Communication: ${data.relationshipSnapshot.communication}\n`;
+    txt += `  Overall tone: ${data.relationshipSnapshot.overall}\n`;
+  }
   txt += "\n=== INTER-CHART ASPECTS (natal longitudes, major aspects) ===\n";
   const sorted = [...data.aspects].sort((a, b) => a.orb - b.orb);
   for (const a of sorted.slice(0, 80)) {
     txt += `  ${a.planetA} ${a.aspect} ${a.planetB} (orb ${a.orb}°)\n`;
+  }
+  if (data.headlineAspects?.length) {
+    txt += `\n=== HEADLINE ASPECTS (priority pairs) ===\n`;
+    for (const a of data.headlineAspects) {
+      txt += `  ${a.planetA} ${a.aspect} ${a.planetB} (orb ${a.orb}°, tone ${a.tone})\n`;
+    }
+  }
+  if (data.natalOverlay) {
+    txt += `\n=== NATAL HOUSE OVERLAY (birth locations, whole-sign) ===\n`;
+    txt += `  A's planets in B's houses:\n`;
+    for (const r of data.natalOverlay.aInB) {
+      txt += `    ${r.planet} → partner's house ${r.houseInPartner}\n`;
+    }
+    txt += `  B's planets in A's houses:\n`;
+    for (const r of data.natalOverlay.bInA) {
+      txt += `    ${r.planet} → partner's house ${r.houseInPartner}\n`;
+    }
+    const hot = data.natalOverlay.highlights.filter(
+      (h) => h.planetsAInB.length > 0 || h.planetsBInA.length > 0
+    );
+    if (hot.length) {
+      txt += `  Relationship-house highlights (1/5/7/8):\n`;
+      for (const h of hot) {
+        txt += `    House ${h.house}: A→B [${h.planetsAInB.join(", ") || "—"}] · B→A [${h.planetsBInA.join(", ") || "—"}]\n`;
+      }
+    }
   }
   if (data.relocated) {
     txt += `\n=== SHARED CITY (relocated whole-sign overlays) ===\n`;

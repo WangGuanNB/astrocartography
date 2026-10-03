@@ -8,12 +8,31 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { DatePicker } from "@/components/ui/date-picker";
 import { LocationAutocomplete } from "@/components/ui/location-autocomplete";
+import PricingModal from "@/components/pricing/pricing-modal";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SynastryBiwheel from "@/components/synastry/synastry-biwheel";
 import AstroChat from "@/components/astro-chat";
 import { useAppContext } from "@/contexts/app";
+import { synastryEvents, type SynastryUnlockEntry } from "@/lib/analytics";
 import type { SynastryPayloadForAI } from "@/lib/astro-format";
-import { Calendar, Clock, Globe, Heart, MapPin, MessageCircle, Sparkles, Users } from "lucide-react";
+import type {
+  HeadlineAspect,
+  OverlayHighlight,
+  RelationshipSnapshot,
+} from "@/lib/synastry-snapshot";
+import { cn } from "@/lib/utils";
+import type { Pricing as PricingType } from "@/types/blocks/pricing";
+import {
+  Calendar,
+  Clock,
+  Globe,
+  Heart,
+  Lock,
+  MapPin,
+  MessageCircle,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
 const SynastryDualMap = dynamic(() => import("@/components/synastry/synastry-dual-map"), { ssr: false });
@@ -37,6 +56,31 @@ const TIMEZONE_OPTIONS = [
   "CST (Beijing)",
 ];
 
+const DEEP_REPORT_CREDITS = 50;
+
+type DeepReportLabels = {
+  title: string;
+  subtitle: string;
+  unlock: string;
+  unlocking: string;
+  creditsBadge: string;
+  includes: string[];
+  guideBigThree: string;
+  guideHeadlines: string;
+  guideOverlay: string;
+  stickyCta: string;
+  loginRequired: string;
+  genericError: string;
+  prompt: string;
+};
+
+type SnapshotLabels = {
+  attraction: Record<string, string>;
+  emotional: Record<string, string>;
+  communication: Record<string, string>;
+  overall: Record<string, string>;
+};
+
 type ToolLabels = {
   form: {
     personA: string;
@@ -54,6 +98,34 @@ type ToolLabels = {
   tabs: { synastry: string; relocated: string; maps: string };
   result: {
     title: string;
+    nonFatalisticNote?: string;
+    timeAccuracyNote?: string;
+    bigThreeTitle?: string;
+    sun?: string;
+    moon?: string;
+    rising?: string;
+    personYou?: string;
+    personPartner?: string;
+    snapshotTitle?: string;
+    snapshotSubtitle?: string;
+    snapshotAttraction?: string;
+    snapshotEmotional?: string;
+    snapshotCommunication?: string;
+    snapshotOverall?: string;
+    headlinesTitle?: string;
+    headlinesSubtitle?: string;
+    groupsTitle?: string;
+    groupsHarmonious?: string;
+    groupsChallenging?: string;
+    groupsConjunctions?: string;
+    groupsCount?: string;
+    natalOverlayTitle?: string;
+    natalOverlaySubtitle?: string;
+    natalOverlayATitle?: string;
+    natalOverlayBTitle?: string;
+    overlayHighlightsTitle?: string;
+    overlayHouseLabel?: string;
+    overlayEmpty?: string;
     aspectsTitle: string;
     planetA: string;
     planetB: string;
@@ -81,7 +153,16 @@ type ToolLabels = {
     aiHint: string;
     footnote: string;
   };
+  deepReport?: DeepReportLabels;
+  snapshotLabels?: SnapshotLabels;
+  aspectTemplates?: Record<string, string>;
   errors: { required: string; generic: string };
+};
+
+type BigThreeBlock = {
+  sun: { sign: string; degree: number } | null;
+  moon: { sign: string; degree: number } | null;
+  rising: { sign: string; degree: number };
 };
 
 type ApiData = {
@@ -119,7 +200,75 @@ type ApiData = {
     aInB: Array<{ planet: string; glyph: string; houseInPartner: number }>;
     bInA: Array<{ planet: string; glyph: string; houseInPartner: number }>;
   };
+  bigThreeA: BigThreeBlock;
+  bigThreeB: BigThreeBlock;
+  headlineAspects: HeadlineAspect[];
+  aspectGroups: {
+    harmonious: ApiData["aspects"];
+    challenging: ApiData["aspects"];
+    conjunctions: ApiData["aspects"];
+  };
+  relationshipSnapshot: RelationshipSnapshot;
+  natalOverlay: {
+    aInB: Array<{ planet: string; glyph: string; houseInPartner: number }>;
+    bInA: Array<{ planet: string; glyph: string; houseInPartner: number }>;
+    highlights: OverlayHighlight[];
+  };
+  birthTimeProvided: { personA: boolean; personB: boolean };
 };
+
+const FALLBACK_DEEP_REPORT: DeepReportLabels = {
+  title: "Personalized synastry deep report",
+  subtitle: "AI reads your chart skeleton and writes a structured relationship report.",
+  unlock: "Unlock deep report",
+  unlocking: "Writing your report…",
+  creditsBadge: "{credits} credits",
+  includes: [
+    "Chemistry, emotional needs, communication, and long-term themes",
+    "Natal house overlays",
+    "Shared-city section only when you entered a city",
+  ],
+  guideBigThree: "See how your Big Three interact → deep report",
+  guideHeadlines: "Full read of headline aspects → deep report",
+  guideOverlay: "Understand house overlays → deep report",
+  stickyCta: "Unlock deep report",
+  loginRequired: "Sign in to unlock. Uses your existing plan credits.",
+  genericError: "Could not generate the report. Please try again shortly.",
+  prompt:
+    "Write my personalized synastry deep report based on the two-chart skeleton provided. Balanced, non-fatalistic tone. No compatibility score.",
+};
+
+function formatDeg(degree: number) {
+  return `${degree.toFixed(1)}°`;
+}
+
+function extractTextFromAIDataStreamLines(lines: string[]) {
+  return lines
+    .map((line) => {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith("0:")) return "";
+      try {
+        return JSON.parse(trimmed.slice(2));
+      } catch {
+        return "";
+      }
+    })
+    .filter(Boolean)
+    .join("");
+}
+
+function DeepGuideLink({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="mt-3 flex w-full items-start gap-2 rounded-lg border border-amber-500/20 bg-amber-500/5 px-3 py-2.5 text-left text-sm text-amber-200/90 transition-colors hover:border-amber-500/40 hover:bg-amber-500/10"
+    >
+      <Sparkles className="mt-0.5 size-3.5 shrink-0 text-amber-400" />
+      <span>{label}</span>
+    </button>
+  );
+}
 
 function buildSynastryPayloadForAI(d: ApiData): SynastryPayloadForAI {
   return {
@@ -134,6 +283,7 @@ function buildSynastryPayloadForAI(d: ApiData): SynastryPayloadForAI {
       },
       ascendant: { sign: d.personA.ascendant.sign, degree: d.personA.ascendant.degree },
       planets: d.personA.planets.map((p) => ({ name: p.name, sign: p.sign, house: p.house })),
+      bigThree: d.bigThreeA,
     },
     personB: {
       birthData: {
@@ -146,8 +296,16 @@ function buildSynastryPayloadForAI(d: ApiData): SynastryPayloadForAI {
       },
       ascendant: { sign: d.personB.ascendant.sign, degree: d.personB.ascendant.degree },
       planets: d.personB.planets.map((p) => ({ name: p.name, sign: p.sign, house: p.house })),
+      bigThree: d.bigThreeB,
     },
     aspects: d.aspects,
+    headlineAspects: d.headlineAspects,
+    relationshipSnapshot: d.relationshipSnapshot,
+    natalOverlay: {
+      aInB: d.natalOverlay.aInB.map(({ planet, houseInPartner }) => ({ planet, houseInPartner })),
+      bInA: d.natalOverlay.bInA.map(({ planet, houseInPartner }) => ({ planet, houseInPartner })),
+      highlights: d.natalOverlay.highlights,
+    },
     relocated: d.relocated
       ? {
           location: d.relocated.location,
@@ -157,6 +315,7 @@ function buildSynastryPayloadForAI(d: ApiData): SynastryPayloadForAI {
           bInA: d.relocated.bInA.map(({ planet, houseInPartner }) => ({ planet, houseInPartner })),
         }
       : undefined,
+    birthTimeProvided: d.birthTimeProvided,
   };
 }
 
@@ -171,11 +330,35 @@ function toMapBirthPayload(b: ApiData["personA"]["birthData"]) {
   };
 }
 
+function aspectBlurb(
+  row: HeadlineAspect,
+  templates: Record<string, string> | undefined
+): string {
+  const template =
+    templates?.[row.pairKey] ?? templates?.["_default"] ?? "{planetA} {aspect} {planetB}";
+  return template
+    .replace(/\{planetA\}/g, row.planetA)
+    .replace(/\{planetB\}/g, row.planetB)
+    .replace(/\{aspect\}/g, row.aspect);
+}
+
+function toneClass(tone: HeadlineAspect["tone"]) {
+  if (tone === "harmonious") return "border-emerald-500/30 bg-emerald-500/5";
+  if (tone === "challenging") return "border-orange-500/30 bg-orange-500/5";
+  return "border-purple-500/30 bg-purple-500/5";
+}
+
 export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabels }) {
   const params = useParams();
   const locale = (params?.locale as string) || "en";
   const { user, setShowSignModal } = useAppContext();
   const resultsRef = useRef<HTMLDivElement | null>(null);
+  const deepReportRef = useRef<HTMLDivElement | null>(null);
+  const unlockButtonRef = useRef<HTMLButtonElement | null>(null);
+  const unlockEntryRef = useRef<SynastryUnlockEntry | null>(null);
+
+  const deepReport = tool.deepReport ?? FALLBACK_DEEP_REPORT;
+  const r = tool.result;
 
   const [chatOpen, setChatOpen] = useState(false);
   const [autoSendQuestion, setAutoSendQuestion] = useState<string | null>(null);
@@ -199,6 +382,13 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<ApiData | null>(null);
 
+  const [reportStatus, setReportStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
+  const [reportText, setReportText] = useState("");
+  const [reportError, setReportError] = useState("");
+  const [showPricingModal, setShowPricingModal] = useState(false);
+  const [pricingData, setPricingData] = useState<PricingType | null>(null);
+  const [showStickyUnlock, setShowStickyUnlock] = useState(false);
+
   const prefix = locale === "en" ? "" : `/${locale}`;
 
   useEffect(() => {
@@ -211,8 +401,64 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
     return () => window.clearTimeout(t);
   }, [data]);
 
+  useEffect(() => {
+    if (!data || reportStatus === "ready") {
+      setShowStickyUnlock(false);
+      return;
+    }
+    const target = deepReportRef.current;
+    if (!target) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowStickyUnlock(!entry.isIntersecting),
+      { threshold: 0.15, rootMargin: "0px 0px -48px 0px" }
+    );
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [data, reportStatus]);
+
+  function scrollToDeepReport() {
+    if (typeof window === "undefined") return;
+    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    deepReportRef.current?.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "center",
+    });
+    window.setTimeout(() => {
+      unlockButtonRef.current?.focus({ preventScroll: true });
+    }, prefersReducedMotion ? 0 : 450);
+  }
+
+  function navigateToUnlock(entry: SynastryUnlockEntry) {
+    unlockEntryRef.current = entry;
+    synastryEvents.guideClicked(entry);
+    scrollToDeepReport();
+  }
+
+  function resolveUnlockEntry(): SynastryUnlockEntry {
+    return unlockEntryRef.current ?? "main";
+  }
+
   const canSubmit =
     Boolean(aDate && aLoc?.trim() && aTz && bDate && bLoc?.trim() && bTz) && !loading;
+
+  async function openPricingForCredits(entry: SynastryUnlockEntry) {
+    try {
+      if (!pricingData) {
+        const response = await fetch(`/api/get-pricing?locale=${locale}&source=research`);
+        const json = await response.json();
+        if (json.success && json.pricing) {
+          setPricingData(json.pricing);
+        } else {
+          throw new Error("pricing unavailable");
+        }
+      }
+      synastryEvents.pricingModalOpened(entry);
+      setShowPricingModal(true);
+    } catch {
+      setReportError(deepReport.genericError);
+      setReportStatus("error");
+    }
+  }
 
   async function handleSubmit() {
     if (!canSubmit) {
@@ -222,6 +468,10 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
     setLoading(true);
     setError(null);
     setData(null);
+    setReportStatus("idle");
+    setReportText("");
+    setReportError("");
+    unlockEntryRef.current = null;
     try {
       const payload: Record<string, unknown> = {
         personA: {
@@ -262,6 +512,112 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
       setError(tool.errors.generic);
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function unlockDeepReport() {
+    if (!data) return;
+    const entry = resolveUnlockEntry();
+    if (!user) {
+      synastryEvents.reportLoginGate(entry);
+      setShowSignModal(true);
+      return;
+    }
+    if (reportStatus === "loading") return;
+
+    synastryEvents.reportUnlockClicked(entry, DEEP_REPORT_CREDITS);
+    setReportStatus("loading");
+    setReportText("");
+    setReportError("");
+
+    const synastryPayload = buildSynastryPayloadForAI(data);
+
+    try {
+      const response = await fetch("/api/astro-chat/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "same-origin",
+        body: JSON.stringify({
+          messages: [{ role: "user", content: deepReport.prompt }],
+          chartData: {
+            birthData: {
+              date: data.personA.birthData.date,
+              time: data.personA.birthData.time,
+              location: data.personA.birthData.location,
+              timezone: data.personA.birthData.timezone,
+            },
+            planetLines: [],
+          },
+          synastryData: synastryPayload,
+          requestType: "synastry_deep_report",
+          userLocale: locale,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorPayload = await response.json().catch(() => null);
+        if (response.status === 401 || errorPayload?.type === "auth_required") {
+          synastryEvents.reportFailed(entry, "auth_required");
+          setShowSignModal(true);
+          setReportStatus("idle");
+          return;
+        }
+        if (response.status === 402 || errorPayload?.type === "insufficient_credits") {
+          synastryEvents.reportFailed(entry, "insufficient_credits");
+          setReportStatus("idle");
+          setReportError("");
+          await openPricingForCredits(entry);
+          return;
+        }
+        synastryEvents.reportFailed(entry, "generation_error");
+        setReportStatus("error");
+        setReportError(errorPayload?.message || deepReport.genericError);
+        return;
+      }
+
+      const reader = response.body?.getReader();
+      if (!reader) {
+        throw new Error(deepReport.genericError);
+      }
+
+      const decoder = new TextDecoder();
+      let streamBuffer = "";
+      let nextReportText = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        streamBuffer += decoder.decode(value, { stream: true });
+        const lines = streamBuffer.split("\n");
+        streamBuffer = lines.pop() || "";
+        const textChunk = extractTextFromAIDataStreamLines(lines);
+        if (textChunk) {
+          nextReportText += textChunk;
+          setReportText(nextReportText);
+        }
+      }
+      const finalTextChunk = extractTextFromAIDataStreamLines([streamBuffer]);
+      if (finalTextChunk) {
+        nextReportText += finalTextChunk;
+        setReportText(nextReportText);
+      }
+
+      if (!nextReportText.trim()) {
+        synastryEvents.reportFailed(entry, "empty_response");
+        setReportStatus("error");
+        setReportError(deepReport.genericError);
+        return;
+      }
+
+      synastryEvents.reportSuccess(entry, DEEP_REPORT_CREDITS);
+      unlockEntryRef.current = null;
+      setReportStatus("ready");
+      window.setTimeout(() => {
+        deepReportRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    } catch {
+      synastryEvents.reportFailed(resolveUnlockEntry(), "generation_error");
+      setReportStatus("error");
+      setReportError(deepReport.genericError);
     }
   }
 
@@ -309,8 +665,23 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
     setChatOpen(true);
   }, [user, setShowSignModal]);
 
+  const snapshotLabels = tool.snapshotLabels;
+  const showTimeNote =
+    data && (!data.birthTimeProvided.personA || !data.birthTimeProvided.personB);
+
+  function renderBigThreeCell(label: string, placement: { sign: string; degree: number } | null) {
+    return (
+      <div className="text-sm">
+        <div className="text-purple-300">{label}</div>
+        <div className="mt-0.5 font-medium text-white">
+          {placement ? `${placement.sign} ${formatDeg(placement.degree)}` : "—"}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="container max-w-4xl px-4 pb-16">
+    <div className={cn("container max-w-4xl px-4 pb-16", showStickyUnlock && "pb-28")}>
       <div className="mx-auto max-w-3xl space-y-8">
         <Card className="shadow-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-visible">
           <CardContent className="p-6 md:p-8 space-y-8">
@@ -360,7 +731,7 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
                       (block.id === "a" ? setALoc : setBLoc)(value);
                       if (!value) (block.id === "a" ? setACoords : setBCoords)(null);
                     }}
-                    onSelect={(r) => (block.id === "a" ? setACoords : setBCoords)(r.coordinates)}
+                    onSelect={(result) => (block.id === "a" ? setACoords : setBCoords)(result.coordinates)}
                     placeholder="City, Country"
                     className="h-10 text-sm bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-500 focus:ring-purple-500"
                   />
@@ -414,8 +785,318 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
         </Card>
 
         {data && (
-          <div ref={resultsRef}>
-            <h2 className="text-center text-xl font-bold text-white mb-4">{tool.result.title}</h2>
+          <div ref={resultsRef} className="space-y-6">
+            <Card className="shadow-2xl border border-white/10 bg-white/5 backdrop-blur-md">
+              <CardContent className="p-6 md:p-8 space-y-8">
+                <div>
+                  <h2 className="text-xl font-bold text-white text-center">{r.title}</h2>
+                  {r.nonFatalisticNote && (
+                    <p className="mt-3 text-sm text-amber-200/85 text-center max-w-2xl mx-auto">
+                      {r.nonFatalisticNote}
+                    </p>
+                  )}
+                  {showTimeNote && r.timeAccuracyNote && (
+                    <p className="mt-2 text-sm text-orange-200/80 text-center max-w-2xl mx-auto">
+                      {r.timeAccuracyNote}
+                    </p>
+                  )}
+                </div>
+
+                {r.bigThreeTitle && (
+                  <div className="border-t border-white/10 pt-6">
+                    <h3 className="text-base font-semibold text-white">{r.bigThreeTitle}</h3>
+                    <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                      <div className="rounded-lg border border-purple-500/25 bg-purple-950/20 p-4 space-y-3">
+                        <div className="text-sm font-semibold text-purple-300">
+                          {r.personYou ?? tool.form.personA}
+                        </div>
+                        {renderBigThreeCell(r.sun ?? "Sun", data.bigThreeA.sun)}
+                        {renderBigThreeCell(r.moon ?? "Moon", data.bigThreeA.moon)}
+                        {renderBigThreeCell(r.rising ?? "Rising", data.bigThreeA.rising)}
+                      </div>
+                      <div className="rounded-lg border border-cyan-500/25 bg-cyan-950/20 p-4 space-y-3">
+                        <div className="text-sm font-semibold text-cyan-300">
+                          {r.personPartner ?? tool.form.personB}
+                        </div>
+                        {renderBigThreeCell(r.sun ?? "Sun", data.bigThreeB.sun)}
+                        {renderBigThreeCell(r.moon ?? "Moon", data.bigThreeB.moon)}
+                        {renderBigThreeCell(r.rising ?? "Rising", data.bigThreeB.rising)}
+                      </div>
+                    </div>
+                    {reportStatus !== "ready" && (
+                      <DeepGuideLink
+                        label={deepReport.guideBigThree}
+                        onClick={() => navigateToUnlock("guide_big_three")}
+                      />
+                    )}
+                  </div>
+                )}
+
+                {r.snapshotTitle && snapshotLabels && (
+                  <div className="border-t border-white/10 pt-6">
+                    <h3 className="text-base font-semibold text-white">{r.snapshotTitle}</h3>
+                    {r.snapshotSubtitle && (
+                      <p className="mt-1 text-sm text-white/60">{r.snapshotSubtitle}</p>
+                    )}
+                    <ul className="mt-4 space-y-2 text-sm">
+                      {[
+                        [r.snapshotAttraction, "attraction", data.relationshipSnapshot.attraction],
+                        [r.snapshotEmotional, "emotional", data.relationshipSnapshot.emotional],
+                        [
+                          r.snapshotCommunication,
+                          "communication",
+                          data.relationshipSnapshot.communication,
+                        ],
+                      ].map(([label, key, value]) => (
+                        <li
+                          key={key}
+                          className="flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-3 py-2"
+                        >
+                          <span className="text-purple-300">{label}</span>
+                          <span className="font-medium text-white">
+                            {snapshotLabels[key as keyof SnapshotLabels]?.[value as string] ?? value}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-3 text-sm text-white/80">
+                      <span className="text-amber-200/90">{r.snapshotOverall}: </span>
+                      <span className="font-semibold">
+                        {snapshotLabels.overall[data.relationshipSnapshot.overall] ??
+                          data.relationshipSnapshot.overall}
+                      </span>
+                    </p>
+                  </div>
+                )}
+
+                {r.headlinesTitle && data.headlineAspects.length > 0 && (
+                  <div className="border-t border-white/10 pt-6">
+                    <h3 className="text-base font-semibold text-white">{r.headlinesTitle}</h3>
+                    {r.headlinesSubtitle && (
+                      <p className="mt-1 text-sm text-white/60">{r.headlinesSubtitle}</p>
+                    )}
+                    <ul className="mt-4 space-y-3">
+                      {data.headlineAspects.map((row) => (
+                        <li
+                          key={`${row.planetA}-${row.aspect}-${row.planetB}`}
+                          className={cn("rounded-lg border px-3 py-3 text-sm", toneClass(row.tone))}
+                        >
+                          <div className="font-medium text-white">
+                            {row.planetA} {row.aspect} {row.planetB}
+                            <span className="ml-2 text-xs text-white/50">({row.orb}°)</span>
+                          </div>
+                          <p className="mt-1.5 text-white/75">
+                            {aspectBlurb(row, tool.aspectTemplates)}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                    {reportStatus !== "ready" && (
+                      <DeepGuideLink
+                        label={deepReport.guideHeadlines}
+                        onClick={() => navigateToUnlock("guide_headlines")}
+                      />
+                    )}
+                  </div>
+                )}
+
+                {r.groupsTitle && (
+                  <div className="border-t border-white/10 pt-6">
+                    <h3 className="text-base font-semibold text-white">{r.groupsTitle}</h3>
+                    <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                      {(
+                        [
+                          {
+                            title: r.groupsHarmonious,
+                            items: data.aspectGroups.harmonious,
+                            color: "text-emerald-300",
+                          },
+                          {
+                            title: r.groupsChallenging,
+                            items: data.aspectGroups.challenging,
+                            color: "text-orange-300",
+                          },
+                          {
+                            title: r.groupsConjunctions,
+                            items: data.aspectGroups.conjunctions,
+                            color: "text-purple-300",
+                          },
+                        ] as const
+                      ).map((group) => (
+                        <div
+                          key={group.title}
+                          className="rounded-lg border border-white/10 bg-white/5 p-3 text-sm"
+                        >
+                          <div className={cn("font-semibold", group.color)}>{group.title}</div>
+                          <div className="mt-1 text-white/70">
+                            {(r.groupsCount ?? "{count} contacts").replace(
+                              "{count}",
+                              String(group.items.length)
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {r.natalOverlayTitle && (
+                  <div className="border-t border-white/10 pt-6 space-y-4">
+                    <div>
+                      <h3 className="text-base font-semibold text-white">{r.natalOverlayTitle}</h3>
+                      {r.natalOverlaySubtitle && (
+                        <p className="mt-1 text-sm text-white/60">{r.natalOverlaySubtitle}</p>
+                      )}
+                    </div>
+                    <div className="grid gap-4 lg:grid-cols-2">
+                      <div>
+                        <h4 className="text-sm font-semibold text-purple-300 mb-2">
+                          {r.natalOverlayATitle}
+                        </h4>
+                        <div className="overflow-x-auto rounded-lg border border-white/10 max-h-48 overflow-y-auto">
+                          <table className="w-full text-xs">
+                            <tbody>
+                              {data.natalOverlay.aInB.map((row) => (
+                                <tr key={row.planet} className="border-b border-white/5">
+                                  <td className="p-2">{row.glyph} {row.planet}</td>
+                                  <td className="p-2 text-right">{row.houseInPartner}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-cyan-300 mb-2">
+                          {r.natalOverlayBTitle}
+                        </h4>
+                        <div className="overflow-x-auto rounded-lg border border-white/10 max-h-48 overflow-y-auto">
+                          <table className="w-full text-xs">
+                            <tbody>
+                              {data.natalOverlay.bInA.map((row) => (
+                                <tr key={row.planet} className="border-b border-white/5">
+                                  <td className="p-2">{row.glyph} {row.planet}</td>
+                                  <td className="p-2 text-right">{row.houseInPartner}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    {r.overlayHighlightsTitle && (
+                      <div>
+                        <h4 className="text-sm font-semibold text-white mb-2">
+                          {r.overlayHighlightsTitle}
+                        </h4>
+                        <ul className="grid gap-2 sm:grid-cols-2">
+                          {data.natalOverlay.highlights.map((h) => {
+                            const hasPlanets =
+                              h.planetsAInB.length > 0 || h.planetsBInA.length > 0;
+                            return (
+                              <li
+                                key={h.house}
+                                className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs"
+                              >
+                                <div className="font-semibold text-amber-200/90">
+                                  {(r.overlayHouseLabel ?? "House {house}").replace(
+                                    "{house}",
+                                    String(h.house)
+                                  )}
+                                </div>
+                                {hasPlanets ? (
+                                  <div className="mt-1 text-white/75 space-y-0.5">
+                                    {h.planetsAInB.length > 0 && (
+                                      <div>
+                                        {r.personYou ?? "You"}: {h.planetsAInB.join(", ")}
+                                      </div>
+                                    )}
+                                    {h.planetsBInA.length > 0 && (
+                                      <div>
+                                        {r.personPartner ?? "Partner"}: {h.planetsBInA.join(", ")}
+                                      </div>
+                                    )}
+                                  </div>
+                                ) : (
+                                  <div className="mt-1 text-white/50">{r.overlayEmpty}</div>
+                                )}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    )}
+                    {reportStatus !== "ready" && (
+                      <DeepGuideLink
+                        label={deepReport.guideOverlay}
+                        onClick={() => navigateToUnlock("guide_overlay")}
+                      />
+                    )}
+                  </div>
+                )}
+
+                <div
+                  id="synastry-deep-report"
+                  ref={deepReportRef}
+                  className="border-t border-white/10 pt-6 space-y-4 scroll-mt-24"
+                >
+                  <div>
+                    <h3 className="text-base font-semibold text-white">{deepReport.title}</h3>
+                    <p className="mt-1 text-sm text-white/60">{deepReport.subtitle}</p>
+                    <ul className="mt-3 space-y-1.5 text-sm text-white/80">
+                      {deepReport.includes.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="text-purple-300">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {reportStatus !== "ready" && (
+                    <Button
+                      ref={unlockButtonRef}
+                      onClick={unlockDeepReport}
+                      disabled={reportStatus === "loading"}
+                      className="w-full h-12 text-sm font-semibold bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-600 hover:via-orange-600 hover:to-amber-600 text-white"
+                    >
+                      {reportStatus === "loading" ? (
+                        <>
+                          <div className="mr-2 size-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                          {deepReport.unlocking}
+                        </>
+                      ) : (
+                        <>
+                          <Lock className="mr-2 size-4" />
+                          {deepReport.unlock}
+                          <span className="ml-2 rounded-full bg-black/20 px-2 py-0.5 text-xs">
+                            {deepReport.creditsBadge.replace(
+                              "{credits}",
+                              String(DEEP_REPORT_CREDITS)
+                            )}
+                          </span>
+                        </>
+                      )}
+                    </Button>
+                  )}
+
+                  {!user && reportStatus === "idle" && (
+                    <p className="text-xs text-white/50">{deepReport.loginRequired}</p>
+                  )}
+
+                  {reportStatus === "error" && reportError && (
+                    <p className="text-sm text-red-300">⚠️ {reportError}</p>
+                  )}
+
+                  {reportText && (
+                    <div className="rounded-lg border border-white/10 bg-black/20 p-4 text-sm leading-relaxed text-white/90 whitespace-pre-wrap">
+                      {reportText}
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+
             <Tabs defaultValue="synastry" className="w-full">
               <TabsList className="mx-auto flex w-full max-w-lg flex-wrap justify-center gap-1 h-auto py-1">
                 <TabsTrigger value="synastry">{tool.tabs.synastry}</TabsTrigger>
@@ -426,16 +1107,16 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
               <div className="mt-6 rounded-xl border border-purple-500/25 bg-purple-950/20 px-4 py-5 text-center space-y-3">
                 <h3 className="text-base font-semibold text-white flex items-center justify-center gap-2">
                   <MessageCircle className="h-5 w-5 text-purple-300" />
-                  {tool.result.aiTitle}
+                  {r.aiTitle}
                 </h3>
-                <p className="text-xs text-muted-foreground max-w-md mx-auto">{tool.result.aiHint}</p>
+                <p className="text-xs text-muted-foreground max-w-md mx-auto">{r.aiHint}</p>
                 <Button
                   type="button"
                   onClick={openSynastryAI}
                   className="gap-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500"
                 >
                   <Sparkles className="h-4 w-4" />
-                  {tool.result.aiButton}
+                  {r.aiButton}
                 </Button>
               </div>
 
@@ -454,15 +1135,15 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
                   />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold text-purple-300 mb-3">{tool.result.aspectsTitle}</h3>
+                  <h3 className="text-base font-semibold text-purple-300 mb-3">{r.aspectsTitle}</h3>
                   <div className="overflow-x-auto rounded-lg border border-white/10">
                     <table className="w-full text-sm">
                       <thead>
                         <tr className="border-b border-white/10 bg-white/5 text-left text-muted-foreground">
-                          <th className="p-2 font-medium">{tool.result.planetA}</th>
-                          <th className="p-2 font-medium">{tool.result.aspect}</th>
-                          <th className="p-2 font-medium">{tool.result.planetB}</th>
-                          <th className="p-2 font-medium">{tool.result.orb}</th>
+                          <th className="p-2 font-medium">{r.planetA}</th>
+                          <th className="p-2 font-medium">{r.aspect}</th>
+                          <th className="p-2 font-medium">{r.planetB}</th>
+                          <th className="p-2 font-medium">{r.orb}</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -483,46 +1164,46 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
                   </div>
                 </div>
 
-                <p className="text-xs text-muted-foreground text-center">{tool.result.footnote}</p>
+                <p className="text-xs text-muted-foreground text-center">{r.footnote}</p>
               </TabsContent>
 
               <TabsContent value="relocated" className="mt-6 space-y-6">
                 {data.relocated ? (
                   <>
                     <p className="text-center text-white font-medium">
-                      {tool.result.relocatedTitle}: {data.relocated.location}
+                      {r.relocatedTitle}: {data.relocated.location}
                     </p>
                     <div className="grid gap-4 sm:grid-cols-2 text-sm">
                       <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                        <div className="text-muted-foreground">{tool.result.ascA}</div>
+                        <div className="text-muted-foreground">{r.ascA}</div>
                         <div className="text-lg font-semibold text-purple-200">
                           {data.relocated.ascendantA.sign} {data.relocated.ascendantA.degree}°
                         </div>
                       </div>
                       <div className="rounded-lg border border-white/10 bg-white/5 p-4">
-                        <div className="text-muted-foreground">{tool.result.ascB}</div>
+                        <div className="text-muted-foreground">{r.ascB}</div>
                         <div className="text-lg font-semibold text-cyan-200">
                           {data.relocated.ascendantB.sign} {data.relocated.ascendantB.degree}°
                         </div>
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-purple-300 mb-2">{tool.result.overlayATitle}</h4>
+                      <h4 className="text-sm font-semibold text-purple-300 mb-2">{r.overlayATitle}</h4>
                       <div className="overflow-x-auto rounded-lg border border-white/10">
                         <table className="w-full text-sm">
                           <thead>
                             <tr className="border-b border-white/10 bg-white/5">
-                              <th className="p-2 text-left">{tool.result.planet}</th>
-                              <th className="p-2 text-left">{tool.result.house}</th>
+                              <th className="p-2 text-left">{r.planet}</th>
+                              <th className="p-2 text-left">{r.house}</th>
                             </tr>
                           </thead>
                           <tbody>
-                            {data.relocated.aInB.map((r) => (
-                              <tr key={r.planet} className="border-b border-white/5">
+                            {data.relocated.aInB.map((row) => (
+                              <tr key={row.planet} className="border-b border-white/5">
                                 <td className="p-2">
-                                  {r.glyph} {r.planet}
+                                  {row.glyph} {row.planet}
                                 </td>
-                                <td className="p-2">{r.houseInPartner}</td>
+                                <td className="p-2">{row.houseInPartner}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -530,22 +1211,22 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
                       </div>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-cyan-300 mb-2">{tool.result.overlayBTitle}</h4>
+                      <h4 className="text-sm font-semibold text-cyan-300 mb-2">{r.overlayBTitle}</h4>
                       <div className="overflow-x-auto rounded-lg border border-white/10">
                         <table className="w-full text-sm">
                           <thead>
                             <tr className="border-b border-white/10 bg-white/5">
-                              <th className="p-2 text-left">{tool.result.planet}</th>
-                              <th className="p-2 text-left">{tool.result.house}</th>
+                              <th className="p-2 text-left">{r.planet}</th>
+                              <th className="p-2 text-left">{r.house}</th>
                             </tr>
                           </thead>
                           <tbody>
-                            {data.relocated.bInA.map((r) => (
-                              <tr key={r.planet} className="border-b border-white/5">
+                            {data.relocated.bInA.map((row) => (
+                              <tr key={row.planet} className="border-b border-white/5">
                                 <td className="p-2">
-                                  {r.glyph} {r.planet}
+                                  {row.glyph} {row.planet}
                                 </td>
-                                <td className="p-2">{r.houseInPartner}</td>
+                                <td className="p-2">{row.houseInPartner}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -554,31 +1235,31 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
                     </div>
                   </>
                 ) : (
-                  <p className="text-center text-muted-foreground">{tool.result.relocatedEmptyHint}</p>
+                  <p className="text-center text-muted-foreground">{r.relocatedEmptyHint}</p>
                 )}
               </TabsContent>
 
               <TabsContent value="maps" className="mt-6 space-y-6 text-center">
-                <h3 className="text-lg font-semibold text-white">{tool.result.mapsTitle}</h3>
-                <p className="text-sm text-muted-foreground max-w-md mx-auto">{tool.result.mapsDesc}</p>
+                <h3 className="text-lg font-semibold text-white">{r.mapsTitle}</h3>
+                <p className="text-sm text-muted-foreground max-w-md mx-auto">{r.mapsDesc}</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Button asChild variant="secondary" className="gap-2">
-                    <Link href={mapUrl(data.personA.birthData) as any}>{tool.result.mapLinkA}</Link>
+                    <Link href={mapUrl(data.personA.birthData) as any}>{r.mapLinkA}</Link>
                   </Button>
                   <Button asChild variant="secondary" className="gap-2">
-                    <Link href={mapUrl(data.personB.birthData) as any}>{tool.result.mapLinkB}</Link>
+                    <Link href={mapUrl(data.personB.birthData) as any}>{r.mapLinkB}</Link>
                   </Button>
                 </div>
 
                 <div className="text-left space-y-3 pt-4 border-t border-white/10">
-                  <h4 className="text-base font-semibold text-white text-center">{tool.result.dualMapTitle}</h4>
-                  <p className="text-xs text-muted-foreground text-center max-w-lg mx-auto">{tool.result.dualMapDesc}</p>
+                  <h4 className="text-base font-semibold text-white text-center">{r.dualMapTitle}</h4>
+                  <p className="text-xs text-muted-foreground text-center max-w-lg mx-auto">{r.dualMapDesc}</p>
                   <SynastryDualMap
                     labelA={tool.form.personA}
                     labelB={tool.form.personB}
-                    legendSolid={tool.result.dualMapLegendSolid}
-                    legendDashed={tool.result.dualMapLegendDashed}
-                    footnote={tool.result.dualMapFootnote}
+                    legendSolid={r.dualMapLegendSolid}
+                    legendDashed={r.dualMapLegendDashed}
+                    footnote={r.dualMapFootnote}
                     personA={toMapBirthPayload(data.personA.birthData)}
                     personB={toMapBirthPayload(data.personB.birthData)}
                   />
@@ -601,6 +1282,28 @@ export default function SynastryChartCalculatorClient({ tool }: { tool: ToolLabe
           />
         )}
       </div>
+
+      {showStickyUnlock && data && reportStatus !== "ready" && (
+        <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-gray-950/95 px-4 py-3 backdrop-blur-md pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+          <Button
+            type="button"
+            onClick={() => navigateToUnlock("sticky")}
+            disabled={reportStatus === "loading"}
+            className="h-11 w-full text-sm font-semibold bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-600 hover:via-orange-600 hover:to-amber-600 text-white shadow-lg"
+          >
+            <Lock className="mr-2 size-4" />
+            {deepReport.stickyCta}
+          </Button>
+        </div>
+      )}
+
+      {pricingData && (
+        <PricingModal
+          open={showPricingModal}
+          onOpenChange={setShowPricingModal}
+          pricing={pricingData}
+        />
+      )}
     </div>
   );
 }

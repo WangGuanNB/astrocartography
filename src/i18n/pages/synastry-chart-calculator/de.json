@@ -239,6 +239,34 @@
     },
     "result": {
       "title": "Ihre Synastrie",
+      "nonFatalisticNote": "Eine Synastrie beschreibt Tendenzen und Dialog zwischen zwei Radixen — kein Urteil über Ihre Beziehung. Herausfordernde Aspekte zeigen Wachstumsfelder; sie sind keine Vorhersage des Scheiterns.",
+      "timeAccuracyNote": "Mondpositionen und Haus-Overlays hängen von der exakten Geburtszeit ab. Fehlt die Zeit oder ist sie geschätzt, gelten diese Themen als vorläufig.",
+      "bigThreeTitle": "Big-Three-Vergleich",
+      "sun": "Sonne",
+      "moon": "Mond",
+      "rising": "Aszendent",
+      "personYou": "Sie",
+      "personPartner": "Partner*in",
+      "snapshotTitle": "Beziehungs-Snapshot",
+      "snapshotSubtitle": "Schneller Überblick aus Leit-Aspekten — kein Kompatibilitäts-Prozentwert.",
+      "snapshotAttraction": "Anziehung",
+      "snapshotEmotional": "Emotionaler Rhythmus",
+      "snapshotCommunication": "Kommunikation",
+      "snapshotOverall": "Gesamtton",
+      "headlinesTitle": "Leit-Aspekte",
+      "headlinesSubtitle": "Prioritäre Beziehungskontakte aus Ihren Kartendaten.",
+      "groupsTitle": "Aspektgruppen",
+      "groupsHarmonious": "Harmonisch (Trigon & Sextil)",
+      "groupsChallenging": "Wachstumsorientiert (Quadrat & Opposition)",
+      "groupsConjunctions": "Konjunktionen",
+      "groupsCount": "{count} Kontakte",
+      "natalOverlayTitle": "Natales Haus-Overlay",
+      "natalOverlaySubtitle": "Am jeweiligen Geburtsort — wessen Planeten in wessen Häusern (Ganzzeichen).",
+      "natalOverlayATitle": "Ihre Planeten in den Häusern des Partners",
+      "natalOverlayBTitle": "Planeten des Partners in Ihren Häusern",
+      "overlayHighlightsTitle": "Beziehungshäuser (1 · 5 · 7 · 8)",
+      "overlayHouseLabel": "Haus {house}",
+      "overlayEmpty": "Keine bedeutenden Planeten in diesem Overlay.",
       "aspectsTitle": "Planetenaspekte (Sie → Partner*in)",
       "planetA": "Sie",
       "planetB": "Partner*in",
@@ -265,6 +293,58 @@
       "aiButton": "KI-Deutung öffnen",
       "aiHint": "Gleiche Credits wie Astro Chat. Login nötig. Die Assistentin erhält Ihre Aspektliste und optionale Relokations-Overlays.",
       "footnote": "Ganzzeichen-Häuser. Synastrie-Aspekte nutzen natale Längen; der Relokationsbereich beide Radixe am gemeinsamen Ort."
+    },
+    "deepReport": {
+      "title": "Persönlicher Synastrie-Tiefenbericht",
+      "subtitle": "Die KI liest Ihr Big Three, Leit-Aspekte, natale Haus-Overlays und optionale gemeinsame Stadt — danach können Sie mit Credits nachfragen.",
+      "unlock": "Tiefenbericht freischalten",
+      "unlocking": "Bericht wird erstellt…",
+      "creditsBadge": "{credits} Credits",
+      "includes": [
+        "Chemie & Anziehung aus Venus–Mars, Sonne–Mond und Leit-Aspekten",
+        "Emotionale Bedürfnisse, Kommunikationsstil und Saturn-Themen",
+        "Natale Haus-Overlays (Häuser 1/5/7/8)",
+        "Relokations-Abschnitt nur bei eingegebener gemeinsamer Stadt"
+      ],
+      "guideBigThree": "Sehen Sie, wie Sonne, Mond & Aszendent zusammenwirken → persönlicher Tiefenbericht",
+      "guideHeadlines": "Vollständige Deutung Ihrer Leit-Aspekte → Tiefenbericht freischalten",
+      "guideOverlay": "Verstehen Sie, wessen Planeten in wessen Häusern landen → Tiefenbericht",
+      "stickyCta": "Synastrie-Tiefenbericht freischalten",
+      "loginRequired": "Zum Freischalten anmelden. Nutzt Ihre bestehenden Plan-Credits — kein neues Abo.",
+      "genericError": "Bericht konnte nicht erstellt werden. Bitte kurz später erneut versuchen.",
+      "prompt": "Schreiben Sie meinen persönlichen Synastrie-Tiefenbericht basierend auf dem bereitgestellten Zwei-Radix-Gerüst. Behandeln Sie Chemie und Anziehung, emotionale Bedürfnisse, Kommunikationsmuster, Langzeitstabilität, natale Haus-Overlays (besonders 1/5/7/8), einen Wachstumsaspekt und gemeinsame Stadt/Relokation NUR wenn Relokationsdaten vorliegen. Ausgewogener, nicht-fatalistischer Ton. Kein Kompatibilitäts-Score. Nur gelieferte Aspekte und Platzierungen."
+    },
+    "snapshotLabels": {
+      "attraction": {
+        "strong": "Starke Anziehung",
+        "moderate": "Anziehung mit Reibung",
+        "mixed": "Gemischte Signale"
+      },
+      "emotional": {
+        "aligned": "Emotional im Einklang",
+        "different": "Unterschiedliche emotionale Sprachen",
+        "mixed": "Gemischte emotionale Hinweise"
+      },
+      "communication": {
+        "smooth": "Natürlicher Gesprächsfluss",
+        "needs_work": "Braucht extra Geduld",
+        "mixed": "Gemischter Kommunikationsstil"
+      },
+      "overall": {
+        "harmonious": "Überwiegend harmonisch",
+        "growth_oriented": "Wachstumsorientierte Bindung",
+        "mixed": "Dynamische Mischung"
+      }
+    },
+    "aspectTemplates": {
+      "_default": "{planetA} {aspect} {planetB} — ein bemerkenswerter Kreuz-Chart-Kontakt, der Ihre Bindung prägt.",
+      "moon_sun": "Sonne und Mond zwischen Ihnen — Identität trifft emotionale Bedürfnisse. Dieses {aspect} färbt, wie gesehen vs. wie sicher Sie sich fühlen.",
+      "moon_moon": "Mond–Mond spricht vom täglichen emotionalen Rhythmus. Dieses {aspect} zeigt, wie Ihre Bedürfnisse aufeinandertreffen.",
+      "mars_venus": "Klassische Chemie — Venus und Mars im Dialog. Dieses {aspect} prägt Anziehung und Tempo.",
+      "venus_venus": "Venus–Venus — Harmonie oder Spannung bei Zuneigung, Werten und dem, was liebevoll wirkt.",
+      "mars_mars": "Mars–Mars — getriebene Energie, Leidenschaft und wie Sie gemeinsam durchsetzen.",
+      "mercury_mercury": "Merkur–Merkur — mentale Wellenlänge, Schlagabtausch und Ideenverarbeitung als Paar.",
+      "sun_venus": "Sonne–Venus — Wärme, Bewunderung und Wertschätzung des Kern-Ichs des anderen."
     },
     "errors": {
       "required": "Bitte alle Pflichtfelder für beide Personen ausfüllen.",

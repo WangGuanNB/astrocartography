@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Calculadora de sinastría gratis online | Compatibilidad y aspectos",
-    "description": "Calculadora de sinastría gratis: compara dos cartas natales, doble rueda, aspectos mayores, superposiciones opcionales en una ciudad compartida, mapas e IA. Obtén tu sinastría en minutos, con datos claros.",
+    "title": "Carta de Sinastría Gratis | Calculadora de Compatibilidad de Pareja",
+    "description": "Calculadora de sinastría gratis: compara dos cartas natales con doble rueda, aspectos clave y lectura clara — sin un único puntaje. Superposiciones por ciudad, mapas e informe profundo con IA.",
     "keywords": "sinastría, calculadora sinastría, carta de sinastría gratis, astrología de pareja, compatibilidad cartas natales, Venus Marte sinastría, Sol Luna sinastría, astrocartografía"
   },
   "intentAnchor": {
@@ -239,6 +239,34 @@
     },
     "result": {
       "title": "Tu sinastría",
+      "nonFatalisticNote": "Una sinastría describe tendencias y diálogo entre dos cartas — no un veredicto sobre la relación. Los aspectos desafiantes señalan áreas de crecimiento; no predicen un final.",
+      "timeAccuracyNote": "La Luna y las superposiciones de casas dependen de la hora exacta de nacimiento. Si falta o es estimada, trata esos temas como provisionales.",
+      "bigThreeTitle": "Comparación del Big Three",
+      "sun": "Sol",
+      "moon": "Luna",
+      "rising": "Ascendente",
+      "personYou": "Tú",
+      "personPartner": "Pareja",
+      "snapshotTitle": "Instantánea de la relación",
+      "snapshotSubtitle": "Lectura rápida desde aspectos clave — no es un porcentaje de compatibilidad.",
+      "snapshotAttraction": "Atracción",
+      "snapshotEmotional": "Ritmo emocional",
+      "snapshotCommunication": "Comunicación",
+      "snapshotOverall": "Tono general",
+      "headlinesTitle": "Aspectos destacados",
+      "headlinesSubtitle": "Contactos prioritarios según tus datos de carta.",
+      "groupsTitle": "Grupos de aspectos",
+      "groupsHarmonious": "Armoniosos (trígonos y sextiles)",
+      "groupsChallenging": "De crecimiento (cuadraturas y oposiciones)",
+      "groupsConjunctions": "Conjunciones",
+      "groupsCount": "{count} contactos",
+      "natalOverlayTitle": "Superposición natal de casas",
+      "natalOverlaySubtitle": "En cada lugar de nacimiento — qué planetas caen en las casas del otro (signo entero).",
+      "natalOverlayATitle": "Tus planetas en las casas de tu pareja",
+      "natalOverlayBTitle": "Planetas de tu pareja en tus casas",
+      "overlayHighlightsTitle": "Casas de relación (1 · 5 · 7 · 8)",
+      "overlayHouseLabel": "Casa {house}",
+      "overlayEmpty": "Sin planetas mayores en esta superposición.",
       "aspectsTitle": "Aspectos planetarios (tú → pareja)",
       "planetA": "Tú",
       "planetB": "Pareja",
@@ -265,6 +293,58 @@
       "aiButton": "Abrir lectura con IA",
       "aiHint": "Usa los mismos créditos que Astro Chat. Requiere iniciar sesión. El asistente recibe tu tabla de aspectos y las superposiciones relocadas opcionales.",
       "footnote": "Casas en signo entero. Los aspectos de sinastría usan longitudes natales; la sección relocada calcula ambas cartas en las coordenadas compartidas."
+    },
+    "deepReport": {
+      "title": "Informe profundo de sinastría personalizado",
+      "subtitle": "La IA lee vuestro Big Three, aspectos clave, superposiciones natales y, si indicaste ciudad, datos de relocalización — luego puedes seguir preguntando con créditos.",
+      "unlock": "Desbloquear informe profundo",
+      "unlocking": "Escribiendo tu informe…",
+      "creditsBadge": "{credits} créditos",
+      "includes": [
+        "Química y atracción (Venus–Marte, Sol–Luna y aspectos destacados)",
+        "Necesidades emocionales, comunicación y temas de Saturno a largo plazo",
+        "Superposiciones natales (casas 1/5/7/8)",
+        "Sección de ciudad compartida solo si introdujiste una ciudad"
+      ],
+      "guideBigThree": "Mira cómo interactúan Sol, Luna y Ascendente → informe profundo personalizado",
+      "guideHeadlines": "Lectura completa de tus aspectos destacados → desbloquear informe",
+      "guideOverlay": "Entiende qué planetas caen en las casas del otro → informe profundo",
+      "stickyCta": "Desbloquear informe profundo de sinastría",
+      "loginRequired": "Inicia sesión para desbloquear. Usa los créditos de tu plan — no es una nueva suscripción.",
+      "genericError": "No se pudo generar el informe. Inténtalo de nuevo en un momento.",
+      "prompt": "Escribe mi informe profundo de sinastría personalizado según el esqueleto de dos cartas proporcionado. Cubre química y atracción, necesidades emocionales, comunicación, durabilidad a largo plazo, superposiciones natales (especialmente 1/5/7/8), un borde de crecimiento, y relocalización en ciudad compartida SOLO si hay datos relocados. Tono equilibrado y no fatalista. Sin puntuación de compatibilidad. Sé específico solo con aspectos y colocaciones suministrados."
+    },
+    "snapshotLabels": {
+      "attraction": {
+        "strong": "Chispa fuerte",
+        "moderate": "Atracción con fricción",
+        "mixed": "Señales mixtas"
+      },
+      "emotional": {
+        "aligned": "En sintonía emocional",
+        "different": "Lenguajes emocionales distintos",
+        "mixed": "Indicadores emocionales mixtos"
+      },
+      "communication": {
+        "smooth": "Flujo conversacional natural",
+        "needs_work": "Requiere más paciencia",
+        "mixed": "Estilo de comunicación mixto"
+      },
+      "overall": {
+        "harmonious": "Equilibrio mayormente armonioso",
+        "growth_oriented": "Vínculo orientado al crecimiento",
+        "mixed": "Mezcla dinámica"
+      }
+    },
+    "aspectTemplates": {
+      "_default": "{planetA} {aspect} {planetB} — un contacto cruzado notable que moldea el vínculo.",
+      "moon_sun": "Sol y Luna entre vosotros — identidad encontrando necesidades emocionales. Este {aspect} colorea lo visible vs. lo seguro.",
+      "moon_moon": "Luna–Luna habla del ritmo emocional diario. Este {aspect} muestra cómo se encuentran las necesidades.",
+      "mars_venus": "Firma clásica de química — Venus y Marte en diálogo. Este {aspect} moldea atracción y ritmo.",
+      "venus_venus": "Venus–Venus — afecto, valores y lo que se siente amoroso.",
+      "mars_mars": "Marte–Marte — impulso compartido, pasión y cómo os afirmáis juntos.",
+      "mercury_mercury": "Mercurio–Mercurio — onda mental, charla y cómo procesáis ideas en pareja.",
+      "sun_venus": "Sol–Venus — calidez, admiración y cómo apreciáis el yo del otro."
     },
     "errors": {
       "required": "Completa los campos obligatorios para ambas personas.",

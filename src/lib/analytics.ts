@@ -327,6 +327,72 @@ export const risingSignEvents = {
   },
 };
 
+export type SynastryUnlockEntry =
+  | "main"
+  | "sticky"
+  | "guide_big_three"
+  | "guide_headlines"
+  | "guide_overlay";
+
+/**
+ * Synastry calculator — deep report unlock funnel
+ */
+export const synastryEvents = {
+  guideClicked: (entryPoint: SynastryUnlockEntry) => {
+    trackEvent("synastry_report_guide_clicked", {
+      entry_point: entryPoint,
+      report_type: "synastry_deep_report",
+      event_category: "Synastry",
+    });
+  },
+
+  reportUnlockClicked: (entryPoint: SynastryUnlockEntry, creditsRequired: number) => {
+    trackEvent("synastry_report_unlock_clicked", {
+      entry_point: entryPoint,
+      report_type: "synastry_deep_report",
+      credits_required: creditsRequired,
+      event_category: "Synastry",
+    });
+  },
+
+  reportLoginGate: (entryPoint: SynastryUnlockEntry) => {
+    trackEvent("synastry_report_login_gate", {
+      entry_point: entryPoint,
+      report_type: "synastry_deep_report",
+      event_category: "Synastry",
+    });
+  },
+
+  reportSuccess: (entryPoint: SynastryUnlockEntry, creditsRequired: number) => {
+    trackEvent("synastry_report_success", {
+      entry_point: entryPoint,
+      report_type: "synastry_deep_report",
+      credits_required: creditsRequired,
+      event_category: "Synastry",
+    });
+  },
+
+  reportFailed: (
+    entryPoint: SynastryUnlockEntry,
+    reason: "insufficient_credits" | "auth_required" | "generation_error" | "empty_response"
+  ) => {
+    trackEvent("synastry_report_failed", {
+      entry_point: entryPoint,
+      report_type: "synastry_deep_report",
+      failure_reason: reason,
+      event_category: "Synastry",
+    });
+  },
+
+  pricingModalOpened: (entryPoint: SynastryUnlockEntry) => {
+    trackEvent("synastry_pricing_modal_opened", {
+      entry_point: entryPoint,
+      trigger_source: "insufficient_credits",
+      event_category: "Synastry",
+    });
+  },
+};
+
 /**
  * 城市检查与城市比较事件
  */

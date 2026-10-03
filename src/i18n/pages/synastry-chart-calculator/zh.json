@@ -239,6 +239,34 @@
     },
     "result": {
       "title": "你的合盘结果",
+      "nonFatalisticNote": "合盘描述的是两张星盘之间的倾向与对话——不是对关系的判决。挑战相位指向成长空间，并不预示必然失败。",
+      "timeAccuracyNote": "月亮位置与宫位叠加依赖精确出生时间。若任一方出生时间缺失或为估计值，请将相关解读视为参考。",
+      "bigThreeTitle": "三大要素对比",
+      "sun": "太阳",
+      "moon": "月亮",
+      "rising": "上升",
+      "personYou": "你",
+      "personPartner": "伴侣",
+      "snapshotTitle": "关系快照",
+      "snapshotSubtitle": "基于重点相位的快速阅读——不是兼容性百分比。",
+      "snapshotAttraction": "吸引力",
+      "snapshotEmotional": "情绪节奏",
+      "snapshotCommunication": "沟通",
+      "snapshotOverall": "整体基调",
+      "headlinesTitle": "重点相位",
+      "headlinesSubtitle": "从合盘数据中筛选的关系核心接触。",
+      "groupsTitle": "相位分组",
+      "groupsHarmonious": "和谐（三分 & 六分）",
+      "groupsChallenging": "成长型（四分 & 对分）",
+      "groupsConjunctions": "合相",
+      "groupsCount": "{count} 个接触",
+      "natalOverlayTitle": "本命宫位叠加",
+      "natalOverlaySubtitle": "在各自出生地——谁的行星落在谁的宫位（整宫制）。",
+      "natalOverlayATitle": "你的行星在伴侣的宫位",
+      "natalOverlayBTitle": "伴侣的行星在你的宫位",
+      "overlayHighlightsTitle": "关系宫位（1 · 5 · 7 · 8）",
+      "overlayHouseLabel": "第 {house} 宫",
+      "overlayEmpty": "此叠加中无主要行星。",
       "aspectsTitle": "行星相位（你 → 伴侣）",
       "planetA": "你",
       "planetB": "伴侣",
@@ -265,6 +293,58 @@
       "aiButton": "打开 AI 解读",
       "aiHint": "与 Astro Chat 消耗相同积分，需登录。助手会收到你的相位表及可选的换置叠加信息。",
       "footnote": "整宫制。合盘相位使用本命经度；换置区使用两人在共同坐标下计算的星盘。"
+    },
+    "deepReport": {
+      "title": "个性化合盘深度报告",
+      "subtitle": "AI 解读你们的三大要素、重点相位、本命宫位叠加，以及可选的共同城市数据——之后可继续用积分追问。",
+      "unlock": "解锁深度报告",
+      "unlocking": "正在撰写报告…",
+      "creditsBadge": "{credits} 积分",
+      "includes": [
+        "化学吸引力：金星–火星、太阳–月亮及重点相位",
+        "情感需求、沟通风格与土星长期主题",
+        "本命宫位叠加（1/5/7/8 宫高亮）",
+        "仅当填写共同城市时才包含搬迁段落"
+      ],
+      "guideBigThree": "看太阳、月亮与上升如何互动 → 个性化深度报告",
+      "guideHeadlines": "完整解读重点相位 → 解锁深度报告",
+      "guideOverlay": "理解谁的行星落在谁的宫位 → 深度报告",
+      "stickyCta": "解锁合盘深度报告",
+      "loginRequired": "登录后解锁。使用现有套餐积分——无需新订阅。",
+      "genericError": "无法生成报告，请稍后再试。",
+      "prompt": "请根据提供的双盘骨架撰写我的个性化合盘深度报告。涵盖化学吸引力、情感需求、沟通模式、长期稳定性、本命宫位叠加（尤其 1/5/7/8 宫）、一个成长边缘，以及仅当有换置数据时才写共同城市搬迁。平衡、非宿命论语气。不要给出兼容性分数。仅依据提供的相位与落点解读。"
+    },
+    "snapshotLabels": {
+      "attraction": {
+        "strong": "火花强烈",
+        "moderate": "有吸引也有摩擦",
+        "mixed": "信号混杂"
+      },
+      "emotional": {
+        "aligned": "情绪同频",
+        "different": "情感语言不同",
+        "mixed": "情绪线索混杂"
+      },
+      "communication": {
+        "smooth": "沟通自然顺畅",
+        "needs_work": "需要更多耐心",
+        "mixed": "沟通风格混合"
+      },
+      "overall": {
+        "harmonious": "整体偏和谐",
+        "growth_oriented": "成长导向的联结",
+        "mixed": "动态混合"
+      }
+    },
+    "aspectTemplates": {
+      "_default": "{planetA} {aspect} {planetB}——塑造你们关系的显著跨盘接触。",
+      "moon_sun": "太阳与月亮在你们之间——自我遇见情感需求。此 {aspect} 影响「被看见」与「感到安全」的相处方式。",
+      "moon_moon": "月亮–月亮关乎日常情绪节奏与舒适感。此 {aspect} 显示需求如何相遇。",
+      "mars_venus": "经典化学签名——金星与火星的对话。此 {aspect} 塑造吸引力与节奏。",
+      "venus_venus": "金星–金星——关于亲密表达、价值观与何谓「被爱」的和谐或张力。",
+      "mars_mars": "火星–火星——共同驱动力、激情与如何一起表达主张。",
+      "mercury_mercury": "水星–水星——思维波长、闲聊与如何作为一对处理想法。",
+      "sun_venus": "太阳–金星——温暖、欣赏与如何珍视彼此的核心自我。"
     },
     "errors": {
       "required": "请完整填写你与伴侣的必填项。",

@@ -239,6 +239,34 @@
     },
     "result": {
       "title": "La tua sinastria",
+      "nonFatalisticNote": "Una sinastria descrive tendenze e dialogo tra due temi natali — non un verdetto sulla relazione. Gli aspetti difficili segnalano aree di crescita; non predicono un fallimento.",
+      "timeAccuracyNote": "Posizioni della Luna e overlay di case dipendono dall’ora esatta di nascita. Se l’ora manca o è stimata, tratta questi temi come provvisori.",
+      "bigThreeTitle": "Confronto del Big Three",
+      "sun": "Sole",
+      "moon": "Luna",
+      "rising": "Ascendente",
+      "personYou": "Tu",
+      "personPartner": "Partner",
+      "snapshotTitle": "Istantanea della relazione",
+      "snapshotSubtitle": "Lettura rapida dagli aspetti chiave — non una percentuale di compatibilità.",
+      "snapshotAttraction": "Attrazione",
+      "snapshotEmotional": "Ritmo emotivo",
+      "snapshotCommunication": "Comunicazione",
+      "snapshotOverall": "Tono generale",
+      "headlinesTitle": "Aspetti in evidenza",
+      "headlinesSubtitle": "Contatti relazionali prioritari dai dati del tuo tema.",
+      "groupsTitle": "Gruppi di aspetti",
+      "groupsHarmonious": "Armoniosi (trigoni e sestili)",
+      "groupsChallenging": "Orientati alla crescita (quadrature e opposizioni)",
+      "groupsConjunctions": "Congiunzioni",
+      "groupsCount": "{count} contatti",
+      "natalOverlayTitle": "Overlay natal delle case",
+      "natalOverlaySubtitle": "Al luogo di nascita di ciascuno — i pianeti di chi finiscono nelle case di chi (segno intero).",
+      "natalOverlayATitle": "I tuoi pianeti nelle case del partner",
+      "natalOverlayBTitle": "I pianeti del partner nelle tue case",
+      "overlayHighlightsTitle": "Case relazionali (1 · 5 · 7 · 8)",
+      "overlayHouseLabel": "Casa {house}",
+      "overlayEmpty": "Nessun pianeta rilevante in questo overlay.",
       "aspectsTitle": "Aspetti planetari (tu → partner)",
       "planetA": "Tu",
       "planetB": "Partner",
@@ -265,6 +293,58 @@
       "aiButton": "Apri lettura IA",
       "aiHint": "Stessi crediti di Astro Chat. Accesso obbligatorio. L’assistente riceve la tabella degli aspetti e le sovrapposizioni relocate opzionali.",
       "footnote": "Case in segno intero. Gli aspetti di sinastria usano longitudini natali; la sezione relocata calcola entrambi i temi alle coordinate condivise."
+    },
+    "deepReport": {
+      "title": "Report approfondito di sinastria personalizzato",
+      "subtitle": "L’IA legge il vostro Big Three, aspetti chiave, overlay natali e dati opzionali della città condivisa — poi puoi continuare a chiedere con i crediti.",
+      "unlock": "Sblocca report approfondito",
+      "unlocking": "Scrittura del report in corso…",
+      "creditsBadge": "{credits} crediti",
+      "includes": [
+        "Chimica e attrazione da Venere–Marte, Sole–Luna e aspetti chiave",
+        "Bisogni emotivi, stile comunicativo e temi di Saturno a lungo termine",
+        "Overlay natali delle case (evidenza 1/5/7/8)",
+        "Sezione città condivisa solo se hai inserito una città"
+      ],
+      "guideBigThree": "Vedi come Sole, Luna e Ascendente interagiscono → report personalizzato",
+      "guideHeadlines": "Lettura completa degli aspetti chiave → sblocca report",
+      "guideOverlay": "Capisci i pianeti di chi nelle case di chi → report approfondito",
+      "stickyCta": "Sblocca report approfondito di sinastria",
+      "loginRequired": "Accedi per sbloccare. Usa i crediti del tuo piano — nessun nuovo abbonamento.",
+      "genericError": "Impossibile generare il report. Riprova tra poco.",
+      "prompt": "Scrivi il mio report approfondito di sinastria personalizzato basato sullo scheletro a due temi fornito. Copri chimica e attrazione, bisogni emotivi, comunicazione, durata a lungo termine, overlay natali (soprattutto 1/5/7/8), un margine di crescita e relocalizzazione SOLO se ci sono dati relocati. Tono equilibrato e non fatalista. Nessun punteggio di compatibilità. Sii specifico solo su aspetti e posizioni forniti."
+    },
+    "snapshotLabels": {
+      "attraction": {
+        "strong": "Scintilla forte",
+        "moderate": "Attrazione con attrito",
+        "mixed": "Segnali misti"
+      },
+      "emotional": {
+        "aligned": "In sintonia emotiva",
+        "different": "Linguaggi emotivi diversi",
+        "mixed": "Indizi emotivi misti"
+      },
+      "communication": {
+        "smooth": "Flusso conversazionale naturale",
+        "needs_work": "Richiede più pazienza",
+        "mixed": "Stile comunicativo misto"
+      },
+      "overall": {
+        "harmonious": "Equilibrio prevalentemente armonioso",
+        "growth_oriented": "Legame orientato alla crescita",
+        "mixed": "Mix dinamico"
+      }
+    },
+    "aspectTemplates": {
+      "_default": "{planetA} {aspect} {planetB} — un contatto incrociato rilevante che modella il vostro legame.",
+      "moon_sun": "Sole e Luna tra voi — identità che incontra bisogni emotivi. Questo {aspect} colora quanto vi sentite visti vs. al sicuro.",
+      "moon_moon": "Luna–Luna parla del ritmo emotivo quotidiano. Questo {aspect} mostra come i bisogni si incontrano.",
+      "mars_venus": "Firma classica di chimica — Venere e Marte in dialogo. Questo {aspect} modella attrazione e ritmo.",
+      "venus_venus": "Venere–Venere — armonia o tensione su affetto, valori e ciò che risulta amorevole.",
+      "mars_mars": "Marte–Marte — spinta condivisa, passione e come vi affermate insieme.",
+      "mercury_mercury": "Mercurio–Mercurio — sintonia mentale, battute e come processate idee in coppia.",
+      "sun_venus": "Sole–Venere — calore, ammirazione e come apprezzate il sé dell’altro."
     },
     "errors": {
       "required": "Compila i campi obbligatori per entrambe le persone.",

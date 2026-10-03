@@ -239,6 +239,34 @@
     },
     "result": {
       "title": "Your synastry chart",
+      "nonFatalisticNote": "A synastry chart describes tendencies and dialogue between two charts — not a verdict on your relationship. Challenging aspects highlight growth areas; they are not predictions of failure.",
+      "timeAccuracyNote": "Moon positions and house overlays depend on exact birth time. If either birth time is missing or estimated, treat those topics as provisional.",
+      "bigThreeTitle": "Big Three comparison",
+      "sun": "Sun",
+      "moon": "Moon",
+      "rising": "Rising",
+      "personYou": "You",
+      "personPartner": "Partner",
+      "snapshotTitle": "Relationship snapshot",
+      "snapshotSubtitle": "A quick read from headline aspects — not a compatibility percentage.",
+      "snapshotAttraction": "Attraction",
+      "snapshotEmotional": "Emotional rhythm",
+      "snapshotCommunication": "Communication",
+      "snapshotOverall": "Overall tone",
+      "headlinesTitle": "Headline aspects",
+      "headlinesSubtitle": "Priority relationship contacts from your chart data.",
+      "groupsTitle": "Aspect groups",
+      "groupsHarmonious": "Harmonious (trines & sextiles)",
+      "groupsChallenging": "Growth-oriented (squares & oppositions)",
+      "groupsConjunctions": "Conjunctions",
+      "groupsCount": "{count} contacts",
+      "natalOverlayTitle": "Natal house overlay",
+      "natalOverlaySubtitle": "At each birthplace — whose planets land in whose houses (whole-sign).",
+      "natalOverlayATitle": "Your planets in partner's houses",
+      "natalOverlayBTitle": "Partner's planets in your houses",
+      "overlayHighlightsTitle": "Relationship houses (1 · 5 · 7 · 8)",
+      "overlayHouseLabel": "House {house}",
+      "overlayEmpty": "No major planets in this overlay.",
       "aspectsTitle": "Planetary aspects (you → partner)",
       "planetA": "You",
       "planetB": "Partner",
@@ -265,6 +293,58 @@
       "aiButton": "Open AI reading",
       "aiHint": "Uses the same credits as Astro Chat. Sign in required. The assistant receives your aspect list and optional relocated overlays.",
       "footnote": "Whole-sign houses. Synastry aspects use natal longitudes; relocated section uses both charts calculated for the shared coordinates."
+    },
+    "deepReport": {
+      "title": "Personalized synastry deep report",
+      "subtitle": "AI reads your Big Three, headline aspects, natal house overlays, and optional shared-city data — then you can keep asking follow-ups with credits.",
+      "unlock": "Unlock deep report",
+      "unlocking": "Writing your report…",
+      "creditsBadge": "{credits} credits",
+      "includes": [
+        "Chemistry & attraction from Venus–Mars, Sun–Moon, and headline aspects",
+        "Emotional needs, communication style, and long-term Saturn themes",
+        "Natal house overlays (1/5/7/8 highlights)",
+        "Shared-city relocation section only when you entered a city"
+      ],
+      "guideBigThree": "See how your Sun, Moon & Rising interact together → personalized deep report",
+      "guideHeadlines": "Get a full read of your headline aspects → unlock deep report",
+      "guideOverlay": "Understand whose planets land in whose houses → deep report",
+      "stickyCta": "Unlock synastry deep report",
+      "loginRequired": "Sign in to unlock. Uses your existing plan credits—not a new subscription.",
+      "genericError": "Could not generate the report. Please try again shortly.",
+      "prompt": "Write my personalized synastry deep report based on the two-chart skeleton provided. Cover chemistry and attraction, emotional needs, communication patterns, long-term durability, natal house overlays (especially 1/5/7/8), one growth edge, and shared-city relocation ONLY if relocated data is present. Balanced, non-fatalistic tone. No compatibility score. Be specific to supplied aspects and placements only."
+    },
+    "snapshotLabels": {
+      "attraction": {
+        "strong": "Strong spark",
+        "moderate": "Attraction with friction",
+        "mixed": "Mixed signals"
+      },
+      "emotional": {
+        "aligned": "Emotionally in sync",
+        "different": "Different emotional languages",
+        "mixed": "Mixed emotional cues"
+      },
+      "communication": {
+        "smooth": "Natural conversational flow",
+        "needs_work": "Needs extra patience",
+        "mixed": "Mixed communication style"
+      },
+      "overall": {
+        "harmonious": "Mostly harmonious balance",
+        "growth_oriented": "Growth-oriented bond",
+        "mixed": "Dynamic mix"
+      }
+    },
+    "aspectTemplates": {
+      "_default": "{planetA} {aspect} {planetB} — a notable cross-chart contact shaping your bond.",
+      "moon_sun": "Sun and Moon between you — identity meeting emotional needs. This {aspect} colors how seen vs. how safe you feel together.",
+      "moon_moon": "Moon–Moon contact speaks to daily emotional rhythm and comfort. This {aspect} shows how your needs meet.",
+      "mars_venus": "Classic chemistry signature — Venus and Mars in dialogue. This {aspect} shapes attraction and pacing.",
+      "venus_venus": "Venus–Venus harmony (or tension) around affection, values, and what feels loving.",
+      "mars_mars": "Mars–Mars contact — shared drive, passion, and how you assert together.",
+      "mercury_mercury": "Mercury–Mercury — mental wavelength, banter, and how you process ideas as a pair.",
+      "sun_venus": "Sun–Venus — warmth, admiration, and how you appreciate each other's core self."
     },
     "errors": {
       "required": "Please complete required fields for both you and your partner.",

@@ -7,6 +7,13 @@ import {
   type PlanetRow,
 } from "@/lib/natal-chart-core";
 import { computeSynastryAspects, type PlanetLon } from "@/lib/synastry-aspects";
+import {
+  buildNatalOverlay,
+  buildRelationshipSnapshot,
+  groupAspects,
+  pickHeadlineAspects,
+  type BigThreePlacement,
+} from "@/lib/synastry-snapshot";
 
 export const maxDuration = 30;
 
@@ -73,6 +80,26 @@ function serializePlanet(p: PlanetRow) {
     sign: p.sign,
     degree: Math.round(p.degree * 100) / 100,
     house: p.house,
+  };
+}
+
+function buildBigThree(
+  planets: PlanetRow[],
+  ascendant: { sign: string; degree: number }
+): {
+  sun: BigThreePlacement | null;
+  moon: BigThreePlacement | null;
+  rising: BigThreePlacement;
+} {
+  const sun = planets.find((p) => p.name === "Sun");
+  const moon = planets.find((p) => p.name === "Moon");
+  return {
+    sun: sun ? { sign: sun.sign, degree: Math.round(sun.degree * 100) / 100 } : null,
+    moon: moon ? { sign: moon.sign, degree: Math.round(moon.degree * 100) / 100 } : null,
+    rising: {
+      sign: ascendant.sign,
+      degree: Math.round(ascendant.degree * 100) / 100,
+    },
   };
 }
 
@@ -193,6 +220,17 @@ export async function POST(request: NextRequest) {
       };
     }
 
+    const headlineAspects = pickHeadlineAspects(aspects);
+    const aspectGroups = groupAspects(aspects);
+    const relationshipSnapshot = buildRelationshipSnapshot(aspects);
+    const natalOverlay = buildNatalOverlay(
+      natalA.planets,
+      natalB.ascendant.longitude,
+      natalB.planets,
+      natalA.ascendant.longitude,
+      wholeSignHouseForLongitude
+    );
+
     return NextResponse.json({
       success: true,
       data: {
@@ -230,6 +268,16 @@ export async function POST(request: NextRequest) {
         },
         aspects,
         relocated,
+        bigThreeA: buildBigThree(natalA.planets, natalA.ascendant),
+        bigThreeB: buildBigThree(natalB.planets, natalB.ascendant),
+        headlineAspects,
+        aspectGroups,
+        relationshipSnapshot,
+        natalOverlay,
+        birthTimeProvided: {
+          personA: Boolean(personA.birthTime?.trim()),
+          personB: Boolean(personB.birthTime?.trim()),
+        },
       },
     });
   } catch (e: unknown) {
