@@ -5,10 +5,12 @@ import { createDeepSeek } from "@ai-sdk/deepseek";
 import { respErr } from "@/lib/resp";
 import {
   formatChartContext,
+  formatNatalContext,
   formatRisingSignContext,
   formatSynastryContext,
   getSystemPrompt,
   getSynastrySystemPrompt,
+  type NatalPayloadForAI,
   type RisingSignPayloadForAI,
   type SynastryPayloadForAI,
 } from "@/lib/astro-format";
@@ -25,6 +27,7 @@ const ASTRO_CHAT_MODEL =
 const CITY_COMPARISON_REPORT_CREDIT_COST = 50;
 const RISING_SIGN_DEEP_REPORT_CREDIT_COST = 50;
 const SYNASTRY_DEEP_REPORT_CREDIT_COST = 50;
+const NATAL_DEEP_REPORT_CREDIT_COST = 50;
 // Paid city-comparison reports can justify a longer reasoning pass. Standard
 // chat must produce visible text promptly, so it uses the streaming path below.
 const THINKING_ATTEMPT_TIMEOUT_MS = 45_000;
@@ -104,6 +107,7 @@ type ChatTrace = {
     | "city_comparison_report"
     | "rising_sign_deep_report"
     | "synastry_deep_report"
+    | "natal_deep_report"
     | "unknown";
   startedAt: number;
   userUuid?: string;
@@ -861,6 +865,8 @@ interface ChatRequest {
   synastryData?: SynastryPayloadForAI;
   /** When set with rising_sign_deep_report, uses natal rising-sign context (no map lines). */
   risingSignData?: RisingSignPayloadForAI;
+  /** When set with natal_deep_report, uses full natal chart context (no map lines). */
+  natalChartData?: NatalPayloadForAI;
   questionCount?: number; // 当前是第几个问题
   remainingFreeQuestions?: number; // 剩余免费问题数量
   userLocale?: string; // 🔥 新增：用户语言环境（用于优化 AI 回答）
@@ -868,7 +874,8 @@ interface ChatRequest {
     | 'standard'
     | 'city_comparison_report'
     | 'rising_sign_deep_report'
-    | 'synastry_deep_report';
+    | 'synastry_deep_report'
+    | 'natal_deep_report';
 }
 
 export async function POST(req: Request) {
@@ -885,6 +892,7 @@ export async function POST(req: Request) {
       chartData,
       synastryData,
       risingSignData,
+      natalChartData,
       questionCount,
       remainingFreeQuestions,
       userLocale,
@@ -894,6 +902,7 @@ export async function POST(req: Request) {
 
     const isRisingSignDeepReport = requestType === "rising_sign_deep_report";
     const isSynastryDeepReport = requestType === "synastry_deep_report";
+    const isNatalDeepReport = requestType === "natal_deep_report";
 
     logChatEvent(trace, "request_received", {
       messageCount: messages?.length || 0,
@@ -901,6 +910,7 @@ export async function POST(req: Request) {
       hasChartData: Boolean(chartData),
       hasSynastryData: Boolean(synastryData),
       hasRisingSignData: Boolean(risingSignData),
+      hasNatalChartData: Boolean(natalChartData),
       planetLineCount: chartData?.planetLines?.length || 0,
     });
 
@@ -930,6 +940,27 @@ export async function POST(req: Request) {
         return respErr("Rising sign chart structure is incomplete");
       }
       logChatEvent(trace, "request_validated", { contextType: "rising_sign" });
+    } else if (isNatalDeepReport) {
+      if (!natalChartData?.birthData || !natalChartData?.ascendant) {
+        logChatEvent(trace, "request_rejected", { reason: "natal_chart_data_missing" });
+        return respErr("Natal chart data is incomplete");
+      }
+      const nb = natalChartData.birthData;
+      if (!nb.date || !nb.time || !nb.location) {
+        logChatEvent(trace, "request_rejected", { reason: "natal_chart_birth_incomplete" });
+        return respErr("Natal chart birth data is incomplete");
+      }
+      if (
+        !natalChartData.bigThree ||
+        !natalChartData.angles ||
+        !Array.isArray(natalChartData.houses) ||
+        !Array.isArray(natalChartData.planets) ||
+        !Array.isArray(natalChartData.natalAspects)
+      ) {
+        logChatEvent(trace, "request_rejected", { reason: "natal_chart_structure_incomplete" });
+        return respErr("Natal chart structure is incomplete");
+      }
+      logChatEvent(trace, "request_validated", { contextType: "natal_deep_report" });
     } else if (isSynastryDeepReport) {
       if (!synastryData?.personA?.birthData || !synastryData?.personB?.birthData) {
         logChatEvent(trace, "request_rejected", { reason: "synastry_data_missing" });
@@ -1031,7 +1062,9 @@ export async function POST(req: Request) {
           ? RISING_SIGN_DEEP_REPORT_CREDIT_COST
           : requestType === "synastry_deep_report"
             ? SYNASTRY_DEEP_REPORT_CREDIT_COST
-            : getAIChatCreditCost();
+            : requestType === "natal_deep_report"
+              ? NATAL_DEEP_REPORT_CREDIT_COST
+              : getAIChatCreditCost();
     
     // 🔥 检查用户积分余额
     const userCredits = await getUserCredits(user_uuid);
@@ -1064,11 +1097,13 @@ export async function POST(req: Request) {
       const actualQuestionCount = questionCount ?? messages.filter(m => m.role === 'user').length;
       const actualRemainingFreeQuestions = remainingFreeQuestions ?? 0;
       
-      const chartContext = isRisingSignDeepReport && risingSignData
-        ? formatRisingSignContext(risingSignData)
-        : (isSynastryDeepReport || synastryData) && synastryData
-          ? formatSynastryContext(synastryData)
-          : formatChartContext(chartData!);
+      const chartContext = isNatalDeepReport && natalChartData
+        ? formatNatalContext(natalChartData)
+        : isRisingSignDeepReport && risingSignData
+          ? formatRisingSignContext(risingSignData)
+          : (isSynastryDeepReport || synastryData) && synastryData
+            ? formatSynastryContext(synastryData)
+            : formatChartContext(chartData!);
 
       const systemPrompt =
         isSynastryDeepReport || synastryData
@@ -1080,11 +1115,15 @@ export async function POST(req: Request) {
             )
           : getSystemPrompt(userLanguage, actualQuestionCount, actualRemainingFreeQuestions, userLocale);
 
-      const chartDataIntro = isRisingSignDeepReport
+      const chartDataIntro = isNatalDeepReport
         ? userLanguage === "中文"
-          ? "以下是用户的上升星座（本命盘骨架）数据："
-          : "Below is the user's rising-sign / natal chart skeleton data:"
-        : isSynastryDeepReport || synastryData
+          ? "以下是用户的本命盘完整数据："
+          : "Below is the user's full natal chart data:"
+        : isRisingSignDeepReport
+          ? userLanguage === "中文"
+            ? "以下是用户的上升星座（本命盘骨架）数据："
+            : "Below is the user's rising-sign / natal chart skeleton data:"
+          : isSynastryDeepReport || synastryData
           ? userLanguage === "中文"
             ? "以下是双方的合盘（比较盘）数据："
             : "Below is the synastry (two-chart relationship) data:"
@@ -1100,7 +1139,9 @@ export async function POST(req: Request) {
           ? "The user is requesting a paid personalized rising-sign deep report. Use whole-sign houses and the supplied modern/traditional rulers. Write a structured report with these sections: (1) Ascendant personality, first impressions, and outward style — include a brief appearance/presence note (posture, vibe, physical impression tendencies; not deterministic looks). (2) First-house planets and aspects TO the Ascendant — explain how they modify the rising sign (if none, say so). (3) Big Three interplay (Sun/Moon/Rising). (4) Four angles (ASC/DSC/MC/IC) as life axes. (5) Chart ruler(s): modern and traditional co-ruler when supplied — sign, house, and major aspects to the ruler(s). (6) How whole-sign house signs frame life areas. If cusp-sensitivity is flagged, note birth-time uncertainty without changing the sign. Be specific to supplied degrees/placements/aspects only. Do not invent data. End with 2–3 natural follow-up questions about location or their chart."
           : requestType === "synastry_deep_report"
             ? "The user is requesting a paid personalized synastry deep report. Use ONLY the supplied synastry data (aspects, Big Three, natal house overlays, optional relocated overlays). Write a structured report with these sections: (1) Chemistry & attraction — Venus–Mars, Sun–Moon, and other headline aspects from the data. (2) Emotional needs & comfort — Moon themes, emotional snapshot label. (3) Communication & conflict style — Mercury aspects and patterns. (4) Long-term durability — Saturn and challenging aspects as growth edges, not fate. (5) Natal house overlays — especially houses 1, 5, 7, 8 highlights. (6) Growth edge — one constructive tension to work on together. (7) Shared city / relocation — ONLY if relocated overlay data is present in the payload; otherwise skip this section entirely. If birth time is missing for either person, flag Moon/angle topics as provisional. Balanced, non-fatalistic tone. No compatibility percentage or score. Be specific to supplied aspects/placements only. End with 2–3 natural follow-up questions."
-            : "";
+            : requestType === "natal_deep_report"
+              ? "The user is requesting a paid personalized natal chart deep report. Use ONLY the supplied natal data (whole-sign houses). Write a structured report with these sections: (1) Big Three synthesis — Sun, Moon, Rising interplay with houses. (2) Four angles (ASC/DSC/MC/IC) as life axes — career, relationships, home, identity. (3) Key natal aspects — headline aspects from the data; explain patterns, not fate. (4) Planets by house — strongest house clusters and what life areas they emphasize. (5) Chart ruler(s) — modern and traditional when supplied; sign, house, aspects. (6) Whole-sign house framework — how the 12 house signs frame life themes. (7) Location & astrocartography bridge — one paragraph on how this natal blueprint can be explored geographically (no invented city lines). If cusp-sensitivity is flagged, note birth-time uncertainty. Balanced, non-fatalistic tone. No generic horoscope fluff. Be specific to supplied degrees/placements/aspects only. End with 2–3 natural follow-up questions about career, relationships, or relocation."
+              : "";
       
       const systemMessage = {
         role: 'system' as const,
@@ -1117,7 +1158,8 @@ export async function POST(req: Request) {
       const maxTokens =
         requestType === "city_comparison_report" ||
         requestType === "rising_sign_deep_report" ||
-        requestType === "synastry_deep_report"
+        requestType === "synastry_deep_report" ||
+        requestType === "natal_deep_report"
           ? CITY_COMPARISON_REPORT_MAX_TOKENS
           : STANDARD_CHAT_MAX_TOKENS;
 

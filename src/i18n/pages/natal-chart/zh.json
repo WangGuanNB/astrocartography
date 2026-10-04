@@ -227,5 +227,121 @@
         "variant": "default"
       }
     ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "出生日期",
+      "birthTime": "出生时间（尽量精确）",
+      "birthLocation": "出生地点",
+      "timezone": "时区",
+      "submit": "生成本命盘",
+      "privacyNote": "你的出生数据不会被存储。",
+      "useCoordinates": "使用坐标",
+      "useCityName": "使用城市名",
+      "coordinatesPlaceholder": "例如 39.9042, 116.4074",
+      "cityPlaceholder": "城市, 国家",
+      "locationTip": "中国大陆出生请选择 CST (Beijing) 时区。"
+    },
+    "result": {
+      "title": "你的本命盘",
+      "timeAccuracyNote": "上升、宫位和月亮位置依赖精确出生时间。若时间仅为估计，请谨慎解读宫位主题。",
+      "methodologyNote": "整宫制。现代守护星为主；天蝎座、水瓶座、双鱼座同时标注传统共守护星。",
+      "cuspWarningEarly": "你的上升星座处于早期度数——出生时间稍有误差可能改变上升星座。",
+      "cuspWarningLate": "你的上升星座处于晚期度数——出生时间稍有误差可能改变上升星座。",
+      "bigThreeTitle": "你的 Big Three",
+      "sun": "太阳",
+      "moon": "月亮",
+      "rising": "上升",
+      "anglesTitle": "四轴（ASC · DSC · MC · IC）",
+      "asc": "ASC（上升）",
+      "dsc": "DSC（下降）",
+      "mc": "MC（中天）",
+      "ic": "IC（天底）",
+      "housesTitle": "整宫制十二宫",
+      "housesSubtitle": "第一宫从上升星座开始。每宫显示该生活领域对应的星座。",
+      "houseLabel": "第",
+      "rulersTitle": "盘主星",
+      "modernRulerLabel": "现代",
+      "traditionalRulerLabel": "传统",
+      "firstHouseTitle": "第一宫行星",
+      "firstHouseSubtitle": "第一宫内的行星会改变上升星座的外在表现方式。",
+      "firstHouseEmpty": "第一宫无行星。",
+      "ascAspectsTitle": "与上升点的相位",
+      "ascAspectsSubtitle": "本命行星与上升点的主要相位，细化外在风格。",
+      "noAscAspects": "标准容许度内无与上升点的主要相位。",
+      "natalAspectsTitle": "关键本命相位",
+      "natalAspectsSubtitle": "本命行星之间的主要相位——塑造性格与人生主题的模式。",
+      "noNatalAspects": "标准容许度内无主要本命相位。",
+      "placementsTitle": "行星落点",
+      "placementsSubtitle": "每颗行星的星座与宫位——构成你星盘的基本单元。",
+      "placementLine": "{planet} 在 {sign}，第 {house} 宫：{theme}",
+      "tablePlanet": "行星",
+      "tableSign": "星座",
+      "tableDegree": "度数",
+      "tableHouse": "宫位",
+      "bridgeText": "本命盘是你的生命蓝图。星盘地图（Astrocartography）展示这些行星能量在地球上何处被激活——适合搬迁或旅行规划。",
+      "ctaMap": "在星盘地图上探索我的本命盘",
+      "ctaMapHelp": "出生数据自动传递，无需重新输入。",
+      "ctaAskAi": "用 Ask AI 继续解读完整星盘",
+      "relatedTitle": "继续探索",
+      "relatedLinks": [
+        { "label": "上升星座深度解读", "href": "/rising-sign-calculator" },
+        { "label": "合盘计算器", "href": "/synastry-chart-calculator" },
+        { "label": "搬迁星盘", "href": "/relocation-chart-calculator" },
+        { "label": "行运星盘", "href": "/transit-chart-calculator" }
+      ]
+    },
+    "deepReport": {
+      "title": "个性化本命盘深度报告",
+      "subtitle": "AI 解读你的 Big Three、四轴、本命相位、宫位主题与盘主星——之后可用 credits 继续追问。",
+      "unlock": "解锁深度报告（{credits} credits）",
+      "unlocking": "正在生成报告…",
+      "creditsBadge": "{credits} credits",
+      "includes": [
+        "Big Three 综合与四轴人生主题",
+        "关键本命相位与行星落宫主题",
+        "盘主星位置 + 整宫制框架",
+        "星盘地图衔接——如何地理化探索你的星盘"
+      ],
+      "guideBigThree": "看太阳、月亮与上升如何协同 → 个性化深度报告",
+      "guideAspects": "获取本命相位模式的个性化解读 → 深度报告",
+      "guideHouses": "理解盘主星与宫位如何框定人生 → 解锁深度报告",
+      "stickyCta": "解锁深度报告",
+      "loginRequired": "请登录后解锁。使用现有套餐 credits，无需新订阅。",
+      "genericError": "无法生成报告，请稍后再试。",
+      "prompt": "根据提供的整宫制本命盘数据，撰写我的个性化本命盘深度报告。涵盖 Big Three 综合、四轴、关键本命相位、行星落宫、盘主星、整宫制框架，以及简短的星盘地图衔接。请针对我的度数、落点与相位具体说明。非宿命论语气。不要编造数据。"
+    },
+    "errors": {
+      "required": "请填写所有字段以生成本命盘。",
+      "generic": "计算出错，请核对出生数据后重试。"
+    },
+    "signThemes": {
+      "Aries": "直接行动力、勇气与先发制人的需求",
+      "Taurus": "稳定、感官享受与建立持久价值",
+      "Gemini": "好奇心、沟通与思维灵活",
+      "Cancer": "情感安全、滋养与保护本能",
+      "Leo": "创意自我表达、温暖与可见的自信",
+      "Virgo": "精确、服务与务实改进",
+      "Libra": "和谐、伙伴关系与审美平衡",
+      "Scorpio": "深度、转化与情感强度",
+      "Sagittarius": "扩展、意义追寻与自由",
+      "Capricorn": "纪律、野心与长期结构",
+      "Aquarius": "创新、独立与集体理想",
+      "Pisces": "共情、想象与精神敏感"
+    },
+    "risingInterpretations": {
+      "Aries": "你展现直接、果断的能量。他人常感知到你的自信与快速行动——火星为星盘注入主动性。",
+      "Taurus": "你显得沉着、稳重。金星作为盘主星带来稳定与对舒适品质的欣赏。",
+      "Gemini": "你的存在感充满好奇与表达力。水星使你适应力强、信息导向。",
+      "Cancer": "你显得关怀、有保护欲。月亮强调情感深度与安全需求。",
+      "Leo": "你留下温暖、自信的第一印象。太阳突出创意自我表达与自然光芒。",
+      "Virgo": "你呈现精确、乐于助人的形象。水星带来分析思维与实用智慧。",
+      "Libra": "你给人圆融、友善的印象。金星强调平衡、魅力与伙伴关系。",
+      "Scorpio": "你的第一印象倾向于强烈与深邃。冥王星/火星带来洞察力与情感复杂性。",
+      "Sagittarius": "你展现开放与乐观。木星带来幽默、诚实与成长欲。",
+      "Capricorn": "你显得沉稳、可靠。土星强调结构、野心与成熟。",
+      "Aquarius": "你的存在感独特、思想独立。天王星/土星带来前瞻思维。",
+      "Pisces": "你给人温柔、共情的印象。海王星/木星带来想象与细腻感知。"
+    }
   }
 }

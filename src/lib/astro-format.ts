@@ -606,6 +606,45 @@ export function formatRisingSignContext(data: RisingSignPayloadForAI): string {
   return txt;
 }
 
+type NatalPlanetRow = {
+  planet: string;
+  sign: string;
+  degree: number;
+  house: number;
+};
+
+type NatalAspectRow = {
+  planetA: string;
+  planetB: string;
+  aspect: string;
+  orb: number;
+};
+
+/** Payload for natal chart deep report (no map lines). */
+export interface NatalPayloadForAI extends RisingSignPayloadForAI {
+  planets: NatalPlanetRow[];
+  natalAspects: NatalAspectRow[];
+  headlineAspects?: NatalAspectRow[];
+}
+
+export function formatNatalContext(data: NatalPayloadForAI): string {
+  let txt = formatRisingSignContext(data);
+  txt += `\n=== ALL NATAL PLANET PLACEMENTS ===\n`;
+  for (const p of data.planets) {
+    txt += `${p.planet}: ${p.sign} ${p.degree.toFixed(1)}° (House ${p.house})\n`;
+  }
+  txt += `\n=== NATAL ASPECTS (major aspects among natal planets, standard orbs) ===\n`;
+  const aspects = data.headlineAspects?.length ? data.headlineAspects : data.natalAspects;
+  if (aspects?.length) {
+    for (const a of aspects.slice(0, 20)) {
+      txt += `${a.planetA} ${a.aspect} ${a.planetB} (orb ${a.orb}°)\n`;
+    }
+  } else {
+    txt += "(no major natal aspects within standard orbs)\n";
+  }
+  return txt;
+}
+
 /** Payload for AI synastry mode (no map lines). */
 export interface SynastryPayloadForAI {
   personA: {

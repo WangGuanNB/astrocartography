@@ -232,5 +232,121 @@
         "variant": "default"
       }
     ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Birth date",
+      "birthTime": "Birth time (exact if possible)",
+      "birthLocation": "Birth location",
+      "timezone": "Timezone",
+      "submit": "Generate natal chart",
+      "privacyNote": "Your birth data stays private and is not stored.",
+      "useCoordinates": "Use coordinates",
+      "useCityName": "Use city name",
+      "coordinatesPlaceholder": "e.g. 40.7128, -74.006",
+      "cityPlaceholder": "City, Country",
+      "locationTip": "For China births, select CST (Beijing) timezone."
+    },
+    "result": {
+      "title": "Your Natal Chart",
+      "timeAccuracyNote": "Ascendant, houses, and Moon placement depend on exact birth time. If your time is estimated, treat house-based readings with caution.",
+      "methodologyNote": "Whole-sign houses. Modern chart rulers are primary; traditional co-rulers shown for Scorpio, Aquarius, and Pisces.",
+      "cuspWarningEarly": "Your Ascendant is in early degrees — a small birth-time error could shift the rising sign.",
+      "cuspWarningLate": "Your Ascendant is in late degrees — a small birth-time error could shift the rising sign.",
+      "bigThreeTitle": "Your Big Three",
+      "sun": "Sun",
+      "moon": "Moon",
+      "rising": "Rising",
+      "anglesTitle": "Four angles (ASC · DSC · MC · IC)",
+      "asc": "ASC (Rising)",
+      "dsc": "DSC (Descendant)",
+      "mc": "MC (Midheaven)",
+      "ic": "IC (Imum Coeli)",
+      "housesTitle": "Whole-sign houses",
+      "housesSubtitle": "House 1 starts with your rising sign. Each house shows the zodiac sign on that life area.",
+      "houseLabel": "House",
+      "rulersTitle": "Chart rulers",
+      "modernRulerLabel": "Modern",
+      "traditionalRulerLabel": "Traditional",
+      "firstHouseTitle": "First-house planets",
+      "firstHouseSubtitle": "Planets in the 1st house modify how your rising sign shows up.",
+      "firstHouseEmpty": "No planets in the 1st house.",
+      "ascAspectsTitle": "Aspects to your Ascendant",
+      "ascAspectsSubtitle": "Major aspects from natal planets to your Ascendant refine outward style.",
+      "noAscAspects": "No major aspects to the Ascendant within standard orbs.",
+      "natalAspectsTitle": "Key natal aspects",
+      "natalAspectsSubtitle": "Major aspects among your natal planets — patterns that shape personality and life themes.",
+      "noNatalAspects": "No major natal aspects within standard orbs.",
+      "placementsTitle": "Planet placements",
+      "placementsSubtitle": "Each planet by sign and house — the building blocks of your chart.",
+      "placementLine": "{planet} in {sign}, House {house}: {theme}",
+      "tablePlanet": "Planet",
+      "tableSign": "Sign",
+      "tableDegree": "Degree",
+      "tableHouse": "House",
+      "bridgeText": "Your natal chart is your blueprint. Astrocartography shows where those same planetary energies activate on the world map — ideal for relocation or travel planning.",
+      "ctaMap": "Explore my chart on the astrocartography map",
+      "ctaMapHelp": "Birth data transfers automatically — no re-entry needed.",
+      "ctaAskAi": "Continue with Ask AI on my full chart",
+      "relatedTitle": "Explore next",
+      "relatedLinks": [
+        { "label": "Rising sign deep dive", "href": "/rising-sign-calculator" },
+        { "label": "Synastry calculator", "href": "/synastry-chart-calculator" },
+        { "label": "Relocation chart", "href": "/relocation-chart-calculator" },
+        { "label": "Transit chart", "href": "/transit-chart-calculator" }
+      ]
+    },
+    "deepReport": {
+      "title": "Personalized natal chart deep report",
+      "subtitle": "AI reads your Big Three, angles, natal aspects, house themes, and chart ruler(s) — then you can keep asking follow-ups with credits.",
+      "unlock": "Unlock deep report ({credits} credits)",
+      "unlocking": "Writing your report…",
+      "creditsBadge": "{credits} credits",
+      "includes": [
+        "Big Three synthesis and four angles as life axes",
+        "Key natal aspects and planets-by-house themes",
+        "Chart ruler placement + whole-sign house framework",
+        "Astrocartography bridge — how to explore your chart geographically"
+      ],
+      "guideBigThree": "See how your Sun, Moon & Rising work together → personalized deep report",
+      "guideAspects": "Get a personalized read of your natal aspect patterns → deep report",
+      "guideHouses": "Understand how your chart ruler and houses frame your life → unlock deep report",
+      "stickyCta": "Unlock deep report",
+      "loginRequired": "Sign in to unlock. Uses your existing plan credits—not a new subscription.",
+      "genericError": "Could not generate the report. Please try again shortly.",
+      "prompt": "Write my personalized natal chart deep report based on the supplied whole-sign chart data. Cover Big Three synthesis, four angles, key natal aspects, planets by house, chart ruler(s), whole-sign house framework, and a brief astrocartography bridge. Be specific to my degrees, placements, and aspects. Non-fatalistic tone. Do not invent data."
+    },
+    "errors": {
+      "required": "Please complete all fields to generate your natal chart.",
+      "generic": "Calculation error. Please verify your birth data and try again."
+    },
+    "signThemes": {
+      "Aries": "direct initiative, courage, and a need to act first",
+      "Taurus": "stability, sensuality, and building lasting value",
+      "Gemini": "curiosity, communication, and mental flexibility",
+      "Cancer": "emotional security, nurturing, and protective instincts",
+      "Leo": "creative self-expression, warmth, and visible confidence",
+      "Virgo": "precision, service, and practical improvement",
+      "Libra": "harmony, partnership, and aesthetic balance",
+      "Scorpio": "depth, transformation, and emotional intensity",
+      "Sagittarius": "expansion, meaning-seeking, and freedom",
+      "Capricorn": "discipline, ambition, and long-term structure",
+      "Aquarius": "innovation, independence, and collective ideals",
+      "Pisces": "empathy, imagination, and spiritual sensitivity"
+    },
+    "risingInterpretations": {
+      "Aries": "You project bold, direct energy. People often perceive confidence and quick action — Mars colors your chart with initiative.",
+      "Taurus": "You come across as calm and grounded. Venus as chart ruler brings steadiness and appreciation for comfort and quality.",
+      "Gemini": "Your presence reads as curious and articulate. Mercury makes you adaptable and information-oriented.",
+      "Cancer": "You appear caring and protective. The Moon emphasizes emotional depth and security needs.",
+      "Leo": "You make a warm, confident first impression. The Sun highlights creative self-expression and natural radiance.",
+      "Virgo": "You present as precise and helpful. Mercury brings analytical thinking and practical intelligence.",
+      "Libra": "You come across as diplomatic and pleasant. Venus emphasizes balance, charm, and partnership.",
+      "Scorpio": "Your first impression tends toward intensity and depth. Pluto/Mars brings perceptiveness and emotional complexity.",
+      "Sagittarius": "You project openness and optimism. Jupiter brings humor, honesty, and a love of growth.",
+      "Capricorn": "You appear serious and capable. Saturn emphasizes structure, ambition, and maturity.",
+      "Aquarius": "Your presence reads as original and intellectually independent. Uranus/Saturn brings progressive thinking.",
+      "Pisces": "You come across as gentle and empathetic. Neptune/Jupiter brings imagination and subtle perception."
+    }
   }
 }

@@ -9,6 +9,7 @@ export type AiChatEventInput = {
     | "city_comparison_report"
     | "rising_sign_deep_report"
     | "synastry_deep_report"
+    | "natal_deep_report"
     | "unknown";
   event: string;
   provider?: string;

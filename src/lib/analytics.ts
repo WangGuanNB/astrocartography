@@ -393,6 +393,72 @@ export const synastryEvents = {
   },
 };
 
+export type NatalUnlockEntry =
+  | "main"
+  | "sticky"
+  | "guide_big_three"
+  | "guide_aspects"
+  | "guide_houses";
+
+/**
+ * Natal chart calculator — deep report unlock funnel
+ */
+export const natalEvents = {
+  guideClicked: (entryPoint: NatalUnlockEntry) => {
+    trackEvent("natal_report_guide_clicked", {
+      entry_point: entryPoint,
+      report_type: "natal_deep_report",
+      event_category: "Natal Chart",
+    });
+  },
+
+  reportUnlockClicked: (entryPoint: NatalUnlockEntry, creditsRequired: number) => {
+    trackEvent("natal_report_unlock_clicked", {
+      entry_point: entryPoint,
+      report_type: "natal_deep_report",
+      credits_required: creditsRequired,
+      event_category: "Natal Chart",
+    });
+  },
+
+  reportLoginGate: (entryPoint: NatalUnlockEntry) => {
+    trackEvent("natal_report_login_gate", {
+      entry_point: entryPoint,
+      report_type: "natal_deep_report",
+      event_category: "Natal Chart",
+    });
+  },
+
+  reportSuccess: (entryPoint: NatalUnlockEntry, creditsRequired: number) => {
+    trackEvent("natal_report_success", {
+      entry_point: entryPoint,
+      report_type: "natal_deep_report",
+      credits_required: creditsRequired,
+      event_category: "Natal Chart",
+    });
+  },
+
+  reportFailed: (
+    entryPoint: NatalUnlockEntry,
+    reason: "insufficient_credits" | "auth_required" | "generation_error" | "empty_response"
+  ) => {
+    trackEvent("natal_report_failed", {
+      entry_point: entryPoint,
+      report_type: "natal_deep_report",
+      failure_reason: reason,
+      event_category: "Natal Chart",
+    });
+  },
+
+  pricingModalOpened: (entryPoint: NatalUnlockEntry) => {
+    trackEvent("natal_pricing_modal_opened", {
+      entry_point: entryPoint,
+      trigger_source: "insufficient_credits",
+      event_category: "Natal Chart",
+    });
+  },
+};
+
 /**
  * 城市检查与城市比较事件
  */

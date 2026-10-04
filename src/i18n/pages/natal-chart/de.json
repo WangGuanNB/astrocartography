@@ -227,5 +227,121 @@
         "variant": "default"
       }
     ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Geburtsdatum",
+      "birthTime": "Geburtszeit (möglichst genau)",
+      "birthLocation": "Geburtsort",
+      "timezone": "Zeitzone",
+      "submit": "Geburtshoroskop erstellen",
+      "privacyNote": "Ihre Geburtsdaten bleiben privat und werden nicht gespeichert.",
+      "useCoordinates": "Koordinaten verwenden",
+      "useCityName": "Stadtname verwenden",
+      "coordinatesPlaceholder": "z. B. 52.5200, 13.4050",
+      "cityPlaceholder": "Stadt, Land",
+      "locationTip": "Für Geburten in China wählen Sie CST (Peking)."
+    },
+    "result": {
+      "title": "Ihr Geburtshoroskop",
+      "timeAccuracyNote": "Aszendent, Häuser und Mond hängen von der genauen Geburtszeit ab. Bei geschätzter Zeit Hausdeutungen vorsichtig interpretieren.",
+      "methodologyNote": "Whole-Sign-Häuser. Moderne Herrscher primär; traditionelle Co-Herrscher für Skorpion, Wassermann und Fische.",
+      "cuspWarningEarly": "Ihr Aszendent steht in frühen Graden — ein kleiner Zeitfehler kann das Aszendentenzeichen ändern.",
+      "cuspWarningLate": "Ihr Aszendent steht in späten Graden — ein kleiner Zeitfehler kann das Aszendentenzeichen ändern.",
+      "bigThreeTitle": "Ihr Big Three",
+      "sun": "Sonne",
+      "moon": "Mond",
+      "rising": "Aszendent",
+      "anglesTitle": "Vier Winkel (ASC · DSC · MC · IC)",
+      "asc": "ASC (Aszendent)",
+      "dsc": "DSC (Deszendent)",
+      "mc": "MC (Medium Coeli)",
+      "ic": "IC (Imum Coeli)",
+      "housesTitle": "Whole-Sign-Häuser",
+      "housesSubtitle": "Haus 1 beginnt mit Ihrem Aszendentenzeichen. Jedes Haus zeigt das Tierkreiszeichen dieses Lebensbereichs.",
+      "houseLabel": "Haus",
+      "rulersTitle": "Chart-Herrscher",
+      "modernRulerLabel": "Modern",
+      "traditionalRulerLabel": "Traditionell",
+      "firstHouseTitle": "Planeten im 1. Haus",
+      "firstHouseSubtitle": "Planeten im 1. Haus modifizieren, wie sich Ihr Aszendent zeigt.",
+      "firstHouseEmpty": "Keine Planeten im 1. Haus.",
+      "ascAspectsTitle": "Aspekte zum Aszendenten",
+      "ascAspectsSubtitle": "Hauptaspekte nataler Planeten zum Aszendenten verfeinern den äußeren Stil.",
+      "noAscAspects": "Keine Hauptaspekte zum Aszendenten innerhalb Standard-Orben.",
+      "natalAspectsTitle": "Wichtige Natalaspekte",
+      "natalAspectsSubtitle": "Hauptaspekte unter Ihren Natalplaneten — Muster für Persönlichkeit und Lebensthemen.",
+      "noNatalAspects": "Keine wichtigen Natalaspekte innerhalb Standard-Orben.",
+      "placementsTitle": "Planetenstellungen",
+      "placementsSubtitle": "Jeder Planet nach Zeichen und Haus — Bausteine Ihres Horoskops.",
+      "placementLine": "{planet} in {sign}, Haus {house}: {theme}",
+      "tablePlanet": "Planet",
+      "tableSign": "Zeichen",
+      "tableDegree": "Grad",
+      "tableHouse": "Haus",
+      "bridgeText": "Ihr Geburtshoroskop ist Ihr Blueprint. Astrokartografie zeigt, wo dieselben Energien auf der Weltkarte aktiv werden — ideal für Umzug oder Reiseplanung.",
+      "ctaMap": "Mein Horoskop auf der Astrokartografie-Karte erkunden",
+      "ctaMapHelp": "Geburtsdaten werden automatisch übernommen — keine erneute Eingabe.",
+      "ctaAskAi": "Mit Ask AI am vollständigen Horoskop fortfahren",
+      "relatedTitle": "Als Nächstes",
+      "relatedLinks": [
+        { "label": "Aszendent vertiefen", "href": "/rising-sign-calculator" },
+        { "label": "Synastrie-Rechner", "href": "/synastry-chart-calculator" },
+        { "label": "Relokationshoroskop", "href": "/relocation-chart-calculator" },
+        { "label": "Transit-Horoskop", "href": "/transit-chart-calculator" }
+      ]
+    },
+    "deepReport": {
+      "title": "Persönlicher Geburtshoroskop-Tiefenbericht",
+      "subtitle": "KI liest Big Three, Winkel, Natalaspekte, Hausthemen und Herrscher — danach können Sie mit Credits nachfragen.",
+      "unlock": "Tiefenbericht freischalten ({credits} Credits)",
+      "unlocking": "Bericht wird erstellt…",
+      "creditsBadge": "{credits} Credits",
+      "includes": [
+        "Big-Three-Synthese und vier Winkel als Lebensachsen",
+        "Wichtige Natalaspekte und Planeten-nach-Haus-Themen",
+        "Chart-Herrscher + Whole-Sign-Rahmen",
+        "Astrokartografie-Brücke — Ihr Horoskop geografisch erkunden"
+      ],
+      "guideBigThree": "Wie Sonne, Mond & Aszendent zusammenwirken → personalisierter Tiefenbericht",
+      "guideAspects": "Personalisierte Deutung Ihrer Natalaspekt-Muster → Tiefenbericht",
+      "guideHouses": "Wie Herrscher und Häuser Ihr Leben rahmen → Tiefenbericht freischalten",
+      "stickyCta": "Tiefenbericht freischalten",
+      "loginRequired": "Zum Freischalten anmelden. Nutzt Credits Ihres Plans — kein neues Abo.",
+      "genericError": "Bericht konnte nicht erstellt werden. Bitte später erneut versuchen.",
+      "prompt": "Schreibe meinen personalisierten Geburtshoroskop-Tiefenbericht basierend auf den Whole-Sign-Daten. Behandle Big Three, vier Winkel, wichtige Natalaspekte, Planeten nach Haus, Herrscher, Whole-Sign-Rahmen und eine kurze Astrokartografie-Brücke. Sei spezifisch zu Graden, Stellungen und Aspekten. Nicht-fatalistischer Ton. Keine erfundenen Daten."
+    },
+    "errors": {
+      "required": "Bitte alle Felder ausfüllen, um Ihr Geburtshoroskop zu erstellen.",
+      "generic": "Berechnungsfehler. Bitte Geburtsdaten prüfen und erneut versuchen."
+    },
+    "signThemes": {
+      "Aries": "direkte Initiative, Mut und Bedürfnis zuerst zu handeln",
+      "Taurus": "Stabilität, Sinnlichkeit und dauerhaften Wert aufbauen",
+      "Gemini": "Neugier, Kommunikation und mentale Flexibilität",
+      "Cancer": "emotionale Sicherheit, Fürsorge und Schutzinstinkt",
+      "Leo": "kreativer Selbstausdruck, Wärme und sichtbares Selbstvertrauen",
+      "Virgo": "Präzision, Dienst und praktische Verbesserung",
+      "Libra": "Harmonie, Partnerschaft und ästhetisches Gleichgewicht",
+      "Scorpio": "Tiefe, Transformation und emotionale Intensität",
+      "Sagittarius": "Expansion, Sinnsuche und Freiheit",
+      "Capricorn": "Disziplin, Ambition und langfristige Struktur",
+      "Aquarius": "Innovation, Unabhängigkeit und kollektive Ideale",
+      "Pisces": "Empathie, Fantasie und spirituelle Sensibilität"
+    },
+    "risingInterpretations": {
+      "Aries": "Sie strahlen direkte, entschlossene Energie aus. Andere nehmen Selbstvertrauen und schnelles Handeln wahr — Mars färbt Ihr Horoskop mit Initiative.",
+      "Taurus": "Sie wirken ruhig und geerdet. Venus als Herrscher bringt Beständigkeit und Wertschätzung für Komfort und Qualität.",
+      "Gemini": "Ihre Präsenz wirkt neugierig und eloquent. Merkur macht Sie anpassungsfähig und informationsorientiert.",
+      "Cancer": "Sie erscheinen fürsorglich und beschützend. Der Mond betont emotionale Tiefe und Sicherheitsbedürfnis.",
+      "Leo": "Sie hinterlassen einen warmen, selbstbewussten ersten Eindruck. Die Sonne hebt kreativen Selbstausdruck hervor.",
+      "Virgo": "Sie wirken präzise und hilfsbereit. Merkur bringt analytisches Denken und praktische Intelligenz.",
+      "Libra": "Sie wirken diplomatisch und angenehm. Venus betont Balance, Charme und Partnerschaft.",
+      "Scorpio": "Ihr erster Eindruck tendiert zu Intensität und Tiefe. Pluto/Mars bringt Scharfsinn und emotionale Komplexität.",
+      "Sagittarius": "Sie strahlen Offenheit und Optimismus aus. Jupiter bringt Humor, Ehrlichkeit und Wachstumsdrang.",
+      "Capricorn": "Sie wirken ernst und fähig. Saturn betont Struktur, Ambition und Reife.",
+      "Aquarius": "Ihre Präsenz wirkt originell und intellektuell unabhängig. Uranus/Saturn bringt progressives Denken.",
+      "Pisces": "Sie wirken sanft und empathisch. Neptun/Jupiter bringt Fantasie und feine Wahrnehmung."
+    }
   }
 }

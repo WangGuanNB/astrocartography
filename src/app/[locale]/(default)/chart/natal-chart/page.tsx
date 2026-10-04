@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getCanonicalUrl } from "@/lib/utils";
 import { getNatalChartPage } from "@/services/page";
-import BirthChartClient from "../../tools/birth-chart/birth-chart-client";
+import NatalChartClient, { type ToolLabels } from "./natal-chart-client";
 import FeatureWhatTwo from "@/components/blocks/feature-what-two";
 import Feature2 from "@/components/blocks/feature2";
 import Feature3 from "@/components/blocks/feature3";
@@ -81,13 +81,21 @@ export async function generateMetadata({
   };
 }
 
+type PageWithTool = Awaited<ReturnType<typeof getNatalChartPage>> & {
+  tool: ToolLabels;
+};
+
 export default async function NatalChartPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const page = await getNatalChartPage(locale);
+  const page = (await getNatalChartPage(locale)) as PageWithTool;
+
+  if (!page.tool) {
+    throw new Error("Natal chart page is missing tool labels. Check natal-chart/en.json.");
+  }
 
   const getH1Title = (title: string): string => {
     const idx = title.search(/\s[—–]\s|\s-\s/);
@@ -136,7 +144,7 @@ export default async function NatalChartPage({
       )}
 
       <div className="py-6 lg:py-10">
-        <BirthChartClient />
+        <NatalChartClient tool={page.tool} />
       </div>
 
       {page.introduce && <FeatureWhatTwo section={page.introduce} />}
@@ -164,9 +172,10 @@ export default async function NatalChartPage({
               priceCurrency: "USD",
             },
             featureList: [
-              "Natal chart wheel (birth chart)",
-              "Planet positions by sign and house",
-              "Whole Sign Houses",
+              "Natal chart wheel with Big Three summary",
+              "Four angles, whole-sign houses, and chart rulers",
+              "Key natal aspects and planet placements by sign and house",
+              "AI natal chart deep report (credits)",
               "One‑click handoff to Astrocartography map",
             ],
             creator: {

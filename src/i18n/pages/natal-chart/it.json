@@ -227,5 +227,121 @@
         "variant": "default"
       }
     ]
+  },
+  "tool": {
+    "form": {
+      "birthDate": "Data di nascita",
+      "birthTime": "Ora di nascita (esatta se possibile)",
+      "birthLocation": "Luogo di nascita",
+      "timezone": "Fuso orario",
+      "submit": "Genera carta natale",
+      "privacyNote": "I tuoi dati di nascita restano privati e non vengono memorizzati.",
+      "useCoordinates": "Usa coordinate",
+      "useCityName": "Usa nome città",
+      "coordinatesPlaceholder": "es. 41.9028, 12.4964",
+      "cityPlaceholder": "Città, Paese",
+      "locationTip": "Per nascite in Cina, seleziona CST (Pechino)."
+    },
+    "result": {
+      "title": "La tua carta natale",
+      "timeAccuracyNote": "Ascendente, case e Luna dipendono dall'ora esatta. Se l'ora è stimata, interpreta le case con cautela.",
+      "methodologyNote": "Case a segno intero. Reggenti moderni primari; co-reggenti tradizionali per Scorpione, Acquario e Pesci.",
+      "cuspWarningEarly": "Il tuo Ascendente è ai primi gradi — un piccolo errore orario può cambiare il segno ascendente.",
+      "cuspWarningLate": "Il tuo Ascendente è agli ultimi gradi — un piccolo errore orario può cambiare il segno ascendente.",
+      "bigThreeTitle": "Il tuo Big Three",
+      "sun": "Sole",
+      "moon": "Luna",
+      "rising": "Ascendente",
+      "anglesTitle": "Quattro angoli (ASC · DSC · MC · IC)",
+      "asc": "ASC (Ascendente)",
+      "dsc": "DSC (Discendente)",
+      "mc": "MC (Medio Cielo)",
+      "ic": "IC (Fondo del Cielo)",
+      "housesTitle": "Case a segno intero",
+      "housesSubtitle": "La casa 1 inizia con il tuo segno ascendente. Ogni casa mostra il segno zodiacale di quell'area di vita.",
+      "houseLabel": "Casa",
+      "rulersTitle": "Reggenti della carta",
+      "modernRulerLabel": "Moderno",
+      "traditionalRulerLabel": "Tradizionale",
+      "firstHouseTitle": "Pianeti in casa 1",
+      "firstHouseSubtitle": "I pianeti in casa 1 modificano come si manifesta il tuo ascendente.",
+      "firstHouseEmpty": "Nessun pianeta in casa 1.",
+      "ascAspectsTitle": "Aspetti all'Ascendente",
+      "ascAspectsSubtitle": "Gli aspetti maggiori dei pianeti natali all'Ascendente affinano lo stile esteriore.",
+      "noAscAspects": "Nessun aspetto maggiore all'Ascendente entro orb standard.",
+      "natalAspectsTitle": "Aspetti natali chiave",
+      "natalAspectsSubtitle": "Aspetti maggiori tra i tuoi pianeti natali — schemi che modellano personalità e temi di vita.",
+      "noNatalAspects": "Nessun aspetto natale maggiore entro orb standard.",
+      "placementsTitle": "Posizioni planetarie",
+      "placementsSubtitle": "Ogni pianeta per segno e casa — i mattoni della tua carta.",
+      "placementLine": "{planet} in {sign}, Casa {house}: {theme}",
+      "tablePlanet": "Pianeta",
+      "tableSign": "Segno",
+      "tableDegree": "Grado",
+      "tableHouse": "Casa",
+      "bridgeText": "La tua carta natale è il tuo progetto base. L'astrocartografia mostra dove quelle stesse energie si attivano sulla mappa mondiale — ideale per trasferimenti o viaggi.",
+      "ctaMap": "Esplora la mia carta sulla mappa di astrocartografia",
+      "ctaMapHelp": "I dati di nascita si trasferiscono automaticamente — nessuna reimmissione.",
+      "ctaAskAi": "Continua con Ask AI sulla carta completa",
+      "relatedTitle": "Esplora dopo",
+      "relatedLinks": [
+        { "label": "Approfondimento ascendente", "href": "/rising-sign-calculator" },
+        { "label": "Calcolatore sinastria", "href": "/synastry-chart-calculator" },
+        { "label": "Carta di relocazione", "href": "/relocation-chart-calculator" },
+        { "label": "Carta transiti", "href": "/transit-chart-calculator" }
+      ]
+    },
+    "deepReport": {
+      "title": "Report profondo personalizzato della carta natale",
+      "subtitle": "L'IA legge Big Three, angoli, aspetti natali, temi delle case e reggente/i — poi puoi continuare a chiedere con crediti.",
+      "unlock": "Sblocca report profondo ({credits} crediti)",
+      "unlocking": "Scrittura del report…",
+      "creditsBadge": "{credits} crediti",
+      "includes": [
+        "Sintesi del Big Three e quattro angoli come assi di vita",
+        "Aspetti natali chiave e temi per casa",
+        "Reggente della carta + framework a segno intero",
+        "Ponte astrocartografia — come esplorare la carta geograficamente"
+      ],
+      "guideBigThree": "Vedi come Sole, Luna e Ascendente interagiscono → report profondo personalizzato",
+      "guideAspects": "Lettura personalizzata dei tuoi schemi di aspetti natali → report profondo",
+      "guideHouses": "Capisci come reggente e case incorniciano la tua vita → sblocca report",
+      "stickyCta": "Sblocca report profondo",
+      "loginRequired": "Accedi per sbloccare. Usa i crediti del tuo piano — nessun nuovo abbonamento.",
+      "genericError": "Impossibile generare il report. Riprova tra poco.",
+      "prompt": "Scrivi il mio report profondo personalizzato della carta natale basato sui dati a segno intero forniti. Copri sintesi Big Three, quattro angoli, aspetti natali chiave, pianeti per casa, reggente/i, framework a segno intero e un breve ponte astrocartografia. Sii specifico su gradi, posizioni e aspetti. Tono non fatalista. Non inventare dati."
+    },
+    "errors": {
+      "required": "Compila tutti i campi per generare la tua carta natale.",
+      "generic": "Errore di calcolo. Verifica i dati di nascita e riprova."
+    },
+    "signThemes": {
+      "Aries": "iniziativa diretta, coraggio e bisogno di agire per primi",
+      "Taurus": "stabilità, sensualità e costruzione di valore duraturo",
+      "Gemini": "curiosità, comunicazione e flessibilità mentale",
+      "Cancer": "sicurezza emotiva, cura e istinto protettivo",
+      "Leo": "auto-espressione creativa, calore e fiducia visibile",
+      "Virgo": "precisione, servizio e miglioramento pratico",
+      "Libra": "armonia, partnership ed equilibrio estetico",
+      "Scorpio": "profondità, trasformazione e intensità emotiva",
+      "Sagittarius": "espansione, ricerca di significato e libertà",
+      "Capricorn": "disciplina, ambizione e struttura a lungo termine",
+      "Aquarius": "innovazione, indipendenza e ideali collettivi",
+      "Pisces": "empatia, immaginazione e sensibilità spirituale"
+    },
+    "risingInterpretations": {
+      "Aries": "Proietti energia diretta e decisa. Gli altri percepiscono fiducia e azione rapida — Marte colora la carta con iniziativa.",
+      "Taurus": "Trasmetti calma e solidità. Venere come reggente porta stabilità e apprezzamento per comfort e qualità.",
+      "Gemini": "La tua presenza appare curiosa e eloquente. Mercurio ti rende adattabile e orientato all'informazione.",
+      "Cancer": "Appari premuroso e protettivo. La Luna enfatizza profondità emotiva e bisogno di sicurezza.",
+      "Leo": "Lasci un'impressione calda e sicura. Il Sole evidenzia l'auto-espressione creativa e il naturale splendore.",
+      "Virgo": "Ti presenti come preciso e disponibile. Mercurio porta pensiero analitico e intelligenza pratica.",
+      "Libra": "Trasmetti diplomazia e piacevolezza. Venere enfatizza equilibrio, fascino e partnership.",
+      "Scorpio": "La prima impressione tende a intensità e profondità. Plutone/Marte porta acume e complessità emotiva.",
+      "Sagittarius": "Proietti apertura e ottimismo. Giove porta umorismo, onestà e amore per la crescita.",
+      "Capricorn": "Appari serio e capace. Saturno enfatizza struttura, ambizione e maturità.",
+      "Aquarius": "La tua presenza appare originale e intellettualmente indipendente. Urano/Saturno porta pensiero progressista.",
+      "Pisces": "Trasmetti dolcezza ed empatia. Nettuno/Giove porta immaginazione e percezione sottile."
+    }
   }
 }
