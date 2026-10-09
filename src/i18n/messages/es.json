@@ -550,6 +550,10 @@
     ]
   },
   "astrocartographyMap": {
+    "basemap": {
+      "loadError": "No se pudo cargar el mapa de fondo. Tus líneas planetarias siguen disponibles.",
+      "retry": "Reintentar mapa"
+    },
     "guide": {
       "title": "Consejo",
       "text": "Haz zoom y arrastra para ver tus líneas y puntos de ciudad—haz clic para obtener tus respuestas."

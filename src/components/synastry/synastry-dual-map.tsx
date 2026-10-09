@@ -4,6 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Loader2 } from "lucide-react";
+import {
+  getEmergencyBasemapConfig,
+  getPrimaryBasemapConfig,
+  hasCartoBasemapKey,
+} from "@/lib/basemap";
 
 type PlanetLine = {
   planet: string;
@@ -46,6 +51,7 @@ export default function SynastryDualMap({ labelA, labelB, legendSolid, legendDas
   } | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [basemapWarning, setBasemapWarning] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -112,10 +118,38 @@ export default function SynastryDualMap({ labelA, labelB, legendSolid, legendDas
       worldCopyJump: true,
     });
 
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-      subdomains: "abcd",
-      maxZoom: 19,
-    }).addTo(map);
+    setBasemapWarning(false);
+    const primaryBasemap = getPrimaryBasemapConfig();
+    let activeTileLayer = L.tileLayer(primaryBasemap.url, primaryBasemap.options);
+    let consecutiveTileErrors = 0;
+    let usingEmergencyFallback = primaryBasemap.provider === "openstreetmap";
+
+    const bindTileHealth = (layer: L.TileLayer) => {
+      layer.on("tileload", () => {
+        consecutiveTileErrors = 0;
+        setBasemapWarning(false);
+      });
+      layer.on("tileerror", () => {
+        consecutiveTileErrors += 1;
+        if (consecutiveTileErrors < 2) return;
+
+        if (!usingEmergencyFallback && hasCartoBasemapKey()) {
+          usingEmergencyFallback = true;
+          consecutiveTileErrors = 0;
+          map.removeLayer(layer);
+          const fallback = getEmergencyBasemapConfig();
+          activeTileLayer = L.tileLayer(fallback.url, fallback.options);
+          bindTileHealth(activeTileLayer);
+          activeTileLayer.addTo(map);
+          return;
+        }
+
+        setBasemapWarning(true);
+      });
+    };
+
+    bindTileHealth(activeTileLayer);
+    activeTileLayer.addTo(map);
 
     L.control
       .attribution({ position: "bottomright", prefix: false })
@@ -189,7 +223,14 @@ export default function SynastryDualMap({ labelA, labelB, legendSolid, legendDas
           {legendDashed})
         </span>
       </div>
-      <div ref={containerRef} className="h-[380px] w-full overflow-hidden rounded-xl border border-white/10" />
+      <div className="relative">
+        <div ref={containerRef} className="h-[380px] w-full overflow-hidden rounded-xl border border-white/10" />
+        {basemapWarning && (
+          <div className="absolute left-1/2 top-4 z-[1000] w-[min(92%,420px)] -translate-x-1/2 rounded-lg border border-amber-400/30 bg-black/85 px-3 py-2 text-center text-xs text-amber-100">
+            The background map could not load. Please refresh and try again.
+          </div>
+        )}
+      </div>
       <p className="text-center text-[11px] text-muted-foreground">{footnote}</p>
     </div>
   );

@@ -503,6 +503,10 @@
     ]
   },
   "astrocartographyMap": {
+    "basemap": {
+      "loadError": "Die Hintergrundkarte konnte nicht geladen werden. Deine Planetenlinien sind weiterhin verfügbar.",
+      "retry": "Karte erneut laden"
+    },
     "guide": {
       "title": "Tipp",
       "text": "Vergrößern und ziehen, um deine Linien und Stadtpunkte zu sehen—klicke darauf, um deine Antworten zu erhalten."

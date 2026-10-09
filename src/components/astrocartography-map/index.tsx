@@ -14,6 +14,11 @@ import 'leaflet/dist/leaflet.css';
 import { X, Eye, EyeOff, ChevronLeft, MessageCircle } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MAJOR_CITIES } from '@/lib/cities';
+import {
+  getEmergencyBasemapConfig,
+  getPrimaryBasemapConfig,
+  hasCartoBasemapKey,
+} from '@/lib/basemap';
 import { useTranslations } from 'next-intl';
 import CityTools, {
   type CityToolsHandle,
@@ -276,6 +281,7 @@ const AstrocartographyMap = forwardRef<
   const isMobile = useIsMobile();
   const t = useTranslations('astrocartographyMap');
   const leafletMapRef = useRef<L.Map | null>(null);
+  const tileLayerRef = useRef<L.TileLayer | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const polylinesRef = useRef<Map<string, L.Polyline>>(new Map());
   const cityToolsRef = useRef<CityToolsHandle>(null);
@@ -312,6 +318,7 @@ const AstrocartographyMap = forwardRef<
     },
   }));
   const [isLoading, setIsLoading] = useState(true);
+  const [basemapFailed, setBasemapFailed] = useState(false);
   const [isPanelOpen, setIsPanelOpen] = useState(true);
   const [showAngleTypes, setShowAngleTypes] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
@@ -411,6 +418,8 @@ const AstrocartographyMap = forwardRef<
   useEffect(() => {
     if (!mapContainerRef.current || leafletMapRef.current) return;
 
+    setBasemapFailed(false);
+
     // Initialize map - using colorful continent style (similar to competitors)
     // Ensure global view is displayed, support dragging, zooming, and panning
     const map = L.map(mapContainerRef.current, {
@@ -429,12 +438,43 @@ const AstrocartographyMap = forwardRef<
       keyboard: true, // Enable keyboard controls
     });
 
-    // Use colorful continent map style (similar to competitor websites)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 19
-    }).addTo(map);
+    const primaryBasemap = getPrimaryBasemapConfig();
+    let activeTileLayer = L.tileLayer(primaryBasemap.url, primaryBasemap.options);
+    let consecutiveTileErrors = 0;
+    let usingEmergencyFallback = primaryBasemap.provider === 'openstreetmap';
+
+    const bindTileHealth = (layer: L.TileLayer) => {
+      layer.on('tileload', () => {
+        consecutiveTileErrors = 0;
+        setBasemapFailed(false);
+      });
+
+      layer.on('tileerror', () => {
+        consecutiveTileErrors += 1;
+        if (consecutiveTileErrors < 2) return;
+
+        if (!usingEmergencyFallback && hasCartoBasemapKey()) {
+          usingEmergencyFallback = true;
+          consecutiveTileErrors = 0;
+          map.removeLayer(layer);
+          const emergencyBasemap = getEmergencyBasemapConfig();
+          activeTileLayer = L.tileLayer(
+            emergencyBasemap.url,
+            emergencyBasemap.options
+          );
+          bindTileHealth(activeTileLayer);
+          activeTileLayer.addTo(map);
+          tileLayerRef.current = activeTileLayer;
+          return;
+        }
+
+        setBasemapFailed(true);
+      });
+    };
+
+    bindTileHealth(activeTileLayer);
+    activeTileLayer.addTo(map);
+    tileLayerRef.current = activeTileLayer;
 
     // Keep provider attribution visible for compliance, but move it away
     // from the bottom CTA area on mobile.
@@ -548,8 +588,15 @@ const AstrocartographyMap = forwardRef<
         leafletMapRef.current.remove();
         leafletMapRef.current = null;
       }
+      tileLayerRef.current = null;
     };
   }, [birthData]);
+
+  const retryBasemap = useCallback(() => {
+    setBasemapFailed(false);
+    tileLayerRef.current?.redraw();
+    leafletMapRef.current?.invalidateSize();
+  }, []);
 
   // Draw planetary lines
   useEffect(() => {
@@ -839,6 +886,19 @@ const AstrocartographyMap = forwardRef<
           touchAction: 'pan-x pan-y pinch-zoom' // Optimize mobile touch interaction
         }}
       />
+
+      {basemapFailed && (
+        <div className="absolute left-1/2 top-4 z-[1300] w-[min(92%,440px)] -translate-x-1/2 rounded-xl border border-amber-300/35 bg-black/85 px-4 py-3 text-center text-xs text-white shadow-2xl backdrop-blur-md">
+          <p>{t('basemap.loadError')}</p>
+          <button
+            type="button"
+            onClick={retryBasemap}
+            className="mt-2 rounded-lg bg-amber-300 px-3 py-1.5 font-semibold text-black transition hover:bg-amber-200"
+          >
+            {t('basemap.retry')}
+          </button>
+        </div>
+      )}
       
       {/* First-time guide — hide when any popup is open */}
       {showGuide && !selectedCity && !selectedLinePopup && (

@@ -522,6 +522,10 @@
     ]
   },
   "astrocartographyMap": {
+    "basemap": {
+      "loadError": "The background map could not load. Your planetary lines are still available.",
+      "retry": "Retry map"
+    },
     "guide": {
       "title": "Tip",
       "text": "Zoom in and drag to view your lines and city dots—click to get your answers."

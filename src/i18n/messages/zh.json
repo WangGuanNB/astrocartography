@@ -522,6 +522,10 @@
     ]
   },
   "astrocartographyMap": {
+    "basemap": {
+      "loadError": "背景地图暂时无法加载，但你的行星线仍然可用。",
+      "retry": "重新加载地图"
+    },
     "guide": {
       "title": "提示",
       "text": "您可以通过缩放与拖动，查看您的线和城市红点；点击它们获取您的答案。"
