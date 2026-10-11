@@ -5,7 +5,7 @@
     "keywords": "rising sign calculator, ascendant calculator, calculate rising sign, free ascendant, birth time astrology"
   },
   "intentAnchor": {
-    "text": "Looking for a Rising Sign Calculator? This page delivers the tool first—no long articles. Enter your birth date, exact time, and location to instantly discover your ascendant sign, degree, and ruling planet. Then explore how the same birth moment produces different rising signs in cities worldwide, and see where your chart comes alive through Astrocartography."
+    "text": "Looking for a Rising Sign Calculator? This page delivers the tool first—no long articles. Enter your birth date, exact time, and location to instantly discover your ascendant sign, degree, and ruling planet. Then explore how the same birth moment produces different rising signs in cities worldwide, and see where your chart comes alive through Astrocartography. After the calculation, two lines use your actual Sun, Moon, Rising, chart ruler, and the tightest aspect to your Ascendant, so you can see why a generic rising-sign description often does not fit."
   },
   "internalLinks": {
     "title": "Related Tools",
@@ -254,7 +254,7 @@
       "housesTitle": "Whole-sign houses from your Ascendant",
       "housesSubtitle": "House 1 starts with your rising sign. Each house below shows the zodiac sign on that life area.",
       "houseLabel": "House",
-      "rulerHook": "Chart ruler placement: {placement} — unlock the deep report for a personalized reading of what this steers in your life.",
+      "rulerHook": "Chart ruler placement: {placement}.",
       "methodologyNote": "Calculated with whole-sign houses. Modern rulers are primary; traditional co-rulers are shown for Scorpio, Aquarius, and Pisces.",
       "cuspWarningEarly": "Your Ascendant is in the early degrees of the sign. Even a small birth-time error could shift the rising sign—double-check your time if possible.",
       "cuspWarningLate": "Your Ascendant is in the late degrees of the sign. Even a small birth-time error could shift the rising sign—double-check your time if possible.",
@@ -287,10 +287,36 @@
       "guideBigThree": "See how your Sun, Moon & Rising work together → personalized deep report",
       "guideModifiers": "Get a personalized read of your 1st-house planets & Ascendant aspects → deep report",
       "guideHouses": "Understand how your chart ruler steers your life → unlock deep report",
-      "stickyCta": "Unlock deep report",
+      "stickyCta": "Unlock why this rising sign doesn't match",
       "loginRequired": "Sign in to unlock. Uses your existing plan credits—not a new subscription.",
       "genericError": "Could not generate the report. Please try again shortly.",
-      "prompt": "Write my personalized rising-sign deep report based on the natal chart skeleton provided. Cover Ascendant personality and outward presence, first-house planets, aspects to my Ascendant, Big Three interplay, four angles, modern and traditional chart-ruler placement with aspects, and how whole-sign houses frame life areas. Be specific to my degrees, placements, and aspects. Do not invent guarantees."
+      "prompt": "Unlock the three lines about my chart. One sentence each: Sun/Moon/Rising, chart ruler, and the tightest aspect to my Ascendant.",
+      "reading": {
+        "lockCta": "Unlock this line",
+        "bigThree": {
+          "line1": "People meet your {rising} rising first. Your {sun} Sun is who you are growing into, not the person strangers see in the first minute.",
+          "line2": "Your {moon} Moon is what you need in private, so a gap between {rising} and {moon} is a normal reason this rising sign feels unlike you.",
+          "locked": "You will not come across as a typical {rising} rising, because your {sun} Sun and {moon} Moon pull that first impression another way."
+        },
+        "ruler": {
+          "line1": "Your {rising} rising is steered by {planet} in {sign}, house {house}. That planet, not the rising-sign stereotype, is what actually walks into the room.",
+          "line2": "A generic {rising} rising description stops at the sign. Yours continues through {planet} in house {house}.",
+          "locked": "This is the line generic write-ups skip: {planet} in {sign} changes your {rising} rising before the usual {rising} traits can show."
+        },
+        "aspect": {
+          "Conjunction": "conjunct",
+          "Opposition": "opposite",
+          "Square": "square to",
+          "Trine": "trine to",
+          "Sextile": "sextile to",
+          "line1": "{planet} is {aspect} your Ascendant, so that planet edits the {rising} rising people think they see.",
+          "line2": "The tightest edit is {planet} {aspect} your Ascendant, within {orb}°. That is more specific than the rising-sign label.",
+          "locked": "{planet} {aspect} the Ascendant is why a standard {rising} rising description does not fit you.",
+          "none1": "No major planet aspects your Ascendant, so the rising sign is not being rewritten by a tight aspect.",
+          "none2": "What still changes the stereotype is the chart ruler above, not a list of aspects.",
+          "noneLocked": "Without a tight aspect to the Ascendant, your {rising} rising is modified mainly by its ruler."
+        }
+      }
     },
     "errors": {
       "required": "Please complete all fields to calculate your rising sign.",

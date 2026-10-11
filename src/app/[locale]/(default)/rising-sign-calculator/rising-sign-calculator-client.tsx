@@ -94,6 +94,24 @@ type ToolLabels = {
     loginRequired: string;
     genericError: string;
     prompt: string;
+    reading?: {
+      lockCta: string;
+      bigThree: { line1: string; line2: string; locked: string };
+      ruler: { line1: string; line2: string; locked: string };
+      aspect: {
+        Conjunction: string;
+        Opposition: string;
+        Square: string;
+        Trine: string;
+        Sextile: string;
+        line1: string;
+        line2: string;
+        locked: string;
+        none1: string;
+        none2: string;
+        noneLocked: string;
+      };
+    };
   };
   errors: {
     required: string;
@@ -182,16 +200,51 @@ function formatRulerLine(ruler: RulerRow) {
   }`;
 }
 
-function DeepGuideLink({ label, onClick }: { label: string; onClick: () => void }) {
+function fillTemplate(template: string, vars: Record<string, string | number>) {
+  return template.replace(/\{(\w+)\}/g, (_, key: string) => String(vars[key] ?? ""));
+}
+
+function ReadingBlock({
+  free,
+  lockedPreview,
+  unlockedText,
+  open,
+  busy,
+  lockCta,
+  onUnlock,
+}: {
+  free: string[];
+  lockedPreview: string;
+  unlockedText?: string;
+  open: boolean;
+  busy: boolean;
+  lockCta: string;
+  onUnlock: () => void;
+}) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="mt-3 flex w-full items-start gap-2 rounded-lg border border-amber-500/20 bg-amber-500/5 px-3 py-2.5 text-left text-sm text-amber-200/90 transition-colors hover:border-amber-500/40 hover:bg-amber-500/10"
-    >
-      <Sparkles className="mt-0.5 size-3.5 shrink-0 text-amber-400" />
-      <span>{label}</span>
-    </button>
+    <div className="mt-3 space-y-2 text-sm leading-relaxed text-white/80">
+      {free.map((line) => (
+        <p key={line}>{line}</p>
+      ))}
+      {open ? (
+        <p className="text-amber-50">{unlockedText || lockedPreview}</p>
+      ) : (
+        <div className="relative overflow-hidden rounded-lg border border-amber-500/25">
+          <p className="select-none px-3 py-3 text-white/70 blur-sm" aria-hidden="true">
+            {lockedPreview}
+          </p>
+          <button
+            type="button"
+            onClick={onUnlock}
+            disabled={busy}
+            className="absolute inset-0 flex items-center justify-center gap-2 bg-gray-950/60 px-3 text-sm font-semibold text-amber-100"
+          >
+            <Lock className="size-4 shrink-0" />
+            {lockCta}
+          </button>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -217,7 +270,6 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
   const resultsRef = useRef<HTMLDivElement | null>(null);
   const resultsHeadingRef = useRef<HTMLHeadingElement | null>(null);
   const deepReportRef = useRef<HTMLDivElement | null>(null);
-  const unlockButtonRef = useRef<HTMLButtonElement | null>(null);
   const unlockEntryRef = useRef<RisingSignUnlockEntry | null>(null);
   const [showStickyUnlock, setShowStickyUnlock] = useState(false);
 
@@ -236,7 +288,7 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
   const [result, setResult] = useState<ApiResponse["data"] | null>(null);
 
   const [reportStatus, setReportStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
-  const [reportText, setReportText] = useState("");
+  const [unlockedLines, setUnlockedLines] = useState<string[]>([]);
   const [reportError, setReportError] = useState("");
   const [showPricingModal, setShowPricingModal] = useState(false);
   const [pricingData, setPricingData] = useState<PricingType | null>(null);
@@ -267,24 +319,6 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
     observer.observe(target);
     return () => observer.disconnect();
   }, [result, reportStatus]);
-
-  function scrollToDeepReport() {
-    if (typeof window === "undefined") return;
-    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    deepReportRef.current?.scrollIntoView({
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-      block: "center",
-    });
-    window.setTimeout(() => {
-      unlockButtonRef.current?.focus({ preventScroll: true });
-    }, prefersReducedMotion ? 0 : 450);
-  }
-
-  function navigateToUnlock(entry: RisingSignUnlockEntry) {
-    unlockEntryRef.current = entry;
-    risingSignEvents.guideClicked(entry);
-    scrollToDeepReport();
-  }
 
   function resolveUnlockEntry(): RisingSignUnlockEntry {
     return unlockEntryRef.current ?? "main";
@@ -331,7 +365,7 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
     setError(null);
     setResult(null);
     setReportStatus("idle");
-    setReportText("");
+    setUnlockedLines([]);
     setReportError("");
     unlockEntryRef.current = null;
     try {
@@ -375,7 +409,6 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
 
     risingSignEvents.reportUnlockClicked(entry, DEEP_REPORT_CREDITS);
     setReportStatus("loading");
-    setReportText("");
     setReportError("");
 
     try {
@@ -443,13 +476,11 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
         const textChunk = extractTextFromAIDataStreamLines(lines);
         if (textChunk) {
           nextReportText += textChunk;
-          setReportText(nextReportText);
         }
       }
       const finalTextChunk = extractTextFromAIDataStreamLines([streamBuffer]);
       if (finalTextChunk) {
         nextReportText += finalTextChunk;
-        setReportText(nextReportText);
       }
 
       if (!nextReportText.trim()) {
@@ -461,10 +492,14 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
 
       risingSignEvents.reportSuccess(entry, DEEP_REPORT_CREDITS);
       unlockEntryRef.current = null;
+      setUnlockedLines(
+        nextReportText
+          .split("\n")
+          .map((line) => line.replace(/^[\s\-*0-9.)]+/, "").trim())
+          .filter(Boolean)
+          .slice(0, 3)
+      );
       setReportStatus("ready");
-      window.setTimeout(() => {
-        deepReportRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 50);
     } catch {
       risingSignEvents.reportFailed(resolveUnlockEntry(), "generation_error");
       setReportStatus("error");
@@ -487,6 +522,37 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
         .filter(Boolean)
         .join(" · ")
     : "";
+
+  const reading = tool.deepReport.reading;
+  const tightAspect = result?.ascendantAspects?.length
+    ? [...result.ascendantAspects].sort((a, b) => a.orb - b.orb)[0]
+    : undefined;
+  const aspectName = (() => {
+    if (!tightAspect || !reading) return tightAspect?.aspect ?? "";
+    const labels = reading.aspect;
+    if (
+      tightAspect.aspect === "Conjunction" ||
+      tightAspect.aspect === "Opposition" ||
+      tightAspect.aspect === "Square" ||
+      tightAspect.aspect === "Trine" ||
+      tightAspect.aspect === "Sextile"
+    ) {
+      return labels[tightAspect.aspect];
+    }
+    return tightAspect.aspect;
+  })();
+  const aspectVars = {
+    planet: tightAspect?.planet ?? "",
+    aspect: aspectName,
+    orb: tightAspect?.orb ?? "",
+    rising: result?.ascendant.sign ?? "",
+  };
+  const rulerVars = {
+    planet: result?.chartRuler.planet ?? "",
+    sign: result?.chartRuler.sign ?? "",
+    house: result?.chartRuler.house ?? "",
+    rising: result?.ascendant.sign ?? "",
+  };
 
   return (
     <div className={cn("container max-w-4xl px-4 pb-16", showStickyUnlock && "pb-28")}>
@@ -661,6 +727,27 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                         {formatRulerLine(result.traditionalChartRuler)}
                       </p>
                     )}
+                    {reading && result.chartRuler.sign && result.chartRuler.house != null && (
+                      <ReadingBlock
+                        free={[
+                          fillTemplate(reading.ruler.line1, rulerVars),
+                          fillTemplate(reading.ruler.line2, rulerVars),
+                        ]}
+                        lockedPreview={fillTemplate(reading.ruler.locked, rulerVars)}
+                        unlockedText={unlockedLines[1]}
+                        open={reportStatus === "ready"}
+                        busy={reportStatus === "loading"}
+                        lockCta={
+                          reportStatus === "loading"
+                            ? tool.deepReport.unlocking
+                            : reading.lockCta
+                        }
+                        onUnlock={() => {
+                          unlockEntryRef.current = "guide_houses";
+                          void unlockDeepReport();
+                        }}
+                      />
+                    )}
                   </div>
                   {interpretation && (
                     <p>
@@ -698,10 +785,37 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                       </div>
                     </li>
                   </ul>
-                  {reportStatus !== "ready" && (
-                    <DeepGuideLink
-                      label={tool.deepReport.guideBigThree}
-                      onClick={() => navigateToUnlock("guide_big_three")}
+                  {reading && result.bigThree.sun && result.bigThree.moon && (
+                    <ReadingBlock
+                      free={[
+                        fillTemplate(reading.bigThree.line1, {
+                          rising: result.bigThree.rising.sign,
+                          sun: result.bigThree.sun.sign,
+                          moon: result.bigThree.moon.sign,
+                        }),
+                        fillTemplate(reading.bigThree.line2, {
+                          rising: result.bigThree.rising.sign,
+                          sun: result.bigThree.sun.sign,
+                          moon: result.bigThree.moon.sign,
+                        }),
+                      ]}
+                      lockedPreview={fillTemplate(reading.bigThree.locked, {
+                        rising: result.bigThree.rising.sign,
+                        sun: result.bigThree.sun.sign,
+                        moon: result.bigThree.moon.sign,
+                      })}
+                      unlockedText={unlockedLines[0]}
+                      open={reportStatus === "ready"}
+                      busy={reportStatus === "loading"}
+                      lockCta={
+                        reportStatus === "loading"
+                          ? tool.deepReport.unlocking
+                          : reading.lockCta
+                      }
+                      onUnlock={() => {
+                        unlockEntryRef.current = "guide_big_three";
+                        void unlockDeepReport();
+                      }}
                     />
                   )}
                 </div>
@@ -775,10 +889,35 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                 ) : (
                   <p className="mt-3 text-sm text-white/60">{tool.result.noAscAspects}</p>
                 )}
-                {reportStatus !== "ready" && (
-                  <DeepGuideLink
-                    label={tool.deepReport.guideModifiers}
-                    onClick={() => navigateToUnlock("guide_modifiers")}
+                {reading && (
+                  <ReadingBlock
+                    free={
+                      tightAspect
+                        ? [
+                            fillTemplate(reading.aspect.line1, aspectVars),
+                            fillTemplate(reading.aspect.line2, aspectVars),
+                          ]
+                        : [reading.aspect.none1, reading.aspect.none2]
+                    }
+                    lockedPreview={
+                      tightAspect
+                        ? fillTemplate(reading.aspect.locked, aspectVars)
+                        : fillTemplate(reading.aspect.noneLocked, {
+                            rising: result.ascendant.sign,
+                          })
+                    }
+                    unlockedText={unlockedLines[2]}
+                    open={reportStatus === "ready"}
+                    busy={reportStatus === "loading"}
+                    lockCta={
+                      reportStatus === "loading"
+                        ? tool.deepReport.unlocking
+                        : reading.lockCta
+                    }
+                    onUnlock={() => {
+                      unlockEntryRef.current = "guide_modifiers";
+                      void unlockDeepReport();
+                    }}
                   />
                 )}
               </div>
@@ -803,81 +942,15 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                   <p className="mt-3 text-sm text-white/70">
                     {tool.result.rulerHook.replace("{placement}", rulerPlacementLabel)}
                   </p>
-                  {reportStatus !== "ready" && (
-                    <DeepGuideLink
-                      label={tool.deepReport.guideHouses}
-                      onClick={() => navigateToUnlock("guide_houses")}
-                    />
-                  )}
                 </div>
               )}
 
-              <div
-                id="rising-sign-deep-report"
-                ref={deepReportRef}
-                className="pt-6 border-t border-white/10 space-y-4 scroll-mt-24"
-              >
-                <div>
-                  <h3 className="text-base font-semibold text-white">{tool.deepReport.title}</h3>
-                  <p className="mt-1 text-sm text-white/60">{tool.deepReport.subtitle}</p>
-                  <ul className="mt-3 space-y-1.5 text-sm text-white/80">
-                    {tool.deepReport.includes.map((item) => (
-                      <li key={item} className="flex gap-2">
-                        <span className="text-purple-300">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {reportStatus !== "ready" && (
-                  <Button
-                    ref={unlockButtonRef}
-                    onClick={unlockDeepReport}
-                    disabled={reportStatus === "loading"}
-                    className="w-full h-12 text-sm font-semibold bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-600 hover:via-orange-600 hover:to-amber-600 text-white"
-                  >
-                    {reportStatus === "loading" ? (
-                      <>
-                        <div className="mr-2 size-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                        {tool.deepReport.unlocking}
-                      </>
-                    ) : (
-                      <>
-                        <Lock className="mr-2 size-4" />
-                        {tool.deepReport.unlock.replace("{credits}", String(DEEP_REPORT_CREDITS))}
-                        <span className="ml-2 rounded-full bg-black/20 px-2 py-0.5 text-xs">
-                          {tool.deepReport.creditsBadge.replace(
-                            "{credits}",
-                            String(DEEP_REPORT_CREDITS)
-                          )}
-                        </span>
-                      </>
-                    )}
-                  </Button>
-                )}
-
+              <div ref={deepReportRef} className="space-y-2">
                 {!user && reportStatus === "idle" && (
                   <p className="text-xs text-white/50">{tool.deepReport.loginRequired}</p>
                 )}
-
                 {reportStatus === "error" && reportError && (
                   <p className="text-sm text-red-300">⚠️ {reportError}</p>
-                )}
-
-                {reportText && (
-                  <div className="rounded-lg border border-white/10 bg-black/20 p-4 text-sm leading-relaxed text-white/90 whitespace-pre-wrap">
-                    {reportText}
-                  </div>
-                )}
-
-                {reportStatus === "ready" && chartUrl && (
-                  <a
-                    href={chartUrl}
-                    className="inline-flex w-full items-center justify-center rounded-md border border-purple-400/40 bg-purple-600/20 px-4 py-3 text-sm font-semibold text-purple-100 transition-colors hover:bg-purple-600/40"
-                  >
-                    {tool.result.ctaAskAi}
-                  </a>
                 )}
               </div>
 
@@ -923,7 +996,11 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
         <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-gray-950/95 px-4 py-3 backdrop-blur-md pb-[max(0.75rem,env(safe-area-inset-bottom))]">
           <Button
             type="button"
-            onClick={() => navigateToUnlock("sticky")}
+            onClick={() => {
+              unlockEntryRef.current = "sticky";
+              risingSignEvents.guideClicked("sticky");
+              void unlockDeepReport();
+            }}
             disabled={reportStatus === "loading"}
             className="h-11 w-full text-sm font-semibold bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-600 hover:via-orange-600 hover:to-amber-600 text-white shadow-lg"
           >

@@ -5,7 +5,7 @@
     "keywords": "Aszendent Rechner, aufsteigendes Zeichen Rechner, Aszendent berechnen, kostenloser Aszendent, Geburtszeit Astrologie"
   },
   "intentAnchor": {
-    "text": "Sie suchen einen Aszendent Rechner? Diese Seite liefert zuerst das Tool – keine langen Artikel. Geburtsdatum, exakte Zeit und Ort eingeben und sofort Aszendentenzeichen, Grad und Herrscherplanet entdecken. Dann sehen Sie, wie derselbe Geburtsmoment in Städten weltweit unterschiedliche Aszendenten erzeugt – und wo Ihr Chart durch Astrokartografie lebendig wird."
+    "text": "Sie suchen einen Aszendent Rechner? Diese Seite liefert zuerst das Tool – keine langen Artikel. Geburtsdatum, exakte Zeit und Ort eingeben und sofort Aszendentenzeichen, Grad und Herrscherplanet entdecken. Dann sehen Sie, wie derselbe Geburtsmoment in Städten weltweit unterschiedliche Aszendenten erzeugt – und wo Ihr Chart durch Astrokartografie lebendig wird. Nach der Berechnung nutzen zwei Sätze Ihre tatsächliche Sonne, Ihren Mond und Aszendenten, den Chart-Herrscher und den engsten Aspekt auf den Aszendenten, damit sichtbar wird, warum eine allgemeine Aszendentenbeschreibung oft nicht passt."
   },
   "internalLinks": {
     "title": "Verwandte Tools",
@@ -254,7 +254,7 @@
       "housesTitle": "Ganzzeichen-Häuser ab Ihrem Aszendenten",
       "housesSubtitle": "Haus 1 beginnt mit Ihrem Aszendenten. Jedes Haus zeigt das Tierkreiszeichen für diesen Lebensbereich.",
       "houseLabel": "Haus",
-      "rulerHook": "Herrscher-Stellung: {placement} — entsperren Sie den Tiefenbericht für eine personalisierte Deutung.",
+      "rulerHook": "Herrscher-Stellung: {placement}.",
       "methodologyNote": "Berechnet mit Ganzzeichen-Häusern. Moderne Herrscher primär; traditionelle Co-Herrscher für Skorpion, Wassermann und Fische.",
       "cuspWarningEarly": "Ihr Aszendent steht in den frühen Graden des Zeichens. Schon kleine Zeitfehler können das Aszendentenzeichen verschieben — prüfen Sie die Geburtszeit.",
       "cuspWarningLate": "Ihr Aszendent steht in den späten Graden des Zeichens. Schon kleine Zeitfehler können das Aszendentenzeichen verschieben — prüfen Sie die Geburtszeit.",
@@ -287,10 +287,36 @@
       "guideBigThree": "Sehen Sie, wie Sonne, Mond & Aszendent zusammenwirken → Tiefenbericht",
       "guideModifiers": "Personalisierte Deutung Ihrer 1.-Haus-Planeten & Aszendenten-Aspekte → Tiefenbericht",
       "guideHouses": "Verstehen Sie, wohin Ihr Chart-Herrscher steuert → Tiefenbericht freischalten",
-      "stickyCta": "Tiefenbericht freischalten",
+      "stickyCta": "Freischalten: warum dieses Aszendent nicht passt",
       "loginRequired": "Zum Freischalten anmelden. Nutzt Ihre bestehenden Plan-Credits — kein neues Abo.",
       "genericError": "Bericht konnte nicht erstellt werden. Bitte versuchen Sie es später erneut.",
-      "prompt": "Schreibe meinen personalisierten Aszendenten-Tiefenbericht anhand des gelieferten Natal-Skeletts. Behandle Aszendenten-Persönlichkeit und äußere Präsenz, 1.-Haus-Planeten, Aspekte zum Aszendenten, Big Three, vier Achsen, modernen und traditionellen Herrscher mit Aspekten sowie Ganzzeichen-Häuser. Beziehe dich auf meine Grade, Stellungen und Aspekte. Keine erfundenen Garantien."
+      "prompt": "Schalte drei Sätze zu meinem Horoskop frei, je einen pro Zeile: Sonne/Mond/Aszendent, Herrscher, und der engste Aspekt zum Aszendenten.",
+      "reading": {
+        "lockCta": "Diesen Satz freischalten",
+        "bigThree": {
+          "line1": "Menschen begegnen zuerst deinem Aszendenten {rising}. Deine Sonne in {sun} ist, wer du wirst — nicht die Person, die Fremde in der ersten Minute sehen.",
+          "line2": "Dein Mond in {moon} ist, was du brauchst, wenn niemand zuschaut. Der Abstand zwischen {rising} und {moon} ist ein normaler Grund, warum sich dieses Aszendent fremd anfühlt.",
+          "locked": "Du wirkst nicht wie ein typisches Aszendent {rising}, weil Sonne in {sun} und Mond in {moon} den ersten Eindruck in eine andere Richtung ziehen."
+        },
+        "ruler": {
+          "line1": "Dein Aszendent {rising} wird von {planet} in {sign}, Haus {house}, gesteuert. Dieser Planet betritt den Raum, nicht das Sternzeichen-Klischee.",
+          "line2": "Eine allgemeine {rising}-Beschreibung endet beim Zeichen. Deine geht weiter über {planet} in Haus {house}.",
+          "locked": "Diesen Satz lassen Standardtexte aus: {planet} in {sign} verändert dein Aszendent {rising}, bevor die üblichen {rising}-Eigenschaften sichtbar werden."
+        },
+        "aspect": {
+          "Conjunction": "in Konjunktion zu",
+          "Opposition": "in Opposition zu",
+          "Square": "im Quadrat zu",
+          "Trine": "im Trigon zu",
+          "Sextile": "im Sextil zu",
+          "line1": "{planet} steht {aspect} deinem Aszendenten, also bearbeitet dieser Planet das {rising}-Aszendent, das andere zu sehen glauben.",
+          "line2": "Die engste Korrektur ist {planet} {aspect} deinem Aszendenten, Orb {orb}°. Das ist genauer als das Zeichen-Etikett.",
+          "locked": "{planet} {aspect} dem Aszendenten ist der Grund, warum eine Standardbeschreibung für {rising} nicht zu dir passt.",
+          "none1": "Kein Hauptplanet aspektiert deinen Aszendenten, das Zeichen wird also nicht von einem engen Aspekt umgeschrieben.",
+          "none2": "Was das Klischee trotzdem ändert, ist der Herrscher oben, nicht eine Aspektliste.",
+          "noneLocked": "Ohne engen Aspekt zum Aszendenten wird dein {rising}-Aszendent vor allem durch seinen Herrscher verändert."
+        }
+      }
     },
     "errors": {
       "required": "Bitte füllen Sie alle Felder aus, um Ihren Aszendenten zu berechnen.",

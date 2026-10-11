@@ -5,7 +5,7 @@
     "keywords": "calcolatore segno ascendente, calcolatore ascendente, calcolare ascendente, ascendente gratis, astrologia ora nascita"
   },
   "intentAnchor": {
-    "text": "Cerchi un calcolatore del segno ascendente? Questa pagina ti offre subito lo strumento: inserisci data, ora e luogo di nascita per scoprire all'istante il tuo segno ascendente, grado e pianeta dominante. Poi esplora come lo stesso momento di nascita produce ascendenti diversi nelle città del mondo e dove la tua carta prende vita con l'Astrocartography."
+    "text": "Cerchi un calcolatore del segno ascendente? Questa pagina ti offre subito lo strumento: inserisci data, ora e luogo di nascita per scoprire all'istante il tuo segno ascendente, grado e pianeta dominante. Poi esplora come lo stesso momento di nascita produce ascendenti diversi nelle città del mondo e dove la tua carta prende vita con l'Astrocartography. Dopo il calcolo, due frasi usano il tuo Sole, Luna e Ascendente reali, il pianeta dominante e l'aspetto più stretto all'Ascendente, per mostrare perché una descrizione generica del segno ascendente spesso non ti somiglia."
   },
   "internalLinks": {
     "title": "Strumenti correlati",
@@ -259,7 +259,7 @@
       "housesTitle": "Case a segno intero dal tuo Ascendente",
       "housesSubtitle": "La casa 1 inizia con il tuo segno ascendente. Ogni casa mostra il segno zodiacale di quell'area di vita.",
       "houseLabel": "Casa",
-      "rulerHook": "Posizione del dominante: {placement} — sblocca il report approfondito per una lettura personalizzata.",
+      "rulerHook": "Posizione del dominante: {placement}.",
       "methodologyNote": "Calcolato con case a segno intero. Dominanti moderni primari; co-dominanti tradizionali per Scorpione, Acquario e Pesci.",
       "cuspWarningEarly": "Il tuo Ascendente è nei primi gradi del segno. Piccoli errori orari possono cambiare il segno ascendente — verifica l'ora di nascita.",
       "cuspWarningLate": "Il tuo Ascendente è negli ultimi gradi del segno. Piccoli errori orari possono cambiare il segno ascendente — verifica l'ora di nascita.",
@@ -292,10 +292,36 @@
       "guideBigThree": "Scopri come Sole, Luna e Ascendente lavorano insieme → report approfondito",
       "guideModifiers": "Lettura personalizzata dei pianeti in casa 1 e aspetti all'Ascendente → report approfondito",
       "guideHouses": "Capisci come il dominante guida la tua vita → sblocca report approfondito",
-      "stickyCta": "Sblocca report approfondito",
+      "stickyCta": "Sblocca perché questo ascendente non ti somiglia",
       "loginRequired": "Accedi per sbloccare. Usa i crediti del piano esistente — non è un nuovo abbonamento.",
       "genericError": "Impossibile generare il report. Riprova tra poco.",
-      "prompt": "Scrivi il mio report approfondito personalizzato sull'ascendente basato sullo scheletro natale fornito. Copri personalità dell'Ascendente e presenza esteriore, pianeti in casa 1, aspetti all'Ascendente, Big Three, quattro angoli, dominante moderno e tradizionale con aspetti, e case a segno intero. Sii specifico su gradi, posizioni e aspetti. Non inventare garanzie."
+      "prompt": "Sblocca tre frasi sul mio tema, una per riga: Sole/Luna/ascendente, dominante, e l'aspetto più stretto all'Ascendente.",
+      "reading": {
+        "lockCta": "Sblocca questa frase",
+        "bigThree": {
+          "line1": "Le persone incontrano prima il tuo ascendente in {rising}. Il Sole in {sun} è chi stai diventando, non la persona che uno sconosciuto vede nel primo minuto.",
+          "line2": "La Luna in {moon} è ciò di cui hai bisogno in privato, quindi lo scarto tra {rising} e {moon} è un motivo normale per cui questo ascendente non ti somiglia.",
+          "locked": "Non apparirai come un tipico ascendente {rising}, perché Sole in {sun} e Luna in {moon} tirano la prima impressione da un'altra parte."
+        },
+        "ruler": {
+          "line1": "Il tuo ascendente {rising} è guidato da {planet} in {sign}, casa {house}. Entra nella stanza quel pianeta, non lo stereotipo del segno.",
+          "line2": "Una descrizione generica dell'ascendente {rising} si ferma al segno. La tua continua con {planet} in casa {house}.",
+          "locked": "Questa è la frase che i testi generici saltano: {planet} in {sign} cambia il tuo ascendente {rising} prima che compaiano i tratti tipici."
+        },
+        "aspect": {
+          "Conjunction": "in congiunzione con",
+          "Opposition": "in opposizione a",
+          "Square": "in quadrato con",
+          "Trine": "in trigono con",
+          "Sextile": "in sestile con",
+          "line1": "{planet} è {aspect} il tuo Ascendente, quindi quel pianeta corregge l'ascendente {rising} che gli altri credono di vedere.",
+          "line2": "La correzione più stretta è {planet} {aspect} il tuo Ascendente, orbe {orb}°. È più precisa dell'etichetta del segno.",
+          "locked": "{planet} {aspect} l'Ascendente è il motivo per cui una descrizione standard dell'ascendente {rising} non ti calza.",
+          "none1": "Nessun pianeta maggiore aspetta il tuo Ascendente, quindi il segno non viene riscritto da un aspetto stretto.",
+          "none2": "Ciò che cambia comunque lo stereotipo è il dominante qui sopra, non un elenco di aspetti.",
+          "noneLocked": "Senza un aspetto stretto all'Ascendente, il tuo ascendente {rising} viene modificato soprattutto dal suo dominante."
+        }
+      }
     },
     "errors": {
       "required": "Completa tutti i campi per calcolare il tuo ascendente.",
