@@ -2,11 +2,19 @@ import { unstable_cache } from "next/cache";
 import * as Astronomy from "astronomy-engine";
 import { NextRequest, NextResponse } from "next/server";
 import {
+  calculateMidheavenLongitude,
   computeWholeSignChart,
+  degreeInSign,
   getGeocentricEclipticLongitude,
   localBirthTimeToUtc,
+  normalizeDegrees,
+  signIndexFromLongitude,
+  SIGNS,
+  signedLongitudeDelta,
+  type PlanetRow,
 } from "@/lib/natal-chart-core";
 import { findSolarReturnUtc } from "@/lib/solar-return";
+import { getTimezoneForCoordinates } from "@/lib/timezone";
 
 export const revalidate = 3600;
 export const maxDuration = 30;
@@ -78,6 +86,53 @@ async function geocodeLocation(location: string): Promise<{ latitude: number; lo
   }
 }
 
+const ANGLE_ORB = 8;
+
+function angleAt(longitude: number) {
+  const lon = normalizeDegrees(longitude);
+  return {
+    longitude: Math.round(lon * 1000) / 1000,
+    sign: SIGNS[signIndexFromLongitude(lon)],
+    degree: Math.round(degreeInSign(lon) * 1000) / 1000,
+  };
+}
+
+function angularPlanets(planets: PlanetRow[], ascLon: number, mcLon: number) {
+  const angles = [
+    { angle: "ASC", longitude: ascLon },
+    { angle: "DSC", longitude: normalizeDegrees(ascLon + 180) },
+    { angle: "MC", longitude: mcLon },
+    { angle: "IC", longitude: normalizeDegrees(mcLon + 180) },
+  ];
+  const hits: Array<{ name: string; angle: string; orb: number }> = [];
+  for (const planet of planets) {
+    let best: { angle: string; orb: number } | null = null;
+    for (const angle of angles) {
+      const orb = Math.abs(signedLongitudeDelta(planet.longitude, angle.longitude));
+      if (orb <= ANGLE_ORB && (!best || orb < best.orb)) {
+        best = { angle: angle.angle, orb: Math.round(orb * 10) / 10 };
+      }
+    }
+    if (best) hits.push({ name: planet.name, ...best });
+  }
+  return hits.sort((a, b) => a.orb - b.orb);
+}
+
+function formatLocalReturn(utc: Date, latitude: number, longitude: number) {
+  const timeZone = getTimezoneForCoordinates(latitude, longitude);
+  const label = new Intl.DateTimeFormat("en-GB", {
+    timeZone,
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+    timeZoneName: "short",
+  }).format(utc);
+  return { label, timeZone };
+}
+
 function getCacheKey(parts: {
   birthDate: string;
   birthTime: string;
@@ -88,7 +143,7 @@ function getCacheKey(parts: {
   returnLat: number;
   returnLng: number;
 }) {
-  return `sr-${parts.birthDate}-${parts.birthTime}-${parts.timezone}-${parts.birthLat}-${parts.birthLng}-${parts.returnYear}-${parts.returnLat}-${parts.returnLng}`;
+  return `sr2-${parts.birthDate}-${parts.birthTime}-${parts.timezone}-${parts.birthLat}-${parts.birthLng}-${parts.returnYear}-${parts.returnLat}-${parts.returnLng}`;
 }
 
 async function getCachedSolarReturn(
@@ -117,6 +172,15 @@ async function getCachedSolarReturn(
         input.returnLatitude,
         input.returnLongitude
       );
+      const midheaven = angleAt(calculateMidheavenLongitude(solarReturnUtc, input.returnLongitude));
+      const sun = planets.find((planet) => planet.name === "Sun");
+      const relocated =
+        Math.abs(input.latitude - input.returnLatitude) > 0.2 ||
+        Math.abs(input.longitude - input.returnLongitude) > 0.2;
+      const birthChart = relocated
+        ? computeWholeSignChart(solarReturnUtc, input.latitude, input.longitude)
+        : null;
+      const birthSun = birthChart?.planets.find((planet) => planet.name === "Sun");
 
       return {
         success: true,
@@ -134,14 +198,31 @@ async function getCachedSolarReturn(
           returnLatitude: input.returnLatitude,
           returnLongitude: input.returnLongitude,
           solarReturnUtc: solarReturnUtc.toISOString(),
+          solarReturnLocal: formatLocalReturn(solarReturnUtc, input.returnLatitude, input.returnLongitude),
           natalSunLongitude: Math.round(natalSunLon * 10000) / 10000,
           system: "Whole Sign Houses",
           ascendant,
+          midheaven,
+          sun: sun ? { sign: sun.sign, house: sun.house, degree: sun.degree } : null,
+          angularPlanets: angularPlanets(planets, ascendant.longitude, midheaven.longitude),
+          comparison:
+            birthChart && birthSun && sun
+              ? {
+                  birthLocation: input.birthLocation,
+                  returnLocation: input.returnLocationLabel,
+                  birthAscendant: birthChart.ascendant.sign,
+                  returnAscendant: ascendant.sign,
+                  birthSunHouse: birthSun.house,
+                  returnSunHouse: sun.house,
+                  ascendantChanged: birthChart.ascendant.sign !== ascendant.sign,
+                  sunHouseChanged: birthSun.house !== sun.house,
+                }
+              : null,
           planets,
         },
       };
     },
-    ["solar-return-chart", cacheKey],
+    ["solar-return-chart-v2", cacheKey],
     { revalidate }
   )();
 }

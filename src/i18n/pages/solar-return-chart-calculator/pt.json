@@ -5,7 +5,7 @@
     "keywords": "revolução solar, calculadora revolução solar, mapa aniversário, revolução solar grátis, astrologia preditiva, revolução solar outro lugar, casas inteiras, astrocartografia"
   },
   "intentAnchor": {
-    "text": "Quer uma revolução solar clara e conferível? Comece pelo formulário: data, hora e local de nascimento, o ano que você quer estudar e, se for o caso, a cidade onde você vai estar quando o Sol voltar à longitude natal (comum quando o aniversário é em viagem). Você recebe o mapa do ano e um atalho direto para a página inicial do Astrocartography para projetar os mesmos dados no globo."
+    "text": "Quer uma revolução solar clara e conferível? Comece pelo formulário: data, hora e local de nascimento, o ano que você quer estudar e, se for o caso, a cidade onde você vai estar quando o Sol voltar à longitude natal (comum quando o aniversário é em viagem). Você recebe o mapa do ano e um atalho direto para a página inicial do Astrocartography para projetar os mesmos dados no globo. O resultado mostra o retorno solar na hora local dessa cidade, o Ascendente e o Meio do Céu com signo e grau, a casa do Sol como uma área da vida nomeada e qualquer planeta a menos de 8° de um ângulo. Se você informar outra cidade, também vê se o signo do Ascendente e a casa do Sol mudam."
   },
   "internalLinks": {
     "title": "Outras ferramentas",
@@ -185,7 +185,7 @@
       },
       {
         "title": "O retorno cai sempre no meu aniversário?",
-        "description": "Fica muito perto, mas o horário exato depende de ano bissexto e fuso. Damos UTC para você converter à hora local."
+        "description": "Fica muito perto, mas o horário exato depende de ano bissexto e fuso. O resultado mostra esse instante na hora local da cidade do retorno e em UTC."
       },
       {
         "title": "O que é revolução para outro lugar?",
@@ -237,6 +237,64 @@
       "placeLabel": "Local usado para as casas",
       "systemLine": "Ângulos calculados para o local de retorno informado ou, se vazio, para o local de nascimento.",
       "ascLabel": "Ascendente da revolução",
+      "mcLabel": "Meio do Céu da revolução",
+      "localMomentLabel": "Retorno solar (hora local)",
+      "sunLine": "O Sol da revolução está em {sign}, casa {house} ({topic}), em {place}. Essa é a área da vida que este ano coloca à frente.",
+      "angularLine": "Estes planetas ficam a menos de 8° de um ângulo: {list}. O mais próximo é {angle}, então este ano se sente {angleTopic}.",
+      "angularNone": "Nenhum planeta está a menos de 8° do Ascendente, Descendente, Meio do Céu ou Fundo do Céu. Leia o ano pela casa do Sol.",
+      "houseTopics": {
+        "1": "você, seu corpo e como você começa o ano",
+        "2": "dinheiro, renda e o que você guarda",
+        "3": "mensagens, irmãos e viagens curtas",
+        "4": "casa, família e vida privada",
+        "5": "romance, filhos e riscos criativos",
+        "6": "trabalho diário, saúde e rotinas",
+        "7": "parceria e relações a dois",
+        "8": "dinheiro compartilhado, intimidade e recursos de outras pessoas",
+        "9": "viagens, estudo e planos de longo prazo",
+        "10": "carreira, status e reputação pública",
+        "11": "amigos, grupos e planos futuros",
+        "12": "descanso, privacidade e o que fica nos bastidores"
+      },
+      "angleTopics": {
+        "ASC": "como você se apresenta e como os outros te encontram",
+        "DSC": "parceiros e as pessoas à sua frente",
+        "MC": "carreira, visibilidade e reputação pública",
+        "IC": "casa, família e a base para onde você volta"
+      },
+      "followUp": {
+        "ASC": "Este retorno coloca o seu jeito de aparecer num ângulo. Abra o mapa com estes dados de nascimento para ver onde as linhas do Ascendente cruzam.",
+        "DSC": "Este retorno coloca os relacionamentos num ângulo. Abra o mapa com estes dados de nascimento para ver onde caem as linhas de parceria.",
+        "MC": "Este retorno coloca carreira e imagem pública num ângulo. Abra o mapa com estes dados de nascimento para ver onde essas linhas cruzam.",
+        "IC": "Este retorno coloca casa e raízes num ângulo. Abra o mapa com estes dados de nascimento para ver onde essas linhas cruzam.",
+        "sun": "Este ano o Sol destaca {topic}. Abra o mapa com estes dados de nascimento para ver onde esse tema encontra as linhas planetárias."
+      },
+      "compareIntro": "Em relação à revolução na cidade natal {birthPlace}, {ascClause} e {sunClause}.",
+      "ascChanged": "o signo do Ascendente muda",
+      "ascSame": "o signo do Ascendente permanece",
+      "sunChanged": "a casa do Sol muda",
+      "sunSame": "a casa do Sol permanece",
+      "compareUnchanged": "Em {place}, o signo do Ascendente e a casa do Sol coincidem com a revolução da cidade natal.",
+      "lockCta": "Ver para qual casa este ano se move",
+      "lockedShift": "Em {returnPlace} o foco do ano é a casa {returnHouse} ({returnTopic}). Em {birthPlace} é a casa {birthHouse} ({birthTopic}), e o Ascendente passa de {birthAsc} para {returnAsc}.",
+      "planetNames": {
+        "Sun": "Sol",
+        "Moon": "Lua",
+        "Mercury": "Mercúrio",
+        "Venus": "Vênus",
+        "Mars": "Marte",
+        "Jupiter": "Júpiter",
+        "Saturn": "Saturno",
+        "Uranus": "Urano",
+        "Neptune": "Netuno",
+        "Pluto": "Plutão"
+      },
+      "angleNames": {
+        "ASC": "ASC",
+        "DSC": "DSC",
+        "MC": "MC",
+        "IC": "IC"
+      },
       "tableTitle": "Planetas nesta revolução solar",
       "planet": "Planeta",
       "sign": "Signo",

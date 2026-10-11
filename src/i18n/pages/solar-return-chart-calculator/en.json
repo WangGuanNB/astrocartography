@@ -5,7 +5,7 @@
     "keywords": "solar return chart, solar return chart calculator, free solar return chart, annual solar return, solar return astrology, birthday chart astrology, relocated solar return chart, year ahead chart, tropical solar return"
   },
   "intentAnchor": {
-    "text": "Want a clear solar return chart without guesswork? Use the calculator first: enter birth details, pick a return year, and optionally choose where you will be when the Sun meets its natal longitude. You get a readable annual chart for the months ahead, then a direct link to the Astrocartography homepage to map the same birth data worldwide."
+    "text": "Want a clear solar return chart without guesswork? Use the calculator first: enter birth details, pick a return year, and optionally choose where you will be when the Sun meets its natal longitude. You get a readable annual chart for the months ahead, then a direct link to the Astrocartography homepage to map the same birth data worldwide. The result gives the solar return in local time at that city, the Ascendant and Midheaven with sign and degree, the Sun's house as a named life area, and any planet within 8° of an angle. Enter another city and it also shows whether the Ascendant sign and the Sun's house move."
   },
   "internalLinks": {
     "title": "Related tools",
@@ -185,7 +185,7 @@
       },
       {
         "title": "Does the return always fall on my birthday?",
-        "description": "The astronomical instant usually lands within about a day of your birthday depending on leap years and zones. We report UTC so you can convert to local time and plan travel if you are testing a relocated chart."
+        "description": "The astronomical instant usually lands within about a day of your birthday depending on leap years and zones. The result shows that moment in local time at the return city and in UTC."
       },
       {
         "title": "What is a relocated solar return chart?",
@@ -237,6 +237,64 @@
       "placeLabel": "Chart location",
       "systemLine": "Angles use the return location you selected (or your birth city).",
       "ascLabel": "Solar return Ascendant",
+      "mcLabel": "Solar return Midheaven",
+      "localMomentLabel": "Solar return (local time)",
+      "sunLine": "The solar return Sun is in {sign}, house {house} ({topic}), at {place}. That is the life area this year puts in front.",
+      "angularLine": "These planets sit within 8° of an angle: {list}. The closest is the {angle}, so this year people feel {angleTopic}.",
+      "angularNone": "No planet is within 8° of the Ascendant, Descendant, Midheaven, or Imum Coeli. Read the year from the Sun's house above.",
+      "houseTopics": {
+        "1": "you, your body, and how you start the year",
+        "2": "money, income, and what you keep",
+        "3": "messages, siblings, and short trips",
+        "4": "home, family, and private life",
+        "5": "romance, children, and creative risks",
+        "6": "daily work, health, and routines",
+        "7": "partnerships and one-to-one relationships",
+        "8": "shared money, intimacy, and other people's resources",
+        "9": "travel, study, and long-range plans",
+        "10": "career, status, and public reputation",
+        "11": "friends, groups, and future plans",
+        "12": "rest, privacy, and what stays behind the scenes"
+      },
+      "angleTopics": {
+        "ASC": "how you show up and how others meet you",
+        "DSC": "partners and the people across from you",
+        "MC": "career, visibility, and public reputation",
+        "IC": "home, family, and the base you return to"
+      },
+      "followUp": {
+        "ASC": "This return puts how you show up on an angle. Open the map with this birth data to see where your Ascendant lines cross.",
+        "DSC": "This return puts relationships on an angle. Open the map with this birth data to see where partnership lines fall.",
+        "MC": "This return puts career and public image on an angle. Open the map with this birth data to see where those lines cross.",
+        "IC": "This return puts home and roots on an angle. Open the map with this birth data to see where those lines cross.",
+        "sun": "This year the Sun highlights {topic}. Open the map with this birth data to see where that theme meets the planetary lines."
+      },
+      "compareIntro": "Against the birth-city solar return in {birthPlace}, {ascClause} and {sunClause}.",
+      "ascChanged": "the Ascendant sign changes",
+      "ascSame": "the Ascendant sign stays the same",
+      "sunChanged": "the Sun's house changes",
+      "sunSame": "the Sun's house stays the same",
+      "compareUnchanged": "At {place}, the Ascendant sign and the Sun's house match the birth-city solar return.",
+      "lockCta": "Show which house this year moves to",
+      "lockedShift": "At {returnPlace} the year's focus is house {returnHouse} ({returnTopic}). At {birthPlace} it is house {birthHouse} ({birthTopic}), and the Ascendant moves from {birthAsc} to {returnAsc}.",
+      "planetNames": {
+        "Sun": "Sun",
+        "Moon": "Moon",
+        "Mercury": "Mercury",
+        "Venus": "Venus",
+        "Mars": "Mars",
+        "Jupiter": "Jupiter",
+        "Saturn": "Saturn",
+        "Uranus": "Uranus",
+        "Neptune": "Neptune",
+        "Pluto": "Pluto"
+      },
+      "angleNames": {
+        "ASC": "ASC",
+        "DSC": "DSC",
+        "MC": "MC",
+        "IC": "IC"
+      },
       "tableTitle": "Planetary positions in this solar return chart",
       "planet": "Planet",
       "sign": "Sign",

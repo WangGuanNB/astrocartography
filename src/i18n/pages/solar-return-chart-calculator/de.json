@@ -5,7 +5,7 @@
     "keywords": "Solarrevolution, Solarrevolution berechnen, Sonnenrückkehr, Jahreshoroskop Geburtstag, Astrologie Jahreshoroskop, verlegte Solarrevolution, Vollhäuser, Astrokartografie"
   },
   "intentAnchor": {
-    "text": "Sie möchten eine nachvollziehbare Solarrevolution? Zuerst die Eingabe: Geburtsdatum, -zeit und -ort, das Jahr, das Sie betrachten wollen, und bei Bedarf den Ort, an dem Sie sich im Moment der Sonnenrückkehr zur natalen Länge befinden — typisch bei Geburtstag auf Reisen. Sie erhalten das Jahresrad und einen Direktlink zur Astrocartography-Startseite, um dieselben Geburtsdaten auf dem Globus zu sehen."
+    "text": "Sie möchten eine nachvollziehbare Solarrevolution? Zuerst die Eingabe: Geburtsdatum, -zeit und -ort, das Jahr, das Sie betrachten wollen, und bei Bedarf den Ort, an dem Sie sich im Moment der Sonnenrückkehr zur natalen Länge befinden — typisch bei Geburtstag auf Reisen. Sie erhalten das Jahresrad und einen Direktlink zur Astrocartography-Startseite, um dieselben Geburtsdaten auf dem Globus zu sehen. Das Ergebnis zeigt die Solarrückkehr in Ortszeit dieser Stadt, Aszendent und Medium Coeli mit Zeichen und Grad, das Sonnenhaus als benannten Lebensbereich und jeden Planeten innerhalb von 8° an einem Winkel. Geben Sie eine andere Stadt ein, sehen Sie auch, ob Aszendentenzeichen und Sonnenhaus wechseln."
   },
   "internalLinks": {
     "title": "Weitere Tools",
@@ -185,7 +185,7 @@
       },
       {
         "title": "Fällt die Rückkehr immer auf den Geburtstag?",
-        "description": "Sie liegt meist sehr nahe, hängt aber von Schaltjahr und Zeitzone ab. UTC erlaubt die Umrechnung in lokale Zeit."
+        "description": "Sie liegt meist sehr nahe, hängt aber von Schaltjahr und Zeitzone ab. Das Ergebnis zeigt diesen Zeitpunkt in Ortszeit der Rückkehrstadt und in UTC."
       },
       {
         "title": "Was ist eine verlegte Solarrevolution?",
@@ -237,6 +237,64 @@
       "placeLabel": "Ort für Häuser",
       "systemLine": "Winkel beziehen sich auf den angegebenen Rückkehr-Ort oder auf den Geburtsort.",
       "ascLabel": "Aszendent der Solarrevolution",
+      "mcLabel": "Medium Coeli der Solarrevolution",
+      "localMomentLabel": "Solarrückkehr (Ortszeit)",
+      "sunLine": "Die Sonne der Solarrevolution steht in {sign}, Haus {house} ({topic}), in {place}. Das ist der Lebensbereich, den dieses Jahr nach vorn stellt.",
+      "angularLine": "Diese Planeten stehen innerhalb von 8° an einem Winkel: {list}. Am nächsten liegt {angle}, deshalb spürt man dieses Jahr {angleTopic}.",
+      "angularNone": "Kein Planet steht innerhalb von 8° an Aszendent, Deszendent, Medium Coeli oder Imum Coeli. Lesen Sie das Jahr am Haus der Sonne.",
+      "houseTopics": {
+        "1": "du selbst, dein Körper und wie du das Jahr beginnst",
+        "2": "Geld, Einkommen und das, was du behältst",
+        "3": "Nachrichten, Geschwister und kurze Wege",
+        "4": "Zuhause, Familie und das Privatleben",
+        "5": "Romanze, Kinder und kreative Risiken",
+        "6": "Alltagsarbeit, Gesundheit und Routinen",
+        "7": "Partnerschaft und Zweierbeziehungen",
+        "8": "gemeinsames Geld, Intimität und fremde Ressourcen",
+        "9": "Reisen, Studium und langfristige Pläne",
+        "10": "Beruf, Status und öffentliches Ansehen",
+        "11": "Freunde, Gruppen und Zukunftspläne",
+        "12": "Ruhe, Privatsphäre und das, was hinter den Kulissen bleibt"
+      },
+      "angleTopics": {
+        "ASC": "wie du auftrittst und wie andere dich treffen",
+        "DSC": "Partner und die Menschen dir gegenüber",
+        "MC": "Beruf, Sichtbarkeit und öffentliches Ansehen",
+        "IC": "Zuhause, Familie und die Basis, zu der du zurückkehrst"
+      },
+      "followUp": {
+        "ASC": "Diese Rückkehr legt dein Auftreten an einen Winkel. Öffne die Karte mit diesen Geburtsdaten und sieh, wo deine Aszendentenlinien kreuzen.",
+        "DSC": "Diese Rückkehr legt Beziehungen an einen Winkel. Öffne die Karte mit diesen Geburtsdaten und sieh, wo die Partnerschaftslinien fallen.",
+        "MC": "Diese Rückkehr legt Beruf und öffentliches Bild an einen Winkel. Öffne die Karte mit diesen Geburtsdaten und sieh, wo diese Linien kreuzen.",
+        "IC": "Diese Rückkehr legt Zuhause und Wurzeln an einen Winkel. Öffne die Karte mit diesen Geburtsdaten und sieh, wo diese Linien kreuzen.",
+        "sun": "Dieses Jahr hebt die Sonne {topic} hervor. Öffne die Karte mit diesen Geburtsdaten und sieh, wo dieses Thema auf die Planetenlinien trifft."
+      },
+      "compareIntro": "Gegenüber der Solarrevolution in der Geburtsstadt {birthPlace} gilt: {ascClause} und {sunClause}.",
+      "ascChanged": "das Aszendentenzeichen wechselt",
+      "ascSame": "das Aszendentenzeichen bleibt",
+      "sunChanged": "das Sonnenhaus wechselt",
+      "sunSame": "das Sonnenhaus bleibt",
+      "compareUnchanged": "In {place} stimmen Aszendentenzeichen und Sonnenhaus mit der Solarrevolution der Geburtsstadt überein.",
+      "lockCta": "Zeigen, in welches Haus dieses Jahr rückt",
+      "lockedShift": "In {returnPlace} liegt der Jahresschwerpunkt in Haus {returnHouse} ({returnTopic}). In {birthPlace} ist es Haus {birthHouse} ({birthTopic}), und der Aszendent wandert von {birthAsc} nach {returnAsc}.",
+      "planetNames": {
+        "Sun": "Sonne",
+        "Moon": "Mond",
+        "Mercury": "Merkur",
+        "Venus": "Venus",
+        "Mars": "Mars",
+        "Jupiter": "Jupiter",
+        "Saturn": "Saturn",
+        "Uranus": "Uranus",
+        "Neptune": "Neptun",
+        "Pluto": "Pluto"
+      },
+      "angleNames": {
+        "ASC": "AC",
+        "DSC": "DC",
+        "MC": "MC",
+        "IC": "IC"
+      },
       "tableTitle": "Planeten in dieser Solarrevolution",
       "planet": "Planet",
       "sign": "Zeichen",

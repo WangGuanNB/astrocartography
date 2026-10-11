@@ -6,10 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { DatePicker } from "@/components/ui/date-picker";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { LocationAutocomplete } from "@/components/ui/location-autocomplete";
 import { BirthChartWheel } from "@/components/birth-chart/birth-chart-wheel";
 import { cn } from "@/lib/utils";
-import { Calendar, Clock, Globe, MapPin, Sparkles } from "lucide-react";
+import { Calendar, Clock, Globe, Lock, MapPin, Sparkles } from "lucide-react";
 
 const TIMEZONE_OPTIONS = [
   "UTC (London, Dublin)",
@@ -48,6 +55,24 @@ type ToolLabels = {
     placeLabel: string;
     systemLine: string;
     ascLabel: string;
+    mcLabel: string;
+    localMomentLabel: string;
+    sunLine: string;
+    angularLine: string;
+    angularNone: string;
+    houseTopics: Record<string, string>;
+    angleTopics: Record<string, string>;
+    followUp: Record<string, string>;
+    compareIntro: string;
+    ascChanged: string;
+    ascSame: string;
+    sunChanged: string;
+    sunSame: string;
+    compareUnchanged: string;
+    lockCta: string;
+    lockedShift: string;
+    planetNames: Record<string, string>;
+    angleNames: Record<string, string>;
     tableTitle: string;
     planet: string;
     sign: string;
@@ -90,11 +115,29 @@ type ApiResponse = {
     returnYear: number;
     returnLocation: string;
     solarReturnUtc: string;
+    solarReturnLocal?: { label: string; timeZone: string };
     system: string;
     ascendant: Angle;
+    midheaven?: Angle;
+    sun?: { sign: string; house: number; degree: number } | null;
+    angularPlanets?: Array<{ name: string; angle: string; orb: number }>;
+    comparison?: {
+      birthLocation: string;
+      returnLocation: string;
+      birthAscendant: string;
+      returnAscendant: string;
+      birthSunHouse: number;
+      returnSunHouse: number;
+      ascendantChanged: boolean;
+      sunHouseChanged: boolean;
+    } | null;
     planets: PlanetRow[];
   };
 };
+
+function fillTemplate(template: string, vars: Record<string, string | number>) {
+  return template.replace(/\{(\w+)\}/g, (_, key: string) => String(vars[key] ?? ""));
+}
 
 function formatDeg(deg: number) {
   return `${Math.floor(deg)}°${String(Math.round((deg % 1) * 60)).padStart(2, "0")}'`;
@@ -127,6 +170,7 @@ export default function SolarReturnChartCalculatorClient({ tool }: { tool: ToolL
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ApiResponse["data"] | null>(null);
+  const [shiftOpen, setShiftOpen] = useState(false);
 
   const yearOptions = useMemo(() => {
     const y = new Date().getFullYear();
@@ -165,6 +209,7 @@ export default function SolarReturnChartCalculatorClient({ tool }: { tool: ToolL
     setIsLoading(true);
     setError(null);
     setResult(null);
+    setShiftOpen(false);
     try {
       const payload: Record<string, unknown> = {
         birthDate,
@@ -199,6 +244,37 @@ export default function SolarReturnChartCalculatorClient({ tool }: { tool: ToolL
       setIsLoading(false);
     }
   }
+
+  const houseTopic = (house: number) => tool.result.houseTopics[String(house)] || String(house);
+  const angularHits = result?.angularPlanets ?? [];
+  const tightest = angularHits[0];
+  const angularList = angularHits
+    .map((hit) => {
+      const planet = tool.result.planetNames[hit.name] || hit.name;
+      const angle = tool.result.angleNames[hit.angle] || hit.angle;
+      return `${planet} ${hit.orb}° ${angle}`;
+    })
+    .join(", ");
+  const comparison = result?.comparison;
+  const shiftChanged = Boolean(comparison && (comparison.ascendantChanged || comparison.sunHouseChanged));
+  const lockedShift = comparison
+    ? fillTemplate(tool.result.lockedShift, {
+        returnPlace: comparison.returnLocation,
+        returnHouse: comparison.returnSunHouse,
+        returnTopic: houseTopic(comparison.returnSunHouse),
+        birthPlace: comparison.birthLocation,
+        birthHouse: comparison.birthSunHouse,
+        birthTopic: houseTopic(comparison.birthSunHouse),
+        birthAsc: comparison.birthAscendant,
+        returnAsc: comparison.returnAscendant,
+      })
+    : "";
+  const sunTopic = result?.sun ? houseTopic(result.sun.house) : "";
+  const followUp = !result?.sun
+    ? ""
+    : tightest
+      ? tool.result.followUp[tightest.angle] || fillTemplate(tool.result.followUp.sun, { topic: sunTopic })
+      : fillTemplate(tool.result.followUp.sun, { topic: sunTopic });
 
   return (
     <div className="container max-w-4xl px-4 pb-16">
@@ -291,18 +367,25 @@ export default function SolarReturnChartCalculatorClient({ tool }: { tool: ToolL
                   <Globe className="size-4 text-purple-400" />
                   {tool.form.timezone}
                 </label>
-                <select
-                  id="sr-timezone"
-                  value={timezone}
-                  onChange={(e) => setTimezone(e.target.value)}
-                  className="w-full h-10 px-3 text-sm rounded-md bg-white/10 border border-white/20 text-white focus:border-purple-500 focus:ring-purple-500 focus:outline-none focus:ring-2"
-                >
-                  {TIMEZONE_OPTIONS.map((tz) => (
-                    <option key={tz} value={tz} className="bg-gray-900">
-                      {tz}
-                    </option>
-                  ))}
-                </select>
+                <Select value={timezone} onValueChange={setTimezone}>
+                  <SelectTrigger
+                    id="sr-timezone"
+                    className="h-10 w-full border-white/20 bg-white/10 px-3 text-sm text-white shadow-none focus-visible:border-purple-500 focus-visible:ring-purple-500/40"
+                  >
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent className="z-50 max-h-64 border-white/15 bg-gray-950 text-white">
+                    {TIMEZONE_OPTIONS.map((tz) => (
+                      <SelectItem
+                        key={tz}
+                        value={tz}
+                        className="cursor-pointer text-white focus:bg-white/10 focus:text-white"
+                      >
+                        {tz}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="space-y-1.5 border-t border-white/10 pt-4">
@@ -310,18 +393,25 @@ export default function SolarReturnChartCalculatorClient({ tool }: { tool: ToolL
                   <Calendar className="size-4 text-amber-300" />
                   {tool.form.returnYear}
                 </label>
-                <select
-                  id="sr-year"
-                  value={returnYear}
-                  onChange={(e) => setReturnYear(e.target.value)}
-                  className="w-full h-10 px-3 text-sm rounded-md bg-white/10 border border-white/20 text-white focus:border-purple-500 focus:ring-purple-500 focus:outline-none focus:ring-2"
-                >
-                  {yearOptions.map((y) => (
-                    <option key={y} value={y} className="bg-gray-900">
-                      {y}
-                    </option>
-                  ))}
-                </select>
+                <Select value={returnYear} onValueChange={setReturnYear}>
+                  <SelectTrigger
+                    id="sr-year"
+                    className="h-10 w-full border-white/20 bg-white/10 px-3 text-sm text-white shadow-none focus-visible:border-purple-500 focus-visible:ring-purple-500/40"
+                  >
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent className="z-50 max-h-64 border-white/15 bg-gray-950 text-white">
+                    {yearOptions.map((y) => (
+                      <SelectItem
+                        key={y}
+                        value={y}
+                        className="cursor-pointer text-white focus:bg-white/10 focus:text-white"
+                      >
+                        {y}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="space-y-1.5">
@@ -407,6 +497,12 @@ export default function SolarReturnChartCalculatorClient({ tool }: { tool: ToolL
                   <p className="text-sm text-white/70">
                     {tool.result.yearLabel}: <span className="font-medium text-white">{result.returnYear}</span>
                   </p>
+                  {result.solarReturnLocal && (
+                    <p className="text-sm text-white/70">
+                      {tool.result.localMomentLabel}:{" "}
+                      <span className="font-medium text-amber-100">{result.solarReturnLocal.label}</span>
+                    </p>
+                  )}
                   <p className="text-sm text-white/70">
                     {tool.result.momentLabel}:{" "}
                     <span className="font-mono text-xs text-amber-100/90">{formatUtcHuman(result.solarReturnUtc)}</span>
@@ -417,6 +513,82 @@ export default function SolarReturnChartCalculatorClient({ tool }: { tool: ToolL
                   <p className="text-sm text-white/60">
                     {tool.result.ascLabel}: {result.ascendant.sign} {formatDeg(result.ascendant.degree)}
                   </p>
+                  {result.midheaven && (
+                    <p className="text-sm text-white/60">
+                      {tool.result.mcLabel}: {result.midheaven.sign} {formatDeg(result.midheaven.degree)}
+                    </p>
+                  )}
+                  {result.sun && (
+                    <div className="space-y-2 text-sm leading-relaxed text-white/80">
+                      <p>
+                        {fillTemplate(tool.result.sunLine, {
+                          sign: result.sun.sign,
+                          house: result.sun.house,
+                          topic: sunTopic,
+                          place: result.returnLocation,
+                        })}
+                      </p>
+                      <p>
+                        {tightest
+                          ? fillTemplate(tool.result.angularLine, {
+                              list: angularList,
+                              angle: tool.result.angleNames[tightest.angle] || tightest.angle,
+                              angleTopic: tool.result.angleTopics[tightest.angle] || tightest.angle,
+                            })
+                          : tool.result.angularNone}
+                      </p>
+                      {comparison &&
+                        (shiftChanged ? (
+                          <div className="space-y-2">
+                            <p>
+                              {fillTemplate(tool.result.compareIntro, {
+                                birthPlace: comparison.birthLocation,
+                                ascClause: comparison.ascendantChanged
+                                  ? tool.result.ascChanged
+                                  : tool.result.ascSame,
+                                sunClause: comparison.sunHouseChanged
+                                  ? tool.result.sunChanged
+                                  : tool.result.sunSame,
+                              })}
+                            </p>
+                            {shiftOpen ? (
+                              <p className="text-amber-50">{lockedShift}</p>
+                            ) : (
+                              <div className="relative overflow-hidden rounded-lg border border-amber-500/25">
+                                <p className="select-none px-3 py-3 text-white/70 blur-sm" aria-hidden="true">
+                                  {lockedShift}
+                                </p>
+                                <button
+                                  type="button"
+                                  onClick={() => setShiftOpen(true)}
+                                  className="absolute inset-0 flex items-center justify-center gap-2 bg-gray-950/60 px-3 text-sm font-semibold text-amber-100"
+                                >
+                                  <Lock className="size-4 shrink-0" />
+                                  {tool.result.lockCta}
+                                </button>
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <p>{fillTemplate(tool.result.compareUnchanged, { place: comparison.returnLocation })}</p>
+                        ))}
+                    </div>
+                  )}
+
+                  {followUp && (
+                    <div className="rounded-lg border border-purple-400/30 bg-purple-500/10 p-4">
+                      <p className="text-sm leading-relaxed text-white/90">{followUp}</p>
+                      <a
+                        href={chartUrl || "/"}
+                        className={cn(
+                          "mt-3 inline-flex w-full items-center justify-center rounded-md bg-purple-600 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-purple-700",
+                          !chartUrl && "pointer-events-none opacity-50"
+                        )}
+                      >
+                        {tool.result.ctaChart}
+                      </a>
+                    </div>
+                  )}
 
                   <h3 className="mt-4 text-base font-semibold text-white">{tool.result.tableTitle}</h3>
 
