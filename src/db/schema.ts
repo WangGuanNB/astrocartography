@@ -28,12 +28,47 @@ export const users = sqliteTable(
     is_affiliate: integer("is_affiliate", { mode: "boolean" })
       .notNull()
       .default(false),
+    password_hash: text("password_hash"),
+    email_verified_at: integer("email_verified_at", { mode: "timestamp" }),
   },
   (table) => [
     uniqueIndex("email_astrocarto_provider_unique_idx").on(
       table.email,
       table.signin_provider
     ),
+  ]
+);
+
+// One-time links for email verification and password reset.
+export const emailAuthTokens = sqliteTable(
+  "email_auth_tokens_astrocarto",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    email: text("email").notNull(),
+    token_hash: text("token_hash").notNull(),
+    purpose: text("purpose").notNull(),
+    password_hash: text("password_hash"),
+    expires_at: integer("expires_at", { mode: "timestamp" }).notNull(),
+    used_at: integer("used_at", { mode: "timestamp" }),
+    created_at: integer("created_at", { mode: "timestamp" }).notNull(),
+  },
+  (table) => [
+    uniqueIndex("email_auth_tokens_hash_unique_idx").on(table.token_hash),
+    index("email_auth_tokens_email_idx").on(table.email, table.purpose),
+  ]
+);
+
+// Coarse attempt log so registration and login can be rate limited on D1.
+export const emailAuthAttempts = sqliteTable(
+  "email_auth_attempts_astrocarto",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    action: text("action").notNull(),
+    attempt_key: text("attempt_key").notNull(),
+    created_at: integer("created_at", { mode: "timestamp" }).notNull(),
+  },
+  (table) => [
+    index("email_auth_attempts_key_idx").on(table.attempt_key, table.created_at),
   ]
 );
 

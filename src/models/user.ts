@@ -2,42 +2,54 @@ import { users } from "@/db/schema";
 import { db } from "@/db";
 import { desc, eq, gte, inArray } from "drizzle-orm";
 
+type PublicUser = Omit<typeof users.$inferSelect, "password_hash">;
+
+function toPublicUser<T extends { password_hash?: string | null }>(user: T) {
+  const { password_hash: _passwordHash, ...publicUser } = user;
+  return publicUser;
+}
+
 export async function insertUser(
   data: typeof users.$inferInsert
-): Promise<typeof users.$inferSelect | undefined> {
+): Promise<PublicUser | undefined> {
   const [user] = await db().insert(users).values(data).returning();
 
-  return user;
+  return user ? toPublicUser(user) : undefined;
 }
 
 export async function findUserByEmail(
   email: string
-): Promise<typeof users.$inferSelect | undefined> {
+): Promise<PublicUser | undefined> {
   const [user] = await db()
     .select()
     .from(users)
     .where(eq(users.email, email))
     .limit(1);
 
-  return user;
+  return user ? toPublicUser(user) : undefined;
+}
+
+export async function findUsersByEmail(email: string) {
+  const rows = await db().select().from(users).where(eq(users.email, email));
+  return rows.map((user) => toPublicUser(user));
 }
 
 export async function findUserByUuid(
   uuid: string
-): Promise<typeof users.$inferSelect | undefined> {
+): Promise<PublicUser | undefined> {
   const [user] = await db()
     .select()
     .from(users)
     .where(eq(users.uuid, uuid))
     .limit(1);
 
-  return user;
+  return user ? toPublicUser(user) : undefined;
 }
 
 export async function getUsers(
   page: number = 1,
   limit: number = 50
-): Promise<(typeof users.$inferSelect)[] | undefined> {
+): Promise<PublicUser[] | undefined> {
   const offset = (page - 1) * limit;
 
   const data = await db()
@@ -47,56 +59,56 @@ export async function getUsers(
     .limit(limit)
     .offset(offset);
 
-  return data;
+  return data?.map((user) => toPublicUser(user));
 }
 
 export async function updateUserInviteCode(
   user_uuid: string,
   invite_code: string
-): Promise<typeof users.$inferSelect | undefined> {
+): Promise<PublicUser | undefined> {
   const [user] = await db()
     .update(users)
     .set({ invite_code, updated_at: new Date() })
     .where(eq(users.uuid, user_uuid))
     .returning();
 
-  return user;
+  return user ? toPublicUser(user) : undefined;
 }
 
 export async function updateUserInvitedBy(
   user_uuid: string,
   invited_by: string
-): Promise<typeof users.$inferSelect | undefined> {
+): Promise<PublicUser | undefined> {
   const [user] = await db()
     .update(users)
     .set({ invited_by, updated_at: new Date() })
     .where(eq(users.uuid, user_uuid))
     .returning();
 
-  return user;
+  return user ? toPublicUser(user) : undefined;
 }
 
 export async function getUsersByUuids(
   user_uuids: string[]
-): Promise<(typeof users.$inferSelect)[] | undefined> {
+): Promise<PublicUser[] | undefined> {
   const data = await db()
     .select()
     .from(users)
     .where(inArray(users.uuid, user_uuids));
 
-  return data;
+  return data?.map((user) => toPublicUser(user));
 }
 
 export async function findUserByInviteCode(
   invite_code: string
-): Promise<typeof users.$inferSelect | undefined> {
+): Promise<PublicUser | undefined> {
   const [user] = await db()
     .select()
     .from(users)
     .where(eq(users.invite_code, invite_code))
     .limit(1);
 
-  return user;
+  return user ? toPublicUser(user) : undefined;
 }
 
 export async function getUserUuidsByEmail(

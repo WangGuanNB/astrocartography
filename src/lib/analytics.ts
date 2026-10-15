@@ -109,7 +109,7 @@ export function trackEvent(
 const AUTH_INTENT_STORAGE_KEY = "astro_auth_tracking_intent";
 const AUTH_INTENT_MAX_AGE_MS = 10 * 60 * 1000;
 
-type AuthProvider = "google" | "github" | "google_one_tap";
+type AuthProvider = "google" | "github" | "google_one_tap" | "email";
 
 function getAuthIntent() {
   if (typeof window === "undefined") return null;

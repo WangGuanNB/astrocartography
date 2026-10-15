@@ -25,11 +25,40 @@
     "or": "Ou",
     "continue": "Continuar",
     "no_account": "Não tem uma conta?",
+    "have_account": "Já tem uma conta? Entrar",
     "email_sign_in": "Entrar com Email",
     "google_sign_in": "Entrar com Google",
     "github_sign_in": "Entrar com GitHub",
     "close_title": "Fechar",
-    "cancel_title": "Cancelar"
+    "cancel_title": "Cancelar",
+    "sign_up_submit": "Criar conta",
+    "sign_in_submit": "Entrar",
+    "forgot_description": "Vamos enviar um link para você escolher uma nova senha.",
+    "send_reset": "Enviar link",
+    "new_password": "Nova senha",
+    "reset_password": "Redefinir senha",
+    "reset_description": "Escolha uma nova senha para a sua conta.",
+    "back_to_sign_in": "Voltar para entrar",
+    "password_hint": "Pelo menos 8 caracteres",
+    "working": "Aguarde…",
+    "errors": {
+      "invalid_email": "Digite um e-mail válido.",
+      "password_too_short": "Use pelo menos 8 caracteres.",
+      "invalid_credentials": "E-mail ou senha incorretos.",
+      "email_not_verified": "Confirme o e-mail antes de entrar. Veja sua caixa de entrada.",
+      "use_google": "Este e-mail já usa o Google. Continue com o Google.",
+      "use_github": "Este e-mail já usa o GitHub. Continue com o GitHub.",
+      "already_registered": "Este e-mail já está cadastrado. Entre na conta.",
+      "email_send_failed": "Não conseguimos enviar o e-mail. Tente de novo em instantes.",
+      "rate_limited": "Muitas tentativas. Espere alguns minutos e tente de novo.",
+      "invalid_token": "Este link é inválido ou expirou.",
+      "generic": "Algo deu errado. Tente de novo."
+    },
+    "notices": {
+      "check_email": "Veja sua caixa de entrada para o próximo passo.",
+      "verify_success": "E-mail confirmado. Você já pode entrar.",
+      "reset_success": "Senha atualizada. Você já pode entrar."
+    }
   },
   "my_orders": {
     "title": "Meus Pedidos",

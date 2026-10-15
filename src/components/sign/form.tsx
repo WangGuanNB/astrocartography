@@ -10,20 +10,35 @@ import {
 import { SiGithub, SiGoogle } from "react-icons/si";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import EmailAuthForm from "@/components/sign/email-form";
 import { cn } from "@/lib/utils";
 import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { authEvents } from "@/lib/analytics";
 
+type AuthMode = "sign-in" | "sign-up" | "forgot";
+
 export default function SignForm({
   className,
+  callbackUrl,
   ...props
-}: React.ComponentPropsWithoutRef<"div">) {
+}: React.ComponentPropsWithoutRef<"div"> & { callbackUrl?: string }) {
   const t = useTranslations();
   const [providers, setProviders] = useState<Record<string, any> | null>(null);
+  const [authMode, setAuthMode] = useState<AuthMode>("sign-in");
+  const title =
+    authMode === "sign-up"
+      ? t("sign_modal.sign_up_title")
+      : authMode === "forgot"
+        ? t("sign_modal.reset_password")
+        : t("sign_modal.sign_in_title");
+  const description =
+    authMode === "sign-up"
+      ? t("sign_modal.sign_up_description")
+      : authMode === "forgot"
+        ? t("sign_modal.forgot_description")
+        : t("sign_modal.sign_in_description");
 
   // 动态获取可用的 providers
   useEffect(() => {
@@ -41,21 +56,16 @@ export default function SignForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">
-            {t("sign_modal.sign_in_title")}
-          </CardTitle>
-          <CardDescription>
-            {t("sign_modal.sign_in_description")}
-          </CardDescription>
+          <CardTitle className="text-xl">{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid gap-6">
+            {authMode !== "forgot" ? (
             <div className="flex flex-col gap-4">
-              {/* 只在 provider 存在时显示 Google 按钮 */}
               {providers?.google && (
                 <Button
-                  variant="outline"
-                  className="w-full"
+                  className="h-10 w-full bg-white text-neutral-950 hover:bg-neutral-100 hover:text-neutral-950"
                   onClick={() => {
                     authEvents.signInStarted("google");
                     signIn("google");
@@ -65,11 +75,10 @@ export default function SignForm({
                   {t("sign_modal.google_sign_in")}
                 </Button>
               )}
-              {/* 只在 provider 存在时显示 GitHub 按钮 */}
               {providers?.github && (
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="h-10 w-full"
                   onClick={() => {
                     authEvents.signInStarted("github");
                     signIn("github");
@@ -79,55 +88,16 @@ export default function SignForm({
                   {t("sign_modal.github_sign_in")}
                 </Button>
               )}
-              {/* 如果没有可用的 providers，显示提示 */}
-              {providers && Object.keys(providers).length === 0 && (
-                <p className="text-sm text-muted-foreground text-center">
-                  {t("sign_modal.no_providers_available") || "No authentication providers available"}
-                </p>
-              )}
             </div>
-
-            {false && (
-              <>
-                <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
-                  <span className="relative z-10 bg-background px-2 text-muted-foreground">
-                    Or continue with
-                  </span>
-                </div>
-                <div className="grid gap-6">
-                  <div className="grid gap-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="m@example.com"
-                      required
-                    />
-                  </div>
-                  <div className="grid gap-2">
-                    <div className="flex items-center">
-                      <Label htmlFor="password">Password</Label>
-                      <a
-                        href="#"
-                        className="ml-auto text-sm underline-offset-4 hover:underline"
-                      >
-                        Forgot your password?
-                      </a>
-                    </div>
-                    <Input id="password" type="password" required />
-                  </div>
-                  <Button type="submit" className="w-full">
-                    Login
-                  </Button>
-                </div>
-                <div className="text-center text-sm">
-                  Don&apos;t have an account?{" "}
-                  <a href="#" className="underline underline-offset-4">
-                    Sign up
-                  </a>
-                </div>
-              </>
-            )}
+            ) : null}
+            {authMode !== "forgot" && (providers?.google || providers?.github) ? (
+              <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
+                <span className="relative z-10 bg-card px-2 text-muted-foreground">
+                  {t("sign_modal.or")}
+                </span>
+              </div>
+            ) : null}
+            <EmailAuthForm callbackUrl={callbackUrl} onModeChange={setAuthMode} />
           </div>
         </CardContent>
       </Card>

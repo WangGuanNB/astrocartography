@@ -25,11 +25,40 @@
     "or": "O",
     "continue": "Continua",
     "no_account": "Non hai un account?",
+    "have_account": "Hai già un account? Accedi",
     "email_sign_in": "Accedi con Email",
     "google_sign_in": "Accedi con Google",
     "github_sign_in": "Accedi con GitHub",
     "close_title": "Chiudi",
-    "cancel_title": "Annulla"
+    "cancel_title": "Annulla",
+    "sign_up_submit": "Crea account",
+    "sign_in_submit": "Accedi",
+    "forgot_description": "Ti invieremo un link per scegliere una nuova password.",
+    "send_reset": "Invia link",
+    "new_password": "Nuova password",
+    "reset_password": "Reimposta password",
+    "reset_description": "Scegli una nuova password per il tuo account.",
+    "back_to_sign_in": "Torna all'accesso",
+    "password_hint": "Almeno 8 caratteri",
+    "working": "Attendi…",
+    "errors": {
+      "invalid_email": "Inserisci un indirizzo email valido.",
+      "password_too_short": "Usa almeno 8 caratteri.",
+      "invalid_credentials": "Email o password non sono corrette.",
+      "email_not_verified": "Conferma l'email prima di accedere. Controlla la posta.",
+      "use_google": "Questa email usa già Google. Continua con Google.",
+      "use_github": "Questa email usa già GitHub. Continua con GitHub.",
+      "already_registered": "Questa email è già registrata. Accedi.",
+      "email_send_failed": "Non siamo riusciti a inviare l'email. Riprova tra un momento.",
+      "rate_limited": "Troppi tentativi. Aspetta qualche minuto e riprova.",
+      "invalid_token": "Questo link non è valido o è scaduto.",
+      "generic": "Qualcosa è andato storto. Riprova."
+    },
+    "notices": {
+      "check_email": "Controlla la posta per il passo successivo.",
+      "verify_success": "Email confermata. Ora puoi accedere.",
+      "reset_success": "Password aggiornata. Ora puoi accedere."
+    }
   },
   "my_orders": {
     "title": "I Miei Ordini",

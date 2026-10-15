@@ -37,11 +37,40 @@
     "or": "或",
     "continue": "继续",
     "no_account": "还没有账户？",
+    "have_account": "已有账户？去登录",
     "email_sign_in": "使用邮箱登录",
     "google_sign_in": "使用 Google 登录",
     "github_sign_in": "使用 GitHub 登录",
     "close_title": "关闭",
-    "cancel_title": "取消"
+    "cancel_title": "取消",
+    "sign_up_submit": "创建账户",
+    "sign_in_submit": "登录",
+    "forgot_description": "我们会把重置密码的链接发到你的邮箱。",
+    "send_reset": "发送重置链接",
+    "new_password": "新密码",
+    "reset_password": "重置密码",
+    "reset_description": "为这个账户设置一个新密码。",
+    "back_to_sign_in": "返回登录",
+    "password_hint": "至少 8 个字符",
+    "working": "请稍候…",
+    "errors": {
+      "invalid_email": "请输入有效的邮箱地址。",
+      "password_too_short": "密码至少需要 8 个字符。",
+      "invalid_credentials": "邮箱或密码不正确。",
+      "email_not_verified": "请先确认邮箱后再登录，到收件箱查看验证信。",
+      "use_google": "这个邮箱已经用 Google 登录过，请继续使用 Google。",
+      "use_github": "这个邮箱已经用 GitHub 登录过，请继续使用 GitHub。",
+      "already_registered": "这个邮箱已经注册，请直接登录。",
+      "email_send_failed": "邮件没有发出去，请稍后再试。",
+      "rate_limited": "尝试次数太多，请过几分钟再试。",
+      "invalid_token": "这个链接无效或已过期。",
+      "generic": "出了点问题，请再试一次。"
+    },
+    "notices": {
+      "check_email": "请到邮箱查看下一步。",
+      "verify_success": "邮箱已确认，现在可以登录。",
+      "reset_success": "密码已更新，现在可以登录。"
+    }
   },
   "my_orders": {
     "title": "我的订单",

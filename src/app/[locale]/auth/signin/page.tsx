@@ -27,7 +27,7 @@ export default async function SignInPage({
           </div>
           {process.env.NEXT_PUBLIC_PROJECT_NAME}
         </a>
-        <SignForm />
+        <SignForm callbackUrl={callbackUrl} />
       </div>
     </div>
   );

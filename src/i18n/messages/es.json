@@ -25,11 +25,40 @@
     "or": "O",
     "continue": "Continuar",
     "no_account": "¿No tienes una cuenta?",
+    "have_account": "¿Ya tienes una cuenta? Inicia sesión",
     "email_sign_in": "Iniciar sesión con Email",
     "google_sign_in": "Iniciar sesión con Google",
     "github_sign_in": "Iniciar sesión con GitHub",
     "close_title": "Cerrar",
-    "cancel_title": "Cancelar"
+    "cancel_title": "Cancelar",
+    "sign_up_submit": "Crear cuenta",
+    "sign_in_submit": "Iniciar sesión",
+    "forgot_description": "Te enviaremos un enlace para elegir una contraseña nueva.",
+    "send_reset": "Enviar enlace",
+    "new_password": "Nueva contraseña",
+    "reset_password": "Restablecer contraseña",
+    "reset_description": "Elige una contraseña nueva para tu cuenta.",
+    "back_to_sign_in": "Volver a iniciar sesión",
+    "password_hint": "Al menos 8 caracteres",
+    "working": "Espera un momento…",
+    "errors": {
+      "invalid_email": "Introduce un correo válido.",
+      "password_too_short": "Usa al menos 8 caracteres.",
+      "invalid_credentials": "El correo o la contraseña no son correctos.",
+      "email_not_verified": "Confirma tu correo antes de entrar. Revisa tu bandeja.",
+      "use_google": "Este correo ya usa Google. Continúa con Google.",
+      "use_github": "Este correo ya usa GitHub. Continúa con GitHub.",
+      "already_registered": "Este correo ya está registrado. Inicia sesión.",
+      "email_send_failed": "No pudimos enviar el correo. Inténtalo de nuevo en un momento.",
+      "rate_limited": "Demasiados intentos. Espera unos minutos y vuelve a intentarlo.",
+      "invalid_token": "Este enlace no es válido o ha caducado.",
+      "generic": "Algo salió mal. Inténtalo de nuevo."
+    },
+    "notices": {
+      "check_email": "Revisa tu bandeja para el siguiente paso.",
+      "verify_success": "Correo confirmado. Ya puedes iniciar sesión.",
+      "reset_success": "Contraseña actualizada. Ya puedes iniciar sesión."
+    }
   },
   "my_orders": {
     "title": "Mis Pedidos",

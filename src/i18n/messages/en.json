@@ -36,11 +36,40 @@
     "or": "Or",
     "continue": "Continue",
     "no_account": "Don't have an account?",
+    "have_account": "Already have an account? Sign in",
     "email_sign_in": "Sign in with Email",
     "google_sign_in": "Sign in with Google",
     "github_sign_in": "Sign in with GitHub",
     "close_title": "Close",
-    "cancel_title": "Cancel"
+    "cancel_title": "Cancel",
+    "sign_up_submit": "Create account",
+    "sign_in_submit": "Sign in",
+    "forgot_description": "We will email you a link to choose a new password.",
+    "send_reset": "Send reset link",
+    "new_password": "New password",
+    "reset_password": "Reset password",
+    "reset_description": "Choose a new password for your account.",
+    "back_to_sign_in": "Back to sign in",
+    "password_hint": "At least 8 characters",
+    "working": "Please wait…",
+    "errors": {
+      "invalid_email": "Enter a valid email address.",
+      "password_too_short": "Use at least 8 characters.",
+      "invalid_credentials": "Email or password is incorrect.",
+      "email_not_verified": "Confirm your email before signing in. Check your inbox.",
+      "use_google": "This email already uses Google. Continue with Google.",
+      "use_github": "This email already uses GitHub. Continue with GitHub.",
+      "already_registered": "This email is already registered. Sign in instead.",
+      "email_send_failed": "We could not send the email. Try again in a moment.",
+      "rate_limited": "Too many attempts. Wait a few minutes and try again.",
+      "invalid_token": "This link is invalid or has expired.",
+      "generic": "Something went wrong. Try again."
+    },
+    "notices": {
+      "check_email": "Check your inbox for the next step.",
+      "verify_success": "Email confirmed. You can sign in now.",
+      "reset_success": "Password updated. You can sign in now."
+    }
   },
   "my_orders": {
     "title": "My Orders",

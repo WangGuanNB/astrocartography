@@ -25,11 +25,40 @@
     "or": "Oder",
     "continue": "Weiter",
     "no_account": "Noch kein Konto?",
+    "have_account": "Schon ein Konto? Anmelden",
     "email_sign_in": "Mit E-Mail anmelden",
     "google_sign_in": "Mit Google anmelden",
     "github_sign_in": "Mit GitHub anmelden",
     "close_title": "Schließen",
-    "cancel_title": "Abbrechen"
+    "cancel_title": "Abbrechen",
+    "sign_up_submit": "Konto erstellen",
+    "sign_in_submit": "Anmelden",
+    "forgot_description": "Wir schicken dir einen Link, um ein neues Passwort zu wählen.",
+    "send_reset": "Link senden",
+    "new_password": "Neues Passwort",
+    "reset_password": "Passwort zurücksetzen",
+    "reset_description": "Wähle ein neues Passwort für dein Konto.",
+    "back_to_sign_in": "Zurück zur Anmeldung",
+    "password_hint": "Mindestens 8 Zeichen",
+    "working": "Bitte warten…",
+    "errors": {
+      "invalid_email": "Gib eine gültige E-Mail-Adresse ein.",
+      "password_too_short": "Verwende mindestens 8 Zeichen.",
+      "invalid_credentials": "E-Mail oder Passwort ist falsch.",
+      "email_not_verified": "Bestätige zuerst deine E-Mail. Schau in dein Postfach.",
+      "use_google": "Diese E-Mail nutzt bereits Google. Weiter mit Google.",
+      "use_github": "Diese E-Mail nutzt bereits GitHub. Weiter mit GitHub.",
+      "already_registered": "Diese E-Mail ist bereits registriert. Melde dich an.",
+      "email_send_failed": "Die E-Mail konnte nicht gesendet werden. Versuche es gleich noch einmal.",
+      "rate_limited": "Zu viele Versuche. Warte ein paar Minuten und versuche es erneut.",
+      "invalid_token": "Dieser Link ist ungültig oder abgelaufen.",
+      "generic": "Etwas ist schiefgelaufen. Versuche es erneut."
+    },
+    "notices": {
+      "check_email": "Schau in dein Postfach für den nächsten Schritt.",
+      "verify_success": "E-Mail bestätigt. Du kannst dich jetzt anmelden.",
+      "reset_success": "Passwort aktualisiert. Du kannst dich jetzt anmelden."
+    }
   },
   "my_orders": {
     "title": "Meine Bestellungen",
