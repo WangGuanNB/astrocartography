@@ -193,7 +193,9 @@ async function enforceRateLimit(
   email: string
 ): Promise<{ ok: false; error: "rate_limited" } | null> {
   const rule = LIMITS[action];
-  const keys = [{ key: `${action}:email:${email || "none"}`, limit: rule.email }];
+  const keys: { key: string; limit: number }[] = [
+    { key: `${action}:email:${email || "none"}`, limit: rule.email },
+  ];
   if (ENFORCE_IP_LIMIT) {
     const ip = await clientIp();
     keys.push({ key: `${action}:ip:${ip}`, limit: rule.ip });
