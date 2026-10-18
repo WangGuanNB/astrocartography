@@ -1,28 +1,33 @@
 {
   "metadata": {
     "title": "Kostenloser Astrokartografie Rechner – Karte online erstellen 2026",
-    "description": "Nutzen Sie unseren kostenlosen Astrokartografie Rechner, um Ihre persönliche Karte sofort zu erstellen. Professionelle Swiss Ephemeris-Berechnungen, 1-Meilen-Genauigkeit. Keine Anmeldung. Planetenlinien für jeden Ort weltweit berechnen.",
+    "description": "Free astrocartography calculator with Swiss Ephemeris-based lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
     "keywords": "Astrokartografie Rechner, kostenloser Astrokartografie Rechner, Astrokartografie Rechner online, wie funktioniert der Astrokartografie Rechner, Astrokartografie Berechnungsmethode"
   },
   "intentAnchor": {
     "text": "Anders als allgemeine Astrokartografie-Ratgeber ist diese Seite gezielt als dedizierter Astrokartografie Rechner zum sofortigen Erstellen von Karten konzipiert. Wenn Sie einen kostenlosen Astrokartografie Rechner suchen statt konzeptioneller Erklärungen, liefert dieses Tool direkte Berechnungen ohne Hürden."
   },
   "internalLinks": {
-    "title": "Verwandte Ressourcen",
+    "title": "Related Resources",
     "items": [
       {
-        "text": "Erstelle deine kostenlose Astrocartography-Karte auf der Weltkarte.",
-        "linkText": "Kostenlose Astrocartography-Karte",
-        "url": "/de"
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
+        "url": "/"
       },
       {
-        "text": "Zuerst Ihren Aszendenten ermitteln.",
-        "linkText": "Aszendent Rechner",
+        "text": "Step-by-step where-to-live workflow.",
+        "linkText": "Astrocartography Where to Live",
+        "url": "/astrocartography-where-to-live"
+      },
+      {
+        "text": "Find your rising sign first.",
+        "linkText": "Rising Sign Calculator",
         "url": "/rising-sign-calculator"
       },
       {
-        "text": "Zuerst Ihr Medium Coeli (Berufsachse) ermitteln.",
-        "linkText": "Medium Coeli Rechner",
+        "text": "Find your Midheaven (career axis).",
+        "linkText": "Midheaven Calculator",
         "url": "/midheaven-calculator"
       }
     ]
@@ -31,7 +36,7 @@
     "name": "introduce",
     "title": "Was ist der Astrokartografie Rechner",
     "label": "Einführung",
-    "description": "Der Astrokartografie Rechner ist ein Tool in Profi-Qualität, das Ihr Geburtshoroskop auf eine Weltkarte projiziert und zeigt, wo Planetenenergien auf der Erdoberfläche am stärksten sind. Dieser Relocation-Astrologie-Rechner nutzt Swiss Ephemeris für 1-Meilen-Genauigkeit und ist der präziseste kostenlose Astrokartografie Rechner online.",
+    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use Swiss Ephemeris-style astronomy on our servers after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
     "image": {
       "src": "/imgs/features/hero-web.webp",
       "alt": "Oberfläche des Astrokartografie Rechners"
@@ -70,8 +75,8 @@
     "description": "Unser Astrokartografie Rechner verbindet professionelle Genauigkeit mit benutzerfreundlichen Funktionen und ist der umfassendste kostenlose Relocation-Astrologie-Rechner.",
     "items": [
       {
-        "title": "Professionelle Präzision mit 1-Meilen-Genauigkeit",
-        "description": "Der Planetenlinien-Rechner nutzt Swiss Ephemeris (Zürcher Sternwarte) – Planetenpositionen auf 1 Meile genau. Dieser Astrokartografie Rechner wurde mit Software wie Solar Fire und AstroGold abgeglichen. Zeitzonen und historische Sommerzeit werden automatisch verarbeitet. So sind Ihre Planetenlinien-Positionen für ernsthafte Umzugsplanung und professionelle Nutzung zuverlässig.",
+        "title": "Swiss Ephemeris-Based Calculations",
+        "description": "Planetary positions and lines are computed with Swiss Ephemeris-style astronomy, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
         "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -79,8 +84,8 @@
         }
       },
       {
-        "title": "Komplett kostenlos, unbegrenzte Nutzung",
-        "description": "Dieser Astrokartografie Rechner ist komplett kostenlos und unbegrenzt nutzbar – keine Kreditkarte, keine versteckten Gebühren. Erstellen Sie unbegrenzt Karten, laden Sie dateien ohne Wasserzeichen herunter und nutzen Sie KI-Interpretationen. Der Relocation-Astrologie-Rechner verarbeitet alle Geburtsdaten lokal im Browser bei voller Privatsphäre.",
+        "title": "Free Map Core, Clear Paid Depth",
+        "description": "Generate astrocartography maps without payment. Guest sessions have daily limits; signing in unlocks more map use. Birth data is sent securely for calculation. Optional AI map chat, city comparison reports, and saved research use credits as shown before you spend them.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -89,7 +94,7 @@
       },
       {
         "title": "KI-gestützte Interpretationen",
-        "description": "Über Berechnungen hinaus liefert dieser Astrokartografie Rechner KI-Interpretationen: was jede Planetenlinie für Karriere, Beziehungen und persönliches Wachstum bedeutet. Der Astrokartografie Rechner hilft, standortspezifische Energiemuster zu verstehen und macht komplexe astrologische Konzepte für praktische Entscheidungen zugänglich.",
+        "description": "Optional AI-assisted chat and reports explain line and city themes in plain language. AI features consume credits; the map and line geometry remain free to explore within guest or signed-in limits.",
         "icon": "RiSparklingLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -197,7 +202,7 @@
   "cta": {
     "name": "cta",
     "title": "Jetzt Ihre kostenlose Astrokartografie-Karte erstellen",
-    "description": "Nutzen Sie unseren professionellen Astrokartografie Rechner für Ihre persönliche Karte mit Swiss-Ephemeris-Präzision. Entdecken Sie ideale Städte für Karriere, Beziehungen und persönliches Wachstum. Dieser Relocation-Astrologie-Rechner ist komplett kostenlos – keine Anmeldung, unbegrenzte Nutzung.",
+    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
     "buttons": [
       {
         "title": "Kostenlose Astrocartography-Karte →",

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "免费星盘地图计算器 - 在线生成你的星盘地图 2026",
-    "description": "使用我们的免费星盘地图计算器，立即生成个性化星盘地图。专业瑞士星历表计算，精确到1英里。无需注册。计算全球任意位置的行星线。",
+    "description": "免费星盘地图计算器：瑞士星历表精度的交互世界地图与行星线。可选注册；访客有每日地图次数限制。可在地图上对比城市；更深的 AI 功能消耗积分。",
     "keywords": "星盘地图计算器, 免费星盘地图计算器, 在线星盘地图计算器, 星盘地图计算器使用方法, 星盘地图计算方法"
   },
   "intentAnchor": {
@@ -11,18 +11,23 @@
     "title": "相关资源",
     "items": [
       {
-        "text": "在世界地图上生成你的免费星运地理图（Astrocartography Chart）。",
-        "linkText": "免费星盘地图 Astrocartography Chart",
+        "text": "主入口：免费星盘地图与世界地图。",
+        "linkText": "免费星盘地图 Astrocartography",
         "url": "/zh"
       },
       {
-        "text": "先计算你的上升星座。",
-        "linkText": "上升星座计算器",
+        "text": "按步骤决定住哪里？",
+        "linkText": "星盘地图：住哪里指南",
+        "url": "/astrocartography-where-to-live"
+      },
+      {
+        "text": "Find your rising sign first.",
+        "linkText": "Rising Sign Calculator",
         "url": "/rising-sign-calculator"
       },
       {
-        "text": "计算你的中天（事业轴）。",
-        "linkText": "中天计算器",
+        "text": "Find your Midheaven (career axis).",
+        "linkText": "Midheaven Calculator",
         "url": "/midheaven-calculator"
       }
     ]
@@ -31,7 +36,7 @@
     "name": "introduce",
     "title": "什么是星盘地图计算器",
     "label": "介绍",
-    "description": "星盘地图计算器是专业级工具，将你的出生星盘投射到世界地图上，揭示行星能量在地球表面最强的位置。这个位置占星计算器使用瑞士星历表天文数据，以1英里精度计算行星位置，使其成为在线最精确的免费星盘地图计算器。",
+    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use Swiss Ephemeris-style astronomy on our servers after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
     "image": {
       "src": "/imgs/features/hero-web.webp",
       "alt": "星盘地图计算器界面"
@@ -70,8 +75,8 @@
     "description": "我们的星盘地图计算器结合专业级精度和用户友好功能，提供最全面的免费位置占星计算器。",
     "items": [
       {
-        "title": "专业精度，1英里准确度",
-        "description": "行星线计算器使用苏黎世天文台维护的瑞士星历表，提供精确到地球表面1英里内的行星位置。这个星盘地图计算器已与 Solar Fire 和 AstroGold 等专业软件验证，产生相同结果。星图计算器自动处理时区转换，考虑历史夏令时变更和历法系统转换（儒略历到格里历）。这个位置占星工具的精度确保你的行星线位置对于严肃的搬迁规划和专业使用是可靠的。",
+        "title": "Swiss Ephemeris-Based Calculations",
+        "description": "Planetary positions and lines are computed with Swiss Ephemeris-style astronomy, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
         "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -79,8 +84,8 @@
         }
       },
       {
-        "title": "完全免费，无限使用",
-        "description": "这个星盘地图计算器完全免费，无限使用——无需信用卡，无隐藏费用。生成无限地图，下载无水印文件，零成本访问AI解读。位置占星计算器在浏览器中本地处理所有出生数据，确保完全隐私，同时保持专业计算精度。",
+        "title": "Free Map Core, Clear Paid Depth",
+        "description": "Generate astrocartography maps without payment. Guest sessions have daily limits; signing in unlocks more map use. Birth data is sent securely for calculation. Optional AI map chat, city comparison reports, and saved research use credits as shown before you spend them.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -89,7 +94,7 @@
       },
       {
         "title": "AI驱动的解读",
-        "description": "除了计算，这个行星线计算器提供AI驱动的解读，解释每条行星线对你的职业、人际关系和个人成长的意义。星盘地图计算器帮助你理解位置特定的能量模式，使复杂的占星概念变得易于理解，用于实际决策。",
+        "description": "Optional AI-assisted chat and reports explain line and city themes in plain language. AI features consume credits; the map and line geometry remain free to explore within guest or signed-in limits.",
         "icon": "RiSparklingLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -197,7 +202,7 @@
   "cta": {
     "name": "cta",
     "title": "立即生成你的免费星盘地图",
-    "description": "使用我们的专业星盘地图计算器，以瑞士星历表精度创建你的个性化地图。发现适合你职业、人际关系和个人成长的理想城市。这个位置占星计算器完全免费——无需注册，无限使用。",
+    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
     "buttons": [
       {
         "title": "免费星盘地图 Astrocartography →",

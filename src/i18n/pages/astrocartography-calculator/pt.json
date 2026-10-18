@@ -1,28 +1,33 @@
 {
   "metadata": {
     "title": "Calculadora de Astrocartografia Grátis - Gere Seu Mapa Online 2026",
-    "description": "Use nossa calculadora de astrocartografia gratuita para gerar seu mapa personalizado instantaneamente. Cálculos profissionais com Swiss Ephemeris, precisão de 1 milha. Sem cadastro necessário. Calcule linhas planetárias para qualquer localização mundial.",
+    "description": "Free astrocartography calculator with Swiss Ephemeris-based lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
     "keywords": "calculadora astrocartografia, calculadora astrocartografia gratis, calculadora astrocartografia online, como funciona calculadora astrocartografia, metodo calculo astrocartografia"
   },
   "intentAnchor": {
     "text": "Diferente de guias gerais de astrocartografia, esta página é projetada especificamente como uma calculadora dedicada de astrocartografia para gerar mapas instantaneamente. Se você está procurando uma calculadora de astrocartografia gratuita em vez de explicações conceituais, esta ferramenta fornece cálculos diretos sem fricção."
   },
   "internalLinks": {
-    "title": "Recursos Relacionados",
+    "title": "Related Resources",
     "items": [
       {
-        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
-        "linkText": "Mapa de Astrocartografia grátis",
-        "url": "/pt"
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
+        "url": "/"
       },
       {
-        "text": "Calcule primeiro o seu signo ascendente.",
-        "linkText": "Calculadora do Signo Ascendente",
+        "text": "Step-by-step where-to-live workflow.",
+        "linkText": "Astrocartography Where to Live",
+        "url": "/astrocartography-where-to-live"
+      },
+      {
+        "text": "Find your rising sign first.",
+        "linkText": "Rising Sign Calculator",
         "url": "/rising-sign-calculator"
       },
       {
-        "text": "Calcule o seu Meio do Céu (eixo profissional).",
-        "linkText": "Calculadora de Meio do Céu",
+        "text": "Find your Midheaven (career axis).",
+        "linkText": "Midheaven Calculator",
         "url": "/midheaven-calculator"
       }
     ]
@@ -31,7 +36,7 @@
     "name": "introduce",
     "title": "O que é Calculadora de Astrocartografia",
     "label": "Introdução",
-    "description": "A Calculadora de Astrocartografia é uma ferramenta de nível profissional que projeta seu mapa natal em um mapa mundial, revelando onde as energias planetárias são mais fortes na superfície da Terra. Esta calculadora de astrologia de relocação usa dados astronômicos do Swiss Ephemeris para calcular posições planetárias com precisão de 1 milha, tornando-a a calculadora de mapa de astrocartografia gratuita mais precisa disponível online.",
+    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use Swiss Ephemeris-style astronomy on our servers after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
     "image": {
       "src": "/imgs/features/hero-web.webp",
       "alt": "Interface da Calculadora de Astrocartografia"
@@ -70,8 +75,8 @@
     "description": "Nossa calculadora de astrocartografia combina precisão de nível profissional com recursos amigáveis ao usuário, oferecendo a calculadora de astrologia de relocação gratuita mais abrangente disponível.",
     "items": [
       {
-        "title": "Precisão Profissional com Exatidão de 1 Milha",
-        "description": "A calculadora de linhas planetárias usa o Swiss Ephemeris, mantido pelo Observatório de Zurique, que fornece posições planetárias precisas dentro de 1 milha na superfície da Terra. Esta calculadora de mapa de astrocartografia foi verificada contra software profissional como Solar Fire e AstroGold, produzindo resultados idênticos. A calculadora de mapa astral processa automaticamente conversões de fuso horário, contabilizando mudanças históricas de horário de verão e transições do sistema de calendário (Juliano para Gregoriano). A precisão desta ferramenta de astrologia locacional garante que suas posições de linhas planetárias sejam confiáveis para planejamento sério de relocação e uso profissional.",
+        "title": "Swiss Ephemeris-Based Calculations",
+        "description": "Planetary positions and lines are computed with Swiss Ephemeris-style astronomy, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
         "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -79,8 +84,8 @@
         }
       },
       {
-        "title": "Completamente Grátis, Uso Ilimitado",
-        "description": "Esta calculadora de astrocartografia é completamente gratuita com uso ilimitado—sem cartão de crédito, sem taxas ocultas. Gere mapas ilimitados, baixe arquivos sem marca d'água e acesse interpretações de IA sem custo. A calculadora de astrologia de relocação processa todos os dados de nascimento localmente no seu navegador, garantindo privacidade completa enquanto mantém precisão de cálculo profissional.",
+        "title": "Free Map Core, Clear Paid Depth",
+        "description": "Generate astrocartography maps without payment. Guest sessions have daily limits; signing in unlocks more map use. Birth data is sent securely for calculation. Optional AI map chat, city comparison reports, and saved research use credits as shown before you spend them.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -89,7 +94,7 @@
       },
       {
         "title": "Interpretações Alimentadas por IA",
-        "description": "Além dos cálculos, esta calculadora de linhas planetárias fornece interpretações alimentadas por IA explicando o que cada linha planetária significa para sua carreira, relacionamentos e crescimento pessoal. A calculadora de mapa de astrocartografia ajuda você a entender padrões de energia específicos da localização, tornando conceitos astrológicos complexos acessíveis para tomada de decisão prática.",
+        "description": "Optional AI-assisted chat and reports explain line and city themes in plain language. AI features consume credits; the map and line geometry remain free to explore within guest or signed-in limits.",
         "icon": "RiSparklingLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -193,7 +198,7 @@
   "cta": {
     "name": "cta",
     "title": "Gere Seu Mapa de Astrocartografia Grátis Agora",
-    "description": "Use nossa calculadora de astrocartografia profissional para criar seu mapa personalizado com precisão do Swiss Ephemeris. Descubra cidades ideais para sua carreira, relacionamentos e crescimento pessoal. Esta calculadora de astrologia de relocação é completamente gratuita—sem cadastro necessário, uso ilimitado.",
+    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
     "buttons": [
       {
         "title": "Mapa de Astrocartografia grátis →",

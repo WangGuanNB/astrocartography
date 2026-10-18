@@ -265,7 +265,7 @@ export default function PlacementPage({ page, locale }: { page: PlacementPageCon
             operatingSystem: "Web Browser",
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
             featureList: feature.items.map((item) => item.title),
-            creator: { "@type": "Organization", name: "Astrocartography Calculator" },
+            creator: { "@type": "Organization", name: "Astrocarto.org", url: getCanonicalUrl("en", "/") },
           }),
         }}
       />

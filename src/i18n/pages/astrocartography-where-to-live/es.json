@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "Genera tu mapa",
-        "url": "/",
+        "url": "/#generator",
         "icon": "RiArrowRightLine"
       },
       {
@@ -40,6 +40,109 @@
         "url": "/astrocartography-lines",
         "icon": "RiRouteLine",
         "variant": "secondary"
+      }
+    ]
+  },
+  "userPaths": {
+    "name": "user-paths",
+    "label": "Choose your path",
+    "title": "Two ways to use this guide",
+    "description": "Both paths use tools that already exist on Astrocarto.org. Pick the workflow that matches whether you already have candidate cities.",
+    "items": [
+      {
+        "title": "I have cities to compare",
+        "description": "Start with your birth data, generate the map, add up to four cities in Compare Cities on the map, then confirm finalists with the relocation chart (one city per run).",
+        "icon": "RiMapPinLine",
+        "buttons": [
+          {
+            "title": "Generate map",
+            "url": "/#generator",
+            "icon": "RiMapLine"
+          },
+          {
+            "title": "Relocation chart",
+            "url": "/relocation-chart-calculator",
+            "icon": "RiPieChartLine",
+            "variant": "outline"
+          }
+        ]
+      },
+      {
+        "title": "I want to explore places",
+        "description": "Generate your map first, scan planetary lines globally, and use Check City when a place catches your interest.",
+        "icon": "RiCompassLine",
+        "buttons": [
+          {
+            "title": "Generate map",
+            "url": "/#generator",
+            "icon": "RiMapLine"
+          },
+          {
+            "title": "All line meanings",
+            "url": "/astrocartography-lines",
+            "icon": "RiRouteLine",
+            "variant": "outline"
+          }
+        ]
+      }
+    ]
+  },
+  "workflowDemo": {
+    "name": "workflow-demo",
+    "label": "Demo workflow",
+    "title": "Example: shortlist cities with demo birth data",
+    "description": "The sample birth details below are for illustration only. Repeat the same clicks with your real birth date, time, and birthplace.",
+    "items": [
+      {
+        "title": "Enter birth data",
+        "description": "Example: 1990-06-15, 14:30, Los Angeles, CA — or use your own data on the homepage generator.",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "Generate the map",
+        "description": "Open the interactive map from the homepage. Guest users have a daily map limit; sign in for more sessions.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Compare demo candidates",
+        "description": "Try Compare Cities with illustrative picks such as Singapore, Tokyo, and Vancouver (plus your current city as a baseline). Read nearby lines and angles on the map—career research often starts with Sun MC, Jupiter MC, or Mercury MC themes, but results depend on your full chart.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Confirm & reality-check",
+        "description": "For each finalist, run the free relocation chart once per city. Then verify visas, jobs, housing, and cost of living—astrocartography does not replace practical planning.",
+        "icon": "RiPieChartLine"
+      }
+    ],
+    "image": {
+      "src": "/imgs/features/planetary-lines-meaning-map.webp",
+      "alt": "Astrocarto map interface with city tools (demo illustration)"
+    },
+    "imageCaption": "Demo only — example birth data and cities shown for workflow training, not a prediction for your chart. Your lines and city fits will differ."
+  },
+  "mapVsRelocation": {
+    "name": "map-vs-relocation",
+    "label": "Map vs relocation chart",
+    "title": "When to use the map vs the relocation chart",
+    "description": "These tools answer different questions. Use both for serious relocation research.",
+    "items": [
+      {
+        "title": "Astrocartography map",
+        "description": "Shows where planetary lines fall worldwide. Best for scanning many regions, comparing up to four cities on one map, and spotting line crossings near a place.",
+        "icon": "RiMapLine",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Astrocartography world map with planetary lines"
+        }
+      },
+      {
+        "title": "Relocation chart",
+        "description": "Recalculates angles and whole-sign houses for one chosen city while keeping the same birth moment. Best for a focused read of how life topics reorder in that city.",
+        "icon": "RiPieChartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-relocation-planning.webp",
+          "alt": "Relocation chart planning comparison"
+        }
       }
     ]
   },
@@ -55,6 +158,11 @@
         "text": "¿Quieres el significado de cada línea?",
         "linkText": "Líneas de astrocartografía",
         "url": "/astrocartography-lines"
+      },
+      {
+        "text": "How to read lines on your map?",
+        "linkText": "Astrocartography Map Interpretation Guide",
+        "url": "/posts/astrocartography-map-interpretation"
       },
       {
         "text": "¿Comparas una ciudad concreta?",
@@ -234,6 +342,22 @@
       {
         "title": "¿También debería usar una carta relocada?",
         "description": "Sí, especialmente para mudanzas serias. El mapa muestra líneas geográficas; la carta relocada muestra una vista específica de la ciudad."
+      },
+      {
+        "title": "How do I compare two cities on Astrocarto.org?",
+        "description": "Generate your map on the homepage, then use Compare Cities in the map tools (up to four places). For a wheel-style read of one finalist at a time, use the free relocation chart calculator. Full AI city comparison reports on the map use credits."
+      },
+      {
+        "title": "Which lines are most career-related?",
+        "description": "There is no single career line for everyone. Many readers start with Sun MC (visibility), Jupiter MC (expansion), Mercury MC (communication and knowledge work), or Mars MC (drive). Also check whether the city’s line mix matches your actual job market and visa path."
+      },
+      {
+        "title": "Do I need my exact birth time?",
+        "description": "Yes, for reliable angles and MC/IC themes. If you only know a date, treat line and angle readings as exploratory and avoid strong conclusions about houses or Ascendant-dependent lines."
+      },
+      {
+        "title": "What if no major lines pass near a city?",
+        "description": "That is not automatically bad. A city without a dominant line can feel neutral or flexible. Weigh practical factors, use Compare Cities for contrast, and read the relocation chart for house shifts in that place."
       }
     ]
   },

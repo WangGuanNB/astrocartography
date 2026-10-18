@@ -255,8 +255,8 @@
   },
   "hero": {
     "title": "Astrocartography Calculator - Discover Your Ideal Location",
-    "highlight_text": "Free Forever",
-    "description": "Astrocartography Calculator maps your birth chart onto the world, revealing where planetary lines amplify your career, relationships, and personal growth. Using professional-grade calculations with Swiss Ephemeris accurate to 1 mile, we analyze locations worldwide to show where Sun, Venus, Jupiter, and other planetary energies are strongest. Digital nomads, relocators, and astrology enthusiasts trust our free tool for data-driven location insights—no sign-up, no limits.",
+    "highlight_text": "Free Map Generator",
+    "description": "Generate a personal astrocartography map from your birth date, time, and place. Explore planetary lines worldwide, check one city, compare relocation options, and use optional AI interpretation when you want more context.",
     "images": [
       {
         "src": "/imgs/features/hero-web.webp",
@@ -278,21 +278,28 @@
         "url": "/#generator",
         "target": "_self",
         "variant": "default"
+      },
+      {
+        "title": "Compare Places to Live",
+        "icon": "RiMapPinLine",
+        "url": "/astrocartography-where-to-live",
+        "target": "_self",
+        "variant": "outline"
       }
     ],
     "stats": [
       {
-        "value": "54,000+",
+        "value": "90,000+",
         "label": "Registered Users",
         "icon": "RiUserLine"
       },
       {
-        "value": "4.8/5",
-        "label": "User Rating",
-        "icon": "RiStarLine"
+        "value": "38,000+",
+        "label": "AI Chat Users",
+        "icon": "RiMessage3Line"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "happy_users": {
       "rating": 5,
       "count": "714+",
@@ -486,11 +493,11 @@
     "name": "benefit",
     "title": "Why Choose Our Astrocartography Calculator",
     "label": "Core Benefits",
-    "description": "Our astrocartography calculator combines astronomical precision with AI interpretation, offering professional-grade analysis that's completely free and privacy-focused.",
+    "description": "Start with a free map, then choose the level of interpretation or relocation research that fits your question.",
     "items": [
       {
-        "title": "Professional Precision, Completely Free",
-        "description": "Professional-grade astrocartography analysis with unlimited free access. We use the same Swiss Ephemeris library that professional astrology software relies on, with 1-mile accuracy using Swiss Ephemeris calculations. Generate unlimited astrocartography charts, download watermark-free files, and access AI interpretations—no credit card, no hidden fees. Whether you're a student, entrepreneur, or retiree, access professional astrocartography analysis at zero cost.",
+        "title": "Free Map, Clear Next Steps",
+        "description": "Generate and explore your astrocartography map for free. Check nearby planetary lines, compare cities, or open an optional AI interpretation when you need a deeper explanation. Paid AI and research features are clearly identified before use.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/free-astrocartography-calculator-tool.webp",
@@ -507,8 +514,8 @@
         }
       },
       {
-        "title": "Privacy-First Architecture",
-        "description": "Your birth data calculates locally in your browser—never uploaded to servers, never stored in databases, never shared with third parties. Generate your astrocartography chart with complete privacy. All files have full commercial rights: use them for personal planning, professional consultations, teaching, or publishing without licensing fees. Privacy and professional quality shouldn't be exclusive to paying customers.",
+        "title": "Your Research Stays Under Your Control",
+        "description": "Your birth details are used to calculate the map you request and are not displayed publicly. Saving a relocation project is optional and requires an account, so you decide whether to keep a shortlist for later. See our privacy policy for full data-handling details.",
         "icon": "RiLockLine",
         "image": {
           "src": "/imgs/features/privacy-astrocartography-calculator.webp",
@@ -517,14 +524,59 @@
       }
     ]
   },
+  "productProof": {
+    "name": "product-access",
+    "label": "REAL PRODUCT, CLEAR ACCESS",
+    "title": "Start Free. Pay Only When You Choose More Depth.",
+    "description": "The interactive map and core exploration tools are available before purchase. Optional AI interpretation and research features are identified before you spend credits or start checkout.",
+    "image": {
+      "src": "/imgs/features/planetary-lines-meaning-map.webp",
+      "alt": "Demo of the real Astrocarto astrocartography map interface with planetary lines and city exploration tools"
+    },
+    "items": [
+      {
+        "label": "FREE CORE TOOLS",
+        "title": "Generate and explore your map",
+        "description": "Begin with the calculation itself. No purchase is required to create the map and inspect its main location signals.",
+        "icon": "RiMap2Line",
+        "list": [
+          "Generate and navigate an interactive world map",
+          "Filter planetary lines and inspect nearby locations",
+          "Use the basic Check City and Compare Cities flow in your session"
+        ]
+      },
+      {
+        "label": "OPTIONAL PAID DEPTH",
+        "title": "Choose interpretation or saved research",
+        "description": "Paid tools add depth; they do not replace access to the core map. The product shows the relevant price or credit cost before use.",
+        "icon": "RiSparkling2Line",
+        "list": [
+          "Personal AI chat and structured reports use the displayed credits",
+          "Saved research and timing access are offered only where clearly labeled",
+          "Plans and prices are shown before checkout—there is no required purchase to generate a map"
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Real interface example — demo data only",
+      "description": "This image shows the actual map experience. Any birth details or locations shown are fixed examples, not a real user's forecast. Astrocartography is a symbolic research tool; always verify cost of living, visas, work, safety, health, and personal circumstances before making a move.",
+      "button": {
+        "title": "Generate My Free Map",
+        "icon": "RiMagicLine",
+        "url": "/#generator",
+        "target": "_self",
+        "variant": "default"
+      }
+    }
+  },
   "usage": {
     "name": "usage",
     "title": "How to Use Astrocartography Calculator",
-    "description": "Generate your professional astrocartography chart in 4 simple steps.",
+    "description": "Generate and explore your astrocartography map in 3 simple steps.",
     "items": [
       {
         "title": "Enter Birth Information",
-        "description": "Input your birth date, time (as precise as possible to the minute), and city. Without exact birth time, you'll still see planetary lines (Sun, Moon, Venus, etc.) but not angular lines (ASC, DSC, MC, IC). Our database includes cities worldwide with automatic timezone and historical daylight saving time handling.",
+        "description": "Enter your birth date, exact birth time when known, and birthplace. The calculator resolves the location and time zone before generating the map.",
         "icon": "RiCalendarLine"
       },
       {
@@ -533,14 +585,9 @@
         "icon": "RiPlanetLine"
       },
       {
-        "title": "Explore Interactive Map & AI Insights",
-        "description": "Click any planetary line or power spot (line intersection) for detailed AI interpretation. Learn how that planet affects your career, relationships, health, and creativity in that location, plus whether it suits long-term residence, short visits, work, or study. No query limits—explore as much as you need.",
+        "title": "Check and Compare Cities",
+        "description": "Use Check City to review nearby lines, distance, and strength, or compare 2–3 places for a relocation goal. AI interpretation is optional and uses the credits shown in the product.",
         "icon": "RiMapLine"
-      },
-      {
-        "title": "Export Professional Files",
-        "description": "Download high-resolution PNG maps, PDF interpretation reports, or SVG vector files with one click. All files are watermark-free and support commercial use. Print for consultation meetings, share with friends, or use in team relocation decisions.",
-        "icon": "RiDownloadLine"
       }
     ]
   },
@@ -551,32 +598,32 @@
     "items": [
       {
         "title": "Interactive Global Map",
-        "description": "Drag, zoom, and click any city to instantly view its planetary energy distribution. Maps support satellite, terrain, and political boundary views, helping you understand how astrocartography lines correspond to real geography. Power spots (line intersections) are highlighted—these energy convergence zones are key focus points in astrocartography for relocation decisions.",
+        "description": "Pan and zoom around a global basemap while viewing your calculated planetary lines. Search for places and open the map in a larger view when you need more space.",
         "icon": "RiGlobalLine"
       },
       {
         "title": "Swiss Ephemeris Calculation Engine",
-        "description": "We use Swiss Ephemeris, supporting planetary calculations from 3000 BCE to 3000 CE. Maintained by the Zurich Observatory, this library uses the same precision standards that professional astrology software worldwide relies on. Whether analyzing historical figures or planning future relocations, your astrocartography map accuracy matches professional astrology software.",
+        "description": "The calculator uses Swiss Ephemeris data as part of its planetary position calculations, then projects the relevant angular lines onto the world map from your birth details.",
         "icon": "RiCompassLine"
       },
       {
         "title": "Multi-Language Global Coverage",
-        "description": "Search cities in Chinese, English, Japanese, and more across locations worldwide with historical timezone data. The system automatically handles daylight saving time changes (like US DST rule shifts 1970-2007) and timezone boundary adjustments, ensuring accurate astrocartography charts regardless of birth country or era.",
+        "description": "Use the site in English, Chinese, Portuguese, Spanish, Italian, or German, and search worldwide birthplaces and target cities through the location search.",
         "icon": "RiTranslate"
       },
       {
         "title": "Smart Planetary Line Filtering",
-        "description": "Display or hide specific planetary line combinations without limits. Show only Sun+Jupiter lines for career cities, only Venus+Moon lines for emotional security locations, or hide Saturn+Pluto lines to avoid high-challenge zones. Save favorite filter configurations to quickly compare different planetary combinations and find locations matching your current life stage goals.",
+        "description": "Show or hide planetary lines to reduce visual clutter and focus on the planets and angles relevant to the question you are exploring.",
         "icon": "RiFilterLine"
       },
       {
-        "title": "Power Spots Energy Analysis",
-        "description": "AI automatically identifies and highlights line intersections (power spots) where multiple planetary energies activate simultaneously. These crossings typically exert stronger influence than single lines. For example: Venus+Jupiter intersections may bring romantic opportunities and wealth growth, while Saturn+Pluto intersections suit deep transformation and career rebuilding.",
-        "icon": "RiStarLine"
+        "title": "Check City",
+        "description": "Review the planetary lines nearest to a selected city, including calculated distance and strength, before opening a deeper interpretation.",
+        "icon": "RiMapPinLine"
       },
       {
-        "title": "History & Multi-Person Comparison",
-        "description": "The system auto-saves your generation history, supporting simultaneous loading of multiple astrocartography charts for comparison. Compare your planetary line overlaps with a partner's, identify Jupiter line intersections among team members, or compare transit chart changes across years. For team relocations, family moves, or partner site selection, quickly overlay multiple people's distributions.",
+        "title": "Compare Cities & Save Research",
+        "description": "Compare 2–3 cities against a selected relocation goal. Signed-in users can save one current research project and return to its shortlist, date, and practical notes later.",
         "icon": "RiTeamLine"
       }
     ]
@@ -617,7 +664,7 @@
       },
       {
         "title": "How accurate are the calculations?",
-        "description": "We use Swiss Ephemeris calculations with professional-grade accuracy, precise to within 1 mile on Earth's surface. Our calculations account for time zones, daylight saving time, and historical calendar changes. This is the same precision professional astrologers rely on for consultations."
+        "description": "The calculator uses Swiss Ephemeris data for planetary positions and resolves the supplied birthplace and time zone before projecting the angular lines. Results depend on the accuracy of the birth time and location you enter."
       },
       {
         "title": "Should I move based solely on my astrocartography map?",
@@ -625,7 +672,7 @@
       },
       {
         "title": "Can I use the generated maps commercially?",
-        "description": "Yes. Your generated astrocartography charts and interpretation reports can be used for any purpose: personal planning, professional astrology consultations, teaching, publications, social sharing, etc., without licensing fees. Your birth data calculates locally with complete privacy protection."
+        "description": "You may download and share your generated map for personal reference. If you plan to republish it, include it in a paid service, or use it commercially, contact support first so we can confirm the current terms and required map attributions. Birth details are sent to the calculation service to create the requested chart and are not displayed publicly. See the Privacy Policy for current data-handling details."
       },
       {
         "title": "What is your refund policy?",
@@ -640,38 +687,38 @@
   "stats": {
     "name": "stats",
     "disabled": false,
-    "title": "Trusted by Astrology Professionals\nand Enthusiasts Worldwide",
-    "description": "Join thousands of astrologers, digital nomads, and students using our professional astrocartography calculator for accurate relocation astrology readings.",
+    "title": "Used for Maps, City Checks, and Relocation Research",
+    "description": "These rounded totals come from the product database and describe actual account and product activity.",
     "items": [
       {
         "title": "Astrology Enthusiasts",
-        "label": "54,000+",
-        "description": "Registered Users Worldwide",
+        "label": "90,000+",
+        "description": "Registered user accounts",
         "icon": "RiUserLine"
       },
       {
-        "title": "Verified Reviews",
-        "label": "714+",
-        "description": "User Feedback on Astrocartography",
-        "icon": "RiStarLine"
+        "title": "AI Chat Users",
+        "label": "38,000+",
+        "description": "Users who have tried AI chat",
+        "icon": "RiMessage3Line"
       },
       {
-        "title": "Professional Astrologers",
-        "label": "377",
-        "description": "Using Our Calculator Daily",
-        "icon": "RiShoppingCartLine"
+        "title": "Feedback Messages",
+        "label": "800+",
+        "description": "Messages received through product feedback",
+        "icon": "RiFeedbackLine"
       },
       {
-        "title": "Community Rating",
-        "label": "4.8/5",
-        "description": "From Astrology Community",
-        "icon": "RiThumbUpLine"
+        "title": "Languages",
+        "label": "6",
+        "description": "Available interface languages",
+        "icon": "RiTranslate"
       }
     ]
   },
   "testimonial": {
     "name": "testimonial",
-    "disabled": false,
+    "disabled": true,
     "label": "TRUSTED BY 54,000+ USERS",
     "title": "What Astrology Enthusiasts Say\nAbout Our Astrocartography Calculator",
     "description": "Based on 714+ verified user reviews. See why thousands trust our professional astrocartography tool for relocation planning.",
@@ -730,7 +777,7 @@
   "cta": {
     "name": "cta",
     "title": "Generate Your Free Astrocartography Map Now",
-    "description": "Use Astrocartography Calculator to create your professional-grade astrocartography chart with Swiss Ephemeris precision analyzing locations worldwide. Discover ideal cities for your career, relationships, and personal growth. No registration required, unlimited use—get professional analysis in 3 seconds.",
+    "description": "Create your personal map, explore planetary lines worldwide, and use Check City or Compare Cities when you want to examine a specific relocation question.",
     "buttons": [
       {
         "title": "Generate Free Map Now",
@@ -776,7 +823,7 @@
           "10 credits (1 AI question)",
           "Interactive astrocartography map",
           "Basic planetary line explanations",
-          "Generate unlimited maps",
+          "Generate maps (guest daily limit; sign in for more)",
           "Instant access"
         ],
         "interval": "one-time",
@@ -987,15 +1034,15 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "Astrocartography Calculator",
-      "description": "Astrocartography Calculator provides professional-grade astrocartography tools for digital nomads, relocation planners, and astrology practitioners. We use Swiss Ephemeris to ensure astronomical precision, and AI technology makes complex planetary line interpretations accessible. Strict privacy protection, global location analysis—making professional astrocartography charts accessible to everyone.",
+      "title": "Astrocarto.org",
+      "description": "Astrocarto.org (astrocarto.org) provides professional-grade astrocartography tools for digital nomads, relocation planners, and astrology practitioners. We use Swiss Ephemeris to ensure astronomical precision, and AI technology makes complex planetary line interpretations accessible. Strict privacy protection, global location analysis—making professional astrocartography charts accessible to everyone.",
       "logo": {
         "src": "/logo.png",
-        "alt": "Astrocartography Calculator"
+        "alt": "Astrocarto.org"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • Astrocartography Calculator. All rights reserved.",
+    "copyright": "© 2025 • Astrocarto.org. All rights reserved.",
     "nav": {
       "items": [
         {

@@ -16,6 +16,7 @@ import { ComponentType } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 // 图标映射：将 Ri 图标名称映射到 lucide-react 图标
 const iconMap: Record<string, ComponentType<{ className?: string }>> = {
@@ -115,6 +116,24 @@ export default function Feature3({ section }: { section: SectionType }) {
             </p>
           )}
         </motion.div>
+
+        {section.image?.src && (
+          <figure className="mx-auto mb-10 max-w-5xl overflow-hidden rounded-2xl border border-border/70 bg-muted/20">
+            <Image
+              src={section.image.src}
+              alt={section.image.alt || section.title || "Product demo"}
+              width={1200}
+              height={675}
+              className="h-auto w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 960px"
+            />
+            {section.imageCaption && (
+              <figcaption className="border-t border-border/60 px-4 py-3 text-center text-xs leading-relaxed text-muted-foreground md:text-sm">
+                {section.imageCaption}
+              </figcaption>
+            )}
+          </figure>
+        )}
 
         {/* Step Indicators with Connecting Line - 4列布局 */}
         <div className="relative mx-auto mb-8 hidden w-full max-w-7xl md:block">

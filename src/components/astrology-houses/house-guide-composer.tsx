@@ -136,11 +136,11 @@ export default function HouseGuideComposer({
             inLanguage: locale === "zh" ? "zh-CN" : locale,
             author: {
               "@type": "Organization",
-              name: "Astrocartography Calculator",
+              name: "Astrocarto.org",
             },
             publisher: {
               "@type": "Organization",
-              name: "Astrocartography Calculator",
+              name: "Astrocarto.org",
               url: getCanonicalUrl("en", "/"),
             },
           }),

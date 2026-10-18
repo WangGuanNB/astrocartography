@@ -1,33 +1,38 @@
 {
   "metadata": {
-    "title": "Mapa de realocação grátis | Compare cidades",
-    "description": "Calculadora gratuita: mesmo instante de nascimento, nova cidade. Compare Ascendente e casas inteiras (local natal vs destino). Sem cadastro.",
-    "keywords": "mapa de realocação, mapa astral outro lugar, astrologia da mudança, calculadora astrológica, Ascendente, casas inteiras, astrocartografia"
+    "title": "Free Relocation Chart Calculator | One City at a Time",
+    "description": "Free relocation chart calculator: same birth moment, one new city. See Ascendant and whole-sign house changes (birth vs relocation). Compare multiple places on the astrocartography map; run this tool once per city.",
+    "keywords": "relocation chart, relocation chart calculator, free relocation chart, relocated chart, relocation astrology, astrocartography, natal chart relocation"
   },
   "intentAnchor": {
     "text": "Quer ver como seu mapa muda se você mora em outra cidade? A ferramenta vem primeiro: informe data, hora e local de nascimento e escolha a cidade para onde pode se mudar. Mantemos o mesmo instante cósmico e recalculamos ângulos e casas nas novas coordenadas — assim você vê como as áreas da vida se reorganizam após a mudança."
   },
   "internalLinks": {
-    "title": "Ferramentas relacionadas",
+    "title": "Related Tools",
     "items": [
       {
-        "text": "Gere seu mapa de astrocartografia grátis no mapa-múndi.",
-        "linkText": "Mapa de Astrocartografia grátis",
-        "url": "/pt"
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
+        "url": "/"
       },
       {
-        "text": "Ver trânsitos em relação ao mapa natal.",
-        "linkText": "Calculadora de trânsitos",
+        "text": "Compare timing with transits.",
+        "linkText": "Transit Chart Calculator",
         "url": "/transit-chart-calculator"
       },
       {
-        "text": "Ver linhas planetárias no globo.",
-        "linkText": "Calculadora de astrocartografia",
+        "text": "Step-by-step where-to-live workflow.",
+        "linkText": "Astrocartography Where to Live",
+        "url": "/astrocartography-where-to-live"
+      },
+      {
+        "text": "See where lines fall on the globe.",
+        "linkText": "Try Astrocartography",
         "url": "/astrocartography-lines"
       },
       {
-        "text": "Roda completa no local de nascimento.",
-        "linkText": "Mapa natal",
+        "text": "Full wheel at birthplace.",
+        "linkText": "Natal Chart",
         "url": "/chart/natal-chart"
       }
     ]
@@ -85,7 +90,7 @@
       },
       {
         "title": "Grátis, sem cadastro",
-        "description": "Gere quantos mapas quiser e teste várias cidades antes de decidir. Os dados ficam na sessão da página.",
+        "description": "Generate a relocation chart as often as you like—one city per calculation. Birth data is sent securely to our server for Swiss Ephemeris-style angle and house math; we do not sell your data. Try every finalist city before you decide.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -163,8 +168,8 @@
         "icon": "RiGlobalLine"
       },
       {
-        "title": "Compare cidades na mesma sessão",
-        "description": "Sem limite de recálculos: ideal para encurtar a lista de destinos antes de mudar.",
+        "title": "Try Another City in One Session",
+        "description": "Generate a relocation chart, then change the relocation city and calculate again—one city at a time. For side-by-side map comparison of up to four places, use Compare Cities on the astrocartography map after you generate it.",
         "icon": "RiRefreshLine"
       }
     ]
@@ -194,6 +199,14 @@
       {
         "title": "Qual sistema de casas?",
         "description": "Casas inteiras a partir do Ascendente de cada local, legível e muito usada para comparações de realocação online."
+      },
+      {
+        "title": "Can I compare two cities in one relocation chart?",
+        "description": "No. Each run is for one relocation city. To compare several places on one map, generate your astrocartography chart and use Compare Cities (up to four). Run this calculator separately for each finalist."
+      },
+      {
+        "title": "Is my birth data stored?",
+        "description": "Calculations are processed on our servers when you submit the form. We use the data to return your relocation chart for that session. See our privacy policy for retention details."
       }
     ]
   },
@@ -218,7 +231,8 @@
       "birthLocation": "Local de nascimento",
       "timezone": "Fuso horário do nascimento",
       "relocateLocation": "Cidade de destino (onde você pode morar)",
-      "submit": "Calcular mapa de realocação"
+      "submit": "Calcular mapa de realocação",
+      "privacyNote": "Birth date, time, and locations are sent securely to our server for calculation. We do not sell your data."
     },
     "result": {
       "title": "Seu mapa de realocação",
@@ -232,12 +246,43 @@
       "natalHouse": "Casa (natal)",
       "relocatedHouse": "Casa (realocada)",
       "ctaChart": "Ver mapa de astrocartografia com estes dados",
-      "footnote": "Casas inteiras. Longitudes planetárias idênticas; só mudam ângulos e casas."
+      "footnote": "Casas inteiras. Longitudes planetárias idênticas; só mudam ângulos e casas.",
+      "calculateAnother": "Calculate another city",
+      "copySummary": "Copy summary",
+      "copySuccess": "Summary copied"
     },
     "errors": {
       "required": "Preencha o nascimento e a cidade de destino.",
       "location": "Local não encontrado. Tente «Cidade, País».",
       "generic": "Falha no cálculo. Verifique os dados e tente de novo."
     }
+  },
+  "readingGuides": {
+    "name": "reading-guides",
+    "title": "How to Read Your Relocation Chart",
+    "label": "READING GUIDE",
+    "description": "Four practical lenses after you calculate. This tool focuses on one relocation city at a time.",
+    "items": [
+      {
+        "title": "What changes (and what does not)",
+        "description": "Planetary signs and degrees stay the same because the birth moment in time is fixed. Ascendant, angles, and whole-sign houses change with the new coordinates.",
+        "icon": "RiRefreshLine"
+      },
+      {
+        "title": "How to read the house table",
+        "description": "Scan planets whose relocated house number jumps the most. Those topics often feel different after you move. Keep the natal column as your baseline.",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "Relocation chart vs astrocartography map",
+        "description": "Use the map to see line geography and compare up to four cities. Use this calculator for a wheel-style snapshot of one city’s angles and houses.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Limitations to remember",
+        "description": "Whole-sign houses simplify interpretation. Unknown birth time weakens angles. This is symbolic guidance—not visa, salary, or housing advice.",
+        "icon": "RiInformationLine"
+      }
+    ]
   }
 }

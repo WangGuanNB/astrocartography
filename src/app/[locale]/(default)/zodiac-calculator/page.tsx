@@ -47,7 +47,7 @@ export async function generateMetadata({
       description,
       type: "website",
       url: getCanonicalUrl(locale, PATH),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
     },
     twitter: {
       card: "summary_large_image",
@@ -178,7 +178,7 @@ export default async function ZodiacCalculatorPage({
             ],
             creator: {
               "@type": "Organization",
-              name: "Astrocartography Calculator",
+              name: "Astrocarto.org",
             },
           }),
         }}

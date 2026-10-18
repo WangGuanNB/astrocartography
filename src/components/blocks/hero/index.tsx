@@ -137,6 +137,18 @@ export default function Hero({ hero }: { hero: HeroType }) {
             <p className="hero-text-up text-sm text-muted-foreground">{hero.tip}</p>
           )}
 
+          {hero.stats && hero.stats.length > 0 && (
+            <div className="hero-text-up mx-auto flex max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+              {hero.stats.map((stat, index) => (
+                <div key={`${stat.label}-${index}`} className="flex items-center gap-2">
+                  {stat.icon && <Icon name={stat.icon} className="h-4 w-4 text-primary" />}
+                  <span className="font-semibold text-foreground">{stat.value}</span>
+                  <span>{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
           {hero.show_happy_users && (
             <HappyUsers 
               rating={hero.happy_users?.rating}

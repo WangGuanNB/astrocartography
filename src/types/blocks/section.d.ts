@@ -21,6 +21,8 @@ export interface Section {
   label?: string;
   icon?: string;
   image?: Image;
+  /** Optional caption under section.image (e.g. demo disclaimer) */
+  imageCaption?: string;
   buttons?: Button[];
   items?: SectionItem[];
   cta?: {

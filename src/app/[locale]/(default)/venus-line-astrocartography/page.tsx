@@ -51,7 +51,7 @@ export async function generateMetadata({
       description,
       type: "website",
       url: getCanonicalUrl(locale, PATH),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
       images: [{ url: "/imgs/features/hero-web.webp", width: 1200, height: 630, alt: title }],
     },
     twitter: { card: "summary_large_image", title, description, images: ["/imgs/features/hero-web.webp"] },
@@ -125,8 +125,8 @@ export default async function VenusLinePage({
             headline: h1Title,
             description: page.metadata.description,
             url: getCanonicalUrl(locale, PATH),
-            author: { "@type": "Organization", name: "Astrocartography Calculator" },
-            publisher: { "@type": "Organization", name: "Astrocartography Calculator", url: getCanonicalUrl("en", "/") },
+            author: { "@type": "Organization", name: "Astrocarto.org", url: getCanonicalUrl("en", "/") },
+            publisher: { "@type": "Organization", name: "Astrocarto.org", url: getCanonicalUrl("en", "/") },
           }),
         }}
       />

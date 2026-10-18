@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Free Astrocartography Calculator - Generate Your Chart Online 2026",
-    "description": "Use our free astrocartography calculator to generate your personalized chart instantly. Professional Swiss Ephemeris calculations, 1-mile accuracy. No signup required. Calculate planetary lines for any location worldwide.",
+    "description": "Free astrocartography calculator with Swiss Ephemeris-based lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
     "keywords": "astrocartography calculator, free astrocartography calculator, astrocartography calculator online, how astrocartography calculator works, astrocartography calculation method"
   },
   "intentAnchor": {
@@ -14,6 +14,11 @@
         "text": "Generate your free astrocartography chart on the world map.",
         "linkText": "Free Astrocartography Chart & Map",
         "url": "/"
+      },
+      {
+        "text": "Step-by-step where-to-live workflow.",
+        "linkText": "Astrocartography Where to Live",
+        "url": "/astrocartography-where-to-live"
       },
       {
         "text": "Find your rising sign first.",
@@ -31,7 +36,7 @@
     "name": "introduce",
     "title": "What is Astrocartography Calculator",
     "label": "Introduction",
-    "description": "The Astrocartography Calculator is a professional-grade tool that projects your birth chart onto a world map, revealing where planetary energies are strongest across Earth's surface. This relocation astrology calculator uses Swiss Ephemeris astronomical data to calculate planetary positions with 1-mile accuracy, making it the most precise free astrocartography chart calculator available online.",
+    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use Swiss Ephemeris-style astronomy on our servers after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
     "image": {
       "src": "/imgs/features/hero-web.webp",
       "alt": "Astrocartography Calculator Interface"
@@ -70,8 +75,8 @@
     "description": "Our astrocartography calculator combines professional-grade accuracy with user-friendly features, offering the most comprehensive free relocation astrology calculator available.",
     "items": [
       {
-        "title": "Professional Precision with 1-Mile Accuracy",
-        "description": "The planetary line calculator uses Swiss Ephemeris, maintained by Zurich Observatory, which provides planetary positions accurate to within 1 mile on Earth's surface. This astrocartography chart calculator has been verified against professional software like Solar Fire and AstroGold, producing identical results. The astro map calculator automatically processes timezone conversions, accounting for historical daylight saving time changes and calendar system transitions (Julian to Gregorian). This locational astrology tool precision ensures your planetary line positions are reliable for serious relocation planning and professional use.",
+        "title": "Swiss Ephemeris-Based Calculations",
+        "description": "Planetary positions and lines are computed with Swiss Ephemeris-style astronomy, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
         "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -79,8 +84,8 @@
         }
       },
       {
-        "title": "Completely Free, Unlimited Use",
-        "description": "This astrocartography calculator is completely free with unlimited use—no credit card, no hidden fees. Generate unlimited charts, download watermark-free files, and access AI interpretations at zero cost. The relocation astrology calculator processes all birth data locally in your browser, ensuring complete privacy while maintaining professional calculation accuracy.",
+        "title": "Free Map Core, Clear Paid Depth",
+        "description": "Generate astrocartography maps without payment. Guest sessions have daily limits; signing in unlocks more map use. Birth data is sent securely for calculation. Optional AI map chat, city comparison reports, and saved research use credits as shown before you spend them.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -89,7 +94,7 @@
       },
       {
         "title": "AI-Powered Interpretations",
-        "description": "Beyond calculations, this planetary line calculator provides AI-powered interpretations explaining what each planetary line means for your career, relationships, and personal growth. The astrocartography chart calculator helps you understand location-specific energy patterns, making complex astrological concepts accessible for practical decision-making.",
+        "description": "Optional AI-assisted chat and reports explain line and city themes in plain language. AI features consume credits; the map and line geometry remain free to explore within guest or signed-in limits.",
         "icon": "RiSparklingLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -182,7 +187,7 @@
       },
       {
         "title": "How accurate is the astrocartography calculator?",
-        "description": "The planetary line calculator achieves 1-mile accuracy using Swiss Ephemeris calculations, matching results from professional software like Solar Fire and AstroGold. This astrocartography chart calculator automatically handles timezone conversions, historical daylight saving time changes, and calendar system transitions. The astro map calculator has been verified against known historical events and professional consultations."
+        "description": "Lines and positions are computed with Swiss Ephemeris-style astronomy, including timezone and historical DST handling. Treat results as symbolic relocation research—validate important moves with professional astrologers and real-world planning, not as guaranteed outcomes."
       },
       {
         "title": "What if I don't know my exact birth time?",
@@ -190,14 +195,14 @@
       },
       {
         "title": "Can I use the astrocartography calculator for commercial purposes?",
-        "description": "Yes. All charts generated by this astrocartography calculator can be used commercially without licensing fees. The planetary line calculator produces watermark-free files suitable for professional consultations, teaching, publications, or personal planning. This astrocartography chart calculator respects your privacy—all calculations occur locally in your browser."
+        "description": "Contact support to confirm terms for professional or commercial use, attribution, and exports. Birth data is sent to our calculation service when you generate a map; see the privacy policy for handling details."
       }
     ]
   },
   "cta": {
     "name": "cta",
     "title": "Generate Your Free Astrocartography Chart Now",
-    "description": "Use our professional astrocartography calculator to create your personalized chart with Swiss Ephemeris precision. Discover ideal cities for your career, relationships, and personal growth. This relocation astrology calculator is completely free—no registration required, unlimited use.",
+    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
     "buttons": [
       {
         "title": "Free Astrocartography Chart & Map →",

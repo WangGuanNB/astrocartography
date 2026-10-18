@@ -1199,7 +1199,7 @@ export default function AstroChat({
                   <div className="flex-1">
                     <p className="font-medium mb-1">You've used your free question!</p>
                     <p className="text-gray-300 text-xs mb-3">
-                      Sign in to continue asking unlimited questions about your astrocartography chart.
+                      Sign in to use credits for more AI map chat and deeper reports. Costs are shown before each paid action.
                     </p>
                     <Button
                       onClick={() => {
@@ -1337,7 +1337,7 @@ export default function AstroChat({
                     <div className="text-xs text-yellow-400 bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/20">
                       {remainingFreeQuestions > 0 
                         ? `Free: ${remainingFreeQuestions} question${remainingFreeQuestions > 1 ? 's' : ''} left`
-                        : 'Sign in for unlimited questions'}
+                        : 'Sign in to continue with credits'}
                     </div>
                   )}
                 </div>

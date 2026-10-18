@@ -28,7 +28,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: getCanonicalUrl(locale, path),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
     },
     twitter: {
       card: "summary_large_image",

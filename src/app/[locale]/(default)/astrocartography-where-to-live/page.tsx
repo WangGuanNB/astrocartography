@@ -8,7 +8,8 @@ import Feature from "@/components/blocks/feature";
 import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
 import GuideHero from "@/components/blocks/guide-hero";
-import { locales } from "@/i18n/locale";
+import GuideUserPaths from "@/components/blocks/guide-user-paths";
+import { locales, defaultLocale } from "@/i18n/locale";
 
 export const dynamic = "force-static";
 export const revalidate = 604800;
@@ -35,16 +36,19 @@ export async function generateMetadata({
     keywords,
     alternates: {
       canonical: getCanonicalUrl(locale, PATH),
-      languages: Object.fromEntries(
-        locales.map((language) => [language, getCanonicalUrl(language, PATH)])
-      ),
+      languages: {
+        ...Object.fromEntries(
+          locales.map((language) => [language, getCanonicalUrl(language, PATH)])
+        ),
+        "x-default": getCanonicalUrl(defaultLocale, PATH),
+      },
     },
     openGraph: {
       title,
       description,
       type: "website",
       url: getCanonicalUrl(locale, PATH),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
       images: [
         {
           url: "/imgs/features/hero-web.webp",
@@ -112,6 +116,10 @@ export default async function AstrocartographyWhereToLivePage({
         links={page.internalLinks?.items}
       />
 
+      {page.userPaths && <GuideUserPaths section={page.userPaths} />}
+      {page.workflowDemo && <Feature3 section={page.workflowDemo} />}
+      {page.mapVsRelocation && <Feature2 section={page.mapVsRelocation} />}
+
       {page.introduce && <FeatureWhatTwo section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
       {page.usage && <Feature3 section={page.usage} />}
@@ -130,11 +138,12 @@ export default async function AstrocartographyWhereToLivePage({
             url: getCanonicalUrl(locale, PATH),
             author: {
               "@type": "Organization",
-              name: "Astrocartography Calculator",
+              name: "Astrocarto.org",
+              url: getCanonicalUrl("en", "/"),
             },
             publisher: {
               "@type": "Organization",
-              name: "Astrocartography Calculator",
+              name: "Astrocarto.org",
               url: getCanonicalUrl("en", "/"),
             },
           }),

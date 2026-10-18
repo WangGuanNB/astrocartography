@@ -34,6 +34,7 @@ import { getCanonicalUrl } from "@/lib/utils";
 import { Section as SectionType } from "@/types/blocks/section";
 import Icon from "@/components/icon";
 import Link from "next/link";
+import HomepageProductProof from "@/components/blocks/homepage-product-proof";
 // import TestPaymentModal from '@/components/payment/test-payment-modal';
 
 function PopularLinesSection({ section }: { section?: SectionType }) {
@@ -232,38 +233,48 @@ export default async function LandingPage({
     }))
   } : null;
 
-  // 🔥 SEO优化：添加软件应用和评分的结构化数据
-  const softwareSchema = {
+  const canonicalUrl = getCanonicalUrl(locale);
+  const homepageSchema = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Astrocartography Calculator",
-    "applicationCategory": "LifestyleApplication",
-    "operatingSystem": "Web Browser",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "714",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": page.testimonial?.items?.slice(0, 3).map((item: any) => ({
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": item.title
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://astrocarto.org/#organization",
+        "name": "Astrocarto.org",
+        "url": "https://astrocarto.org/"
       },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+      {
+        "@type": "WebSite",
+        "@id": "https://astrocarto.org/#website",
+        "name": "Astrocarto.org",
+        "url": "https://astrocarto.org/",
+        "publisher": { "@id": "https://astrocarto.org/#organization" }
       },
-      "reviewBody": item.description
-    }))
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${canonicalUrl}#software`,
+        "name": "Astrocarto.org",
+        "alternateName": "Astrocartography Calculator",
+        "url": canonicalUrl,
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Web Browser",
+        "isAccessibleForFree": true,
+        "publisher": { "@id": "https://astrocarto.org/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free astrocartography map generation; optional paid AI and research features."
+        },
+        "featureList": [
+          "Interactive astrocartography world map",
+          "Planetary line filtering",
+          "City line and distance checks",
+          "City comparison and saved relocation research",
+          "Optional AI-assisted interpretation"
+        ]
+      }
+    ]
   };
 
   return (
@@ -274,12 +285,10 @@ export default async function LandingPage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
-      {softwareSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
+      />
       {/* Hero Section：一句主标题 + 一句副标题 + 一段简短价值描述 + CTA按钮文字-----------*/}
       {page.hero && <Hero hero={page.hero}/> }
       {/* 图片类的网站 */}
@@ -312,6 +321,9 @@ export default async function LandingPage({
        {page.benefit && <Feature2 section={page.benefit} />} 
         {/* { <不带图片 /> } */}
        {/* {page.benefit && <Feature2WhyOne section={page.benefit} />} */}
+
+      {/* Real product example + clear free/optional-paid boundary. */}
+      {page.productProof && <HomepageProductProof section={page.productProof} />}
 
 
       {/* How to Use [Tool Name]：用3个步骤说明使用流程------------ */}

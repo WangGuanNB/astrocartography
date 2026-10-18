@@ -53,7 +53,7 @@ export async function generateMetadata({
       description,
       type: "website",
       url: getCanonicalUrl(locale, PATH),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
     },
     twitter: {
       card: "summary_large_image",
@@ -186,7 +186,7 @@ export default async function PlanetaryPositionsTodayPage({
               "Optional date and time for another moment",
               "Current sky aspects with standard orbs",
             ],
-            creator: { "@type": "Organization", name: "Astrocartography Calculator" },
+            creator: { "@type": "Organization", name: "Astrocarto.org", url: getCanonicalUrl("en", "/") },
           }),
         }}
       />

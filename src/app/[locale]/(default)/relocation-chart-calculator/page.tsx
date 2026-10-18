@@ -9,6 +9,7 @@ import Feature from "@/components/blocks/feature";
 import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
 import { Link } from "@/i18n/navigation";
+import { defaultLocale } from "@/i18n/locale";
 
 export const dynamic = "force-static";
 export const revalidate = 604800;
@@ -50,6 +51,7 @@ export async function generateMetadata({
         it: getCanonicalUrl("it", path),
         pt: getCanonicalUrl("pt", path),
         de: getCanonicalUrl("de", path),
+        "x-default": getCanonicalUrl(defaultLocale, path),
       },
     },
     openGraph: {
@@ -57,7 +59,7 @@ export async function generateMetadata({
       description,
       type: "website",
       url: getCanonicalUrl(locale, path),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
       images: [
         {
           url: "/imgs/features/hero-web.webp",
@@ -96,6 +98,7 @@ type PageWithTool = Awaited<ReturnType<typeof getRelocationChartPage>> & {
       timezone: string;
       relocateLocation: string;
       submit: string;
+      privacyNote?: string;
     };
     result: {
       title: string;
@@ -109,6 +112,9 @@ type PageWithTool = Awaited<ReturnType<typeof getRelocationChartPage>> & {
       natalHouse: string;
       relocatedHouse: string;
       ctaChart: string;
+      calculateAnother?: string;
+      copySummary?: string;
+      copySuccess?: string;
       footnote: string;
     };
     errors: { required: string; location: string; generic: string };
@@ -176,6 +182,7 @@ export default async function RelocationChartCalculatorPage({
       {page.introduce && <FeatureWhatTwo section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
       {page.usage && <Feature3 section={page.usage} />}
+      {page.readingGuides && <Feature section={page.readingGuides} />}
       {page.feature && <Feature section={page.feature} />}
       {page.faq && <FAQ section={page.faq} />}
       {page.cta && <CTA section={page.cta} />}
@@ -198,7 +205,11 @@ export default async function RelocationChartCalculatorPage({
               "Whole-sign natal vs relocated houses for all planets",
               "Link to Astrocartography map with same birth data",
             ],
-            creator: { "@type": "Organization", name: "Astrocartography Calculator" },
+            creator: {
+              "@type": "Organization",
+              name: "Astrocarto.org",
+              url: getCanonicalUrl("en", "/"),
+            },
           }),
         }}
       />

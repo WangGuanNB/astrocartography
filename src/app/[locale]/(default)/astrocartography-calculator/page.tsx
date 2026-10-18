@@ -47,7 +47,7 @@ export async function generateMetadata({
       description,
       type: "website",
       url: getCanonicalUrl(locale, '/astrocartography-calculator'),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
       images: [
         {
           url: "/imgs/features/hero-web.webp",
@@ -173,8 +173,9 @@ export default async function CalculatorPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free Astrocartography Calculator",
-            "description": "Professional-grade astrocartography calculator using Swiss Ephemeris. Generate personalized astrocartography charts with 1-mile accuracy. Free, no signup required.",
+            "name": "Astrocarto.org",
+            "alternateName": "Free Astrocartography Calculator",
+            "description": page.metadata.description,
             "url": getCanonicalUrl(locale, '/astrocartography-calculator'),
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Web Browser",
@@ -185,21 +186,16 @@ export default async function CalculatorPage({
             },
             "creator": {
               "@type": "Organization",
-              "name": "Astrocartography Calculator"
+              "name": "Astrocarto.org",
+              "url": getCanonicalUrl("en", "/")
             },
             "featureList": [
-              "Swiss Ephemeris calculations",
-              "1-mile accuracy",
-              "Interactive world map",
-              "AI-powered interpretations",
-              "Free unlimited use",
-              "No registration required"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "1250"
-            }
+              "Swiss Ephemeris-based calculations",
+              "Interactive astrocartography world map",
+              "Planetary line filtering and city tools",
+              "Optional AI map chat and reports (credits)",
+              "Guest map sessions with daily limits; sign-in for more"
+            ]
           })
         }}
       />

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "免费移居星盘计算器｜多城市对比",
-    "description": "免费移居星盘：同一出生时刻换城市，看上升点与整宫制宫位如何变化。出生地对比移居地，可无限次重算，无注册。",
+    "title": "免费移居星盘计算器｜每次一个城市",
+    "description": "免费移居星盘：同一出生时刻，每次计算一个新城市，查看上升点与整宫制宫位变化。多城对比请用星盘地图上的「对比城市」；本工具对每个候选城市单独计算。",
     "keywords": "移居星盘, 换地点星盘, 移居占星, 星盘计算器, 上升点, 整宫制, 星盘地图, Astrocartography"
   },
   "intentAnchor": {
@@ -14,6 +14,11 @@
         "text": "主入口：免费星盘地图与核心计算器。",
         "linkText": "免费星盘地图 Astrocartography Chart",
         "url": "/zh"
+      },
+      {
+        "text": "按步骤决定住哪里？",
+        "linkText": "星盘地图：住哪里指南",
+        "url": "/astrocartography-where-to-live"
       },
       {
         "text": "想看过运行星与本命的互动？",
@@ -85,7 +90,7 @@
       },
       {
         "title": "免费、无需注册",
-        "description": "可反复计算、多试几座城市再决定。数据留在当前页面会话，简单省事。",
+        "description": "可反复计算，每次一个城市。出生资料会安全提交至服务器用于天文计算，我们不会出售你的数据。",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -128,6 +133,34 @@
         "title": "打开星盘地图（可选）",
         "description": "结果下方按钮可用同一出生数据进入世界地图，看行星线分布，与移居星盘的「单城宫位」互为补充。",
         "icon": "RiArrowRightLine"
+      }
+    ]
+  },
+  "readingGuides": {
+    "name": "reading-guides",
+    "title": "如何阅读移居星盘结果",
+    "label": "阅读指南",
+    "description": "计算完成后用四个角度理解结果。本工具每次只针对一个移居城市。",
+    "items": [
+      {
+        "title": "什么会变、什么不变",
+        "description": "出生时刻固定，行星星座与度数不变；上升、四轴与整宫制宫位随新坐标变化。",
+        "icon": "RiRefreshLine"
+      },
+      {
+        "title": "如何读宫位对照表",
+        "description": "关注移居宫位变化最大的行星，往往对应搬家后感受差异明显的主题；本命列作为基准。",
+        "icon": "RiTableLine"
+      },
+      {
+        "title": "移居星盘 vs 星盘地图",
+        "description": "地图看行星线地理分布，并可在一张图上对比最多四个城市；本计算器提供单个城市的轮盘式角点与宫位快照。",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "使用边界",
+        "description": "整宫制便于理解但仍是简化模型；出生时间不准会削弱上升解读。这是象征性参考，不能替代签证、收入或住房决策。",
+        "icon": "RiInformationLine"
       }
     ]
   },
@@ -218,7 +251,8 @@
       "birthLocation": "出生地点",
       "timezone": "出生地时区",
       "relocateLocation": "移居城市（计划前往或居住）",
-      "submit": "计算移居星盘"
+      "submit": "计算移居星盘",
+      "privacyNote": "出生日期、时间与地点会安全提交至服务器用于计算。我们不会出售你的数据。"
     },
     "result": {
       "title": "你的移居星盘结果",
@@ -232,6 +266,9 @@
       "natalHouse": "宫位（出生）",
       "relocatedHouse": "宫位（移居）",
       "ctaChart": "用此出生数据查看星盘地图",
+      "calculateAnother": "计算另一座城市",
+      "copySummary": "复制摘要",
+      "copySuccess": "已复制摘要",
       "footnote": "整宫制。行星黄道位置在出生与移居计算中相同，仅角点与宫位变化。"
     },
     "errors": {

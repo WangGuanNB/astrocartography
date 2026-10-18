@@ -58,7 +58,7 @@ export async function generateMetadata({
       description,
       type: "website",
       url: getCanonicalUrl(locale, path),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
       images: [
         {
           url: "/imgs/features/hero-web.webp",
@@ -189,7 +189,7 @@ export default async function CompositeChartCalculatorPage({
               "Whole-sign house placements for relationship themes",
               "Visual biwheel showing merged planetary positions",
             ],
-            creator: { "@type": "Organization", name: "Astrocartography Calculator" },
+            creator: { "@type": "Organization", name: "Astrocarto.org", url: getCanonicalUrl("en", "/") },
           }),
         }}
       />

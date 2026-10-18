@@ -255,8 +255,8 @@
   },
   "hero": {
     "title": "Calcolatore Astrocartografia - Scopri la Tua Posizione Ideale",
-    "highlight_text": "Gratis per Sempre",
-    "description": "Il calcolatore astrocartografia proietta la tua carta natale nel mondo, rivelando dove le linee planetarie amplificano la tua carriera, relazioni e crescita personale. Utilizzando calcoli di livello professionale con Swiss Ephemeris precisi fino a 1 miglio, analizziamo posizioni in tutto il mondo per mostrare dove le energie planetarie del Sole, Venere, Giove e altri pianeti sono più forti. Nomadi digitali, persone che pianificano trasferimenti ed entusiasti di astrologia si fidano del nostro strumento gratuito per informazioni basate sui dati sulle posizioni—nessuna registrazione, nessun limite.",
+    "highlight_text": "Generatore di Mappe Gratuito",
+    "description": "Genera la tua mappa astrocartografica personale con data, ora e luogo di nascita. Esplora le linee planetarie, controlla una città, confronta destinazioni e usa l'interpretazione IA opzionale quando ti serve più contesto.",
     "images": [
       {
         "src": "/imgs/features/hero-web.webp",
@@ -278,21 +278,28 @@
         "url": "/it#generator",
         "target": "_self",
         "variant": "default"
+      },
+      {
+        "title": "Confronta Luoghi in cui Vivere",
+        "icon": "RiMapPinLine",
+        "url": "/it/astrocartography-where-to-live",
+        "target": "_self",
+        "variant": "outline"
       }
     ],
     "stats": [
       {
-        "value": "50,000+",
-        "label": "Carte Generate",
+        "value": "90.000+",
+        "label": "Utenti registrati",
         "icon": "RiUserLine"
       },
       {
-        "value": "Global",
-        "label": "Posizioni Analizzate",
-        "icon": "RiMapPinLine"
+        "value": "38.000+",
+        "label": "Utenti della chat IA",
+        "icon": "RiMessage3Line"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "happy_users": {
       "rating": 5,
       "count": "714+",
@@ -386,11 +393,11 @@
     "name": "benefit",
     "title": "Perché Scegliere il Nostro Calcolatore Astrocartografia",
     "label": "Vantaggi Principali",
-    "description": "Il nostro calcolatore astrocartografia combina precisione astronomica con interpretazione con IA, offrendo analisi di livello professionale completamente gratuite e focalizzate sulla privacy.",
+    "description": "Inizia con una mappa gratuita e scegli il livello di interpretazione o ricerca di trasferimento adatto alla tua domanda.",
     "items": [
       {
-        "title": "Precisione Professionale, Completamente Gratis",
-        "description": "Analisi professionale di astrocartografia con accesso illimitato gratuito. Utilizziamo la stessa libreria Swiss Ephemeris su cui si basa il software professionale di astrologia, con precisione di 1 miglio usando calcoli Swiss Ephemeris. Genera carte astrocartografia illimitate, scarica file privi di filigrana e accedi a interpretazioni con IA—nessuna carta di credito, nessuna tariffa nascosta. Che tu sia studente, imprenditore o pensionato, accedi ad analisi professionale di astrocartografia senza costi.",
+        "title": "Mappa Gratuita, Passaggi Chiari",
+        "description": "Genera ed esplora gratuitamente la mappa. Poi controlla le linee vicine, confronta città o scegli un'interpretazione IA. Le funzioni a pagamento sono indicate prima dell'uso.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/free-astrocartography-calculator-tool.webp",
@@ -407,8 +414,8 @@
         }
       },
       {
-        "title": "Architettura con Priorità alla Privacy",
-        "description": "I tuoi dati di nascita vengono calcolati localmente nel tuo browser—mai caricati su server, mai memorizzati in database, mai condivisi con terze parti. Genera la tua carta astrocartografia con privacy completa. Tutti i file hanno diritti commerciali completi: usali per pianificazione personale, consultazioni professionali di astrologia, insegnamento o pubblicazione senza tariffe di licenza. Privacy e qualità professionale non dovrebbero essere esclusive per clienti paganti.",
+        "title": "La Ricerca Resta Sotto il Tuo Controllo",
+        "description": "I dati di nascita vengono usati per calcolare la mappa richiesta e non sono mostrati pubblicamente. Salvare una ricerca è facoltativo e richiede un account; consulta l'informativa sulla privacy per tutti i dettagli.",
         "icon": "RiLockLine",
         "image": {
           "src": "/imgs/features/privacy-astrocartography-calculator.webp",
@@ -417,14 +424,59 @@
       }
     ]
   },
+  "productProof": {
+    "name": "product-access",
+    "label": "PRODOTTO REALE, ACCESSO CHIARO",
+    "title": "Inizia gratis. Paga solo quando vuoi più approfondimento.",
+    "description": "La mappa interattiva e gli strumenti principali sono disponibili prima dell'acquisto. Le interpretazioni IA e le funzioni di ricerca opzionali sono indicate prima di usare crediti o procedere al pagamento.",
+    "image": {
+      "src": "/imgs/features/planetary-lines-meaning-map.webp",
+      "alt": "Demo dell'interfaccia reale della mappa astrocartografica Astrocarto con linee planetarie e strumenti per esplorare le città"
+    },
+    "items": [
+      {
+        "label": "STRUMENTI BASE GRATUITI",
+        "title": "Genera ed esplora la tua mappa",
+        "description": "Parti dal calcolo. Non serve acquistare per creare la mappa e controllare i principali segnali geografici.",
+        "icon": "RiMap2Line",
+        "list": [
+          "Generare e navigare una mappa mondiale interattiva",
+          "Filtrare le linee planetarie e controllare i luoghi vicini",
+          "Usare il flusso base Check City e Compare Cities nella sessione"
+        ]
+      },
+      {
+        "label": "APPROFONDIMENTO A PAGAMENTO OPZIONALE",
+        "title": "Scegli interpretazione o ricerca salvata",
+        "description": "Le funzioni a pagamento aggiungono profondità, ma non sostituiscono la mappa gratuita. Prezzo o costo in crediti vengono mostrati prima dell'uso.",
+        "icon": "RiSparkling2Line",
+        "list": [
+          "Chat IA personale e report strutturati usano i crediti indicati",
+          "Ricerca salvata e finestre temporali sono offerte solo dove chiaramente segnalate",
+          "Piani e prezzi compaiono prima del checkout; generare la mappa non richiede acquisti"
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Interfaccia reale con soli dati demo",
+      "description": "L'immagine mostra la vera esperienza della mappa. Eventuali dati di nascita o luoghi visibili sono esempi fissi, non previsioni per una persona reale. L'astrocartografia è uno strumento simbolico di ricerca; prima di trasferirti verifica costo della vita, visti, lavoro, sicurezza, salute e situazione personale.",
+      "button": {
+        "title": "Genera la mia mappa gratis",
+        "icon": "RiMagicLine",
+        "url": "/#generator",
+        "target": "_self",
+        "variant": "default"
+      }
+    }
+  },
   "usage": {
     "name": "usage",
     "title": "Come Usare il Calcolatore Astrocartografia",
-    "description": "Genera la tua carta professionale di astrocartografia in 4 semplici passaggi.",
+    "description": "Genera ed esplora la tua mappa astrocartografica in 3 semplici passaggi.",
     "items": [
       {
         "title": "Inserisci Informazioni di Nascita",
-        "description": "Inserisci la tua data di nascita, ora (il più precisa possibile al minuto) e città. Senza l'ora esatta di nascita, vedrai comunque le linee planetarie (Sole, Luna, Venere, ecc.) ma non le linee angolari (ASC, DSC, MC, IC). Il nostro database include città in tutto il mondo con gestione automatica del fuso orario e storico dell'ora legale.",
+        "description": "Inserisci data, ora esatta quando nota e luogo di nascita. Il calcolatore risolve posizione e fuso orario prima di generare la mappa.",
         "icon": "RiCalendarLine"
       },
       {
@@ -433,14 +485,9 @@
         "icon": "RiPlanetLine"
       },
       {
-        "title": "Esplora Mappa Interattiva e Informazioni con IA",
-        "description": "Fai clic su qualsiasi linea planetaria o punto di potere (intersezione di linee) per ottenere un'interpretazione dettagliata con IA. Scopri come quel pianeta influisce sulla tua carriera, relazioni, salute e creatività in quella posizione, oltre a se è adatto per residenza a lungo termine, visite brevi, lavoro o studio. Nessun limite di query—esplora tutto ciò di cui hai bisogno.",
+        "title": "Controlla e Confronta Città",
+        "description": "Usa Controlla Città per vedere linee vicine, distanza e intensità, oppure confronta 2–3 luoghi per un obiettivo di trasferimento. L'interpretazione IA è facoltativa e usa i crediti mostrati nel prodotto.",
         "icon": "RiMapLine"
-      },
-      {
-        "title": "Esporta File Professionali",
-        "description": "Scarica mappe PNG ad alta risoluzione, rapporti di interpretazione PDF o file vettoriali SVG con un clic. Tutti i file sono privi di filigrana e supportano l'uso commerciale. Stampa per riunioni di consultazione, condividi con amici o usa nelle decisioni di trasferimento in team.",
-        "icon": "RiDownloadLine"
       }
     ]
   },
@@ -451,32 +498,32 @@
     "items": [
       {
         "title": "Mappa Globale Interattiva",
-        "description": "Trascina, ingrandisci e fai clic su qualsiasi città per visualizzare istantaneamente la sua distribuzione di energia planetaria. Le mappe supportano viste satellitari, del terreno e dei confini politici, aiutandoti a capire come le linee di astrocartografia corrispondono alla geografia reale. I punti di potere (intersezioni di linee) sono evidenziati—queste zone di convergenza energetica sono punti chiave di focus nell'astrocartografia per decisioni di trasferimento.",
+        "description": "Sposta e ingrandisci la mappa mondiale per vedere le linee planetarie calcolate. Cerca luoghi e apri la mappa completa quando ti serve più spazio.",
         "icon": "RiGlobalLine"
       },
       {
         "title": "Motore di Calcolo Swiss Ephemeris",
-        "description": "Utilizziamo Swiss Ephemeris, supportando calcoli planetari dal 3000 a.C. al 3000 d.C. Mantenuta dall'Osservatorio di Zurigo, questa libreria usa gli stessi standard di precisione su cui si basa il software professionale di astrologia in tutto il mondo. Che tu stia analizzando figure storiche o pianificando trasferimenti futuri, la precisione della tua mappa astrocartografia corrisponde a software professionale di astrologia.",
+        "description": "Il calcolatore usa dati Swiss Ephemeris per le posizioni planetarie e proietta le linee angolari pertinenti sulla mappa mondiale a partire dai dati di nascita.",
         "icon": "RiCompassLine"
       },
       {
         "title": "Copertura Globale Multi-lingua",
-        "description": "Cerca città in cinese, inglese, giapponese e altro in posizioni in tutto il mondo con dati storici del fuso orario. Il sistema gestisce automaticamente i cambiamenti dell'ora legale (come i cambiamenti delle regole DST degli Stati Uniti 1970-2007) e gli aggiustamenti dei confini del fuso orario, garantendo carte astrocartografia accurate indipendentemente dal paese di nascita o dall'epoca.",
+        "description": "Usa il sito in inglese, cinese, portoghese, spagnolo, italiano o tedesco e cerca luoghi di nascita e città di destinazione in tutto il mondo.",
         "icon": "RiTranslate"
       },
       {
         "title": "Filtraggio Intelligente delle Linee Planetarie",
-        "description": "Visualizza o nascondi combinazioni specifiche di linee planetarie senza limiti. Mostra solo linee Sole+Giove per città di carriera, solo linee Venere+Luna per posizioni di sicurezza emotiva, o nascondi linee Saturno+Plutone per evitare zone di alta sfida. Salva configurazioni di filtri preferite per confrontare rapidamente diverse combinazioni planetarie e trovare posizioni che corrispondono agli obiettivi della tua fase attuale della vita.",
+        "description": "Mostra o nascondi le linee planetarie per ridurre il rumore visivo e concentrarti su pianeti e angoli rilevanti per la tua domanda.",
         "icon": "RiFilterLine"
       },
       {
-        "title": "Analisi Energetica dei Punti di Potere",
-        "description": "L'IA identifica e evidenzia automaticamente le intersezioni di linee (punti di potere) dove più energie planetarie si attivano simultaneamente. Questi incroci tipicamente esercitano un'influenza più forte delle linee singole. Ad esempio: le intersezioni Venere+Giove possono portare opportunità romantiche e crescita della ricchezza, mentre le intersezioni Saturno+Plutone sono adatte per trasformazione profonda e ricostruzione della carriera.",
-        "icon": "RiStarLine"
+        "title": "Controlla Città",
+        "description": "Consulta le linee planetarie più vicine a una città, con distanza e intensità calcolate, prima di aprire un'interpretazione più profonda.",
+        "icon": "RiMapPinLine"
       },
       {
-        "title": "Cronologia e Confronto Multi-Persona",
-        "description": "Il sistema salva automaticamente la tua cronologia di generazione, supportando il caricamento simultaneo di più carte astrocartografia per confronto. Confronta le sovrapposizioni delle tue linee planetarie con quelle di un partner, identifica le intersezioni delle linee di Giove tra i membri del team, o confronta i cambiamenti delle carte di transito nel corso degli anni. Per trasferimenti in team, spostamenti familiari o selezione della posizione del partner, sovrapponi rapidamente le distribuzioni di più persone.",
+        "title": "Confronta Città e Salva la Ricerca",
+        "description": "Confronta 2–3 città rispetto a un obiettivo di trasferimento. Gli utenti registrati possono salvare un progetto attuale e riprendere in seguito lista, data e note pratiche.",
         "icon": "RiTeamLine"
       }
     ]
@@ -556,7 +603,7 @@
       },
       {
         "title": "Quanto sono precisi i calcoli?",
-        "description": "Utilizziamo calcoli Swiss Ephemeris con precisione professionale, precisi fino a 1 miglio sulla superficie terrestre. I nostri calcoli tengono conto di fusi orari, ora legale e cambiamenti storici del calendario. Questa è la stessa precisione su cui si basano gli astrologi professionisti per le consultazioni."
+        "description": "Il calcolatore usa dati Swiss Ephemeris per le posizioni planetarie e risolve luogo e fuso orario indicati prima di proiettare le linee angolari. Il risultato dipende dalla precisione dell'ora e del luogo di nascita inseriti."
       },
       {
         "title": "Dovrei trasferirmi basandomi esclusivamente sulla mia mappa di astrocartografia?",
@@ -564,7 +611,7 @@
       },
       {
         "title": "Posso usare le mappe generate commercialmente?",
-        "description": "Sì. Le tue carte astrocartografia generate e i rapporti di interpretazione possono essere utilizzati per qualsiasi scopo: pianificazione personale, consultazioni professionali di astrologia, insegnamento, pubblicazioni, condivisione sui social, ecc., senza tariffe di licenza. I tuoi dati di nascita vengono calcolati localmente con protezione completa della privacy."
+        "description": "Puoi scaricare e condividere la mappa generata come riferimento personale. Se vuoi ripubblicarla, inserirla in un servizio a pagamento o usarla commercialmente, contatta prima l'assistenza per verificare le condizioni correnti e le attribuzioni della mappa. I dati di nascita vengono inviati al servizio di calcolo per creare la carta richiesta, ma non vengono mostrati pubblicamente. Consulta l'Informativa sulla privacy per i dettagli aggiornati."
       },
       {
         "title": "Qual è la vostra politica di rimborso?",
@@ -578,7 +625,7 @@
   },
   "testimonial": {
     "name": "testimonial",
-    "disabled": false,
+    "disabled": true,
     "label": "FIDATO DA 54.000+ UTENTI",
     "title": "Cosa Dicono gli Appassionati di Astrologia\nSulla Nostra Calcolatrice di Astrocartografia",
     "description": "Basato su 714+ recensioni verificate degli utenti. Scopri perché migliaia si fidano del nostro strumento professionale di astrocartografia per la pianificazione del trasferimento.",
@@ -637,7 +684,7 @@
   "cta": {
     "name": "cta",
     "title": "Genera la Tua Mappa Astrocartografia Gratis Ora",
-    "description": "Usa il Calcolatore Astrocartografia per creare la tua carta professionale di astrocartografia con precisione del Swiss Ephemeris analizzando posizioni in tutto il mondo. Scopri città ideali per la tua carriera, relazioni e crescita personale. Nessuna registrazione richiesta, uso illimitato—ottieni analisi professionale in 3 secondi.",
+    "description": "Crea la tua mappa personale, esplora le linee planetarie e usa Controlla Città o Confronta Città per studiare una domanda specifica di trasferimento.",
     "buttons": [
       {
         "title": "Genera Mappa Gratis Ora",
@@ -683,7 +730,7 @@
           "10 credits (1 AI question)",
           "Interactive astrocartography map",
           "Basic planetary line explanations",
-          "Generate unlimited maps",
+          "Generate maps (guest daily limit; sign in for more)",
           "Instant access"
         ],
         "interval": "one-time",
@@ -894,11 +941,11 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "Calcolatore Astrocartografia",
+      "title": "Astrocarto.org",
       "description": "Il Calcolatore Astrocartografia fornisce strumenti professionali di astrocartografia per nomadi digitali, pianificatori di trasferimento e praticanti di astrologia. Usiamo Swiss Ephemeris per assicurare precisione astronomica, e la tecnologia IA rende accessibili le interpretazioni complesse delle linee planetarie. Protezione rigorosa della privacy, analisi di posizioni globali—rendendo le carte professionali di astrocartografia accessibili a tutti.",
       "logo": {
         "src": "/logo.png",
-        "alt": "Calcolatore Astrocartografia"
+        "alt": "Astrocarto.org"
       },
       "url": "/it"
     },

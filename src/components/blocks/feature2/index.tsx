@@ -130,7 +130,14 @@ export default function Feature2({ section }: { section: SectionType }) {
                           sizes="(max-width: 1024px) 100vw, 50vw"
                           priority={i === 0}
                         />
-                      ) : null}
+                      ) : (
+                        <div className="flex h-full flex-col justify-center p-6 text-sm text-muted-foreground lg:p-8 lg:text-base">
+                          {item.title && (
+                            <p className="mb-2 font-semibold text-foreground">{item.title}</p>
+                          )}
+                          {item.description}
+                        </div>
+                      )}
                     </div>
                   </CarouselItem>
                 ))}

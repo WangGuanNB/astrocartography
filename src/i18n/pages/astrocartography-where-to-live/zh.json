@@ -32,7 +32,7 @@
     "actions": [
       {
         "title": "生成你的占星地图",
-        "url": "/",
+        "url": "/#generator",
         "icon": "RiArrowRightLine"
       },
       {
@@ -40,6 +40,109 @@
         "url": "/astrocartography-lines",
         "icon": "RiRouteLine",
         "variant": "secondary"
+      }
+    ]
+  },
+  "userPaths": {
+    "name": "user-paths",
+    "label": "选择路径",
+    "title": "两种使用本指南的方式",
+    "description": "两条路径都对应 Astrocarto.org 上已有的工具。根据你是否已有候选城市选择流程。",
+    "items": [
+      {
+        "title": "我已有城市要对比",
+        "description": "先填写出生数据并生成地图，在地图上用「对比城市」最多添加四个地点，再用搬迁盘（每次一个城市）确认最终候选。",
+        "icon": "RiMapPinLine",
+        "buttons": [
+          {
+            "title": "生成地图",
+            "url": "/#generator",
+            "icon": "RiMapLine"
+          },
+          {
+            "title": "搬迁盘",
+            "url": "/relocation-chart-calculator",
+            "icon": "RiPieChartLine",
+            "variant": "outline"
+          }
+        ]
+      },
+      {
+        "title": "我想先探索地点",
+        "description": "先生成地图，浏览全球行星线，对感兴趣的地方使用「查看城市」。",
+        "icon": "RiCompassLine",
+        "buttons": [
+          {
+            "title": "生成地图",
+            "url": "/#generator",
+            "icon": "RiMapLine"
+          },
+          {
+            "title": "全部行星线含义",
+            "url": "/astrocartography-lines",
+            "icon": "RiRouteLine",
+            "variant": "outline"
+          }
+        ]
+      }
+    ]
+  },
+  "workflowDemo": {
+    "name": "workflow-demo",
+    "label": "示例流程",
+    "title": "示例：用演示出生数据筛选城市",
+    "description": "以下出生信息仅为演示。请用你自己的出生日期、时间和出生地重复相同步骤。",
+    "image": {
+      "src": "/imgs/features/planetary-lines-meaning-map.webp",
+      "alt": "Astrocarto 地图与城市工具界面（演示示意）"
+    },
+    "imageCaption": "仅为演示 — 示例出生数据与城市用于说明操作流程，不代表对你星盘的预测。你的行星线与城市匹配会不同。",
+    "items": [
+      {
+        "title": "填写出生数据",
+        "description": "示例：1990-06-15、14:30、美国洛杉矶 — 或在首页生成器中使用你的真实数据。",
+        "icon": "RiCalendarLine"
+      },
+      {
+        "title": "生成地图",
+        "description": "从首页打开交互式地图。访客有每日生成次数限制；登录后可获得更多次数。",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "对比演示候选城市",
+        "description": "在「对比城市」中尝试新加坡、东京、温哥华等示例（并加入你当前城市作对照）。在地图上查看附近线与角点——事业向解读常从 Sun MC、Jupiter MC、Mercury MC 等主题入手，但结果取决于完整星盘。",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "搬迁盘确认与现实核验",
+        "description": "对每个最终候选单独运行免费搬迁盘，并核实签证、就业、住房与生活成本——星盘地图不能替代现实规划。",
+        "icon": "RiPieChartLine"
+      }
+    ]
+  },
+  "mapVsRelocation": {
+    "name": "map-vs-relocation",
+    "label": "地图与搬迁盘",
+    "title": "何时用地图、何时用搬迁盘",
+    "description": "两者回答不同问题。认真做搬迁决策时建议两者结合。",
+    "items": [
+      {
+        "title": "星盘地图（Astrocartography）",
+        "description": "显示行星线在全球的分布。适合扫描大量区域、在一张地图上对比最多四个城市，以及查看某地点附近的线交叉。",
+        "icon": "RiMapLine",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "全球星盘地图与行星线示意"
+        }
+      },
+      {
+        "title": "搬迁盘",
+        "description": "在同一出生时刻下，针对所选城市重算上升点与整宫制宫位。适合专注阅读该城市中人生主题如何重排。",
+        "icon": "RiPieChartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-relocation-planning.webp",
+          "alt": "搬迁规划与搬迁盘示意"
+        }
       }
     ]
   },
@@ -55,6 +158,11 @@
         "text": "想了解每条行星线？",
         "linkText": "占星地图行星线指南",
         "url": "/astrocartography-lines"
+      },
+      {
+        "text": "不确定如何读地图上的线？",
+        "linkText": "星盘地图解读指南",
+        "url": "/posts/astrocartography-map-interpretation"
       },
       {
         "text": "正在比较某一个城市？",
@@ -234,13 +342,29 @@
       {
         "title": "还需要看搬迁星盘吗？",
         "description": "建议看，尤其是认真考虑搬家时。占星地图显示地理线条，搬迁星盘显示某个城市中的宫位变化，两者结合更完整。"
+      },
+      {
+        "title": "如何在 Astrocarto.org 上对比两个城市？",
+        "description": "在首页生成地图后，使用地图工具中的「对比城市」（最多四个）。若需要逐个城市的轮盘式解读，请使用免费搬迁盘计算器（每次一个城市）。地图上的完整 AI 城市对比报告会消耗积分。"
+      },
+      {
+        "title": "哪些行星线更偏事业？",
+        "description": "没有适用于所有人的单一「事业线」。常见起点包括 Sun MC（可见度）、Jupiter MC（扩展）、Mercury MC（沟通与知识工作）或 Mars MC（驱动力）。仍需结合该城市的就业市场与签证等现实条件。"
+      },
+      {
+        "title": "是否必须知道精确出生时间？",
+        "description": "若要可靠解读角点与 MC/IC 主题，建议有精确时间。若只有日期，请将线与角点解读视为探索性参考，避免对宫位或依赖上升的结论过于绝对。"
+      },
+      {
+        "title": "若城市附近没有主要行星线怎么办？",
+        "description": "这不一定是坏事。没有 dominant 线的城市可能更中性、更灵活。请结合现实因素，用「对比城市」做对照，并用搬迁盘查看该地的宫位变化。"
       }
     ]
   },
   "cta": {
     "name": "cta",
     "title": "找到更适合你星盘的地点",
-    "description": "生成你的占星地图，比较候选城市，并在需要时用 AI 解读深入理解这些地点。",
+    "description": "在首页生成地图，在地图工具中对比最多四个候选城市，并对每个最终候选单独运行免费搬迁盘。更深的 AI 地图对话与城市对比报告会消耗积分。",
     "buttons": [
       {
         "title": "免费星盘地图 Astrocartography →",

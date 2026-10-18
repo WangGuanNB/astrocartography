@@ -15,6 +15,12 @@ export interface HappyUsers {
   avatars?: string[];
 }
 
+export interface HeroStat {
+  value?: string;
+  label?: string;
+  icon?: string;
+}
+
 export interface Hero {
   name?: string;
   disabled?: boolean;
@@ -27,5 +33,6 @@ export interface Hero {
   tip?: string;
   show_happy_users?: boolean;
   happy_users?: HappyUsers;
+  stats?: HeroStat[];
   show_badge?: boolean;
 }

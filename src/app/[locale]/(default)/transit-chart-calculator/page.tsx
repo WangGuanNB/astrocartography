@@ -57,7 +57,7 @@ export async function generateMetadata({
       description,
       type: "website",
       url: getCanonicalUrl(locale, path),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
     },
     twitter: {
       card: "summary_large_image",
@@ -187,7 +187,7 @@ export default async function TransitChartCalculatorPage({
               "Transit chart for any date (12:00 UTC)",
               "One-click link to Astrocartography",
             ],
-            creator: { "@type": "Organization", name: "Astrocartography Calculator" },
+            creator: { "@type": "Organization", name: "Astrocarto.org", url: getCanonicalUrl("en", "/") },
           }),
         }}
       />

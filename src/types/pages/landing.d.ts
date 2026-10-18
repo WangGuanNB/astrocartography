@@ -14,6 +14,7 @@ export interface LandingPage {
   popularLines?: Section;
   howToRead?: Section;
   benefit?: Section;
+  productProof?: Section;
   usage?: Section;
   feature?: Section;
   showcase?: Section;
@@ -132,6 +133,10 @@ export interface CalculatorPage {
   intentAnchor?: {
     text: string;
   };
+  userPaths?: Section;
+  workflowDemo?: Section;
+  mapVsRelocation?: Section;
+  readingGuides?: Section;
   internalLinks?: {
     title: string;
     items: Array<{

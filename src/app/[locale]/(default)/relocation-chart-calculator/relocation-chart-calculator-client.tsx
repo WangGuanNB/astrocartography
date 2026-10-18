@@ -37,6 +37,7 @@ type ToolLabels = {
     timezone: string;
     relocateLocation: string;
     submit: string;
+    privacyNote?: string;
   };
   result: {
     title: string;
@@ -50,6 +51,9 @@ type ToolLabels = {
     natalHouse: string;
     relocatedHouse: string;
     ctaChart: string;
+    calculateAnother?: string;
+    copySummary?: string;
+    copySuccess?: string;
     footnote: string;
   };
   errors: {
@@ -94,6 +98,25 @@ function formatDeg(deg: number) {
   return `${Math.floor(deg)}°${String(Math.round((deg % 1) * 60)).padStart(2, "0")}'`;
 }
 
+function buildRelocationSummary(
+  data: NonNullable<ApiResponse["data"]>,
+  labels: ToolLabels["result"]
+) {
+  const lines = [
+    `${labels.title}`,
+    `${labels.relocateLabel}: ${data.relocateData.location}`,
+    `${labels.natalAscTitle}: ${data.natalAscendant.sign} ${formatDeg(data.natalAscendant.degree)}`,
+    `${labels.relocatedAscTitle}: ${data.relocatedAscendant.sign} ${formatDeg(data.relocatedAscendant.degree)}`,
+    "",
+    labels.tableTitle,
+    ...data.planets.map(
+      (p) =>
+        `${p.name}: ${p.sign} ${formatDeg(p.degree)} | ${labels.natalHouse} ${p.natalHouse} → ${labels.relocatedHouse} ${p.relocatedHouse}`
+    ),
+  ];
+  return lines.join("\n");
+}
+
 export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLabels }) {
   const params = useParams();
   const locale = (params?.locale as string) || "en";
@@ -113,6 +136,7 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ApiResponse["data"] | null>(null);
+  const [copyMessage, setCopyMessage] = useState<string | null>(null);
 
   useEffect(() => {
     if (!result) return;
@@ -358,6 +382,10 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
                 )}
               </div>
 
+              {tool.form.privacyNote && (
+                <p className="text-xs leading-relaxed text-white/50">{tool.form.privacyNote}</p>
+              )}
+
               <Button
                 onClick={handleSubmit}
                 disabled={!canSubmit}
@@ -397,17 +425,56 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
               </p>
               <p className="mt-0.5 text-xs text-white/50">{result.system}</p>
 
-              <div className="mt-4">
+              <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
                 <a
                   href={chartUrl || "/"}
                   className={cn(
-                    "inline-flex w-full items-center justify-center rounded-md bg-purple-600 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-purple-700",
+                    "inline-flex flex-1 items-center justify-center rounded-md bg-purple-600 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-purple-700",
                     !chartUrl && "pointer-events-none opacity-50"
                   )}
                 >
                   {tool.result.ctaChart}
                 </a>
+                {tool.result.calculateAnother && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="flex-1 border-white/20 bg-white/5 text-white hover:bg-white/10"
+                    onClick={() => {
+                      setRelocateLocation("");
+                      setRelocateCoords(null);
+                      setUseRelocateCoords(false);
+                      setResult(null);
+                      setCopyMessage(null);
+                      setError(null);
+                    }}
+                  >
+                    {tool.result.calculateAnother}
+                  </Button>
+                )}
+                {tool.result.copySummary && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="flex-1 border-white/20 bg-white/5 text-white hover:bg-white/10"
+                    onClick={async () => {
+                      if (!result) return;
+                      const text = buildRelocationSummary(result, tool.result);
+                      try {
+                        await navigator.clipboard.writeText(text);
+                        setCopyMessage(
+                          tool.result.copySuccess || tool.result.copySummary || "Copied"
+                        );
+                      } catch {
+                        setCopyMessage(null);
+                      }
+                    }}
+                  >
+                    {tool.result.copySummary}
+                  </Button>
+                )}
               </div>
+              {copyMessage && <p className="text-xs text-emerald-300/90">{copyMessage}</p>}
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-lg border border-white/10 bg-black/20 p-4">

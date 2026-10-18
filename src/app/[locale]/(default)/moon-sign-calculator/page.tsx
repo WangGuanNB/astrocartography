@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: page.metadata.description,
       type: "website",
       url: getCanonicalUrl(locale, path),
-      siteName: "Astrocartography Calculator",
+      siteName: "Astrocarto.org",
     },
     twitter: { card: "summary_large_image", title: page.metadata.title, description: page.metadata.description },
     robots: { index: true, follow: true },

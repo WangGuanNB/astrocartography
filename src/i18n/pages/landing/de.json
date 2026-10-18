@@ -255,8 +255,8 @@
   },
   "hero": {
     "title": "Astrokartografie Rechner – Entdecken Sie Ihren idealen Ort",
-    "highlight_text": "Dauerhaft kostenlos",
-    "description": "Der Astrokartografie Rechner projiziert Ihr Geburtshoroskop auf die Weltkarte und zeigt, wo Planetenlinien Karriere, Beziehungen und persönliches Wachstum verstärken. Mit Swiss Ephemeris auf 1 Meile genau analysieren wir Orte weltweit – Sonne, Venus, Jupiter und weitere Planetenenergien. Digitale Nomaden, Umzugsplaner und Astrologie-Interessierte nutzen unser kostenloses Astrokartografie-Tool für standortbezogene Einblicke – ohne Anmeldung, ohne Limit.",
+    "highlight_text": "Kostenloser Kartengenerator",
+    "description": "Erstellen Sie mit Geburtsdatum, Uhrzeit und Ort Ihre persönliche Astrokartografie-Karte. Erkunden Sie Planetenlinien, prüfen Sie eine Stadt, vergleichen Sie Ziele und nutzen Sie bei Bedarf eine optionale KI-Interpretation.",
     "images": [
       {
         "src": "/imgs/features/hero-web.webp",
@@ -278,21 +278,28 @@
         "url": "/de#generator",
         "target": "_self",
         "variant": "default"
+      },
+      {
+        "title": "Wohnorte Vergleichen",
+        "icon": "RiMapPinLine",
+        "url": "/de/astrocartography-where-to-live",
+        "target": "_self",
+        "variant": "outline"
       }
     ],
     "stats": [
       {
-        "value": "50.000+",
-        "label": "Karten erstellt",
+        "value": "90.000+",
+        "label": "Registrierte Nutzer",
         "icon": "RiUserLine"
       },
       {
-        "value": "Global",
-        "label": "Analysierte Orte",
-        "icon": "RiMapPinLine"
+        "value": "38.000+",
+        "label": "KI-Chat-Nutzer",
+        "icon": "RiMessage3Line"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "happy_users": {
       "rating": 5,
       "count": "714+",
@@ -358,7 +365,7 @@
     "items": [
       {
         "title": "Planetenberechnungen in Profi-Qualität",
-        "description": "Der Astrokartografie Rechner nutzt Swiss Ephemeris, den astronomischen Standard professioneller Astrologen. Wir berechnen, wo jeder Planet (Sonne, Mond, Venus, Mars, Jupiter, Saturn) zu Ihrem exakten Geburtszeitpunkt über der Erdoberfläche im Winkel stand – aufsteigend (ASC), untergehend (DSC), im Zenit (MC) oder am Nadir (IC). Jede Astrokartografie-Linie ist auf 1 Meile genau; Ihre Astrokartografie-Karte entspricht professionellen Berechnungen. Auf einer Planetenlinie dominiert die Energie dieses Planeten Ihr Erleben vor Ort.",
+        "description": "Der Rechner nutzt Swiss-Ephemeris-Daten für die Planetenpositionen und projiziert Aufgang (ASC), Untergang (DSC), Medium Coeli (MC) und Imum Coeli (IC) auf die Weltkarte. Das Ergebnis hängt von der Genauigkeit der eingegebenen Geburtszeit und des Geburtsorts ab.",
         "image": {
           "src": "/imgs/features/astrocartography-lines-calculation.webp",
           "alt": "Professionelle Astrokartografie-Berechnungen"
@@ -373,8 +380,8 @@
         }
       },
       {
-        "title": "Sofortiger Export in mehreren Formaten",
-        "description": "Erstellen Sie Ihre Astrokartografie-Karte in wenigen Sekunden und laden Sie hochauflösende PNG-, PDF- oder SVG-Dateien herunter. Die Karten zeigen alle Planetenlinien, Power-Spots (Linienkreuzungen) und Städtenamen. Zusammen mit KI-Interpretationsberichten ist Ihre Astrokartografie-Karte bereit für persönliche Planung, Beratung oder Team-Entscheidungen. Alle Dateien sind ohne Wasserzeichen und für die kommerzielle Nutzung freigegeben.",
+        "title": "Von der Karte zur Städterecherche",
+        "description": "Nach der Kartenerstellung können Sie Zielstädte suchen, nahe Planetenlinien prüfen oder 2–3 Orte vergleichen. Angemeldete Nutzer können optional ein aktuelles Rechercheprojekt speichern und später fortsetzen.",
         "image": {
           "src": "/imgs/features/astrocartography-relocation-planning.webp",
           "alt": "Astrokartografie-Karten sofort exportieren"
@@ -386,11 +393,11 @@
     "name": "benefit",
     "title": "Warum unseren Astrokartografie Rechner wählen",
     "label": "Kernvorteile",
-    "description": "Unser Astrokartografie Rechner verbindet astronomische Präzision mit KI-Interpretation und bietet professionelle Analyse – komplett kostenlos und datenschutzorientiert.",
+    "description": "Starten Sie mit einer kostenlosen Karte und wählen Sie dann die passende Interpretation oder Umzugsrecherche für Ihre Frage.",
     "items": [
       {
-        "title": "Professionelle Präzision, komplett kostenlos",
-        "description": "Astrokartografie-Analyse in Profi-Qualität mit unbegrenztem kostenlosen Zugang. Wir nutzen dieselbe Swiss Ephemeris-Bibliothek wie professionelle Astrologie-Software, mit 1-Meilen-Genauigkeit. Erstellen Sie unbegrenzt Astrokartografie-Karten, laden Sie dateien ohne Wasserzeichen herunter und nutzen Sie KI-Interpretationen – ohne Kreditkarte, ohne versteckte Kosten. Ob Studierende, Unternehmer oder Ruheständler: professionelle Astrokartografie-Analyse ohne Kosten.",
+        "title": "Kostenlose Karte, Klare Nächste Schritte",
+        "description": "Erstellen und erkunden Sie die Karte kostenlos. Danach können Sie nahe Linien prüfen, Städte vergleichen oder eine KI-Interpretation wählen. Kostenpflichtige Funktionen werden vor der Nutzung klar gekennzeichnet.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/free-astrocartography-calculator-tool.webp",
@@ -407,8 +414,8 @@
         }
       },
       {
-        "title": "Datenschutz durch lokale Verarbeitung",
-        "description": "Ihre Geburtsdaten werden lokal im Browser berechnet – nie auf Server hochgeladen, nie in Datenbanken gespeichert, nie an Dritte weitergegeben. Erstellen Sie Ihre Astrokartografie-Karte mit vollständigem Datenschutz. Alle Dateien haben volle kommerzielle Rechte: für persönliche Planung, Beratung, Lehre oder Veröffentlichung ohne Lizenzgebühren.",
+        "title": "Ihre Recherche Bleibt Unter Ihrer Kontrolle",
+        "description": "Geburtsdaten werden zur Berechnung der angeforderten Karte verwendet und nicht öffentlich angezeigt. Das Speichern einer Umzugsrecherche ist optional und erfordert ein Konto; Einzelheiten finden Sie in der Datenschutzerklärung.",
         "icon": "RiLockLine",
         "image": {
           "src": "/imgs/features/privacy-astrocartography-calculator.webp",
@@ -417,14 +424,59 @@
       }
     ]
   },
+  "productProof": {
+    "name": "product-access",
+    "label": "ECHTES PRODUKT, KLARE LEISTUNGEN",
+    "title": "Kostenlos starten. Nur für zusätzliche Tiefe bezahlen.",
+    "description": "Die interaktive Karte und die wichtigsten Werkzeuge stehen ohne Kauf bereit. Optionale KI-Deutungen und Recherchefunktionen werden vor dem Einsatz von Credits oder dem Bezahlvorgang klar gekennzeichnet.",
+    "image": {
+      "src": "/imgs/features/planetary-lines-meaning-map.webp",
+      "alt": "Demo der echten Astrocarto-Astro­kartografie-Karte mit Planetenlinien und Werkzeugen zur Ortssuche"
+    },
+    "items": [
+      {
+        "label": "KOSTENLOSE GRUNDFUNKTIONEN",
+        "title": "Karte erstellen und erkunden",
+        "description": "Beginne mit der eigentlichen Berechnung. Für die Karte und die wichtigsten Standortsignale ist kein Kauf nötig.",
+        "icon": "RiMap2Line",
+        "list": [
+          "Interaktive Weltkarte erstellen und frei erkunden",
+          "Planetenlinien filtern und Orte in ihrer Nähe prüfen",
+          "Check City und Compare Cities in der Sitzung grundlegend nutzen"
+        ]
+      },
+      {
+        "label": "OPTIONALE BEZAHLTE TIEFE",
+        "title": "Deutung oder gespeicherte Recherche wählen",
+        "description": "Bezahlte Funktionen vertiefen die Auswertung, ersetzen aber nicht die kostenlose Karte. Preis oder Credit-Verbrauch werden vorher angezeigt.",
+        "icon": "RiSparkling2Line",
+        "list": [
+          "Persönlicher KI-Chat und strukturierte Berichte verwenden die angezeigten Credits",
+          "Gespeicherte Recherche und Zeitfenster gibt es nur an klar gekennzeichneten Stellen",
+          "Tarif und Preis stehen vor dem Checkout fest; die Kartenerstellung bleibt ohne Kauf möglich"
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Echte Oberfläche — ausschließlich Demodaten",
+      "description": "Das Bild zeigt die tatsächliche Kartenoberfläche. Sichtbare Geburtsdaten oder Orte sind feste Beispiele und keine Prognose für eine reale Person. Astro­kartografie ist ein symbolisches Recherchewerkzeug; prüfe vor einem Umzug immer Lebenshaltungskosten, Visa, Arbeit, Sicherheit, Gesundheit und deine persönliche Situation.",
+      "button": {
+        "title": "Kostenlose Karte erstellen",
+        "icon": "RiMagicLine",
+        "url": "/#generator",
+        "target": "_self",
+        "variant": "default"
+      }
+    }
+  },
   "usage": {
     "name": "usage",
     "title": "So nutzen Sie den Astrokartografie Rechner",
-    "description": "Erstellen Sie Ihre professionelle Astrokartografie-Karte in 4 einfachen Schritten.",
+    "description": "Erstellen und erkunden Sie Ihre Astrokartografie-Karte in 3 einfachen Schritten.",
     "items": [
       {
         "title": "Geburtsdaten eingeben",
-        "description": "Geben Sie Geburtsdatum, -zeit (möglichst auf die Minute genau) und Ort ein. Ohne exakte Geburtszeit sehen Sie weiterhin Planetenlinien (Sonne, Mond, Venus usw.), aber keine Winkel-Linien (ASC, DSC, MC, IC). Unsere Datenbank umfasst Städte weltweit mit automatischer Zeitzone und historischer Sommerzeit.",
+        "description": "Geben Sie Geburtsdatum, möglichst genaue Uhrzeit und Geburtsort ein. Der Rechner bestimmt Ort und Zeitzone, bevor er die Karte erstellt.",
         "icon": "RiCalendarLine"
       },
       {
@@ -433,14 +485,9 @@
         "icon": "RiPlanetLine"
       },
       {
-        "title": "Interaktive Karte und KI-Insights erkunden",
-        "description": "Klicken Sie auf eine Planetenlinie oder einen Power-Spot (Linienkreuzung) für detaillierte KI-Interpretation. Erfahren Sie, wie der Planet an diesem Ort Karriere, Beziehungen, Gesundheit und Kreativität beeinflusst – und ob er sich für langfristigen Aufenthalt, Kurzbesuche, Arbeit oder Studium eignet. Keine Abfragelimits.",
+        "title": "Städte Prüfen und Vergleichen",
+        "description": "Mit Stadt Prüfen sehen Sie nahe Linien, Entfernung und Stärke; alternativ vergleichen Sie 2–3 Orte für ein Umzugsziel. Die KI-Interpretation ist optional und nutzt die im Produkt angezeigten Credits.",
         "icon": "RiMapLine"
-      },
-      {
-        "title": "Professionelle Dateien exportieren",
-        "description": "Laden Sie hochauflösende PNG-Karten, PDF-Interpretationsberichte oder SVG-Vektoren mit einem Klick herunter. Alle Dateien sind ohne Wasserzeichen und für kommerzielle Nutzung geeignet.",
-        "icon": "RiDownloadLine"
       }
     ]
   },
@@ -451,32 +498,32 @@
     "items": [
       {
         "title": "Interaktive Weltkarte",
-        "description": "Ziehen, zoomen und auf Städte klicken – sofort sehen Sie die Verteilung der Planetenenergien. Karten unterstützen Satelliten-, Gelände- und politische Ansichten und helfen, wie Astrokartografie-Linien zur Geografie passen. Power-Spots (Linienkreuzungen) sind hervorgehoben und zentral für Astrokartografie bei Umzugsentscheidungen.",
+        "description": "Verschieben und zoomen Sie die Weltkarte, um Ihre berechneten Planetenlinien zu sehen. Suchen Sie Orte und öffnen Sie bei Bedarf die Vollbildkarte.",
         "icon": "RiGlobalLine"
       },
       {
         "title": "Swiss Ephemeris Berechnungsengine",
-        "description": "Wir nutzen Swiss Ephemeris für Planetenberechnungen von 3000 v. Chr. bis 3000 n. Chr. Die Bibliothek der Zürcher Sternwarte entspricht dem Präzisionsstandard professioneller Astrologie-Software. Ob historische Figuren oder zukünftige Umzüge: Ihre Astrokartografie-Karte ist auf professionellem Niveau.",
+        "description": "Der Rechner nutzt Daten aus Swiss Ephemeris für Planetenpositionen und projiziert die relevanten Winkellinien anhand Ihrer Geburtsdaten auf die Weltkarte.",
         "icon": "RiCompassLine"
       },
       {
         "title": "Mehrsprachige globale Abdeckung",
-        "description": "Städtesuche auf Chinesisch, Englisch, Japanisch und mehr, mit historischen Zeitzonendaten. Das System handhabt Sommerzeit und Zeitzonengrenzen automatisch – präzise Astrokartografie-Karten unabhängig von Geburtsland oder Epoche.",
+        "description": "Nutzen Sie die Website auf Englisch, Chinesisch, Portugiesisch, Spanisch, Italienisch oder Deutsch und suchen Sie weltweit nach Geburts- und Zielorten.",
         "icon": "RiTranslate"
       },
       {
         "title": "Intelligente Planetenlinien-Filter",
-        "description": "Bestimmte Planetenkombinationen beliebig ein- oder ausblenden. Zeigen Sie nur Sonne+Jupiter für Karriere-Städte oder nur Venus+Mond für emotionale Sicherheit. Speichern Sie Filter für schnelle Vergleiche und passende Orte für Ihre Lebensphase.",
+        "description": "Blenden Sie Planetenlinien ein oder aus, um die Karte übersichtlich zu halten und sich auf die für Ihre Frage relevanten Planeten und Winkel zu konzentrieren.",
         "icon": "RiFilterLine"
       },
       {
-        "title": "Power-Spots Energieanalyse",
-        "description": "Die KI erkennt und markiert Linienkreuzungen (Power-Spots), an denen mehrere Planetenenergien gleichzeitig aktiv sind. Diese Kreuzungen wirken oft stärker als einzelne Linien – z. B. Venus+Jupiter für Romantik und Wohlstand, Saturn+Pluto für tiefe Transformation und Karriereumbau.",
-        "icon": "RiStarLine"
+        "title": "Stadt Prüfen",
+        "description": "Sehen Sie die nächsten Planetenlinien einer ausgewählten Stadt mit berechneter Entfernung und Stärke, bevor Sie eine ausführlichere Interpretation öffnen.",
+        "icon": "RiMapPinLine"
       },
       {
-        "title": "Verlauf und Mehrpersonen-Vergleich",
-        "description": "Der Verlauf wird automatisch gespeichert; mehrere Astrokartografie-Karten können gleichzeitig geladen und verglichen werden. Vergleichen Sie Ihre Linien mit denen eines Partners oder identifizieren Sie Jupiter-Kreuzungen im Team. Für Team-Umzüge, Familien oder Partnerauswahl überlagern Sie schnell mehrere Verteilungen.",
+        "title": "Städte Vergleichen und Recherche Speichern",
+        "description": "Vergleichen Sie 2–3 Städte anhand eines Umzugsziels. Angemeldete Nutzer können ein aktuelles Projekt speichern und später zu Auswahl, Datum und praktischen Notizen zurückkehren.",
         "icon": "RiTeamLine"
       }
     ]
@@ -536,7 +583,7 @@
       },
       {
         "title": "Wie genau sind die Berechnungen?",
-        "description": "Wir nutzen Swiss Ephemeris mit professioneller Genauigkeit – auf der Erdoberfläche auf 1 Meile genau. Zeitzonen, Sommerzeit und historische Kalenderänderungen werden berücksichtigt. Dieselbe Präzision wie in der professionellen Astrologie-Beratung."
+        "description": "Der Rechner nutzt Swiss-Ephemeris-Daten für Planetenpositionen und bestimmt Geburtsort und Zeitzone, bevor die Winkellinien projiziert werden. Das Ergebnis hängt von der Genauigkeit Ihrer Eingaben ab."
       },
       {
         "title": "Soll ich nur wegen meiner Astrokartografie-Karte umziehen?",
@@ -544,7 +591,7 @@
       },
       {
         "title": "Kann ich die Karten kommerziell nutzen?",
-        "description": "Ja. Ihre Astrokartografie-Karten und Interpretationsberichte dürfen Sie für jeden Zweck nutzen: persönliche Planung, Beratung, Lehre, Veröffentlichung, soziale Medien – ohne Lizenzgebühren. Ihre Geburtsdaten werden lokal berechnet mit vollständigem Datenschutz."
+        "description": "Du kannst deine erstellte Karte für persönliche Zwecke herunterladen und teilen. Für eine Veröffentlichung, die Nutzung in einem kostenpflichtigen Angebot oder eine andere kommerzielle Verwendung kontaktiere bitte zuerst den Support, damit aktuelle Bedingungen und Kartenhinweise geklärt werden können. Geburtsdaten werden zur Berechnung an den Dienst übertragen, aber nicht öffentlich angezeigt. Details stehen in der Datenschutzerklärung."
       },
       {
         "title": "Wie ist eure Rückerstattungsrichtlinie?",
@@ -558,7 +605,7 @@
   },
   "testimonial": {
     "name": "testimonial",
-    "disabled": false,
+    "disabled": true,
     "label": "VON 54.000+ NUTZERN VERTRAUT",
     "title": "Was Astrologie-Enthusiasten\nÜber Unseren Astrokartografie Rechner Sagen",
     "description": "Basierend auf 714+ verifizierten Nutzerbewertungen. Sehen Sie, warum Tausende unserem professionellen Astrokartografie-Tool für Umzugsplanung vertrauen.",
@@ -617,7 +664,7 @@
   "cta": {
     "name": "cta",
     "title": "Jetzt Ihre kostenlose Astrokartografie-Karte erstellen",
-    "description": "Nutzen Sie den Astrokartografie Rechner für Ihre professionelle Astrokartografie-Karte mit Swiss-Ephemeris-Präzision und weltweiter Standortanalyse. Entdecken Sie ideale Städte für Karriere, Beziehungen und persönliches Wachstum. Keine Anmeldung, unbegrenzte Nutzung – professionelle Analyse in Sekunden.",
+    "description": "Erstellen Sie Ihre persönliche Karte, erkunden Sie Planetenlinien und nutzen Sie Stadt Prüfen oder Städte Vergleichen für eine konkrete Umzugsfrage.",
     "buttons": [
       {
         "title": "Karte jetzt kostenlos erstellen",
@@ -663,7 +710,7 @@
           "10 credits (1 AI question)",
           "Interactive astrocartography map",
           "Basic planetary line explanations",
-          "Generate unlimited maps",
+          "Generate maps (guest daily limit; sign in for more)",
           "Instant access"
         ],
         "interval": "one-time",
@@ -874,15 +921,15 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "Astrokartografie Rechner",
+      "title": "Astrocarto.org",
       "description": "Der Astrokartografie Rechner bietet professionelle Astrokartografie-Tools für digitale Nomaden, Umzugsplaner und Astrologie-Praktiker. Wir nutzen Swiss Ephemeris für astronomische Präzision; KI macht komplexe Planetenlinien-Interpretationen zugänglich. Strikter Datenschutz, globale Standortanalyse – professionelle Astrokartografie-Karten für alle.",
       "logo": {
         "src": "/logo.png",
-        "alt": "Astrokartografie Rechner"
+        "alt": "Astrocarto.org"
       },
       "url": "/de"
     },
-    "copyright": "© 2025 • Astrokartografie Rechner. Alle Rechte vorbehalten.",
+    "copyright": "© 2025 • Astrocarto.org. Alle Rechte vorbehalten.",
     "nav": {
       "items": [
         {

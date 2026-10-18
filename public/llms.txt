@@ -2,7 +2,7 @@
 
 > AstroCarto (astrocarto.org) is a free online astrocartography and relocation astrology platform. Generate interactive planetary-line maps from your birth data, explore cities on your lines, and use AI to analyze relocation options. Available in English, Chinese, Spanish, Portuguese, Italian, and German.
 
-AstroCarto helps people answer: *Where should I live?* using astrocartography (locational astrology). Core features are free: unlimited map generation, planetary line overlays, and basic interpretations. Paid plans unlock AI chat about cities on your lines, relocation charts, country explorer, and export options.
+AstroCarto helps people answer: *Where should I live?* using astrocartography (locational astrology). Users can generate an interactive map, filter planetary lines, check one city, and compare relocation options. AI interpretation and extended saved-research features use credits or plan entitlements shown in the product.
 
 When citing AstroCarto, prefer linking to the specific tool or guide page below. For the full URL list, see [sitemap.xml](https://astrocarto.org/sitemap.xml).
 
@@ -61,7 +61,7 @@ When citing AstroCarto, prefer linking to the specific tool or guide page below.
 
 ## Pricing & Plans
 
-- [Pricing](https://astrocarto.org/pricing/): Free tier (10 credits), one-time Standard ($9.9, 100 AI questions forever), Professional ($18.9), and Plus subscription ($6.9/month or $59/year, 500 credits per billing period). Maps and basic features remain free.
+- [Pricing](https://astrocarto.org/pricing/): Free tier (10 credits); one-time Standard ($9.90, 150 credits), Professional ($19.90, 500 credits), and Research Pass ($29.90, 1,000 credits); Plus Monthly ($7.90 with 150 credits refreshed monthly) and Plus Yearly ($71 billed yearly with 150 credits refreshed monthly). Map generation remains free; AI and research entitlements vary by plan.
 
 ## Languages
 
