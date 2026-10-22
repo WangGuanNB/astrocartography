@@ -42,8 +42,25 @@ type ToolLabels = {
   result: {
     title: string;
     relocateLabel: string;
+    anglesTitle?: string;
     natalAscTitle: string;
     relocatedAscTitle: string;
+    natalMcTitle?: string;
+    relocatedMcTitle?: string;
+    readingTitle?: string;
+    readingIntro?: string;
+    biggestHouseChanges?: string;
+    angularPlanetsBirth?: string;
+    angularPlanetsRelocation?: string;
+    lifeHousesTitle?: string;
+    noAngularPlanets?: string;
+    noHouseChanges?: string;
+    angleAsc?: string;
+    angleMc?: string;
+    orbLabel?: string;
+    lifeHouseNames?: Record<string, string>;
+    natalLabel?: string;
+    relocatedLabel?: string;
     tableTitle: string;
     planet: string;
     sign: string;
@@ -51,6 +68,9 @@ type ToolLabels = {
     natalHouse: string;
     relocatedHouse: string;
     ctaChart: string;
+    ctaCheckCity?: string;
+    ctaCheckCityHint?: string;
+    readingConversionNote?: string;
     calculateAnother?: string;
     copySummary?: string;
     copySuccess?: string;
@@ -74,6 +94,33 @@ type PlanetRow = {
   relocatedHouse: number;
 };
 
+type ReadingSnapshot = {
+  biggestHouseChanges: Array<{
+    planet: string;
+    glyph: string;
+    natalHouse: number;
+    relocatedHouse: number;
+    houseDelta: number;
+  }>;
+  angularAtBirth: Array<{
+    planet: string;
+    glyph: string;
+    angle: "Ascendant" | "Midheaven";
+    orb: number;
+  }>;
+  angularAtRelocation: Array<{
+    planet: string;
+    glyph: string;
+    angle: "Ascendant" | "Midheaven";
+    orb: number;
+  }>;
+  lifeHouses: Array<{
+    house: number;
+    natalPlanets: string[];
+    relocatedPlanets: string[];
+  }>;
+};
+
 type ApiResponse = {
   success: boolean;
   error?: string;
@@ -90,7 +137,10 @@ type ApiResponse = {
     system: string;
     natalAscendant: Angle;
     relocatedAscendant: Angle;
+    natalMidheaven?: Angle;
+    relocatedMidheaven?: Angle;
     planets: PlanetRow[];
+    readingSnapshot?: ReadingSnapshot;
   };
 };
 
@@ -107,14 +157,62 @@ function buildRelocationSummary(
     `${labels.relocateLabel}: ${data.relocateData.location}`,
     `${labels.natalAscTitle}: ${data.natalAscendant.sign} ${formatDeg(data.natalAscendant.degree)}`,
     `${labels.relocatedAscTitle}: ${data.relocatedAscendant.sign} ${formatDeg(data.relocatedAscendant.degree)}`,
+  ];
+  if (data.natalMidheaven && data.relocatedMidheaven) {
+    lines.push(
+      `${labels.natalMcTitle || "Midheaven at birth"}: ${data.natalMidheaven.sign} ${formatDeg(data.natalMidheaven.degree)}`,
+      `${labels.relocatedMcTitle || "Midheaven after relocation"}: ${data.relocatedMidheaven.sign} ${formatDeg(data.relocatedMidheaven.degree)}`
+    );
+  }
+  if (data.readingSnapshot?.biggestHouseChanges.length) {
+    lines.push("", labels.biggestHouseChanges || "Biggest house shifts");
+    for (const row of data.readingSnapshot.biggestHouseChanges) {
+      lines.push(
+        `${row.planet}: ${labels.natalHouse} ${row.natalHouse} → ${labels.relocatedHouse} ${row.relocatedHouse}`
+      );
+    }
+  }
+  lines.push(
     "",
     labels.tableTitle,
     ...data.planets.map(
       (p) =>
         `${p.name}: ${p.sign} ${formatDeg(p.degree)} | ${labels.natalHouse} ${p.natalHouse} → ${labels.relocatedHouse} ${p.relocatedHouse}`
-    ),
-  ];
+    )
+  );
   return lines.join("\n");
+}
+
+function formatPlanetList(names: string[]) {
+  return names.length ? names.join(", ") : "—";
+}
+
+function angleLabel(
+  angle: "Ascendant" | "Midheaven",
+  labels: ToolLabels["result"]
+) {
+  if (angle === "Ascendant") return labels.angleAsc || "Ascendant";
+  return labels.angleMc || "Midheaven";
+}
+
+function interpolate(template: string, vars: Record<string, string>) {
+  return template.replace(/\{(\w+)\}/g, (_, key: string) => vars[key] ?? "");
+}
+
+function cityDisplayName(location: string) {
+  const trimmed = location.trim();
+  return trimmed.split(",")[0]?.trim() || trimmed;
+}
+
+function buildChartBaseParams(data: NonNullable<ApiResponse["data"]>) {
+  return {
+    birthDate: data.birthData.date,
+    birthTime: data.birthData.time,
+    birthLocation: data.birthData.location,
+    timezone: data.birthData.timezone,
+    latitude: String(data.birthData.latitude),
+    longitude: String(data.birthData.longitude),
+  };
 }
 
 export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLabels }) {
@@ -162,15 +260,22 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
   );
 
   const chartUrl = result
+    ? `${locale === "en" ? "" : `/${locale}`}/chart?${new URLSearchParams(
+        buildChartBaseParams(result)
+      ).toString()}`
+    : null;
+
+  const chartCheckCityUrl = result
     ? `${locale === "en" ? "" : `/${locale}`}/chart?${new URLSearchParams({
-        birthDate: result.birthData.date,
-        birthTime: result.birthData.time,
-        birthLocation: result.birthData.location,
-        timezone: result.birthData.timezone,
-        latitude: String(result.birthData.latitude),
-        longitude: String(result.birthData.longitude),
+        ...buildChartBaseParams(result),
+        openCheckCity: "1",
+        checkCityLocation: result.relocateData.location,
+        checkCityLat: String(result.relocateData.latitude),
+        checkCityLng: String(result.relocateData.longitude),
       }).toString()}`
     : null;
+
+  const relocateCityLabel = result ? cityDisplayName(result.relocateData.location) : "";
 
   async function handleSubmit() {
     if (!canSubmit) return;
@@ -425,11 +530,26 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
               </p>
               <p className="mt-0.5 text-xs text-white/50">{result.system}</p>
 
-              <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+              <div className="mt-4 flex flex-col gap-2">
+                {tool.result.ctaCheckCity && chartCheckCityUrl && (
+                  <a
+                    href={chartCheckCityUrl}
+                    className="inline-flex w-full items-center justify-center rounded-md bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 transition-opacity hover:opacity-95"
+                  >
+                    {interpolate(tool.result.ctaCheckCity, { city: relocateCityLabel })}
+                  </a>
+                )}
+                {tool.result.ctaCheckCityHint && (
+                  <p className="text-xs leading-relaxed text-white/55">
+                    {tool.result.ctaCheckCityHint}
+                  </p>
+                )}
+              </div>
+              <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
                 <a
                   href={chartUrl || "/"}
                   className={cn(
-                    "inline-flex flex-1 items-center justify-center rounded-md bg-purple-600 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-purple-700",
+                    "inline-flex flex-1 items-center justify-center rounded-md border border-white/20 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10",
                     !chartUrl && "pointer-events-none opacity-50"
                   )}
                 >
@@ -476,7 +596,10 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
               </div>
               {copyMessage && <p className="text-xs text-emerald-300/90">{copyMessage}</p>}
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {tool.result.anglesTitle && (
+                <h3 className="mt-6 text-base font-semibold text-white">{tool.result.anglesTitle}</h3>
+              )}
+              <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-lg border border-white/10 bg-black/20 p-4">
                   <h3 className="text-sm font-semibold text-purple-300">{tool.result.natalAscTitle}</h3>
                   <p className="mt-2 text-lg text-white">
@@ -491,7 +614,135 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
                     <span className="text-white/80">{formatDeg(result.relocatedAscendant.degree)}</span>
                   </p>
                 </div>
+                {result.natalMidheaven && (
+                  <div className="rounded-lg border border-white/10 bg-black/20 p-4">
+                    <h3 className="text-sm font-semibold text-purple-300">
+                      {tool.result.natalMcTitle || "Midheaven at birth"}
+                    </h3>
+                    <p className="mt-2 text-lg text-white">
+                      {result.natalMidheaven.sign}{" "}
+                      <span className="text-white/80">{formatDeg(result.natalMidheaven.degree)}</span>
+                    </p>
+                  </div>
+                )}
+                {result.relocatedMidheaven && (
+                  <div className="rounded-lg border border-white/10 bg-black/20 p-4">
+                    <h3 className="text-sm font-semibold text-pink-300">
+                      {tool.result.relocatedMcTitle || "Midheaven after relocation"}
+                    </h3>
+                    <p className="mt-2 text-lg text-white">
+                      {result.relocatedMidheaven.sign}{" "}
+                      <span className="text-white/80">{formatDeg(result.relocatedMidheaven.degree)}</span>
+                    </p>
+                  </div>
+                )}
               </div>
+
+              {result.readingSnapshot && tool.result.readingTitle && (
+                <div className="mt-8 rounded-lg border border-amber-500/20 bg-amber-500/5 p-4 md:p-5">
+                  <h3 className="text-base font-semibold text-white">{tool.result.readingTitle}</h3>
+                  {tool.result.readingIntro && (
+                    <p className="mt-1 text-sm text-white/60">{tool.result.readingIntro}</p>
+                  )}
+
+                  {tool.result.biggestHouseChanges && (
+                    <div className="mt-4">
+                      <h4 className="text-sm font-semibold text-amber-200/90">
+                        {tool.result.biggestHouseChanges}
+                      </h4>
+                      {result.readingSnapshot.biggestHouseChanges.length === 0 ? (
+                        <p className="mt-1 text-sm text-white/50">
+                          {tool.result.noHouseChanges || "No house changes detected."}
+                        </p>
+                      ) : (
+                        <ul className="mt-2 space-y-1.5 text-sm text-white/85">
+                          {result.readingSnapshot.biggestHouseChanges.map((row) => (
+                            <li key={row.planet}>
+                              {row.glyph} {row.planet}: {tool.result.natalHouse} {row.natalHouse} →{" "}
+                              {tool.result.relocatedHouse} {row.relocatedHouse}
+                              <span className="text-white/50"> (+{row.houseDelta})</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+
+                  {tool.result.lifeHousesTitle && (
+                    <div className="mt-4">
+                      <h4 className="text-sm font-semibold text-amber-200/90">
+                        {tool.result.lifeHousesTitle}
+                      </h4>
+                      <ul className="mt-2 space-y-2 text-sm text-white/85">
+                        {result.readingSnapshot.lifeHouses.map((row) => (
+                          <li key={row.house}>
+                            <span className="font-medium text-white">
+                              {tool.result.lifeHouseNames?.[String(row.house)] || `House ${row.house}`}
+                            </span>
+                            <span className="text-white/50"> · </span>
+                            {tool.result.natalLabel || "Birth"}: {formatPlanetList(row.natalPlanets)}
+                            <span className="text-white/50"> · </span>
+                            {tool.result.relocatedLabel || "Relocated"}:{" "}
+                            {formatPlanetList(row.relocatedPlanets)}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {tool.result.angularPlanetsBirth && (
+                    <div className="mt-4">
+                      <h4 className="text-sm font-semibold text-amber-200/90">
+                        {tool.result.angularPlanetsBirth}
+                      </h4>
+                      {result.readingSnapshot.angularAtBirth.length === 0 ? (
+                        <p className="mt-1 text-sm text-white/50">
+                          {tool.result.noAngularPlanets || "None within 3° of Ascendant or Midheaven."}
+                        </p>
+                      ) : (
+                        <ul className="mt-2 space-y-1 text-sm text-white/85">
+                          {result.readingSnapshot.angularAtBirth.map((row) => (
+                            <li key={`${row.planet}-${row.angle}`}>
+                              {row.glyph} {row.planet} — {angleLabel(row.angle, tool.result)} (
+                              {row.orb}° {tool.result.orbLabel || "orb"})
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+
+                  {tool.result.angularPlanetsRelocation && (
+                    <div className="mt-4">
+                      <h4 className="text-sm font-semibold text-amber-200/90">
+                        {tool.result.angularPlanetsRelocation}
+                      </h4>
+                      {result.readingSnapshot.angularAtRelocation.length === 0 ? (
+                        <p className="mt-1 text-sm text-white/50">
+                          {tool.result.noAngularPlanets || "None within 3° of Ascendant or Midheaven."}
+                        </p>
+                      ) : (
+                        <ul className="mt-2 space-y-1 text-sm text-white/85">
+                          {result.readingSnapshot.angularAtRelocation.map((row) => (
+                            <li key={`${row.planet}-${row.angle}-rel`}>
+                              {row.glyph} {row.planet} — {angleLabel(row.angle, tool.result)} (
+                              {row.orb}° {tool.result.orbLabel || "orb"})
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+
+                  {tool.result.readingConversionNote && (
+                    <p className="mt-5 border-t border-amber-500/20 pt-4 text-sm leading-relaxed text-white/70">
+                      {interpolate(tool.result.readingConversionNote, {
+                        city: relocateCityLabel,
+                      })}
+                    </p>
+                  )}
+                </div>
+              )}
 
               <h3 className="mt-8 text-base font-semibold text-white">{tool.result.tableTitle}</h3>
               <div className="mt-2 overflow-x-auto">
@@ -506,17 +757,33 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
                     </tr>
                   </thead>
                   <tbody>
-                    {result.planets.map((p) => (
-                      <tr key={p.name} className="border-b border-white/10">
-                        <td className="py-1.5">
-                          {p.glyph} {p.name}
-                        </td>
-                        <td className="py-1.5">{p.sign}</td>
-                        <td className="py-1.5 text-right">{formatDeg(p.degree)}</td>
-                        <td className="py-1.5 text-center">{p.natalHouse}</td>
-                        <td className="py-1.5 text-center font-medium text-pink-200">{p.relocatedHouse}</td>
-                      </tr>
-                    ))}
+                    {result.planets.map((p) => {
+                      const houseChanged = p.natalHouse !== p.relocatedHouse;
+                      return (
+                        <tr
+                          key={p.name}
+                          className={cn(
+                            "border-b border-white/10",
+                            houseChanged && "bg-pink-500/5"
+                          )}
+                        >
+                          <td className="py-1.5">
+                            {p.glyph} {p.name}
+                          </td>
+                          <td className="py-1.5">{p.sign}</td>
+                          <td className="py-1.5 text-right">{formatDeg(p.degree)}</td>
+                          <td className="py-1.5 text-center">{p.natalHouse}</td>
+                          <td
+                            className={cn(
+                              "py-1.5 text-center",
+                              houseChanged ? "font-semibold text-pink-200" : "text-white/80"
+                            )}
+                          >
+                            {p.relocatedHouse}
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>

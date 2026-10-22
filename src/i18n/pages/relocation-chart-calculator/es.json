@@ -90,7 +90,7 @@
       },
       {
         "title": "Gratis y sin registro",
-        "description": "Generate a relocation chart as often as you like—one city per calculation. Birth data is sent securely to our server for Swiss Ephemeris-style angle and house math; we do not sell your data. Try every finalist city before you decide.",
+        "description": "Generate a relocation chart as often as you like—one city per calculation. Birth data is sent securely to our server for astronomy-engine angle and house math; we do not sell your data. Try every finalist city before you decide.",
         "icon": "RiGiftLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -201,6 +201,14 @@
         "description": "Casas enteras desde el Ascendente de cada lugar, legible y muy usada para comparaciones de reubicación en línea."
       },
       {
+        "title": "Does the relocation chart show Midheaven (MC)?",
+        "description": "Yes. Results include Midheaven at birth and at the relocation city, alongside both Ascendants. MC highlights career and public-life angles; pair it with the house table to see which planets land on angular houses after you move."
+      },
+      {
+        "title": "How do I read my relocation chart results?",
+        "description": "Start with the four angles (ASC and MC at birth vs relocation). Then scan the reading highlights: biggest house shifts, planets within 3° of an angle, and life houses (1st, 4th, 7th, 10th). Finally use the full planet table—natal house is your baseline, relocated house shows what changes in the new city."
+      },
+      {
         "title": "Can I compare two cities in one relocation chart?",
         "description": "No. Each run is for one relocation city. To compare several places on one map, generate your astrocartography chart and use Compare Cities (up to four). Run this calculator separately for each finalist."
       },
@@ -209,6 +217,42 @@
         "description": "Calculations are processed on our servers when you submit the form. We use the data to return your relocation chart for that session. See our privacy policy for retention details."
       }
     ]
+  },
+  "methodology": {
+    "label": "METHODOLOGY",
+    "title": "How We Calculate Your Relocation Chart",
+    "description": "Relocation results use the method explained below.",
+    "highlights": [
+      { "label": "astronomy-engine", "url": "https://github.com/cosinekitty/astronomy" },
+      { "label": "Tropical · Geocentric" },
+      { "label": "Whole Sign Houses" },
+      { "label": "Server API" }
+    ],
+    "items": [
+      {
+        "title": "Calculation engine",
+        "description": "Planetary longitudes and angles use the open-source astronomy-engine library (linked above): geocentric tropical ecliptic positions—the same core math family used across AstroCarto chart calculators on this site."
+      },
+      {
+        "title": "Same birth moment, new coordinates",
+        "description": "Your local birth date, time, and timezone convert to one UTC instant. That instant is fixed. We compute the Ascendant and Midheaven (MC) at your birth latitude/longitude, then again at the relocation latitude/longitude. Planetary signs and degrees do not change; only angles and derived houses do."
+      },
+      {
+        "title": "Whole-sign houses",
+        "description": "Houses follow whole signs from each location’s Ascendant: the rising sign is the entire 1st house, the next sign is the 2nd, and so on. Natal and relocated house columns in the table use this model for a clear before-and-after comparison."
+      },
+      {
+        "title": "Reading highlights",
+        "description": "After calculation, the tool surfaces biggest house shifts, planets within 3° of the Ascendant or MC at each location, and occupants of life houses (1st, 4th, 7th, 10th). These are interpretive aids—not predictions—and pair with the full planet table."
+      },
+      {
+        "title": "Where processing runs",
+        "description": "When you submit the form, the browser calls /api/calculate-relocation-chart. The server returns angles, houses, and reading highlights as JSON. Birth and relocation locations are used only to perform that calculation for your session."
+      }
+    ],
+    "disclaimer": "Astrology content on this page is for general information and exploration only. It is not medical, financial, legal, or other professional advice, and it does not guarantee outcomes. Use your own judgment for important decisions.",
+    "lastUpdated": "2026-10-21",
+    "lastUpdatedLabel": "Last updated"
   },
   "cta": {
     "name": "cta",
@@ -237,14 +281,39 @@
     "result": {
       "title": "Tu carta de reubicación",
       "relocateLabel": "Lugar de reubicación",
+      "anglesTitle": "Ángulos: nacimiento vs reubicación",
       "natalAscTitle": "Ascendente al nacer",
       "relocatedAscTitle": "Ascendente en el destino",
+      "natalMcTitle": "MC al nacer",
+      "relocatedMcTitle": "MC en el destino",
+      "readingTitle": "Cómo leer esta carta de reubicación",
+      "readingIntro": "Los signos y grados planetarios no cambian; los ángulos y casas sí. Usa estos puntos antes de la tabla completa.",
+      "biggestHouseChanges": "Mayores cambios de casa",
+      "angularPlanetsBirth": "Planetas cerca de ángulos al nacer (dentro de 3°)",
+      "angularPlanetsRelocation": "Planetas cerca de ángulos tras reubicación (dentro de 3°)",
+      "lifeHousesTitle": "Casas vitales (1.ª, 4.ª, 7.ª, 10.ª)",
+      "noAngularPlanets": "Ninguno dentro de 3° del Ascendente o MC",
+      "noHouseChanges": "No se detectaron cambios de casa",
+      "angleAsc": "Ascendente",
+      "angleMc": "MC",
+      "orbLabel": "orbe",
+      "natalLabel": "Natal",
+      "relocatedLabel": "Reubicado",
+      "lifeHouseNames": {
+        "1": "Casa 1 (identidad)",
+        "4": "Casa 4 (hogar)",
+        "7": "Casa 7 (relaciones)",
+        "10": "Casa 10 (carrera)"
+      },
       "tableTitle": "Planetas: casas natal vs reubicadas",
       "planet": "Planeta",
       "sign": "Signo",
       "degree": "Grado",
       "natalHouse": "Casa (nacimiento)",
       "relocatedHouse": "Casa (reubicación)",
+      "ctaCheckCity": "Explorar {city} en tu mapa + Check City",
+      "ctaCheckCityHint": "Abre tu mapa de astrocartografía con esta ciudad lista: revisa líneas cercanas y usa Check City o Ask AI (créditos del plan).",
+      "readingConversionNote": "Los puntos anteriores son solo un resumen estructural. Para ver cómo {city} activa temas de carrera, relaciones y hogar en el mapa de líneas, usa el botón de arriba y ejecuta Check City para este destino. La interpretación IA profunda usa los mismos créditos que en el mapa de la página principal.",
       "ctaChart": "Ver mapa de astrocartografía con estos datos",
       "footnote": "Casas enteras. Las longitudes planetarias son idénticas; solo cambian ángulos y casas.",
       "calculateAnother": "Calculate another city",

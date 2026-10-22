@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, Suspense, useRef, useCallback } from 'react';
+import { useEffect, useState, Suspense, useRef, useCallback, useMemo } from 'react';
 import { useSearchParams, useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
@@ -27,6 +27,7 @@ import {
 } from '@/lib/analytics';
 import { useIsMobile } from '@/hooks/use-mobile';
 import type { AstrocartographyMapHandle } from '@/components/astrocartography-map';
+import type { MapCity } from '@/components/astrocartography-map/city-tools';
 import { toast } from 'sonner';
 import {
   applyBrandingFooterToPngDataUrl,
@@ -60,6 +61,30 @@ interface PlanetLine {
 const MOBILE_COMPARE_NEW_KEY = 'astrocartography-mobile-compare-seen';
 const AUTO_POPUP_DISMISSED_KEY = 'astro-chat-auto-popup-dismissed';
 
+function parseCheckCityFromSearchParams(searchParams: URLSearchParams) {
+  const open = searchParams.get('openCheckCity') === '1';
+  const location = searchParams.get('checkCityLocation');
+  const lat = searchParams.get('checkCityLat');
+  const lng = searchParams.get('checkCityLng');
+  if (!location || !lat || !lng) {
+    return { open: false as const, city: undefined as MapCity | undefined };
+  }
+  const latitude = parseFloat(lat);
+  const longitude = parseFloat(lng);
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+    return { open: false as const, city: undefined as MapCity | undefined };
+  }
+  const parts = location.split(',').map((part) => part.trim());
+  const city: MapCity = {
+    name: parts[0] || location,
+    country: parts.slice(1).join(', '),
+    lat: latitude,
+    lng: longitude,
+    displayName: location,
+  };
+  return { open, city };
+}
+
 export default function ChartContent() {
   const searchParams = useSearchParams();
   const params = useParams();
@@ -89,6 +114,10 @@ export default function ChartContent() {
   const [isToolbarExpanded, setIsToolbarExpanded] = useState(false); // 右上角工具栏折叠状态
   const [showMobileCompareNew, setShowMobileCompareNew] = useState(false);
   const [hasAutoPopped, setHasAutoPopped] = useState(false);
+  const checkCityFromUrl = useMemo(
+    () => parseCheckCityFromSearchParams(searchParams),
+    [searchParams]
+  );
 
   useEffect(() => {
     try {
@@ -433,6 +462,10 @@ export default function ChartContent() {
                 initialPlanDate={restoredProject?.planDate}
                 initialConstraints={restoredProject?.constraints}
                 initiallyOpenCompare={Boolean(restoredProject)}
+                initialCheckCity={checkCityFromUrl.city}
+                initiallyOpenCheck={
+                  checkCityFromUrl.open && Boolean(checkCityFromUrl.city)
+                }
               />
             </div>
 

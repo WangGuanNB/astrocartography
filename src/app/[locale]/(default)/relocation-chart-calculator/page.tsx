@@ -8,6 +8,7 @@ import Feature3 from "@/components/blocks/feature3";
 import Feature from "@/components/blocks/feature";
 import FAQ from "@/components/blocks/faq";
 import CTA from "@/components/blocks/cta";
+import MethodologyBlock from "@/components/blocks/methodology";
 import { Link } from "@/i18n/navigation";
 import { defaultLocale } from "@/i18n/locale";
 
@@ -179,6 +180,8 @@ export default async function RelocationChartCalculatorPage({
         <RelocationChartCalculatorClient tool={page.tool} />
       </div>
 
+      {page.methodology && <MethodologyBlock section={page.methodology} />}
+
       {page.introduce && <FeatureWhatTwo section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
       {page.usage && <Feature3 section={page.usage} />}
@@ -201,7 +204,8 @@ export default async function RelocationChartCalculatorPage({
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
             featureList: [
               "Relocation chart with same birth moment, new coordinates",
-              "Compare Ascendant at birth vs relocated city",
+              "Compare Ascendant and Midheaven at birth vs relocated city",
+              "Reading highlights: house shifts, angular planets, life houses",
               "Whole-sign natal vs relocated houses for all planets",
               "Link to Astrocartography map with same birth data",
             ],

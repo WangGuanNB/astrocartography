@@ -65,9 +65,11 @@ interface AstrocartographyMapProps {
   initialCompareCities?: MapCity[];
   initialComparisonGoal?: ComparisonGoal;
   initialCurrentCity?: MapCity;
+  initialCheckCity?: MapCity;
   initialPlanDate?: string;
   initialConstraints?: string;
   initiallyOpenCompare?: boolean;
+  initiallyOpenCheck?: boolean;
 }
 
 // Planet symbol mapping
@@ -272,9 +274,11 @@ const AstrocartographyMap = forwardRef<
     initialCompareCities,
     initialComparisonGoal,
     initialCurrentCity,
+    initialCheckCity,
     initialPlanDate,
     initialConstraints,
     initiallyOpenCompare = false,
+    initiallyOpenCheck = false,
   },
   ref
 ) {
@@ -943,9 +947,11 @@ const AstrocartographyMap = forwardRef<
           initialCompareCities={initialCompareCities}
           initialComparisonGoal={initialComparisonGoal}
           initialCurrentCity={initialCurrentCity}
+          initialCheckCity={initialCheckCity}
           initialPlanDate={initialPlanDate}
           initialConstraints={initialConstraints}
           initiallyOpenCompare={initiallyOpenCompare}
+          initiallyOpenCheck={initiallyOpenCheck}
         />
       )}
 

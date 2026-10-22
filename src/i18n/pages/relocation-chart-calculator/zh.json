@@ -227,8 +227,61 @@
       {
         "title": "用什么宫位制？",
         "description": "整宫制，以各自地点的上升星座为第一宫起点，便于在线快速对比。"
+      },
+      {
+        "title": "结果里有天顶（MC）吗？",
+        "description": "有。结果会并排展示出生地与天顶、移居地的上升与天顶。天顶侧重事业与公众形象；可结合宫位表看哪些行星在移居后落在角宫。"
+      },
+      {
+        "title": "怎么读移居星盘结果？",
+        "description": "先看四个角点（出生与移居的上升、天顶）。再读阅读要点：宫位跳变最大、距角点 3° 内的行星、以及 1/4/7/10 宫（人生四轴宫）。最后用完整行星表对照——本命宫为基准，移居宫显示在新城市的变化。"
       }
     ]
+  },
+  "methodology": {
+    "label": "计算方法",
+    "title": "移居星盘如何计算",
+    "description": "下方说明本工具的计算口径。",
+    "highlights": [
+      {
+        "label": "astronomy-engine",
+        "url": "https://github.com/cosinekitty/astronomy"
+      },
+      {
+        "label": "热带黄道 · 地心"
+      },
+      {
+        "label": "整宫制"
+      },
+      {
+        "label": "服务端 API"
+      }
+    ],
+    "items": [
+      {
+        "title": "计算引擎",
+        "description": "行星经度与角点使用开源 astronomy-engine（见上方链接）：地心热带黄道位置，与本站其他星盘计算器同一套核心算法。"
+      },
+      {
+        "title": "同一时刻，新坐标",
+        "description": "出生日期、时间与时区换算为一个固定的 UTC 瞬间。在该瞬间，分别在出生地与移居地经纬度计算上升与天顶（MC）。行星星座与度数不变，仅角点与由此推出的宫位改变。"
+      },
+      {
+        "title": "整宫制",
+        "description": "以各地点的上升星座为整宫第一宫，下一星座为第二宫，依此类推。表格中「本命宫」与「移居宫」两列便于前后对比。"
+      },
+      {
+        "title": "阅读要点",
+        "description": "计算完成后，工具会标出宫位跳变最大的行星、距上升或天顶 3° 内的行星，以及 1/4/7/10 宫的星体分布。这些是解读辅助，非预测，需结合完整行星表阅读。"
+      },
+      {
+        "title": "处理位置",
+        "description": "提交表单后，浏览器调用 /api/calculate-relocation-chart，服务器返回角点、宫位与阅读要点 JSON。出生与移居地点仅用于本次计算。"
+      }
+    ],
+    "disclaimer": "本页占星内容仅供一般信息与探索，不构成医疗、财务、法律或其他专业建议，也不保证任何结果。重要决定请自行判断。",
+    "lastUpdated": "2026-10-21",
+    "lastUpdatedLabel": "最后更新"
   },
   "cta": {
     "name": "cta",
@@ -257,14 +310,39 @@
     "result": {
       "title": "你的移居星盘结果",
       "relocateLabel": "移居地点",
+      "anglesTitle": "出生地与移居地角点对比",
       "natalAscTitle": "出生地上升",
       "relocatedAscTitle": "移居地上升",
+      "natalMcTitle": "出生地天顶（MC）",
+      "relocatedMcTitle": "移居地天顶（MC）",
+      "readingTitle": "如何阅读这份移居星盘",
+      "readingIntro": "行星星座与度数不变；角点与宫位会变。可先读以下要点，再查看完整表格。",
+      "biggestHouseChanges": "宫位跳变最大",
+      "angularPlanetsBirth": "出生时靠近角点的行星（3° 内）",
+      "angularPlanetsRelocation": "移居后靠近角点的行星（3° 内）",
+      "lifeHousesTitle": "人生四轴宫（1、4、7、10 宫）",
+      "noAngularPlanets": "无行星在上升或天顶 3° 范围内",
+      "noHouseChanges": "未检测到宫位变化",
+      "angleAsc": "上升",
+      "angleMc": "天顶",
+      "orbLabel": "容许度",
+      "natalLabel": "出生",
+      "relocatedLabel": "移居",
+      "lifeHouseNames": {
+        "1": "第 1 宫（自我）",
+        "4": "第 4 宫（家庭）",
+        "7": "第 7 宫（关系）",
+        "10": "第 10 宫（事业）"
+      },
       "tableTitle": "行星：本命宫 vs 移居宫",
       "planet": "行星",
       "sign": "星座",
       "degree": "度数",
       "natalHouse": "宫位（出生）",
       "relocatedHouse": "宫位（移居）",
+      "ctaCheckCity": "在地图上查看 {city} + Check City 解读",
+      "ctaCheckCityHint": "打开星盘地图并预选此城市，可查看附近行星线，再用 Check City 或 Ask AI 深入解读（消耗套餐积分）。",
+      "readingConversionNote": "以上仅为结构摘要。要了解 {city} 如何在行星线地图上激活事业、关系与家庭主题，请点击上方按钮并对该城市运行 Check City。更深入的 AI 解读与首页地图使用同一套积分。",
       "ctaChart": "用此出生数据查看星盘地图",
       "calculateAnother": "计算另一座城市",
       "copySummary": "复制摘要",

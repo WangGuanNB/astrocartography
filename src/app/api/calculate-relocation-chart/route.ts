@@ -1,6 +1,14 @@
 import { unstable_cache } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
-import { computeWholeSignChart, localBirthTimeToUtc } from "@/lib/natal-chart-core";
+import {
+  calculateMidheavenLongitude,
+  computeWholeSignChart,
+  localBirthTimeToUtc,
+} from "@/lib/natal-chart-core";
+import {
+  buildRelocationReadingSnapshot,
+  longitudeToAngleSnapshot,
+} from "@/lib/relocation-snapshot";
 
 export const revalidate = 3600;
 export const maxDuration = 30;
@@ -97,6 +105,9 @@ async function getCachedRelocation(
       const natal = computeWholeSignChart(utcTime, input.latitude, input.longitude);
       const relocated = computeWholeSignChart(utcTime, input.relocateLatitude, input.relocateLongitude);
 
+      const natalMcLon = calculateMidheavenLongitude(utcTime, input.longitude);
+      const relocatedMcLon = calculateMidheavenLongitude(utcTime, input.relocateLongitude);
+
       const planets = natal.planets.map((p, i) => ({
         name: p.name,
         glyph: p.glyph,
@@ -106,6 +117,14 @@ async function getCachedRelocation(
         natalHouse: p.house,
         relocatedHouse: relocated.planets[i].house,
       }));
+
+      const readingSnapshot = buildRelocationReadingSnapshot(
+        planets,
+        natal.ascendant.longitude,
+        relocated.ascendant.longitude,
+        natalMcLon,
+        relocatedMcLon
+      );
 
       return {
         success: true,
@@ -126,7 +145,10 @@ async function getCachedRelocation(
           system: "Whole Sign Houses",
           natalAscendant: natal.ascendant,
           relocatedAscendant: relocated.ascendant,
+          natalMidheaven: longitudeToAngleSnapshot(natalMcLon),
+          relocatedMidheaven: longitudeToAngleSnapshot(relocatedMcLon),
           planets,
+          readingSnapshot,
         },
       };
     },

@@ -77,9 +77,11 @@ type CityToolsProps = {
   initialCompareCities?: MapCity[];
   initialComparisonGoal?: ResearchGoal;
   initialCurrentCity?: MapCity;
+  initialCheckCity?: MapCity;
   initialPlanDate?: string;
   initialConstraints?: string;
   initiallyOpenCompare?: boolean;
+  initiallyOpenCheck?: boolean;
 };
 
 type ToolMode = "check" | "compare" | null;
@@ -468,9 +470,11 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
     initialCompareCities = [],
     initialComparisonGoal = "overall",
     initialCurrentCity,
+    initialCheckCity,
     initialPlanDate = "",
     initialConstraints = "",
     initiallyOpenCompare = false,
+    initiallyOpenCheck = false,
   },
   ref
 ) {
@@ -529,6 +533,7 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   const comparisonResultsRef = useRef<HTMLDivElement>(null);
   const saveProjectRef = useRef<HTMLDivElement>(null);
   const fullReportRef = useRef<HTMLDivElement>(null);
+  const initialCheckAppliedRef = useRef(false);
   const comparisonResults = useMemo(
     () =>
       [...compareCities]
@@ -544,6 +549,23 @@ const CityTools = forwardRef<CityToolsHandle, CityToolsProps>(function CityTools
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (initialCheckAppliedRef.current) return;
+    if (!initiallyOpenCheck || !initialCheckCity || planetLines.length === 0) return;
+    initialCheckAppliedRef.current = true;
+    const city = initialCheckCity;
+    const display =
+      city.displayName ||
+      [city.name, city.country].filter(Boolean).join(", ");
+    setCheckQuery(display);
+    setPendingCheckCity(city);
+    setCheckedCity(city);
+    setMode("check");
+    onFocusCity(city);
+    cityToolEvents.opened("check_city");
+    cityToolEvents.citySelected("check_city");
+  }, [initiallyOpenCheck, initialCheckCity, planetLines.length, onFocusCity]);
 
   useEffect(() => {
     if (!mode) return;
