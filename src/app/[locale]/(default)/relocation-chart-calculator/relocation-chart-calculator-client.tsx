@@ -7,6 +7,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { DatePicker } from "@/components/ui/date-picker";
 import { LocationAutocomplete } from "@/components/ui/location-autocomplete";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 import { Calendar, Clock, Globe, MapPin, Sparkles } from "lucide-react";
 
@@ -416,18 +423,29 @@ export default function RelocationChartCalculatorClient({ tool }: { tool: ToolLa
                   <Globe className="size-4 text-purple-400" />
                   {tool.form.timezone}
                 </label>
-                <select
-                  id="timezone"
-                  value={timezone}
-                  onChange={(e) => setTimezone(e.target.value)}
-                  className="w-full h-10 px-3 text-sm rounded-md bg-white/10 border border-white/20 text-white focus:border-purple-500 focus:ring-purple-500 focus:outline-none focus:ring-2"
-                >
-                  {TIMEZONE_OPTIONS.map((tz) => (
-                    <option key={tz} value={tz} className="bg-gray-900">
-                      {tz}
-                    </option>
-                  ))}
-                </select>
+                <Select value={timezone} onValueChange={setTimezone}>
+                  <SelectTrigger
+                    id="timezone"
+                    className="h-10 w-full border-white/20 bg-white/10 text-sm text-white shadow-none focus:border-purple-500 focus:ring-purple-500 data-[placeholder]:text-gray-400"
+                  >
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent
+                    className="z-[2000] max-h-[min(60vh,320px)] w-[var(--radix-select-trigger-width)] border-white/20 bg-gray-900 text-white"
+                    position="popper"
+                    sideOffset={4}
+                  >
+                    {TIMEZONE_OPTIONS.map((tz) => (
+                      <SelectItem
+                        key={tz}
+                        value={tz}
+                        className="text-white focus:bg-white/10 focus:text-white"
+                      >
+                        {tz}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="space-y-1.5 relative z-10 border-t border-white/10 pt-4">
