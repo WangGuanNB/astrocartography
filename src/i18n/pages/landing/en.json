@@ -254,9 +254,8 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Astrocartography Calculator - Discover Your Ideal Location",
-    "highlight_text": "Free Map Generator",
-    "description": "Generate a personal astrocartography map from your birth date, time, and place. Explore planetary lines worldwide, check one city, compare relocation options, and use optional AI interpretation when you want more context.",
+    "title": "Free Astrocartography Chart & Map Calculator",
+    "description": "Discover your ideal location from your birth chart. Generate your personal map, check a city, compare places to live, with optional AI interpretation.",
     "images": [
       {
         "src": "/imgs/features/hero-web.webp",
