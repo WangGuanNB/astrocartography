@@ -30,6 +30,8 @@ export interface Hero {
   description?: string;
   buttons?: Button[];
   image?: Image;
+  /** Optional carousel assets; first item used as hero background when set. */
+  images?: Image[];
   tip?: string;
   show_happy_users?: boolean;
   happy_users?: HappyUsers;

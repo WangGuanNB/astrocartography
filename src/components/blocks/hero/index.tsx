@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import HappyUsers from "./happy-users";
@@ -8,14 +9,8 @@ import { Hero as HeroType } from "@/types/blocks/hero";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
-import dynamic from "next/dynamic";
 
-// 🔥 性能优化：懒加载 CobeGlobe 组件，避免阻塞首屏渲染
-// Cloudflare Workers 兼容：dynamic import 在 Edge Runtime 中完全支持
-const CobeGlobe = dynamic(() => import("@/components/ui/cobe-globe").then(mod => ({ default: mod.Globe })), {
-  ssr: false,  // CobeGlobe 依赖 WebGL，只在客户端渲染
-  loading: () => <div className="absolute inset-0 bg-black" />,  // 占位符，避免布局偏移
-});
+const DEFAULT_HERO_BACKGROUND = "/imgs/features/hero-web.webp";
 
 export default function Hero({ hero }: { hero: HeroType }) {
   if (hero.disabled) {
@@ -28,24 +23,34 @@ export default function Hero({ hero }: { hero: HeroType }) {
     texts = hero.title?.split(highlightText, 2);
   }
 
+  const backgroundImage =
+    hero.image?.src || hero.images?.[0]?.src || DEFAULT_HERO_BACKGROUND;
   return (
     <div
       className={cn(
         "relative flex min-h-[860px] w-full items-center justify-center overflow-hidden text-foreground py-20"
       )}
     >
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <CobeGlobe 
-          className="w-full max-w-[650px] md:max-w-[800px] opacity-75"
-          dark={0.85}
-          mapBrightness={4}
-          baseColor={[0.15, 0.2, 0.35]}
-          markerColor={[0.9, 0.95, 1.0]}
-          glowColor={[0.3, 0.4, 0.7]}
-          diffuse={2.5}
-          speed={0.004}
-          mapSamples={8000}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        {/* Full-bleed faded product map */}
+        <Image
+          src={backgroundImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="scale-[1.03] object-cover object-center opacity-[0.42] saturate-[0.9] brightness-[0.72]"
         />
+        {/* Base wash so the map reads soft, not busy */}
+        <div className="absolute inset-0 bg-background/45" />
+        {/* Vertical fade: readable headline zone, map still visible at edges */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/88 via-background/30 to-background/95" />
+        {/* Center vignette keeps text on a calm field */}
+        <div
+          className="absolute inset-0 bg-[radial-gradient(ellipse_85%_75%_at_50%_42%,transparent_0%,hsl(var(--background)/0.5)_55%,hsl(var(--background)/0.88)_100%)]"
+        />
+        {/* Subtle brand tint */}
+        <div className="absolute inset-0 bg-primary/[0.06] mix-blend-soft-light" />
       </div>
 
       <section className="relative z-10 w-full">
