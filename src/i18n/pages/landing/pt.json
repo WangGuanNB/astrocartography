@@ -970,6 +970,11 @@
               "url": "/pt"
             },
             {
+              "title": "Astrocartografia e mapa de relocação",
+              "url": "/locational-astrology",
+              "target": "_self"
+            },
+            {
               "title": "Fale Conosco",
               "url": "/contact",
               "target": "_self"

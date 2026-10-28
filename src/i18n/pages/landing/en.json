@@ -1067,6 +1067,11 @@
               "url": "/"
             },
             {
+              "title": "Locational Astrology",
+              "url": "/locational-astrology",
+              "target": "_self"
+            },
+            {
               "title": "Contact Us",
               "url": "/contact",
               "target": "_self"

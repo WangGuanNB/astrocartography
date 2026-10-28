@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "title": "Astrologia locazionale: mappa e carta di rilocazione",
+    "description": "L'astrologia locazionale distingue la mappa astrocartografica dalla carta di rilocazione. Confronta i metodi e genera la mappa gratuita su Astrocarto.org.",
+    "keywords": "astrologia locazionale, astrocartografia, carta di rilocazione, mappa astrocartografica, spazio locale"
+  },
+  "heading": { "title": "Astrologia locazionale: mappa e carta di rilocazione" },
+  "generatorNote": "Questo generatore disegna una mappa mondiale di astrocartografia da data, ora e luogo di nascita. Non è un grafico di Spazio Locale e non è una carta di rilocazione per una sola città.",
+  "intentAnchor": {
+    "text": "L'astrologia locazionale collega il tema natale a un luogo sulla Terra. L'astrocartografia è la tecnica principale: una mappa delle linee. La carta di rilocazione congela lo stesso istante di nascita e cambia solo il luogo. Questa guida sceglie il metodo e ti porta agli strumenti già presenti su Astrocarto.org."
+  },
+  "guideHero": {
+    "badge": "Guida ai metodi",
+    "overviewTitle": "Scegli un metodo",
+    "overviewEyebrow": "Campo",
+    "overviewItems": [
+      { "label": "Parti da", "value": "La domanda vera" },
+      { "label": "Panorama", "value": "Mappa astrocartografica" },
+      { "label": "Una città", "value": "Carta di rilocazione" },
+      { "label": "Non offerto", "value": "Direzioni di Spazio Locale" }
+    ],
+    "actions": [
+      { "title": "Genera la mappa astrocartografica gratis", "url": "#generator", "icon": "RiArrowRightLine" },
+      { "title": "Apri la carta di rilocazione", "url": "/relocation-chart-calculator", "icon": "RiPieChartLine", "variant": "secondary" }
+    ]
+  },
+  "userPaths": {
+    "name": "user-paths",
+    "label": "Scegli il percorso",
+    "title": "Due domande, due strumenti esistenti",
+    "description": "Entrambi i percorsi usano calcolatori già presenti su Astrocarto.org. Se stai ancora guardando il mondo, genera la mappa. Se hai già una città, calcola la carta di rilocazione.",
+    "items": [
+      {
+        "title": "Voglio vedere molti luoghi",
+        "description": "Genera la mappa mondiale con data, ora e luogo di nascita. Le sessioni ospite hanno un limite giornaliero; l'accesso permette più mappe. Chat IA e report di città usano crediti.",
+        "icon": "RiCompassLine",
+        "buttons": [
+          { "title": "Genera la mappa", "url": "#generator", "icon": "RiMapLine" },
+          { "title": "Significato delle linee", "url": "/astrocartography-lines", "icon": "RiRouteLine", "variant": "outline" }
+        ]
+      },
+      {
+        "title": "Ho già una città",
+        "description": "Usa la mappa come contesto, poi calcola gratis la carta di rilocazione per quella città. L'istante di nascita resta fermo; cambiano angoli e case di segno intero.",
+        "icon": "RiMapPinLine",
+        "buttons": [
+          { "title": "Carta di rilocazione", "url": "/relocation-chart-calculator", "icon": "RiPieChartLine" },
+          { "title": "Guida su dove vivere", "url": "/astrocartography-where-to-live", "icon": "RiHomeHeartLine", "variant": "outline" }
+        ]
+      }
+    ]
+  },
+  "methodTable": {
+    "title": "Metodi dell'astrologia locazionale a confronto",
+    "description": "Queste tecniche possono servire allo stesso viaggio o trasferimento, ma i risultati non sono intercambiabili. Astrocarto.org calcola la mappa mondiale e la carta di una città. Non calcola lo Spazio Locale.",
+    "columns": { "method": "Metodo", "question": "Domanda principale", "output": "Risultato tipico", "offered": "Su Astrocarto.org" },
+    "rows": [
+      { "method": "Astrocartografia", "question": "Dove ogni pianeta sorgeva, tramontava, culminava o era al fondo cielo alla nascita?", "output": "Mappa mondiale personale con linee planetarie", "offered": "Sì. Usa il generatore di questa pagina." },
+      { "method": "Carta di rilocazione", "question": "Cosa cambia se lo stesso istante viene ricalcolato per una città?", "output": "Angoli, case e pianeti per casa rilocati", "offered": "Sì. Una città alla volta." },
+      { "method": "Spazio Locale", "question": "Quali direzioni planetarie partono da un luogo scelto?", "output": "Linee di direzione sull'orizzonte locale", "offered": "No. Questo sito non calcola lo Spazio Locale." },
+      { "method": "Astrogeografia", "question": "Come si associano segni o pianeti a regioni della Terra?", "output": "Dipende dalla tradizione. Non è il tema natale di una persona.", "offered": "Solo spiegata qui. Nessun calcolatore separato." }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Cosa copre l'astrologia locazionale",
+    "label": "Definizione",
+    "description": "L'astrologia locazionale è il campo che collega un oroscopo a un luogo. L'astrocartografia ne è la tecnica principale: mappe rese note da Jim Lewis, con i pianeti angolari a una nascita oraria. La carta di rilocazione è un altro calcolo, per una città. L'astrogeografia è un'etichetta più larga. Controlla il risultato, non solo il nome.",
+    "image": { "src": "/imgs/features/hero-web.webp", "alt": "Mappa di astrocartografia di Astrocarto.org" },
+    "items": [
+      { "title": "La mappa orienta, la carta approfondisce", "description": "La mappa astrocartografica mostra dove un pianeta diventa angolare nel mondo. La carta di rilocazione mostra come quel luogo riorganizza Ascendente, Medio Cielo e case. Lo Spazio Locale è un terzo lavoro. I calcolatori di questo sito coprono mappa e ruota di una città.", "image": { "src": "/imgs/features/planetary-lines-meaning-map.webp", "alt": "Linee planetarie su una mappa personale" } },
+      { "title": "L'ora di nascita sposta gli angoli", "description": "Ascendente, Discendente, Medio Cielo e Fondo Cielo si muovono in fretta. Un'ora approssimativa basta per uno sguardo ampio, ma rende meno affidabile la conclusione su una città. Per una vera rilocazione l'istante resta congelato e cambia solo il luogo.", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp", "alt": "Angoli che dipendono da ora e luogo" } },
+      { "title": "Strato simbolico, non verdetto sul trasferimento", "description": "Questi metodi non dimostrano che un luogo causi amore, denaro, un visto o un fallimento. Nessuna linea è universalmente fortunata. Lavoro, casa, costi e stato legale decidono ancora se il trasferimento è realistico.", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp", "alt": "Distanza delle linee e contesto pratico" } }
+    ]
+  },
+  "feature": {
+    "name": "example",
+    "title": "Una sequenza per tre città",
+    "label": "Esempio",
+    "description": "Supponi di confrontare Lisbona, Berlino e Montreal. Questa sequenza non dichiara un vincitore.",
+    "items": [
+      { "title": "Genera prima la mappa", "description": "Inserisci data, ora e luogo di nascita nel generatore di questa pagina. Guarda quali combinazioni di pianeta e angolo cadono vicino a ogni città.", "icon": "RiMapLine" },
+      { "title": "Tieni una città per guardarla da vicino", "description": "Se Berlino resta in lista, annota la distanza dalle linee e apri la carta di rilocazione solo per Berlino.", "icon": "RiPieChartLine" },
+      { "title": "Passa la lista alla guida su dove vivere", "description": "Se la domanda originale è dove vivere, continua con quella guida. Questa pagina di metodi si ferma alla scelta del calcolo giusto.", "icon": "RiHomeHeartLine" },
+      { "title": "Leggi la linea dopo aver capito l'angolo", "description": "Una linea di Venere sul Discendente non è lo stesso tema di una linea di Venere sul Fondo Cielo.", "icon": "RiBookOpenLine" }
+    ]
+  },
+  "usage": {
+    "name": "limits",
+    "title": "Cosa calcola questo sito e cosa no",
+    "label": "Limiti",
+    "description": "La mappa di questa pagina è calcolata sui nostri server con i dati di nascita inviati. La carta di rilocazione usa lo stesso istante e una seconda coppia di coordinate. Nessuno dei due disegna direzioni di Spazio Locale.",
+    "items": [
+      { "title": "Mappa", "description": "Linee planetarie dell'istante di nascita. Le sessioni ospite hanno un limite giornaliero. L'accesso permette più mappe. L'interpretazione IA più approfondita usa crediti.", "icon": "RiMapLine" },
+      { "title": "Carta di una città", "description": "Il calcolatore della carta di rilocazione è gratuito per una città alla volta. Non sostituisce la mappa, e la mappa non lo sostituisce.", "icon": "RiPieChartLine" },
+      { "title": "Fuori ambito", "description": "Nessun calcolatore di Spazio Locale, nessuna garanzia del posto migliore in cui vivere e nessun consiglio legale, medico o finanziario.", "icon": "RiErrorWarningLine" }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Domande",
+    "title": "Domande sull'astrologia locazionale",
+    "description": "Risposte brevi a ciò che di solito si cerca con questi nomi.",
+    "items": [
+      { "title": "Che differenza c'è tra mappa astrocartografica e carta di rilocazione?", "description": "La mappa orienta: mostra dove un pianeta è angolare nel mondo. La carta di rilocazione approfondisce una città: stesso istante di nascita, nuovi angoli e nuove case. Lo Spazio Locale guarda le direzioni da un luogo, e questo sito non lo calcola." },
+      { "title": "Cos'è l'astrogeografia?", "description": "Non è un calcolo unico. Alcuni usano la parola per tutto il campo del luogo. Altri, per tradizioni che associano segni o pianeti a regioni." },
+      { "title": "Astrocarto.org calcola lo Spazio Locale?", "description": "No. Lo Spazio Locale osserva direzioni planetarie sull'orizzonte locale. Astrocarto.org calcola la mappa astrocartografica e la carta di rilocazione di una città." },
+      { "title": "Parto dalla mappa mondiale o dalla carta di rilocazione?", "description": "Parti dalla mappa se la domanda è ancora aperta. Usa la carta di rilocazione quando una città è già una candidata seria. L'istante di nascita resta congelato." },
+      { "title": "Posso creare questa mappa gratis?", "description": "Sì. Il generatore di questa pagina crea la mappa centrale da data, ora e luogo di nascita. Le sessioni ospite hanno un limite giornaliero. Chat IA e report usano crediti mostrati prima della spesa." },
+      { "title": "Quale metodo uso se sto decidendo un trasferimento?", "description": "Inizia dalla mappa per scorrere regioni e città. Usa la carta di rilocazione quando una città merita un esame più vicino. Nessuno dei due sceglie una casa al posto tuo." },
+      { "title": "L'astrologia locazionale indica il posto migliore in cui vivere?", "description": "No. Può mostrare i temi che una mappa o una carta rilocata enfatizzano. Non promette amore, denaro, un visto o un trasferimento riuscito." }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Parti dal metodo che corrisponde alla tua domanda",
+    "description": "Genera una mappa astrocartografica gratuita per una visione del mondo. Apri la carta di rilocazione per vedere le case di una città.",
+    "buttons": [
+      { "title": "Genera la mappa astrocartografica gratis", "icon": "RiMapLine", "url": "#generator", "target": "_self", "variant": "default" },
+      { "title": "Calcolatore della carta di rilocazione", "icon": "RiPieChartLine", "url": "/relocation-chart-calculator", "target": "_self", "variant": "outline" }
+    ]
+  },
+  "schemaLabels": { "breadcrumbHome": "Home", "breadcrumbCurrent": "Astrologia locazionale" }
+}

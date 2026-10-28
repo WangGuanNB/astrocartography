@@ -955,6 +955,11 @@
               "url": "/de"
             },
             {
+              "title": "Ortsastrologie",
+              "url": "/locational-astrology",
+              "target": "_self"
+            },
+            {
               "title": "Kontakt",
               "url": "/contact",
               "target": "_self"

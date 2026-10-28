@@ -970,6 +970,11 @@
               "url": "/es"
             },
             {
+              "title": "Astrocartografía y carta de reubicación",
+              "url": "/locational-astrology",
+              "target": "_self"
+            },
+            {
               "title": "Contáctenos",
               "url": "/contact",
               "target": "_self"

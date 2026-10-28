@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "title": "Ortsastrologie: Astrokartographie und Relokationshoroskop",
+    "description": "Ortsastrologie unterscheidet die Weltkarte der Astrokartographie vom Relokationshoroskop für eine Stadt. Methoden vergleichen und die Karte kostenlos auf Astrocarto.org erzeugen.",
+    "keywords": "Ortsastrologie, Astrokartographie, Relokationshoroskop, Astrogeografie"
+  },
+  "heading": { "title": "Ortsastrologie: Karte und Relokationshoroskop" },
+  "generatorNote": "Dieser Generator zeichnet eine astrokartografische Weltkarte aus Geburtsdatum, Uhrzeit und Geburtsort. Er ist kein Local-Space-Diagramm und kein Relokationshoroskop für eine einzelne Stadt.",
+  "intentAnchor": {
+    "text": "Ortsastrologie verbindet das Geburtshoroskop mit einem Ort auf der Erde. Astrokartographie zeigt Planetenlinien auf der Weltkarte. Das Relokationshoroskop behält denselben Geburtsaugenblick und berechnet Winkel und Häuser für eine Stadt neu. Dieser Leitfaden wählt die Methode und führt zu den Werkzeugen, die auf Astrocarto.org schon vorhanden sind."
+  },
+  "guideHero": {
+    "badge": "Methodenleitfaden",
+    "overviewTitle": "Methode wählen",
+    "overviewEyebrow": "Feld",
+    "overviewItems": [
+      { "label": "Zuerst", "value": "Die eigentliche Frage" },
+      { "label": "Weltblick", "value": "Astrokartographie-Karte" },
+      { "label": "Eine Stadt", "value": "Relokationshoroskop" },
+      { "label": "Nicht angeboten", "value": "Local-Space-Richtungen" }
+    ],
+    "actions": [
+      { "title": "Kostenlose Astrokartographie-Karte erzeugen", "url": "#generator", "icon": "RiArrowRightLine" },
+      { "title": "Relokationshoroskop öffnen", "url": "/relocation-chart-calculator", "icon": "RiPieChartLine", "variant": "secondary" }
+    ]
+  },
+  "userPaths": {
+    "name": "user-paths",
+    "label": "Weg wählen",
+    "title": "Zwei Fragen, zwei vorhandene Werkzeuge",
+    "description": "Beide Wege nutzen Rechner, die auf Astrocarto.org bereits existieren. Wer noch die Welt absucht, erzeugt die Karte. Wer schon eine Stadt hat, berechnet das Relokationshoroskop.",
+    "items": [
+      {
+        "title": "Ich will viele Orte sehen",
+        "description": "Erzeuge die Weltkarte mit Geburtsdatum, Uhrzeit und Geburtsort. Gastsitzungen haben ein Tageslimit; nach der Anmeldung sind mehr Karten möglich. KI-Chat und Stadtberichte verbrauchen Credits.",
+        "icon": "RiCompassLine",
+        "buttons": [
+          { "title": "Karte erzeugen", "url": "#generator", "icon": "RiMapLine" },
+          { "title": "Linienbedeutungen", "url": "/astrocartography-lines", "icon": "RiRouteLine", "variant": "outline" }
+        ]
+      },
+      {
+        "title": "Ich habe schon eine Stadt",
+        "description": "Nutze die Karte als Kontext und berechne dann kostenlos das Relokationshoroskop für diese Stadt. Der Geburtsaugenblick bleibt gleich; Aszendent und Ganzzeichenhäuser werden neu berechnet.",
+        "icon": "RiMapPinLine",
+        "buttons": [
+          { "title": "Relokationshoroskop", "url": "/relocation-chart-calculator", "icon": "RiPieChartLine" },
+          { "title": "Leitfaden zum Wohnort", "url": "/astrocartography-where-to-live", "icon": "RiHomeHeartLine", "variant": "outline" }
+        ]
+      }
+    ]
+  },
+  "methodTable": {
+    "title": "Methoden der Ortsastrologie im Vergleich",
+    "description": "Diese Techniken können dieselbe Reise oder denselben Umzug stützen, aber die Ergebnisse sind nicht austauschbar. Astrocarto.org berechnet die Weltkarte und das Horoskop einer Stadt. Local Space wird nicht berechnet.",
+    "columns": { "method": "Methode", "question": "Hauptfrage", "output": "Typisches Ergebnis", "offered": "Auf Astrocarto.org" },
+    "rows": [
+      { "method": "Astrokartographie", "question": "Wo stand jeder Planet bei der Geburt im Aufgang, Untergang, auf der Himmelsmitte oder am Himmelstief?", "output": "Persönliche Weltkarte mit Planetenlinien", "offered": "Ja. Generator auf dieser Seite." },
+      { "method": "Relokationshoroskop", "question": "Was ändert sich, wenn derselbe Augenblick für eine Stadt neu berechnet wird?", "output": "Neue Winkel, Häuser und Planetenhäuser", "offered": "Ja. Eine Stadt nach der anderen." },
+      { "method": "Local Space", "question": "Welche Planetenrichtungen gehen von einem gewählten Ort aus?", "output": "Richtungslinien am lokalen Horizont", "offered": "Nein. Diese Website berechnet kein Local Space." },
+      { "method": "Astrogeografie", "question": "Wie werden Zeichen oder Planeten Erdregionen zugeordnet?", "output": "Hängt von der Tradition ab. Kein persönliches Geburtshoroskop.", "offered": "Nur hier erklärt. Kein eigener Rechner." }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Was Ortsastrologie umfasst",
+    "label": "Definition",
+    "description": "Ortsastrologie verbindet ein Horoskop mit einem Ort auf der Erde. Astrokartographie ist die bekannteste Technik: Karten, die Jim Lewis verbreitete und auf denen Planeten bei einer getimten Geburt angular stehen. Das Relokationshoroskop ist eine andere Rechnung für eine Stadt. Astrogeografie ist eine weitere Bezeichnung. Prüfe das Ergebnis, nicht nur den Namen. Die Planeten bleiben im Zeichen; Aszendent und Häuser ändern sich.",
+    "image": { "src": "/imgs/features/hero-web.webp", "alt": "Astrokartographie-Karte von Astrocarto.org" },
+    "items": [
+      { "title": "Die Karte sucht, das Horoskop prüft eine Stadt", "description": "Die Weltkarte zeigt, wo Planetenlinien fallen. Das Relokationshoroskop zeigt, wie sich Häuser und Winkel in einer Stadt neu ordnen. Local Space ist eine dritte Aufgabe. Die Rechner dieser Website decken Karte und Einzelstadt-Rad ab.", "image": { "src": "/imgs/features/planetary-lines-meaning-map.webp", "alt": "Planetenlinien auf einer persönlichen Karte" } },
+      { "title": "Die Geburtszeit verschiebt die Winkel", "description": "Aszendent, Deszendent, Medium Coeli und Imum Coeli bewegen sich schnell. Eine ungefähre Uhrzeit trägt einen weiten Blick, macht Stadtaussagen aber weniger verlässlich.", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp", "alt": "Winkel, die von Uhrzeit und Ort abhängen" } },
+      { "title": "Symbolische Schicht, kein Umzugsurtteil", "description": "Diese Methoden beweisen nicht, dass ein Ort Liebe, Geld, ein Visum oder ein Scheitern verursacht. Keine Linie ist allgemein glücklich. Arbeit, Wohnen, Kosten und Aufenthaltsrecht entscheiden weiter, ob ein Umzug realistisch ist.", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp", "alt": "Linienabstand und praktischer Kontext" } }
+    ]
+  },
+  "feature": {
+    "name": "example",
+    "title": "Eine Reihenfolge für drei Städte",
+    "label": "Beispiel",
+    "description": "Angenommen, du vergleichst Lissabon, Berlin und Montreal. Diese Reihenfolge kürt keinen Sieger.",
+    "items": [
+      { "title": "Zuerst die Karte erzeugen", "description": "Gib Geburtsdatum, Uhrzeit und Geburtsort in den Generator auf dieser Seite ein. Sieh, welche Planet-Winkel-Kombinationen nahe bei jeder Stadt liegen.", "icon": "RiMapLine" },
+      { "title": "Eine Stadt für den näheren Blick behalten", "description": "Bleibt Berlin auf der Liste, notiere den Abstand zu den Linien und öffne das Relokationshoroskop nur für Berlin.", "icon": "RiPieChartLine" },
+      { "title": "Die Liste an den Wohnort-Leitfaden geben", "description": "Wenn die ursprüngliche Frage lautet, wo du leben könntest, geh weiter zu diesem Leitfaden. Diese Methodenseite endet bei der Wahl der richtigen Rechnung.", "icon": "RiHomeHeartLine" },
+      { "title": "Die Linie erst nach dem Winkel lesen", "description": "Eine Venuslinie auf dem Deszendenten ist nicht dasselbe Thema wie eine Venuslinie auf dem Imum Coeli.", "icon": "RiBookOpenLine" }
+    ]
+  },
+  "usage": {
+    "name": "limits",
+    "title": "Was diese Website berechnet und was nicht",
+    "label": "Grenzen",
+    "description": "Die Karte auf dieser Seite wird auf unseren Servern aus den übermittelten Geburtsdaten berechnet. Das Relokationshoroskop nutzt denselben Augenblick und ein zweites Koordinatenpaar. Keines von beiden zeichnet Local-Space-Richtungen.",
+    "items": [
+      { "title": "Karte", "description": "Planetenlinien des Geburtsaugenblicks. Gastsitzungen haben ein Tageslimit. Die Anmeldung erlaubt mehr Karten. Tiefere KI-Deutung verbraucht Credits.", "icon": "RiMapLine" },
+      { "title": "Horoskop einer Stadt", "description": "Der Relokationshoroskop-Rechner ist für jeweils eine Stadt kostenlos. Er ersetzt die Karte nicht, und die Karte ersetzt ihn nicht.", "icon": "RiPieChartLine" },
+      { "title": "Außerhalb", "description": "Kein Local-Space-Rechner, keine Garantie für den besten Wohnort und keine Rechts-, Medizin- oder Finanzberatung.", "icon": "RiErrorWarningLine" }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Fragen",
+    "title": "Fragen zur Ortsastrologie",
+    "description": "Kurze Antworten auf das, was bei diesen Begriffen meist gesucht wird.",
+    "items": [
+      { "title": "Was ist der Unterschied zwischen Astrokartographie und Relokationshoroskop?", "description": "Die Astrokartographie zeigt Planetenlinien auf der Welt. Das Relokationshoroskop behält den Geburtsaugenblick und berechnet Winkel und Häuser für eine Stadt neu. Die Planeten bleiben im Zeichen." },
+      { "title": "Was ist Astrogeografie?", "description": "Es gibt keine einheitliche Rechnung. Manche nutzen das Wort für das ganze Ortsfeld. Andere für Traditionen, die Zeichen oder Planeten Regionen zuordnen." },
+      { "title": "Berechnet Astrocarto.org Local Space?", "description": "Nein. Local Space betrachtet Planetenrichtungen am lokalen Horizont. Astrocarto.org berechnet die Astrokartographie-Karte und das Relokationshoroskop einer Stadt." },
+      { "title": "Beginne ich mit der Weltkarte oder dem Relokationshoroskop?", "description": "Beginne mit der Karte, wenn die Frage noch offen ist. Nutze das Relokationshoroskop, wenn eine Stadt schon ein ernsthafter Kandidat ist." },
+      { "title": "Kann ich diese Karte kostenlos erstellen?", "description": "Ja. Der Generator auf dieser Seite erzeugt die Kernkarte aus Geburtsdatum, Uhrzeit und Geburtsort. Gastsitzungen haben ein Tageslimit. KI-Chat und Berichte nutzen Credits, die vor dem Verbrauch angezeigt werden." },
+      { "title": "Welche Methode nutze ich bei einem Umzug?", "description": "Starte mit der Karte, um Regionen und Städte abzusuchen. Nutze das Relokationshoroskop, wenn eine Stadt eine nähere Prüfung verdient. Keines von beiden wählt ein Zuhause für dich." },
+      { "title": "Nennt die Ortsastrologie den besten Wohnort?", "description": "Nein. Sie kann zeigen, welche Themen eine Karte oder ein relocates Horoskop betont. Sie verspricht keine Liebe, kein Geld, kein Visum und keinen gelungenen Umzug." }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Beginne mit der Methode, die zu deiner Frage passt",
+    "description": "Erzeuge eine kostenlose Astrokartographie-Karte für den Weltblick. Öffne das Relokationshoroskop, um die Häuser einer Stadt zu sehen.",
+    "buttons": [
+      { "title": "Kostenlose Astrokartographie-Karte erzeugen", "icon": "RiMapLine", "url": "#generator", "target": "_self", "variant": "default" },
+      { "title": "Relokationshoroskop-Rechner", "icon": "RiPieChartLine", "url": "/relocation-chart-calculator", "target": "_self", "variant": "outline" }
+    ]
+  },
+  "schemaLabels": { "breadcrumbHome": "Start", "breadcrumbCurrent": "Ortsastrologie" }
+}

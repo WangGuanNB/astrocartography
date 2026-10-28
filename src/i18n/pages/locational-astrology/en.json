@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "title": "Locational Astrology Explained: Maps and Relocation Methods",
+    "description": "Locational astrology covers astrocartography maps and relocation charts. Compare methods, then generate a free map or check one city on Astrocarto.org.",
+    "keywords": "locational astrology, location astrology, astrocartography, relocation chart, local space astrology"
+  },
+  "heading": {
+    "title": "Locational Astrology: Maps, Relocation Charts, and Methods"
+  },
+  "generatorNote": "This generator draws an astrocartography world map from your birth date, time, and birthplace. It is not a Local Space chart and not a single-city relocation chart.",
+  "intentAnchor": {
+    "text": "Locational astrology is the wider field for reading a birth chart against places on Earth. Astrocartography is one method inside that field. A relocation chart is another. This guide shows which question each method answers, then sends you to the free map or the one-city relocation chart on Astrocarto.org."
+  },
+  "guideHero": {
+    "badge": "Methods guide",
+    "overviewTitle": "Choose a method",
+    "overviewEyebrow": "Field overview",
+    "overviewItems": [
+      {
+        "label": "Start with",
+        "value": "The question you are actually asking"
+      },
+      {
+        "label": "World scan",
+        "value": "Astrocartography map"
+      },
+      {
+        "label": "One city",
+        "value": "Relocation chart"
+      },
+      {
+        "label": "Not offered here",
+        "value": "Local Space directions"
+      }
+    ],
+    "actions": [
+      {
+        "title": "Generate Your Free Astrocartography Map",
+        "url": "#generator",
+        "icon": "RiArrowRightLine"
+      },
+      {
+        "title": "Open the Relocation Chart",
+        "url": "/relocation-chart-calculator",
+        "icon": "RiPieChartLine",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "userPaths": {
+    "name": "user-paths",
+    "label": "Choose your path",
+    "title": "Two questions, two existing tools",
+    "description": "Both paths use calculators that already exist on Astrocarto.org. Pick the one that matches whether you are still scanning the world or already focused on one city.",
+    "items": [
+      {
+        "title": "I want to scan many places",
+        "description": "Generate the personal world map from birth date, time, and birthplace. The map shows where each planet was angular at that moment. Guest map sessions have a daily limit; signing in unlocks more sessions. Optional AI chat and city reports use credits.",
+        "icon": "RiCompassLine",
+        "buttons": [
+          {
+            "title": "Generate map",
+            "url": "#generator",
+            "icon": "RiMapLine"
+          },
+          {
+            "title": "Line meanings",
+            "url": "/astrocartography-lines",
+            "icon": "RiRouteLine",
+            "variant": "outline"
+          }
+        ]
+      },
+      {
+        "title": "I already have one city",
+        "description": "Use the map for context, then run the free relocation chart once for that city. It keeps the same birth moment and recalculates angles and whole-sign houses for the new coordinates.",
+        "icon": "RiMapPinLine",
+        "buttons": [
+          {
+            "title": "Relocation chart",
+            "url": "/relocation-chart-calculator",
+            "icon": "RiPieChartLine"
+          },
+          {
+            "title": "Where-to-live workflow",
+            "url": "/astrocartography-where-to-live",
+            "icon": "RiHomeHeartLine",
+            "variant": "outline"
+          }
+        ]
+      }
+    ]
+  },
+  "methodTable": {
+    "title": "Locational astrology methods compared",
+    "description": "These techniques can inform the same trip or move, but the outputs are not interchangeable. Astrocarto.org calculates the world map and the one-city chart. It does not calculate Local Space.",
+    "columns": {
+      "method": "Method",
+      "question": "Main question",
+      "output": "Typical output",
+      "offered": "On Astrocarto.org"
+    },
+    "rows": [
+      {
+        "method": "Astrocartography",
+        "question": "Where was each planet rising, setting, culminating, or at the lower meridian at my birth moment?",
+        "output": "A personal world map of planetary lines",
+        "offered": "Yes. Use the generator on this page."
+      },
+      {
+        "method": "Relocation chart",
+        "question": "What changes when this same birth moment is recalculated for one city?",
+        "output": "Relocated angles, houses, and planet house placements",
+        "offered": "Yes. One city at a time."
+      },
+      {
+        "method": "Local Space",
+        "question": "Which planetary directions radiate from one chosen place?",
+        "output": "Directional lines on the local horizon",
+        "offered": "No. This site does not calculate Local Space."
+      },
+      {
+        "method": "Astrogeography",
+        "question": "How are signs or planets associated with regions of Earth?",
+        "output": "Depends on the tradition. It is not one person's birth map.",
+        "offered": "Explained here only. Not a separate calculator."
+      }
+    ]
+  },
+  "mapVsRelocation": {
+    "name": "methods-compare",
+    "label": "Methods",
+    "title": "Three methods people group under one name",
+    "description": "Search results often mix these techniques. They can support the same move or trip, but the outputs are not interchangeable. Astrocarto.org calculates the first two. It does not calculate the third.",
+    "items": [
+      {
+        "title": "Astrocartography map",
+        "description": "Question: where on Earth was each planet rising, setting, culminating, or at the lower meridian at my birth moment? Output: a personal world map of planetary lines. Best use: scanning countries, regions, and cities before you pick finalists. On Astrocarto.org this is the homepage generator.",
+        "icon": "RiMapLine",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Astrocartography world map with planetary lines"
+        }
+      },
+      {
+        "title": "Relocation chart",
+        "description": "Question: what changes if this same birth moment is read for one selected city? Output: relocated Ascendant and Midheaven, plus planet houses compared with the birthplace chart. Best use: examining one serious candidate. Run it once per city.",
+        "icon": "RiPieChartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-relocation-planning.webp",
+          "alt": "Relocation planning beside an astrocartography map"
+        }
+      },
+      {
+        "title": "Local Space",
+        "description": "Question: which planetary directions radiate from one chosen place on the local horizon? Output: directional lines, not a world map of birth angles and not a relocated house wheel. Astrocarto.org does not calculate Local Space. Use this page to recognize the method, then stay with the map or the relocation chart.",
+        "icon": "RiCompassDiscoverLine",
+        "image": {
+          "src": "/imgs/features/hero-web.webp",
+          "alt": "World map used for astrocartography, not a Local Space chart"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What the umbrella term actually covers",
+    "label": "Definition",
+    "description": "Locational astrology is any approach that connects a horoscope with a place on Earth. Astrocartography is the best-known technique inside it: Jim Lewis popularized maps that mark where planets were angular at a timed birth. A relocation chart is a different calculation for one city. Astrogeography is a looser label. Some writers use it for this whole field. Others use it for traditions that assign signs or planets to regions without projecting one person's birth chart. Check the output, not the nickname.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Astrocarto.org map used as a starting point for place-based chart methods"
+    },
+    "items": [
+      {
+        "title": "Not a synonym for the map alone",
+        "description": "Calling every location technique astrocartography hides the job each tool does. A world map answers where angular lines fall. A relocation chart answers how houses and angles reorder in one city. If a page promises a directional Local Space chart, that is a third job. This site's calculators cover the map and the one-city wheel.",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Planetary lines on a personal astrocartography map"
+        }
+      },
+      {
+        "title": "Why birth time sits in the middle of the method",
+        "description": "Ascendant, Descendant, Midheaven, and Imum Coeli move quickly. An approximate birth time can still support a broad look at the map, but it makes precise city conclusions less reliable. The same limit applies when a relocation chart rebuilds houses from a new Ascendant. If you only know the date, treat angle and house statements as exploratory.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Chart angles that depend on birth time and place"
+        }
+      },
+      {
+        "title": "A symbolic layer, not a relocation verdict",
+        "description": "These methods do not prove that a place will cause love, money, a visa, or failure. They offer a symbolic frame for comparing themes. No planetary line is universally lucky, and a city with no nearby line is not automatically empty of meaning. Work, housing, cost, safety, healthcare, and legal status still decide whether a move is realistic.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Distance and practical context around planetary lines"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "example",
+    "title": "A practical sequence for three candidate cities",
+    "label": "Example",
+    "description": "Suppose you are comparing Lisbon, Berlin, and Montreal. This sequence does not declare a winner. It shrinks an open question into evidence you can set beside real-world constraints.",
+    "items": [
+      {
+        "title": "Generate the map first",
+        "description": "Enter your birth date, time, and birthplace in the generator on this page. Inspect which planet-and-angle combinations fall near each city. You are looking for different emphases, not a ranked list of best homes.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "Keep one city for a closer read",
+        "description": "If Berlin stays on the shortlist, note its distance from the lines you care about, then open the relocation chart for Berlin only. The map shows the wider pattern. The relocated wheel shows angles and houses for that one place.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Hand the shortlist to the where-to-live guide",
+        "description": "When the original question is where you might live, continue with the where-to-live workflow. Match line themes to a goal, then check visas, work, and housing. The methods page stops at choosing the right calculation.",
+        "icon": "RiHomeHeartLine"
+      },
+      {
+        "title": "Read a line only after you know the angle",
+        "description": "A Venus line on the Descendant is not the same topic as a Venus line on the Imum Coeli. If you need planet-and-angle meanings, use the lines hub and the map interpretation guide after the calculation, not instead of it.",
+        "icon": "RiBookOpenLine"
+      }
+    ]
+  },
+  "usage": {
+    "name": "limits",
+    "title": "What this site calculates, and what it does not",
+    "label": "Limits",
+    "description": "The map on this page is calculated on our servers from the birth details you submit. The relocation chart uses the same moment and a second set of coordinates. Neither tool draws Local Space directions.",
+    "items": [
+      {
+        "title": "Map",
+        "description": "Planetary lines for the birth moment, projected so you can scan the globe, check a city, and compare a short list. Guest sessions have a daily limit. Signing in allows more map sessions. Deeper AI interpretation uses credits shown in the product.",
+        "icon": "RiMapLine"
+      },
+      {
+        "title": "One-city chart",
+        "description": "The relocation chart calculator is free to run for one city at a time. It shows how the Ascendant and houses shift. It does not replace the map, and the map does not replace it.",
+        "icon": "RiPieChartLine"
+      },
+      {
+        "title": "Out of scope",
+        "description": "No Local Space calculator, no guarantee of the best place to live, and no legal, medical, or financial advice. If a source uses the words astro location chart, confirm whether it means a world map or a relocated wheel before you compare results.",
+        "icon": "RiErrorWarningLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Common questions about these methods",
+    "description": "Short answers for the questions that usually sit behind this search.",
+    "items": [
+      {
+        "title": "Is locational astrology the same as astrocartography?",
+        "description": "Not exactly. Locational astrology is the broader field. Astrocartography is the world-map technique that marks where planets were angular at birth. A relocation chart and Local Space are other ways to connect a chart with place."
+      },
+      {
+        "title": "What is astrogeography?",
+        "description": "Astrogeography is not one standard calculation. Some people use the word for this whole field. Others use it for systems that associate signs or planets with regions. Read the method and the output before you treat two maps as the same thing."
+      },
+      {
+        "title": "Does Astrocarto.org calculate Local Space?",
+        "description": "No. Local Space looks at planetary directions from a chosen place on the local horizon. Astrocarto.org calculates an astrocartography map and a one-city relocation chart. This page explains the difference so the missing method is explicit."
+      },
+      {
+        "title": "Should I start with a world map or a relocation chart?",
+        "description": "Start with the world map when the question is still open. Use the relocation chart when one city is already a serious candidate. Many people do both: scan first, then recalculate houses for a finalist."
+      },
+      {
+        "title": "What is an astro location chart?",
+        "description": "The phrase can mean a planetary-line world map or a chart relocated to one city. A world map shows lines across Earth. A relocated chart recalculates angles and houses for one place. Check the output before comparing two results."
+      },
+      {
+        "title": "Can I create this map free?",
+        "description": "Yes. The generator on this page creates the core astrocartography map from birth date, time, and birthplace. Guest sessions have a daily limit, and signing in allows more map sessions. Optional AI chat and city reports use credits shown before you spend them."
+      },
+      {
+        "title": "Which method should I use if I am deciding where to move?",
+        "description": "Start with the world map to scan regions and cities. Use the relocation chart when one city is a serious candidate. Neither result chooses a home for you. Compare it with work, housing, visas, and cost, then continue with the where-to-live guide."
+      },
+      {
+        "title": "Can locational astrology name the best place to live?",
+        "description": "No. It can show which themes a map or a relocated chart emphasizes. It cannot promise love, money, a visa, or a successful move. Pair the symbolic result with practical research, then use the where-to-live guide if housing is the decision."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Start with the method that matches your question",
+    "description": "Generate a free astrocartography map when you need a world scan. Open the relocation chart when one city needs a house-by-house look. For a move decision, continue to the where-to-live guide.",
+    "buttons": [
+      {
+        "title": "Generate Your Free Astrocartography Map",
+        "icon": "RiMapLine",
+        "url": "#generator",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "Relocation Chart Calculator",
+        "icon": "RiPieChartLine",
+        "url": "/relocation-chart-calculator",
+        "target": "_self",
+        "variant": "outline"
+      }
+    ]
+  },
+  "schemaLabels": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Locational Astrology"
+  }
+}

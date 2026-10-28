@@ -146,6 +146,29 @@ content_inventory:
       locale: "en"
       topic_cluster: "natal placement calculators"
       differentiation_notes: "Dedicated Moon sign job; distinct from full natal chart and from /moon-line-astrocartography geographic line."
+    - path: "/locational-astrology"
+      primary_keyword: "locational astrology"
+      secondary_keywords:
+        - "location astrology"
+        - "locational astrology vs astrocartography"
+        - "local space astrology"
+      page_type: "feature-landing"
+      locale: "en"
+      locales:
+        - en
+        - zh
+        - pt
+        - es
+        - it
+        - de
+      local_primaries:
+        zh: "地理占星与迁移盘"
+        pt: "astrocartografia e mapa de relocação"
+        es: "astrocartografía y carta de reubicación"
+        it: "astrologia locazionale"
+        de: "Ortsastrologie"
+      topic_cluster: "relocation astrology"
+      differentiation_notes: "Umbrella methods hub. English slug on every locale. Distinct from the homepage calculator, /astrocartography-where-to-live decision workflow, and /relocation-chart-calculator. Does not offer Local Space."
     - path: "/astrocartography-where-to-live"
       primary_keyword: "astrocartography where to live"
       secondary_keywords:

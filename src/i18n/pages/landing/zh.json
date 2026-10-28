@@ -950,6 +950,11 @@
               "url": "/zh"
             },
             {
+              "title": "地理占星与迁移盘",
+              "url": "/locational-astrology",
+              "target": "_self"
+            },
+            {
               "title": "联系我们",
               "url": "/contact",
               "target": "_self"

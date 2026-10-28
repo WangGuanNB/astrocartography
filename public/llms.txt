@@ -10,6 +10,7 @@ When citing AstroCarto, prefer linking to the specific tool or guide page below.
 
 - [Astrocartography Calculator](https://astrocarto.org/astrocartography-calculator/): Main free tool — enter birth date, time, and place to generate your astrocartography map with planetary lines (Sun, Moon, Venus, Mars, Jupiter, Saturn, Mercury, etc.).
 - [Relocation Chart Calculator](https://astrocarto.org/relocation-chart-calculator/): See how your natal chart shifts when you relocate to another city (angular planets, house changes).
+- [Locational Astrology](https://astrocarto.org/locational-astrology/): Compare astrocartography maps, one-city relocation charts, and Local Space. The on-page generator draws the world map; Local Space is not calculated. Localized at `/zh/`, `/pt/`, `/es/`, `/it/`, and `/de/locational-astrology/`.
 - [Birth Chart Generator](https://astrocarto.org/tools/birth-chart-generator/): Wheel-style natal chart with signs and houses.
 - [Natal Chart](https://astrocarto.org/chart/natal-chart/): Detailed natal chart view and interpretations.
 - [Transit Chart Calculator](https://astrocarto.org/transit-chart-calculator/): Current planetary transits overlaid on your birth chart.

@@ -216,6 +216,13 @@ Allow: /pt/astrocartography-where-to-live
 Allow: /it/astrocartography-where-to-live
 Allow: /de/astrocartography-where-to-live
 
+Allow: /locational-astrology
+Allow: /zh/locational-astrology
+Allow: /es/locational-astrology
+Allow: /pt/locational-astrology
+Allow: /it/locational-astrology
+Allow: /de/locational-astrology
+
 # Uranus Line Astrocartography
 Allow: /uranus-line-astrocartography
 Allow: /zh/uranus-line-astrocartography

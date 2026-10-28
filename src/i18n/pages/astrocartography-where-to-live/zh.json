@@ -170,6 +170,11 @@
         "url": "/relocation-chart-calculator"
       },
       {
+        "text": "还没确定城市，想先对照地图、迁移盘和本地空间？",
+        "linkText": "地理占星与迁移盘",
+        "url": "/locational-astrology"
+      },
+      {
         "text": "想找成长和机会？",
         "linkText": "木星线指南",
         "url": "/jupiter-line-astrocartography"

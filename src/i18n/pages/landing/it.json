@@ -970,6 +970,11 @@
               "url": "/it"
             },
             {
+              "title": "Astrologia locazionale",
+              "url": "/locational-astrology",
+              "target": "_self"
+            },
+            {
               "title": "Contattaci",
               "url": "/contact",
               "target": "_self"

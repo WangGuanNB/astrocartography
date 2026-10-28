@@ -136,6 +136,23 @@ export interface CalculatorPage {
   userPaths?: Section;
   workflowDemo?: Section;
   mapVsRelocation?: Section;
+  generatorNote?: string;
+  methodTable?: {
+    title: string;
+    description: string;
+    columns: {
+      method: string;
+      question: string;
+      output: string;
+      offered: string;
+    };
+    rows: Array<{
+      method: string;
+      question: string;
+      output: string;
+      offered: string;
+    }>;
+  };
   readingGuides?: Section;
   internalLinks?: {
     title: string;

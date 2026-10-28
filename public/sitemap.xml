@@ -926,6 +926,42 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://astrocarto.org/locational-astrology/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/locational-astrology/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/locational-astrology/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/locational-astrology/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/locational-astrology/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/locational-astrology/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://astrocarto.org/astrocartography-where-to-live/</loc>
     <lastmod>2026-10-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

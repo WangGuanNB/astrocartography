@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "title": "地理占星与迁移盘：地图和单城星盘怎么选",
+    "description": "地理占星用世界地图看行星线，迁移盘为同一出生瞬间重算一座城市的四角和宫位。先对照方法，再在 Astrocarto.org 免费出图或检查一座城市。",
+    "keywords": "地理占星与迁移盘, 地理占星, 迁移盘, 星盘地图, 本地空间"
+  },
+  "heading": {
+    "title": "地理占星与迁移盘：方法对照"
+  },
+  "generatorNote": "下面的生成器根据出生日期、时间和出生地画出地理占星世界地图。它不是本地空间方向图，也不是单城迁移盘。",
+  "intentAnchor": {
+    "text": "地理占星与迁移盘都把出生星盘和地点连在一起，但问的不是同一个问题。地理占星把出生瞬间投到世界地图上；迁移盘只为一座城市重算四角和宫位。本页先帮你选方法，再使用 Astrocarto.org 已有的地图或迁移盘。"
+  },
+  "guideHero": {
+    "badge": "方法指南",
+    "overviewTitle": "先选方法",
+    "overviewEyebrow": "字段说明",
+    "overviewItems": [
+      { "label": "先问", "value": "你真正想解决的问题" },
+      { "label": "扫全球", "value": "地理占星地图" },
+      { "label": "一座城", "value": "迁移盘" },
+      { "label": "本站不算", "value": "本地空间方向" }
+    ],
+    "actions": [
+      { "title": "生成免费地理占星地图", "url": "#generator", "icon": "RiArrowRightLine" },
+      { "title": "打开迁移盘", "url": "/relocation-chart-calculator", "icon": "RiPieChartLine", "variant": "secondary" }
+    ]
+  },
+  "userPaths": {
+    "name": "user-paths",
+    "label": "选择路径",
+    "title": "两个问题，两个现有工具",
+    "description": "两条路径都使用 Astrocarto.org 已经上线的计算器。还在看很多地方，就先出地图；已经锁定一座城市，就算迁移盘。",
+    "items": [
+      {
+        "title": "我想先看很多地方",
+        "description": "用出生日期、时间和出生地生成个人世界地图，查看各行星在出生瞬间落在哪些角度上。访客每天有地图次数限制，登录后可以生成更多。可选的 AI 对话和城市报告会消耗积分。",
+        "icon": "RiCompassLine",
+        "buttons": [
+          { "title": "生成地图", "url": "#generator", "icon": "RiMapLine" },
+          { "title": "行星线含义", "url": "/astrocartography-lines", "icon": "RiRouteLine", "variant": "outline" }
+        ]
+      },
+      {
+        "title": "我已经有一座城市",
+        "description": "先用地图看背景，再为这座城市免费计算一次迁移盘。出生瞬间保持不变，只按新坐标重算四角和整宫制宫位。",
+        "icon": "RiMapPinLine",
+        "buttons": [
+          { "title": "迁移盘", "url": "/relocation-chart-calculator", "icon": "RiPieChartLine" },
+          { "title": "住哪里流程", "url": "/astrocartography-where-to-live", "icon": "RiHomeHeartLine", "variant": "outline" }
+        ]
+      }
+    ]
+  },
+  "methodTable": {
+    "title": "地理占星与迁移盘等方法对照",
+    "description": "这些方法可以服务同一次旅行或搬家，但结果不能互换。Astrocarto.org 计算世界地图和单城迁移盘，不计算本地空间。",
+    "columns": { "method": "方法", "question": "主要问题", "output": "典型结果", "offered": "Astrocarto.org" },
+    "rows": [
+      { "method": "地理占星", "question": "出生瞬间，每颗行星在地球何处升起、落下、中天或落到天底？", "output": "带行星线的个人世界地图", "offered": "提供。使用本页生成器。" },
+      { "method": "迁移盘", "question": "同一出生瞬间改到一座城市后，星盘会怎样变？", "output": "重算后的四角、宫位和行星落宫", "offered": "提供。每次一座城市。" },
+      { "method": "本地空间", "question": "从某个地点看，行星落在哪些方位？", "output": "当地地平线上的方向线", "offered": "不提供。本站不计算本地空间。" },
+      { "method": "占星地理", "question": "星座或行星如何对应地球上的区域？", "output": "取决于传统，不是某一个人的出生地图", "offered": "只在本页解释，没有单独计算器。" }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "这些名字各自指什么",
+    "label": "定义",
+    "description": "地理占星把出生星盘和地球上的地点连起来。最常见的做法是 Jim Lewis 推广的地图：标出定时出生时行星落在四角的位置。迁移盘是另一套计算，只服务一座城市。占星地理这个词更松：有人用它指整个领域，有人用它指把星座或行星分配给地区、而不投影个人出生盘的传统。先看结果，再看名称。",
+    "image": { "src": "/imgs/features/hero-web.webp", "alt": "Astrocarto.org 地理占星地图" },
+    "items": [
+      {
+        "title": "不要把所有地点方法都叫成同一张图",
+        "description": "世界地图回答行星线落在哪里。迁移盘回答一座城市里宫位和四角如何重排。如果某页承诺的是本地空间方向图，那是第三件事。本站计算器覆盖地图和单城盘。",
+        "image": { "src": "/imgs/features/planetary-lines-meaning-map.webp", "alt": "个人地理占星行星线" }
+      },
+      {
+        "title": "出生时间决定角度是否可靠",
+        "description": "上升、下降、中天和天底移动很快。出生时间只是大概时，地图仍可作宽泛参考，但城市级结论不可靠。迁移盘用新的上升点重建宫位时也一样。只有日期时，请把角度和宫位说法当作探索。",
+        "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp", "alt": "依赖出生时间和地点的星盘角度" }
+      },
+      {
+        "title": "这是象征层，不是搬家判决",
+        "description": "这些方法不能证明某个地方会带来爱情、金钱、签证或失败。它们只提供比较主题的象征框架。没有哪条行星线普遍幸运，附近没有线也不等于没有意义。工作、住房、费用、安全和身份仍决定搬家是否现实。",
+        "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp", "alt": "行星线距离与现实条件" }
+      }
+    ]
+  },
+  "feature": {
+    "name": "example",
+    "title": "三座候选城市的实际顺序",
+    "label": "例子",
+    "description": "假设你在比较里斯本、柏林和蒙特利尔。这个顺序不宣布赢家，只把一个开放问题收成可以和现实条件并排看的证据。",
+    "items": [
+      { "title": "先生成地图", "description": "在本页生成器输入出生日期、时间和出生地。看每座城市附近是哪些行星与角度组合。你要找的是不同侧重，不是最佳居住地排名。", "icon": "RiMapLine" },
+      { "title": "留下一座城市再看细一点", "description": "如果柏林仍在候选里，记下它离相关行星线的距离，再只为柏林打开迁移盘。地图给出更大的格局，迁移盘给出这一座城市的四角和宫位。", "icon": "RiPieChartLine" },
+      { "title": "把候选交给住哪里指南", "description": "如果原来的问题是住哪里，继续看住哪里流程。把行星线主题对上目标，再核对签证、工作和住房。方法页只负责选对计算。", "icon": "RiHomeHeartLine" },
+      { "title": "先确认角度，再读行星线", "description": "下降点上的金星线和天底上的金星线不是同一个生活主题。需要行星加角度的含义时，计算之后再去行星线总页和地图解读指南。", "icon": "RiBookOpenLine" }
+    ]
+  },
+  "usage": {
+    "name": "limits",
+    "title": "本站计算什么，不计算什么",
+    "label": "限制",
+    "description": "本页地图由服务器根据你提交的出生资料计算。迁移盘使用同一瞬间和第二组坐标。两者都不画本地空间方向。",
+    "items": [
+      { "title": "地图", "description": "出生瞬间的行星线，用来扫全球、检查一座城市并比较短名单。访客有每日次数。登录后可以生成更多地图。更深入的 AI 解读按产品显示的积分计费。", "icon": "RiMapLine" },
+      { "title": "单城盘", "description": "迁移盘计算器每次免费计算一座城市，显示上升点和宫位如何变化。它不能代替地图，地图也不能代替它。", "icon": "RiPieChartLine" },
+      { "title": "范围之外", "description": "没有本地空间计算器，不保证最佳居住地，也不提供法律、医疗或财务建议。搬家后太阳和月亮的黄道星座不会变；会变的是四角和宫位。", "icon": "RiErrorWarningLine" }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "常见问题",
+    "title": "地理占星与迁移盘常见问题",
+    "description": "这个搜索背后通常会问的短答案。",
+    "items": [
+      { "title": "地理占星和迁移盘是不是同一个东西？", "description": "不是。地理占星把出生瞬间投成世界地图上的行星线。迁移盘保留同一出生瞬间，只为一座城市重算四角和宫位。本地空间则是从某个地点看行星方位，本站不计算。" },
+      { "title": "占星地理是什么？", "description": "占星地理没有统一算法。有人用它指整个地点领域，有人用它指把星座或行星对应到地区的传统。先看计算方法和结果，再把两张图当成同一件事。" },
+      { "title": "Astrocarto.org 计算本地空间吗？", "description": "不计算。本地空间看的是某地地平线上的行星方向。Astrocarto.org 计算地理占星地图和单城迁移盘。本页把这个缺口写清楚。" },
+      { "title": "应该先看世界地图还是迁移盘？", "description": "问题还开放时先看世界地图。已经有一座认真考虑的城市时，再用迁移盘。很多人两步都做：先扫描，再为入围城市重算宫位。" },
+      { "title": "搬家后太阳星座会变吗？", "description": "不会。固定同一出生瞬间时，行星黄道位置不变。会变的是上升、中天和宫位。不要把目的地的钟点当成新的出生时间。" },
+      { "title": "可以免费生成这张地图吗？", "description": "可以。本页生成器用出生日期、时间和出生地生成核心地理占星地图。访客有每日次数，登录后可以生成更多。可选 AI 对话和城市报告会在消耗前显示积分。" },
+      { "title": "决定搬去哪里时该用哪种方法？", "description": "先用地图扫描地区和城市，再对一座认真候选的城市使用迁移盘。两者都不会替你选家。把结果和工作、住房、签证、费用放在一起，再继续看住哪里指南。" },
+      { "title": "地理占星能指出最适合居住的地方吗？", "description": "不能。它能显示地图或迁移盘强调哪些主题，不能承诺爱情、金钱、签证或搬家成功。住房决策请配合现实调查，并使用住哪里指南。" }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "从匹配你问题的方法开始",
+    "description": "需要扫全球时，生成免费地理占星地图。需要看一座城市的宫位时，打开迁移盘。如果问题是住哪里，继续看住哪里指南。",
+    "buttons": [
+      { "title": "生成免费地理占星地图", "icon": "RiMapLine", "url": "#generator", "target": "_self", "variant": "default" },
+      { "title": "迁移盘计算器", "icon": "RiPieChartLine", "url": "/relocation-chart-calculator", "target": "_self", "variant": "outline" }
+    ]
+  },
+  "schemaLabels": { "breadcrumbHome": "首页", "breadcrumbCurrent": "地理占星与迁移盘" }
+}
