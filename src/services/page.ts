@@ -137,6 +137,14 @@ export async function getUranusLinePage(locale: string): Promise<CalculatorPage>
   return (await getPage("uranus-line-astrocartography", locale)) as CalculatorPage;
 }
 
+export async function getNeptuneLinePage(locale: string): Promise<CalculatorPage> {
+  return (await getPage("neptune-line-astrocartography", locale)) as CalculatorPage;
+}
+
+export async function getPlutoLinePage(locale: string): Promise<CalculatorPage> {
+  return (await getPage("pluto-line-astrocartography", locale)) as CalculatorPage;
+}
+
 export async function getPage(
   name: string,
   locale: string

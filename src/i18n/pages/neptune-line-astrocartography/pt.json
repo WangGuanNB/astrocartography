@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "title": "Linha de Netuno na Astrocartografia - Significado e Ângulos",
+    "description": "A linha de Netuno na astrocartografia explica imaginação, arte, névoa e os quatro ângulos. O mapa grátis já a desenha. Nenhuma mudança é garantida.",
+    "keywords": "linha de Netuno na astrocartografia, linha de Netuno, Netuno ASC, Netuno MC"
+  },
+  "intentAnchor": {
+    "text": "A linha de Netuno na astrocartografia marca onde Netuno estava num ângulo no seu nascimento. Este guia explica sonhos, imaginação, névoa e os quatro ângulos, e leva ao mapa grátis que já desenha a linha. Uma cidade na linha é um lugar para estudar, não um resultado prometido."
+  },
+  "internalLinks": {
+    "title": "Páginas relacionadas",
+    "items": [
+      {
+        "text": "Gere o mapa grátis.",
+        "linkText": "Mapa de astrocartografia grátis",
+        "url": "/"
+      },
+      {
+        "text": "Compare esta linha com os outros planetas.",
+        "linkText": "Guia de linhas",
+        "url": "/astrocartography-lines"
+      },
+      {
+        "text": "Quer mudança súbita em vez de um clima vago?",
+        "linkText": "Guia da linha de Urano",
+        "url": "/uranus-line-astrocartography"
+      },
+      {
+        "text": "Procura intensidade e reconstrução?",
+        "linkText": "Guia da linha de Plutão",
+        "url": "/pluto-line-astrocartography"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "O que a linha mostra no mapa",
+    "label": "LINHA DE NETUNO",
+    "description": "A linha de Netuno na astrocartografia marca onde Netuno nascia, se punha, culminava ou estava no fundo do céu no seu nascimento. O mapa da página inicial calcula esses caminhos com data, hora e local. Perto da linha, imaginação, arte, sonhos e limites difusos ganham relevo, e o lugar também pode parecer vago. A linha descreve um tom. Não decide uma mudança.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Mapa usado para ver a linha de Netuno"
+    },
+    "items": [
+      {
+        "title": "O que Netuno costuma destacar",
+        "description": "Netuno liga-se a imaginação, empatia, música e imagem, e ao desejo de suavizar uma aresta dura. Uma cidade perto da linha pode inspirar ou idealizar uma pessoa ou um trabalho. Leia isso como atmosfera. Casa, trabalho e saúde continuam a ser verificados à parte.",
+        "image": {
+          "src": "/imgs/posts/neptune-symbol.webp",
+          "alt": "Símbolo de Netuno"
+        }
+      },
+      {
+        "title": "Quatro ângulos",
+        "description": "A linha ASC é onde Netuno nascia: a identidade pode ficar mais artística e mais difícil de classificar. A DSC é onde se punha: os laços a dois podem parecer românticos ou pouco claros. A MC é onde estava mais alto: o trabalho público pode pender para imagem, música ou cuidado. A IC é onde estava mais baixo: a casa pode parecer poética ou instável. Nomeie o ângulo antes de julgar a cidade.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Ângulos ASC, DSC, MC e IC"
+        }
+      },
+      {
+        "title": "Inspiração não é uma boa decisão",
+        "description": "A linha não declara uma cidade segura, sortuda ou condenada. Pode apoiar criação e também fazer um plano fraco parecer belo. Para estrutura, compare Saturno. Para uma rutura súbita de identidade, compare Urano. Depois abra o mapa e veja qual ângulo cruza a cidade.",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Linhas planetárias no mapa"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "A linha por ângulo",
+    "label": "QUATRO ÂNGULOS",
+    "description": "O planeta define o tema. O ângulo diz se ele aparece na identidade, na parceria, no trabalho público ou na vida privada. São tendências, não uma previsão de mudança.",
+    "items": [
+      {
+        "title": "Linha ASC de Netuno",
+        "description": "No ascendente, o modo de encontrar o mundo pode ficar imaginativo ou difícil de nomear. Isso pode ajudar arte e cuidado, e também levar a dizer sim antes de os termos estarem claros.",
+        "icon": "RiUserLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Linha ASC de Netuno"
+        }
+      },
+      {
+        "title": "Linha MC de Netuno",
+        "description": "O Meio do Céu liga Netuno à vocação. Trabalho com imagem, som ou cuidado pode parecer mais natural, e uma oferta brilhante pode esconder pagamento pouco claro. Não abandone uma procura concreta de trabalho por causa da linha.",
+        "icon": "RiBriefcaseLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Linha MC de Netuno"
+        }
+      },
+      {
+        "title": "Linha DSC de Netuno",
+        "description": "O poente põe Netuno nas relações a dois. A atração pode ser imediata e idealizada. A linha não cria uma alma gémea nem prevê uma rutura. Se a pergunta é o amor, leia também as linhas de Vénus.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Linha DSC de Netuno"
+        }
+      },
+      {
+        "title": "Linha IC de Netuno",
+        "description": "A linha inferior toca a casa e a necessidade de recuar. A rotina pode ser mais difícil. Isso pergunta pela vida privada, não prova que vai criar raízes. Para uma base estável, compare a Lua e o custo de vida.",
+        "icon": "RiHome3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Linha IC de Netuno"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Como usar a linha sem a tratar como promessa",
+    "label": "PASSOS",
+    "description": "A linha de Netuno na astrocartografia serve quando já tem uma pergunta sobre uma cidade. Os passos usam o mapa existente. Não acrescentam outra calculadora.",
+    "items": [
+      {
+        "title": "Abra o mapa e nomeie o ângulo",
+        "description": "Introduza data, hora e local de nascimento no mapa da página inicial. Encontre Netuno e veja qual ângulo fica mais perto da cidade. Uma hora aproximada torna o ângulo pouco fiável. O mapa desenha Netuno. Não desenha Quíron, os nodos lunares nem Lilith.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Separe o clima da logística",
+        "description": "Anote o símbolo à parte da renda, dos vistos, do trabalho e da saúde. Uma atmosfera significativa não substitui esses factos. Visite antes de se mudar, se puder.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Leia os cruzamentos como mistura",
+        "description": "Netuno pode passar perto de outra linha, e isso vê-se no mapa. Vénus perto pode destacar arte ou romance. Saturno perto pode misturar inspiração e dever. O mapa não pontua cruzamentos nem escolhe uma cidade vencedora.",
+        "icon": "RiRouteLine"
+      },
+      {
+        "title": "Compare com uma linha mais sólida",
+        "description": "Para uma estadia longa, compare Saturno para estrutura, Júpiter para crescimento ou a Lua para o dia a dia. Netuno pode caber num capítulo criativo. Nenhuma linha aqui garante amor, dinheiro, vistos ou uma mudança bem-sucedida.",
+        "icon": "RiBalanceLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Limites a manter à vista",
+    "label": "FACTOS",
+    "description": "A linha de Netuno na astrocartografia permanece honesta quando os limites ficam visíveis. Estas notas correspondem ao que o mapa faz.",
+    "items": [
+      {
+        "title": "A linha já está no mapa grátis",
+        "description": "Não precisa de uma ferramenta separada de Netuno. O mapa calcula do Sol a Plutão, incluindo Netuno, no momento de nascimento que introduzir. Comentários de IA sobre uma cidade usam créditos. Ver a linha não.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "A distância é um auxílio de leitura",
+        "description": "Muitos leitores tratam algumas centenas de milhas como zona percetível. Este site não mediu um raio de Netuno. Use a linha desenhada e dê menos peso a uma cidade distante.",
+        "icon": "RiRulerLine"
+      },
+      {
+        "title": "A hora ainda controla o ângulo",
+        "description": "A data coloca Netuno. A hora e o local de nascimento decidem o ângulo sob uma cidade. Sem hora documentada, não trate o ângulo como exato.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "O Netuno natal ainda importa",
+        "description": "O mapa amplifica um planeta que já tem. Não substitui o mapa natal e não diagnostica saúde nem estados mentais.",
+        "icon": "RiPieChartLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Perguntas sobre a linha de Netuno",
+    "description": "Respostas curtas sobre significado, o mapa e a hora de nascimento.",
+    "items": [
+      {
+        "title": "O que significa a linha?",
+        "description": "A linha de Netuno na astrocartografia marca lugares onde Netuno estava no Ascendente, Descendente, Meio do Céu ou Fundo do Céu no nascimento. O ângulo diz se o tema pende para identidade, parceria, trabalho público ou casa. É um tom, não a promessa de que a cidade vai curar, inspirar ou confundir."
+      },
+      {
+        "title": "O mapa grátis inclui Netuno?",
+        "description": "Sim. O mapa da página inicial desenha Netuno junto com Sol, Lua, Mercúrio, Vénus, Marte, Júpiter, Saturno, Urano e Plutão. Quíron, nodos lunares e Lilith não são desenhados como linhas."
+      },
+      {
+        "title": "A linha de Netuno é má?",
+        "description": "Não. Não é uma maldição nem prova de que uma cidade é segura ou sortuda. Pode coincidir com criação e compaixão, e também com idealização ou acordos pouco claros."
+      },
+      {
+        "title": "E se eu não souber a hora de nascimento?",
+        "description": "O mapa precisa de uma hora para colocar os ângulos. Sem hora fiável, o ângulo pode estar errado mesmo com a data certa. Use uma hora aproximada só para explorar."
+      },
+      {
+        "title": "Mudar para a linha garante uma carreira criativa?",
+        "description": "Não. A linha não garante trabalho, amor, vistos, saúde nem uma mudança bem-sucedida. Mostra um tema simbólico daquele instante."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Veja a sua linha no mapa",
+    "description": "A linha de Netuno na astrocartografia já faz parte do mapa grátis da página inicial. Introduza data, hora e local, e encontre o ângulo mais próximo da cidade que lhe importa. O mapa não promete o que acontece depois de chegar.",
+    "buttons": [
+      {
+        "title": "Mapa de astrocartografia grátis →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

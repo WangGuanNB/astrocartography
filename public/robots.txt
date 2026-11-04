@@ -231,6 +231,20 @@ Allow: /pt/uranus-line-astrocartography
 Allow: /it/uranus-line-astrocartography
 Allow: /de/uranus-line-astrocartography
 
+# Neptune and Pluto line guides
+Allow: /neptune-line-astrocartography
+Allow: /zh/neptune-line-astrocartography
+Allow: /es/neptune-line-astrocartography
+Allow: /pt/neptune-line-astrocartography
+Allow: /it/neptune-line-astrocartography
+Allow: /de/neptune-line-astrocartography
+Allow: /pluto-line-astrocartography
+Allow: /zh/pluto-line-astrocartography
+Allow: /es/pluto-line-astrocartography
+Allow: /pt/pluto-line-astrocartography
+Allow: /it/pluto-line-astrocartography
+Allow: /de/pluto-line-astrocartography
+
 # Astrocartography Lines（多语言版本）
 Allow: /zh/sun-line-astrocartography
 Allow: /es/sun-line-astrocartography

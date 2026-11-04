@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "title": "Neptune Line Astrocartography - Meaning and Angles",
+    "description": "Learn what a Neptune line means in astrocartography, including dreams, fog, art, and the four angles. The free map already draws it. No move is guaranteed.",
+    "keywords": "neptune line astrocartography, neptune line meaning, neptune ASC line, neptune DSC line, neptune MC line, neptune IC line"
+  },
+  "intentAnchor": {
+    "text": "Neptune line astrocartography shows where Neptune stood on an angle at your birth. This guide explains dreams, imagination, fog, and the four angles, then sends you to the free map that already draws the line. A city on the line is a place to study, not a promised outcome."
+  },
+  "internalLinks": {
+    "title": "Related Resources",
+    "items": [
+      {
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
+        "url": "/"
+      },
+      {
+        "text": "Compare this line with the other planets on the map.",
+        "linkText": "Complete Astrocartography Lines Guide",
+        "url": "/astrocartography-lines"
+      },
+      {
+        "text": "Want sudden change instead of a soft, unclear mood?",
+        "linkText": "Uranus Line Guide",
+        "url": "/uranus-line-astrocartography"
+      },
+      {
+        "text": "Looking for intensity and deep rebuilding instead?",
+        "linkText": "Pluto Line Guide",
+        "url": "/pluto-line-astrocartography"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What a Neptune line shows on the map",
+    "label": "NEPTUNE LINE",
+    "description": "Neptune line astrocartography marks where Neptune was rising, setting, culminating, or at the bottom of the sky at your birth. The homepage map calculates those paths from your birth date, time, and place. Nearby, imagination, art, dreams, and blurred boundaries stand out, and the same place can feel vague. The line describes a tone. It does not decide a move.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "World map used to locate a Neptune line in astrocartography"
+    },
+    "items": [
+      {
+        "title": "What Neptune tends to emphasize",
+        "description": "Neptune is tied to imagination, compassion, music, images, and the wish to soften a hard edge. A city near the line can feel inspiring or porous. It can also feel vague: idealizing a person or a job, or losing a schedule. Read that as atmosphere. Housing, work, and health still have to be checked on their own.",
+        "image": {
+          "src": "/imgs/posts/neptune-symbol.webp",
+          "alt": "Neptune symbol used in the Neptune line guide"
+        }
+      },
+      {
+        "title": "Four angles, four kinds of fog and inspiration",
+        "description": "The ASC line is where Neptune was rising, so identity and first impressions can turn artistic or hard to categorize. The DSC line is where Neptune was setting, so one-to-one bonds may feel romantic or unclear. The MC line is where Neptune was highest, so public work can lean toward images, music, film, or care. The IC line is where Neptune was lowest, so home may feel poetic or unsettled. Name the angle before you judge the city.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "ASC, DSC, MC, and IC angles for a Neptune line"
+        }
+      },
+      {
+        "title": "Inspiration is not the same as a good decision",
+        "description": "The line is not a verdict that a city is safe, lucky, or doomed. It can support creative work, and it can make a weak plan look beautiful. For structure, compare Saturn. For a sudden break in identity, compare Uranus. Then open the map and see which angle crosses the city.",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Planetary lines on a map, including outer planets"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Neptune line by angle",
+    "label": "THE 4 ANGLES",
+    "description": "The planet sets the theme. The angle says whether that theme shows up in identity, partnership, public work, or private life. These notes describe tendencies. They are not a forecast for a specific move.",
+    "items": [
+      {
+        "title": "Neptune ASC line — a softer or more artistic identity",
+        "description": "On the rising line, how you meet the world can turn imaginative, gentle, or hard to label. That can help art, music, images, or care work. It can also mean saying yes before the terms are clear. A short visit shows whether the place sharpens imagination or only makes decisions foggy.",
+        "icon": "RiUserLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Reading distance from a planetary line on the map"
+        }
+      },
+      {
+        "title": "Neptune MC line — image, healing, and hard-to-name work",
+        "description": "The midheaven line ties Neptune to vocation. Work with images, sound, story, or care can feel more natural, and a glamorous offer can hide unclear pay. Do not leave a concrete job search because of the line. Ask whether the work needs imagination, then check the actual market.",
+        "icon": "RiBriefcaseLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Planets whose lines the map can draw"
+        }
+      },
+      {
+        "title": "Neptune DSC line — romantic or porous partnerships",
+        "description": "The setting line puts Neptune into one-to-one bonds. Attraction can feel immediate or ideal, and practical mismatches can stay hidden. The line does not create a soulmate and does not predict a breakup. If romance is the question, read Venus lines beside it.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "How close a city sits to a Neptune line"
+        }
+      },
+      {
+        "title": "Neptune IC line — a private, dreamy, or unsettled home",
+        "description": "The lower line touches home and the need to retreat. A residence nearby may feel like a studio or a sanctuary, and routine may be harder to keep. That is a question about private life, not proof you will feel rooted. For a stable base, compare Moon lines and the cost of living.",
+        "icon": "RiHome3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Home and private-life themes on an IC line"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to use the line without treating it as a promise",
+    "label": "PRACTICAL GUIDE",
+    "description": "Neptune line astrocartography is useful when you already have a city question. The steps below use the map you already have. They do not add a second calculator.",
+    "items": [
+      {
+        "title": "Open the map and name the angle",
+        "description": "Enter birth date, birth time, and birthplace on the homepage map. Find Neptune and see which angle is nearest the city. A rough birth time makes that angle unreliable. The map draws Neptune. It does not draw Chiron, the lunar nodes, or Lilith.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Separate the mood from the logistics",
+        "description": "Keep the symbolic note separate from rent, visas, work, and health care. A meaningful atmosphere does not replace those facts. Visit before a move when you can. A few days will not reproduce a year, but they can show whether the place feels clarifying or only vague.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Read crossings as mixed themes",
+        "description": "Neptune can pass near another planetary line, and you can see that on the map. Venus nearby may emphasize art or romance. Saturn nearby may mix inspiration with duty. The map does not score those crossings or name a winning city.",
+        "icon": "RiRouteLine"
+      },
+      {
+        "title": "Keep a more solid line in the comparison",
+        "description": "For a long stay, compare Saturn for structure, Jupiter for growth, or the Moon for daily ease. Neptune can fit a creative chapter. It is a weak sole reason to choose a home if you need predictability. No line here guarantees love, money, visas, or a successful move.",
+        "icon": "RiBalanceLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Limits to keep in view",
+    "label": "KEY FACTS",
+    "description": "Neptune line astrocartography stays honest when the limits stay visible. The notes below match what the map does.",
+    "items": [
+      {
+        "title": "The line is already on the free map",
+        "description": "You do not need a separate Neptune tool. The map calculates Sun through Pluto, including Neptune, at the birth moment you enter. Open the homepage, generate the map, and look for the Neptune paths. AI comments on a city use credits. The map itself is the place to see the line.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Distance is a reading aid, not a measurement from this site",
+        "description": "Readers often treat a few hundred miles as a noticeable zone and a closer pass as stronger. This site has not measured a Neptune radius. Use the drawn line and give a distant city less weight.",
+        "icon": "RiRulerLine"
+      },
+      {
+        "title": "Birth time still controls the angle",
+        "description": "The date places Neptune. The clock time and birthplace decide the angle under a city. A wrong time can move the rising and midheaven lines a long way. Without a documented time, do not treat the angle as exact.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Your natal Neptune still matters",
+        "description": "The map amplifies a planet you already have. A prominent natal Neptune can make these cities feel familiar. A chart that prefers clear rules may find them draining. The map does not replace the birth chart, and it does not diagnose health or mental states.",
+        "icon": "RiPieChartLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Questions about the Neptune line",
+    "description": "Short answers about meaning, the map, birth time, and what this page does not promise.",
+    "items": [
+      {
+        "title": "What does a Neptune line mean?",
+        "description": "Neptune line astrocartography marks places where Neptune was on the Ascendant, Descendant, Midheaven, or Imum Coeli at birth. Those places tend to emphasize imagination, empathy, art, dreams, and blurred boundaries. The angle tells you whether the theme leans toward identity, partnership, public work, or home. It is a description of tone, not a promise that the city will heal, inspire, or confuse you."
+      },
+      {
+        "title": "Does the free map include Neptune?",
+        "description": "Yes. The homepage map draws Neptune along with the Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, and Pluto. Generate the map with your birth date, time, and place, then look for the Neptune lines. Chiron, the lunar nodes, and Lilith are not drawn as map lines."
+      },
+      {
+        "title": "Is a Neptune line bad?",
+        "description": "No. The line is not a curse, and it is not proof that a city is safe or lucky. It can coincide with creativity and compassion, and it can also coincide with idealizing, escapism, or unclear agreements. Whether that is useful depends on the question you are asking and on the practical conditions of the place."
+      },
+      {
+        "title": "What if I do not know my birth time?",
+        "description": "The map still needs a time to place the angles. Without a reliable time, the Neptune line's angle can be wrong even when the date is right. Use an approximate time only as an exploration, and wait for a documented time before you treat a city decision as precise."
+      },
+      {
+        "title": "Will moving to a Neptune line guarantee a creative career or a spiritual life?",
+        "description": "No. The line does not guarantee work, love, visas, health, or a successful relocation. It shows a symbolic theme for that birth moment. Jobs, money, and daily life still have to be checked in the ordinary way."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "See your Neptune line on the map",
+    "description": "Neptune line astrocartography is already part of the free homepage map. Enter your birth date, time, and place, then find the Neptune paths and the angle nearest the city you care about. The map does not promise what will happen after you arrive.",
+    "buttons": [
+      {
+        "title": "Free Astrocartography Chart & Map →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "title": "Pluto Line Astrocartography - Power and Deep Change",
+    "description": "Learn what a Pluto line means in astrocartography: power, deep change, and the four angles. The free map already draws it. No outcome is guaranteed.",
+    "keywords": "pluto line astrocartography, pluto line meaning, pluto ASC line, pluto DSC line, pluto MC line, pluto IC line"
+  },
+  "intentAnchor": {
+    "text": "Pluto line astrocartography shows where Pluto stood on an angle at your birth. This guide explains power, deep change, and the four angles, then points you to the free map that already draws the line. Intensity is not the same as danger, and the line is not a guaranteed transformation."
+  },
+  "internalLinks": {
+    "title": "Related Resources",
+    "items": [
+      {
+        "text": "Generate your free astrocartography chart on the world map.",
+        "linkText": "Free Astrocartography Chart & Map",
+        "url": "/"
+      },
+      {
+        "text": "Compare this line with the other planets on the map.",
+        "linkText": "Complete Astrocartography Lines Guide",
+        "url": "/astrocartography-lines"
+      },
+      {
+        "text": "Want imagination and softer boundaries instead?",
+        "linkText": "Neptune Line Guide",
+        "url": "/neptune-line-astrocartography"
+      },
+      {
+        "text": "Want sudden breaks and reinvention instead?",
+        "linkText": "Uranus Line Guide",
+        "url": "/uranus-line-astrocartography"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "What a Pluto line shows on the map",
+    "label": "PLUTO LINE",
+    "description": "Pluto line astrocartography marks where Pluto was rising, setting, culminating, or at the bottom of the sky at your birth. The homepage map calculates those paths from your birth date, time, and place. Nearby, power, privacy, endings, and rebuilding stand out. The line is not a curse and not a promised transformation.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "World map used to locate a Pluto line in astrocartography"
+    },
+    "items": [
+      {
+        "title": "What Pluto tends to emphasize",
+        "description": "Pluto is associated with depth, shared resources, privacy, and change that removes what no longer works. A city near the line can feel compelling or hard to treat casually. The difficult version is compulsion: holding on, or treating every setback as a total ending. That is a symbolic tone, not an objective danger rating.",
+        "image": {
+          "src": "/imgs/posts/pluto-symbol.webp",
+          "alt": "Pluto symbol used in the Pluto line guide"
+        }
+      },
+      {
+        "title": "Four angles, four places where intensity shows up",
+        "description": "The ASC line is where Pluto was rising, so presence can feel more forceful or private. The DSC line is where Pluto was setting, so partnerships may involve loyalty, power differences, or unspoken topics. The MC line is where Pluto was highest, so public work can become a deep specialization. The IC line is where Pluto was lowest, so home may surface family pressure or a need to rebuild. Name the angle before you call the city simply intense.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "ASC, DSC, MC, and IC angles for a Pluto line"
+        }
+      },
+      {
+        "title": "Depth is not a command to move",
+        "description": "Study the line when you want focused work or a chapter of rebuilding. Do not use it to frighten yourself, and do not expect a magical turning point. For lighter growth, compare Jupiter. For a sudden change of identity, compare Uranus. For imagination rather than pressure, compare Neptune. Then see which line is actually near the city.",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Planetary lines on a map, including Pluto"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Pluto line by angle",
+    "label": "THE 4 ANGLES",
+    "description": "The planet sets the theme. The angle says whether power and change show up in identity, partnership, public work, or private life. These are tendencies, not outcomes.",
+    "items": [
+      {
+        "title": "Pluto ASC line — a stronger or more private presence",
+        "description": "On the rising line, other people may experience you as intense or hard to influence. That can help research or any role that stays with a hard problem. It can also turn ordinary social settings into a test of control. A visit shows the mood. It does not prove you become someone else by changing cities.",
+        "icon": "RiUserLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Reading distance from a planetary line on the map"
+        }
+      },
+      {
+        "title": "Pluto MC line — concentrated public work",
+        "description": "The midheaven line connects Pluto with vocation. People look here for specialization, investigation, finance, or work that gains influence slowly. It can also describe office power politics. It does not guarantee promotion or money. Compare the job market, and compare Sun or Saturn lines if you want visibility or structure.",
+        "icon": "RiBriefcaseLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Planets whose lines the map can draw"
+        }
+      },
+      {
+        "title": "Pluto DSC line — bonds that bring power into the open",
+        "description": "The setting line places Pluto in one-to-one relationships. Bonds may feel private or uneven in influence. The line does not mean a relationship is abusive, and it does not mean it is destined. If safety is a concern, use ordinary information and support, not a planetary line. For a broader relationship question, read Venus lines as well.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "How close a city sits to a Pluto line"
+        }
+      },
+      {
+        "title": "Pluto IC line — private foundations and family pressure",
+        "description": "The lower line touches home, ancestry, and what stays buried in daily life. A residence nearby may coincide with renovations, shared resources, or a strong need for privacy. The line is not evidence that a house is unsafe. Cost and the people you live with still have to be judged directly.",
+        "icon": "RiHome3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Home and private-life themes on an IC line"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to use the line without turning it into a warning",
+    "label": "PRACTICAL GUIDE",
+    "description": "Pluto line astrocartography helps when you want to see where depth and power themes fall. The homepage map already draws the line. This page does not add another calculator.",
+    "items": [
+      {
+        "title": "Find the line, then name the angle",
+        "description": "Use birth date, a reliable birth time, and birthplace on the homepage map. Locate Pluto and see which angle is nearest the city. A rough time makes that angle unreliable. The map includes Pluto. It does not draw Chiron, the lunar nodes, or Lilith.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Ask what kind of intensity you actually want",
+        "description": "A focused project can fit this theme. Hoping that geography will fix powerlessness does not. Keep work, money, safety, and housing in a separate list. If you visit, notice whether the city feels concentrating or only exhausting.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Read nearby lines as a mix",
+        "description": "Pluto may run beside another planet, and you can see that on the map. Saturn nearby can describe pressure plus endurance. Venus nearby can describe intense attraction. The site does not rank those combinations or name a winning city.",
+        "icon": "RiRouteLine"
+      },
+      {
+        "title": "Compare it with a less extreme option",
+        "description": "For a long stay, compare Jupiter, Venus, Moon, or Saturn and see which question each line answers. Living near Pluto is not required for a meaningful life, and avoiding it is not a safety plan. No line here guarantees love, money, status, or a successful relocation.",
+        "icon": "RiBalanceLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Limits to keep in view",
+    "label": "KEY FACTS",
+    "description": "Pluto line astrocartography is only as useful as its limits. These points match the map and the claims this page is willing to make.",
+    "items": [
+      {
+        "title": "The line is already on the free map",
+        "description": "There is no separate Pluto calculator to open. The homepage map includes Pluto with the Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, and Neptune. Generate that map and inspect the Pluto paths. Written AI comments use credits. Seeing the line does not.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "The line follows Pluto in the sky",
+        "description": "The homepage map draws Pluto where the body actually stood, using its right ascension and declination. It does not slide Pluto onto its zodiac degree and ignore how far north or south of the ecliptic it was. Pluto's orbit is steeply tilted, so a map that uses only the zodiac degree can put the same line in a different place. If another chart disagrees, compare the drawing method before calling either line a mistake.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Do not read the line as a curse",
+        "description": "Pluto's reputation for crisis is easy to exaggerate. This page does not say a Pluto line is dangerous, doomed, or unavoidable. It says the symbolic theme is power and deep change, which can be useful or draining depending on the person and the place. Fear is not a method.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "Birth time still controls the angle",
+        "description": "The date places Pluto in the sky. The clock time and birthplace decide which angle becomes the line under a city. An uncertain time makes the ASC, DSC, MC, and IC labels unreliable. Use a documented time when the decision is important.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Distance is a convention, not a site measurement",
+        "description": "Readers often treat a few hundred miles as a noticeable zone. This site has not measured a Pluto-specific radius. Look at the drawn line and give a distant city less weight.",
+        "icon": "RiRulerLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Questions about the Pluto line",
+    "description": "Short answers about meaning, the drawing method, danger, and birth time.",
+    "items": [
+      {
+        "title": "What does a Pluto line mean?",
+        "description": "Pluto line astrocartography marks places where Pluto was on the Ascendant, Descendant, Midheaven, or Imum Coeli at birth. Those places tend to emphasize power, privacy, endings, and rebuilding. The angle shows whether that theme leans toward identity, partnership, public work, or home. It describes a tone. It does not guarantee a transformation."
+      },
+      {
+        "title": "Is a Pluto line dangerous?",
+        "description": "No. This site does not treat a Pluto line as cursed, unsafe, or fated. The theme can feel intense, and control or compulsion can be part of the symbolism. Safety, housing, and relationships still have to be judged with ordinary information. A planetary line is not evidence that a city will harm you."
+      },
+      {
+        "title": "Why might another Pluto map show a different line?",
+        "description": "One method uses Pluto's zodiac degree and ignores latitude. This map uses Pluto's actual sky position at your birth moment, through right ascension and declination. Because Pluto can sit well off the ecliptic, the two drawings can disagree by a long distance. Compare the method before you decide which line to trust."
+      },
+      {
+        "title": "Does the free map include Pluto?",
+        "description": "Yes. The homepage map draws Pluto together with the Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, and Neptune. Use your birth date, time, and place, then look for the Pluto lines. Chiron, the lunar nodes, and Lilith are not included as map lines."
+      },
+      {
+        "title": "What if I do not know my birth time?",
+        "description": "The angle of the line depends on the time. Without a reliable birth time, a Pluto ASC, DSC, MC, or IC label can be in the wrong place. You can explore with an approximate time, and you should not treat that exploration as a precise relocation result."
+      },
+      {
+        "title": "Will moving there guarantee power, money, or a life overhaul?",
+        "description": "No. The line does not guarantee status, income, love, visas, or a successful move. It shows where a Pluto theme falls for your birth moment. The decision still depends on work, cost, and the life you actually want."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "See your Pluto line on the map",
+    "description": "Pluto line astrocartography is already part of the free homepage map. Enter your birth date, time, and place, then find the Pluto paths and the angle nearest the city you care about. The map does not promise what will happen after you arrive.",
+    "buttons": [
+      {
+        "title": "Free Astrocartography Chart & Map →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

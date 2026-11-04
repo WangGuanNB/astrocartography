@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "title": "Neptun-Linie in der Astrokartografie - Bedeutung und Winkel",
+    "description": "Fantasie, Kunst, Nebel und die vier Winkel. Die kostenlose Karte zeichnet die Linie bereits. Kein Umzug ist garantiert.",
+    "keywords": "Neptun-Linie, Neptun ASC, Neptun MC, Astrokartografie"
+  },
+  "intentAnchor": {
+    "text": "Die Neptun-Linie in der Astrokartografie zeigt, wo Neptun bei Ihrer Geburt an einem Winkel stand. Dieser Leitfaden erklärt Träume, Fantasie, Nebel und die vier Winkel und führt zur kostenlosen Karte, die die Linie bereits zeichnet. Eine Stadt auf der Linie ist ein Ort zum Prüfen, kein versprochenes Ergebnis."
+  },
+  "internalLinks": {
+    "title": "Verwandte Seiten",
+    "items": [
+      {
+        "text": "Erstellen Sie die kostenlose Karte.",
+        "linkText": "Kostenlose Astrokartografie-Karte",
+        "url": "/"
+      },
+      {
+        "text": "Vergleichen Sie diese Linie mit den anderen Planeten.",
+        "linkText": "Linienübersicht",
+        "url": "/astrocartography-lines"
+      },
+      {
+        "text": "Wollen Sie einen plötzlichen Bruch statt einer unklaren Stimmung?",
+        "linkText": "Uranus-Linie",
+        "url": "/uranus-line-astrocartography"
+      },
+      {
+        "text": "Suchen Sie Intensität und Wiederaufbau?",
+        "linkText": "Pluto-Linie",
+        "url": "/pluto-line-astrocartography"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Was die Linie auf der Karte zeigt",
+    "label": "NEPTUN-LINIE",
+    "description": "Die Neptun-Linie in der Astrokartografie markiert, wo Neptun bei der Geburt aufging, unterging, kulminierte oder am Himmelstiefpunkt stand. Die Karte der Startseite berechnet diese Wege aus Datum, Uhrzeit und Ort. In der Nähe treten Fantasie, Kunst, Träume und unscharfe Grenzen hervor, und der Ort kann sich auch vage anfühlen. Die Linie beschreibt einen Ton. Sie entscheidet keinen Umzug.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Karte zum Auffinden der Neptun-Linie"
+    },
+    "items": [
+      {
+        "title": "Was Neptun meist betont",
+        "description": "Neptun hängt mit Fantasie, Empathie, Musik und Bild zusammen und mit dem Wunsch, eine harte Kante weicher zu machen. Eine nahe Stadt kann inspirieren oder eine Person oder eine Arbeit idealisieren. Lesen Sie das als Atmosphäre. Wohnung, Arbeit und Gesundheit prüfen Sie getrennt.",
+        "image": {
+          "src": "/imgs/posts/neptune-symbol.webp",
+          "alt": "Neptunsymbol"
+        }
+      },
+      {
+        "title": "Vier Winkel",
+        "description": "Die ASC-Linie ist, wo Neptun aufging: Identität kann künstlerischer und schwerer einzuordnen werden. Die DSC-Linie ist, wo er unterging: Zweierbeziehungen können romantisch oder unklar wirken. Die MC-Linie ist, wo er am höchsten stand: öffentliche Arbeit kann zu Bild, Musik oder Fürsorge neigen. Die IC-Linie ist, wo er am tiefsten stand: das Zuhause kann poetisch oder unruhig wirken. Nennen Sie den Winkel, bevor Sie die Stadt bewerten.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Winkel ASC, DSC, MC und IC"
+        }
+      },
+      {
+        "title": "Inspiration ist kein guter Entschluss",
+        "description": "Die Linie erklärt eine Stadt nicht für sicher, glücklich oder verdammt. Sie kann kreatives Arbeiten stützen und einen schwachen Plan schön aussehen lassen. Für Struktur vergleichen Sie Saturn. Für einen plötzlichen Identitätsbruch vergleichen Sie Uranus. Öffnen Sie dann die Karte und sehen Sie, welcher Winkel die Stadt kreuzt.",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Planetenlinien auf der Karte"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Die Linie nach Winkel",
+    "label": "VIER WINKEL",
+    "description": "Der Planet setzt das Thema. Der Winkel sagt, ob es in Identität, Partnerschaft, öffentlicher Arbeit oder Privatleben erscheint. Das sind Tendenzen, keine Umzugsprognose.",
+    "items": [
+      {
+        "title": "Neptun-ASC-Linie",
+        "description": "Am Aszendenten kann die Art, der Welt zu begegnen, fantasievoll oder schwer benennbar werden. Das kann Kunst und Fürsorge helfen und auch dazu führen, zuzusagen, bevor die Bedingungen klar sind.",
+        "icon": "RiUserLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Neptun-ASC-Linie"
+        }
+      },
+      {
+        "title": "Neptun-MC-Linie",
+        "description": "Das Medium Coeli verbindet Neptun mit dem Beruf. Arbeit mit Bild, Ton oder Fürsorge kann natürlicher wirken, und ein glänzendes Angebot kann unklare Bezahlung verbergen. Geben Sie eine konkrete Jobsuche nicht wegen der Linie auf.",
+        "icon": "RiBriefcaseLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Neptun-MC-Linie"
+        }
+      },
+      {
+        "title": "Neptun-DSC-Linie",
+        "description": "Der Untergangspunkt setzt Neptun in Zweierbeziehungen. Anziehung kann sofort und idealisiert sein. Die Linie erschafft keine Seelenverwandtschaft und sagt keine Trennung voraus. Wenn die Frage die Liebe ist, lesen Sie auch die Venuslinien.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Neptun-DSC-Linie"
+        }
+      },
+      {
+        "title": "Neptun-IC-Linie",
+        "description": "Die untere Linie berührt das Zuhause und das Bedürfnis, sich zurückzuziehen. Der Alltag kann schwerer zu halten sein. Das fragt nach dem Privatleben und beweist nicht, dass Sie Wurzeln schlagen. Für eine stabile Basis vergleichen Sie den Mond und die Lebenshaltungskosten.",
+        "icon": "RiHome3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Neptun-IC-Linie"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Die Linie nutzen, ohne sie als Versprechen zu lesen",
+    "label": "SCHRITTE",
+    "description": "Die Neptun-Linie in der Astrokartografie hilft, wenn Sie schon eine Frage zu einer Stadt haben. Die Schritte benutzen die vorhandene Karte. Sie fügen keinen zweiten Rechner hinzu.",
+    "items": [
+      {
+        "title": "Öffnen Sie die Karte und benennen Sie den Winkel",
+        "description": "Tragen Sie Geburtsdatum, Uhrzeit und Geburtsort in die Karte der Startseite ein. Suchen Sie Neptun und sehen Sie, welcher Winkel der Stadt am nächsten liegt. Eine ungefähre Uhrzeit macht den Winkel unzuverlässig. Die Karte zeichnet Neptun. Sie zeichnet nicht Chiron, die Mondknoten oder Lilith.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Trennen Sie Stimmung und Logistik",
+        "description": "Notieren Sie das Symbol getrennt von Miete, Visa, Arbeit und Gesundheit. Eine bedeutungsvolle Atmosphäre ersetzt diese Fakten nicht. Besuchen Sie den Ort vor einem Umzug, wenn Sie können.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Lesen Sie Kreuzungen als Mischung",
+        "description": "Neptun kann nahe an einer anderen Linie verlaufen, und das sieht man auf der Karte. Venus in der Nähe kann Kunst oder Romanze betonen. Saturn in der Nähe kann Inspiration und Pflicht mischen. Die Karte bewertet Kreuzungen nicht und nennt keine Siegerstadt.",
+        "icon": "RiRouteLine"
+      },
+      {
+        "title": "Vergleichen Sie mit einer festeren Linie",
+        "description": "Für einen langen Aufenthalt vergleichen Sie Saturn für Struktur, Jupiter für Wachstum oder den Mond für den Alltag. Neptun kann zu einem kreativen Kapitel passen. Keine Linie hier garantiert Liebe, Geld, Visa oder einen gelungenen Umzug.",
+        "icon": "RiBalanceLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Grenzen, die sichtbar bleiben",
+    "label": "FAKTEN",
+    "description": "Die Neptun-Linie in der Astrokartografie bleibt ehrlich, wenn die Grenzen sichtbar bleiben. Diese Hinweise entsprechen dem, was die Karte tut.",
+    "items": [
+      {
+        "title": "Die Linie ist schon auf der kostenlosen Karte",
+        "description": "Sie brauchen kein separates Neptun-Werkzeug. Die Karte berechnet von der Sonne bis Pluto, einschließlich Neptun, für den Geburtsaugenblick, den Sie eingeben. KI-Kommentare zu einer Stadt verbrauchen Credits. Die Linie anzusehen nicht.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Entfernung ist eine Lesehilfe",
+        "description": "Viele Leser behandeln einige hundert Meilen als spürbare Zone. Diese Website hat keinen Neptun-Radius gemessen. Nutzen Sie die gezeichnete Linie und geben Sie einer fernen Stadt weniger Gewicht.",
+        "icon": "RiRulerLine"
+      },
+      {
+        "title": "Die Uhrzeit steuert weiter den Winkel",
+        "description": "Das Datum setzt Neptun. Uhrzeit und Geburtsort entscheiden den Winkel unter einer Stadt. Ohne dokumentierte Uhrzeit behandeln Sie den Winkel nicht als exakt.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Ihr Geburtsneptun zählt weiter",
+        "description": "Die Karte verstärkt einen Planeten, den Sie schon haben. Sie ersetzt das Geburtshoroskop nicht und diagnostiziert weder Gesundheit noch psychische Zustände.",
+        "icon": "RiPieChartLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Fragen zur Neptun-Linie",
+    "description": "Kurze Antworten zu Bedeutung, Karte und Geburtszeit.",
+    "items": [
+      {
+        "title": "Was bedeutet die Linie?",
+        "description": "Die Neptun-Linie in der Astrokartografie markiert Orte, an denen Neptun bei der Geburt am Aszendenten, Deszendenten, Medium Coeli oder Imum Coeli stand. Der Winkel sagt, ob das Thema zu Identität, Partnerschaft, öffentlicher Arbeit oder Zuhause neigt. Es ist ein Ton, kein Versprechen, dass die Stadt heilt, inspiriert oder verwirrt."
+      },
+      {
+        "title": "Enthält die kostenlose Karte Neptun?",
+        "description": "Ja. Die Karte der Startseite zeichnet Neptun zusammen mit Sonne, Mond, Merkur, Venus, Mars, Jupiter, Saturn, Uranus und Pluto. Chiron, die Mondknoten und Lilith werden nicht als Linien gezeichnet."
+      },
+      {
+        "title": "Ist die Neptun-Linie schlecht?",
+        "description": "Nein. Sie ist kein Fluch und kein Beweis, dass eine Stadt sicher oder glücklich ist. Sie kann mit Kreativität und Mitgefühl zusammenfallen und auch mit Idealisierung oder unklaren Absprachen."
+      },
+      {
+        "title": "Was, wenn ich die Geburtszeit nicht kenne?",
+        "description": "Die Karte braucht eine Uhrzeit, um die Winkel zu setzen. Ohne verlässliche Uhrzeit kann der Winkel falsch sein, auch wenn das Datum stimmt. Nutzen Sie eine ungefähre Zeit nur zum Erkunden."
+      },
+      {
+        "title": "Garantiert ein Umzug auf die Linie eine kreative Laufbahn?",
+        "description": "Nein. Die Linie garantiert weder Arbeit, Liebe, Visa, Gesundheit noch einen gelungenen Umzug. Sie zeigt ein symbolisches Thema dieses Augenblicks."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Sehen Sie Ihre Linie auf der Karte",
+    "description": "Die Neptun-Linie in der Astrokartografie ist bereits Teil der kostenlosen Karte auf der Startseite. Geben Sie Datum, Uhrzeit und Ort ein und finden Sie den Winkel, der Ihrer Stadt am nächsten liegt. Die Karte verspricht nicht, was nach der Ankunft geschieht.",
+    "buttons": [
+      {
+        "title": "Kostenlose Astrokartografie-Karte →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

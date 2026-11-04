@@ -224,6 +224,20 @@
               "url": "/uranus-line-astrocartography",
               "target": "_self",
               "icon": "RiFlashlightLine"
+            },
+            {
+              "title": "Linha de Netuno",
+              "description": "Sonhos, imaginação, névoa e sensibilidade criativa",
+              "url": "/neptune-line-astrocartography",
+              "target": "_self",
+              "icon": "RiDropLine"
+            },
+            {
+              "title": "Linha de Plutão",
+              "description": "Poder, mudança profunda e reconstrução intensa",
+              "url": "/pluto-line-astrocartography",
+              "target": "_self",
+              "icon": "RiFocus3Line"
             }
           ]
         },

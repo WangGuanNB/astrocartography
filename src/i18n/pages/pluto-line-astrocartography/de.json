@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "title": "Pluto-Linie in der Astrokartografie - Macht und tiefer Wandel",
+    "description": "Macht, tiefer Wandel und die vier Winkel. Die kostenlose Karte zeichnet die Linie bereits. Kein Ergebnis ist garantiert.",
+    "keywords": "Pluto-Linie, Pluto ASC, Pluto MC, Astrokartografie"
+  },
+  "intentAnchor": {
+    "text": "Die Pluto-Linie in der Astrokartografie zeigt, wo Pluto bei Ihrer Geburt an einem Winkel stand. Dieser Leitfaden erklärt Macht, tiefen Wandel und die vier Winkel und verweist auf die kostenlose Karte, die die Linie bereits zeichnet. Intensität ist nicht Gefahr, und die Linie ist keine garantierte Verwandlung."
+  },
+  "internalLinks": {
+    "title": "Verwandte Seiten",
+    "items": [
+      {
+        "text": "Erstellen Sie die kostenlose Karte.",
+        "linkText": "Kostenlose Astrokartografie-Karte",
+        "url": "/"
+      },
+      {
+        "text": "Vergleichen Sie diese Linie mit den anderen Planeten.",
+        "linkText": "Linienübersicht",
+        "url": "/astrocartography-lines"
+      },
+      {
+        "text": "Wollen Sie Fantasie und weichere Grenzen?",
+        "linkText": "Neptun-Linie",
+        "url": "/neptune-line-astrocartography"
+      },
+      {
+        "text": "Wollen Sie einen plötzlichen Identitätsbruch?",
+        "linkText": "Uranus-Linie",
+        "url": "/uranus-line-astrocartography"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Was die Linie auf der Karte zeigt",
+    "label": "PLUTO-LINIE",
+    "description": "Die Pluto-Linie in der Astrokartografie markiert, wo Pluto bei der Geburt aufging, unterging, kulminierte oder am Himmelstiefpunkt stand. Die Karte der Startseite berechnet diese Wege aus Datum, Uhrzeit und Ort. In der Nähe treten Macht, Privatheit, Enden und Wiederaufbau hervor. Die Linie ist kein Fluch und keine versprochene Verwandlung.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Karte zum Auffinden der Pluto-Linie"
+    },
+    "items": [
+      {
+        "title": "Was Pluto meist betont",
+        "description": "Pluto wird mit Tiefe, geteilten Ressourcen, Privatheit und einem Wandel verbunden, der wegnimmt, was nicht mehr trägt. Eine nahe Stadt kann sich zwingend anfühlen. Die schwierige Form ist Zwang. Das ist ein symbolischer Ton, keine objektive Gefahrennote.",
+        "image": {
+          "src": "/imgs/posts/pluto-symbol.webp",
+          "alt": "Plutosymbol"
+        }
+      },
+      {
+        "title": "Vier Winkel",
+        "description": "Die ASC-Linie ist, wo Pluto aufging: die Präsenz kann kraftvoller oder privater wirken. Die DSC-Linie ist, wo er unterging: Partnerschaften können Loyalität, Machtunterschiede oder Ungesagtes zeigen. Die MC-Linie ist, wo er am höchsten stand: öffentliche Arbeit kann zu einer tiefen Spezialisierung werden. Die IC-Linie ist, wo er am tiefsten stand: das Zuhause kann Familiendruck oder den Wunsch nach Wiederaufbau zeigen. Nennen Sie den Winkel, bevor Sie die Stadt einfach intensiv nennen.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Winkel der Pluto-Linie"
+        }
+      },
+      {
+        "title": "Tiefe ist kein Umzugsbefehl",
+        "description": "Lesen Sie die Linie, wenn Sie konzentrierte Arbeit oder ein Kapitel des Wiederaufbaus wollen. Nutzen Sie sie nicht, um sich zu erschrecken, und erwarten Sie keine magische Wende. Für leichteres Wachstum vergleichen Sie Jupiter. Für einen plötzlichen Identitätsbruch vergleichen Sie Uranus. Für Fantasie statt Druck vergleichen Sie Neptun.",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Planetenlinien einschließlich Pluto"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Die Linie nach Winkel",
+    "label": "VIER WINKEL",
+    "description": "Der Planet setzt das Thema. Der Winkel sagt, ob Macht und Wandel in Identität, Partnerschaft, öffentlicher Arbeit oder Privatleben erscheinen.",
+    "items": [
+      {
+        "title": "Pluto-ASC-Linie",
+        "description": "Am Aszendenten können andere Sie als intensiv oder schwer beeinflussbar erleben. Das kann Forschung helfen und gewöhnliche Begegnungen zu einer Kontrolleprobe machen. Ein Besuch zeigt die Stimmung. Er beweist nicht, dass Sie durch einen Stadtwechsel jemand anders werden.",
+        "icon": "RiUserLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Pluto-ASC-Linie"
+        }
+      },
+      {
+        "title": "Pluto-MC-Linie",
+        "description": "Das Medium Coeli verbindet Pluto mit dem Beruf. Hier sucht man Spezialisierung, Untersuchung oder langsam wachsenden Einfluss. Die Linie kann auch Machtpolitik am Arbeitsplatz beschreiben. Sie garantiert weder Beförderung noch Geld.",
+        "icon": "RiBriefcaseLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Pluto-MC-Linie"
+        }
+      },
+      {
+        "title": "Pluto-DSC-Linie",
+        "description": "Der Untergangspunkt setzt Pluto in Zweierbeziehungen. Bindungen können privat oder ungleich im Einfluss wirken. Die Linie bedeutet nicht, dass eine Beziehung missbräuchlich oder schicksalhaft ist. Wenn Sicherheit zählt, nutzen Sie gewöhnliche Informationen und Unterstützung, keine Planetenlinie.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Pluto-DSC-Linie"
+        }
+      },
+      {
+        "title": "Pluto-IC-Linie",
+        "description": "Die untere Linie berührt Zuhause, Vorfahren und das, was im Alltag verborgen bleibt. Eine Wohnung in der Nähe kann mit Umbau, geteilten Ressourcen oder einem starken Bedürfnis nach Privatheit zusammenfallen. Die Linie beweist nicht, dass das Haus unsicher ist.",
+        "icon": "RiHome3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Pluto-IC-Linie"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Die Linie nutzen, ohne sie zur Warnung zu machen",
+    "label": "SCHRITTE",
+    "description": "Die Pluto-Linie in der Astrokartografie hilft, wenn Sie sehen wollen, wo Tiefe und Macht liegen. Die Karte der Startseite zeichnet die Linie bereits. Diese Seite fügt keinen zweiten Rechner hinzu.",
+    "items": [
+      {
+        "title": "Finden Sie die Linie und benennen Sie den Winkel",
+        "description": "Nutzen Sie Datum, eine verlässliche Uhrzeit und den Geburtsort auf der Karte der Startseite. Suchen Sie Pluto und sehen Sie, welcher Winkel der Stadt am nächsten liegt. Eine ungefähre Uhrzeit macht den Winkel unzuverlässig. Die Karte enthält Pluto. Sie zeichnet nicht Chiron, die Mondknoten oder Lilith.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Fragen Sie, welche Intensität Sie wollen",
+        "description": "Ein konzentriertes Vorhaben kann zu diesem Thema passen. Zu hoffen, Geografie behebe Ohnmacht, passt nicht. Halten Sie Arbeit, Geld, Sicherheit und Wohnung auf einer eigenen Liste.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Lesen Sie benachbarte Linien als Mischung",
+        "description": "Pluto kann neben einem anderen Planeten verlaufen, und das sieht man auf der Karte. Saturn in der Nähe kann Druck und Ausdauer beschreiben. Venus in der Nähe kann starke Anziehung beschreiben. Die Website reiht diese Kombinationen nicht.",
+        "icon": "RiRouteLine"
+      },
+      {
+        "title": "Vergleichen Sie mit einer weniger extremen Option",
+        "description": "Für einen langen Aufenthalt vergleichen Sie Jupiter, Venus, den Mond oder Saturn. In der Nähe von Pluto zu leben ist keine Bedingung für ein sinnvolles Leben, und die Linie zu meiden ist kein Sicherheitsplan. Keine Linie hier garantiert Liebe, Geld, Status oder einen gelungenen Umzug.",
+        "icon": "RiBalanceLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Grenzen, die sichtbar bleiben",
+    "label": "FAKTEN",
+    "description": "Die Pluto-Linie in der Astrokartografie ist nur mit ihren Grenzen nützlich. Diese Punkte entsprechen der Karte.",
+    "items": [
+      {
+        "title": "Die Linie ist schon auf der kostenlosen Karte",
+        "description": "Es gibt keinen separaten Pluto-Rechner. Die Karte der Startseite enthält Pluto mit Sonne, Mond, Merkur, Venus, Mars, Jupiter, Saturn, Uranus und Neptun. KI-Kommentare verbrauchen Credits. Die Linie anzusehen nicht.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "Die Linie folgt Plutos echter Himmelsposition",
+        "description": "Die Karte der Startseite zeichnet Pluto dort, wo der Körper wirklich stand, mit Rektaszension und Deklination. Sie legt Pluto nicht auf den Tierkreisgrad und lässt die Breite nicht weg. Plutos Bahn ist stark geneigt, deshalb kann eine Karte nur mit Tierkreisgrad dieselbe Linie woanders setzen. Wenn eine andere Karte abweicht, vergleichen Sie zuerst die Methode.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Lesen Sie die Linie nicht als Fluch",
+        "description": "Diese Seite sagt nicht, eine Pluto-Linie sei gefährlich, verdammt oder unvermeidlich. Das symbolische Thema ist Macht und tiefer Wandel.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "Die Uhrzeit steuert weiter den Winkel",
+        "description": "Das Datum setzt Pluto. Uhrzeit und Ort entscheiden den Winkel. Ohne dokumentierte Uhrzeit behandeln Sie den Winkel nicht als exakt.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "Entfernung ist eine Konvention",
+        "description": "Viele Leser behandeln einige hundert Meilen als spürbare Zone. Diese Website hat keinen Pluto-Radius gemessen.",
+        "icon": "RiRulerLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Fragen zur Pluto-Linie",
+    "description": "Kurze Antworten zu Bedeutung, Zeichenmethode und Geburtszeit.",
+    "items": [
+      {
+        "title": "Was bedeutet die Linie?",
+        "description": "Die Pluto-Linie in der Astrokartografie markiert Orte, an denen Pluto bei der Geburt am Aszendenten, Deszendenten, Medium Coeli oder Imum Coeli stand. Der Winkel sagt, ob das Thema zu Identität, Partnerschaft, öffentlicher Arbeit oder Zuhause neigt. Sie beschreibt einen Ton. Sie garantiert keine Verwandlung."
+      },
+      {
+        "title": "Ist die Pluto-Linie gefährlich?",
+        "description": "Nein. Diese Website behandelt sie nicht als verflucht, unsicher oder schicksalhaft. Das Thema kann sich intensiv anfühlen. Sicherheit, Wohnung und Beziehungen beurteilen Sie mit gewöhnlichen Informationen."
+      },
+      {
+        "title": "Warum zeigt eine andere Pluto-Karte eine andere Linie?",
+        "description": "Eine Methode benutzt Plutos Tierkreisgrad und ignoriert die Breite. Diese Karte benutzt Plutos echte Himmelsposition zur Geburtszeit, also Rektaszension und Deklination. Pluto kann weit von der Ekliptik stehen, und die beiden Zeichnungen können weit auseinanderliegen."
+      },
+      {
+        "title": "Enthält die kostenlose Karte Pluto?",
+        "description": "Ja. Die Karte der Startseite zeichnet Pluto zusammen mit Sonne, Mond, Merkur, Venus, Mars, Jupiter, Saturn, Uranus und Neptun. Chiron, die Mondknoten und Lilith sind keine Linien."
+      },
+      {
+        "title": "Was, wenn ich die Geburtszeit nicht kenne?",
+        "description": "Der Winkel hängt von der Uhrzeit ab. Ohne verlässliche Uhrzeit kann eine ASC-, DSC-, MC- oder IC-Angabe am falschen Ort liegen."
+      },
+      {
+        "title": "Garantiert ein Umzug dorthin Macht oder eine Lebenswende?",
+        "description": "Nein. Die Linie garantiert weder Status, Einkommen, Liebe, Visa noch einen gelungenen Umzug."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Sehen Sie Ihre Linie auf der Karte",
+    "description": "Die Pluto-Linie in der Astrokartografie ist bereits Teil der kostenlosen Karte auf der Startseite. Geben Sie Datum, Uhrzeit und Ort ein und finden Sie den Winkel, der Ihrer Stadt am nächsten liegt. Die Karte verspricht nicht, was nach der Ankunft geschieht.",
+    "buttons": [
+      {
+        "title": "Kostenlose Astrokartografie-Karte →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

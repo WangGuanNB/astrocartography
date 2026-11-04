@@ -82,6 +82,22 @@ export const PLANET_LINE_BREADCRUMB: Record<string, Record<string, string>> = {
     it: "Linea di Urano",
     pt: "Linha de Urano",
   },
+  neptune: {
+    en: "Neptune Line",
+    zh: "海王星线",
+    de: "Neptun-Linie",
+    es: "Línea de Neptuno",
+    it: "Linea di Nettuno",
+    pt: "Linha de Netuno",
+  },
+  pluto: {
+    en: "Pluto Line",
+    zh: "冥王星线",
+    de: "Pluto-Linie",
+    es: "Línea de Plutón",
+    it: "Linea di Plutone",
+    pt: "Linha de Plutão",
+  },
 };
 
 export function getLinesBreadcrumbLabels(

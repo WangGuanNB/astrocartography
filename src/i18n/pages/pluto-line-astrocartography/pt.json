@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "title": "Linha de Plutão na Astrocartografia - Poder e Mudança Profunda",
+    "description": "A linha de Plutão na astrocartografia explica poder, mudança profunda e os quatro ângulos. O mapa grátis já a desenha. Nenhum resultado é garantido.",
+    "keywords": "linha de Plutão na astrocartografia, linha de Plutão, Plutão ASC, Plutão MC"
+  },
+  "intentAnchor": {
+    "text": "A linha de Plutão na astrocartografia marca onde Plutão estava num ângulo no seu nascimento. Este guia explica poder, mudança profunda e os quatro ângulos, e aponta para o mapa grátis que já desenha a linha. Intensidade não é perigo, e a linha não é uma transformação garantida."
+  },
+  "internalLinks": {
+    "title": "Páginas relacionadas",
+    "items": [
+      { "text": "Gere o mapa grátis no mundo.", "linkText": "Mapa de astrocartografia grátis", "url": "/" },
+      { "text": "Compare esta linha com os outros planetas.", "linkText": "Guia das linhas", "url": "/astrocartography-lines" },
+      { "text": "Quer imaginação e limites mais suaves?", "linkText": "Linha de Netuno", "url": "/neptune-line-astrocartography" },
+      { "text": "Quer ruturas súbitas e reinvenção?", "linkText": "Linha de Urano", "url": "/uranus-line-astrocartography" }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "O que a linha de Plutão mostra no mapa",
+    "label": "Linha de Plutão",
+    "description": "A linha de Plutão na astrocartografia marca onde Plutão nascia, se punha, culminava ou estava no fundo do céu no seu nascimento. O mapa da página inicial calcula esses caminhos com data, hora e local. Perto da linha, poder, privacidade, fins e reconstrução destacam-se. A linha não é uma maldição nem uma transformação prometida.",
+    "image": { "src": "/imgs/features/hero-web.webp", "alt": "Mapa usado para ver a linha de Plutão" },
+    "items": [
+      { "title": "O que Plutão costuma destacar", "description": "Plutão associa-se a profundidade, recursos partilhados, privacidade e mudança que retira o que já não funciona. Uma cidade perto da linha pode parecer intensa ou difícil de tratar com leveza. A versão difícil é a compulsão: agarrar-se, ou tratar cada revés como um fim total. Isso é um tom simbólico, não uma classificação objetiva de perigo.", "image": { "src": "/imgs/posts/pluto-symbol.webp", "alt": "Símbolo de Plutão" } },
+      { "title": "Quatro ângulos", "description": "A ASC é onde Plutão nascia, e a presença pode parecer mais forte ou privada. A DSC é onde se punha, e as parcerias podem envolver lealdade, diferenças de poder ou temas não ditos. A MC é onde estava mais alto, e o trabalho público pode tornar-se uma especialização profunda. A IC é onde estava mais baixo, e a casa pode trazer pressão familiar ou necessidade de reconstruir. Nomeie o ângulo antes de chamar a cidade apenas intensa.", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp", "alt": "Ângulos ASC, DSC, MC e IC de Plutão" } },
+      { "title": "Profundidade não é uma ordem para mudar", "description": "Estude a linha quando quer trabalho concentrado ou um capítulo de reconstrução. Não a use para se assustar, nem espere uma viragem mágica. Para crescimento mais leve, compare Júpiter. Para uma mudança súbita de identidade, compare Urano. Para imaginação em vez de pressão, compare Netuno.", "image": { "src": "/imgs/features/planetary-lines-meaning-map.webp", "alt": "Linhas planetárias, incluindo Plutão" } }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "A linha de Plutão por ângulo",
+    "label": "Quatro ângulos",
+    "description": "O planeta dá o tema. O ângulo diz se poder e mudança aparecem na identidade, na parceria, no trabalho público ou na vida privada. São tendências, não resultados.",
+    "items": [
+      { "title": "ASC de Plutão — presença mais forte ou privada", "description": "Na linha ascendente, outras pessoas podem senti-lo intenso ou difícil de influenciar. Isso pode ajudar investigação ou um papel que fica com um problema difícil. Também pode transformar encontros comuns num teste de controlo. Uma visita mostra o clima. Não prova que muda de pessoa ao mudar de cidade.", "icon": "RiUserLine", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp", "alt": "Distância até uma linha planetária" } },
+      { "title": "MC de Plutão — trabalho público concentrado", "description": "O Meio do Céu liga Plutão à vocação. As pessoas procuram aqui especialização, investigação, finanças ou trabalho que ganha influência devagar. Também pode descrever política de poder no emprego. Não garante promoção nem dinheiro.", "icon": "RiBriefcaseLine", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp", "alt": "Planetas que o mapa desenha" } },
+      { "title": "DSC de Plutão — vínculos que põem o poder à vista", "description": "A linha poente coloca Plutão nas relações a dois. Os vínculos podem parecer privados ou desiguais na influência. A linha não significa que uma relação é abusiva, nem que é destinada. Se a segurança preocupa, use informação e apoio comuns, não uma linha planetária.", "icon": "RiHeartLine", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp", "alt": "Proximidade de uma cidade à linha de Plutão" } },
+      { "title": "IC de Plutão — bases privadas e pressão familiar", "description": "A linha inferior toca a casa, a origem e o que fica enterrado no dia a dia. Uma residência próxima pode coincidir com obras, recursos partilhados ou forte necessidade de privacidade. A linha não prova que uma casa é insegura.", "icon": "RiHome3Line", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp", "alt": "Temas de casa numa linha IC" } }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Como usar a linha sem a transformar num aviso",
+    "label": "Passos",
+    "description": "A linha de Plutão na astrocartografia ajuda a ver onde caem profundidade e poder. O mapa da página inicial já desenha a linha. Esta página não acrescenta outra calculadora.",
+    "items": [
+      { "title": "Encontre a linha e nomeie o ângulo", "description": "Use data, uma hora fiável e local de nascimento no mapa da página inicial. Localize Plutão e veja que ângulo fica mais perto da cidade. Uma hora aproximada torna o ângulo pouco fiável. O mapa inclui Plutão. Não desenha Quíron, os nodos lunares nem Lilith.", "icon": "RiCompassLine" },
+      { "title": "Pergunte que intensidade quer de facto", "description": "Um projeto focado pode caber neste tema. Esperar que a geografia resolva a impotência não cabe. Mantenha trabalho, dinheiro, segurança e habitação numa lista separada.", "icon": "RiFlightTakeoffLine" },
+      { "title": "Leia as linhas próximas como uma mistura", "description": "Plutão pode correr ao lado de outro planeta, e isso vê-se no mapa. Saturno perto pode descrever pressão mais resistência. Vénus perto pode descrever atração intensa. O site não ordena essas combinações nem nomeia uma cidade vencedora.", "icon": "RiRouteLine" },
+      { "title": "Compare com uma opção menos extrema", "description": "Para uma estadia longa, compare Júpiter, Vénus, a Lua ou Saturno. Viver perto de Plutão não é obrigatório para uma vida com sentido, e evitá-lo não é um plano de segurança. Nenhuma linha daqui garante amor, dinheiro, estatuto ou uma mudança bem-sucedida.", "icon": "RiBalanceLine" }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Limites que ficam à vista",
+    "label": "Factos",
+    "description": "A linha de Plutão na astrocartografia só é útil com os seus limites. Estes pontos correspondem ao mapa.",
+    "items": [
+      { "title": "A linha já está no mapa grátis", "description": "Não há uma calculadora separada de Plutão. O mapa da página inicial inclui Plutão com Sol, Lua, Mercúrio, Vénus, Marte, Júpiter, Saturno, Urano e Netuno. Comentários escritos de IA usam créditos. Ver a linha não usa.", "icon": "RiMapPinLine" },
+      { "title": "A linha segue Plutão no céu", "description": "O mapa desenha Plutão onde o corpo estava de facto, com ascensão reta e declinação. Não o coloca no grau zodiacal ignorando a latitude. A órbita de Plutão é muito inclinada, por isso um mapa que usa só o grau zodiacal pode pôr a mesma linha noutro lugar. Se outro mapa discordar, compare o método antes de chamar qualquer linha de erro.", "icon": "RiCompassLine" },
+      { "title": "Não leia a linha como maldição", "description": "A fama de crise de Plutão é fácil de exagerar. Esta página não diz que a linha é perigosa, condenada ou inevitável. O tema simbólico é poder e mudança profunda, que pode ser útil ou desgastante. O medo não é um método.", "icon": "RiShieldLine" },
+      { "title": "A hora ainda comanda o ângulo", "description": "A data coloca Plutão no céu. A hora e o local decidem que ângulo fica sob a cidade. Uma hora incerta torna ASC, DSC, MC e IC pouco fiáveis.", "icon": "RiTimeLine" },
+      { "title": "A distância é uma convenção", "description": "Os leitores tratam muitas vezes algumas centenas de milhas como zona percetível. Este site não mediu um raio próprio de Plutão. Olhe para a linha desenhada e dê menos peso a uma cidade distante.", "icon": "RiRulerLine" }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "Perguntas",
+    "title": "Perguntas sobre a linha de Plutão",
+    "description": "Respostas curtas sobre significado, o método de desenho, perigo e hora de nascimento.",
+    "items": [
+      { "title": "O que significa a linha de Plutão?", "description": "A linha de Plutão na astrocartografia marca lugares onde Plutão estava no Ascendente, Descendente, Meio do Céu ou Fundo do Céu no nascimento. Esses lugares tendem a destacar poder, privacidade, fins e reconstrução. O ângulo mostra se o tema pende para identidade, parceria, trabalho ou casa. É um tom. Não garante uma transformação." },
+      { "title": "A linha de Plutão é perigosa?", "description": "Não. Este site não trata a linha como amaldiçoada, insegura ou fadada. O tema pode parecer intenso. Segurança, habitação e relações continuam a ser julgadas com informação comum. Uma linha planetária não prova que uma cidade vai prejudicá-lo." },
+      { "title": "Porque é que outro mapa de Plutão mostra outra linha?", "description": "Um método usa o grau zodiacal de Plutão e ignora a latitude. Este mapa usa a posição real de Plutão no céu no momento do nascimento, por ascensão reta e declinação. Como Plutão pode ficar longe da eclíptica, os dois desenhos podem discordar por uma grande distância." },
+      { "title": "O mapa grátis inclui Plutão?", "description": "Sim. O mapa da página inicial desenha Plutão junto com Sol, Lua, Mercúrio, Vénus, Marte, Júpiter, Saturno, Urano e Netuno. Quíron, os nodos lunares e Lilith não entram como linhas." },
+      { "title": "E se eu não souber a hora?", "description": "O ângulo depende da hora. Sem uma hora fiável, o rótulo ASC, DSC, MC ou IC pode estar no lugar errado." },
+      { "title": "Mudar para lá garante poder ou dinheiro?", "description": "Não. A linha não garante estatuto, rendimento, amor, vistos nem uma mudança bem-sucedida. A decisão continua a depender do trabalho, do custo e da vida que quer." }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Veja a sua linha de Plutão no mapa",
+    "description": "A linha de Plutão na astrocartografia já faz parte do mapa grátis da página inicial. Introduza data, hora e local, e encontre os caminhos de Plutão e o ângulo mais perto da cidade. O mapa não promete o que acontece depois de chegar.",
+    "buttons": [{ "title": "Mapa de astrocartografia grátis →", "icon": "RiMapLine", "url": "/", "target": "_self", "variant": "default" }]
+  }
+}

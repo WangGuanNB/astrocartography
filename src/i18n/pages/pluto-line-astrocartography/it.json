@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "title": "Linea di Plutone in Astrocartografia - Potere e Cambiamento Profondo",
+    "description": "Potere, cambiamento profondo e i quattro angoli. La mappa gratuita disegna già la linea. Nessun esito è garantito.",
+    "keywords": "linea di Plutone, Plutone ASC, Plutone MC, astrocartografia"
+  },
+  "intentAnchor": {
+    "text": "La linea di Plutone in astrocartografia segna dove Plutone stava su un angolo alla nascita. Questa guida spiega potere, cambiamento profondo e i quattro angoli, e indica la mappa gratuita che disegna già la linea. L'intensità non è pericolo, e la linea non è una trasformazione garantita."
+  },
+  "internalLinks": {
+    "title": "Pagine collegate",
+    "items": [
+      {
+        "text": "Generi la mappa gratuita.",
+        "linkText": "Mappa di astrocartografia gratuita",
+        "url": "/"
+      },
+      {
+        "text": "Confronti questa linea con gli altri pianeti.",
+        "linkText": "Guida alle linee",
+        "url": "/astrocartography-lines"
+      },
+      {
+        "text": "Vuole immaginazione e confini più morbidi?",
+        "linkText": "Guida alla linea di Nettuno",
+        "url": "/neptune-line-astrocartography"
+      },
+      {
+        "text": "Vuole un cambiamento brusco di identità?",
+        "linkText": "Guida alla linea di Urano",
+        "url": "/uranus-line-astrocartography"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Che cosa mostra la linea sulla mappa",
+    "label": "LINEA DI PLUTONE",
+    "description": "La linea di Plutone in astrocartografia segna dove Plutone sorgeva, tramontava, culminava o stava in fondo al cielo alla nascita. La mappa della home calcola quei percorsi con data, ora e luogo. Vicino spiccano potere, riservatezza, fini e ricostruzione. La linea non è una maledizione e non è una trasformazione promessa.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Mappa per vedere la linea di Plutone"
+    },
+    "items": [
+      {
+        "title": "Che cosa tende a sottolineare Plutone",
+        "description": "Plutone è associato a profondità, risorse condivise, riservatezza e a un cambiamento che toglie ciò che non serve più. Una città vicina può sembrare intensa. La versione difficile è la compulsione. È un tono simbolico, non un voto oggettivo di pericolo.",
+        "image": {
+          "src": "/imgs/posts/pluto-symbol.webp",
+          "alt": "Simbolo di Plutone"
+        }
+      },
+      {
+        "title": "Quattro angoli",
+        "description": "L'ASC è dove Plutone sorgeva: la presenza può sembrare più ferma o più privata. La DSC è dove tramontava: le coppie possono mostrare lealtà, differenze di potere o temi non detti. La MC è dove era più alto: il lavoro pubblico può diventare una specializzazione profonda. La IC è dove era più basso: la casa può far emergere pressione familiare. Nomini l'angolo prima di chiamare intensa la città.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Angoli della linea di Plutone"
+        }
+      },
+      {
+        "title": "La profondità non ordina un trasferimento",
+        "description": "Studi la linea se vuole lavoro concentrato o un capitolo di ricostruzione. Non la usi per spaventarsi e non aspetti una svolta magica. Per una crescita più leggera, confronti Giove. Per un cambiamento brusco di identità, confronti Urano. Per immaginazione invece di pressione, confronti Nettuno.",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Linee planetarie, Plutone compreso"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "La linea secondo l'angolo",
+    "label": "QUATTRO ANGOLI",
+    "description": "Il pianeta fissa il tema. L'angolo dice se potere e cambiamento compaiono nell'identità, nella coppia, nel lavoro pubblico o nella vita privata.",
+    "items": [
+      {
+        "title": "Linea ASC di Plutone",
+        "description": "All'ascendente, gli altri possono viverla come intensa o difficile da influenzare. Può aiutare la ricerca e anche trasformare il sociale in una prova di controllo. Una visita mostra il clima. Non prova che diventi un'altra persona cambiando città.",
+        "icon": "RiUserLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Linea ASC di Plutone"
+        }
+      },
+      {
+        "title": "Linea MC di Plutone",
+        "description": "Il Medio Cielo collega Plutone alla vocazione. Qui si cerca specializzazione, indagine o influenza lenta. Può anche descrivere politica di potere al lavoro. Non garantisce una promozione né denaro.",
+        "icon": "RiBriefcaseLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Linea MC di Plutone"
+        }
+      },
+      {
+        "title": "Linea DSC di Plutone",
+        "description": "Il tramonto mette Plutone nei legami a due. I vincoli possono sembrare privati o diseguali. La linea non significa che una relazione sia abusiva né destinata. Se conta la sicurezza, usi informazioni ordinarie e sostegno, non una linea planetaria.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Linea DSC di Plutone"
+        }
+      },
+      {
+        "title": "Linea IC di Plutone",
+        "description": "La linea inferiore tocca la casa, gli antenati e ciò che resta sepolto nel quotidiano. Una casa vicina può coincidere con lavori, risorse condivise o un forte bisogno di riservatezza. La linea non prova che la casa sia pericolosa.",
+        "icon": "RiHome3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Linea IC di Plutone"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Come usare la linea senza farne un avvertimento",
+    "label": "PASSI",
+    "description": "La linea di Plutone in astrocartografia aiuta quando vuole vedere dove cadono profondità e potere. La mappa della home disegna già la linea. Questa pagina non aggiunge un'altra calcolatrice.",
+    "items": [
+      {
+        "title": "Trovi la linea e nomini l'angolo",
+        "description": "Usi data, un'ora affidabile e il luogo di nascita sulla mappa della home. Individui Plutone e veda quale angolo è più vicino alla città. Un'ora approssimativa rende l'angolo inaffidabile. La mappa include Plutone. Non disegna Chirone, i nodi lunari o Lilith.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Chieda quale intensità vuole davvero",
+        "description": "Un progetto concentrato può stare in questo tema. Sperare che la geografia ripari l'impotenza no. Tenga lavoro, denaro, sicurezza e casa in un elenco separato.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Legga le linee vicine come un miscuglio",
+        "description": "Plutone può correre accanto a un altro pianeta, e questo si vede sulla mappa. Saturno vicino può descrivere pressione e resistenza. Venere vicina può descrivere un'attrazione intensa. Il sito non classifica quelle combinazioni.",
+        "icon": "RiRouteLine"
+      },
+      {
+        "title": "La confronti con un'opzione meno estrema",
+        "description": "Per un soggiorno lungo, confronti Giove, Venere, la Luna o Saturno. Vivere vicino a Plutone non è obbligatorio per una vita significativa, ed evitarlo non è un piano di sicurezza. Nessuna linea qui garantisce amore, denaro, status o un trasferimento riuscito.",
+        "icon": "RiBalanceLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Limiti da tenere in vista",
+    "label": "FATTI",
+    "description": "La linea di Plutone in astrocartografia è utile solo con i suoi limiti in vista. Questi punti coincidono con la mappa.",
+    "items": [
+      {
+        "title": "La linea è già sulla mappa gratuita",
+        "description": "Non c'è una calcolatrice separata per Plutone. La mappa della home include Plutone con Sole, Luna, Mercurio, Venere, Marte, Giove, Saturno, Urano e Nettuno. I commenti IA usano crediti. Vedere la linea no.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "La linea segue la posizione reale di Plutone",
+        "description": "La mappa della home disegna Plutone dove il corpo si trovava davvero, con ascensione retta e declinazione. Non lo schiaccia sul grado zodiacale e non ignora la latitudine. L'orbita di Plutone è molto inclinata, quindi una mappa che usa solo il grado può mettere la stessa linea altrove. Se un'altra mappa non coincide, confronti il metodo prima di chiamare errore uno dei due disegni.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Non legga la linea come una maledizione",
+        "description": "Questa pagina non dice che una linea di Plutone sia pericolosa, condannata o inevitabile. Il tema simbolico è potere e cambiamento profondo.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "L'ora controlla ancora l'angolo",
+        "description": "La data colloca Plutone. L'ora e il luogo decidono l'angolo. Senza un'ora documentata, non tratti l'angolo come esatto.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "La distanza è una convenzione",
+        "description": "Molti lettori trattano qualche centinaio di miglia come zona percepibile. Questo sito non ha misurato un raggio di Plutone.",
+        "icon": "RiRulerLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Domande sulla linea di Plutone",
+    "description": "Risposte brevi su significato, metodo di disegno e ora di nascita.",
+    "items": [
+      {
+        "title": "Che cosa significa la linea?",
+        "description": "La linea di Plutone in astrocartografia segna i luoghi dove Plutone era sull'Ascendente, sul Discendente, sul Medio Cielo o sul Fondo Cielo alla nascita. L'angolo dice se il tema cade sull'identità, sulla coppia, sul lavoro pubblico o sulla casa. Descrive un tono. Non garantisce una trasformazione."
+      },
+      {
+        "title": "La linea di Plutone è pericolosa?",
+        "description": "No. Questo sito non la tratta come maledetta, insicura o destinata. Il tema può sembrare intenso. Sicurezza, casa e relazioni si giudicano con informazioni ordinarie."
+      },
+      {
+        "title": "Perché un'altra mappa di Plutone mette la linea altrove?",
+        "description": "Un metodo usa il grado zodiacale di Plutone e ignora la latitudine. Questa mappa usa la posizione reale di Plutone nel cielo al momento della nascita, con ascensione retta e declinazione. Plutone può stare lontano dall'eclittica, e i due disegni possono divergere di molto."
+      },
+      {
+        "title": "La mappa gratuita include Plutone?",
+        "description": "Sì. La mappa della home disegna Plutone insieme a Sole, Luna, Mercurio, Venere, Marte, Giove, Saturno, Urano e Nettuno. Chirone, i nodi lunari e Lilith non sono linee."
+      },
+      {
+        "title": "E se non conosco l'ora di nascita?",
+        "description": "L'angolo dipende dall'ora. Senza un'ora affidabile, un'etichetta ASC, DSC, MC o IC può essere nel posto sbagliato."
+      },
+      {
+        "title": "Trasferirsi lì garantisce potere o un cambiamento di vita?",
+        "description": "No. La linea non garantisce status, reddito, amore, visti o un trasferimento riuscito."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Veda la sua linea sulla mappa",
+    "description": "La linea di Plutone in astrocartografia fa già parte della mappa gratuita della home. Inserisca data, ora e luogo, e trovi l'angolo più vicino alla città che le importa. La mappa non promette che cosa succede dopo l'arrivo.",
+    "buttons": [
+      {
+        "title": "Mappa di astrocartografia gratuita →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

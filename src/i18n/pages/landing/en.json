@@ -224,6 +224,20 @@
               "url": "/uranus-line-astrocartography",
               "target": "_self",
               "icon": "RiFlashlightLine"
+            },
+            {
+              "title": "Neptune Line",
+              "description": "Dreams, imagination, fog, and creative sensitivity",
+              "url": "/neptune-line-astrocartography",
+              "target": "_self",
+              "icon": "RiDropLine"
+            },
+            {
+              "title": "Pluto Line",
+              "description": "Power, deep change, and intense rebuilding",
+              "url": "/pluto-line-astrocartography",
+              "target": "_self",
+              "icon": "RiFocus3Line"
             }
           ]
         },

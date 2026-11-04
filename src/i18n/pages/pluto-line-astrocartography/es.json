@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "title": "Línea de Plutón en Astrocartografía - Poder y Cambio Profundo",
+    "description": "Poder, cambio profundo y los cuatro ángulos. El mapa gratis ya dibuja la línea. Ningún resultado está garantizado.",
+    "keywords": "línea de Plutón, Plutón ASC, Plutón MC, astrocartografía"
+  },
+  "intentAnchor": {
+    "text": "La línea de Plutón en astrocartografía marca dónde estaba Plutón en un ángulo al nacer. Esta guía explica poder, cambio profundo y los cuatro ángulos, y señala el mapa gratis que ya dibuja la línea. La intensidad no es peligro, y la línea no es una transformación garantizada."
+  },
+  "internalLinks": {
+    "title": "Páginas relacionadas",
+    "items": [
+      {
+        "text": "Genere el mapa gratis.",
+        "linkText": "Mapa de astrocartografía gratis",
+        "url": "/"
+      },
+      {
+        "text": "Compare esta línea con los otros planetas.",
+        "linkText": "Guía de líneas",
+        "url": "/astrocartography-lines"
+      },
+      {
+        "text": "¿Quiere imaginación y límites más blandos?",
+        "linkText": "Guía de la línea de Neptuno",
+        "url": "/neptune-line-astrocartography"
+      },
+      {
+        "text": "¿Quiere un cambio brusco de identidad?",
+        "linkText": "Guía de la línea de Urano",
+        "url": "/uranus-line-astrocartography"
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Qué muestra la línea en el mapa",
+    "label": "LÍNEA DE PLUTÓN",
+    "description": "La línea de Plutón en astrocartografía marca dónde Plutón salía, se ponía, culminaba o estaba en el fondo del cielo al nacer. El mapa de inicio calcula esas rutas con fecha, hora y lugar. Cerca destacan poder, privacidad, finales y reconstrucción. La línea no es una maldición ni una transformación prometida.",
+    "image": {
+      "src": "/imgs/features/hero-web.webp",
+      "alt": "Mapa para ver la línea de Plutón"
+    },
+    "items": [
+      {
+        "title": "Qué suele destacar Plutón",
+        "description": "Plutón se asocia con profundidad, recursos compartidos, privacidad y un cambio que quita lo que ya no sirve. Una ciudad cercana puede sentirse intensa o difícil de tomar a la ligera. La versión difícil es la compulsión. Es un tono simbólico, no una calificación objetiva de peligro.",
+        "image": {
+          "src": "/imgs/posts/pluto-symbol.webp",
+          "alt": "Símbolo de Plutón"
+        }
+      },
+      {
+        "title": "Cuatro ángulos",
+        "description": "La ASC es donde Plutón salía: la presencia puede sentirse más firme o más privada. La DSC es donde se ponía: las parejas pueden mostrar lealtad, diferencias de poder o temas no dichos. La MC es donde estaba más alto: el trabajo público puede volverse una especialización honda. La IC es donde estaba más bajo: el hogar puede sacar presión familiar o una necesidad de reconstruir. Nombre el ángulo antes de llamar intensa a la ciudad.",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp",
+          "alt": "Ángulos de la línea de Plutón"
+        }
+      },
+      {
+        "title": "La profundidad no ordena mudarse",
+        "description": "Estudie la línea si quiere trabajo concentrado o un capítulo de reconstrucción. No la use para asustarse ni espere un giro mágico. Para un crecimiento más ligero, compare Júpiter. Para un cambio brusco de identidad, compare Urano. Para imaginación en vez de presión, compare Neptuno.",
+        "image": {
+          "src": "/imgs/features/planetary-lines-meaning-map.webp",
+          "alt": "Líneas planetarias, incluido Plutón"
+        }
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "La línea según el ángulo",
+    "label": "CUATRO ÁNGULOS",
+    "description": "El planeta fija el tema. El ángulo dice si poder y cambio aparecen en la identidad, la pareja, el trabajo público o la vida privada. Son tendencias, no resultados.",
+    "items": [
+      {
+        "title": "Línea ASC de Plutón",
+        "description": "En el ascendente, otras personas pueden vivirlo como intenso o difícil de influir. Puede ayudar en la investigación y también convertir lo social en una prueba de control. Una visita muestra el clima. No prueba que se vuelva otra persona al cambiar de ciudad.",
+        "icon": "RiUserLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Línea ASC de Plutón"
+        }
+      },
+      {
+        "title": "Línea MC de Plutón",
+        "description": "El Medio Cielo conecta a Plutón con la vocación. Aquí se busca especialización, investigación o influencia lenta. También puede describir política de poder en el trabajo. No garantiza un ascenso ni dinero.",
+        "icon": "RiBriefcaseLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp",
+          "alt": "Línea MC de Plutón"
+        }
+      },
+      {
+        "title": "Línea DSC de Plutón",
+        "description": "El ocaso pone a Plutón en las relaciones de a dos. Los vínculos pueden sentirse privados o desiguales. La línea no significa que una relación sea abusiva ni que esté destinada. Si la seguridad importa, use información ordinaria y apoyo, no una línea planetaria.",
+        "icon": "RiHeartLine",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp",
+          "alt": "Línea DSC de Plutón"
+        }
+      },
+      {
+        "title": "Línea IC de Plutón",
+        "description": "La línea inferior toca el hogar, los antepasados y lo que queda enterrado en la vida diaria. Una casa cercana puede coincidir con obras, recursos compartidos o una fuerte necesidad de privacidad. La línea no prueba que la casa sea insegura.",
+        "icon": "RiHome3Line",
+        "image": {
+          "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
+          "alt": "Línea IC de Plutón"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo usar la línea sin convertirla en una advertencia",
+    "label": "PASOS",
+    "description": "La línea de Plutón en astrocartografía ayuda cuando quiere ver dónde caen profundidad y poder. El mapa de inicio ya dibuja la línea. Esta página no añade otra calculadora.",
+    "items": [
+      {
+        "title": "Encuentre la línea y nombre el ángulo",
+        "description": "Use fecha, una hora fiable y el lugar de nacimiento en el mapa de inicio. Localice Plutón y vea qué ángulo queda más cerca de la ciudad. Una hora aproximada hace poco fiable el ángulo. El mapa incluye a Plutón. No dibuja a Quirón, los nodos lunares ni Lilith.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "Pregunte qué intensidad busca de verdad",
+        "description": "Un proyecto concentrado puede caber en este tema. Esperar que la geografía arregle la impotencia no. Mantenga trabajo, dinero, seguridad y vivienda en una lista aparte.",
+        "icon": "RiFlightTakeoffLine"
+      },
+      {
+        "title": "Lea las líneas cercanas como una mezcla",
+        "description": "Plutón puede correr junto a otro planeta, y eso se ve en el mapa. Saturno cerca puede describir presión y resistencia. Venus cerca puede describir una atracción intensa. El sitio no ordena esas combinaciones ni nombra una ciudad ganadora.",
+        "icon": "RiRouteLine"
+      },
+      {
+        "title": "Compárela con una opción menos extrema",
+        "description": "Para una estancia larga, compare Júpiter, Venus, la Luna o Saturno. Vivir cerca de Plutón no es obligatorio para una vida con sentido, y evitarlo no es un plan de seguridad. Ninguna línea de aquí garantiza amor, dinero, estatus o una mudanza lograda.",
+        "icon": "RiBalanceLine"
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Límites que conviene tener a la vista",
+    "label": "HECHOS",
+    "description": "La línea de Plutón en astrocartografía solo es útil con sus límites a la vista. Estos puntos coinciden con el mapa.",
+    "items": [
+      {
+        "title": "La línea ya está en el mapa gratis",
+        "description": "No hay una calculadora aparte de Plutón. El mapa de inicio incluye a Plutón con el Sol, la Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano y Neptuno. Los comentarios de IA usan créditos. Ver la línea no.",
+        "icon": "RiMapPinLine"
+      },
+      {
+        "title": "La línea sigue la posición real de Plutón",
+        "description": "El mapa de inicio dibuja Plutón donde el cuerpo estaba de verdad, con ascensión recta y declinación. No lo aplasta sobre su grado zodiacal ni ignora su latitud. La órbita de Plutón está muy inclinada, así que un mapa que usa solo el grado puede poner la misma línea en otro lugar. Si otro mapa no coincide, compare el método antes de llamar error a cualquiera.",
+        "icon": "RiCompassLine"
+      },
+      {
+        "title": "No lea la línea como una maldición",
+        "description": "Esta página no dice que una línea de Plutón sea peligrosa, condenada o inevitable. El tema simbólico es poder y cambio profundo, útil o agotador según la persona y el lugar.",
+        "icon": "RiShieldLine"
+      },
+      {
+        "title": "La hora sigue controlando el ángulo",
+        "description": "La fecha sitúa a Plutón. La hora y el lugar deciden el ángulo. Sin hora documentada, no trate el ángulo como exacto.",
+        "icon": "RiTimeLine"
+      },
+      {
+        "title": "La distancia es una convención",
+        "description": "Muchos lectores tratan unos cientos de millas como zona perceptible. Este sitio no ha medido un radio de Plutón. Mire la línea dibujada.",
+        "icon": "RiRulerLine"
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Preguntas sobre la línea de Plutón",
+    "description": "Respuestas cortas sobre significado, el método de dibujo y la hora de nacimiento.",
+    "items": [
+      {
+        "title": "¿Qué significa la línea?",
+        "description": "La línea de Plutón en astrocartografía marca lugares donde Plutón estaba en el Ascendente, el Descendente, el Medio Cielo o el Fondo del Cielo al nacer. El ángulo dice si el tema cae en la identidad, la pareja, el trabajo público o el hogar. Describe un tono. No garantiza una transformación."
+      },
+      {
+        "title": "¿Es peligrosa la línea de Plutón?",
+        "description": "No. Este sitio no la trata como maldita, insegura o destinada. El tema puede sentirse intenso. La seguridad, la vivienda y las relaciones se juzgan con información ordinaria."
+      },
+      {
+        "title": "¿Por qué otro mapa de Plutón pone la línea en otro sitio?",
+        "description": "Un método usa el grado zodiacal de Plutón e ignora la latitud. Este mapa usa la posición real de Plutón en el cielo en su nacimiento, con ascensión recta y declinación. Plutón puede estar lejos de la eclíptica, y los dos dibujos pueden separarse mucho."
+      },
+      {
+        "title": "¿El mapa gratis incluye a Plutón?",
+        "description": "Sí. El mapa de inicio dibuja a Plutón junto con el Sol, la Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano y Neptuno. Quirón, los nodos lunares y Lilith no entran como líneas."
+      },
+      {
+        "title": "¿Y si no sé la hora de nacimiento?",
+        "description": "El ángulo depende de la hora. Sin una hora fiable, una etiqueta ASC, DSC, MC o IC puede estar en el lugar equivocado."
+      },
+      {
+        "title": "¿Mudarse allí garantiza poder o un cambio de vida?",
+        "description": "No. La línea no garantiza estatus, ingresos, amor, visados ni una mudanza lograda."
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Vea su línea en el mapa",
+    "description": "La línea de Plutón en astrocartografía ya forma parte del mapa gratis de inicio. Escriba fecha, hora y lugar, y encuentre el ángulo más cercano a la ciudad que le importa. El mapa no promete lo que ocurre después de llegar.",
+    "buttons": [
+      {
+        "title": "Mapa de astrocartografía gratis →",
+        "icon": "RiMapLine",
+        "url": "/",
+        "target": "_self",
+        "variant": "default"
+      }
+    ]
+  }
+}

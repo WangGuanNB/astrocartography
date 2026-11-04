@@ -157,6 +157,18 @@
           "description": "Libertà, reinvenzione, cambiamento e percorsi non convenzionali.",
           "href": "/uranus-line-astrocartography",
           "icon": "RiFlashlightLine"
+        },
+        {
+          "title": "Linea di Nettuno",
+          "description": "Sogni, immaginazione, arte e confini poco chiari.",
+          "href": "/neptune-line-astrocartography",
+          "icon": "RiDropLine"
+        },
+        {
+          "title": "Linea di Plutone",
+          "description": "Potere, cambiamento profondo e ricostruzione intensa.",
+          "href": "/pluto-line-astrocartography",
+          "icon": "RiFocus3Line"
         }
       ]
     },
@@ -261,6 +273,20 @@
         "usefulFor": "Innovazione e nuove direzioni",
         "watchFor": "Instabilità o interruzioni improvvise",
         "href": "/uranus-line-astrocartography"
+      },
+      {
+        "planet": "Nettuno",
+        "theme": "Sogni, immaginazione, nebbia",
+        "usefulFor": "Arte, empatia e ispirazione",
+        "watchFor": "Confusione, fuga o confini poco chiari",
+        "href": "/neptune-line-astrocartography"
+      },
+      {
+        "planet": "Plutone",
+        "theme": "Potere, profondità, ricostruzione",
+        "usefulFor": "Cambiamento intenso e lavoro concentrato",
+        "watchFor": "Lotte di controllo o tutto o niente",
+        "href": "/pluto-line-astrocartography"
       }
     ]
   },

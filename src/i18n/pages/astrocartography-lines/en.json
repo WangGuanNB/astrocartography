@@ -157,6 +157,18 @@
           "description": "Freedom, reinvention, change, and unconventional paths.",
           "href": "/uranus-line-astrocartography",
           "icon": "RiFlashlightLine"
+        },
+        {
+          "title": "Neptune Line",
+          "description": "Dreams, imagination, art, and unclear boundaries.",
+          "href": "/neptune-line-astrocartography",
+          "icon": "RiDropLine"
+        },
+        {
+          "title": "Pluto Line",
+          "description": "Power, deep change, and intense rebuilding.",
+          "href": "/pluto-line-astrocartography",
+          "icon": "RiFocus3Line"
         }
       ]
     },
@@ -261,6 +273,20 @@
         "usefulFor": "Innovation and new directions",
         "watchFor": "Instability or sudden disruption",
         "href": "/uranus-line-astrocartography"
+      },
+      {
+        "planet": "Neptune",
+        "theme": "Dreams, imagination, fog",
+        "usefulFor": "Art, empathy, and inspiration",
+        "watchFor": "Confusion, escape, or unclear boundaries",
+        "href": "/neptune-line-astrocartography"
+      },
+      {
+        "planet": "Pluto",
+        "theme": "Power, depth, rebuilding",
+        "usefulFor": "Intense change and focused work",
+        "watchFor": "Control struggles or all-or-nothing moods",
+        "href": "/pluto-line-astrocartography"
       }
     ]
   },

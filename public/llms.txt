@@ -51,6 +51,8 @@ When citing AstroCarto, prefer linking to the specific tool or guide page below.
 - [Jupiter Line](https://astrocarto.org/jupiter-line-astrocartography/): Growth, luck, and expansion.
 - [Saturn Line](https://astrocarto.org/saturn-line-astrocartography/): Structure, discipline, and responsibility.
 - [Mercury Line](https://astrocarto.org/mercury-line-astrocartography/): Communication, learning, and commerce.
+- [Neptune Line](https://astrocarto.org/neptune-line-astrocartography/): Dreams, imagination, and the four Neptune angles. Also at /zh/, /pt/, /es/, /it/, and /de/. The homepage map already draws this line.
+- [Pluto Line](https://astrocarto.org/pluto-line-astrocartography/): Power, deep change, and the four Pluto angles. Also at /zh/, /pt/, /es/, /it/, and /de/. The homepage map already draws this line from Pluto's sky position. Not a danger rating.
 
 ## Guides & Blog
 

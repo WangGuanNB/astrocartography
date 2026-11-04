@@ -157,6 +157,18 @@
           "description": "自由、重塑、变化与非传统路径。",
           "href": "/uranus-line-astrocartography",
           "icon": "RiFlashlightLine"
+        },
+        {
+          "title": "海王星线",
+          "description": "梦想、想象、艺术与模糊边界。",
+          "href": "/neptune-line-astrocartography",
+          "icon": "RiDropLine"
+        },
+        {
+          "title": "冥王星线",
+          "description": "力量、深层变化与强烈重建。",
+          "href": "/pluto-line-astrocartography",
+          "icon": "RiFocus3Line"
         }
       ]
     },
@@ -261,6 +273,20 @@
         "usefulFor": "创新、新方向、突破旧模式",
         "watchFor": "不稳定或突发变动",
         "href": "/uranus-line-astrocartography"
+      },
+      {
+        "planet": "海王星",
+        "theme": "梦想、想象、迷雾",
+        "usefulFor": "艺术、共情与灵感",
+        "watchFor": "混乱、逃避或边界不清",
+        "href": "/neptune-line-astrocartography"
+      },
+      {
+        "planet": "冥王星",
+        "theme": "力量、深度、重建",
+        "usefulFor": "强烈变化与专注工作",
+        "watchFor": "控制拉扯或非黑即白",
+        "href": "/pluto-line-astrocartography"
       }
     ]
   },

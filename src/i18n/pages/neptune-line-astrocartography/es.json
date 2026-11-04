@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "title": "Línea de Neptuno en Astrocartografía - Significado y Ángulos",
+    "description": "La línea de Neptuno en astrocartografía explica imaginación, arte, niebla y los cuatro ángulos. El mapa gratis ya la dibuja. Ningún traslado está garantizado.",
+    "keywords": "línea de Neptuno en astrocartografía, línea de Neptuno, Neptuno ASC, Neptuno MC"
+  },
+  "intentAnchor": {
+    "text": "La línea de Neptuno en astrocartografía marca dónde estaba Neptuno en un ángulo al nacer. Esta guía explica sueños, imaginación, niebla y los cuatro ángulos, y lleva al mapa gratis que ya dibuja la línea. Una ciudad en la línea se estudia; no es un resultado prometido."
+  },
+  "internalLinks": {
+    "title": "Páginas relacionadas",
+    "items": [
+      { "text": "Genera el mapa gratis.", "linkText": "Mapa de astrocartografía gratis", "url": "/" },
+      { "text": "Compara esta línea con los otros planetas.", "linkText": "Guía de líneas", "url": "/astrocartography-lines" },
+      { "text": "¿Quieres un cambio brusco en lugar de una atmósfera suave?", "linkText": "Línea de Urano", "url": "/uranus-line-astrocartography" },
+      { "text": "¿Quieres intensidad y reconstrucción?", "linkText": "Línea de Plutón", "url": "/pluto-line-astrocartography" }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Qué muestra la línea de Neptuno en el mapa",
+    "label": "LÍNEA DE NEPTUNO",
+    "description": "La línea de Neptuno en astrocartografía marca dónde Neptuno salía, se ponía, culminaba o estaba en el fondo del cielo al nacer. El mapa de inicio calcula esas rutas con fecha, hora y lugar. Cerca de ellas destacan imaginación, arte, sueños y límites borrosos, y el mismo sitio puede sentirse vago. La línea describe un tono. No decide una mudanza.",
+    "image": { "src": "/imgs/features/hero-web.webp", "alt": "Mapa para ver la línea de Neptuno" },
+    "items": [
+      { "title": "Qué suele enfatizar Neptuno", "description": "Neptuno se liga a imaginación, compasión, música e imagen, y al deseo de suavizar un borde duro. Una ciudad cercana puede inspirar o idealizar a una persona o un trabajo. Léelo como atmósfera. Vivienda, trabajo y salud se comprueban aparte.", "image": { "src": "/imgs/posts/neptune-symbol.webp", "alt": "Símbolo de Neptuno" } },
+      { "title": "Cuatro ángulos", "description": "La línea ASC es donde Neptuno salía: la identidad puede volverse más artística y más difícil de clasificar. La DSC es donde se ponía: los vínculos pueden sentirse románticos o poco claros. La MC es donde estaba más alto: el trabajo público puede ir hacia imagen, música o cuidado. La IC es donde estaba más bajo: el hogar puede sentirse poético o inestable. Nombra el ángulo antes de juzgar la ciudad.", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-angles.webp", "alt": "Ángulos ASC, DSC, MC e IC de Neptuno" } },
+      { "title": "La inspiración no es una buena decisión", "description": "La línea no dice que una ciudad sea segura, afortunada o funesta. Puede apoyar el trabajo creativo y también embellecer un plan débil. Para estructura, compara Saturno. Para una ruptura de identidad, compara Urano. Luego abre el mapa.", "image": { "src": "/imgs/features/planetary-lines-meaning-map.webp", "alt": "Líneas planetarias en el mapa" } }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "Línea de Neptuno por ángulo",
+    "label": "CUATRO ÁNGULOS",
+    "description": "El planeta da el tema. El ángulo dice si aparece en la identidad, la pareja, el trabajo público o la vida privada. Son tendencias, no un pronóstico.",
+    "items": [
+      { "title": "Neptuno ASC — identidad más suave", "description": "En la línea de salida, la forma de encontrarte con el mundo puede volverse imaginativa o difícil de nombrar. Puede ayudar al arte y al cuidado, o hacer que aceptes condiciones aún poco claras.", "icon": "RiUserLine", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp", "alt": "Distancia a una línea" } },
+      { "title": "Neptuno MC — trabajo difícil de nombrar", "description": "La línea del Medio Cielo une Neptuno con la vocación. Imagen, sonido o cuidado pueden sentirse naturales, y una oferta brillante puede ocultar un pago poco claro. No dejes una búsqueda concreta solo por la línea.", "icon": "RiBriefcaseLine", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-planets-overview.webp", "alt": "Planetas que dibuja el mapa" } },
+      { "title": "Neptuno DSC — vínculos porosos", "description": "La línea de puesta pone a Neptuno en las relaciones de a dos. La atracción puede ser inmediata e idealizada. La línea no crea un alma gemela ni predice una ruptura. Si la pregunta es el amor, lee también las líneas de Venus.", "icon": "RiHeartLine", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-influence-distance.webp", "alt": "Ciudad cerca de la línea de Neptuno" } },
+      { "title": "Neptuno IC — casa soñadora", "description": "La línea inferior toca el hogar y las ganas de retirarse. La rutina puede costar más. Eso no prueba que echarás raíces. Para una base estable, compara la Luna y el coste de vida.", "icon": "RiHome3Line", "image": { "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp", "alt": "Temas de hogar en la línea IC" } }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo usar la línea sin tratarla como promesa",
+    "label": "PASOS",
+    "description": "La línea de Neptuno en astrocartografía sirve cuando ya tienes una pregunta sobre una ciudad. Los pasos usan el mapa que ya existe. No añaden otra calculadora.",
+    "items": [
+      { "title": "Abre el mapa y nombra el ángulo", "description": "Introduce fecha, hora y lugar en el mapa de inicio. Busca Neptuno y mira qué ángulo queda más cerca de la ciudad. Una hora aproximada hace poco fiable el ángulo. El mapa dibuja Neptuno. No dibuja Quirón, nodos ni Lilith.", "icon": "RiCompassLine" },
+      { "title": "Separa el ambiente de la logística", "description": "Anota el símbolo aparte del alquiler, los visados, el trabajo y la salud. Una atmósfera significativa no sustituye esos hechos. Una visita corta no reproduce un año.", "icon": "RiFlightTakeoffLine" },
+      { "title": "Lee los cruces como mezcla", "description": "Neptuno puede pasar cerca de otra línea, y eso se ve en el mapa. Venus al lado puede enfatizar arte o romance. Saturno al lado puede mezclar inspiración y deber. El mapa no puntúa cruces ni elige una ciudad ganadora.", "icon": "RiRouteLine" },
+      { "title": "Compara con una línea más sólida", "description": "Para una estancia larga, compara Saturno, Júpiter o la Luna. Neptuno puede caber en un capítulo creativo. Ninguna línea de aquí garantiza amor, dinero, visados o un traslado exitoso.", "icon": "RiBalanceLine" }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "Límites que quedan a la vista",
+    "label": "HECHOS",
+    "description": "La línea de Neptuno en astrocartografía es honesta cuando los límites se ven. Estas notas coinciden con lo que hace el mapa.",
+    "items": [
+      { "title": "La línea ya está en el mapa gratis", "description": "No hace falta una herramienta aparte. El mapa calcula del Sol a Plutón, Neptuno incluido. Los comentarios de IA sobre una ciudad usan créditos. Ver la línea no.", "icon": "RiMapPinLine" },
+      { "title": "La distancia no es una medición de este sitio", "description": "Quienes leen suelen tratar unos cientos de millas como zona perceptible. Este sitio no ha medido un radio de Neptuno. Usa la línea dibujada y da menos peso a una ciudad lejana.", "icon": "RiRulerLine" },
+      { "title": "La hora sigue decidiendo el ángulo", "description": "La fecha sitúa a Neptuno. La hora y el lugar deciden el ángulo bajo la ciudad. Sin una hora documentada, no trates el ángulo como exacto.", "icon": "RiTimeLine" },
+      { "title": "El Neptuno natal sigue importando", "description": "El mapa amplifica un planeta que ya tienes. No sustituye la carta natal y no diagnostica salud ni estados mentales.", "icon": "RiPieChartLine" }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Preguntas sobre la línea de Neptuno",
+    "description": "Respuestas breves sobre significado, mapa y hora de nacimiento.",
+    "items": [
+      { "title": "¿Qué significa la línea de Neptuno?", "description": "La línea de Neptuno en astrocartografía marca lugares donde Neptuno estaba en el Ascendente, el Descendente, el Medio Cielo o el Fondo del Cielo. Esos lugares tienden a destacar imaginación, arte, sueños y límites borrosos. Es un tono, no la promesa de que la ciudad cura o confunde." },
+      { "title": "¿El mapa gratis incluye Neptuno?", "description": "Sí. El mapa de inicio dibuja Neptuno junto con Sol, Luna, Mercurio, Venus, Marte, Júpiter, Saturno, Urano y Plutón. Quirón, nodos y Lilith no son líneas del mapa." },
+      { "title": "¿La línea de Neptuno es mala?", "description": "No. No es una maldición ni prueba de que una ciudad sea segura. Puede coincidir con creación y compasión, o con idealización y acuerdos poco claros." },
+      { "title": "¿Y si no sé la hora?", "description": "El mapa necesita una hora para colocar los ángulos. Una hora aproximada sirve para explorar. No trates una decisión de ciudad como precisa antes de tener una hora documentada." },
+      { "title": "¿Mudarme a la línea garantiza una vida creativa?", "description": "No. La línea no garantiza trabajo, amor, visados, salud ni un traslado exitoso." }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "Mira tu línea de Neptuno en el mapa",
+    "description": "La línea de Neptuno en astrocartografía ya forma parte del mapa gratis de inicio. Introduce fecha, hora y lugar y encuentra el ángulo más cercano a la ciudad. El mapa no promete lo que ocurre después de llegar.",
+    "buttons": [{ "title": "Mapa de astrocartografía gratis →", "icon": "RiMapLine", "url": "/", "target": "_self", "variant": "default" }]
+  }
+}

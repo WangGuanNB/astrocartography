@@ -1286,6 +1286,79 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://astrocarto.org/neptune-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pluto-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/neptune-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/neptune-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/neptune-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/neptune-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/neptune-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/zh/pluto-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/es/pluto-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/pt/pluto-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/it/pluto-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://astrocarto.org/de/pluto-line-astrocartography/</loc>
+    <lastmod>2026-11-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- about / showcase removed: legacy Wplace/ShipAny pages deleted -->
 
   <url>
