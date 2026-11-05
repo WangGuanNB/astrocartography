@@ -215,7 +215,7 @@
   "cta": {
     "name": "cta",
     "title": "Encontre Onde Cai sua Linha de Vênus",
-    "description": "Gere seu mapa pessoal de astrocartografia usando cálculos profissionais Swiss Ephemeris e veja exatamente onde sua linha de Vênus cruza o globo. Clique em qualquer cidade ou linha para interpretação instantânea com IA — incluindo qual ângulo de Vênus está ativo e o que significa para relacionamentos, carreira e vida cotidiana. Completamente grátis, sem cadastro.",
+    "description": "Gere seu mapa pessoal de astrocartografia usando astronomy-engine e veja exatamente onde sua linha de Vênus cruza o globo. Clique em qualquer cidade ou linha para interpretação instantânea com IA — incluindo qual ângulo de Vênus está ativo e o que significa para relacionamentos, carreira e vida cotidiana. Completamente grátis, sem cadastro.",
     "buttons": [
       {
         "title": "Mapa de Astrocartografia grátis →",

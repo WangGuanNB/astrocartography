@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Kostenloser Astrokartografie Rechner – Karte online erstellen 2026",
-    "description": "Free astrocartography calculator with Swiss Ephemeris-based lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
+    "description": "Free astrocartography calculator with astronomy-engine lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
     "keywords": "Astrokartografie Rechner, kostenloser Astrokartografie Rechner, Astrokartografie Rechner online, wie funktioniert der Astrokartografie Rechner, Astrokartografie Berechnungsmethode"
   },
   "intentAnchor": {
@@ -36,7 +36,7 @@
     "name": "introduce",
     "title": "Was ist der Astrokartografie Rechner",
     "label": "Einführung",
-    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use Swiss Ephemeris-style astronomy on our servers after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
+    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use astronomy-engine, not the Swiss Ephemeris, after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
     "image": {
       "src": "/imgs/features/hero-web.webp",
       "alt": "Oberfläche des Astrokartografie Rechners"
@@ -44,7 +44,7 @@
     "items": [
       {
         "title": "Wie funktioniert der Astrokartografie Rechner?",
-        "description": "Der Planetenlinien-Rechner nutzt Swiss Ephemeris, um die Position jedes Planeten am Himmel zu Ihrem Geburtszeitpunkt zu bestimmen, und berechnet dann, wo diese Planeten über der Erdoberfläche im Winkel standen (aufsteigend, untergehend, im Zenit oder am Nadir). Dieser Astrokartografie Rechner verwendet sphärische Trigonometrie – z. B. cos(H) = -tan(φ) * tan(δ) für ASC/DSC-Linien – um Planetenpositionen auf eine Weltkarte zu projizieren. Das Standort-Astrologie-Tool wandelt äquatoriale Koordinaten (Rektaszension und Deklination) in geografische Koordinaten um und erzeugt sichtbare Linien für standortspezifische Energiemuster. Der Astrokartografie Rechner verarbeitet alle Berechnungen in Echtzeit mit professioneller Genauigkeit.",
+        "description": "Der Planetenlinien-Rechner nutzt astronomy-engine, um die Position jedes Planeten am Himmel zu Ihrem Geburtszeitpunkt zu bestimmen, und berechnet dann, wo diese Planeten über der Erdoberfläche im Winkel standen (aufsteigend, untergehend, im Zenit oder am Nadir). Dieser Astrokartografie Rechner verwendet sphärische Trigonometrie – z. B. cos(H) = -tan(φ) * tan(δ) für ASC/DSC-Linien – um Planetenpositionen auf eine Weltkarte zu projizieren. Das Standort-Astrologie-Tool wandelt äquatoriale Koordinaten (Rektaszension und Deklination) in geografische Koordinaten um und erzeugt sichtbare Linien für standortspezifische Energiemuster. Der Astrokartografie Rechner verarbeitet alle Berechnungen in Echtzeit mit professioneller Genauigkeit.",
         "image": {
           "src": "/imgs/features/1.webp",
           "alt": "Wie der Astrokartografie Rechner funktioniert"
@@ -75,8 +75,8 @@
     "description": "Unser Astrokartografie Rechner verbindet professionelle Genauigkeit mit benutzerfreundlichen Funktionen und ist der umfassendste kostenlose Relocation-Astrologie-Rechner.",
     "items": [
       {
-        "title": "Swiss Ephemeris-Based Calculations",
-        "description": "Planetary positions and lines are computed with Swiss Ephemeris-style astronomy, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
+        "title": "astronomy-engine",
+        "description": "Planetary positions and lines are computed with astronomy-engine, not the Swiss Ephemeris, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
         "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -141,8 +141,8 @@
         "icon": "RiGlobalLine"
       },
       {
-        "title": "Swiss Ephemeris Engine",
-        "description": "Dieser Astrokartografie Rechner nutzt Swiss Ephemeris für Berechnungen von 3000 v. Chr. bis 3000 n. Chr. und entspricht dem Präzisionsstandard professioneller Astrologie-Software weltweit.",
+        "title": "astronomy-engine",
+        "description": "Dieser Rechner nutzt astronomy-engine für die Sonne bis Pluto. Er nutzt nicht die Swiss Ephemeris. Geburtszeit und Geburtsort entscheiden, wo jede Linie liegt.",
         "icon": "RiCompassLine"
       },
       {
@@ -175,7 +175,7 @@
     "items": [
       {
         "title": "Wie funktioniert der Astrokartografie Rechner?",
-        "description": "Der Relocation-Astrologie-Rechner nutzt Swiss Ephemeris, um Planetenpositionen zu Ihrem Geburtszeitpunkt zu berechnen, und ermittelt dann, wo diese Planeten über der Erdoberfläche im Winkel standen. Dieser Astrokartografie Rechner verwendet sphärische Trigonometrie und projiziert Planetenpositionen auf eine Weltkarte – sichtbare Linien für standortspezifische Energiemuster."
+        "description": "Der Relocation-Astrologie-Rechner nutzt astronomy-engine, um Planetenpositionen zu Ihrem Geburtszeitpunkt zu berechnen, und ermittelt dann, wo diese Planeten über der Erdoberfläche im Winkel standen. Dieser Astrokartografie Rechner verwendet sphärische Trigonometrie und projiziert Planetenpositionen auf eine Weltkarte – sichtbare Linien für standortspezifische Energiemuster."
       },
       {
         "title": "Welche astrologischen Parameter nutzt der Astrokartografie Rechner?",
@@ -187,7 +187,7 @@
       },
       {
         "title": "Wie genau ist der Astrokartografie Rechner?",
-        "description": "Der Planetenlinien-Rechner erreicht 1-Meilen-Genauigkeit mit Swiss Ephemeris und entspricht Ergebnissen von Software wie Solar Fire und AstroGold. Dieser Astrokartografie Rechner handhabt Zeitzonen, historische Sommerzeit und Kalenderumstellungen automatisch und wurde mit professionellen Konsultationen abgeglichen."
+        "description": "Der Rechner nutzt astronomy-engine, nicht die Swiss Ephemeris. Dieser Astrokartografie Rechner handhabt Zeitzonen, historische Sommerzeit und Kalenderumstellungen automatisch Geburtszeit und Geburtsort entscheiden, wo jede Linie liegt."
       },
       {
         "title": "Was, wenn ich meine genaue Geburtszeit nicht kenne?",
@@ -202,7 +202,7 @@
   "cta": {
     "name": "cta",
     "title": "Jetzt Ihre kostenlose Astrokartografie-Karte erstellen",
-    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
+    "description": "Generate your astrocartography map with astronomy-engine lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
     "buttons": [
       {
         "title": "Kostenlose Astrocartography-Karte →",

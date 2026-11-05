@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Free Astrocartography Calculator - Generate Your Chart Online 2026",
-    "description": "Free astrocartography calculator with Swiss Ephemeris-based lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
+    "description": "Free astrocartography calculator with astronomy-engine lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
     "keywords": "astrocartography calculator, free astrocartography calculator, astrocartography calculator online, how astrocartography calculator works, astrocartography calculation method"
   },
   "intentAnchor": {
@@ -36,7 +36,7 @@
     "name": "introduce",
     "title": "What is Astrocartography Calculator",
     "label": "Introduction",
-    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use Swiss Ephemeris-style astronomy on our servers after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
+    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use astronomy-engine, not the Swiss Ephemeris, after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
     "image": {
       "src": "/imgs/features/hero-web.webp",
       "alt": "Astrocartography Calculator Interface"
@@ -44,7 +44,7 @@
     "items": [
       {
         "title": "How Does Astrocartography Calculator Work?",
-        "description": "The planetary line calculator uses Swiss Ephemeris to determine each planet's position in the sky at your birth moment, then calculates where these planets were angular (rising, setting, culminating, or at nadir) across Earth's surface. This astro map calculator employs spherical trigonometry—using formulas like cos(H) = -tan(φ) * tan(δ) for ASC/DSC lines—to project planetary positions onto a world map. The locational astrology tool converts equatorial coordinates (Right Ascension and Declination) to geographic coordinates using sidereal time calculations, rendering visible lines that show location-specific energy patterns. This astrocartography chart calculator processes all calculations in real-time, displaying results on an interactive map with professional-grade accuracy matching industry-standard software.",
+        "description": "The planetary line calculator uses astronomy-engine to determine each planet's position in the sky at your birth moment, then calculates where these planets were angular (rising, setting, culminating, or at nadir) across Earth's surface. This astro map calculator employs spherical trigonometry—using formulas like cos(H) = -tan(φ) * tan(δ) for ASC/DSC lines—to project planetary positions onto a world map. The locational astrology tool converts equatorial coordinates (Right Ascension and Declination) to geographic coordinates using sidereal time calculations, rendering visible lines that show location-specific energy patterns. This astrocartography chart calculator processes all calculations in real-time, displaying results on an interactive map with professional-grade accuracy matching industry-standard software.",
         "image": {
           "src": "/imgs/features/1.webp",
           "alt": "How astrocartography calculator works"
@@ -75,8 +75,8 @@
     "description": "Our astrocartography calculator combines professional-grade accuracy with user-friendly features, offering the most comprehensive free relocation astrology calculator available.",
     "items": [
       {
-        "title": "Swiss Ephemeris-Based Calculations",
-        "description": "Planetary positions and lines are computed with Swiss Ephemeris-style astronomy, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
+        "title": "astronomy-engine",
+        "description": "Planetary positions and lines are computed with astronomy-engine, not the Swiss Ephemeris, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
         "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -141,8 +141,8 @@
         "icon": "RiGlobalLine"
       },
       {
-        "title": "Swiss Ephemeris Engine",
-        "description": "This astrocartography chart calculator uses Swiss Ephemeris, supporting calculations from 3000 BCE to 3000 CE. The astro map calculator maintains the same precision standards as professional astrology software worldwide.",
+        "title": "astronomy-engine",
+        "description": "This astrocartography chart calculator uses astronomy-engine for the Sun through Pluto. It does not use the Swiss Ephemeris. Birth time and birthplace decide where each line falls.",
         "icon": "RiCompassLine"
       },
       {
@@ -175,7 +175,7 @@
     "items": [
       {
         "title": "How does the astrocartography calculator work?",
-        "description": "The relocation astrology calculator uses Swiss Ephemeris to calculate planetary positions at your birth moment, then determines where these planets were angular (rising, setting, culminating, or at nadir) across Earth's surface. This planetary line calculator uses spherical trigonometry to project planetary positions onto a world map, creating visible lines that show location-specific energy patterns."
+        "description": "The relocation astrology calculator uses astronomy-engine to calculate planetary positions at your birth moment, then determines where these planets were angular (rising, setting, culminating, or at nadir) across Earth's surface. This planetary line calculator uses spherical trigonometry to project planetary positions onto a world map, creating visible lines that show location-specific energy patterns."
       },
       {
         "title": "What astrological parameters does the astrocartography calculator use?",
@@ -187,7 +187,7 @@
       },
       {
         "title": "How accurate is the astrocartography calculator?",
-        "description": "Lines and positions are computed with Swiss Ephemeris-style astronomy, including timezone and historical DST handling. Treat results as symbolic relocation research—validate important moves with professional astrologers and real-world planning, not as guaranteed outcomes."
+        "description": "Lines and positions are computed with astronomy-engine, not the Swiss Ephemeris, including timezone and historical DST handling. Treat results as symbolic relocation research—validate important moves with professional astrologers and real-world planning, not as guaranteed outcomes."
       },
       {
         "title": "What if I don't know my exact birth time?",
@@ -202,7 +202,7 @@
   "cta": {
     "name": "cta",
     "title": "Generate Your Free Astrocartography Chart Now",
-    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
+    "description": "Generate your astrocartography map with astronomy-engine lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
     "buttons": [
       {
         "title": "Free Astrocartography Chart & Map →",

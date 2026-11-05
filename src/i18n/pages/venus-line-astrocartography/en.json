@@ -215,7 +215,7 @@
   "cta": {
     "name": "cta",
     "title": "Find Where Your Venus Line Falls",
-    "description": "Generate your personal astrocartography map using professional Swiss Ephemeris calculations and see exactly where your Venus line crosses the globe. Click any city or line for an instant AI interpretation—including which Venus angle is active and what it means for your relationships, career, and daily life. Completely free, no sign-up required.",
+    "description": "Generate your personal astrocartography map using astronomy-engine and see exactly where your Venus line crosses the globe. Click any city or line for an instant AI interpretation—including which Venus angle is active and what it means for your relationships, career, and daily life. Completely free, no sign-up required.",
     "buttons": [
       {
         "title": "Free Astrocartography Chart & Map →",

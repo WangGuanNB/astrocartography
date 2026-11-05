@@ -332,10 +332,10 @@
     "title": "Impulsado por tecnología de precisión astronómica",
     "items": [
       {
-        "title": "Swiss Ephemeris",
+        "title": "astronomy-engine",
         "image": {
           "src": "/imgs/logos/nextjs.svg",
-          "alt": "Swiss Ephemeris"
+          "alt": "astronomy-engine"
         }
       },
       {
@@ -395,7 +395,7 @@
       },
       {
         "title": "Usar la Astrocartografía para Reubicación, Viajes y Planificación de Vida",
-        "description": "La astrocartografía te ofrece una guía personalizada, planeta por planeta, para las decisiones de ubicación. Los profesionales que buscan crecimiento en la carrera buscan líneas MC de Júpiter o Sol MC — regiones donde la visibilidad y la expansión se amplifican. Quienes priorizan las relaciones exploran las líneas DSC de Venus, donde la energía de pareja alcanza su pico. Los profesionales creativos prefieren las líneas ASC de Neptuno para inspiración y flujo. Incluso los viajes cortos pueden planificarse intencionalmente: visita tu línea de Júpiter para una reunión de negocios de alto riesgo, o tu línea IC de la Luna para restauración emocional. Nuestra calculadora de astrocartografía gratuita genera tu mapa personal completo al instante usando Swiss Ephemeris — el mismo sistema de cálculo profesional en el que confían los astrólogos de todo el mundo.",
+        "description": "La astrocartografía te ofrece una guía personalizada, planeta por planeta, para las decisiones de ubicación. Los profesionales que buscan crecimiento en la carrera buscan líneas MC de Júpiter o Sol MC — regiones donde la visibilidad y la expansión se amplifican. Quienes priorizan las relaciones exploran las líneas DSC de Venus, donde la energía de pareja alcanza su pico. Los profesionales creativos prefieren las líneas ASC de Neptuno para inspiración y flujo. Incluso los viajes cortos pueden planificarse intencionalmente: visita tu línea de Júpiter para una reunión de negocios de alto riesgo, o tu línea IC de la Luna para restauración emocional. Nuestra calculadora de astrocartografía gratuita genera tu mapa personal completo al instante usando astronomy-engine. Este sitio no usa la Swiss Ephemeris.",
         "image": {
           "src": "/imgs/features/astrocartography-relocation-planning.webp",
           "alt": "Astrocartografía para reubicación y planificación de viajes"
@@ -516,8 +516,8 @@
         "icon": "RiGlobalLine"
       },
       {
-        "title": "Motor de Cálculo Swiss Ephemeris",
-        "description": "La calculadora usa datos de Swiss Ephemeris para calcular posiciones planetarias y proyecta las líneas angulares correspondientes sobre el mapa mundial a partir de tus datos de nacimiento.",
+        "title": "astronomy-engine",
+        "description": "La calculadora usa datos de astronomy-engine para calcular posiciones planetarias y proyecta las líneas angulares correspondientes sobre el mapa mundial a partir de tus datos de nacimiento.",
         "icon": "RiCompassLine"
       },
       {
@@ -617,7 +617,7 @@
       },
       {
         "title": "¿Qué tan precisos son los cálculos?",
-        "description": "La calculadora usa datos de Swiss Ephemeris para las posiciones planetarias y resuelve el lugar y la zona horaria indicados antes de proyectar las líneas angulares. El resultado depende de la precisión de la hora y el lugar de nacimiento introducidos."
+        "description": "La calculadora usa datos de astronomy-engine para las posiciones planetarias y resuelve el lugar y la zona horaria indicados antes de proyectar las líneas angulares. El resultado depende de la precisión de la hora y el lugar de nacimiento introducidos."
       },
       {
         "title": "¿Debería mudarme basándome únicamente en mi mapa de astrocartografía?",
@@ -648,7 +648,7 @@
       {
         "title": "Sarah M.",
         "label": "Astróloga Profesional, Reino Unido",
-        "description": "¡Esta calculadora de astrocartografía es increíblemente precisa! Los cálculos de Swiss Ephemeris coinciden con el software profesional de astrología. La uso diariamente para consultas con clientes y lecturas de astrología de reubicación. Las interpretaciones de IA ayudan a explicar las líneas planetarias claramente. Altamente recomendada para astrólogos y entusiastas de la astrología.",
+        "description": "Las posiciones planetarias salen de astronomy-engine, no de la Swiss Ephemeris. La uso diariamente para consultas con clientes y lecturas de astrología de reubicación. Las interpretaciones de IA ayudan a explicar las líneas planetarias claramente. Altamente recomendada para astrólogos y entusiastas de la astrología.",
         "image": {
           "src": "/imgs/users/1.webp"
         }
@@ -956,7 +956,7 @@
     "name": "footer",
     "brand": {
       "title": "Astrocarto.org",
-      "description": "La Calculadora de Astrocartografía proporciona herramientas profesionales de astrocartografía para nómadas digitales, planificadores de relocalización y practicantes de astrología. Usamos Swiss Ephemeris para asegurar precisión astronómica, y la tecnología de IA hace accesibles las interpretaciones complejas de líneas planetarias. Protección estricta de privacidad, análisis de ubicaciones globales—haciendo cartas profesionales de astrocartografía accesibles para todos.",
+      "description": "La Calculadora de Astrocartografía proporciona herramientas profesionales de astrocartografía para nómadas digitales, planificadores de relocalización y practicantes de astrología. Usamos astronomy-engine para las posiciones planetarias y no la Swiss Ephemeris, y la tecnología de IA hace accesibles las interpretaciones complejas de líneas planetarias. Protección estricta de privacidad, análisis de ubicaciones globales—haciendo cartas profesionales de astrocartografía accesibles para todos.",
       "logo": {
         "src": "/logo.png",
         "alt": "Astrocarto.org"

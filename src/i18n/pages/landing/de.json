@@ -332,10 +332,10 @@
     "title": "Astronomische Präzisionstechnik",
     "items": [
       {
-        "title": "Swiss Ephemeris",
+        "title": "astronomy-engine",
         "image": {
           "src": "/imgs/logos/nextjs.svg",
-          "alt": "Swiss Ephemeris"
+          "alt": "astronomy-engine"
         }
       },
       {
@@ -379,7 +379,7 @@
     "items": [
       {
         "title": "Planetenberechnungen in Profi-Qualität",
-        "description": "Der Rechner nutzt Swiss-Ephemeris-Daten für die Planetenpositionen und projiziert Aufgang (ASC), Untergang (DSC), Medium Coeli (MC) und Imum Coeli (IC) auf die Weltkarte. Das Ergebnis hängt von der Genauigkeit der eingegebenen Geburtszeit und des Geburtsorts ab.",
+        "description": "Der Rechner nutzt astronomy-engine für die Planetenpositionen und projiziert Aufgang (ASC), Untergang (DSC), Medium Coeli (MC) und Imum Coeli (IC) auf die Weltkarte. Das Ergebnis hängt von der Genauigkeit der eingegebenen Geburtszeit und des Geburtsorts ab.",
         "image": {
           "src": "/imgs/features/astrocartography-lines-calculation.webp",
           "alt": "Professionelle Astrokartografie-Berechnungen"
@@ -516,8 +516,8 @@
         "icon": "RiGlobalLine"
       },
       {
-        "title": "Swiss Ephemeris Berechnungsengine",
-        "description": "Der Rechner nutzt Daten aus Swiss Ephemeris für Planetenpositionen und projiziert die relevanten Winkellinien anhand Ihrer Geburtsdaten auf die Weltkarte.",
+        "title": "astronomy-engine",
+        "description": "Der Rechner nutzt Daten aus astronomy-engine für Planetenpositionen und projiziert die relevanten Winkellinien anhand Ihrer Geburtsdaten auf die Weltkarte.",
         "icon": "RiCompassLine"
       },
       {
@@ -597,7 +597,7 @@
       },
       {
         "title": "Wie genau sind die Berechnungen?",
-        "description": "Der Rechner nutzt Swiss-Ephemeris-Daten für Planetenpositionen und bestimmt Geburtsort und Zeitzone, bevor die Winkellinien projiziert werden. Das Ergebnis hängt von der Genauigkeit Ihrer Eingaben ab."
+        "description": "Der Rechner nutzt astronomy-engine für Planetenpositionen und bestimmt Geburtsort und Zeitzone, bevor die Winkellinien projiziert werden. Das Ergebnis hängt von der Genauigkeit Ihrer Eingaben ab."
       },
       {
         "title": "Soll ich nur wegen meiner Astrokartografie-Karte umziehen?",
@@ -628,7 +628,7 @@
       {
         "title": "Sarah M.",
         "label": "Professionelle Astrologin, Großbritannien",
-        "description": "Dieser Astrokartografie Rechner ist unglaublich genau! Die Swiss Ephemeris Berechnungen stimmen mit professioneller Astrologie-Software überein. Ich nutze ihn täglich für Kundenberatungen und Astrokartografie-Lesungen. Die KI-Interpretationen helfen, Planetenlinien klar zu erklären. Sehr empfehlenswert für Astrologen und Astrologie-Enthusiasten.",
+        "description": "Die Planetenpositionen kommen von astronomy-engine, nicht von der Swiss Ephemeris. Ich nutze ihn täglich für Kundenberatungen und Astrokartografie-Lesungen. Die KI-Interpretationen helfen, Planetenlinien klar zu erklären. Sehr empfehlenswert für Astrologen und Astrologie-Enthusiasten.",
         "image": {
           "src": "/imgs/users/1.webp"
         }
@@ -936,7 +936,7 @@
     "name": "footer",
     "brand": {
       "title": "Astrocarto.org",
-      "description": "Der Astrokartografie Rechner bietet professionelle Astrokartografie-Tools für digitale Nomaden, Umzugsplaner und Astrologie-Praktiker. Wir nutzen Swiss Ephemeris für astronomische Präzision; KI macht komplexe Planetenlinien-Interpretationen zugänglich. Strikter Datenschutz, globale Standortanalyse – professionelle Astrokartografie-Karten für alle.",
+      "description": "Der Astrokartografie Rechner bietet professionelle Astrokartografie-Tools für digitale Nomaden, Umzugsplaner und Astrologie-Praktiker. Wir nutzen astronomy-engine für Planetenpositionen und nicht die Swiss Ephemeris; KI macht komplexe Planetenlinien-Interpretationen zugänglich. Strikter Datenschutz, globale Standortanalyse – professionelle Astrokartografie-Karten für alle.",
       "logo": {
         "src": "/logo.png",
         "alt": "Astrocarto.org"

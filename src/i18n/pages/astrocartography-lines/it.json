@@ -480,7 +480,7 @@
     "items": [
       {
         "title": "Come vengono calcolate le linee di astrocartografia",
-        "description": "Al momento della tua nascita, ogni pianeta occupava una posizione specifica nel cielo. L'astrocartografia calcola dove ciascuno di quei pianeti stava sorgendo (ASC), tramontando (DSC), culminando al punto più alto (MC) o al punto più basso sotto la Terra (IC) per ogni longitudine del globo. Queste quattro posizioni creano quattro linee distinte per pianeta — fino a 40 linee planetarie principali sulla tua mappa personale. Le linee sono calcolate con dati astronomici Swiss Ephemeris, convertendo le coordinate equatoriali dei pianeti (Ascensione Retta e Declinazione) in latitudine e longitudine geografiche attraverso trigonometria sferica.",
+        "description": "Al momento della tua nascita, ogni pianeta occupava una posizione specifica nel cielo. L'astrocartografia calcola dove ciascuno di quei pianeti stava sorgendo (ASC), tramontando (DSC), culminando al punto più alto (MC) o al punto più basso sotto la Terra (IC) per ogni longitudine del globo. Queste quattro posizioni creano quattro linee distinte per pianeta — fino a 40 linee planetarie principali sulla tua mappa personale. Le linee sono calcolate con dati astronomici astronomy-engine, convertendo le coordinate equatoriali dei pianeti (Ascensione Retta e Declinazione) in latitudine e longitudine geografiche attraverso trigonometria sferica.",
         "image": {
           "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
           "alt": "Come vengono calcolate le linee di astrocartografia usando gli angoli planetari"
@@ -696,7 +696,7 @@
   "cta": {
     "name": "cta",
     "title": "Trova subito le tue linee di astrocartografia",
-    "description": "Genera la tua mappa personalizzata di astrocartografia con calcoli Swiss Ephemeris e precisione di 1 miglio. Vedi esattamente dove ogni linea planetaria cade sul globo — poi clicca su qualsiasi linea o città per un'interpretazione istantanea con IA. Completamente gratuito, senza registrazione.",
+    "description": "Genera la tua mappa personalizzata di astrocartografia con astronomy-engine. Vedi esattamente dove ogni linea planetaria cade sul globo — poi clicca su qualsiasi linea o città per un'interpretazione istantanea con IA. Completamente gratuito, senza registrazione.",
     "buttons": [
       {
         "title": "Tema e mappa di astrocartografia gratuiti →",

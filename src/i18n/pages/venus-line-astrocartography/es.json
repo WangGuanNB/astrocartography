@@ -215,7 +215,7 @@
   "cta": {
     "name": "cta",
     "title": "Encuentra Dónde Cae tu Línea de Venus",
-    "description": "Genera tu mapa personal de astrocartografía usando cálculos profesionales de Swiss Ephemeris y ve exactamente dónde tu línea de Venus cruza el globo. Haz clic en cualquier ciudad o línea para una interpretación instantánea con IA — incluyendo qué ángulo de Venus está activo y qué significa para tus relaciones, carrera y vida diaria. Completamente gratis, sin registro.",
+    "description": "Genera tu mapa personal de astrocartografía usando astronomy-engine y ve exactamente dónde tu línea de Venus cruza el globo. Haz clic en cualquier ciudad o línea para una interpretación instantánea con IA — incluyendo qué ángulo de Venus está activo y qué significa para tus relaciones, carrera y vida diaria. Completamente gratis, sin registro.",
     "buttons": [
       {
         "title": "Carta de Astrocartografía gratis →",

@@ -215,7 +215,7 @@
   "cta": {
     "name": "cta",
     "title": "Trova Dove Cade la tua Linea di Venere",
-    "description": "Genera la tua mappa personale di astrocartografia usando calcoli professionali Swiss Ephemeris e vedi esattamente dove la tua linea di Venere attraversa il globo. Clicca su qualsiasi città o linea per un'interpretazione istantanea con IA — incluso quale angolo di Venere è attivo e cosa significa per relazioni, carriera e vita quotidiana. Completamente gratuito, senza registrazione.",
+    "description": "Genera la tua mappa personale di astrocartografia usando astronomy-engine e vedi esattamente dove la tua linea di Venere attraversa il globo. Clicca su qualsiasi città o linea per un'interpretazione istantanea con IA — incluso quale angolo di Venere è attivo e cosa significa per relazioni, carriera e vita quotidiana. Completamente gratuito, senza registrazione.",
     "buttons": [
       {
         "title": "Carta di Astrocartografia gratuita →",

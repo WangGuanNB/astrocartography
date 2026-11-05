@@ -190,7 +190,7 @@ export default async function CalculatorPage({
               "url": getCanonicalUrl("en", "/")
             },
             "featureList": [
-              "Swiss Ephemeris-based calculations",
+              "astronomy-engine calculations",
               "Interactive astrocartography world map",
               "Planetary line filtering and city tools",
               "Optional AI map chat and reports (credits)",

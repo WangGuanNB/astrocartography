@@ -203,7 +203,7 @@
   "cta": {
     "name": "cta",
     "title": "找到你的水星线所在位置",
-    "description": "使用专业 Swiss Ephemeris 计算生成你的个人星盘地图，精确查看水星线如何穿越全球。查看哪些城市落在你的水星 MC、ASC、DSC 或 IC 线上，并获得即时 AI 解读——包括各配置对你的写作、商业与智力生活的含义。完全免费，无需注册。",
+    "description": "使用 astronomy-engine生成你的个人星盘地图，精确查看水星线如何穿越全球。查看哪些城市落在你的水星 MC、ASC、DSC 或 IC 线上，并获得即时 AI 解读——包括各配置对你的写作、商业与智力生活的含义。完全免费，无需注册。",
     "buttons": [
       {
         "title": "免费星盘地图 Astrocartography →",

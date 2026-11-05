@@ -203,7 +203,7 @@
   "cta": {
     "name": "cta",
     "title": "Encontre Onde Cai sua Linha do Sol",
-    "description": "Gere seu mapa pessoal de astrocartografia usando cálculos Swiss Ephemeris e veja exatamente onde sua linha do Sol cruza o globo. Clique em qualquer cidade ou linha para interpretação instantânea com IA — incluindo qual ângulo do Sol está ativo e o que significa para carreira, confiança e autoexpressão autêntica. Completamente grátis, sem cadastro.",
+    "description": "Gere seu mapa pessoal de astrocartografia usando astronomy-engine e veja exatamente onde sua linha do Sol cruza o globo. Clique em qualquer cidade ou linha para interpretação instantânea com IA — incluindo qual ângulo do Sol está ativo e o que significa para carreira, confiança e autoexpressão autêntica. Completamente grátis, sem cadastro.",
     "buttons": [
       {
         "title": "Mapa de Astrocartografia grátis →",

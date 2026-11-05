@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Calculadora de Astrocartografía Gratis - Genera Tu Mapa Online 2026",
-    "description": "Free astrocartography calculator with Swiss Ephemeris-based lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
+    "description": "Free astrocartography calculator with astronomy-engine lines on an interactive world map. Optional sign-in; guest daily map limits apply. Compare cities on the map; deeper AI features use credits.",
     "keywords": "calculadora astrocartografía, calculadora astrocartografía gratis, calculadora astrocartografía online, como funciona calculadora astrocartografía, metodo calculo astrocartografía"
   },
   "intentAnchor": {
@@ -36,7 +36,7 @@
     "name": "introduce",
     "title": "Qué es la Calculadora de Astrocartografía",
     "label": "Introducción",
-    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use Swiss Ephemeris-style astronomy on our servers after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
+    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use astronomy-engine, not the Swiss Ephemeris, after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
     "image": {
       "src": "/imgs/features/hero-web.webp",
       "alt": "Interfaz de la Calculadora de Astrocartografía"
@@ -44,7 +44,7 @@
     "items": [
       {
         "title": "¿Cómo Funciona la Calculadora de Astrocartografía?",
-        "description": "La calculadora de líneas planetarias usa el Swiss Ephemeris para determinar la posición de cada planeta en el cielo en el momento de tu nacimiento, luego calcula dónde estos planetas estaban angulares (ascendiendo, descendiendo, culminando o en el nadir) en la superficie de la Tierra. Esta calculadora de mapa astral emplea trigonometría esférica—usando fórmulas como cos(H) = -tan(φ) * tan(δ) para líneas ASC/DSC—para proyectar posiciones planetarias en un mapa mundial. La herramienta de astrología locacional convierte coordenadas ecuatoriales (Ascensión Recta y Declinación) en coordenadas geográficas usando cálculos de tiempo sidéreo, renderizando líneas visibles que muestran patrones de energía específicos de la ubicación. Esta calculadora de mapa de astrocartografía procesa todos los cálculos en tiempo real, mostrando resultados en un mapa interactivo con precisión de nivel profesional que coincide con software estándar de la industria.",
+        "description": "La calculadora de líneas planetarias usa el astronomy-engine para determinar la posición de cada planeta en el cielo en el momento de tu nacimiento, luego calcula dónde estos planetas estaban angulares (ascendiendo, descendiendo, culminando o en el nadir) en la superficie de la Tierra. Esta calculadora de mapa astral emplea trigonometría esférica—usando fórmulas como cos(H) = -tan(φ) * tan(δ) para líneas ASC/DSC—para proyectar posiciones planetarias en un mapa mundial. La herramienta de astrología locacional convierte coordenadas ecuatoriales (Ascensión Recta y Declinación) en coordenadas geográficas usando cálculos de tiempo sidéreo, renderizando líneas visibles que muestran patrones de energía específicos de la ubicación. Esta calculadora de mapa de astrocartografía procesa todos los cálculos en tiempo real, mostrando resultados en un mapa interactivo con precisión de nivel profesional que coincide con software estándar de la industria.",
         "image": {
           "src": "/imgs/features/1.webp",
           "alt": "Cómo funciona la calculadora de astrocartografía"
@@ -75,8 +75,8 @@
     "description": "Nuestra calculadora de astrocartografía combina precisión de nivel profesional con características fáciles de usar, ofreciendo la calculadora de astrología de reubicación gratuita más completa disponible.",
     "items": [
       {
-        "title": "Swiss Ephemeris-Based Calculations",
-        "description": "Planetary positions and lines are computed with Swiss Ephemeris-style astronomy, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
+        "title": "astronomy-engine",
+        "description": "Planetary positions and lines are computed with astronomy-engine, not the Swiss Ephemeris, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
         "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -137,8 +137,8 @@
         "icon": "RiGlobalLine"
       },
       {
-        "title": "Motor Swiss Ephemeris",
-        "description": "Esta calculadora de mapa de astrocartografía usa el Swiss Ephemeris, admitiendo cálculos desde 3000 a.C. hasta 3000 d.C. La calculadora de mapa astral mantiene los mismos estándares de precisión que el software profesional de astrología en todo el mundo.",
+        "title": "astronomy-engine",
+        "description": "Esta calculadora usa astronomy-engine para el Sol hasta Plutón. No usa la Swiss Ephemeris. La hora y el lugar de nacimiento deciden dónde cae cada línea.",
         "icon": "RiCompassLine"
       },
       {
@@ -171,7 +171,7 @@
     "items": [
       {
         "title": "¿Cómo funciona la calculadora de astrocartografía?",
-        "description": "La calculadora de astrología de reubicación usa el Swiss Ephemeris para calcular posiciones planetarias en el momento de tu nacimiento, luego determina dónde estos planetas estaban angulares (ascendiendo, descendiendo, culminando o en el nadir) en la superficie de la Tierra. Esta calculadora de líneas planetarias usa trigonometría esférica para proyectar posiciones planetarias en un mapa mundial, creando líneas visibles que muestran patrones de energía específicos de la ubicación."
+        "description": "La calculadora de astrología de reubicación usa el astronomy-engine para calcular posiciones planetarias en el momento de tu nacimiento, luego determina dónde estos planetas estaban angulares (ascendiendo, descendiendo, culminando o en el nadir) en la superficie de la Tierra. Esta calculadora de líneas planetarias usa trigonometría esférica para proyectar posiciones planetarias en un mapa mundial, creando líneas visibles que muestran patrones de energía específicos de la ubicación."
       },
       {
         "title": "¿Qué parámetros astrológicos usa la calculadora de astrocartografía?",
@@ -183,7 +183,7 @@
       },
       {
         "title": "¿Qué tan precisa es la calculadora de astrocartografía?",
-        "description": "La calculadora de líneas planetarias logra precisión de 1 milla usando cálculos del Swiss Ephemeris, coincidiendo con resultados de software profesional como Solar Fire y AstroGold. Esta calculadora de mapa de astrocartografía maneja automáticamente conversiones de zona horaria, cambios históricos de horario de verano y transiciones del sistema de calendario. La calculadora de mapa astral ha sido verificada contra eventos históricos conocidos y consultas profesionales."
+        "description": "La calculadora usa astronomy-engine, no la Swiss Ephemeris. Esta calculadora de mapa de astrocartografía maneja automáticamente conversiones de zona horaria, cambios históricos de horario de verano y transiciones del sistema de calendario. La hora y el lugar de nacimiento deciden dónde cae cada línea."
       },
       {
         "title": "¿Qué pasa si no sé mi hora exacta de nacimiento?",
@@ -198,7 +198,7 @@
   "cta": {
     "name": "cta",
     "title": "Genera Tu Mapa de Astrocartografía Gratis Ahora",
-    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
+    "description": "Generate your astrocartography map with astronomy-engine lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
     "buttons": [
       {
         "title": "Carta de Astrocartografía gratis →",

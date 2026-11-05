@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "免费星盘地图计算器 - 在线生成你的星盘地图 2026",
-    "description": "免费星盘地图计算器：瑞士星历表精度的交互世界地图与行星线。可选注册；访客有每日地图次数限制。可在地图上对比城市；更深的 AI 功能消耗积分。",
+    "description": "免费星盘地图计算器：astronomy-engine精度的交互世界地图与行星线。可选注册；访客有每日地图次数限制。可在地图上对比城市；更深的 AI 功能消耗积分。",
     "keywords": "星盘地图计算器, 免费星盘地图计算器, 在线星盘地图计算器, 星盘地图计算器使用方法, 星盘地图计算方法"
   },
   "intentAnchor": {
@@ -36,7 +36,7 @@
     "name": "introduce",
     "title": "什么是星盘地图计算器",
     "label": "介绍",
-    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use Swiss Ephemeris-style astronomy on our servers after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
+    "description": "This astrocartography calculator projects your birth moment onto a world map so you can see where planetary lines fall globally. Calculations use astronomy-engine, not the Swiss Ephemeris, after you submit birth data. Use it alongside the relocation chart and Compare Cities for relocation research—not as a guarantee of outcomes.",
     "image": {
       "src": "/imgs/features/hero-web.webp",
       "alt": "星盘地图计算器界面"
@@ -44,7 +44,7 @@
     "items": [
       {
         "title": "星盘地图计算器如何工作？",
-        "description": "行星线计算器使用瑞士星历表确定你出生时刻每颗行星在天空中的位置，然后计算这些行星在地球表面何处处于角点位置（上升、下降、中天或天底）。这个星图计算器采用球面三角学——使用如 cos(H) = -tan(φ) * tan(δ) 等公式计算上升/下降线——将行星位置投射到世界地图上。位置占星工具将赤道坐标（赤经和赤纬）转换为地理坐标，使用恒星时计算，渲染出显示位置特定能量模式的可见线条。这个星盘地图计算器实时处理所有计算，在交互式地图上显示结果，精度达到专业级，与行业标准软件匹配。",
+        "description": "行星线计算器使用astronomy-engine确定你出生时刻每颗行星在天空中的位置，然后计算这些行星在地球表面何处处于角点位置（上升、下降、中天或天底）。这个星图计算器采用球面三角学——使用如 cos(H) = -tan(φ) * tan(δ) 等公式计算上升/下降线——将行星位置投射到世界地图上。位置占星工具将赤道坐标（赤经和赤纬）转换为地理坐标，使用恒星时计算，渲染出显示位置特定能量模式的可见线条。这个星盘地图计算器实时处理所有计算，并在交互式地图上显示结果。它使用 astronomy-engine，不使用瑞士星历表。",
         "image": {
           "src": "/imgs/features/1.webp",
           "alt": "星盘地图计算器工作原理"
@@ -75,8 +75,8 @@
     "description": "我们的星盘地图计算器结合专业级精度和用户友好功能，提供最全面的免费位置占星计算器。",
     "items": [
       {
-        "title": "Swiss Ephemeris-Based Calculations",
-        "description": "Planetary positions and lines are computed with Swiss Ephemeris-style astronomy, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
+        "title": "astronomy-engine",
+        "description": "Planetary positions and lines are computed with astronomy-engine, not the Swiss Ephemeris, with timezone and historical DST handled in the calculation pipeline. Results are intended for serious exploration alongside professional judgment—not as a substitute for legal, financial, or medical advice.",
         "icon": "RiShieldCheckLine",
         "image": {
           "src": "/imgs/features/4.webp",
@@ -141,8 +141,8 @@
         "icon": "RiGlobalLine"
       },
       {
-        "title": "瑞士星历表引擎",
-        "description": "这个星盘地图计算器使用瑞士星历表，支持从公元前3000年到公元3000年的计算。星图计算器保持与全球专业占星软件相同的精度标准。",
+        "title": "astronomy-engine引擎",
+        "description": "这个星盘地图计算器使用 astronomy-engine 计算太阳到冥王星的位置，不使用瑞士星历表。线条位置取决于你输入的出生时间和出生地。",
         "icon": "RiCompassLine"
       },
       {
@@ -175,7 +175,7 @@
     "items": [
       {
         "title": "星盘地图计算器如何工作？",
-        "description": "位置占星计算器使用瑞士星历表计算你出生时刻的行星位置，然后确定这些行星在地球表面何处处于角点位置（上升、下降、中天或天底）。这个行星线计算器使用球面三角学将行星位置投射到世界地图上，创建显示位置特定能量模式的可见线条。"
+        "description": "位置占星计算器使用astronomy-engine计算你出生时刻的行星位置，然后确定这些行星在地球表面何处处于角点位置（上升、下降、中天或天底）。这个行星线计算器使用球面三角学将行星位置投射到世界地图上，创建显示位置特定能量模式的可见线条。"
       },
       {
         "title": "星盘地图计算器使用哪些占星参数？",
@@ -187,7 +187,7 @@
       },
       {
         "title": "星盘地图计算器有多准确？",
-        "description": "行星线计算器使用瑞士星历表计算达到1英里精度，与 Solar Fire 和 AstroGold 等专业软件的结果匹配。这个星盘地图计算器自动处理时区转换、历史夏令时变更和历法系统转换。星图计算器已与已知历史事件和专业咨询验证。"
+        "description": "行星线计算器使用 astronomy-engine 计算太阳到冥王星的位置，不使用瑞士星历表。它会处理你提供的时区和夏令时。线条位置取决于出生时间和出生地是否准确。"
       },
       {
         "title": "如果我不知道确切的出生时间怎么办？",
@@ -202,7 +202,7 @@
   "cta": {
     "name": "cta",
     "title": "立即生成你的免费星盘地图",
-    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
+    "description": "Generate your astrocartography map with astronomy-engine lines, then explore cities on the map or continue to the relocation chart and Where to Live guide. Optional sign-in; deeper AI features use credits.",
     "buttons": [
       {
         "title": "免费星盘地图 Astrocartography →",

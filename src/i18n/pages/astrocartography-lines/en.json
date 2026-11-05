@@ -480,7 +480,7 @@
     "items": [
       {
         "title": "How Astrocartography Lines Are Calculated",
-        "description": "At your birth moment, every planet occupied a specific position in the sky. Astrocartography calculates where each of those planets was rising (ASC), setting (DSC), culminating at its highest point (MC), or at its lowest point beneath the Earth (IC) for every longitude on the globe. These four positions create four distinct lines per planet—resulting in up to 40 primary planetary lines on your personal map. The lines are calculated using Swiss Ephemeris astronomical data, converting equatorial planetary coordinates (Right Ascension and Declination) into geographic latitude and longitude through spherical trigonometry.",
+        "description": "At your birth moment, every planet occupied a specific position in the sky. Astrocartography calculates where each of those planets was rising (ASC), setting (DSC), culminating at its highest point (MC), or at its lowest point beneath the Earth (IC) for every longitude on the globe. These four positions create four distinct lines per planet—resulting in up to 40 primary planetary lines on your personal map. The lines are calculated using astronomy-engine, converting equatorial planetary coordinates (Right Ascension and Declination) into geographic latitude and longitude through spherical trigonometry.",
         "image": {
           "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
           "alt": "How astrocartography lines are calculated using planetary angles"
@@ -696,7 +696,7 @@
   "cta": {
     "name": "cta",
     "title": "Find Your Astrocartography Lines Now",
-    "description": "Generate your astrocartography map with Swiss Ephemeris-based lines, explore the globe, and use optional AI map chat for deeper reads. Guest map sessions have daily limits; sign-in unlocks more. AI features use credits as shown in the product.",
+    "description": "Generate your astrocartography map with astronomy-engine lines, explore the globe, and use optional AI map chat for deeper reads. Guest map sessions have daily limits; sign-in unlocks more. AI features use credits as shown in the product.",
     "buttons": [
       {
         "title": "Free Astrocartography Chart & Map →",

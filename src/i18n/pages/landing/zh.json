@@ -332,10 +332,10 @@
     "title": "由天文精度技术驱动",
     "items": [
       {
-        "title": "Swiss Ephemeris",
+        "title": "astronomy-engine",
         "image": {
           "src": "/imgs/logos/nextjs.svg",
-          "alt": "Swiss Ephemeris"
+          "alt": "astronomy-engine"
         }
       },
       {
@@ -379,7 +379,7 @@
     "items": [
       {
         "title": "专业级行星计算",
-        "description": "计算器使用 Swiss Ephemeris 数据计算出生时刻的行星位置，并将上升（ASC）、下降（DSC）、中天（MC）和天底（IC）等相关角度线投射到世界地图。结果会受到你输入的出生时间和地点准确度影响。",
+        "description": "计算器使用 astronomy-engine 数据计算出生时刻的行星位置，并将上升（ASC）、下降（DSC）、中天（MC）和天底（IC）等相关角度线投射到世界地图。结果会受到你输入的出生时间和地点准确度影响。",
         "image": {
           "src": "/imgs/features/astrocartography-lines-calculation.webp",
           "alt": "专业级星盘地图计算"
@@ -516,8 +516,8 @@
         "icon": "RiGlobalLine"
       },
       {
-        "title": "Swiss Ephemeris计算引擎",
-        "description": "计算器使用 Swiss Ephemeris 数据参与行星位置计算，再依据出生信息将相关角度线投射到世界地图上。",
+        "title": "astronomy-engine",
+        "description": "计算器使用 astronomy-engine 数据参与行星位置计算，再依据出生信息将相关角度线投射到世界地图上。",
         "icon": "RiCompassLine"
       },
       {
@@ -597,7 +597,7 @@
       },
       {
         "title": "计算有多准确？",
-        "description": "计算器使用 Swiss Ephemeris 数据计算行星位置，并在生成地图前解析你提供的出生地点和时区。结果取决于出生时间和地点输入是否准确。"
+        "description": "计算器使用 astronomy-engine 数据计算行星位置，并在生成地图前解析你提供的出生地点和时区。结果取决于出生时间和地点输入是否准确。"
       },
       {
         "title": "我应该仅基于星盘地图搬迁吗？",
@@ -628,7 +628,7 @@
       {
         "title": "Sarah M.",
         "label": "专业占星师,英国",
-        "description": "这个星盘地图计算器非常准确!Swiss Ephemeris计算与专业占星软件完全匹配。我每天用它为客户提供咨询和搬迁占星解读。AI解读帮助清晰地解释行星线。强烈推荐给占星师和占星爱好者。",
+        "description": "行星位置来自 astronomy-engine，不是瑞士星历表。我每天用它为客户提供咨询和搬迁占星解读。AI解读帮助清晰地解释行星线。强烈推荐给占星师和占星爱好者。",
         "image": {
           "src": "/imgs/users/1.webp"
         }
@@ -936,7 +936,7 @@
     "name": "footer",
     "brand": {
       "title": "Astrocarto.org",
-      "description": "星盘地图计算器为数字游民、搬迁规划者和占星从业者提供专业级星盘地图工具。我们使用Swiss Ephemeris确保天文精度，AI技术使复杂的行星线解读变得易于理解。严格的隐私保护，全球位置分析——让专业星盘地图对每个人都可及。",
+      "description": "星盘地图计算器为数字游民、搬迁规划者和占星从业者提供专业级星盘地图工具。我们使用 astronomy-engine 计算行星位置，不使用瑞士星历表。AI技术使复杂的行星线解读变得易于理解。严格的隐私保护，全球位置分析——让专业星盘地图对每个人都可及。",
       "logo": {
         "src": "/logo.png",
         "alt": "Astrocarto.org"

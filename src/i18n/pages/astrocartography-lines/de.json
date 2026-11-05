@@ -480,7 +480,7 @@
     "items": [
       {
         "title": "Wie Astrokartographie Planetenlinien berechnet werden",
-        "description": "Zum Zeitpunkt Ihrer Geburt stand jeder Planet an einer bestimmten Himmelsposition. Die Astrokartographie berechnet, wo jeder dieser Planeten für jeden Längengrad auf der Erde aufging (AC), unterging (DC), im Zenit stand (MC) oder im Nadir (IC). Diese vier Positionen ergeben vier Linien pro Planet — bis zu 40 primäre Planetenlinien auf Ihrer persönlichen Karte. Die Berechnung nutzt astronomische Daten der Swiss Ephemeris und wandelt äquatoriale Koordinaten (Rektaszension und Deklination) über sphärische Trigonometrie in geographische Breite und Länge um.",
+        "description": "Zum Zeitpunkt Ihrer Geburt stand jeder Planet an einer bestimmten Himmelsposition. Die Astrokartographie berechnet, wo jeder dieser Planeten für jeden Längengrad auf der Erde aufging (AC), unterging (DC), im Zenit stand (MC) oder im Nadir (IC). Diese vier Positionen ergeben vier Linien pro Planet — bis zu 40 primäre Planetenlinien auf Ihrer persönlichen Karte. Die Berechnung nutzt astronomische Daten der astronomy-engine und wandelt äquatoriale Koordinaten (Rektaszension und Deklination) über sphärische Trigonometrie in geographische Breite und Länge um.",
         "image": {
           "src": "/imgs/features/astrocartography-lines/astrocartography-lines-foundation.webp",
           "alt": "Berechnung von Astrokartographie Planetenlinien anhand der Planetenachsen"
@@ -696,7 +696,7 @@
   "cta": {
     "name": "cta",
     "title": "Finden Sie jetzt Ihre Astrokartographie Planetenlinien",
-    "description": "Erstellen Sie Ihre persönliche Astrokartographie-Karte mit Swiss-Ephemeris-Berechnungen und 1-Meilen-Genauigkeit. Sehen Sie genau, wo jede Planetenlinie auf dem Globus verläuft — und klicken Sie auf jede Linie oder Stadt für eine sofortige KI-Deutung. Völlig kostenlos, ohne Anmeldung.",
+    "description": "Erstellen Sie Ihre persönliche Astrokartographie-Karte mit astronomy-engine. Sehen Sie genau, wo jede Planetenlinie auf dem Globus verläuft — und klicken Sie auf jede Linie oder Stadt für eine sofortige KI-Deutung. Völlig kostenlos, ohne Anmeldung.",
     "buttons": [
       {
         "title": "Kostenlose Astrokartographie-Karte →",
