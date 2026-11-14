@@ -519,6 +519,13 @@
     }
   },
   "astro_chat": {
+    "continue_title": "Continue exploring your chart",
+    "continue_description": "Sign in to use credits for more AI chat and deeper reports. The cost is shown before each paid action.",
+    "sign_in_continue": "Sign in to continue",
+    "sign_in_notice": "Please sign in to continue asking questions.",
+    "sign_in_placeholder": "Sign in to continue asking questions...",
+    "question_placeholder": "Ask a question about your chart...",
+    "generic_error": "Something went wrong. Please try again later.",
     "credit_cost_notice": "Each conversation consumes {credits} credits",
     "credit_cost_notice_singular": "Each conversation consumes {credits} credit",
     "insufficient_credits_title": "Insufficient Credits",
@@ -535,7 +542,7 @@
     "no_messages": "No messages to download",
     "welcome_title": "Welcome! Ready to explore your planetary blueprint?",
     "welcome_subtitle": "Discover the stories written in your stars and planetary lines",
-    "disclaimer": "💡 AI analyzes only cities in your chart. For reference only.",
+    "disclaimer": "💡 AI interprets the supplied chart data. For reflection, not predictions.",
     "analysis_status_reading": "Reading the planetary lines in your chart...",
     "analysis_status_connecting": "Connecting your question with the strongest map signals...",
     "analysis_status_comparing": "Comparing the trade-offs in your chart...",

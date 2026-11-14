@@ -25,6 +25,7 @@ interface LocationAutocompleteProps {
   className?: string;
   disabled?: boolean;
   id?: string;
+  placement?: 'above' | 'below';
 }
 
 export function LocationAutocomplete({
@@ -34,7 +35,8 @@ export function LocationAutocomplete({
   placeholder,
   className,
   disabled,
-  id
+  id,
+  placement = 'below'
 }: LocationAutocompleteProps) {
   const locale = useLocale(); // 获取当前页面语言
   const [suggestions, setSuggestions] = useState<LocationResult[]>([]);
@@ -54,6 +56,7 @@ export function LocationAutocomplete({
       pt: 'pt-BR,pt,en',
       es: 'es-ES,es,en',
       it: 'it-IT,it,en',
+      de: 'de-DE,de,en',
     };
     
     // 返回当前语言的 accept-language，如果没有匹配则默认英文
@@ -246,9 +249,9 @@ export function LocationAutocomplete({
         )}
       </div>
 
-      {showSuggestions && suggestions.length > 0 && (
+      {!disabled && showSuggestions && suggestions.length > 0 && (
         <div 
-          className="absolute z-[9999] mt-1 w-full rounded-md border border-purple-500/30 bg-gray-900 shadow-2xl max-h-60 overflow-auto"
+          className={cn("absolute z-[9999] w-full rounded-md border border-purple-500/30 bg-gray-900 shadow-2xl max-h-60 overflow-auto", placement === 'above' ? 'bottom-full mb-1' : 'mt-1')}
           style={{ zIndex: 9999 }}
         >
           <div className="p-1">

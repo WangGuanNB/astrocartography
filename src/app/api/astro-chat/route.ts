@@ -19,6 +19,8 @@ import { getUserCredits, decreaseCredits, CreditsTransType } from "@/services/cr
 import { getAIChatCreditCost } from "@/services/config";
 import { recordAiChatEvent } from "@/models/ai-chat-event";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { resolveChatLanguage } from "@/lib/chat-language";
+import { chatCitiesSchema, formatSelectedCityEvidence, type ChatCity } from "@/lib/chat-city-context";
 
 const ASTRO_CHAT_MODEL =
   process.env.DEEPSEEK_ASTRO_CHAT_MODEL ||
@@ -807,40 +809,8 @@ async function settleChatCredits(
   });
 }
 
-// 检测用户问题的语言
-function detectUserLanguage(text: string): string {
-  const trimmedText = text.trim();
-  
-  // 检测中文（包含中文字符）
-  if (/[\u4e00-\u9fa5]/.test(trimmedText)) {
-    return '中文';
-  }
-  
-  // 检测西班牙文（包含西班牙语特殊字符）
-  if (/[áéíóúñüÁÉÍÓÚÑÜ]/.test(trimmedText)) {
-    return '西班牙文';
-  }
-  
-  // 检测意大利文（包含意大利语特殊字符）
-  if (/[àèéìíîòóùúÀÈÉÌÍÎÒÓÙÚ]/.test(trimmedText)) {
-    return '意大利文';
-  }
-  
-  // 检测葡萄牙文（包含葡萄牙语特殊字符）
-  if (/[ãõçÃÕÇ]/.test(trimmedText)) {
-    return '葡萄牙文';
-  }
-  
-  // 检测是否有英文字母（大部分情况下是英文）
-  if (/[a-zA-Z]/.test(trimmedText)) {
-    return '英文';
-  }
-  
-  // 默认英文
-  return '英文';
-}
-
 interface ChatRequest {
+  selectedCities?: ChatCity[];
   messages: Array<{
     role: 'user' | 'assistant';
     content: string;
@@ -903,6 +873,10 @@ export async function POST(req: Request) {
     const isRisingSignDeepReport = requestType === "rising_sign_deep_report";
     const isSynastryDeepReport = requestType === "synastry_deep_report";
     const isNatalDeepReport = requestType === "natal_deep_report";
+    const selectedCitiesResult = chatCitiesSchema.safeParse(body.selectedCities ?? []);
+    if (!selectedCitiesResult.success) {
+      return Response.json({ message: 'Invalid selected cities' }, { status: 400 });
+    }
 
     logChatEvent(trace, "request_received", {
       messageCount: messages?.length || 0,
@@ -1091,7 +1065,7 @@ export async function POST(req: Request) {
 
     try {
       // 检测用户问题的语言
-      const userLanguage = detectUserLanguage(lastMessage.content);
+      const userLanguage = resolveChatLanguage(lastMessage.content, userLocale, messages.slice(0,-1));
       
       // 计算问题数量（如果未提供，从 messages 计算）
       const actualQuestionCount = questionCount ?? messages.filter(m => m.role === 'user').length;
@@ -1104,6 +1078,9 @@ export async function POST(req: Request) {
           : (isSynastryDeepReport || synastryData) && synastryData
             ? formatSynastryContext(synastryData)
             : formatChartContext(chartData!);
+      const selectedCityContext = requestType === 'standard' && !synastryData
+        ? formatSelectedCityEvidence(selectedCitiesResult.data, chartData.planetLines)
+        : '';
 
       const systemPrompt =
         isSynastryDeepReport || synastryData
@@ -1145,7 +1122,7 @@ export async function POST(req: Request) {
       
       const systemMessage = {
         role: 'system' as const,
-        content: `${systemPrompt}\n\n${reportInstruction}\n\n${chartDataIntro}\n\n${chartContext}`,
+        content: `${systemPrompt}\n\n${reportInstruction}\n\n${chartDataIntro}\n\n${chartContext}${selectedCityContext}`,
       };
 
       // 🔥 修复：构建完整的对话上下文（系统消息 + 所有用户消息，包括当前问题）

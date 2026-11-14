@@ -501,6 +501,13 @@
     }
   },
   "astro_chat": {
+    "continue_title": "Deine Karte weiter erkunden",
+    "continue_description": "Melde dich an, um Credits für weitere KI-Fragen und ausführliche Deutungen zu nutzen. Die Kosten werden vor jeder kostenpflichtigen Aktion angezeigt.",
+    "sign_in_continue": "Anmelden und fortfahren",
+    "sign_in_notice": "Bitte melde dich an, um weitere Fragen zu stellen.",
+    "sign_in_placeholder": "Anmelden, um weitere Fragen zu stellen...",
+    "question_placeholder": "Stelle eine Frage zu deiner Karte...",
+    "generic_error": "Etwas ist schiefgelaufen. Bitte versuche es später erneut.",
     "credit_cost_notice": "Jedes Gespräch verbraucht {credits} Credits",
     "credit_cost_notice_singular": "Jedes Gespräch verbraucht {credits} Credit",
     "insufficient_credits_title": "Unzureichende Credits",
@@ -516,7 +523,7 @@
     "no_messages": "Keine Nachrichten zum Herunterladen",
     "welcome_title": "Willkommen! Bereit, Ihren Planeten-Blueprint zu erkunden?",
     "welcome_subtitle": "Entdecken Sie die Geschichten in Ihren Sternen und Planetenlinien",
-    "disclaimer": "💡 Die KI analysiert nur Städte in Ihrem Chart. Nur zur Orientierung.",
+    "disclaimer": "💡 Die KI deutet die bereitgestellten Kartendaten. Zur Reflexion, nicht als Vorhersage.",
     "analysis_status_reading": "Ich lese die Planetenlinien in deiner Karte...",
     "analysis_status_connecting": "Ich verbinde deine Frage mit den stärksten Signalen der Karte...",
     "analysis_status_comparing": "Ich vergleiche die unterschiedlichen Tendenzen in deiner Karte...",

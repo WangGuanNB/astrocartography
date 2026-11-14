@@ -548,6 +548,13 @@
     }
   },
   "astro_chat": {
+    "continue_title": "Sigue explorando tu carta",
+    "continue_description": "Inicia sesión para usar créditos en más preguntas a la IA e interpretaciones detalladas. El coste se muestra antes de cada acción de pago.",
+    "sign_in_continue": "Iniciar sesión y continuar",
+    "sign_in_notice": "Inicia sesión para seguir haciendo preguntas.",
+    "sign_in_placeholder": "Inicia sesión para seguir preguntando...",
+    "question_placeholder": "Haz una pregunta sobre tu carta...",
+    "generic_error": "Algo salió mal. Inténtalo de nuevo más tarde.",
     "credit_cost_notice": "Cada conversación consume {credits} créditos",
     "credit_cost_notice_singular": "Cada conversación consume {credits} crédito",
     "insufficient_credits_title": "Créditos insuficientes",
@@ -563,7 +570,7 @@
     "no_messages": "No hay mensajes para descargar",
     "welcome_title": "¡Bienvenido! ¿Listo para explorar tu mapa planetario?",
     "welcome_subtitle": "Descubre las historias escritas en tus estrellas y líneas planetarias",
-    "disclaimer": "💡 La IA solo analiza ciudades en tu carta. Solo para referencia.",
+    "disclaimer": "💡 La IA interpreta los datos proporcionados de la carta. Para reflexionar, no para predecir acontecimientos.",
     "analysis_status_reading": "Leyendo las líneas planetarias de tu carta...",
     "analysis_status_connecting": "Relacionando tu pregunta con las señales más fuertes del mapa...",
     "analysis_status_comparing": "Comparando los matices de tu carta...",

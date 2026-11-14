@@ -17,7 +17,11 @@ import PricingModal from '@/components/pricing/pricing-modal';
 import { Pricing as PricingType } from '@/types/blocks/pricing';
 import { askAIEvents, authEvents, paymentEvents } from '@/lib/analytics';
 import { toast } from 'sonner';
-import { detectLanguage, type SynastryPayloadForAI } from '@/lib/astro-format';
+import { type SynastryPayloadForAI } from '@/lib/astro-format';
+import { resolveChatLanguage } from '@/lib/chat-language';
+import type { ChatCity } from '@/lib/chat-city-context';
+import ChatCitySelector from './city-selector';
+import ChatMessageContent from './message-content';
 
 interface AstroChatProps {
   open: boolean;
@@ -89,6 +93,10 @@ export default function AstroChat({
   const [generatingFollowUp, setGeneratingFollowUp] = useState<Record<string, boolean>>({}); // 标记正在生成的追问建议
   const followUpAttemptedRef = useRef(new Set<string>());
   const [analysisElapsedSeconds, setAnalysisElapsedSeconds] = useState(0);
+  const [selectedCities, setSelectedCities] = useState<ChatCity[]>([]);
+  useEffect(() => {
+    setSelectedCities([]);
+  }, [chartData.birthData.date, chartData.birthData.time, chartData.birthData.location]);
   const t = useTranslations('astro_chat');
   const tHistory = useTranslations('ai_chat_history_page');
   const params = useParams();
@@ -299,6 +307,7 @@ export default function AstroChat({
     // 构建完整的请求体
     const finalBody = {
       ...requestBody,
+      selectedCities: synastryData ? [] : selectedCities,
       chartData: chartData
         ? {
             birthData: chartData.birthData,
@@ -374,7 +383,7 @@ export default function AstroChat({
     
     // 如果是正常的流式响应，直接返回
     return response;
-  }, [chartData, user, synastryData, locale]);
+  }, [chartData, user, synastryData, locale, selectedCities]);
   
   // 🔥 使用 useChat，body 在 customFetch 中动态添加
   const { messages, input, handleInputChange, handleSubmit, isLoading, error, append, setMessages } = useChat({
@@ -661,7 +670,9 @@ export default function AstroChat({
 
     try {
       // 检测用户问题的语言
-      const userLanguage = detectLanguage(userQuestion);
+      const answerIndex = messages.findIndex(message => message.id === messageId);
+      const previousMessages = answerIndex >= 0 ? messages.slice(0, answerIndex) : [];
+      const userLanguage = resolveChatLanguage(userQuestion, locale, previousMessages);
       
       // 调用 AI API 生成追问建议
       const response = await fetch('/api/generate-follow-up/', {
@@ -712,7 +723,7 @@ export default function AstroChat({
         return newState;
       });
     }
-  }, [followUpSuggestions, generatingFollowUp]);
+  }, [followUpSuggestions, generatingFollowUp, locale, messages]);
 
   // 🔥 从 AI 生成的文本中提取追问建议（支持 A/B/C 格式）
   const extractFollowUpSuggestions = useCallback((text: string, language: string): string[] => {
@@ -1091,15 +1102,15 @@ export default function AstroChat({
                     )}
                     <div
                       className={cn(
-                        "max-w-[80%] rounded-2xl px-4 py-3",
+                        "min-w-0 max-w-[80%] rounded-2xl px-4 py-3",
                         message.role === 'user'
                           ? 'bg-purple-600 text-white'
                           : 'bg-white/10 text-gray-100 border border-white/10'
                       )}
                     >
-                      <div className="whitespace-pre-wrap break-words">
-                        {message.content}
-                      </div>
+                      {message.role === 'assistant'
+                        ? <ChatMessageContent content={message.content} />
+                        : <div className="whitespace-pre-wrap break-words">{message.content}</div>}
                     </div>
                     {message.role === 'user' && (
                       <div className="size-8 rounded-full bg-gray-700 flex items-center justify-center flex-shrink-0">
@@ -1183,7 +1194,7 @@ export default function AstroChat({
               if (!isBusinessPrompt) {
                 return (
                   <div className="bg-red-500/10 border border-red-500/50 text-red-400 rounded-lg px-4 py-3 text-sm">
-                    {errorMessage || 'An error occurred, please try again later'}
+                    {errorMessage || t('generic_error')}
                   </div>
                 );
               }
@@ -1197,9 +1208,9 @@ export default function AstroChat({
                 <div className="flex items-start gap-3">
                   <Sparkles className="size-5 text-purple-400 flex-shrink-0 mt-0.5" />
                   <div className="flex-1">
-                    <p className="font-medium mb-1">You've used your free question!</p>
+                    <p className="font-medium mb-1">{t('continue_title')}</p>
                     <p className="text-gray-300 text-xs mb-3">
-                      Sign in to use credits for more AI map chat and deeper reports. Costs are shown before each paid action.
+                      {t('continue_description')}
                     </p>
                     <Button
                       onClick={() => {
@@ -1207,7 +1218,7 @@ export default function AstroChat({
                       }}
                       className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white text-xs"
                     >
-                      Sign In to Continue
+                      {t('sign_in_continue')}
                     </Button>
                   </div>
                 </div>
@@ -1218,10 +1229,11 @@ export default function AstroChat({
 
       {/* 输入框 - 固定在底部 */}
       <form onSubmit={onSubmit} className="pt-4 border-t border-white/10 px-4 pb-4 bg-gradient-to-br from-purple-900/20 via-gray-900/95 to-gray-900/95 flex-shrink-0">
+          {!synastryData && <ChatCitySelector cities={selectedCities} onChange={setSelectedCities} locale={locale} disabled={isLoading} />}
           {/* 未登录且免费问题用尽时的提示 */}
           {!user && !canAskQuestion && (
             <div className="mb-3 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg text-yellow-400 text-xs text-center">
-              Please sign in to continue asking questions
+              {t('sign_in_notice')}
             </div>
           )}
           {/* 已登录用户显示积分消耗说明 */}
@@ -1246,8 +1258,8 @@ export default function AstroChat({
               onChange={handleInputChange}
               placeholder={
                 !user && !canAskQuestion
-                  ? "Sign in to continue asking questions..."
-                  : "Ask me anything about your astrocartography chart!"
+                  ? t('sign_in_placeholder')
+                  : t('question_placeholder')
               }
               className="min-h-[60px] max-h-[120px] resize-none bg-white/5 border-white/20 text-white placeholder:text-gray-500 focus:border-purple-500 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isLoading || (!user && !canAskQuestion)}
