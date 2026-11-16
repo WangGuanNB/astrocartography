@@ -1,0 +1,104 @@
+{
+  "key": "mercury",
+  "slug": "mercury-sign-calculator",
+  "toolType": "mercury",
+  "metadata": {
+    "title": "Calculadora do Signo de Mercúrio - Encontre seu signo",
+    "description": "Calculadora do signo de Mercúrio grátis. Informe data, local e hora opcional para ver o signo tropical, o grau e a casa.",
+    "keywords": "calculadora do signo de mercúrio, signo de mercúrio, qual é meu signo de mercúrio, mercúrio no mapa astral"
+  },
+  "hero": {
+    "eyebrow": "Ferramenta de astrologia grátis",
+    "title": "Calculadora do Signo de Mercúrio",
+    "subtitle": "Encontre seu signo de Mercúrio e veja como o mapa descreve pensar, falar e aprender, e onde esse estilo pode ficar mais forte no mapa."
+  },
+  "form": { "submit": "Calcular meu signo de Mercúrio" },
+  "result": {
+    "title": "Sua posição de Mercúrio",
+    "cta": "Abrir estes dados no mapa natal",
+    "lineCta": "Ler o guia da linha de Mercúrio",
+    "lineUrl": "/mercury-line-astrocartography",
+    "sunSame": "Seu Sol também está em {sign}, então Mercúrio e o Sol compartilham o signo.",
+    "sunAdjacent": "Seu Sol está em {sign}. Mercúrio está a um signo de distância, o mais longe que ele pode ficar do Sol.",
+    "sunFar": "Seu Sol está em {sign}, a mais de um signo. Confira os dados. Esta calculadora usa o zodíaco tropical.",
+    "boundaryNote": "Este grau fica junto de um limite de signo. Um pequeno erro na hora pode colocar Mercúrio no signo vizinho.",
+    "provisionalHouse": "A casa fica provisória até você acrescentar uma hora exata.",
+    "signNames": {
+      "Aries": "Áries", "Taurus": "Touro", "Gemini": "Gêmeos", "Cancer": "Câncer", "Leo": "Leão", "Virgo": "Virgem",
+      "Libra": "Libra", "Scorpio": "Escorpião", "Sagittarius": "Sagitário", "Capricorn": "Capricórnio", "Aquarius": "Aquário", "Pisces": "Peixes"
+    },
+    "signReadings": {
+      "Aries": "Mercúrio em Áries tende a pensar em linha reta e dizer o ponto cedo. A frase pode entrar na conversa antes de o plano estar fechado.",
+      "Taurus": "Mercúrio em Touro confia no que pode ser repetido, conferido ou demonstrado. Mudar uma conclusão costuma pedir mais tempo.",
+      "Gemini": "Mercúrio em Gêmeos junta opções e as explica em voz alta. O mesmo fato pode ter duas leituras até a conversa escolher uma.",
+      "Cancer": "Mercúrio em Câncer ouve o tom e a memória antes da frase literal. O modo como algo foi dito costuma durar mais que as palavras.",
+      "Leo": "Mercúrio em Leão fala para que o ponto seja visto e lembrado. Prefere uma história clara a uma pilha de ressalvas.",
+      "Virgo": "Mercúrio em Virgem ordena, edita e procura o passo que falta. Enquanto os detalhes não alinham, o assunto continua aberto.",
+      "Libra": "Mercúrio em Libra testa uma frase contra a visão da outra pessoa. O texto final espera os dois lados soarem justos.",
+      "Scorpio": "Mercúrio em Escorpião procura o que não foi dito. A conclusão pode ficar privada até parecer confiável.",
+      "Sagittarius": "Mercúrio em Sagitário salta para o sentido mais amplo. Fala com uma afirmação grande e depois completa o caminho.",
+      "Capricorn": "Mercúrio em Capricórnio pergunta para que serve a ideia e quem responde. Soa cauteloso porque confere ordem e consequência.",
+      "Aquarius": "Mercúrio em Aquário dá um passo atrás e testa a regra. Precisa de espaço para discordar sem transformar a troca em conflito pessoal.",
+      "Pisces": "Mercúrio em Peixes pensa por imagens, tom e associação. O sentido chega antes de o esquema ficar pronto."
+    }
+  },
+  "sections": [
+    {
+      "title": "O que a calculadora do signo de Mercúrio mostra",
+      "body": [
+        "A calculadora do signo de Mercúrio identifica o signo que Mercúrio ocupava no nascimento. Na astrologia, Mercúrio descreve como você recebe informação, escolhe palavras, aprende uma habilidade e passa de uma ideia a outra. Não é uma nota de inteligência.",
+        "Esta calculadora grátis usa data, local e hora opcional. Devolve o signo tropical, o grau e a casa de signo inteiro quando há dados suficientes. A posição vem da longitude eclíptica geocêntrica do astronomy-engine, o mesmo motor das outras ferramentas natais do site. Não usa a Swiss Ephemeris. Sem hora, calcula Mercúrio para o meio-dia local do lugar de nascimento e diz isso na nota. Esse padrão serve para o signo na maioria dos dias. Não substitui um mapa com hora quando você precisa da casa."
+      ]
+    },
+    {
+      "title": "Por que Mercúrio fica perto do Sol",
+      "body": [
+        "Visto da Terra, Mercúrio não se afasta mais de cerca de 28 graus do Sol. Seu signo de Mercúrio é sempre o signo solar ou um signo vizinho. Com o Sol em Leão, Mercúrio pode estar em Câncer, Leão ou Virgem. Não pode estar em Aquário nem em Sagitário.",
+        "O Sol descreve o centro da identidade. Mercúrio descreve o instrumento com que você nomeia e troca informação. Mercúrio costuma ficar de duas a três semanas num signo. O movimento retrógrado aparente é uma mudança de velocidade eclíptica, não uma mudança de signo por si só. A calculadora informa signo e grau. Não transforma o retrógrado numa previsão de viagens ou conversas."
+      ]
+    },
+    {
+      "title": "Quando a hora de nascimento importa",
+      "body": [
+        "Muita gente só conhece o aniversário. Num dia comum isso basta para o signo, porque Mercúrio não muda de signo a cada poucas horas como a Lua. O local ainda importa: define o fuso e o meio-dia local usado quando a hora falta.",
+        "A hora decide o signo num dia de mudança. Mercúrio muda de signo com mais frequência que Marte, e cerca de um aniversário em vinte e cinco cai perto de um ingresso. Se o grau está perto de 0 ou 29, trate como limite e acrescente a hora de um registro. A hora exata é sempre necessária para uma casa confiável. O site usa o zodíaco tropical. Um Mercúrio sideral pode diferir em quase um signo."
+      ]
+    },
+    {
+      "title": "Signo de Mercúrio e linha de Mercúrio",
+      "body": [
+        "O signo de Mercúrio é natal. A linha de Mercúrio na astrocartografia é geográfica: marca onde Mercúrio estava no Ascendente, Descendente, Meio do Céu ou Fundo do Céu. A calculadora responde como você tende a pensar e falar. O guia da linha responde onde esse tema pode ficar mais forte.",
+        "Uma ordem útil é signo, depois casa, depois linha. A casa mostra a área da vida. A linha mostra um lugar onde comunicação, estudo ou troca podem ser ampliados. Mercúrio no Meio do Céu parece público. No Ascendente, pessoal e verbal. No Descendente, entra na relação a dois. No Fundo do Céu, a casa vira lugar de leitura. Nenhuma linha garante emprego ou idioma. Sem hora, os ângulos do mapa são menos confiáveis que o signo."
+      ]
+    },
+    {
+      "title": "Como ler o resultado",
+      "body": [
+        "Comece pelo elemento, depois o grau e depois a casa. Mercúrios de fogo costumam pensar em voz alta. Os de terra querem prova e sequência. Os de ar comparam opções. Os de água leem o tom e o que ficou implícito.",
+        "O grau diz se Mercúrio está no começo ou no fim do signo. Um grau tardio aproxima o signo seguinte. A casa é contexto, não uma segunda personalidade. Compare o resultado com o modo como você escreve uma mensagem e recupera uma conversa. Se não encaixar, olhe a Lua, o Ascendente e os aspectos antes de descartar o mapa."
+      ]
+    },
+    {
+      "title": "O que esta calculadora não pode prometer",
+      "body": [
+        "A calculadora do signo de Mercúrio pode informar uma posição. Não pode dizer o que você vai falar numa reunião nem como uma decisão termina. A fala também depende do resto do mapa, da outra pessoa e dos fatos. Trânsitos ficam fora desta página.",
+        "O uso honesto é estreito: anote o signo, distinga se a hora foi real ou o meio-dia local, e deixe a casa provisória até conhecer o relógio. Se a pergunta real é o lugar, abra o guia da linha de Mercúrio e o gerador de mapa natal com os mesmos dados."
+      ]
+    }
+  ],
+  "faqs": [
+    { "question": "Esta calculadora do signo de Mercúrio é grátis?", "answer": "Sim. Informe data e local para calcular o signo de Mercúrio. A hora é opcional. O resultado mostra o signo tropical e o grau. Com hora exata, também mostra a casa de signo inteiro." },
+    { "question": "Preciso da hora de nascimento para o signo de Mercúrio?", "answer": "Na maioria dos dias, data e local bastam. Mercúrio costuma ficar de duas a três semanas num signo, mas muda com mais frequência que Marte. Acrescente a hora se o grau estiver perto de 0 ou 29. Sem hora, a calculadora usa o meio-dia local e marca a casa como provisória." },
+    { "question": "O que é meu signo de Mercúrio em poucas palavras?", "answer": "É o signo que Mercúrio ocupava no nascimento. Descreve um estilo de pensar e falar, não um ranking de inteligência. Use o formulário. Mercúrio estará no seu signo solar ou num vizinho, porque fica a cerca de 28 graus do Sol." },
+    { "question": "Meu signo de Mercúrio pode ficar longe do Sol?", "answer": "Não. Mercúrio fica a cerca de 28 graus do Sol, então ocupa o signo solar ou um dos dois vizinhos. Um resultado no signo oposto indica que os dados ou o zodíaco não batem com este cálculo tropical." },
+    { "question": "O signo de Mercúrio prevê o que vou dizer ou o fim de uma decisão?", "answer": "Não. O signo descreve um estilo. Não escolhe suas palavras nem decide um resultado. Para lugares, use a página da linha de Mercúrio." }
+  ],
+  "schemaName": "Calculadora do Signo de Mercúrio",
+  "relatedLinks": [
+    { "text": "Gere seu mapa de astrocartografia grátis.", "linkText": "Mapa de astrocartografia grátis", "url": "/pt" },
+    { "text": "Leia a comunicação por lugar depois de saber o signo.", "linkText": "Linha de Mercúrio", "url": "/mercury-line-astrocartography" },
+    { "text": "Compare valores e atração.", "linkText": "Calculadora do Signo de Vênus", "url": "/venus-sign-calculator" },
+    { "text": "Compare impulso e afirmação.", "linkText": "Calculadora do Signo de Marte", "url": "/mars-sign-calculator" },
+    { "text": "Precisa do mapa completo?", "linkText": "Gerador de mapa natal", "url": "/tools/birth-chart-generator" }
+  ]
+}

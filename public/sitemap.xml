@@ -483,6 +483,13 @@
   </url>
 
   <url>
+    <loc>https://astrocarto.org/mercury-sign-calculator/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://astrocarto.org/moon-sign-calculator/</loc>
     <lastmod>2026-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1520,6 +1527,13 @@
   </url>
 
   <url>
+    <loc>https://astrocarto.org/zh/mercury-sign-calculator/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://astrocarto.org/zh/moon-sign-calculator/</loc>
     <lastmod>2026-08-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1550,6 +1564,13 @@
   <url>
     <loc>https://astrocarto.org/es/mars-sign-calculator/</loc>
     <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/es/mercury-sign-calculator/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1590,6 +1611,13 @@
   </url>
 
   <url>
+    <loc>https://astrocarto.org/pt/mercury-sign-calculator/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://astrocarto.org/pt/moon-sign-calculator/</loc>
     <lastmod>2026-08-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1625,6 +1653,13 @@
   </url>
 
   <url>
+    <loc>https://astrocarto.org/de/mercury-sign-calculator/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://astrocarto.org/de/moon-sign-calculator/</loc>
     <lastmod>2026-08-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1655,6 +1690,13 @@
   <url>
     <loc>https://astrocarto.org/it/mars-sign-calculator/</loc>
     <lastmod>2026-11-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://astrocarto.org/it/mercury-sign-calculator/</loc>
+    <lastmod>2026-11-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

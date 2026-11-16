@@ -16,6 +16,11 @@
         "url": "/zh"
       },
       {
+        "text": "先查出本命水星星座，再读地点。",
+        "linkText": "水星星座计算器",
+        "url": "/mercury-sign-calculator"
+      },
+      {
         "text": "将水星线与其他行星线对比。",
         "linkText": "星盘地图行星线完整指南",
         "url": "/astrocartography-lines"

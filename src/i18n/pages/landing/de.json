@@ -79,6 +79,13 @@
               "icon": "RiFireLine"
             },
             {
+              "title": "Merkurzeichen berechnen",
+              "description": "Merkur für Denken und Kommunikation berechnen",
+              "url": "/mercury-sign-calculator",
+              "target": "_self",
+              "icon": "RiQuillPenLine"
+            },
+            {
               "title": "Mondknoten berechnen",
               "description": "Nordknoten, Sudknoten und Entwicklung lesen",
               "url": "/lunar-nodes-calculator",

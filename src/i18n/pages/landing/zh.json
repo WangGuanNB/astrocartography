@@ -79,6 +79,13 @@
               "icon": "RiFireLine"
             },
             {
+              "title": "水星星座计算器",
+              "description": "查询思考方式与沟通风格",
+              "url": "/mercury-sign-calculator",
+              "target": "_self",
+              "icon": "RiQuillPenLine"
+            },
+            {
               "title": "南北交点计算器",
               "description": "计算北交点、南交点与成长方向",
               "url": "/lunar-nodes-calculator",

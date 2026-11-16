@@ -1,0 +1,104 @@
+{
+  "key": "mercury",
+  "slug": "mercury-sign-calculator",
+  "toolType": "mercury",
+  "metadata": {
+    "title": "Calcolatore del Segno di Mercurio - Trova il tuo segno",
+    "description": "Calcolatore del segno di Mercurio gratis. Inserisci data, luogo e ora facoltativa per vedere segno tropicale, grado e casa.",
+    "keywords": "calcolatore del segno di mercurio, segno di mercurio, qual è il mio segno di mercurio, calcolo mercurio"
+  },
+  "hero": {
+    "eyebrow": "Strumento di astrologia gratuito",
+    "title": "Calcolatore del Segno di Mercurio",
+    "subtitle": "Trova il tuo segno di Mercurio e vedi come il tema descrive pensiero, parola e apprendimento, e dove quello stile può farsi più forte sulla mappa."
+  },
+  "form": { "submit": "Calcola il mio segno di Mercurio" },
+  "result": {
+    "title": "La tua posizione di Mercurio",
+    "cta": "Apri questi dati nel tema natale",
+    "lineCta": "Leggi la guida alla linea di Mercurio",
+    "lineUrl": "/mercury-line-astrocartography",
+    "sunSame": "Anche il tuo Sole è in {sign}: Mercurio e il Sole condividono il segno.",
+    "sunAdjacent": "Il tuo Sole è in {sign}. Mercurio è a un segno di distanza, il massimo a cui può stare dal Sole.",
+    "sunFar": "Il tuo Sole è in {sign}, a più di un segno. Controlla i dati. Questo calcolatore usa lo zodiaco tropicale.",
+    "boundaryNote": "Questo grado è accanto a un confine di segno. Un piccolo errore sull'ora può mettere Mercurio nel segno vicino.",
+    "provisionalHouse": "La casa resta provvisoria finché non aggiungi un'ora esatta.",
+    "signNames": {
+      "Aries": "Ariete", "Taurus": "Toro", "Gemini": "Gemelli", "Cancer": "Cancro", "Leo": "Leone", "Virgo": "Vergine",
+      "Libra": "Bilancia", "Scorpio": "Scorpione", "Sagittarius": "Sagittario", "Capricorn": "Capricorno", "Aquarius": "Acquario", "Pisces": "Pesci"
+    },
+    "signReadings": {
+      "Aries": "Mercurio in Ariete tende a pensare in linea retta e a dire il punto presto. La frase può entrare nella conversazione prima che il piano sia chiuso.",
+      "Taurus": "Mercurio in Toro si fida di ciò che si può ripetere, verificare o mostrare. Cambiare una conclusione di solito chiede più tempo.",
+      "Gemini": "Mercurio in Gemelli raccoglie opzioni e le spiega ad alta voce. Lo stesso fatto può avere due letture finché la conversazione ne sceglie una.",
+      "Cancer": "Mercurio in Cancro sente tono e memoria prima della frase letterale. Il modo in cui qualcosa è stato detto dura spesso più delle parole.",
+      "Leo": "Mercurio in Leone parla perché il punto si veda e si ricordi. Preferisce una storia chiara a una pila di riserve.",
+      "Virgo": "Mercurio in Vergine ordina, taglia e cerca il passo che manca. Finché i dettagli non combaciano, la questione resta aperta.",
+      "Libra": "Mercurio in Bilancia prova una frase contro il punto di vista dell'altra persona. La formulazione finale aspetta che entrambi i lati suonino equi.",
+      "Scorpio": "Mercurio in Scorpione cerca ciò che non è stato detto. La conclusione può restare privata finché non sembra affidabile.",
+      "Sagittarius": "Mercurio in Sagittario salta al senso più ampio. Parla con un'affermazione larga e poi completa il percorso.",
+      "Capricorn": "Mercurio in Capricorno chiede a che cosa serve l'idea e chi risponde. Suona cauto perché controlla ordine e conseguenza.",
+      "Aquarius": "Mercurio in Acquario fa un passo indietro e mette alla prova la regola. Ha bisogno di spazio per dissentire senza rendere personale lo scambio.",
+      "Pisces": "Mercurio in Pesci pensa per immagini, tono e associazione. Il senso arriva prima dello schema."
+    }
+  },
+  "sections": [
+    {
+      "title": "Che cosa mostra il calcolatore del segno di Mercurio",
+      "body": [
+        "Il calcolatore del segno di Mercurio identifica il segno occupato da Mercurio alla nascita. In astrologia Mercurio descrive come ricevi informazioni, scegli le parole, impari un'abilità e passi da un'idea all'altra. Non è un voto di intelligenza.",
+        "Questo strumento gratuito usa data, luogo e ora facoltativa. Restituisce il segno tropicale, il grado e la casa a segno intero quando i dati bastano. La posizione viene dalla longitudine eclittica geocentrica di astronomy-engine, lo stesso motore degli altri strumenti natali del sito. Non usa la Swiss Ephemeris. Senza ora calcola Mercurio per il mezzogiorno locale del luogo di nascita e lo dice nella nota. Quel valore serve per il segno nella maggior parte dei giorni. Non sostituisce un tema con l'ora quando ti serve la casa."
+      ]
+    },
+    {
+      "title": "Perché Mercurio resta vicino al Sole",
+      "body": [
+        "Dalla Terra, Mercurio non si allontana più di circa 28 gradi dal Sole. Il tuo segno di Mercurio è sempre il segno solare o un segno vicino. Con il Sole in Leone, Mercurio può essere in Cancro, Leone o Vergine. Non può essere in Acquario o in Sagittario.",
+        "Il Sole descrive il centro dell'identità. Mercurio descrive lo strumento con cui nomini e scambi informazioni. Mercurio resta di solito due o tre settimane in un segno. Il moto retrogrado apparente è un cambio di velocità eclittica, non di per sé un cambio di segno. Il calcolatore riporta segno e grado. Non trasforma il retrogrado in una previsione su viaggi o conversazioni."
+      ]
+    },
+    {
+      "title": "Quando conta l'ora di nascita",
+      "body": [
+        "Molte persone conoscono solo il compleanno. In un giorno ordinario basta per il segno, perché Mercurio non cambia segno ogni poche ore come la Luna. Il luogo conta comunque: fissa il fuso e il mezzogiorno locale usato se manca l'ora.",
+        "L'ora decide il segno in un giorno di cambio. Mercurio cambia segno più spesso di Marte, e circa un compleanno su venticinque cade vicino a un ingresso. Se il grado è vicino a 0 o a 29, trattalo come confine e aggiungi l'ora da un registro. L'ora esatta serve sempre per una casa affidabile. Il sito usa lo zodiaco tropicale. Un Mercurio siderale può differire di quasi un segno intero."
+      ]
+    },
+    {
+      "title": "Segno di Mercurio e linea di Mercurio",
+      "body": [
+        "Il segno di Mercurio è natale. La linea di Mercurio in astrocartografia è geografica: segna dove Mercurio stava sull'Ascendente, sul Discendente, sul Medio Cielo o sul Fondo Cielo. Il calcolatore risponde a come tendi a pensare e parlare. La guida della linea risponde a dove quel tema può farsi più forte.",
+        "Un ordine utile è segno, poi casa, poi linea. La casa mostra l'area di vita. La linea mostra un luogo in cui comunicazione, studio o scambio possono ampliarsi. Mercurio sul Medio Cielo è pubblico. Sull'Ascendente è personale e verbale. Sul Discendente entra nel rapporto a due. Sul Fondo Cielo la casa diventa un luogo di lettura. Nessuna linea garantisce un lavoro o una lingua. Senza ora, gli angoli della mappa sono meno affidabili del segno."
+      ]
+    },
+    {
+      "title": "Come leggere il risultato",
+      "body": [
+        "Parti dall'elemento, poi dal grado, poi dalla casa. I Mercurio di fuoco pensano spesso ad alta voce. Quelli di terra vogliono prova e sequenza. Quelli d'aria confrontano opzioni. Quelli d'acqua leggono il tono e ciò che è rimasto implicito.",
+        "Il grado dice se Mercurio è all'inizio o alla fine del segno. Un grado tardo avvicina il segno successivo. La casa è contesto, non una seconda personalità. Confronta il risultato con il modo in cui scrivi un messaggio e recuperi una conversazione. Se non coincide, guarda Luna, Ascendente e aspetti prima di scartare il tema."
+      ]
+    },
+    {
+      "title": "Che cosa questo calcolatore non può promettere",
+      "body": [
+        "Il calcolatore del segno di Mercurio può riferire una posizione. Non può dire che cosa dirai in una riunione né come finirà una decisione. La parola dipende anche dal resto del tema, dall'altra persona e dai fatti. I transiti restano fuori da questa pagina.",
+        "L'uso onesto è stretto: annota il segno, distingui ora reale e mezzogiorno locale, e lascia la casa provvisoria finché l'orologio è noto. Se la domanda vera è il luogo, apri la guida alla linea di Mercurio e il generatore del tema natale con gli stessi dati."
+      ]
+    }
+  ],
+  "faqs": [
+    { "question": "Questo calcolatore del segno di Mercurio è gratis?", "answer": "Sì. Inserisci data e luogo per calcolare il segno di Mercurio. L'ora è facoltativa. Il risultato mostra il segno tropicale e il grado. Con un'ora esatta mostra anche la casa a segno intero." },
+    { "question": "Mi serve l'ora di nascita per il segno di Mercurio?", "answer": "Nella maggior parte dei giorni bastano data e luogo. Mercurio resta di solito due o tre settimane in un segno, ma cambia più spesso di Marte. Aggiungi l'ora se il grado è vicino a 0 o a 29. Senza ora il calcolatore usa il mezzogiorno locale e segna la casa come provvisoria." },
+    { "question": "Che cos'è il mio segno di Mercurio in poche parole?", "answer": "È il segno occupato da Mercurio alla nascita. Descrive uno stile di pensiero e di parola, non una classifica di intelligenza. Usa il modulo. Mercurio sarà nel tuo segno solare o in uno vicino, perché resta a circa 28 gradi dal Sole." },
+    { "question": "Il mio segno di Mercurio può essere lontano dal Sole?", "answer": "No. Mercurio resta a circa 28 gradi dal Sole, quindi occupa il segno solare o uno dei due vicini. Un risultato nel segno opposto indica che i dati o lo zodiaco non coincidono con questo calcolo tropicale." },
+    { "question": "Il segno di Mercurio prevede che cosa dirò o come finirà una decisione?", "answer": "No. Il segno descrive uno stile. Non sceglie le parole e non decide un esito. Per i luoghi usa la pagina della linea di Mercurio." }
+  ],
+  "schemaName": "Calcolatore del Segno di Mercurio",
+  "relatedLinks": [
+    { "text": "Genera la tua mappa di astrocartografia gratuita.", "linkText": "Mappa di astrocartografia gratuita", "url": "/it" },
+    { "text": "Leggi la comunicazione per luogo dopo aver visto il segno.", "linkText": "Linea di Mercurio", "url": "/mercury-line-astrocartography" },
+    { "text": "Confronta valori e attrazione.", "linkText": "Calcolatore del Segno di Venere", "url": "/venus-sign-calculator" },
+    { "text": "Confronta impulso e affermazione.", "linkText": "Calcolatore del Segno di Marte", "url": "/mars-sign-calculator" },
+    { "text": "Ti serve il tema completo?", "linkText": "Generatore del tema natale", "url": "/tools/birth-chart-generator" }
+  ]
+}

@@ -16,6 +16,11 @@
         "url": "/de"
       },
       {
+        "text": "Berechne das natale Merkurzeichen, bevor du Orte liest.",
+        "linkText": "Merkurzeichen berechnen",
+        "url": "/mercury-sign-calculator"
+      },
+      {
         "text": "Vergleichen Sie Merkur mit anderen Planetenlinien.",
         "linkText": "Vollständiger Astrokartografie-Linien-Leitfaden",
         "url": "/astrocartography-lines"

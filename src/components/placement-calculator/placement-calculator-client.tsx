@@ -50,6 +50,13 @@ type PlacementResult = {
       house: number;
       isRetrograde?: boolean;
     }>;
+    sun?: {
+      glyph: string;
+      sign: string;
+      degree: number;
+    };
+    usedDefaultNoon?: boolean;
+    nearSignBoundary?: boolean;
     note: string;
   };
 };
@@ -182,10 +189,50 @@ const FORM_COPY: Record<string, {
   },
 };
 
+const SIGN_ORDER = [
+  "Aries",
+  "Taurus",
+  "Gemini",
+  "Cancer",
+  "Leo",
+  "Virgo",
+  "Libra",
+  "Scorpio",
+  "Sagittarius",
+  "Capricorn",
+  "Aquarius",
+  "Pisces",
+];
+
+function optionalTimeHint(locale: string, toolType: string, fallback: string) {
+  if (toolType === "mercury") {
+    if (locale === "zh") return "大多数日期可以不填。水星换座比火星更频繁，换座日请补上时间。不填则按当地正午计算，宫位只作参考。";
+    if (locale === "es") return "Opcional la mayoría de los días. Mercurio cambia de signo más a menudo que Marte; añade la hora si ese día cambió de signo. Sin hora usamos el mediodía local y la casa queda provisional.";
+    if (locale === "pt") return "Opcional na maioria dos dias. Mercúrio muda de signo com mais frequência que Marte; acrescente a hora se nesse dia ele mudou de signo. Sem hora usamos o meio-dia local e a casa fica provisória.";
+    if (locale === "de") return "An den meisten Tagen optional. Merkur wechselt öfter das Zeichen als Mars; am Wechseltag die Uhrzeit ergänzen. Ohne Uhrzeit rechnen wir mit lokalem Mittag, das Haus bleibt vorläufig.";
+    if (locale === "it") return "Facoltativa nella maggior parte dei giorni. Mercurio cambia segno più spesso di Marte; aggiungi l'ora se quel giorno ha cambiato segno. Senza ora usiamo mezzogiorno locale e la casa resta provvisoria.";
+    return "Optional for most birthdays. Mercury changes signs more often than Mars, so add a time on sign-change days. Without a time we use local noon, and the house stays provisional.";
+  }
+  if (locale === "en") {
+    return "Optional for most birthdays. Add time for ingress days and a reliable Mars house; otherwise we use local noon.";
+  }
+  return fallback;
+}
+
 function formatDeg(deg: number) {
   const whole = Math.floor(deg);
   const min = Math.round((deg - whole) * 60);
   return `${whole}°${String(min).padStart(2, "0")}'`;
+}
+
+function sunRelation(mercurySign: string, sunSign: string, templates: PlacementPageContent["result"]) {
+  const mercuryIndex = SIGN_ORDER.indexOf(mercurySign);
+  const sunIndex = SIGN_ORDER.indexOf(sunSign);
+  if (mercuryIndex < 0 || sunIndex < 0) return "";
+  const distance = Math.min((mercuryIndex - sunIndex + 12) % 12, (sunIndex - mercuryIndex + 12) % 12);
+  const template = distance === 0 ? templates.sunSame : distance === 1 ? templates.sunAdjacent : templates.sunFar;
+  const localSun = templates.signNames?.[sunSign] || sunSign;
+  return template ? template.replace("{sign}", localSun) : "";
 }
 
 export default function PlacementCalculatorClient({ page }: { page: PlacementPageContent }) {
@@ -207,8 +254,8 @@ export default function PlacementCalculatorClient({ page }: { page: PlacementPag
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<PlacementResult["data"] | null>(null);
 
-  // Mars sign is usually stable across a day; keep time required for Moon and other faster placements.
-  const birthTimeOptional = page.toolType === "mars";
+  // Mars and Mercury can resolve a sign from the date on most days. Moon still requires a time.
+  const birthTimeOptional = page.toolType === "mars" || page.toolType === "mercury";
   const canSubmit = Boolean(
     birthDate && birthLocation && timezone && !isLoading && (birthTimeOptional || birthTime)
   );
@@ -311,11 +358,7 @@ export default function PlacementCalculatorClient({ page }: { page: PlacementPag
                 className="h-10 text-sm bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-500 focus:ring-purple-500"
               />
               {birthTimeOptional ? (
-                <p className="text-xs text-white/50">
-                  {locale === "en"
-                    ? "Optional for most birthdays. Add time for ingress days and a reliable Mars house; otherwise we use local noon."
-                    : copy.tip}
-                </p>
+                <p className="text-xs text-white/50">{optionalTimeHint(locale, page.toolType, copy.tip)}</p>
               ) : null}
             </div>
 
@@ -435,15 +478,32 @@ export default function PlacementCalculatorClient({ page }: { page: PlacementPag
                           {placement.glyph} {placement.sign} {formatDeg(placement.degree)}
                           {placement.isRetrograde ? " R" : ""}
                         </p>
-                        <p className="mt-1 text-white/60">{copy.wholeSignHouse(placement.house)}</p>
+                        <p className="mt-1 text-white/60">
+                          {copy.wholeSignHouse(placement.house)}
+                          {result.usedDefaultNoon && page.result.provisionalHouse ? ` · ${page.result.provisionalHouse}` : ""}
+                        </p>
                       </div>
                     ))}
                   </div>
                 ) : (
                   <p className="text-sm leading-relaxed text-white/80">{result.note}</p>
                 )}
+                {result.placements[0] && page.result.signReadings?.[result.placements[0].sign] ? (
+                  <p className="text-sm leading-relaxed text-white/85">{page.result.signReadings[result.placements[0].sign]}</p>
+                ) : null}
+                {result.sun ? (
+                  <p className="text-sm leading-relaxed text-white/75">
+                    <span className="text-white/90">
+                      {result.sun.glyph} Sun {result.sun.sign} {formatDeg(result.sun.degree)}
+                    </span>
+                    {result.placements[0] ? ` ${sunRelation(result.placements[0].sign, result.sun.sign, page.result)}` : ""}
+                  </p>
+                ) : null}
+                {result.nearSignBoundary && page.result.boundaryNote ? (
+                  <p className="text-sm leading-relaxed text-amber-200/90">{page.result.boundaryNote}</p>
+                ) : null}
                 {result.placements.length > 0 && <p className="text-sm leading-relaxed text-white/65">{result.note}</p>}
-                <div className="mt-6">
+                <div className="mt-6 space-y-3">
                   <a
                     href={chartUrl || "#"}
                     className={cn(
@@ -453,6 +513,14 @@ export default function PlacementCalculatorClient({ page }: { page: PlacementPag
                   >
                     {page.result.cta}
                   </a>
+                  {page.result.lineCta && page.result.lineUrl ? (
+                    <a
+                      href={`${locale === "en" ? "" : `/${locale}`}${page.result.lineUrl}`}
+                      className="inline-flex w-full items-center justify-center text-sm font-medium text-purple-300 underline-offset-4 hover:underline"
+                    >
+                      {page.result.lineCta}
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </CardContent>

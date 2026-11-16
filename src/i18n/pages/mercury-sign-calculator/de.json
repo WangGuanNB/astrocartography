@@ -1,0 +1,104 @@
+{
+  "key": "mercury",
+  "slug": "mercury-sign-calculator",
+  "toolType": "mercury",
+  "metadata": {
+    "title": "Merkurzeichen berechnen - Dein Merkurzeichen finden",
+    "description": "Merkurzeichen kostenlos berechnen. Gib Datum, Ort und optional die Uhrzeit ein und sieh tropisches Zeichen, Grad und Haus.",
+    "keywords": "merkurzeichen berechnen, merkurzeichen, was ist mein merkurzeichen, merkur rechner kostenlos"
+  },
+  "hero": {
+    "eyebrow": "Kostenloses Astrologie-Werkzeug",
+    "title": "Merkurzeichen berechnen",
+    "subtitle": "Finde dein Merkurzeichen und sieh, wie das Horoskop Denken, Sprechen und Lernen beschreibt und wo dieser Stil auf der Karte lauter werden kann."
+  },
+  "form": { "submit": "Mein Merkurzeichen berechnen" },
+  "result": {
+    "title": "Deine Merkurstellung",
+    "cta": "Diese Geburtsdaten im Horoskop öffnen",
+    "lineCta": "Merkur-Linien-Leitfaden lesen",
+    "lineUrl": "/mercury-line-astrocartography",
+    "sunSame": "Deine Sonne steht ebenfalls in {sign}. Merkur und Sonne teilen sich das Zeichen.",
+    "sunAdjacent": "Deine Sonne steht in {sign}. Merkur steht ein Zeichen entfernt, so weit er sich von der Sonne entfernen kann.",
+    "sunFar": "Deine Sonne steht in {sign}, mehr als ein Zeichen entfernt. Prüfe die Daten. Dieser Rechner nutzt den tropischen Tierkreis.",
+    "boundaryNote": "Dieser Grad liegt an einer Zeichengrenze. Eine kleine Zeitabweichung kann Merkur ins Nachbarzeichen setzen.",
+    "provisionalHouse": "Das Haus bleibt vorläufig, bis du eine genaue Uhrzeit ergänzt.",
+    "signNames": {
+      "Aries": "Widder", "Taurus": "Stier", "Gemini": "Zwillinge", "Cancer": "Krebs", "Leo": "Löwe", "Virgo": "Jungfrau",
+      "Libra": "Waage", "Scorpio": "Skorpion", "Sagittarius": "Schütze", "Capricorn": "Steinbock", "Aquarius": "Wassermann", "Pisces": "Fische"
+    },
+    "signReadings": {
+      "Aries": "Merkur im Widder denkt gern geradeaus und sagt den Punkt früh. Der Satz kann im Gespräch sein, bevor der Plan fertig ist.",
+      "Taurus": "Merkur im Stier vertraut dem, was sich wiederholen, prüfen oder zeigen lässt. Eine Schlussfolgerung zu ändern braucht meist mehr Zeit.",
+      "Gemini": "Merkur in den Zwillingen sammelt Möglichkeiten und erklärt sie laut. Dieselbe Tatsache kann zwei Lesarten haben, bis das Gespräch eine wählt.",
+      "Cancer": "Merkur im Krebs hört Ton und Erinnerung vor dem wörtlichen Satz. Wie etwas gesagt wurde, bleibt oft länger als die Wörter.",
+      "Leo": "Merkur im Löwen spricht so, dass der Punkt gesehen und behalten wird. Er bevorzugt eine klare Geschichte vor einem Stapel Vorbehalte.",
+      "Virgo": "Merkur in der Jungfrau ordnet, kürzt und sucht den fehlenden Schritt. Solange die Details nicht passen, bleibt die Sache offen.",
+      "Libra": "Merkur in der Waage prüft einen Satz an der Sicht der anderen Person. Die endgültige Formulierung wartet, bis beide Seiten fair klingen.",
+      "Scorpio": "Merkur im Skorpion sucht das Ungesagte. Die Schlussfolgerung bleibt oft privat, bis sie tragfähig wirkt.",
+      "Sagittarius": "Merkur im Schützen springt zur größeren Bedeutung. Er spricht mit einer weiten Behauptung und füllt danach den Weg.",
+      "Capricorn": "Merkur im Steinbock fragt, wozu die Idee dient und wer verantwortlich ist. Er klingt vorsichtig, weil er Reihenfolge und Folge prüft.",
+      "Aquarius": "Merkur im Wassermann tritt zurück und prüft die Regel selbst. Er braucht Raum zum Widerspruch, ohne den Austausch persönlich zu machen.",
+      "Pisces": "Merkur in den Fischen denkt in Bildern, Ton und Verbindung. Der Sinn kommt oft vor der Gliederung."
+    }
+  },
+  "sections": [
+    {
+      "title": "Was der Rechner zeigt, wenn du dein Merkurzeichen berechnest",
+      "body": [
+        "Merkurzeichen berechnen heißt, das Tierkreiszeichen zu finden, in dem Merkur bei deiner Geburt stand. In der Astrologie beschreibt Merkur, wie du Information aufnimmst, Wörter wählst, eine Fertigkeit lernst und zwischen Ideen wechselst. Es ist keine Intelligenznote.",
+        "Dieses kostenlose Werkzeug nutzt Datum, Ort und optionale Uhrzeit. Es gibt das tropische Zeichen, den Grad und bei ausreichenden Daten das Ganzzeichenhaus zurück. Die Position kommt aus der geozentrischen ekliptikalen Länge von astronomy-engine, derselben Engine wie die anderen Geburtshoroskope dieser Website. Sie nutzt nicht die Swiss Ephemeris. Ohne Uhrzeit rechnet sie Merkur für den lokalen Mittag am Geburtsort und sagt das in der Notiz. Das reicht für das Zeichen an den meisten Tagen. Es ersetzt kein Horoskop mit Uhrzeit, wenn du das Haus brauchst."
+      ]
+    },
+    {
+      "title": "Warum Merkur nahe bei der Sonne bleibt",
+      "body": [
+        "Von der Erde aus entfernt sich Merkur nie mehr als etwa 28 Grad von der Sonne. Dein Merkurzeichen ist immer dein Sonnenzeichen oder ein Nachbarzeichen. Steht die Sonne im Löwen, kann Merkur in Krebs, Löwe oder Jungfrau stehen. Er kann nicht im Wassermann oder Schützen stehen.",
+        "Die Sonne beschreibt das Zentrum der Identität. Merkur beschreibt das Werkzeug, mit dem du benennst und austauschst. Merkur bleibt meist zwei bis drei Wochen in einem Zeichen. Die scheinbare Rückläufigkeit ist eine Änderung der ekliptikalen Geschwindigkeit, nicht von selbst ein Zeichenwechsel. Der Rechner nennt Zeichen und Grad. Er macht aus Rückläufigkeit keine Vorhersage über Reisen oder Gespräche."
+      ]
+    },
+    {
+      "title": "Wann die Geburtszeit zählt",
+      "body": [
+        "Viele Menschen kennen nur den Geburtstag. An einem gewöhnlichen Tag reicht das für das Zeichen, weil Merkur nicht alle paar Stunden das Zeichen wechselt wie der Mond. Der Ort zählt trotzdem: Er setzt die Zeitzone und den lokalen Mittag, wenn die Uhrzeit fehlt.",
+        "Am Wechseltag entscheidet die Uhrzeit das Zeichen. Merkur wechselt öfter als Mars, und etwa jeder fünfundzwanzigste Geburtstag liegt nahe an einem Ingress. Liegt der Grad nahe 0 oder 29, behandle ihn als Grenze und ergänze die Uhrzeit aus einem Eintrag. Für ein verlässliches Haus ist die genaue Zeit immer nötig. Die Website nutzt den tropischen Tierkreis. Ein siderisches Merkurzeichen kann fast ein ganzes Zeichen abweichen."
+      ]
+    },
+    {
+      "title": "Merkurzeichen und Merkur-Linie",
+      "body": [
+        "Das Merkurzeichen ist natal. Die Merkur-Linie in der Astrokartografie ist geografisch: Sie markiert, wo Merkur auf Aszendent, Deszendent, Medium coeli oder Imum coeli stand. Der Rechner beantwortet, wie du tendenziell denkst und sprichst. Der Linienleitfaden beantwortet, wo dieses Thema lauter werden kann.",
+        "Eine brauchbare Reihenfolge ist Zeichen, dann Haus, dann Linie. Das Haus zeigt den Lebensbereich. Die Linie zeigt einen Ort, an dem Kommunikation, Lernen oder Austausch verstärkt sein können. Merkur am Medium coeli wirkt öffentlich. Am Aszendenten persönlich und sprachlich. Am Deszendenten tritt er in die Zweierbeziehung. Am Imum coeli wird das Zuhause zum Leseort. Keine Linie garantiert Arbeit oder Sprache. Ohne Uhrzeit sind die Kartenwinkel weniger verlässlich als das Zeichen."
+      ]
+    },
+    {
+      "title": "So liest du das Ergebnis",
+      "body": [
+        "Beginne mit dem Element, dann dem Grad, dann dem Haus. Feuer-Merkur denkt oft laut. Erd-Merkur will Beleg und Reihenfolge. Luft-Merkur vergleicht Möglichkeiten. Wasser-Merkur liest Ton und das Ungesagte.",
+        "Der Grad sagt, ob Merkur am Anfang oder am Ende des Zeichens steht. Ein später Grad rückt das nächste Zeichen näher. Das Haus ist Kontext, keine zweite Persönlichkeit. Vergleiche das Ergebnis damit, wie du eine Nachricht schreibst und ein Gespräch zurückholst. Wenn es nicht passt, sieh Mond, Aszendent und Aspekte an, bevor du das Horoskop verwirfst."
+      ]
+    },
+    {
+      "title": "Was dieser Rechner nicht versprechen kann",
+      "body": [
+        "Wenn du dein Merkurzeichen berechnest, bekommst du eine Position. Der Rechner kann nicht sagen, was du in einem Gespräch sagst oder wie eine Entscheidung endet. Sprechen hängt auch vom Rest des Horoskops, vom Gegenüber und von den Fakten ab. Transite liegen außerhalb dieser Seite.",
+        "Der ehrliche Gebrauch ist eng: Merk das Zeichen, unterscheide echte Uhrzeit und lokalen Mittag, und lass das Haus vorläufig, bis die Uhr bekannt ist. Wenn die eigentliche Frage der Ort ist, öffne den Merkur-Linien-Leitfaden und den Geburtshoroskop-Generator mit denselben Daten."
+      ]
+    }
+  ],
+  "faqs": [
+    { "question": "Kann ich mein Merkurzeichen kostenlos berechnen?", "answer": "Ja. Gib Datum und Ort ein. Die Uhrzeit ist optional. Das Ergebnis zeigt das tropische Zeichen und den Grad. Mit genauer Uhrzeit auch das Ganzzeichenhaus." },
+    { "question": "Brauche ich die Geburtszeit für mein Merkurzeichen?", "answer": "An den meisten Tagen reichen Datum und Ort. Merkur bleibt meist zwei bis drei Wochen in einem Zeichen, wechselt aber öfter als Mars. Ergänze die Uhrzeit, wenn der Grad nahe 0 oder 29 liegt. Ohne Uhrzeit rechnet das Werkzeug mit lokalem Mittag und markiert das Haus als vorläufig." },
+    { "question": "Was ist mein Merkurzeichen in kurzen Worten?", "answer": "Es ist das Zeichen, in dem Merkur bei der Geburt stand. Es beschreibt einen Denk- und Sprechstil, kein Intelligenzranking. Merkur steht in deinem Sonnenzeichen oder einem Nachbarzeichen, weil er etwa 28 Grad von der Sonne entfernt bleibt." },
+    { "question": "Kann mein Merkurzeichen weit von der Sonne entfernt sein?", "answer": "Nein. Merkur bleibt etwa 28 Grad von der Sonne entfernt und besetzt das Sonnenzeichen oder eines der beiden Nachbarzeichen. Ein Ergebnis im gegenüberliegenden Zeichen heißt, dass Daten oder Tierkreis nicht zu dieser tropischen Rechnung passen." },
+    { "question": "Sagt das Merkurzeichen voraus, was ich sage oder wie eine Entscheidung endet?", "answer": "Nein. Das Zeichen beschreibt einen Stil. Es wählt nicht deine Wörter und entscheidet kein Ergebnis. Für Orte nutze die Merkur-Linien-Seite." }
+  ],
+  "schemaName": "Merkurzeichen berechnen",
+  "relatedLinks": [
+    { "text": "Erstelle deine kostenlose Astrocartography-Karte.", "linkText": "Kostenlose Astrocartography-Karte", "url": "/de" },
+    { "text": "Lies Kommunikation nach Ort, wenn das Zeichen feststeht.", "linkText": "Merkur-Linie", "url": "/mercury-line-astrocartography" },
+    { "text": "Vergleiche Werte und Anziehung.", "linkText": "Venuszeichen berechnen", "url": "/venus-sign-calculator" },
+    { "text": "Vergleiche Antrieb und Durchsetzung.", "linkText": "Marszeichen berechnen", "url": "/mars-sign-calculator" },
+    { "text": "Brauchst du das ganze Horoskop?", "linkText": "Geburtshoroskop erstellen", "url": "/tools/birth-chart-generator" }
+  ]
+}

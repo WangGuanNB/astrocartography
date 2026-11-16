@@ -79,6 +79,13 @@
               "icon": "RiFireLine"
             },
             {
+              "title": "Calculadora del Signo de Mercurio",
+              "description": "Calcula Mercurio para pensar y comunicarte",
+              "url": "/mercury-sign-calculator",
+              "target": "_self",
+              "icon": "RiQuillPenLine"
+            },
+            {
               "title": "Calculadora de Nodos Lunares",
               "description": "Calcula Nodo Norte, Nodo Sur y direccion vital",
               "url": "/lunar-nodes-calculator",

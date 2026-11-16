@@ -13,7 +13,7 @@ import { getBigFourAsteroidPlacements } from "@/lib/asteroid-ephemeris";
 export const revalidate = 3600;
 export const maxDuration = 30;
 
-type PlacementType = "venus" | "moon" | "mars" | "lunar-nodes" | "chiron" | "asteroids";
+type PlacementType = "venus" | "moon" | "mars" | "mercury" | "lunar-nodes" | "chiron" | "asteroids";
 
 interface PlacementRequest {
   type: PlacementType;
@@ -25,8 +25,8 @@ interface PlacementRequest {
   longitude?: number;
 }
 
-/** Mars (and similar slow planets) can usually resolve the sign from date + place; noon is a safe default. */
-const TIME_OPTIONAL_TYPES = new Set<PlacementType>(["mars"]);
+/** Slow-enough planets can usually resolve the sign from date + place; noon is the disclosed default. */
+const TIME_OPTIONAL_TYPES = new Set<PlacementType>(["mars", "mercury"]);
 const DEFAULT_LOCAL_NOON = "12:00";
 
 const CITY_COORDINATES: Record<string, { latitude: number; longitude: number }> = {
@@ -160,6 +160,29 @@ export async function POST(request: NextRequest) {
           placements: mars ? [{ ...mars, label: "Mars" }] : [],
           note:
             "Mars is calculated from geocentric ecliptic longitude (astronomy-engine) in the tropical zodiac and shown with whole-sign house placement. Mars usually stays in a sign for weeks; exact birth time matters most on ingress days and for house placement." +
+            noonNote,
+        },
+      });
+    }
+
+    if (type === "mercury") {
+      const mercury = chart.planets.find((p) => p.name === "Mercury");
+      const sun = chart.planets.find((p) => p.name === "Sun");
+      const nearSignBoundary = Boolean(mercury && (mercury.degree < 1 || mercury.degree > 29));
+      const noonNote = usedDefaultNoon
+        ? " No birth time was provided, so Mercury was calculated for local noon at the birth place. That is enough on most days, but not on sign-change days or for house placement."
+        : "";
+      return NextResponse.json({
+        success: true,
+        data: {
+          type,
+          birthData: { date: birthDate, time: birthTime, location: birthLocation, latitude, longitude, timezone },
+          placements: mercury ? [{ ...mercury, label: "Mercury" }] : [],
+          sun: sun ? { glyph: sun.glyph, sign: sun.sign, degree: sun.degree } : undefined,
+          usedDefaultNoon,
+          nearSignBoundary,
+          note:
+            "Mercury is calculated from geocentric ecliptic longitude (astronomy-engine) in the tropical zodiac and shown with whole-sign house placement. Mercury stays within about 28 degrees of the Sun and usually changes signs every two to three weeks, so exact birth time matters more often than for Mars—especially on ingress days and for the house." +
             noonNote,
         },
       });

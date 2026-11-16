@@ -8,6 +8,12 @@ import venusDe from "@/i18n/pages/venus-sign-calculator/de.json";
 import venusIt from "@/i18n/pages/venus-sign-calculator/it.json";
 
 import marsEn from "@/i18n/pages/mars-sign-calculator/en.json";
+import mercuryEn from "@/i18n/pages/mercury-sign-calculator/en.json";
+import mercuryZh from "@/i18n/pages/mercury-sign-calculator/zh.json";
+import mercuryEs from "@/i18n/pages/mercury-sign-calculator/es.json";
+import mercuryPt from "@/i18n/pages/mercury-sign-calculator/pt.json";
+import mercuryDe from "@/i18n/pages/mercury-sign-calculator/de.json";
+import mercuryIt from "@/i18n/pages/mercury-sign-calculator/it.json";
 import marsZh from "@/i18n/pages/mars-sign-calculator/zh.json";
 import marsEs from "@/i18n/pages/mars-sign-calculator/es.json";
 import marsPt from "@/i18n/pages/mars-sign-calculator/pt.json";
@@ -60,6 +66,7 @@ const placementPagesByLocale: Record<
     venus: venusEn as PlacementPageContent,
     moon: moonEn as PlacementPageContent,
     mars: marsEn as PlacementPageContent,
+    mercury: mercuryEn as PlacementPageContent,
     lunarNodes: lunarNodesEn as PlacementPageContent,
     chiron: chironEn as PlacementPageContent,
     asteroids: asteroidsEn as PlacementPageContent,
@@ -68,6 +75,7 @@ const placementPagesByLocale: Record<
     venus: venusZh as PlacementPageContent,
     moon: moonZh as PlacementPageContent,
     mars: marsZh as PlacementPageContent,
+    mercury: mercuryZh as PlacementPageContent,
     lunarNodes: lunarNodesZh as PlacementPageContent,
     chiron: chironZh as PlacementPageContent,
     asteroids: asteroidsZh as PlacementPageContent,
@@ -76,6 +84,7 @@ const placementPagesByLocale: Record<
     venus: venusEs as PlacementPageContent,
     moon: moonEs as PlacementPageContent,
     mars: marsEs as PlacementPageContent,
+    mercury: mercuryEs as PlacementPageContent,
     lunarNodes: lunarNodesEs as PlacementPageContent,
     chiron: chironEs as PlacementPageContent,
     asteroids: asteroidsEs as PlacementPageContent,
@@ -84,6 +93,7 @@ const placementPagesByLocale: Record<
     venus: venusPt as PlacementPageContent,
     moon: moonPt as PlacementPageContent,
     mars: marsPt as PlacementPageContent,
+    mercury: mercuryPt as PlacementPageContent,
     lunarNodes: lunarNodesPt as PlacementPageContent,
     chiron: chironPt as PlacementPageContent,
     asteroids: asteroidsPt as PlacementPageContent,
@@ -92,6 +102,7 @@ const placementPagesByLocale: Record<
     venus: venusDe as PlacementPageContent,
     moon: moonDe as PlacementPageContent,
     mars: marsDe as PlacementPageContent,
+    mercury: mercuryDe as PlacementPageContent,
     lunarNodes: lunarNodesDe as PlacementPageContent,
     chiron: chironDe as PlacementPageContent,
     asteroids: asteroidsDe as PlacementPageContent,
@@ -100,6 +111,7 @@ const placementPagesByLocale: Record<
     venus: venusIt as PlacementPageContent,
     moon: moonIt as PlacementPageContent,
     mars: marsIt as PlacementPageContent,
+    mercury: mercuryIt as PlacementPageContent,
     lunarNodes: lunarNodesIt as PlacementPageContent,
     chiron: chironIt as PlacementPageContent,
     asteroids: asteroidsIt as PlacementPageContent,

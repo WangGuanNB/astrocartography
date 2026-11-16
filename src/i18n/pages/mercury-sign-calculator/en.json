@@ -1,0 +1,141 @@
+{
+  "key": "mercury",
+  "slug": "mercury-sign-calculator",
+  "toolType": "mercury",
+  "metadata": {
+    "title": "Mercury Sign Calculator - Find Your Mercury Sign",
+    "description": "Free Mercury sign calculator. Enter your birth date, place, and optional time to find your tropical Mercury sign, degree, and house.",
+    "keywords": "mercury sign calculator, what is my mercury sign, mercury sign, free mercury sign calculator, mercury placement calculator, mercury in astrology"
+  },
+  "hero": {
+    "eyebrow": "Free astrology tool",
+    "title": "Mercury Sign Calculator",
+    "subtitle": "Find your Mercury sign and see how your chart describes thinking, speaking, learning, and the places where that mental style can feel louder on a map."
+  },
+  "form": {
+    "submit": "Calculate My Mercury Sign"
+  },
+  "result": {
+    "title": "Your Mercury Placement",
+    "cta": "Open this birth data in your chart",
+    "lineCta": "Read the Mercury line guide",
+    "lineUrl": "/mercury-line-astrocartography",
+    "sunSame": "Your Sun is also in {sign}, so Mercury and the Sun share a sign.",
+    "sunAdjacent": "Your Sun is in {sign}. Mercury is one sign away, which is as far as it can sit from the Sun.",
+    "sunFar": "Your Sun is in {sign}, more than one sign away. Check the birth data. This calculator uses the tropical zodiac.",
+    "boundaryNote": "This degree sits next to a sign boundary. A small error in birth time can place Mercury in the neighboring sign.",
+    "provisionalHouse": "House is provisional until you add an exact birth time.",
+    "signReadings": {
+      "Aries": "Aries Mercury tends to think in a straight line and say the point early. You may start talking before the plan is finished, then revise once the idea is already in the room.",
+      "Taurus": "Taurus Mercury tends to trust what can be repeated, priced, or demonstrated. You may take longer to change a conclusion, and you usually want the practical consequence before you agree.",
+      "Gemini": "Gemini Mercury tends to collect options and explain them out loud. You may hold two readings of the same fact and need a conversation before the useful one settles.",
+      "Cancer": "Cancer Mercury tends to hear tone and memory before the literal sentence. You may protect the listener, and you often remember how something was said longer than the wording itself.",
+      "Leo": "Leo Mercury tends to speak so the point can be seen and remembered. You may prefer a clear story over a pile of caveats, and you notice when an idea has no audience.",
+      "Virgo": "Virgo Mercury tends to sort, edit, and look for the missing step. You may feel unfinished until the details line up, and you often improve a plan by removing what does not work.",
+      "Libra": "Libra Mercury tends to test a sentence against the other person's view. You may delay a final wording until both sides sound fair, and you often think by comparing.",
+      "Scorpio": "Scorpio Mercury tends to look for what was left unsaid. You may keep a conclusion private until you trust it, and you often prefer one precise question to a long explanation.",
+      "Sagittarius": "Sagittarius Mercury tends to jump to the larger meaning. You may speak in broad claims and then fill in the route, and you get restless when a discussion never leaves the details.",
+      "Capricorn": "Capricorn Mercury tends to ask what the idea is for and who is responsible. You may sound cautious because you are checking sequence, time, and consequence before you commit.",
+      "Aquarius": "Aquarius Mercury tends to step back and test the rule itself. You may prefer an unusual framing, and you often want room to disagree without turning the exchange into a personal contest.",
+      "Pisces": "Pisces Mercury tends to think through images, tone, and association. You may know the sense of a message before you can outline it, and a strict literal reading can feel too small."
+    }
+  },
+  "sections": [
+    {
+      "title": "What a Mercury Sign Calculator Shows",
+      "body": [
+        "A mercury sign calculator identifies the zodiac sign Mercury occupied when you were born. In astrology, Mercury describes how you take in information, choose words, learn a skill, and move between ideas. It is the planet of messages, study, trade, and the small decisions that fill an ordinary day. Your Mercury sign is not a score for intelligence. Two people can share the same sign and still think at different speeds, in different jobs, with different educations. The sign is a style label: direct in Aries, concrete in Taurus, quick in Gemini, protective in Cancer, expressive in Leo, precise in Virgo, diplomatic in Libra, investigative in Scorpio, broad in Sagittarius, structured in Capricorn, detached in Aquarius, and associative in Pisces.",
+        "This free mercury sign calculator uses your birth date, birth place, and optional birth time. It returns the tropical Mercury sign, the degree inside that sign, and a whole-sign house when the chart has enough data. Positions come from astronomy-engine geocentric ecliptic longitude, the same engine used by the other natal tools on this site. The page does not look Mercury up in a printed table, and it does not use the Swiss Ephemeris. If you leave the time blank, the tool calculates Mercury for local noon at the birth place and says so in the result note. That default is useful for the sign on most days. It is not a substitute for a timed chart when you need the house."
+      ]
+    },
+    {
+      "title": "Why Mercury Stays Near the Sun",
+      "body": [
+        "Mercury never travels far from the Sun in the sky. From Earth it stays within about 28 degrees of the Sun, so your Mercury sign is always your Sun sign or a neighboring sign. If your Sun is in Leo, Mercury can be in Cancer, Leo, or Virgo. It cannot sit across the zodiac in Aquarius or Sagittarius. That limit is geometry, not a personality rule. People who expect a Mercury sign far from the Sun are usually mixing Mercury up with Mars, Jupiter, or an outer planet, all of which can land anywhere.",
+        "The same limit explains why a mercury sign calculator feels repetitive next to a Sun sign and still matters. The Sun describes the center of identity. Mercury describes the instrument you use to notice, name, and exchange information. A Leo Sun with Virgo Mercury may present with warmth and then edit every sentence. A Leo Sun with Cancer Mercury may present with warmth and then check whether the listener feels safe. The Sun sign stays the headline. Mercury changes the texture of thought and speech. Reading them together is more accurate than treating the Sun as the whole mind.",
+        "Mercury also moves faster than Mars and much slower than the Moon. It usually stays in one sign for about two to three weeks, then changes. Because it stays close to the Sun, it often appears to slow down, stop, and reverse. That apparent retrograde is a change in ecliptic speed, not a change in the sign by itself. A retrograde Mercury can still occupy the same sign for the whole day. The calculator reports the sign and degree for the moment you enter. It does not turn retrograde into a prediction about travel, contracts, or conversations."
+      ]
+    },
+    {
+      "title": "When Birth Time Matters",
+      "body": [
+        "Most people who ask what is my mercury sign only know a birthday. On an ordinary day that is enough for the sign, because Mercury does not change signs every few hours the way the Moon does. Birth place still matters. The place sets the time zone, and the time zone decides which local noon the tool uses when the clock time is missing.",
+        "Time becomes decisive on a sign-change day. Mercury changes signs more often than Mars, and roughly one birthday in twenty-five falls near an ingress. On that day, a morning birth and an evening birth can land in different signs. If the result sits within a degree or two of 0 or 29, treat it as boundary-sensitive and add a time from a birth certificate or a family record before you rely on the sign. Exact time is always required for a reliable house. Without it, the whole-sign house is provisional because the Ascendant moves about one degree every four minutes.",
+        "If you already have a full birth chart, use this page as a focused check rather than a second opinion from a different zodiac. The site uses the tropical zodiac. A sidereal or Lahiri Mercury sign can differ by nearly a whole sign and is a different product. Do not mix the two numbers and then ask which one is more true. They answer different coordinate questions."
+      ]
+    },
+    {
+      "title": "Mercury Sign and the Mercury Line",
+      "body": [
+        "Your Mercury sign is natal. It stays with the birth chart no matter which city you visit. Your Mercury line in astrocartography is geographic. It marks where Mercury was on the Ascendant, Descendant, Midheaven, or Imum Coeli at birth, then traces those angles across the map. The mercury sign calculator answers how you tend to think and speak. The Mercury line guide answers where that theme can feel louder in daily life.",
+        "A useful order is sign first, then house, then line. The sign is the style. The house shows the life area that often hosts that style: study, siblings, and errands in the third; work and reputation in the tenth; private life in the fourth. The line shows a place where communication, learning, writing, or trade may feel amplified. Mercury on the Midheaven can feel public and professional. Mercury on the Ascendant can feel personal and verbal. Mercury on the Descendant can pull conversation into one-to-one relationships. Mercury on the Imum Coeli can turn home into a place for reading and private study. None of those lines guarantees a job, a language, or a publishing deal. They are prompts for a trip or a relocation question you already have.",
+        "Use the same birth data on the free astrocartography map after you calculate the sign. If the time was missing, remember that the map angles are less reliable than the sign. Add the time before you plan travel from a Mercury line alone."
+      ]
+    },
+    {
+      "title": "How to Read the Result",
+      "body": [
+        "Start with the element, then the degree, then the house. Fire Mercury signs—Aries, Leo, and Sagittarius—often think out loud, decide quickly, and prefer a clear point. Earth Mercury signs—Taurus, Virgo, and Capricorn—often want proof, sequence, and a practical use for the idea. Air Mercury signs—Gemini, Libra, and Aquarius—often compare options, negotiate wording, and need room to change their mind. Water Mercury signs—Cancer, Scorpio, and Pisces—often read tone, memory, and implication before they trust the literal sentence.",
+        "The degree tells you how early or late Mercury is in that sign. An early degree can feel like the sign is still settling. A late degree can feel like the next sign is already nearby, which is another reason to check the clock on ingress days. The house is context, not a second personality. Mercury in the third house and Mercury in the tenth house can share a sign and still show up in different rooms: one in messages and study, the other in public work.",
+        "Compare the result with lived patterns instead of collecting more labels. Notice how you draft an email, how you learn a route, and how you recover when a conversation goes sideways. If the description fits, keep it as a working language. If it does not, look at the Moon, the Ascendant, and the aspects before you discard the whole chart. One planet does not explain a mind."
+      ]
+    },
+    {
+      "title": "What This Calculator Cannot Promise",
+      "body": [
+        "A mercury sign calculator can report a chart position. It cannot tell you what you will say in a meeting, whether a message will land, or how a decision will turn out. Speech and judgment also depend on the rest of the chart, the other person, timing, language, and the facts in front of you. Retrograde periods, transits, and electional dates are outside this page. If you need those, use a transit or full-chart tool after the natal sign is clear.",
+        "The honest use of the result is narrow and practical. Learn the sign, note whether the time was real or local noon, and keep the house provisional until the clock is known. Then, if location is the actual question, open the Mercury line guide and the birth chart generator with the same data. Astrology is most useful when it sharpens attention. It is a poor substitute for a conversation you still have to have."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this Mercury sign calculator free?",
+      "answer": "Yes. Enter a birth date and birth place to calculate your Mercury sign for free. Birth time is optional. The result shows the tropical sign and degree. With an exact time it also shows the whole-sign house."
+    },
+    {
+      "question": "Do I need my birth time to find my Mercury sign?",
+      "answer": "On most days the date and place are enough for the sign. Mercury usually stays in a sign for two to three weeks, but it changes signs more often than Mars, and about one birthday in twenty-five falls on a change day. Add the time when the degree is near 0 or 29. Without a time, this mercury sign calculator uses local noon and marks the house as provisional."
+    },
+    {
+      "question": "What is my Mercury sign in plain terms?",
+      "answer": "Your Mercury sign is the zodiac sign Mercury occupied at birth. It describes thinking and communication style, not a rank for intelligence. Use the form above. Mercury will be in your Sun sign or a sign next to it, because it stays within about 28 degrees of the Sun."
+    },
+    {
+      "question": "Can my Mercury sign be far from my Sun sign?",
+      "answer": "No. Mercury stays within about 28 degrees of the Sun, so it occupies the Sun sign or one of the two neighboring signs. A result in the opposite sign means the birth data or the zodiac system does not match this tropical calculation."
+    },
+    {
+      "question": "Does a Mercury sign predict what I will say or how a decision turns out?",
+      "answer": "No. The sign describes a style of thinking and speaking. It does not choose your words or decide an outcome. Conversation, study, and decisions also depend on the rest of the chart and on real circumstances. For places rather than personality, use the Mercury line page."
+    }
+  ],
+  "schemaName": "Mercury Sign Calculator",
+  "relatedLinks": [
+    {
+      "text": "Generate your free astrocartography chart on the world map.",
+      "linkText": "Free Astrocartography Chart & Map",
+      "url": "/"
+    },
+    {
+      "text": "Read communication by location after you know the sign.",
+      "linkText": "Mercury Line",
+      "url": "/mercury-line-astrocartography"
+    },
+    {
+      "text": "Compare values and attraction.",
+      "linkText": "Venus Sign Calculator",
+      "url": "/venus-sign-calculator"
+    },
+    {
+      "text": "Compare drive and assertion.",
+      "linkText": "Mars Sign Calculator",
+      "url": "/mars-sign-calculator"
+    },
+    {
+      "text": "Need the full chart with every planet?",
+      "linkText": "Birth Chart Generator",
+      "url": "/tools/birth-chart-generator"
+    }
+  ]
+}
