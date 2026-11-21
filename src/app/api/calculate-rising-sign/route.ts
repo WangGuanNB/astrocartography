@@ -14,6 +14,8 @@ import {
   type PlanetRow,
 } from "@/lib/natal-chart-core";
 import { computeAspectsToLongitude } from "@/lib/synastry-aspects";
+import { detectBirthTimezone, validateBirthCoordinates } from "@/lib/rising-sign-birth-input";
+import { isIanaTimeZone } from "@/lib/timezone";
 
 export const maxDuration = 30;
 
@@ -33,7 +35,8 @@ interface RisingSignRequest {
   birthDate: string;
   birthTime: string;
   birthLocation: string;
-  timezone: string;
+  timezone?: string;
+  timezoneMode?: "auto" | "manual";
   latitude?: number;
   longitude?: number;
 }
@@ -126,27 +129,41 @@ async function geocodeLocation(location: string): Promise<{ latitude: number; lo
 export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as RisingSignRequest;
-    const { birthDate, birthTime, birthLocation, timezone } = body;
+    const { birthDate, birthTime, birthLocation, timezoneMode } = body;
 
-    if (!birthDate || !birthTime || !birthLocation || !timezone) {
+    if (!birthDate || !birthTime || typeof birthLocation !== "string" || !birthLocation.trim()) {
       return NextResponse.json({ success: false, error: "Missing required fields." }, { status: 400 });
     }
 
-    let latitude = body.latitude;
-    let longitude = body.longitude;
-    if (latitude == null || longitude == null) {
-      const coords = await geocodeLocation(birthLocation);
-      if (!coords) {
-        return NextResponse.json(
-          {
-            success: false,
-            error: `Unable to find coordinates for "${birthLocation}". Try a more specific place name (e.g. "New York, USA").`,
-          },
-          { status: 400 }
-        );
-      }
-      latitude = coords.latitude;
-      longitude = coords.longitude;
+    if (timezoneMode !== undefined && timezoneMode !== "auto" && timezoneMode !== "manual") {
+      return NextResponse.json({ success: false, error: "Invalid timezone mode." }, { status: 400 });
+    }
+    const requestedTimezone = typeof body.timezone === "string" ? body.timezone.trim() : "";
+    // Requests from older clients may still carry an explicit legacy timezone
+    // label. The new manual picker sends only IANA zones (or explicit UTC).
+    if (timezoneMode !== "auto" &&
+      (!requestedTimezone || (timezoneMode === "manual" && !isIanaTimeZone(requestedTimezone)))) {
+      return NextResponse.json({ success: false, error: "Select a valid time zone.", errorCode: "TIMEZONE_REQUIRED" }, { status: 400 });
+    }
+
+    const suppliedCoordinates = body.latitude !== undefined || body.longitude !== undefined;
+    const location = suppliedCoordinates ? null : await geocodeLocation(birthLocation);
+    const coordinates = suppliedCoordinates
+      ? validateBirthCoordinates(body.latitude, body.longitude)
+      : validateBirthCoordinates(location?.latitude, location?.longitude);
+    if (!coordinates) {
+      return NextResponse.json(
+        { success: false, error: "Unable to resolve valid coordinates for the birthplace.", errorCode: "INVALID_LOCATION" },
+        { status: 400 },
+      );
+    }
+    const { latitude, longitude } = coordinates;
+    const timezone = timezoneMode === "auto" ? detectBirthTimezone(coordinates) : requestedTimezone;
+    if (!timezone) {
+      return NextResponse.json(
+        { success: false, error: "Unable to detect the birthplace time zone. Select it manually.", errorCode: "TIMEZONE_REQUIRED" },
+        { status: 400 },
+      );
     }
 
     const utcTime = localBirthTimeToUtc(birthDate, birthTime, timezone);

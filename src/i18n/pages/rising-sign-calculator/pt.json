@@ -111,7 +111,7 @@
     "items": [
       {
         "title": "Informe os dados de nascimento completos",
-        "description": "Indique data (dia, mês, ano), hora o mais precisa possível (de preferência ao minuto, por exemplo da certidão de nascimento) e local de nascimento. Selecione o fuso horário que corresponde ao seu local de nascimento. A calculadora usa esses dados para calcular qual signo ocupava o horizonte oriental ao nascer.",
+        "description": "Informe a data, a hora local mais precisa possível e o local de nascimento. Confira o fuso horário detectado e altere-o se necessário. A calculadora usa esses dados para determinar seu ascendente no momento do nascimento.",
         "icon": "RiCalendarLine"
       },
       {
@@ -159,7 +159,7 @@
       },
       {
         "title": "Escolha do fuso horário para resultados precisos",
-        "description": "O cálculo do ascendente depende da hora local ao nascer. Escolha o fuso horário que corresponde ao seu local de nascimento (ex.: EST para Nova York, CET para Paris, JST para Tóquio). Oferecemos opções comuns para alinhar sua hora de nascimento à zona correta. Em dúvida, use o fuso vigente no seu local e data de nascimento.",
+        "description": "Use a hora local indicada na certidão de nascimento. A calculadora detecta o fuso horário do local e usa o deslocamento válido na data de nascimento, incluindo o horário de verão quando aplicável. Se precisar, selecione o fuso manualmente.",
         "icon": "RiCompass3Line"
       },
       {
@@ -233,6 +233,11 @@
       "birthTime": "Hora de nascimento (exata se possível)",
       "birthLocation": "Local de nascimento",
       "timezone": "Fuso horário",
+      "timezoneAuto": "Automático pelo local de nascimento",
+      "cityPlaceholder": "Cidade, país",
+      "useCity": "Usar nome da cidade",
+      "useCoordinates": "Usar coordenadas",
+      "calculating": "Calculando…",
       "submit": "Calcular ascendente"
     },
     "result": {
@@ -321,7 +326,9 @@
     "errors": {
       "required": "Preencha todos os campos para calcular seu ascendente.",
       "location": "Local não encontrado. Tente cidade e país (ex.: Nova York, EUA ou Londres, UK).",
-      "generic": "Erro de cálculo. Verifique seus dados de nascimento e tente de novo."
+      "generic": "Erro de cálculo. Verifique seus dados de nascimento e tente de novo.",
+      "timezone": "Não foi possível detectar o fuso horário. Confira o local de nascimento ou selecione o fuso manualmente.",
+      "coordinates": "Digite a latitude e a longitude válidas, separadas por vírgula."
     },
     "interpretations": {
       "Aries": "Você projeta energia direta e decidida desde o primeiro contato. É percebido como seguro, pronto para agir e sem medo de desafios. Seu instinto é liderar; você encara a vida com vitalidade física e espírito competitivo. Marte, seu regente, imprime iniciativa e coragem.",

@@ -11,27 +11,17 @@ import PricingModal from "@/components/pricing/pricing-modal";
 import { useAppContext } from "@/contexts/app";
 import { risingSignEvents, type RisingSignUnlockEntry } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
+import {
+  detectBirthTimezone,
+  parseBirthCoordinates,
+  validateBirthCoordinates,
+  type BirthCoordinates,
+} from "@/lib/rising-sign-birth-input";
+import { getSupportedTimeZones, getTimezoneOffsetLabel } from "@/lib/timezone";
 import type { Pricing as PricingType } from "@/types/blocks/pricing";
 import { Calendar, Clock, Globe, Lock, MapPin, Sparkles } from "lucide-react";
 
-const TIMEZONE_OPTIONS = [
-  "UTC (London, Dublin)",
-  "EST (New York)",
-  "PST (Los Angeles)",
-  "CST (Chicago)",
-  "MST (Denver)",
-  "CET (Paris, Berlin)",
-  "CST (Mexico City)",
-  "COT (Bogotá)",
-  "PET (Lima)",
-  "CLT (Santiago)",
-  "ART (Buenos Aires)",
-  "BRT (São Paulo)",
-  "JST (Tokyo)",
-  "AEST (Sydney)",
-  "IST (Mumbai)",
-  "CST (Beijing)",
-];
+const INITIAL_TIMEZONES = ["UTC", "Europe/Rome", "Europe/Madrid", "America/Bogota", "America/Lima", "America/Santiago"];
 
 const DEEP_REPORT_CREDITS = 50;
 
@@ -41,6 +31,11 @@ type ToolLabels = {
     birthTime: string;
     birthLocation: string;
     timezone: string;
+    timezoneAuto: string;
+    cityPlaceholder: string;
+    useCity: string;
+    useCoordinates: string;
+    calculating: string;
     submit: string;
   };
   result: {
@@ -117,6 +112,8 @@ type ToolLabels = {
     required: string;
     location: string;
     generic: string;
+    timezone: string;
+    coordinates: string;
   };
   interpretations?: Record<string, string>;
 };
@@ -136,6 +133,7 @@ type AspectRow = { planet: string; aspect: string; orb: number };
 type ApiResponse = {
   success: boolean;
   error?: string;
+  errorCode?: string;
   data?: {
     birthData: {
       date: string;
@@ -276,12 +274,14 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
   const [birthDate, setBirthDate] = useState("");
   const [birthTime, setBirthTime] = useState("");
   const [birthLocation, setBirthLocation] = useState("");
-  const [timezone, setTimezone] = useState(TIMEZONE_OPTIONS[0]);
+  const [manualTimezone, setManualTimezone] = useState("");
+  const [timezoneOptions, setTimezoneOptions] = useState(INITIAL_TIMEZONES);
   const [useCoordinates, setUseCoordinates] = useState(false);
-  const [selectedLocationCoords, setSelectedLocationCoords] = useState<{
-    latitude: number;
-    longitude: number;
-  } | null>(null);
+  const [selectedLocationCoords, setSelectedLocationCoords] = useState<BirthCoordinates | null>(null);
+
+  useEffect(() => {
+    setTimezoneOptions([...new Set([...INITIAL_TIMEZONES, ...getSupportedTimeZones()])]);
+  }, []);
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -324,7 +324,23 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
     return unlockEntryRef.current ?? "main";
   }
 
-  const canSubmit = Boolean(birthDate && birthTime && birthLocation && timezone && !isLoading);
+  const birthCoordinates = useCoordinates ? parseBirthCoordinates(birthLocation) : selectedLocationCoords;
+  const detectedTimezone = birthCoordinates ? detectBirthTimezone(birthCoordinates) : null;
+  const selectedTimezone = manualTimezone || detectedTimezone;
+  const timezoneOffset = selectedTimezone && birthDate && birthTime
+    ? getTimezoneOffsetLabel(birthDate, birthTime, selectedTimezone)
+    : null;
+  const hasInvalidCoordinates = useCoordinates && Boolean(birthLocation.trim()) && !birthCoordinates;
+  const canSubmit = Boolean(
+    birthDate && birthTime && birthLocation.trim() && (!useCoordinates || birthCoordinates) && !isLoading,
+  );
+
+  function changeBirthLocation(value: string) {
+    setBirthLocation(value);
+    setSelectedLocationCoords(null);
+    // A manual correction is for the previous birthplace, not the next one.
+    setManualTimezone("");
+  }
 
   const chartQuery = result
     ? new URLSearchParams({
@@ -372,21 +388,23 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
       const payload: Record<string, unknown> = {
         birthDate,
         birthTime,
-        birthLocation,
-        timezone,
+        birthLocation: birthLocation.trim(),
+        timezoneMode: manualTimezone ? "manual" : "auto",
+        ...(manualTimezone ? { timezone: manualTimezone } : {}),
+        ...(birthCoordinates ?? {}),
       };
-      if (selectedLocationCoords) {
-        payload.latitude = selectedLocationCoords.latitude;
-        payload.longitude = selectedLocationCoords.longitude;
-      }
-      const res = await fetch("/api/calculate-rising-sign", {
+      const res = await fetch("/api/calculate-rising-sign/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
       const json = (await res.json()) as ApiResponse;
       if (!json.success || !json.data) {
-        setError(json.error || tool.errors.generic);
+        setError(
+          json.errorCode === "TIMEZONE_REQUIRED" ? tool.errors.timezone :
+          json.errorCode === "INVALID_LOCATION" ? tool.errors.location :
+          json.error || tool.errors.generic,
+        );
         return;
       }
       setResult(json.data);
@@ -606,11 +624,11 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                     type="button"
                     onClick={() => {
                       setUseCoordinates((v) => !v);
-                      setSelectedLocationCoords(null);
+                      changeBirthLocation("");
                     }}
                     className="text-xs text-purple-400 hover:text-purple-300 underline"
                   >
-                    {useCoordinates ? "Use city name" : "Use coordinates"}
+                    {useCoordinates ? tool.form.useCity : tool.form.useCoordinates}
                   </button>
                 </div>
                 {useCoordinates ? (
@@ -618,35 +636,26 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                     id="birthLocation"
                     type="text"
                     value={birthLocation}
-                    onChange={(e) => {
-                      const next = e.target.value;
-                      setBirthLocation(next);
-                      const m = next.trim().match(/^\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*$/);
-                      if (m) {
-                        const lat = Number(m[1]);
-                        const lng = Number(m[2]);
-                        if (Number.isFinite(lat) && Number.isFinite(lng)) {
-                          setSelectedLocationCoords({ latitude: lat, longitude: lng });
-                          return;
-                        }
-                      }
-                      setSelectedLocationCoords(null);
-                    }}
+                    onChange={(e) => changeBirthLocation(e.target.value)}
+                    aria-invalid={hasInvalidCoordinates}
+                    aria-describedby={hasInvalidCoordinates ? "rising-coordinates-error" : undefined}
                     className="h-10 text-sm bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-500 focus:ring-purple-500"
-                    placeholder="e.g. 40.7128, -74.006"
+                    placeholder="41.9028, 12.4964"
                   />
                 ) : (
                   <LocationAutocomplete
                     id="birthLocation"
                     value={birthLocation}
-                    onChange={(value) => {
-                      setBirthLocation(value);
-                      if (!value) setSelectedLocationCoords(null);
-                    }}
-                    onSelect={(r) => setSelectedLocationCoords(r.coordinates)}
-                    placeholder="City, Country"
+                    onChange={changeBirthLocation}
+                    onSelect={({ coordinates }) => setSelectedLocationCoords(
+                      validateBirthCoordinates(coordinates.latitude, coordinates.longitude),
+                    )}
+                    placeholder={tool.form.cityPlaceholder}
                     className="h-10 text-sm bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-500 focus:ring-purple-500"
                   />
+                )}
+                {hasInvalidCoordinates && (
+                  <p id="rising-coordinates-error" className="text-xs text-red-300">{tool.errors.coordinates}</p>
                 )}
               </div>
               <div className="space-y-1.5">
@@ -656,16 +665,23 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                 </label>
                 <select
                   id="timezone"
-                  value={timezone}
-                  onChange={(e) => setTimezone(e.target.value)}
+                  value={manualTimezone}
+                  onChange={(e) => setManualTimezone(e.target.value)}
+                  aria-describedby={selectedTimezone ? "rising-timezone-details" : undefined}
                   className="w-full h-10 px-3 text-sm rounded-md bg-white/10 border border-white/20 text-white focus:border-purple-500 focus:ring-purple-500 focus:outline-none focus:ring-2"
                 >
-                  {TIMEZONE_OPTIONS.map((tz) => (
+                  <option value="" className="bg-gray-900">{tool.form.timezoneAuto}</option>
+                  {timezoneOptions.map((tz) => (
                     <option key={tz} value={tz} className="bg-gray-900">
                       {tz}
                     </option>
                   ))}
                 </select>
+                {selectedTimezone && (
+                  <p id="rising-timezone-details" className="text-xs text-white/70" role="status">
+                    {selectedTimezone}{timezoneOffset ? ` · ${timezoneOffset}` : ""}
+                  </p>
+                )}
               </div>
               <Button
                 onClick={handleSubmit}
@@ -675,7 +691,7 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                 {isLoading ? (
                   <>
                     <div className="mr-2 size-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                    Calculating…
+                    {tool.form.calculating}
                   </>
                 ) : (
                   <>
@@ -703,6 +719,11 @@ export default function RisingSignCalculatorClient({ tool }: { tool: ToolLabels 
                   {tool.result.title}
                 </h2>
                 <p className="mt-2 text-sm text-amber-200/80">{tool.result.timeAccuracyNote}</p>
+                <p className="mt-2 text-xs text-white/70">
+                  {tool.form.timezone}: {result.birthData.timezone} · {getTimezoneOffsetLabel(
+                    result.birthData.date, result.birthData.time, result.birthData.timezone,
+                  )}
+                </p>
                 <p className="mt-2 text-xs text-white/50">{tool.result.methodologyNote}</p>
                 {result.ascendant.cuspSensitivity === "early" && (
                   <p className="mt-2 text-sm text-orange-200/90">{tool.result.cuspWarningEarly}</p>

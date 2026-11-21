@@ -111,7 +111,7 @@
     "items": [
       {
         "title": "Enter Complete Birth Information",
-        "description": "Input your birth date (day, month, year), birth time as precisely as available—ideally to the minute from a birth certificate—and birth location. Select or verify the timezone matching your birthplace, accounting for historical daylight saving changes if applicable. The calculator uses these three data points to compute which zodiac sign occupied the eastern horizon at your birth. Incomplete or inaccurate time significantly reduces reliability, especially for borderline degrees.",
+        "description": "Enter your birth date, local birth time as precisely as possible, and birthplace. Check the detected time zone or change it if needed. The calculator uses these details to determine the rising sign at birth.",
         "icon": "RiCalendarLine"
       },
       {
@@ -159,7 +159,7 @@
       },
       {
         "title": "Timezone Selection for Accurate Results",
-        "description": "Accurate ascendant calculation depends on the local time at birth. Select the timezone that matches your birthplace (e.g., EST for New York, CET for Paris, JST for Tokyo). We offer common timezone options so you can align your birth time with the correct zone. Choosing the right timezone ensures the rising sign reflects the actual sky position at your birth; if unsure, use the timezone that was in effect at your birth location and date.",
+        "description": "Use the local time shown in your birth record. The calculator detects the birthplace time zone and uses the offset for your birth date, including daylight saving when applicable. You can select a different time zone manually if needed.",
         "icon": "RiCompass3Line"
       },
       {
@@ -233,6 +233,11 @@
       "birthTime": "Birth time (exact if possible)",
       "birthLocation": "Birth location",
       "timezone": "Timezone",
+      "timezoneAuto": "Automatic from birthplace",
+      "cityPlaceholder": "City, country",
+      "useCity": "Use city name",
+      "useCoordinates": "Use coordinates",
+      "calculating": "Calculating…",
       "submit": "Calculate rising sign"
     },
     "result": {
@@ -321,7 +326,9 @@
     "errors": {
       "required": "Please complete all fields to calculate your rising sign.",
       "location": "Location not found. Try entering a city and country (e.g., New York, USA or London, UK).",
-      "generic": "Calculation error. Please verify your birth data and try again."
+      "generic": "Calculation error. Please verify your birth data and try again.",
+      "timezone": "Could not determine the time zone. Check the birthplace or select the time zone manually.",
+      "coordinates": "Enter valid latitude and longitude, separated by a comma."
     },
     "interpretations": {
       "Aries": "You project bold, direct energy from first meeting. People often perceive you as confident, quick to act, and unafraid of challenges. Your instinct is to lead rather than follow, approaching life with physical vitality and competitive spirit. Mars, your chart ruler, colors your entire personality with initiative and courage.",

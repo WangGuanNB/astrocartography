@@ -81,7 +81,18 @@ export async function generateMetadata({
 
 type PageWithTool = Awaited<ReturnType<typeof getRisingSignPage>> & {
   tool: {
-    form: { birthDate: string; birthTime: string; birthLocation: string; timezone: string; submit: string };
+    form: {
+      birthDate: string;
+      birthTime: string;
+      birthLocation: string;
+      timezone: string;
+      timezoneAuto: string;
+      cityPlaceholder: string;
+      useCity: string;
+      useCoordinates: string;
+      calculating: string;
+      submit: string;
+    };
     result: {
       title: string;
       sign: string;
@@ -134,7 +145,7 @@ type PageWithTool = Awaited<ReturnType<typeof getRisingSignPage>> & {
       genericError: string;
       prompt: string;
     };
-    errors: { required: string; location: string; generic: string };
+    errors: { required: string; location: string; generic: string; timezone: string; coordinates: string };
     interpretations?: Record<string, string>;
   };
 };

@@ -111,7 +111,7 @@
     "items": [
       {
         "title": "Vollständige Geburtsdaten eingeben",
-        "description": "Geburtsdatum (Tag, Monat, Jahr), Geburtszeit so präzise wie möglich (idealerweise auf die Minute aus der Geburtsurkunde) und Geburtsort. Zeitzone zum Geburtsort wählen oder prüfen, ggf. historische Sommerzeit beachten. Der Aszendent Rechner nutzt diese drei Angaben, um das Zeichen zu ermitteln, das am östlichen Horizont bei Ihrer Geburt stand. Unvollständige oder ungenaue Zeit mindert die Zuverlässigkeit, besonders bei Grenzgraden.",
+        "description": "Geben Sie das Geburtsdatum, die möglichst genaue Ortszeit und den Geburtsort ein. Prüfen Sie die erkannte Zeitzone und ändern Sie sie bei Bedarf. Anhand dieser Angaben berechnet der Rechner Ihren Aszendenten zum Geburtszeitpunkt.",
         "icon": "RiCalendarLine"
       },
       {
@@ -159,7 +159,7 @@
       },
       {
         "title": "Zeitzonenauswahl für genaue Ergebnisse",
-        "description": "Eine genaue Aszendent-Berechnung hängt von der lokalen Zeit bei der Geburt ab. Wählen Sie die Zeitzone Ihres Geburtsorts (z. B. EST für New York, CET für Paris, JST für Tokio). Der Aszendent Rechner bietet gängige Zeitzonen – die richtige Wahl stellt sicher, dass das aufsteigende Zeichen der tatsächlichen Himmelsposition bei Ihrer Geburt entspricht.",
+        "description": "Geben Sie die Ortszeit aus Ihrer Geburtsurkunde ein. Der Rechner erkennt die Zeitzone des Geburtsorts und berücksichtigt die am Geburtsdatum geltende Zeitverschiebung einschließlich Sommerzeit. Bei Bedarf können Sie die Zeitzone manuell ändern.",
         "icon": "RiCompass3Line"
       },
       {
@@ -233,6 +233,11 @@
       "birthTime": "Geburtszeit (exakt wenn möglich)",
       "birthLocation": "Geburtsort",
       "timezone": "Zeitzone",
+      "timezoneAuto": "Automatisch anhand des Geburtsorts",
+      "cityPlaceholder": "Stadt, Land",
+      "useCity": "Stadtnamen verwenden",
+      "useCoordinates": "Koordinaten verwenden",
+      "calculating": "Wird berechnet…",
       "submit": "Aszendent berechnen"
     },
     "result": {
@@ -321,7 +326,9 @@
     "errors": {
       "required": "Bitte füllen Sie alle Felder aus, um Ihren Aszendenten zu berechnen.",
       "location": "Ort nicht gefunden. Versuchen Sie Stadt und Land (z. B. Berlin, Deutschland oder Wien, Österreich).",
-      "generic": "Berechnungsfehler. Bitte prüfen Sie Ihre Geburtsdaten und versuchen Sie es erneut."
+      "generic": "Berechnungsfehler. Bitte prüfen Sie Ihre Geburtsdaten und versuchen Sie es erneut.",
+      "timezone": "Zeitzone nicht erkannt. Prüfen Sie den Geburtsort oder wählen Sie die Zeitzone manuell.",
+      "coordinates": "Geben Sie gültige Breiten- und Längengrade ein, getrennt durch ein Komma."
     },
     "interpretations": {
       "Aries": "Sie wirken von Anfang an mutig und direkt. Andere nehmen Sie oft als selbstbewusst, tatkräftig und unerschrocken wahr. Ihr Instinkt ist zu führen statt zu folgen – mit körperlicher Vitalität und Wettbewerbsgeist. Mars als Chart-Herrscher prägt Ihre Persönlichkeit mit Initiative und Mut.",

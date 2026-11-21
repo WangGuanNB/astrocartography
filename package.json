@@ -21,6 +21,7 @@
     "db:d1:migrate:local": "npx wrangler d1 migrations apply astrocarto-db --local",
     "db:migrate:data": "npx tsx scripts/migrate-to-d1.ts",
     "verify:astro": "tsx scripts/verify-ascendant.ts && tsx scripts/verify-midheaven.ts && tsx scripts/verify-astrocartography-lines.ts",
+    "verify:rising-sign-timezone": "node --import tsx scripts/verify-rising-sign-timezone.ts",
     "verify:chat-context": "node --import tsx scripts/verify-chat-context.ts && node --import tsx scripts/verify-chat-presentation.ts",
     "verify:subscription": "tsx scripts/verify-subscription-credits.ts",
     "verify:subscription-rollout": "tsx scripts/verify-subscription-rollout.ts",
